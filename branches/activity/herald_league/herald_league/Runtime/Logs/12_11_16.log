@@ -1,0 +1,17 @@
+[ 2012-11-16T13:17:42+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012514s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011806s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.013173s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.013970s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.014951s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.015651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003602s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.016891s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001359s ]
+

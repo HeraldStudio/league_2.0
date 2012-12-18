@@ -1,0 +1,189 @@
+[ 2012-12-18T20:16:58+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005546s ]
+
+[ 2012-12-18T20:17:08+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+
+[ 2012-12-18T20:17:24+08:00 ] ERR: (ThinkException) No connection could be made because the target machine actively refused it.
+
+[ 2012-12-18T20:17:24+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.006302s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006380s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+NOTIC: [2] mysql_connect(): No connection could be made because the target machine actively refused it.
+ E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class IndexAction could not be converted to string E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2012-12-18T20:17:26+08:00 ] ERR: (ThinkException) No connection could be made because the target machine actively refused it.
+
+[ 2012-12-18T20:17:26+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000924s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2] mysql_connect(): No connection could be made because the target machine actively refused it.
+ E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class IndexAction could not be converted to string E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2012-12-18T20:18:45+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002014s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002202s ]
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `lg_league_class` [ RunTime:0.118418s ]
+SQL: SELECT * FROM `lg_league_class`  [ RunTime:0.000484s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.135714s ]
+INFO: [ view_template ] --END-- [ RunTime:0.006060s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.141848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049683s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.191554s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.194836s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.198476s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.201122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013811s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.205424s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003315s ]
+
+[ 2012-12-18T20:18:48+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League/Street
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000683s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000748s ]
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `lg_street` [ RunTime:0.103312s ]
+SQL: SELECT * FROM `lg_street`  [ RunTime:0.000963s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.125857s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003192s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.129230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021852s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.151063s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.151532s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.152044s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.152630s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002309s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.153433s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2012-12-18T20:18:52+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League/Street
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000686s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000749s ]
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `lg_street` [ RunTime:0.022261s ]
+SQL: SELECT * FROM `lg_street`  [ RunTime:0.000797s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.059825s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001748s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.061608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011281s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.072941s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.073523s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.074166s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.074819s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002829s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.075850s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001180s ]
+
+[ 2012-12-18T20:18:56+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League/Street
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000686s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000751s ]
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `lg_street` [ RunTime:0.013150s ]
+SQL: SELECT * FROM `lg_street`  [ RunTime:0.000375s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.031090s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001161s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.032305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012855s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.045214s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.045800s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.046458s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.047121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002851s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.048171s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001253s ]
+
+[ 2012-12-18T20:18:59+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/League/Street
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000697s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000767s ]
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `lg_street` [ RunTime:0.008952s ]
+SQL: SELECT * FROM `lg_street`  [ RunTime:0.000299s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.032104s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000986s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.033145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008177s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.041350s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.041734s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.042161s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.042596s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001847s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.043253s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000741s ]
+
