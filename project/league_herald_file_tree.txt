@@ -1,4 +1,4 @@
-|--league_2.0
+﻿|--league_2.0
    |--commmon
    |--files
    |--picture
@@ -6,24 +6,24 @@
       |--file
       |--sql
       |--herald_league
- 	 |--herald_league          //��ĿĿ¼
+ 	 |--herald_league          //锟斤拷目目录
                     |--Common
 	    |--Conf
-	       |--conf.php         //��Ŀ�����ļ�
+	       |--conf.php         //锟斤拷目锟斤拷锟斤拷锟侥硷拷
 	    |--Lang
 	    |--Lib
 	       |--Action
 		  |--Activity
 		  |--Admin
 		  |--League
-		     |--HomeAction.class.php   //���ſռ���ҳ��������
-		     |--IndexAction.class.php  //��������ҳ����������
-		     |--StreetAction.class.php //�����б�ҳ����������
+		     |--HomeAction.class.php   //锟斤拷锟脚空硷拷锟斤拷页锟斤拷锟斤拷锟斤拷锟斤拷
+		     |--IndexAction.class.php  //锟斤拷锟斤拷锟斤拷锟斤拷页锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+		     |--StreetAction.class.php //锟斤拷锟斤拷锟叫憋拷页锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 		  |--User
-		     |--IndexAction.class.php  //�û��ռ�ҳ����������
+		     |--IndexAction.class.php  //锟矫伙拷锟秸硷拷页锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 	       |--Behavior
 	       |--Model
-                     |--UserSessionControlModel.class//session����ģ��
+                     |--UserSessionControlModel.class//session锟斤拷锟斤拷模锟斤拷
 	       |--Widget
 	    |--Runtime
 	    |--Tpl 
@@ -31,38 +31,38 @@
 	       |--Admin
 	       |--League
 		  |--Home
-		     |--index.html              //���ſռ�ģ��
-		     |--information.html        //���ſռ���Ϣҳģ��
-		     |--album.html              //��������ģ��
-		     |--picture.html            //������Ƭģ��
+		     |--index.html              //锟斤拷锟脚空硷拷模锟斤拷
+		     |--information.html        //锟斤拷锟脚空硷拷锟斤拷息页模锟斤拷
+		     |--album.html              //锟斤拷锟斤拷锟斤拷锟斤拷模锟斤拷
+		     |--picture.html            //锟斤拷锟斤拷锟斤拷片模锟斤拷
 		  |--Index
-		     |--index.html              //��������ҳ��ģ��
+		     |--index.html              //锟斤拷锟斤拷锟斤拷锟斤拷页锟斤拷模锟斤拷
 		  |--Street
-		     |--index.html              //�����б�ҳ��ģ��
+		     |--index.html              //锟斤拷锟斤拷锟叫憋拷页锟斤拷模锟斤拷
 	       |--User
 		  |--Index
-		     |--index.html              //�û��ռ�ҳ��ģ��
-	    |--index.php           //��Ŀ�����ļ�
-         |--Public                 //��Ŀ����Ŀ¼
+		     |--index.html              //锟矫伙拷锟秸硷拷页锟斤拷模锟斤拷
+	    |--index.php           //锟斤拷目锟斤拷锟斤拷锟侥硷拷
+         |--Public                 //锟斤拷目锟斤拷锟斤拷目录
 	    |--Css
 	    |--Images
  	    |--Js
- 	 |--ThinkPHP               //ThinkPHP����Ŀ¼
-	 |--Uploads                //�ϴ��ļ�Ŀ¼
-	    |--LeagueAlbum	   //��������Ŀ¼
-	       |--Large            //��Ƭ��������ͼ
-	       |--Small	   	   //��Ƭ����ͼ
-	       |--Original         //ԭʼ��Ƭ
-	    |--LeagueAvatar        //����ͷ��
-	    |--LeaguePost          //����Ŀ¼
-	       |--Fall             //�ٲ�����
-	       |--Large            //�󺣱�����ҳչʾ��
-	       |--Original         //ԭʼ����
-     	       |--Small            //����ͼ
-	    |--UserAvatar          //�û�ͷ��
-	    |--LeagueVideo         //������Ƶ
-	       |--Cover            //��Ƶ����
-	       |--Vedio            //��Ƶ����
-	    |--LeagueAudio         //������Ƶ
-	    |--LeagueFile          //�����ļ�
+ 	 |--ThinkPHP               //ThinkPHP锟斤拷锟斤拷目录
+	 |--Uploads                //锟较达拷锟侥硷拷目录
+	    |--LeagueAlbum	   //锟斤拷锟斤拷锟斤拷锟斤拷目录
+	       |--Large            //锟斤拷片锟斤拷锟斤拷锟斤拷锟斤拷图
+	       |--Small	   	   //锟斤拷片锟斤拷锟斤拷图
+	       |--Original         //原始锟斤拷片
+	    |--LeagueAvatar        //锟斤拷锟斤拷头锟斤拷
+	    |--LeaguePost          //锟斤拷锟斤拷目录
+	       |--Fall             //锟劫诧拷锟斤拷锟斤拷
+	       |--Large            //锟襟海憋拷锟斤拷锟斤拷页展示锟斤拷
+	       |--Original         //原始锟斤拷锟斤拷
+     	       |--Small            //锟斤拷锟斤拷图
+	    |--UserAvatar          //锟矫伙拷头锟斤拷
+	    |--LeagueVideo         //锟斤拷锟斤拷锟斤拷频
+	       |--Cover            //锟斤拷频锟斤拷锟斤拷
+	       |--Vedio            //锟斤拷频锟斤拷锟斤拷
+	    |--LeagueAudio         //锟斤拷锟斤拷锟斤拷频
+	    |--LeagueFile          //锟斤拷锟斤拷锟侥硷拷
 
