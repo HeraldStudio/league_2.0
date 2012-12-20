@@ -19,14 +19,19 @@ class StreetAction extends Action{
 	/*获取满足条件的街道列表*/
 	$Street = D('Street');
 	$street = $Street -> where('league_class ='.$leagueclass) -> select();
-	
-	/*获取满足条件的社团列表*/
-	$LeagueName = D('League_info');
-	$leaguename = $LeagueName -> where('league_class ='.$leagueclass) -> select();
-	
+	//print_r($street);
+	/*获取每个街道的社团列表*/
+	for( $i = 0; $i < 2; $i++ )
+	{
+		$League = D('League_info');
+		$league = $League -> where('street_id ='.$street[$i]['id']) -> find();
+		$league_all[$i] = $league;
+		//print_r($league);
+	}
+	//print_r($league_all);
 	/*显示格式*/
 	$this -> assign('street', $street);
-	$this -> assign('leaguename', $leaguename);
+	$this -> assign('league', $league_all);
 	
 	$this -> display();
     }
