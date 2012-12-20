@@ -32,12 +32,17 @@
         {
             $ch = curl_init('121.248.63.105/sessionservice/sessions/');
             curl_setopt($ch, CURLOPT_HEADER, false);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //如果把这行注释掉的话，就会直接输出  
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //保存在字符串中
+            curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口			
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
 			$xml=curl_exec($ch);  
             curl_close($ch); 
         }
-        public function isLogin()   //判断用户是否登陆,返回true或者false
+        private function update()
+		{
+		    $ch = curl_init("121.248.63.105/sessionservice/sessions/$sessionID");
+		}
+		public function isLogin()   //判断用户是否登陆,返回true或者false
         {
         }
         public function getUserName() //返回用户名
