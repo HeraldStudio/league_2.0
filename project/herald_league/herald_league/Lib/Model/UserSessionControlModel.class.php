@@ -3,7 +3,7 @@
 
 *名称：用户session控制模块
 
-*功能: 建立并控制herald_session_control
+*功能: 建立并控制herald_session_id
 
 *作者：Xie
 
@@ -19,6 +19,7 @@
                 $sessionID = applySessionID();
                 cookie('herald_seeion_id',$sessionID);
             }
+			dealXML();    //分析xml
         }
         
         private $sessionID;        //session的ID
