@@ -6,24 +6,24 @@
       |--file
       |--sql
       |--herald_league
- 	 |--herald_league          //ÏîÄ¿Ä¿Â¼
+ 	 |--herald_league          //é¡¹ç›®ç›®å½•
                     |--Common
 	    |--Conf
-	       |--conf.php         //ÏîÄ¿ÅäÖÃÎÄ¼ş
+	       |--conf.php         //é¡¹ç›®é…ç½®æ–‡ä»¶
 	    |--Lang
 	    |--Lib
 	       |--Action
 		  |--Activity
 		  |--Admin
 		  |--League
-		     |--HomeAction.class.php   //ÉçÍÅ¿Õ¼äÊ×Ò³¿ØÖÆÆ÷Àà
-		     |--IndexAction.class.php  //ÉçÍÅÈë¿ÚÒ³Ãæ¿ØÖÆÆ÷Àà
-		     |--StreetAction.class.php //ÉçÍÅÁĞ±íÒ³Ãæ¿ØÖÆÆ÷Àà
+		     |--HomeAction.class.php   //ç¤¾å›¢ç©ºé—´é¦–é¡µæ§åˆ¶å™¨ç±»
+		     |--IndexAction.class.php  //ç¤¾å›¢å…¥å£é¡µé¢æ§åˆ¶å™¨ç±»
+		     |--StreetAction.class.php //ç¤¾å›¢åˆ—è¡¨é¡µé¢æ§åˆ¶å™¨ç±»
 		  |--User
-		     |--IndexAction.class.php  //ÓÃ»§¿Õ¼äÒ³Ãæ¿ØÖÆÆ÷Àà
+		     |--IndexAction.class.php  //ç”¨æˆ·ç©ºé—´é¡µé¢æ§åˆ¶å™¨ç±»
 	       |--Behavior
 	       |--Model
-                                |--UserSessionControlModel.class//session¿ØÖÆÄ£¿é
+                                |--UserSessionControlModel.class//sessionæ§åˆ¶æ¨¡å—
 	       |--Widget
 	    |--Runtime
 	    |--Tpl 
@@ -31,38 +31,38 @@
 	       |--Admin
 	       |--League
 		  |--Home
-		     |--index.html              //ÉçÍÅ¿Õ¼äÄ£°æ
-		     |--information.html        //ÉçÍÅ¿Õ¼äĞÅÏ¢Ò³Ä£°æ
-		     |--album.html              //ÉçÍÅÏà²áÄ£°å
-		     |--picture.html            //ÉçÍÅÕÕÆ¬Ä£°å
+		     |--index.html              //ç¤¾å›¢ç©ºé—´æ¨¡ç‰ˆ
+		     |--information.html        //ç¤¾å›¢ç©ºé—´ä¿¡æ¯é¡µæ¨¡ç‰ˆ
+		     |--album.html              //ç¤¾å›¢ç›¸å†Œæ¨¡æ¿
+		     |--picture.html            //ç¤¾å›¢ç…§ç‰‡æ¨¡æ¿
 		  |--Index
-		     |--index.html              //ÉçÍÅÈë¿ÚÒ³ÃæÄ£°æ
+		     |--index.html              //ç¤¾å›¢å…¥å£é¡µé¢æ¨¡ç‰ˆ
 		  |--Street
-		     |--index.html              //ÉçÍÅÁĞ±íÒ³ÃæÄ£°æ
+		     |--index.html              //ç¤¾å›¢åˆ—è¡¨é¡µé¢æ¨¡ç‰ˆ
 	       |--User
 		  |--Index
-		     |--index.html              //ÓÃ»§¿Õ¼äÒ³ÃæÄ£°æ
-	    |--index.php           //ÏîÄ¿Èë¿ÚÎÄ¼ş
-         |--Public                 //ÏîÄ¿¹²ÓĞÄ¿Â¼
+		     |--index.html              //ç”¨æˆ·ç©ºé—´é¡µé¢æ¨¡ç‰ˆ
+	    |--index.php           //é¡¹ç›®å…¥å£æ–‡ä»¶
+         |--Public                 //é¡¹ç›®å…±æœ‰ç›®å½•
 	    |--Css
 	    |--Images
  	    |--Js
- 	 |--ThinkPHP               //ThinkPHPÏà¹ØÄ¿Â¼
-	 |--Uploads                //ÉÏ´«ÎÄ¼şÄ¿Â¼
-	    |--LeagueAlbum	   //ÉçÍÅÏà²áÄ¿Â¼
-	       |--Large            //ÕÕÆ¬´¦Àíºó´óÍ¼
-	       |--Small	   	   //ÕÕÆ¬ËõÂÔÍ¼
-	       |--Original         //Ô­Ê¼ÕÕÆ¬
-	    |--LeagueAvatar        //ÉçÍÅÍ·Ïñ
-	    |--LeaguePost          //º£±¨Ä¿Â¼
-	       |--Fall             //ÆÙ²¼º£±¨
-	       |--Large            //´óº£±¨£¨Ê×Ò³Õ¹Ê¾£©
-	       |--Original         //Ô­Ê¼º£±¨
-     	       |--Small            //ËõÂÔÍ¼
-	    |--UserAvatar          //ÓÃ»§Í·Ïñ
-	    |--LeagueVideo         //ÉçÍÅÊÓÆµ
-	       |--Cover            //ÊÓÆµ·âÃæ
-	       |--Vedio            //ÊÓÆµÄÚÈİ
-	    |--LeagueAudio         //ÉçÍÅÒôÆµ
-	    |--LeagueFile          //ÉçÍÅÎÄ¼ş
+ 	 |--ThinkPHP               //ThinkPHPç›¸å…³ç›®å½•
+	 |--Uploads                //ä¸Šä¼ æ–‡ä»¶ç›®å½•
+	    |--LeagueAlbum	   //ç¤¾å›¢ç›¸å†Œç›®å½•
+	       |--Large            //ç…§ç‰‡å¤„ç†åå¤§å›¾
+	       |--Small	   	   //ç…§ç‰‡ç¼©ç•¥å›¾
+	       |--Original         //åŸå§‹ç…§ç‰‡
+	    |--LeagueAvatar        //ç¤¾å›¢å¤´åƒ
+	    |--LeaguePost          //æµ·æŠ¥ç›®å½•
+	       |--Fall             //ç€‘å¸ƒæµ·æŠ¥
+	       |--Large            //å¤§æµ·æŠ¥ï¼ˆé¦–é¡µå±•ç¤ºï¼‰
+	       |--Original         //åŸå§‹æµ·æŠ¥
+     	       |--Small            //ç¼©ç•¥å›¾
+	    |--UserAvatar          //ç”¨æˆ·å¤´åƒ
+	    |--LeagueVideo         //ç¤¾å›¢è§†é¢‘
+	       |--Cover            //è§†é¢‘å°é¢
+	       |--Vedio            //è§†é¢‘å†…å®¹
+	    |--LeagueAudio         //ç¤¾å›¢éŸ³é¢‘
+	    |--LeagueFile          //ç¤¾å›¢æ–‡ä»¶
 
