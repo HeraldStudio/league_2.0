@@ -6,22 +6,62 @@
       |--file
       |--sql
       |--herald_league
-                    |--Common	    |--Conf
-	    |--Lang	    |--Lib
+ 	 |--herald_league          //项目目录
+                    |--Common
+	    |--Conf
+	       |--conf.php         //项目配置文件
+	    |--Lang
+	    |--Lib
 	       |--Action
 		  |--Activity
 		  |--Admin
 		  |--League
+		     |--HomeAction.class.php   //社团空间首页控制器类
+		     |--IndexAction.class.php  //社团入口页面控制器类
+		     |--StreetAction.class.php //社团列表页面控制器类
 		  |--User
-	       |--Behavior	       |--Model
-	       |--Widget	    |--Runtime
+		     |--IndexAction.class.php  //用户空间页面控制器类
+	       |--Behavior
+	       |--Model
+                                    |--UserSessionControlModel.class//用户会话控制模块
+	       |--Widget
+	    |--Runtime
 	    |--Tpl 
 	       |--Activity
 	       |--Admin
 	       |--League
 		  |--Home
+		     |--index.html              //社团空间模版
+		     |--information.html        //社团空间信息页模版
+		     |--album.html              //社团相册模板
+		     |--picture.html            //社团照片模板
 		  |--Index
-		  |--Street	       |--User		  |--Index
+		     |--index.html              //社团入口页面模版
+		  |--Street
+		     |--index.html              //社团列表页面模版
+	       |--User
+		  |--Index
+		     |--index.html              //用户空间页面模版
+	    |--index.php           //项目入口文件
+         |--Public                 //项目共有目录
 	    |--Css
 	    |--Images
  	    |--Js
+ 	 |--ThinkPHP               //ThinkPHP相关目录
+	 |--Uploads                //上传文件目录
+	    |--LeagueAlbum	   //社团相册目录
+	       |--Large            //照片处理后大图
+	       |--Small	   	   //照片缩略图
+	       |--Original         //原始照片
+	    |--LeagueAvatar        //社团头像
+	    |--LeaguePost          //海报目录
+	       |--Fall             //瀑布海报
+	       |--Large            //大海报（首页展示）
+	       |--Original         //原始海报
+     	       |--Small            //缩略图
+	    |--UserAvatar          //用户头像
+	    |--LeagueVideo         //社团视频
+	       |--Cover            //视频封面
+	       |--Vedio            //视频内容
+	    |--LeagueAudio         //社团音频
+	    |--LeagueFile          //社团文件
