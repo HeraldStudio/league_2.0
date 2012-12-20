@@ -1,3 +1,3 @@
-<?php if (!defined('THINK_PATH')) exit(); if(is_array($album)): $i = 0; $__LIST__ = $album;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>相册名称：<a><?php echo ($vo["album_name"]); ?></a><br/>
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($album)): $i = 0; $__LIST__ = $album;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>相册名称：<a href = "__APP__/League/Home/picture/albumid/<?php echo ($vo["id"]); ?>"><?php echo ($vo["album_name"]); ?></a><br/>
 	相册信息：<p><?php echo ($vo["album_info"]); ?></p>
-	<a href = ""><img src = "__Uploads__/<?php echo ($vo["album_cover_add"]); ?>"/></a><?php endforeach; endif; else: echo "" ;endif; ?>
+	<a href = "__APP__/League/Home/picture/albumid/<?php echo ($vo["id"]); ?>"><img src = "__Uploads__/<?php echo ($vo["album_cover_add"]); ?>"/></a><?php endforeach; endif; else: echo "" ;endif; ?>

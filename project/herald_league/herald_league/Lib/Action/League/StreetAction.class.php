@@ -10,30 +10,38 @@
 *更新日期：2012.12.21
 
 */
-class StreetAction extends Action{
-    public function index(){
-	
-	/*获取URL参数*/
-	$leagueclass = $this -> _param('classid');
-	
-	/*获取满足条件的街道列表*/
-	$Street = D('Street');
-	$street = $Street -> where('league_class ='.$leagueclass) -> select();
-	//print_r($street);
-	/*获取每个街道的社团列表*/
-	for( $i = 0; $i < 2; $i++ )
+class StreetAction extends Action
+{
+    public function index()
 	{
-		$League = D('League_info');
-		$league = $League -> where('street_id ='.$street[$i]['id']) -> find();
-		$league_all[$i] = $league;
-		//print_r($league);
-	}
-	//print_r($league_all);
-	/*显示格式*/
-	$this -> assign('street', $street);
-	$this -> assign('league', $league_all);
-	
-	$this -> display();
+		/*获取URL参数*/
+		$leagueclass = intval($this -> _param('classid'));//这里的这个参数要处理一下 要不很容易就注入了
+		
+		/*获取街道名称和社团名称*/
+		$Street = M('Street');
+		$street = $Street -> where('league_class ='.$leagueclass) -> select();
+		$looptimes = count($street);
+		for( $i = 0; $i < $looptimes; $i++ )
+		{
+			$League = M('League_info');
+			$league = $League -> where('street_id ='.$street[$i]['id']) -> select();
+			$this -> streetname = $street[$i]['street_name'];
+			$this -> streetid = $street[$i]['id'];
+			$this -> assign('league',$league);
+			$this -> display();
+		}
     }
+	public function leagueList()
+	{
+		/*获取街道id*/
+		$streetid = intval($this -> _param('streetid'));
+		
+		//echo $streetid;
+		/*获取相应街道下的社团名单*/
+		$League = M('League_info');
+		$league = $League -> where('street_id ='.$streetid) -> select();
+		$this -> assign('leaguename', $league);
+		$this -> display();
+	}
 }
 ?>

@@ -1,6 +1,5 @@
-<volist name = "street" id = "vo">
-<a>{$vo.street_name}</a><br/>
-	<volist name = "league" id = "vo">
-		<a>{$vo.league_name}</a><br/>
-	</volist>
+<!--这是获取街道及该街道下的社团名称的模版 模版格式不能变-->
+<h2><a href = "__APP__/League/Street/leaguelist/streetid/{$streetid}">{$streetname}</a><br/></h2>
+<volist name = "league" id = "vo">
+	<a href = "__APP__/League/Home/index/leagueid/{$vo.id}">{$vo.league_name}</a><br/>
 </volist>
