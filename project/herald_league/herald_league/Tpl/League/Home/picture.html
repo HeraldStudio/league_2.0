@@ -1,5 +1,7 @@
-<volist name = "picture" id = "vo">
-	照片名称：<a href = "__Uploads__/{$vo.large_picture_add}">{$vo.picture_name}</a><br/>
-	照片信息：<p>{$vo.picture_info}</p>
-	<a href = "__Uploads__/{$vo.large_picture_add}"><img src = "__Uploads__/{$vo.small_picture_add}"/></a>
+<h2>照片名称：<a href = "__Uploads__/{$largepicadd}">{$picturename}</a></h2>
+<p>照片信息：{$pictureinfo}</p>
+<a href = "__Uploads__/{$largepicadd}"><img src = "__Uploads__/{$smallpicadd}"/></a><br/>
+	评论：<a>{$content}</a><br/>
+<volist name = "answer" id = "vo">
+	回复：<a>{$vo.content}</a><br/>
 </volist>
