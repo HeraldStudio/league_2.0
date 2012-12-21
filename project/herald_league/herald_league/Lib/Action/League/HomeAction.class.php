@@ -43,6 +43,14 @@ class HomeAction extends Action
 		$Album = D('League_album');
 		$album = $Album -> where('league_id ='.$leagueid) -> select();
 		$this -> assign('album', $album);
+		$looptimes = count($album);
+		//print_r($album);
+		/*获取评论信息*/
+		for( $i = 0; $i < $looptimes; $i++ )
+		{
+			$comment = $this -> getComment($album[$i]['comment_id']);
+			print_r($comment);
+		}
 		$this -> display();
 	}
 	public function picture()
@@ -55,6 +63,12 @@ class HomeAction extends Action
 		$picture = $Picture -> where('album_id='.$albumid) -> select();
 		$this -> assign('picture', $picture);
 		$this -> display();
+	}
+	public function getComment($commentid)
+	{
+		$Comment = M('Comment');
+		$comment = $Comment -> where('id ='.$commentid) -> select();
+		return $comment;
 	}
 }
 ?>

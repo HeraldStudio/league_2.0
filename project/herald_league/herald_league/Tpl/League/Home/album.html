@@ -2,4 +2,14 @@
 	相册名称：<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">{$vo.album_name}</a><br/>
 	相册信息：<p>{$vo.album_info}</p>
 	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}"><img src = "__Uploads__/{$vo.album_cover_add}"/></a>
+	<br/>
+	<!--<form id="comment_form">
+	     <p>发表评论：</p>
+		 <textarea rows="5" cols="50"></textarea><br/>
+		 <input type="submit" name="submit" id="submit" value="评论" />
+	</form>-->
+	
+</volist>
+<volist name = "comment" id = "vi">
+<a>{$vi.comment}</a>
 </volist>
