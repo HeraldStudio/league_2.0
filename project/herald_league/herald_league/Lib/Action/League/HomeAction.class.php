@@ -7,7 +7,7 @@
 
 *作者：Tairy
 
-*更新日期：2012.12.17
+*更新日期：2012.12.21
 
 */
 class HomeAction extends Action
@@ -24,8 +24,14 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 		
 		/*获取社团信息*/
-		$League = D('League_info');
+		$League = M('League_info');
 		$league = $League -> where('id ='.$leagueid) -> select();
+		//print_r($l);
+		/*获取活动信息*/
+		$Activity = M('Activity');
+		$activity = $Activity -> where('league_id ='.$leagueid) -> select();
+		
+		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
 		$this -> display();
     }
@@ -122,7 +128,8 @@ class HomeAction extends Action
 		$albumid = intval($this -> _param('leagueid'));
 		
 		/*获取评论信息*/
-		$this -> getCommentAndAnswer( $albumid, 1);//社团被评论id是1
+		$result = getCommentAndAnswer( $albumid, 1);//社团被评论id是1
+		
 	}
 	
 	/*
@@ -133,6 +140,8 @@ class HomeAction extends Action
 		
 		第二个参数是被评论者的类型
 	
+		这个函数应该改成共有函数的
+		
 	*/
 	
 	public function getCommentAndAnswer( $commentedid, $commenttype )
