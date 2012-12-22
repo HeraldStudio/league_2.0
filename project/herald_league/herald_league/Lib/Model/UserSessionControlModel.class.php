@@ -7,7 +7,7 @@
 
 *作者：Xie
 
-*更新日期：2012.12.20
+*更新日期：2012.12.22
 
 */
     class UserSessionControl
@@ -16,12 +16,16 @@
         {
             if( !isset(cookie('herald_seeion_id')))    //如果不存在cookie
             {
-                applySessionID();
+                applySessionID();//申请SessionID
+                dealXML();  //分析xml
+                cookie('herald_seeion_id',$sessionID,10800);//设置cookie
             }
-            update();
-			dealXML();    //分析xml
-            cookie('herald_seeion_id',$sessionID,10800);
-		}
+            else
+            {
+                update();//用cookie更新数据
+                dealXML();
+            }
+        }
         
         private $sessionID;        //session的ID
         private $userName;         //登陆用户的用户名
@@ -31,10 +35,10 @@
         private function dealXML() //处理得到的xml
         {
             $xml = simplexml_load_string('message.xml');
-			$cardNumber = $xml->properties->herald.sso.studentUser.cardNumber;
-			$userName = $xml->properties->herald.sso.studentUser.fullName;
-			$sessionID = $xml->id;
-		}
+            $cardNumber = $xml->properties->herald.sso.studentUser.cardNumber;
+            $userName = $xml->properties->herald.sso.studentUser.fullName;
+            $sessionID = $xml->id;
+        }
         private function applySessionID() //向服务器要session ID
         {
             $ch = curl_init('121.248.63.105/sessionservice/sessions/');
@@ -47,19 +51,29 @@
         }
         private function update()
         {
+            $sessionID = cookie('herald_session_id');
             $ch = curl_init("121.248.63.105/sessionservice/sessions/$sessionID");
+            curl_setopt($ch,CURL_PORT，8080）;
+            $message = curl_exec($ch);
+            curl_close();
         }
         public function isLogin()   //判断用户是否登陆,返回true或者false
         {
+            if(isset(cookie('herald_session_id')))
+                return true;
+            return false;
         }
         public function getUserName() //返回用户名
         {
+            return $userName;
         }
         public function getCardNumber() //返回一卡通号
         {
+            return $cardNumber;
         }
         public function getSessionID() //返回sessionID
         {
+            return $sessionID;
         }
     }
 ?>
