@@ -23,7 +23,7 @@
 		     |--IndexAction.class.php  //用户空间页面控制器类
 	       |--Behavior
 	       |--Model
-                                    |--UserSessionControlModel.class//用户会话控制模块
+                     |--UserSessionControlModel.class//用户会话控制模块
 	       |--Widget
 	    |--Runtime
 	    |--Tpl 

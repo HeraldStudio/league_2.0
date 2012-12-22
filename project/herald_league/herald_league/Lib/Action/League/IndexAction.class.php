@@ -11,11 +11,12 @@
 
 */
 class IndexAction extends Action {
-    public function index(){
-	$LeagueClass = D('League_class');
-	$leagueclass = $LeagueClass -> select();
-	$this -> assign('leagueclass', $leagueclass);
-	$this -> display();
+    public function index()
+	{
+		$LeagueClass = D('League_class');
+		$leagueclass = $LeagueClass -> select();
+		$this -> assign('leagueclass', $leagueclass);
+		$this -> display();
     }
 }
 ?>

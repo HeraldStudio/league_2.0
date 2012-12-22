@@ -1,5 +1,13 @@
-<volist name = "album" id = "vo">
-	相册名称：<a>{$vo.album_name}</a><br/>
-	相册信息：<p>{$vo.album_info}</p>
-	<a href = ""><img src = "__Uploads__/{$vo.album_cover_add}"/></a>
+<h2>相册名称：<a href = "__APP__/League/Home/picture/albumid/{$albumid}">{$albumname}</a></h2>
+<p>相册信息：{$albuminfo}</p>
+<a href = "__APP__/League/Home/picture/albumid/{$albumid}"><img src = "__Uploads__/{$albumcoveradd}"/></a>
+<br/>
+<!--<form id="comment_form">
+	 <p>发表评论：</p>
+	 <textarea rows="5" cols="50"></textarea><br/>
+	 <input type="submit" name="submit" id="submit" value="评论" />
+</form>-->
+	评论：<a>{$content}</a><br/>
+<volist name = "answer" id = "vo">
+	回复：<a>{$vo.content}</a><br/>
 </volist>
