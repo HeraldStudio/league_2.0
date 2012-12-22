@@ -79,7 +79,19 @@ class HomeAction extends Action
 			$this -> albumcoveradd = $album[$i]['album_cover_add'];
 			
 			/*获取相册评论信息*/
-			$this -> getCommentAndAnswer( $album[$i]['id'], 2);//相册被评论类型id是2
+			$result = getCommentAndAnswer( $album[$i]['id'], 2);//相册被评论类型id是2
+		
+			/*这个数组包含每条评论的所有信息*/
+			$commentinfo = $result[0];
+			
+			/*这个数组包含改评论下的回复的所有信息*/
+			$answer = $result[1];
+			
+			//这里添加代码可获取更详细的评论信息
+			$this -> content = $commentinfo['content'];
+			
+			$this -> assign('answer', $answer);
+			$this -> display();
 			
 		}
 	}
@@ -112,7 +124,19 @@ class HomeAction extends Action
 			$this -> iscover = $picture[$i]['is_cover'];
 			//$this -> display();
 			/*获取图片评论信息*/
-			$this -> getCommentAndAnswer( $picture[$i]['id'], 3);//图片被评论类型id是3
+			$result = getCommentAndAnswer( $picture[$i]['id'], 3 );//相册被评论类型id是2
+			
+			/*这个数组包含每条评论的所有信息*/
+			$commentinfo = $result[0];
+			
+			/*这个数组包含改评论下的回复的所有信息*/
+			$answer = $result[1];
+			
+			//这里添加代码可获取更详细的评论信息
+			$this -> content = $commentinfo['content'];
+			
+			$this -> assign('answer', $answer);
+			$this -> display();
 		}
 	}
 	
@@ -130,42 +154,16 @@ class HomeAction extends Action
 		/*获取评论信息*/
 		$result = getCommentAndAnswer( $albumid, 1);//社团被评论id是1
 		
-	}
-	
-	/*
-	
-		获取当前页面对应的评论和回复
+		/*这个数组包含每条评论的所有信息*/
+		$commentinfo = $result[0];
 		
-		第一个参数是被评论者的id
+		/*这个数组包含改评论下的回复的所有信息*/
+		$answer = $result[1];
 		
-		第二个参数是被评论者的类型
-	
-		这个函数应该改成共有函数的
+		//这里添加代码可获取更详细的评论信息
+		$this -> content = $commentinfo['content'];
 		
-	*/
-	
-	public function getCommentAndAnswer( $commentedid, $commenttype )
-	{
-		/*获取评论信息*/
-
-		$Comment = M('Comment');
-		$comment = $Comment -> where('commed_id ='.$commentedid.' AND commed_type ='.$commenttype) -> select();
-		$secondlooptimes = count($comment);
-		
-		for( $j = 0; $j < $secondlooptimes; $j++ )
-		{	
-			/*评论基本信息*/
-			
-			//这里添加代码获取更详细的评论信息
-			
-			$this -> content = $comment[$j]['content'];
-			
-			/*获取该评论下对应的回复*/
-
-			$Answer = M('Answer');
-			$answer = $Answer -> where('comment_id ='.$comment[$j]['id']) -> select();
-			$this -> assign('answer', $answer);
-		}
+		$this -> assign('answer', $answer);
 		$this -> display();
 	}
 }
