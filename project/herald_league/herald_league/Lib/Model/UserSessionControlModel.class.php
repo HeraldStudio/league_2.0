@@ -47,6 +47,7 @@
             curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口          
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
             $message=curl_exec($ch);  
+            curl_close($ch)
         }
         private function update()
         {
