@@ -10,20 +10,20 @@
 *更新日期：2012.12.23
 
 */
-    class UserSessionControl
+    class UserSessionControlModel
     {
         function __construct()     //构造函数,创建cookie存储sessionID
         {
             if( cookie('herald_seeion_id')=null)    //如果不存在cookie
             {
-                applySessionID();//申请SessionID
-                dealXML();  //分析xml
+                $this->applySessionID();//申请SessionID
+                $this->dealXML();  //分析xml
                 cookie('herald_seeion_id',$sessionID,10800);//设置cookie
             }
             else
             {
-                update();//用cookie更新数据
-                dealXML();
+                $this->update();//用cookie更新数据
+                $this->dealXML();
             }
         }
         
