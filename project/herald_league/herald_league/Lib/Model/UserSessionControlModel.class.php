@@ -14,7 +14,7 @@
     {
         function __construct()     //构造函数,创建cookie存储sessionID
         {
-            if( !isset(cookie('herald_seeion_id')))    //如果不存在cookie
+            if( cookie('herald_seeion_id')=null)    //如果不存在cookie
             {
                 applySessionID();//申请SessionID
                 dealXML();  //分析xml
@@ -47,7 +47,7 @@
             curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口          
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
             $message=curl_exec($ch);  
-            curl_close($ch)
+            curl_close($ch);
         }
         private function update()
         {
@@ -55,13 +55,13 @@
             $ch = curl_init("121.248.63.105/sessionservice/sessions/$sessionID");
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch,CURL_PORT，8080）;
+            curl_setopt($ch,CURL_PORT，8080);
             $message = curl_exec($ch);
             curl_close();
         }
         public function isLogin()   //判断用户是否登陆,返回true或者false
         {
-            if(isset(cookie('herald_session_id')))
+            if(cookie('herald_session_id')!=null)
                 return true;
             return false;
         }
