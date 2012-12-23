@@ -7,7 +7,7 @@
 
 *作者：Xie
 
-*更新日期：2012.12.22
+*更新日期：2012.12.23
 
 */
     class UserSessionControl
@@ -53,6 +53,8 @@
         {
             $sessionID = cookie('herald_session_id');
             $ch = curl_init("121.248.63.105/sessionservice/sessions/$sessionID");
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch,CURL_PORT，8080）;
             $message = curl_exec($ch);
             curl_close();
