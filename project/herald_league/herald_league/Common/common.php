@@ -101,9 +101,12 @@ function getCommingInfo( $commingid, $commingtype )
 	
 */
 
-function getAnsweringInfo( $answeringidandtype )
+function getAnsweringInfo( $commentid )
 {
-	$answeringtype = $answeringidandtype % 10;
+	$Answer = M('Answer');
+	$answer = $Answer -> where('comment_id = '.$commentid) -> select();
+	print_r($answer);
+	/*$answeringtype = $answeringidandtype % 10;
 
 	$answeringid = intval($answeringidandtype / 10);
 	//echo $answeringid;
@@ -118,6 +121,6 @@ function getAnsweringInfo( $answeringidandtype )
 		$League = M('League_info');
 		$league = $League -> where('id ='.$answeringid) -> find();
 		return $league['league_name'];
-	}
+	}*/
 }
 ?>

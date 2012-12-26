@@ -150,33 +150,48 @@ class HomeAction extends Action
 	public function communion()
 	{
 		/*获取URL参数*/
-		$albumid = intval($this -> _param('leagueid'));
+		$leagueid = intval($this -> _param('leagueid'));
+
+		$Comment = M('Comment');
+		$comment = $Comment -> where('commed_id ='.$leagueid.' AND commed_type = 1') -> select();
+		
+		$this -> assign( 'comment', $comment );
+		$this -> display();
+
+
+
+
+
+
+
+
+
 		
 		/*获取评论信息*/
-		$result = getCommentAndAnswer( $albumid, 1);//社团被评论id是1
+		//$result = getCommentAndAnswer( $albumid, 1);//社团被评论id是1
 		
 		/*这个数组包含每条评论的所有信息*/
-		$commentinfo = $result[0];
+		//$commentinfo = $result[0];
 		
 		//这里添加代码可获取更详细的评论信息
-		$commingid = $commentinfo['comming_id'];//评论者id
-		$commingtype = $commentinfo['comming_type'];//评论者类型 1 表示普通用户 2 表示社团用户
-		$this -> content = $commentinfo['content'];
+		//$commingid = $commentinfo['comming_id'];//评论者id
+		//$commingtype = $commentinfo['comming_type'];//评论者类型 1 表示普通用户 2 表示社团用户
+		//$this -> content = $commentinfo['content'];
 
 		/*这个数组包含改评论下的回复的所有信息*/
-		$answer = $result[1];//二维数组
+		//$answer = $result[1];//二维数组
 		
 		//这里添加代码获取更详细的回复信息
-		$this -> assign('answer', $answer);
+		//$this -> assign('answer', $answer);
 
 		/*获取评论者信息*/
-		$comminginfo = getCommingInfo( $commingid, $commingtype );//评论者详细信息数组
+		//$comminginfo = getCommingInfo( $commingid, $commingtype );//评论者详细信息数组
 
 		/*评论者详细信息*/
 		//这里添加代码获取更详细评论者的信息
-		$this -> commingname = $comminginfo[0];
+		//$this -> commingname = $comminginfo[0];
 		
-		$this -> display();
+		//$this -> display();
 	}
 }
 ?>
