@@ -1,5 +1,9 @@
 	<!--注意当评论为空的情况-->
-	评论：<a>{$content}</a><br/>
-<volist name = "answer" id = "vo">
-	回复：<a>{$vo.content}</a><br/>
+	
+<volist name = "comment" id = "vo">
+	<!--<a>{$commingname}</a>评论：<a>{$content}</a><br/>
+	<a>{$vo['answering_id']*10+$vo['answering_type']|getAnsweringInfo}</a>回复：
+	<a>{$vo.content}</a>
+	<br/>-->
+	<a>{$vo.id|getAnsweringInfo}</a>
 </volist>

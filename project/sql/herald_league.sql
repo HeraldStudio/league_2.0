@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 21, 2012 at 04:41 PM
+-- Generation Time: Dec 23, 2012 at 05:49 PM
 -- Server version: 5.5.28
 -- PHP Version: 5.4.4
 
@@ -41,7 +41,14 @@ CREATE TABLE IF NOT EXISTS `lg_activity` (
   `comment_id` int(11) NOT NULL,
   `is_vote` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `lg_activity`
+--
+
+INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `end_time`, `activity_introduce`, `activity_post_add`, `contact_info`, `activity_org_name`, `activity_release_time`, `activity_count`, `comment_id`, `is_vote`) VALUES
+(1, 1, '测试活动', '2012-12-21', '2012-12-21', '这是一个测试活动', '1.jpg', '15850888888', '东南大学先声网', '2012-12-21', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -64,11 +71,23 @@ CREATE TABLE IF NOT EXISTS `lg_activity_class` (
 CREATE TABLE IF NOT EXISTS `lg_answer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `comment_id` int(11) NOT NULL,
+  `answering_id` int(11) NOT NULL,
+  `answering_type` int(11) NOT NULL,
   `floor_id` int(11) NOT NULL COMMENT '楼层数',
   `is_new` int(4) NOT NULL DEFAULT '1' COMMENT '默认为1  被评论用户点击之后置为0',
   `content` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `lg_answer`
+--
+
+INSERT INTO `lg_answer` (`id`, `comment_id`, `answering_id`, `answering_type`, `floor_id`, `is_new`, `content`) VALUES
+(1, 1, 1, 1, 1, 1, '测试回复'),
+(2, 1, 1, 1, 2, 1, '还是测试回复'),
+(3, 3, 1, 1, 3, 1, '测试回复'),
+(4, 4, 1, 1, 4, 1, '这是给社团的测试回复');
 
 -- --------------------------------------------------------
 
@@ -106,7 +125,34 @@ CREATE TABLE IF NOT EXISTS `lg_comment` (
 --
 
 INSERT INTO `lg_comment` (`id`, `comming_id`, `comming_type`, `commed_id`, `commed_type`, `is_new`, `content`) VALUES
-(1, 1, 1, 1, 1, 1, '这是一个测试评论');
+(1, 1, 2, 1, 2, 1, '这是一个测试评论'),
+(2, 1, 1, 2, 2, 1, '这还是一个测试 '),
+(3, 1, 1, 1, 3, 1, '这是一个测试的评论'),
+(4, 1, 1, 1, 1, 1, '这事给社团的测试评论');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lg_commented_type`
+--
+
+CREATE TABLE IF NOT EXISTS `lg_commented_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='这个表主要是为了记录被评论对象的类型的id 于实际代码没有多大用处' AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `lg_commented_type`
+--
+
+INSERT INTO `lg_commented_type` (`id`, `type`) VALUES
+(1, 'league'),
+(2, 'album'),
+(3, 'picture'),
+(4, 'activity'),
+(5, 'video'),
+(6, 'audio');
 
 -- --------------------------------------------------------
 
