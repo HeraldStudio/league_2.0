@@ -7,7 +7,7 @@
 
 *作者：Xie
 
-*更新日期：2012.12.23
+*更新日期：2012.12.30
 
 */
     class UserSessionControlModel
@@ -34,9 +34,9 @@
         private $message;          //收到的信息
         private function dealXML() //处理得到的xml
         {
-            $xml = simplexml_load_string('message.xml');
-            $cardNumber = $xml->properties->herald.sso.studentUser.cardNumber;
-            $userName = $xml->properties->herald.sso.studentUser.fullName;
+            $xml = SimpleXMLElement($message);
+            $cardNumber = $xml->properties->{'herald.sso.studentUser.cardNumber'};
+            $userName = $xml->properties->{'herald.sso.studentUser.fullName'};
             $sessionID = $xml->id;
         }
         private function applySessionID() //向服务器要session ID
