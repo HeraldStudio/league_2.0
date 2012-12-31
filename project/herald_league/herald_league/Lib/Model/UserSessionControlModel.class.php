@@ -16,9 +16,10 @@
         {
             if( cookie('herald_seeion_id')=null)    //如果不存在cookie
             {
+                $sessionTimeOut = 3600 * 3;//cook超时，单位秒
                 $this->applySessionID();//申请SessionID
                 $this->dealXML();  //分析xml
-                cookie('herald_seeion_id',$sessionID,10800);//设置cookie
+                cookie('herald_seeion_id',$sessionID,$sessionTimeOut);//设置cookie
             }
             else
             {
