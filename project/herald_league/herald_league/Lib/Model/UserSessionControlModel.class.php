@@ -12,9 +12,15 @@
 */
     class UserSessionControlModel
     {
+        private $sessionID;        //session的ID
+        private $userName;         //登陆用户的用户名
+        private $cardNumber;       //登陆用户的一卡通号
+        private $xml;              //得到的xml
+        private $message;          //收到的信息
+        
         function __construct()     //构造函数,创建cookie存储sessionID
         {
-            if( cookie('herald_seeion_id')=null)    //如果不存在cookie
+            if( cookie('herald_seeion_id')=null )    //如果不存在cookie
             {
                 $sessionTimeOut = 3600 * 3;//cook超时，单位秒
                 $this->applySessionID();//申请SessionID
@@ -27,18 +33,12 @@
                 $this->dealXML();
             }
         }
-        
-        private $sessionID;        //session的ID
-        private $userName;         //登陆用户的用户名
-        private $cardNumber;       //登陆用户的一卡通号
-        private $xml;              //得到的xml
-        private $message;          //收到的信息
         private function dealXML() //处理得到的xml
         {
-            $xml = SimpleXMLElement($message);
-            $cardNumber = $xml->properties->{'herald.sso.studentUser.cardNumber'};
-            $userName = $xml->properties->{'herald.sso.studentUser.fullName'};
-            $sessionID = $xml->id;
+            $this -> $xml = SimpleXMLElement($message);
+            $this -> $cardNumber = $xml->properties->{'herald.sso.studentUser.cardNumber'};
+            $this -> $userName = $xml->properties->{'herald.sso.studentUser.fullName'};
+            $this -> $sessionID = $xml->id;
         }
         private function applySessionID() //向服务器要session ID
         {
@@ -47,17 +47,17 @@
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //保存在字符串中
             curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口          
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
-            $message=curl_exec($ch);  
+            $this -> $message=curl_exec($ch);  
             curl_close($ch);
         }
         private function update()
         {
-            $sessionID = cookie('herald_session_id');
+            $this -> $sessionID = cookie('herald_session_id');
             $ch = curl_init("121.248.63.105/sessionservice/sessions/$sessionID");
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch,CURL_PORT，8080);
-            $message = curl_exec($ch);
+            $this -> $message = curl_exec($ch);
             curl_close();
         }
         public function isLogin()   //判断用户是否登陆,返回true或者false
@@ -68,15 +68,15 @@
         }
         public function getUserName() //返回用户名
         {
-            return $userName;
+            return $this -> $userName;
         }
         public function getCardNumber() //返回一卡通号
         {
-            return $cardNumber;
+            return $this -> $cardNumber;
         }
         public function getSessionID() //返回sessionID
         {
-            return $sessionID;
+            return $this -> $sessionID;
         }
     }
 ?>
