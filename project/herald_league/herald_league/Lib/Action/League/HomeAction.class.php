@@ -154,9 +154,21 @@ class HomeAction extends Action
 
 		$Comment = M('Comment');
 		$comment = $Comment -> where('commed_id ='.$leagueid.' AND commed_type = 1') -> select();
-		
 		$this -> assign( 'comment', $comment );
+
+		$Answer = M('Answer');
+		//print_r($comment);
+		foreach ($comment as $comments) 
+		{
+			$answer[$comments['id']]= $Answer -> where('comment_id ='.$comments['id'].' AND answering_type = 1') -> select();
+		}
+		//print_r($answer);
+
+		$this -> assign('answer', $answer);
 		$this -> display();
+		
+
+		
 
 
 

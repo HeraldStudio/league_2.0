@@ -1,9 +1,11 @@
 	<!--注意当评论为空的情况-->
-	
 <volist name = "comment" id = "vo">
-	<!--<a>{$commingname}</a>评论：<a>{$content}</a><br/>
-	<a>{$vo['answering_id']*10+$vo['answering_type']|getAnsweringInfo}</a>回复：
-	<a>{$vo.content}</a>
-	<br/>-->
-	<a>{$vo.id|getAnsweringInfo}</a>
+	<h2>{$vo.comming_id * 10 + $vo.comming_type|getCommentInfo}评论:{$vo.content}</h2>
+	<foreach name = "answer" item = "va" key = "vak">
+		<eq name = "vak" value = "$vo.id">
+			<volist name = "va" id = "vae">
+				XXX回复:<a>{$vae.content}</a><br/>
+			</volist>
+		</eq>
+	</foreach>
 </volist>
