@@ -1,10 +1,10 @@
 	<!--注意当评论为空的情况-->
 <volist name = "comment" id = "vo">
-	<h2>{$vo.comming_id * 10 + $vo.comming_type|getCommentInfo}评论:{$vo.content}</h2>
+	<h2>{$vo['comming_id']*10+$vo['comming_type']|getCommenterInfo}评论:{$vo.content}</h2>
 	<foreach name = "answer" item = "va" key = "vak">
 		<eq name = "vak" value = "$vo.id">
 			<volist name = "va" id = "vae">
-				XXX回复:<a>{$vae.content}</a><br/>
+				<a>{$vae['answering_id']*10+$vae['answering_type']|getCommenterInfo}回复:{$vae.content}</a><br/>
 			</volist>
 		</eq>
 	</foreach>

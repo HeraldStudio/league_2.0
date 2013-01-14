@@ -68,32 +68,34 @@ class HomeAction extends Action
 		/*获取相册信息*/
 		$Album = D('League_album');
 		$album = $Album -> where('league_id ='.$leagueid) -> select();
-		$firstlooptimes = count($album);
+		$this -> assign( 'album', $album );
+
+		/*获取评论和回复信息*/
+		//$Comment = M('Comment');
+		//$Answer = M('Answer');
+
+		//foreach ($album as $albums) 
+		//{
+		//	$comment[$albums['id']] = $Comment -> where( 'commed_id ='.$albums['id'].' AND commed_type = 2') -> select();
+		//}
+
+		//foreach ($comment as $comments) 
+		//{
+		///	foreach ($comments as $eachcomment) 
+			///{
+			//	$answer[$eachcomment['id']] = $Answer -> where( 'comment_id ='.$eachcomment['id'] ) -> select();
+			//}
+	//	}
+
+		$result = getCommentAndAnswer( $album, 2 );
+
+		$comment = $result[0];
+		$answer = $result[1];
+
+		$this -> assign( 'comment', $comment );
+		$this -> assign( 'answer', $answer );
 		
-		for( $i = 0; $i < $firstlooptimes; $i++ )
-		{
-			/*相册基本信息*/
-			$this -> albumid = $album[$i]['id'];
-			$this -> albumname = $album[$i]['album_name'];
-			$this -> albuminfo = $album[$i]['album_info'];
-			$this -> albumcoveradd = $album[$i]['album_cover_add'];
-			
-			/*获取相册评论信息*/
-			$result = getCommentAndAnswer( $album[$i]['id'], 2);//相册被评论类型id是2
-		
-			/*这个数组包含每条评论的所有信息*/
-			$commentinfo = $result[0];
-			
-			/*这个数组包含改评论下的回复的所有信息*/
-			$answer = $result[1];
-			
-			//这里添加代码可获取更详细的评论信息
-			$this -> content = $commentinfo['content'];
-			
-			$this -> assign('answer', $answer);
-			$this -> display();
-			
-		}
+        $this -> display();
 	}
 	
 	/*
@@ -110,35 +112,18 @@ class HomeAction extends Action
 		/*获取图片信息*/
 		$Picture = D('League_picture');
 		$picture = $Picture -> where('album_id='.$albumid) -> select();
-		$firstlooptimes = count($picture);
+
+		$this -> assign( 'picture', $picture );
+
+		$result = getCommentAndAnswer( $picture, 3 );
+
+		$comment = $result[0];
+		$answer = $result[1];
 		
-		/*获取相册信息*/
-		for( $i = 0; $i < $firstlooptimes; $i++ )
-		{
-			/*图片基本信息*/
-			$this -> pictureid = $picture[$i]['id'];
-			$this -> picturename = $picture[$i]['picture_name'];
-			$this -> pictureinfo = $picture[$i]['picture_info'];
-			$this -> smallpicadd = $picture[$i]['small_picture_add'];
-			$this -> largepicadd = $picture[$i]['large_picture_add'];
-			$this -> iscover = $picture[$i]['is_cover'];
-			//$this -> display();
-			/*获取图片评论信息*/
-			$result = getCommentAndAnswer( $picture[$i]['id'], 3 );//相册被评论类型id是2
-			
-			/*这个数组包含每条评论的所有信息*/
-			$commentinfo = $result[0];
-
-			//这里添加代码可获取更详细的评论信息
-			$this -> content = $commentinfo['content'];
-			
-			/*这个数组包含改评论下的回复的所有信息*/
-			$answer = $result[1];
-			$this -> assign('answer', $answer);
-
-			
-			$this -> display();
-		}
+		$this -> assign( 'comment', $comment );
+		$this -> assign( 'answer', $answer );
+		
+		$this -> display();
 	}
 	
 	/*
@@ -153,57 +138,18 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 
 		$Comment = M('Comment');
-		$comment = $Comment -> where('commed_id ='.$leagueid.' AND commed_type = 1') -> select();
+		$comment = $Comment -> where('commed_id ='.$leagueid.' AND commed_type = 1') -> select();//对社团的评论 commed_id = 1
 		$this -> assign( 'comment', $comment );
 
 		$Answer = M('Answer');
-		//print_r($comment);
+		
 		foreach ($comment as $comments) 
 		{
-			$answer[$comments['id']]= $Answer -> where('comment_id ='.$comments['id'].' AND answering_type = 1') -> select();
+			$answer[$comments['id']]= $Answer -> where( 'comment_id ='.$comments['id'] ) -> select();
 		}
-		//print_r($answer);
 
 		$this -> assign('answer', $answer);
 		$this -> display();
-		
-
-		
-
-
-
-
-
-
-
-
-
-		
-		/*获取评论信息*/
-		//$result = getCommentAndAnswer( $albumid, 1);//社团被评论id是1
-		
-		/*这个数组包含每条评论的所有信息*/
-		//$commentinfo = $result[0];
-		
-		//这里添加代码可获取更详细的评论信息
-		//$commingid = $commentinfo['comming_id'];//评论者id
-		//$commingtype = $commentinfo['comming_type'];//评论者类型 1 表示普通用户 2 表示社团用户
-		//$this -> content = $commentinfo['content'];
-
-		/*这个数组包含改评论下的回复的所有信息*/
-		//$answer = $result[1];//二维数组
-		
-		//这里添加代码获取更详细的回复信息
-		//$this -> assign('answer', $answer);
-
-		/*获取评论者信息*/
-		//$comminginfo = getCommingInfo( $commingid, $commingtype );//评论者详细信息数组
-
-		/*评论者详细信息*/
-		//这里添加代码获取更详细评论者的信息
-		//$this -> commingname = $comminginfo[0];
-		
-		//$this -> display();
 	}
 }
 ?>

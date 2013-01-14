@@ -1,13 +1,34 @@
-<h2>相册名称：<a href = "__APP__/League/Home/picture/albumid/{$albumid}">{$albumname}</a></h2>
-<p>相册信息：{$albuminfo}</p>
-<a href = "__APP__/League/Home/picture/albumid/{$albumid}"><img src = "__Uploads__/{$albumcoveradd}"/></a>
-<br/>
 <!--<form id="comment_form">
 	 <p>发表评论：</p>
 	 <textarea rows="5" cols="50"></textarea><br/>
 	 <input type="submit" name="submit" id="submit" value="评论" />
 </form>-->
-	评论：<a>{$content}</a><br/>
-<volist name = "answer" id = "vo">
-	回复：<a>{$vo.content}</a><br/>
+<volist name = "album" id = "vo">
+	<h2>相册名称：
+		<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">{$vo.album_name}
+		</a>
+	</h2>
+	<p>
+		相册信息：{$vo.album_info}
+	</p>
+	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">
+		<img src = "__Uploads__/{$vo.album_cover_add}"/>
+	</a>
+	<br/>
+	<foreach name = "comment" item = "vc" key = "vck">
+		<eq name = "vck" value = "$vo.id">
+			<volist name = "vc" id = "vce">
+				<h3>
+					{$vce['comming_id']*10+$vce['comming_type']|getCommenterInfo}评论：{$vce.content}
+				</h3>
+				<foreach name = "answer" item = "va" key = "vak">
+					<eq name = "vak" value = "$vce.id">
+						<volist name = "va" id = "vae">
+							<a>{$vae['answering_id']*10+$vae['answering_type']|getCommenterInfo}回复:{$vae.content}</a><br/>
+						</volist>
+					</eq>
+				</foreach>
+			</volist>
+		</eq>
+	</foreach>
 </volist>
