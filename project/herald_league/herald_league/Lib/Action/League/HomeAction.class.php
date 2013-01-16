@@ -7,14 +7,23 @@
 
 *作者：Tairy
 
-*更新日期：2012.12.21
+*更新日期：2012.01.14
 
 */
+
 class HomeAction extends Action
 {	
 	/*
+
+	函数功能：社团空间首页控制函数
 	
-		社团空间首页控制器函数
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
 	
 	*/
 	
@@ -33,12 +42,21 @@ class HomeAction extends Action
 		
 		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
+
 		$this -> display();
     }
 	
 	/*
+
+	函数功能：社团信息页面控制函数
 	
-		社团信息控制器函数
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
 	
 	*/
 	
@@ -55,8 +73,16 @@ class HomeAction extends Action
 	}
 	
 	/*
+
+	函数功能：社团相册控制函数
 	
-		相册控制器函数
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
 	
 	*/
 	
@@ -70,37 +96,35 @@ class HomeAction extends Action
 		$album = $Album -> where('league_id ='.$leagueid) -> select();
 		$this -> assign( 'album', $album );
 
-		/*获取评论和回复信息*/
-		//$Comment = M('Comment');
-		//$Answer = M('Answer');
-
-		//foreach ($album as $albums) 
-		//{
-		//	$comment[$albums['id']] = $Comment -> where( 'commed_id ='.$albums['id'].' AND commed_type = 2') -> select();
-		//}
-
-		//foreach ($comment as $comments) 
-		//{
-		///	foreach ($comments as $eachcomment) 
-			///{
-			//	$answer[$eachcomment['id']] = $Answer -> where( 'comment_id ='.$eachcomment['id'] ) -> select();
-			//}
-	//	}
-
-		$result = getCommentAndAnswer( $album, 2 );
-
-		$comment = $result[0];
-		$answer = $result[1];
+		$Comment = D('Comment');
+		$comment = $Comment -> getCommentInfo( $album, 2 );
 
 		$this -> assign( 'comment', $comment );
+
+		$Answer = D('Answer');
+		$answer = $Answer -> getAnswerInfo( $comment );
+
 		$this -> assign( 'answer', $answer );
+
+		if( !empty( $_POST['submit'] ) )
+		{
+			$this -> judgeIfSubData( $Comment, $Answer, 2 );
+		}
 		
         $this -> display();
 	}
 	
 	/*
+
+	函数功能：图片页面控制函数
 	
-		图片页面控制器函数
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
 	
 	*/
 	
@@ -115,20 +139,33 @@ class HomeAction extends Action
 
 		$this -> assign( 'picture', $picture );
 
-		$result = getCommentAndAnswer( $picture, 3 );
+		$Comment = D('Comment');
+		$comment = $Comment -> getCommentInfo( $picture, 3 );
 
-		$comment = $result[0];
-		$answer = $result[1];
-		
 		$this -> assign( 'comment', $comment );
+
+		$Answer = D('Answer');
+		$answer = $Answer -> getAnswerInfo( $comment );
+
 		$this -> assign( 'answer', $answer );
-		
+		if( !empty( $_POST['submit'] ) )
+		{
+			$this -> judgeIfSubData( $Comment, $Answer, 3 );
+		}
 		$this -> display();
 	}
 	
 	/*
+
+	函数功能：社团交流区控制函数
 	
-		社团交流区控制函数
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
 	
 	*/
 	
@@ -137,19 +174,69 @@ class HomeAction extends Action
 		/*获取URL参数*/
 		$leagueid = intval($this -> _param('leagueid'));
 
-		$Comment = M('Comment');
-		$comment = $Comment -> where('commed_id ='.$leagueid.' AND commed_type = 1') -> select();//对社团的评论 commed_id = 1
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $leagueid, 1);//1表示社团交流区信息
+
 		$this -> assign( 'comment', $comment );
 
-		$Answer = M('Answer');
-		
-		foreach ($comment as $comments) 
-		{
-			$answer[$comments['id']]= $Answer -> where( 'comment_id ='.$comments['id'] ) -> select();
-		}
+		$Answer = D ( 'Answer' );
+		$answer = $Answer -> getAnswerInfo( $comment );
 
 		$this -> assign('answer', $answer);
+		if( !empty( $_POST['submit'] ) )
+		{
+			$this -> judgeIfSubData( $Comment, $Answer, 1);
+		}
 		$this -> display();
+	}
+
+	/*
+
+	函数功能：判断数据写入结果
+	
+	参数信息：参数是从模型中返回的结果
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
+
+	public function judgeAddState( $result )
+	{
+		
+		if( $result == "error" )
+		{
+			$this -> error('数据对象创建错误');
+		}
+		elseif ( $result & $result != "error") 
+		{
+			$this -> success('操作成功！');
+		}
+		else
+		{
+			$this -> error('写入错误！');
+		}
+
+	}
+
+	public function judgeIfSubData( $Comment, $Answer ,$commedtype )
+	{
+		if( !empty( $_POST['content_c'] ) )
+		{
+			$commentresult = $Comment -> addCommentInfo( 1, 1, 1, $commedtype, $_POST );
+
+			$this -> judgeAddState( $commentresult );
+		}
+
+		if( !empty( $_POST['content_a'] ) )
+		{
+			$answerresult = $Answer -> addAnswerinfo( 1, 1, 1, $_POST );
+
+			$this -> judgeAddState( $answerresult );
+		}
 	}
 }
 ?>

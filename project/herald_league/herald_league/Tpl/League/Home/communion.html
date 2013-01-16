@@ -1,6 +1,10 @@
-	<!--注意当评论为空的情况-->
+<form name = "comment_form" id = "comment_form" method = "post" action = "__URL__/communion">
+	 <p>给主人留言：</p>
+	 <textarea name = "content_c" rows="2" cols="50"></textarea><br/>
+	 <input type="submit" name="submit" id="submit" value="留言" />
+</form>
 <volist name = "comment" id = "vo">
-	<h2>{$vo['comming_id']*10+$vo['comming_type']|getCommenterInfo}评论:{$vo.content}</h2>
+	<h2>{$vo['comming_id']*10+$vo['comming_type']|getCommenterInfo}留言:{$vo.content}</h2>
 	<foreach name = "answer" item = "va" key = "vak">
 		<eq name = "vak" value = "$vo.id">
 			<volist name = "va" id = "vae">
@@ -8,4 +12,12 @@
 			</volist>
 		</eq>
 	</foreach>
+	<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/communion">
+	<p>
+		<textarea name = "content_a" rows="1" cols="50"></textarea>
+	</p>
+	 <input type="submit" name="submit" id="submit" value="回复" />
+	</form>
+	<hr/>
 </volist>
+

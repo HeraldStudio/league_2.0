@@ -50,38 +50,128 @@ function getCommenterInfo ( $commentingArgument )
 
 /*
 
-	函数功能：获取评论回复信息
+	函数功能：php过滤函数
 	
-	参数信息：第一个参数是被评论者的信息的一个数组
-
-			  第二个参数是被评论者类型
+	参数信息：参数是被过滤的字符串
 	
-	  返回值：返回包含评论和回复信息的数组
+	  返回值：返回过滤之后的字符串
 			  
 	    作者：Tairy
 	
 	更新日期：2013/01/14
 	
 */
-function getCommentAndAnswer( $commentedinfo, $commentertype )
+
+function htmlencode($str)
 {
-	/*获取评论和回复信息*/
-	$Comment = M('Comment');
-	$Answer = M('Answer');
+	if(empty($str))
+		return;
 
-	foreach ($commentedinfo as $commentedinfos) 
-	{
-		$comment[$commentedinfos['id']] = $Comment -> where( 'commed_id ='.$commentedinfos['id'].' AND commed_type = '.$commentertype ) -> select();
-	}
+	if($str=="") 
+		return $str;
 
-	foreach ($comment as $comments) 
-	{
-		foreach ($comments as $eachcomment) 
-		{
-			$answer[$eachcomment['id']] = $Answer -> where( 'comment_id ='.$eachcomment['id'] ) -> select();
-		}
-	}
+	$str=trim($str);
+	$str=str_ireplace("&","&amp;",$str);
+	$str=str_ireplace(" ","&nbsp;",$str);
+	$str=str_ireplace(">","&gt;",$str);
+	$str=str_ireplace("<","&lt;",$str);
+	$str=str_ireplace(chr(32),"&nbsp;",$str);
+	$str=str_ireplace(chr(9),"&nbsp;",$str);
+	$str=str_ireplace(chr(34),"&",$str);
+	$str=str_ireplace(chr(39),"&#39;",$str);
+	$str=str_ireplace(chr(13),"<br />",$str);
+	$str=str_ireplace("'","&#039;",$str);
+	$str=str_ireplace("select","sel&#101;ct",$str);
+	$str=str_ireplace("join","jo&#105;n",$str);
+	$str=str_ireplace("union","un&#105;on",$str);
+	$str=str_ireplace("where","wh&#101;re",$str);
+	$str=str_ireplace("insert","ins&#101;rt",$str);
+	$str=str_ireplace("delete","del&#101;te",$str);
+	$str=str_ireplace("update","up&#100;ate",$str);
+	$str=str_ireplace("like","lik&#101;",$str);
+	$str=str_ireplace("drop","dro&#112;",$str);
+	$str=str_ireplace("create","cr&#101;ate",$str);
+	$str=str_ireplace("modify","mod&#105;fy",$str);
+	$str=str_ireplace("rename","ren&#097;me",$str);
+	$str=str_ireplace("alter","alt&#101;r",$str);
+	$str=str_ireplace("cast","ca&#115;",$str);
+	return $str;
+}
 
-	return array( $comment, $answer ); 
+/*
+
+	函数功能：php还原函数
+	
+	参数信息：参数是过滤后的字符串
+	
+	  返回值：返回过滤前的字符串
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/14
+	
+*/
+
+function htmldecode($str)
+{
+	if(empty($str)) 
+		return;
+	if($str=="") 
+		return $str;
+
+	$str=str_replace("&amp;","&",$str);
+	$str=str_replace("&gt;",">",$str);
+	$str=str_replace("&lt;","<",$str);
+	$str=str_replace("&nbsp;",chr(32),$str);
+	$str=str_replace("&nbsp;",chr(9),$str);
+	$str=str_replace("&",chr(34),$str);
+	$str=str_replace("&#39;",chr(39),$str);
+	$str=str_replace("<br />",chr(13),$str);
+	$str=str_replace("''","'",$str);
+	$str=str_replace("sel&#101;ct","select",$str);
+	$str=str_replace("jo&#105;n","join",$str);
+	$str=str_replace("un&#105;on","union",$str);
+	$str=str_replace("wh&#101;re","where",$str);
+	$str=str_replace("ins&#101;rt","insert",$str);
+	$str=str_replace("del&#101;te","delete",$str);
+	$str=str_replace("up&#100;ate","update",$str);
+	$str=str_replace("lik&#101;","like",$str);
+	$str=str_replace("dro&#112;","drop",$str);
+	$str=str_replace("cr&#101;ate","create",$str);
+	$str=str_replace("mod&#105;fy","modify",$str);
+	$str=str_replace("ren&#097;me","rename",$str);
+	$str=str_replace("alt&#101;r","alter",$str);
+	$str=str_replace("ca&#115;","cast",$str);
+
+	return $str;
+}
+
+/*
+
+	函数功能：判断数组维数
+	
+	参数信息：参数需判断数组
+
+	  返回值：返回数组维数
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+*/
+
+function countdim($array)
+{
+    if (is_array(reset($array)))
+    {
+        $return = countdim(reset($array)) + 1;
+    }
+
+    else
+    {
+        $return = 1;
+    }
+
+    return $return;
 }
 ?>

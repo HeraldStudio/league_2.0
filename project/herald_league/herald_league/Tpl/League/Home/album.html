@@ -1,8 +1,3 @@
-<!--<form id="comment_form">
-	 <p>发表评论：</p>
-	 <textarea rows="5" cols="50"></textarea><br/>
-	 <input type="submit" name="submit" id="submit" value="评论" />
-</form>-->
 <volist name = "album" id = "vo">
 	<h2>相册名称：
 		<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">{$vo.album_name}
@@ -21,6 +16,12 @@
 				<h3>
 					{$vce['comming_id']*10+$vce['comming_type']|getCommenterInfo}评论：{$vce.content}
 				</h3>
+				<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/album">
+				<p>
+					<textarea name = "content_a" rows="1" cols="50"></textarea>
+				</p>
+				 <input type="submit" name="submit" id="submit" value="回复" />
+				</form>
 				<foreach name = "answer" item = "va" key = "vak">
 					<eq name = "vak" value = "$vce.id">
 						<volist name = "va" id = "vae">
@@ -31,4 +32,9 @@
 			</volist>
 		</eq>
 	</foreach>
+	<form name = "comment_form" id = "comment_form" method = "post" action = "__URL__/album">
+		 <textarea name = "content_c" rows="1" cols="50"></textarea><br/>
+		 <input type="submit" name="submit" id="submit" value="留言" />
+	</form>
+	<hr/>
 </volist>
