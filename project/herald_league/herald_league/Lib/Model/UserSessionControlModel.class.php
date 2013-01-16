@@ -17,6 +17,7 @@
         private $cardNumber;       //登陆用户的一卡通号
         private $xml;              //得到的xml
         private $message;          //收到的信息
+        private $userType;         //用户类型，社团/个人/游客
         
         function __construct()     //构造函数,创建cookie存储sessionID
         {
@@ -26,11 +27,14 @@
                 $this->applySessionID();//申请SessionID
                 $this->dealXML();  //分析xml
                 cookie('herald_session_id',$this->sessionID,$sessionTimeOut);//设置cookie
+                $this->userType = "visitor";
             }
             else
             {
                 $this->update();//用cookie更新数据
                 $this->dealXML();
+                //todo 处理usertype
+
             }
         }
         private function dealXML() //处理得到的xml
