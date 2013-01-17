@@ -148,6 +148,7 @@ class HomeAction extends Action
 		$answer = $Answer -> getAnswerInfo( $comment );
 
 		$this -> assign( 'answer', $answer );
+
 		if( !empty( $_POST['submit'] ) )
 		{
 			$this -> judgeIfSubData( $Comment, $Answer, 3 );
@@ -183,6 +184,9 @@ class HomeAction extends Action
 		$answer = $Answer -> getAnswerInfo( $comment );
 
 		$this -> assign('answer', $answer);
+
+		$this -> leagueid = $leagueid;
+
 		if( !empty( $_POST['submit'] ) )
 		{
 			$this -> judgeIfSubData( $Comment, $Answer, 1);
@@ -206,12 +210,11 @@ class HomeAction extends Action
 
 	public function judgeAddState( $result )
 	{
-		
-		if( $result == "error" )
+		if ( $result == "error" )
 		{
 			$this -> error('数据对象创建错误');
 		}
-		elseif ( $result & $result != "error") 
+		elseif ( is_int( $result ) ) 
 		{
 			$this -> success('操作成功！');
 		}
@@ -222,20 +225,23 @@ class HomeAction extends Action
 
 	}
 
-	public function judgeIfSubData( $Comment, $Answer ,$commedtype )
+	public function judgeIfSubData( $Comment, $Answer, $commedtype )
 	{
 		if( !empty( $_POST['content_c'] ) )
 		{
-			$commentresult = $Comment -> addCommentInfo( 1, 1, 1, $commedtype, $_POST );
+			$commentresult = $Comment -> addCommentInfo( 1, 1, $_POST['subdata_c'], $commedtype, $_POST );
 
 			$this -> judgeAddState( $commentresult );
 		}
-
-		if( !empty( $_POST['content_a'] ) )
+		elseif( !empty( $_POST['content_a'] ) )
 		{
-			$answerresult = $Answer -> addAnswerinfo( 1, 1, 1, $_POST );
+			$answerresult = $Answer -> addAnswerinfo( $_POST['subdata_a'], 1, 1, $_POST );
 
 			$this -> judgeAddState( $answerresult );
+		}
+		else
+		{
+			return;
 		}
 	}
 }
