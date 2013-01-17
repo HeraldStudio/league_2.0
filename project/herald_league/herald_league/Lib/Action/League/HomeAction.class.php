@@ -33,12 +33,15 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 		
 		/*获取社团信息*/
-		$League = M('League_info');
-		$league = $League -> where('id ='.$leagueid) -> select();
-		//print_r($l);
+		$League = D('LeagueInfo');
+		$league = $League -> getActivityInfoByLeague ( $leagueid );
+
+		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
+		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
+		
 		/*获取活动信息*/
-		$Activity = M('Activity');
-		$activity = $Activity -> where('league_id ='.$leagueid) -> select();
+		$Activity = D('Activity');
+		$activity = $Activity -> getActivityInfo( $leagueid );
 		
 		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
@@ -97,7 +100,7 @@ class HomeAction extends Action
 		$this -> assign( 'album', $album );
 
 		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $album, 2 );
+		$comment = $Comment -> getCommentInfo( $album, $Comment -> getCommentedType("album") );
 
 		$this -> assign( 'comment', $comment );
 
@@ -108,7 +111,7 @@ class HomeAction extends Action
 
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 2 );
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("album") );
 		}
 		
         $this -> display();
@@ -140,7 +143,7 @@ class HomeAction extends Action
 		$this -> assign( 'picture', $picture );
 
 		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $picture, 3 );
+		$comment = $Comment -> getCommentInfo( $picture, $Comment -> getCommentedType("picture") );
 
 		$this -> assign( 'comment', $comment );
 
@@ -151,7 +154,7 @@ class HomeAction extends Action
 
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 3 );
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("picture") );
 		}
 		$this -> display();
 	}
@@ -176,7 +179,7 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 
 		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $leagueid, 1);//1表示社团交流区信息
+		$comment = $Comment -> getCommentInfo( $leagueid, $Comment -> getCommentedType("league") );//1表示社团交流区信息
 
 		$this -> assign( 'comment', $comment );
 
@@ -189,7 +192,7 @@ class HomeAction extends Action
 
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 1);
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
 		}
 		$this -> display();
 	}

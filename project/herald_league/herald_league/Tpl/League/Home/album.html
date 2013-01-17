@@ -16,11 +16,6 @@
 				<h3>
 					{$vce['comming_id']*10+$vce['comming_type']|getCommenterInfo}评论：{$vce.content}
 				</h3>
-				<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/album">
-					<textarea name = "content_a" rows="1" cols="50" placeholder = "回复..."></textarea>
-					<input type="submit" name="submit" id="submit" value="回复" />
-					<input type = "hidden" name = "subdata_a" value = "{$vce.id}" />
-				</form>
 				<foreach name = "answer" item = "va" key = "vak">
 					<eq name = "vak" value = "$vce.id">
 						<volist name = "va" id = "vae">
@@ -28,6 +23,11 @@
 						</volist>
 					</eq>
 				</foreach>
+				<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/album">
+					<textarea name = "content_a" rows="1" cols="50" placeholder = "回复..."></textarea>
+					<input type="submit" name="submit" id="submit" value="回复" />
+					<input type = "hidden" name = "subdata_a" value = "{$vce.id}" />
+				</form>
 			</volist>
 		</eq>
 	</foreach>
