@@ -2,10 +2,10 @@
 -- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Dec 23, 2012 at 05:49 PM
--- Server version: 5.5.28
--- PHP Version: 5.4.4
+-- 主机: localhost
+-- 生成日期: 2013 年 01 月 17 日 10:10
+-- 服务器版本: 5.5.28
+-- PHP 版本: 5.4.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `herald_league`
+-- 数据库: `herald_league`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_activity`
+-- 表的结构 `lg_activity`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_activity` (
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `lg_activity` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `lg_activity`
+-- 转存表中的数据 `lg_activity`
 --
 
 INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `end_time`, `activity_introduce`, `activity_post_add`, `contact_info`, `activity_org_name`, `activity_release_time`, `activity_count`, `comment_id`, `is_vote`) VALUES
@@ -53,10 +53,10 @@ INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `en
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_activity_class`
+-- 表的结构 `lg_activityclass`
 --
 
-CREATE TABLE IF NOT EXISTS `lg_activity_class` (
+CREATE TABLE IF NOT EXISTS `lg_activityclass` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `class_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `lg_activity_class` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_answer`
+-- 表的结构 `lg_answer`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_answer` (
@@ -77,22 +77,32 @@ CREATE TABLE IF NOT EXISTS `lg_answer` (
   `is_new` int(4) NOT NULL DEFAULT '1' COMMENT '默认为1  被评论用户点击之后置为0',
   `content` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
--- Dumping data for table `lg_answer`
+-- 转存表中的数据 `lg_answer`
 --
 
 INSERT INTO `lg_answer` (`id`, `comment_id`, `answering_id`, `answering_type`, `floor_id`, `is_new`, `content`) VALUES
-(1, 1, 1, 1, 1, 1, '测试回复'),
-(2, 1, 1, 1, 2, 1, '还是测试回复'),
-(3, 3, 1, 1, 3, 1, '测试回复'),
-(4, 4, 1, 1, 4, 1, '这是给社团的测试回复');
+(1, 1, 2, 1, 1, 1, '测试回复给相册的'),
+(2, 2, 1, 1, 2, 1, '还是测试回复'),
+(3, 3, 2, 1, 3, 1, '测试回复给社团的'),
+(4, 4, 1, 2, 4, 1, '这是给社团的测试回复'),
+(5, 1, 2, 1, 2, 1, '这也是给相册的测试回复'),
+(6, 5, 1, 1, 1, 1, '这是给照片的测试回复1'),
+(7, 6, 1, 1, 1, 1, '这是给照片的测试回复2'),
+(8, 1, 1, 1, 1, 1, '测试回复'),
+(17, 1, 1, 1, 1, 1, 'test'),
+(18, 12, 1, 1, 1, 1, '留个言试一下'),
+(19, 1, 1, 1, 1, 1, '回复一下试一下'),
+(20, 0, 1, 1, 1, 1, '回复一下试一下'),
+(21, 2, 1, 1, 1, 1, '回复一下试一下'),
+(22, 11, 1, 1, 1, 1, '测试一下回复');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_attention`
+-- 表的结构 `lg_attention`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_attention` (
@@ -106,11 +116,11 @@ CREATE TABLE IF NOT EXISTS `lg_attention` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_comment`
+-- 表的结构 `lg_comment`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_comment` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `comming_id` int(11) NOT NULL COMMENT '评论者id',
   `comming_type` int(4) NOT NULL COMMENT '评论者类型',
   `commed_id` int(11) NOT NULL COMMENT '被评论者id',
@@ -118,35 +128,37 @@ CREATE TABLE IF NOT EXISTS `lg_comment` (
   `is_new` int(4) NOT NULL DEFAULT '1',
   `content` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `lg_comment`
+-- 转存表中的数据 `lg_comment`
 --
 
 INSERT INTO `lg_comment` (`id`, `comming_id`, `comming_type`, `commed_id`, `commed_type`, `is_new`, `content`) VALUES
-(1, 1, 2, 1, 2, 1, '这是一个测试评论'),
-(2, 1, 1, 2, 2, 1, '这还是一个测试 '),
-(3, 1, 1, 1, 3, 1, '这是一个测试的评论'),
-(4, 1, 1, 1, 1, 1, '这事给社团的测试评论');
+(1, 1, 1, 1, 1, 1, '这还是一个测试评论'),
+(2, 1, 1, 1, 2, 1, '这还是一个测试评论'),
+(9, 1, 1, 1, 2, 1, '这时给相册的一个测试评论'),
+(10, 1, 1, 2, 2, 1, '这是给第二个相册的评论'),
+(11, 1, 1, 1, 3, 1, '这是给照片的评论'),
+(12, 1, 1, 1, 1, 1, '我在留一个言');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_commented_type`
+-- 表的结构 `lg_commentedtype`
 --
 
-CREATE TABLE IF NOT EXISTS `lg_commented_type` (
+CREATE TABLE IF NOT EXISTS `lg_commentedtype` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='这个表主要是为了记录被评论对象的类型的id 于实际代码没有多大用处' AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `lg_commented_type`
+-- 转存表中的数据 `lg_commentedtype`
 --
 
-INSERT INTO `lg_commented_type` (`id`, `type`) VALUES
+INSERT INTO `lg_commentedtype` (`id`, `type`) VALUES
 (1, 'league'),
 (2, 'album'),
 (3, 'picture'),
@@ -157,7 +169,7 @@ INSERT INTO `lg_commented_type` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_league`
+-- 表的结构 `lg_league`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_league` (
@@ -171,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `lg_league` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_league_album`
+-- 表的结构 `lg_league_album`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_league_album` (
@@ -185,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `lg_league_album` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `lg_league_album`
+-- 转存表中的数据 `lg_league_album`
 --
 
 INSERT INTO `lg_league_album` (`id`, `league_id`, `album_name`, `album_info`, `album_cover_add`, `comment_id`) VALUES
@@ -195,7 +207,7 @@ INSERT INTO `lg_league_album` (`id`, `league_id`, `album_name`, `album_info`, `a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_league_class`
+-- 表的结构 `lg_league_class`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_league_class` (
@@ -205,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `lg_league_class` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `lg_league_class`
+-- 转存表中的数据 `lg_league_class`
 --
 
 INSERT INTO `lg_league_class` (`id`, `class_name`) VALUES
@@ -220,7 +232,7 @@ INSERT INTO `lg_league_class` (`id`, `class_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_league_info`
+-- 表的结构 `lg_league_info`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_league_info` (
@@ -238,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `lg_league_info` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `lg_league_info`
+-- 转存表中的数据 `lg_league_info`
 --
 
 INSERT INTO `lg_league_info` (`id`, `league_name`, `league_introduce`, `register_time`, `last_login_time`, `avater_address`, `league_class`, `content_id`, `league_member`, `street_id`) VALUES
@@ -248,7 +260,7 @@ INSERT INTO `lg_league_info` (`id`, `league_name`, `league_introduce`, `register
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_league_picture`
+-- 表的结构 `lg_league_picture`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_league_picture` (
@@ -265,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `lg_league_picture` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `lg_league_picture`
+-- 转存表中的数据 `lg_league_picture`
 --
 
 INSERT INTO `lg_league_picture` (`id`, `league_id`, `picture_name`, `picture_info`, `small_picture_add`, `large_picture_add`, `album_id`, `comment_id`, `is_cover`) VALUES
@@ -274,7 +286,7 @@ INSERT INTO `lg_league_picture` (`id`, `league_id`, `picture_name`, `picture_inf
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_street`
+-- 表的结构 `lg_street`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_street` (
@@ -285,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `lg_street` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `lg_street`
+-- 转存表中的数据 `lg_street`
 --
 
 INSERT INTO `lg_street` (`id`, `street_name`, `league_class`) VALUES
@@ -298,7 +310,7 @@ INSERT INTO `lg_street` (`id`, `street_name`, `league_class`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_systerm_admin`
+-- 表的结构 `lg_systerm_admin`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_systerm_admin` (
@@ -312,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `lg_systerm_admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_user`
+-- 表的结构 `lg_user`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_user` (
@@ -332,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `lg_user` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `lg_user`
+-- 转存表中的数据 `lg_user`
 --
 
 INSERT INTO `lg_user` (`id`, `card_num`, `true_name`, `nick_name`, `user_avatar_add`, `user_qq`, `user_mail`, `user_phone`, `user_grade`, `user_college`, `last_login_time`, `times`) VALUES
@@ -342,7 +354,7 @@ INSERT INTO `lg_user` (`id`, `card_num`, `true_name`, `nick_name`, `user_avatar_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_vote`
+-- 表的结构 `lg_vote`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_vote` (
@@ -356,7 +368,7 @@ CREATE TABLE IF NOT EXISTS `lg_vote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_vote_item`
+-- 表的结构 `lg_vote_item`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_vote_item` (
@@ -370,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `lg_vote_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_vote_result`
+-- 表的结构 `lg_vote_result`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_vote_result` (
@@ -383,7 +395,7 @@ CREATE TABLE IF NOT EXISTS `lg_vote_result` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lg_wanto`
+-- 表的结构 `lg_wanto`
 --
 
 CREATE TABLE IF NOT EXISTS `lg_wanto` (
