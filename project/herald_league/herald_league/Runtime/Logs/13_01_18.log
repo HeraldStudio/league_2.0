@@ -1834,3 +1834,287 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:-1.105344s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001141s ]
 
+[ 2013-01-18T17:31:04+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002862s ]
+
+[ 2013-01-18T17:31:08+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001901s ]
+
+[ 2013-01-18T17:31:14+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001859s ]
+
+[ 2013-01-18T17:35:13+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002014s ]
+
+[ 2013-01-18T17:35:48+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.022283s ]
+INFO: [ route_check ] --END-- [ RunTime:0.022469s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001814s ]
+
+[ 2013-01-18T17:35:57+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002008s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002189s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001626s ]
+
+[ 2013-01-18T17:35:57+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001790s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001971s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+
+[ 2013-01-18T17:36:24+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001889s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002078s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001868s ]
+
+[ 2013-01-18T17:36:26+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001976s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002158s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001862s ]
+
+[ 2013-01-18T17:36:30+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-01-18T17:36:53+08:00 ] ERR: (ThinkException) 无法加载模块:activity
+[ 2013-01-18T17:36:58+08:00 ] ERR: (ThinkException) 无法加载模块:activity
+[ 2013-01-18T17:37:10+08:00 ] ERR: (ThinkException) Unknown database 'herald_league'
+[ 2013-01-18T17:37:10+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001842s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002018s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001883s ]
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:39:53+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001743s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001941s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006573s ]
+SQL: SELECT * FROM `lg_activity` WHERE id=0 LIMIT 1   [ RunTime:0.016571s ]
+
+[ 2013-01-18T17:48:00+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:48:00+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002934s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003118s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002060s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:48:47+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:48:47+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001758s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001945s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001661s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:49:08+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:49:08+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001935s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002113s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002007s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:49:28+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:49:28+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001937s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002120s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001772s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:50:02+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:50:02+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002076s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001684s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:50:14+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:50:14+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.002056s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002264s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001723s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:51:07+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:51:07+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001661s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001840s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001611s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:51:08+08:00 ] ERR: (ThinkException) 模板不存在[D:/wamp/www/lg2/project/herald_league/herald_league/Tpl/activity/Activity/index.html]
+[ 2013-01-18T17:51:08+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001622s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001808s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001647s ]
+INFO: [ view_template ] --START--
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: file D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index: line D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class ActivityAction could not be converted to string D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: class D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index: type D:\wamp\www\lg2\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-01-18T17:53:02+08:00 ] 127.0.0.1 /lg2/project/herald_league/herald_league/index.php/activity/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.001812s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002082s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001615s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.006882s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002469s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.009499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036800s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.046413s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.057541s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.059757s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.061333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017198s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.063911s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.043390s ]
+SQL: SELECT * FROM `lg_activity` WHERE id=0 LIMIT 1   [ RunTime:0.001697s ]
+

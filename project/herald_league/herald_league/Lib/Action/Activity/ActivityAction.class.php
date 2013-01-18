@@ -14,6 +14,7 @@ class ActivityAction extends Action
 {
     public function index()
     {
+
        // $heraldSession = D('UserSessionControl'); //控制会话
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = M('activity');
@@ -27,6 +28,7 @@ class ActivityAction extends Action
         {
             //TODO show the message
             //$this->assign("result",$result);
+            $this ->display();
         }
     }
 }
