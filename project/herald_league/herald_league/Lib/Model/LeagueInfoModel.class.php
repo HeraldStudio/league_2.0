@@ -82,5 +82,46 @@ class LeagueInfoModel extends Model
     	$streetname = $Street -> getFieldById ( $streetid, 'street_name');
     	return $streetname;
     }
+    
+    /*
+
+	函数功能：添加新的社团
+	
+	参数信息：表单post上来的信息
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+    public function addNewLeague ( $postdata )
+    {
+    	$newleagueinfo['username'] = $postdata['username'];
+    	$newleagueinfo['password'] = $postdata['password'];
+    	$newleagueinfo['comfirm_password'] = $postdata['comfirm_password'];
+    	$newleagueinfo['league_name'] = $postdata['league_name'];
+    	$newleagueinfo['league_introduce'] = $postdata['league_introduce'];
+
+    	if( $this->create() ) 
+		{
+            return $this -> add( $newleagueinfo );
+        }
+        else
+        {
+            return "error";
+        }
+    }
+
+    public function updateLeagueInfo ( $leagueid, $postdata )
+    {
+    	$updateleagueinfo['league_name'] = $postdata['league_name'];
+    	$updateleagueinfo['league_introduce'] = $postdata['league_introduce'];
+    	$updateleagueinfo['league_member'] = $postdata['league_member'];
+    	$result = $this -> where ('id = '.$leagueid) -> save ( $updateleagueinfo );
+    	return $result;
+    }
 }
 ?>

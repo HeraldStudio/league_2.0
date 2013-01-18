@@ -34,14 +34,14 @@ class HomeAction extends Action
 		
 		/*获取社团信息*/
 		$League = D('LeagueInfo');
-		$league = $League -> getActivityInfoByLeague ( $leagueid );
+		$league = $League -> getLeagueInfo ( $leagueid );
 
 		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
 		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
 		
 		/*获取活动信息*/
 		$Activity = D('Activity');
-		$activity = $Activity -> getActivityInfo( $leagueid );
+		$activity = $Activity -> getActivityInfoByLeague ( $leagueid );
 		
 		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
@@ -199,6 +199,64 @@ class HomeAction extends Action
 
 	/*
 
+	函数功能：社团信息管理控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+	public function leagueAdmin()
+	{
+		/*获取URL参数*/
+		$leagueid = intval($this -> _param('leagueid'));
+
+		$LeagueInfo = D( "LeagueInfo" );
+		$leagueinfo = $LeagueInfo -> getLeagueInfo( $leagueid );
+		$this -> assign ( "leagueinfo", $leagueinfo );
+
+		$this -> leagueid = $leagueid;
+
+		if( !empty( $_POST['league_name'] ))
+		{
+			$updateresult = $LeagueInfo -> updateLeagueInfo ( $_POST['leagueid'], $_POST );
+			$this -> judgeAddState( $updateresult );
+		}
+		$this -> display();
+	}
+
+	/*
+
+	函数功能：社团注册控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+	public function leagueRegister()
+	{
+		if (!empty($_POST['league_name']))
+		{
+			$LeagueInfo = D( "LeagueInfo" );
+			$registerresult = $LeagueInfo -> addNewLeague( $_POST );
+			$this -> judgeAddState ( $registerresult );
+		}
+		$this -> display();
+	}
+
+	/*
+
 	函数功能：判断数据写入结果
 	
 	参数信息：参数是从模型中返回的结果
@@ -227,6 +285,24 @@ class HomeAction extends Action
 		}
 
 	}
+
+	/*
+
+	函数功能：判断是否提交数据
+	
+	参数信息：第一个参数是包含所有评论的数组
+
+			  第二个参数是包含所有回复的数组
+
+			  第三个参数是被评论者类型
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
 
 	public function judgeIfSubData( $Comment, $Answer, $commedtype )
 	{

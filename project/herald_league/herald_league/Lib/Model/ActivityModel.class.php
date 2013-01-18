@@ -40,7 +40,5 @@ class ActivityModel extends Model
     	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
-
-
 }
 ?>
