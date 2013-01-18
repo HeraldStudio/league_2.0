@@ -7,7 +7,7 @@
 
 *作者：xie
 
-*更新日期：2013.1.9
+*更新日期：2013.1.18
 
 */
 class ActivityAction extends Action
@@ -18,17 +18,27 @@ class ActivityAction extends Action
        // $heraldSession = D('UserSessionControl'); //控制会话
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = M('activity');
-        $result = $activity->where("id=%d",$activityID)->find(); //查询，find（）只返回第一条
-        if($result = null || $result = false)  //找不到 或者 查询失败
+        //$result = $activity->where("id=%d",$activityID)->find(); //查询，find（）只返回第一条
+        $result = $activity->find($activityID); //读取主键为$activityID值的数据
+        if($result == null || $result == false)  //找不到 或者 查询失败
         {
             //todo show error message
             echo "ERROR";
         }
         else
         {
-            //TODO show the message
-            //$this->assign("result",$result);
-            $this ->display();
+            //var_dump($result);
+            if($result[is_vote] != 0 )//是投票
+            {
+                redirect("../../../Vote/index/voteid/$result[id]");// todo 转向投票页
+            }
+            else
+            {
+               $this->assign('result',$result);
+
+               $this ->display();
+            }
+
         }
     }
 }
