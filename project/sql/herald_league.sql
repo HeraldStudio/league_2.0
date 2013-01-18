@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 01 月 17 日 10:10
+-- 生成日期: 2013 年 01 月 18 日 14:57
 -- 服务器版本: 5.5.28
 -- PHP 版本: 5.4.4
 
@@ -53,10 +53,10 @@ INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `en
 -- --------------------------------------------------------
 
 --
--- 表的结构 `lg_activityclass`
+-- 表的结构 `lg_activity_class`
 --
 
-CREATE TABLE IF NOT EXISTS `lg_activityclass` (
+CREATE TABLE IF NOT EXISTS `lg_activity_class` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `class_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `lg_answer` (
   `is_new` int(4) NOT NULL DEFAULT '1' COMMENT '默认为1  被评论用户点击之后置为0',
   `content` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- 转存表中的数据 `lg_answer`
@@ -97,7 +97,10 @@ INSERT INTO `lg_answer` (`id`, `comment_id`, `answering_id`, `answering_type`, `
 (19, 1, 1, 1, 1, 1, '回复一下试一下'),
 (20, 0, 1, 1, 1, 1, '回复一下试一下'),
 (21, 2, 1, 1, 1, 1, '回复一下试一下'),
-(22, 11, 1, 1, 1, 1, '测试一下回复');
+(22, 11, 1, 1, 1, 1, '测试一下回复'),
+(23, 12, 1, 1, 1, 1, '再试一下'),
+(24, 2, 1, 1, 1, 1, 'tste'),
+(25, 9, 1, 1, 1, 1, 'huifu');
 
 -- --------------------------------------------------------
 
@@ -145,40 +148,26 @@ INSERT INTO `lg_comment` (`id`, `comming_id`, `comming_type`, `commed_id`, `comm
 -- --------------------------------------------------------
 
 --
--- 表的结构 `lg_commentedtype`
+-- 表的结构 `lg_commented_type`
 --
 
-CREATE TABLE IF NOT EXISTS `lg_commentedtype` (
+CREATE TABLE IF NOT EXISTS `lg_commented_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='这个表主要是为了记录被评论对象的类型的id 于实际代码没有多大用处' AUTO_INCREMENT=7 ;
 
 --
--- 转存表中的数据 `lg_commentedtype`
+-- 转存表中的数据 `lg_commented_type`
 --
 
-INSERT INTO `lg_commentedtype` (`id`, `type`) VALUES
+INSERT INTO `lg_commented_type` (`id`, `type`) VALUES
 (1, 'league'),
 (2, 'album'),
 (3, 'picture'),
 (4, 'activity'),
 (5, 'video'),
 (6, 'audio');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `lg_league`
---
-
-CREATE TABLE IF NOT EXISTS `lg_league` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `league_id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -237,14 +226,16 @@ INSERT INTO `lg_league_class` (`id`, `class_name`) VALUES
 
 CREATE TABLE IF NOT EXISTS `lg_league_info` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'importent',
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `league_name` varchar(255) NOT NULL,
   `league_introduce` varchar(255) NOT NULL DEFAULT '管理员还没添加简介哦~' COMMENT '社团简介',
   `register_time` date NOT NULL,
   `last_login_time` date NOT NULL,
-  `avater_address` varchar(255) NOT NULL,
+  `avater_address` varchar(255) NOT NULL DEFAULT '',
   `league_class` int(11) NOT NULL,
   `content_id` int(11) NOT NULL,
-  `league_member` varchar(255) NOT NULL,
+  `league_member` varchar(255) NOT NULL DEFAULT '还没添加成员哦~',
   `street_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
@@ -253,9 +244,9 @@ CREATE TABLE IF NOT EXISTS `lg_league_info` (
 -- 转存表中的数据 `lg_league_info`
 --
 
-INSERT INTO `lg_league_info` (`id`, `league_name`, `league_introduce`, `register_time`, `last_login_time`, `avater_address`, `league_class`, `content_id`, `league_member`, `street_id`) VALUES
-(1, '东南大学先声网', '我们是伟大的先声网', '2012-12-17', '2012-12-17', './123.jpg', 1, 1, '兵哥 亮哥等', 1),
-(2, '测试社团', '管理员还没添加简介哦~', '2012-12-20', '2012-12-20', './123.jpg', 1, 1, '测试人员', 1);
+INSERT INTO `lg_league_info` (`id`, `username`, `password`, `league_name`, `league_introduce`, `register_time`, `last_login_time`, `avater_address`, `league_class`, `content_id`, `league_member`, `street_id`) VALUES
+(1, '', '', '东南大学先声网', '我们是伟大的先声网', '2012-12-17', '2012-12-17', './123.jpg', 1, 1, '兵哥 亮哥等', 1),
+(2, '', '', '测试社团', '管理员还没添加简介哦~', '2012-12-20', '2012-12-20', './123.jpg', 1, 1, '测试人员', 1);
 
 -- --------------------------------------------------------
 
