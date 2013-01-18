@@ -92,5 +92,27 @@ class CommentModel extends Model
             return "error";
         }
     }
+
+    /*
+
+	函数功能：获取被评论者类型的id
+	
+	参数信息：参数是被评论者类型
+
+	  返回值：返回被评论者类型id
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/17
+	
+	*/
+
+    public function getCommentedType( $commenttypename )
+    {
+    	$Commenttype = M('Commented_type');
+    	$commenttypeid = $Commenttype -> getFieldByType( $commenttypename, 'id' );
+    	return $commenttypeid;
+    }
 }
+
 ?>

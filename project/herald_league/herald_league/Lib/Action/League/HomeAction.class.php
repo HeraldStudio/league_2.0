@@ -33,12 +33,15 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 		
 		/*获取社团信息*/
-		$League = M('League_info');
-		$league = $League -> where('id ='.$leagueid) -> select();
-		//print_r($l);
+		$League = D('LeagueInfo');
+		$league = $League -> getLeagueInfo ( $leagueid );
+
+		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
+		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
+		
 		/*获取活动信息*/
-		$Activity = M('Activity');
-		$activity = $Activity -> where('league_id ='.$leagueid) -> select();
+		$Activity = D('Activity');
+		$activity = $Activity -> getActivityInfoByLeague ( $leagueid );
 		
 		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
@@ -97,7 +100,7 @@ class HomeAction extends Action
 		$this -> assign( 'album', $album );
 
 		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $album, 2 );
+		$comment = $Comment -> getCommentInfo( $album, $Comment -> getCommentedType("album") );
 
 		$this -> assign( 'comment', $comment );
 
@@ -108,7 +111,7 @@ class HomeAction extends Action
 
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 2 );
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("album") );
 		}
 		
         $this -> display();
@@ -140,7 +143,7 @@ class HomeAction extends Action
 		$this -> assign( 'picture', $picture );
 
 		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $picture, 3 );
+		$comment = $Comment -> getCommentInfo( $picture, $Comment -> getCommentedType("picture") );
 
 		$this -> assign( 'comment', $comment );
 
@@ -148,9 +151,10 @@ class HomeAction extends Action
 		$answer = $Answer -> getAnswerInfo( $comment );
 
 		$this -> assign( 'answer', $answer );
+
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 3 );
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("picture") );
 		}
 		$this -> display();
 	}
@@ -175,7 +179,7 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 
 		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $leagueid, 1);//1表示社团交流区信息
+		$comment = $Comment -> getCommentInfo( $leagueid, $Comment -> getCommentedType("league") );//1表示社团交流区信息
 
 		$this -> assign( 'comment', $comment );
 
@@ -183,9 +187,70 @@ class HomeAction extends Action
 		$answer = $Answer -> getAnswerInfo( $comment );
 
 		$this -> assign('answer', $answer);
+
+		$this -> leagueid = $leagueid;
+
 		if( !empty( $_POST['submit'] ) )
 		{
-			$this -> judgeIfSubData( $Comment, $Answer, 1);
+			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
+		}
+		$this -> display();
+	}
+
+	/*
+
+	函数功能：社团信息管理控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+	public function leagueAdmin()
+	{
+		/*获取URL参数*/
+		$leagueid = intval($this -> _param('leagueid'));
+
+		$LeagueInfo = D( "LeagueInfo" );
+		$leagueinfo = $LeagueInfo -> getLeagueInfo( $leagueid );
+		$this -> assign ( "leagueinfo", $leagueinfo );
+
+		$this -> leagueid = $leagueid;
+
+		if( !empty( $_POST['league_name'] ))
+		{
+			$updateresult = $LeagueInfo -> updateLeagueInfo ( $_POST['leagueid'], $_POST );
+			$this -> judgeAddState( $updateresult );
+		}
+		$this -> display();
+	}
+
+	/*
+
+	函数功能：社团注册控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+	public function leagueRegister()
+	{
+		if (!empty($_POST['league_name']))
+		{
+			$LeagueInfo = D( "LeagueInfo" );
+			$registerresult = $LeagueInfo -> addNewLeague( $_POST );
+			$this -> judgeAddState ( $registerresult );
 		}
 		$this -> display();
 	}
@@ -206,12 +271,11 @@ class HomeAction extends Action
 
 	public function judgeAddState( $result )
 	{
-		
-		if( $result == "error" )
+		if ( $result == "error" )
 		{
 			$this -> error('数据对象创建错误');
 		}
-		elseif ( $result & $result != "error") 
+		elseif ( is_int( $result ) ) 
 		{
 			$this -> success('操作成功！');
 		}
@@ -222,20 +286,41 @@ class HomeAction extends Action
 
 	}
 
-	public function judgeIfSubData( $Comment, $Answer ,$commedtype )
+	/*
+
+	函数功能：判断是否提交数据
+	
+	参数信息：第一个参数是包含所有评论的数组
+
+			  第二个参数是包含所有回复的数组
+
+			  第三个参数是被评论者类型
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
+
+	public function judgeIfSubData( $Comment, $Answer, $commedtype )
 	{
 		if( !empty( $_POST['content_c'] ) )
 		{
-			$commentresult = $Comment -> addCommentInfo( 1, 1, 1, $commedtype, $_POST );
+			$commentresult = $Comment -> addCommentInfo( 1, 1, $_POST['subdata_c'], $commedtype, $_POST );
 
 			$this -> judgeAddState( $commentresult );
 		}
-
-		if( !empty( $_POST['content_a'] ) )
+		elseif( !empty( $_POST['content_a'] ) )
 		{
-			$answerresult = $Answer -> addAnswerinfo( 1, 1, 1, $_POST );
+			$answerresult = $Answer -> addAnswerinfo( $_POST['subdata_a'], 1, 1, $_POST );
 
 			$this -> judgeAddState( $answerresult );
+		}
+		else
+		{
+			return;
 		}
 	}
 }

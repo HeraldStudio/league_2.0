@@ -1,9 +1,8 @@
-
-<volist name = "league" id = "vo">
-<h1>{$vo.league_name}</h1>
+<h1>{$league[0]['league_name']}</h1>
+<h3>虚拟地址:{$classname}--{$streetname}</h3>
 	<volist name = "activity" id = "vi">
 	<a>{$vi.activity_name}</a><br/>
 	</volist>
-<a href = "__APP__/League/Home/album/leagueid/{$vo.id}">相册<a/><br/>
-<a href = "__APP__/League/Home/communion/leagueid/{$vo.id}">交流区<a/><br/>
-</volist>
+<a href = "__APP__/League/Home/album/leagueid/{$league[0]['id']}">相册<a/><br/>
+<a href = "__APP__/League/Home/communion/leagueid/{$league[0]['id']}">交流区<a/><br/>
+<a href = "__APP__/League/Home/leagueAdmin/leagueid/{$league[0]['id']}">管理我的信息</a>
