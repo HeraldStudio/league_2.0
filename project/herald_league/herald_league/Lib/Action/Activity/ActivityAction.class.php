@@ -22,20 +22,23 @@ class ActivityAction extends Action
         $result = $activity->find($activityID); //读取主键为$activityID值的数据
         if($result == null || $result == false)  //找不到 或者 查询失败
         {
-            //todo show error message
-            echo "ERROR";
+            // echo "ERROR";
+            display('error');
         }
         else
         {
             //var_dump($result);
             if($result[is_vote] != 0 )//是投票
             {
-                redirect("../../../Vote/index/voteid/$result[id]");// todo 转向投票页
+                redirect("../../../Vote/index/voteid/$result[id]");//  转向投票页
             }
             else
             {
+               foreach ($result as $value) 
+               {
+                   $value = htmlspecialchars($value); //转义，防止XSS
+               }
                $this->assign('result',$result);
-
                $this ->display();
             }
 
