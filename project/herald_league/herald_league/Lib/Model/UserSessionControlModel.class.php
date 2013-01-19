@@ -46,13 +46,29 @@
         }
         private function applySessionID() //向服务器要session ID
         {
-            $ch = curl_init('121.248.63.105/sessionservice/sessions/');
+          /*$ch = curl_init('121.248.63.105/sessionservice/sessions/');
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //保存在字符串中
             curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口          
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
             $this -> message=curl_exec($ch);
-            curl_close($ch);
+            curl_close($ch);*/
+            //临时使用字符串代替进行测试
+            $tempxml=<<<
+            XXX
+            <xml>
+            <id>
+                111222333
+            </id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>tset</herald.sso.studentUser.fullName>
+            </properties>
+            </xml>
+            XXX;
+            $message = $tempxml;
+            
+
         }
         private function update()
         {
