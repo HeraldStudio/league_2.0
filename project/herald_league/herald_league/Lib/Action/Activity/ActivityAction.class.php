@@ -7,7 +7,7 @@
 
 *作者：xie
 
-*更新日期：2013.1.18
+*更新日期：2013.1.20
 
 */
 class ActivityAction extends Action
@@ -26,9 +26,9 @@ class ActivityAction extends Action
         else
         {
             //var_dump($result);
-            if($result[is_vote] != 0 )//是投票
+            if($result['is_vote'] != 0 )//是投票
             {
-                redirect( U('Activity/Vote/index',"voteid=$result['id']")  );//  转向投票页
+                redirect( U('Activity/Vote/index','voteid = $activityID')  );//  转向投票页
             }
             else
             {
