@@ -12,7 +12,7 @@
 */
 class ActivityAction extends Action
 {
-    public function index($attender)
+    public function index()
     {
 
        // $heraldSession = D('UserSessionControl'); //控制会话
@@ -35,10 +35,10 @@ class ActivityAction extends Action
             {
                 $vote = M('vote');
                 $voteInf = $vote->find($activityID);
-                $this->assign($voteInf);//todo 过滤？
+                $this->assign($voteInf);
                 $voteItem = M('vote_item');
                 $voteItemInf = $voteItem ->where(array('vote_id'=>$activityInf['id']))->select(); //找到所有选项
-                $this->assign($voteItemInf);//todo 过滤？
+                $this->assign($voteItemInf);
                 $voteResult = M('vote_result');
                 foreach($voteItemInf as $n => $item)
                 {
@@ -46,16 +46,15 @@ class ActivityAction extends Action
                 }
                 $this->assign($itemCount);
             }
-            $attention = M('attention');
-            $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
-            $user = M('user');
-            foreach($attentionInf as $n => $uid)
-            {
-                $userInf = $user->find($uid['id']);
-                $attender[$n]->name = $userInf['nick_name'];
-                $attender[$n]->avatr = $userInf['user_avater_add'];
-            }
-            $this->assign($attender);
+           $attention = M('attention');
+           $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
+           $user = M('user');
+           foreach($attentionInf as $n => $uid)
+           {
+               $userInf = $user->find($uid['id']);
+               $attender[$n]['name'] = $userInf['nick_name'];
+               $attender[$n]['avatar'] = $userInf['user_avatar_add'];
+           }
         }
     }
 }
