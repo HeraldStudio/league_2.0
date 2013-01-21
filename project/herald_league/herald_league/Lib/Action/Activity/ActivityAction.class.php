@@ -25,7 +25,7 @@ class ActivityAction extends Action
         }
         else
         {
-           $activity->where(array('id'=>$$activityID))->setInc('activity_count',1);//点击量加一
+            $activity->where(array('id'=>$activityID))->setInc('activity_count');//点击量加一
             /*foreach ($activityInf as $value)
             {
                 $value = htmlspecialchars($value); //转义，防止XSS
@@ -71,5 +71,9 @@ class ActivityAction extends Action
             $attender[$n]['avatar'] = $userInf['user_avatar_add'];
         }
         return $attender;
+    }
+    private function getComment($activityID)
+    {
+
     }
 }
