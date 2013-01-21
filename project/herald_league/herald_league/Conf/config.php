@@ -37,6 +37,7 @@ return array(
 		'__Public__' => 'http://localhost/league_2.0/project/herald_league/Public',
 		'__Uploads__' => 'http://localhost/league_2.0/project/herald_league/Uploads',
 		//'__HeraldLeague__' => 'http://herald.seu.edu.cn/herald_league',
-	),          
+	),
+    'DEFAULT_FILTER'=>'strip_tags,htmlspecialchars',//1.21增加 默认的过滤器
 );
 ?>

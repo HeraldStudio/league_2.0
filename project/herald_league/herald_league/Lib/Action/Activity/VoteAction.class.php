@@ -1,4 +1,5 @@
 <?php
+//合并到活动页
 /*
 
 *名称：投票页
@@ -9,7 +10,7 @@
 
 *更新日期：2013.1.20
 
-*/
+
 class VoteAction extends Action
 {
     public function Index() //投票页
@@ -46,3 +47,4 @@ class VoteAction extends Action
         }
     }
 }
+*/

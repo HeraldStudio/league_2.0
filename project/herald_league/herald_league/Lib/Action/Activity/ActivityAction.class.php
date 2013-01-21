@@ -7,39 +7,55 @@
 
 *作者：xie
 
-*更新日期：2013.1.20
+*更新日期：2013.1.21
 
 */
 class ActivityAction extends Action
 {
-    public function index()
+    public function index($attender)
     {
 
        // $heraldSession = D('UserSessionControl'); //控制会话
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = M('activity');
-        $result = $activity->find($activityID); //读取主键为$activityID值的数据
-        if($result == null || $result == false)  //找不到 或者 查询失败
+        $activityInf = $activity->find($activityID); //读取主键为$activityID值的数据
+        if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
         {
-            // echo "ERROR";
+            // todo echo "ERROR";
         }
         else
         {
-            //var_dump($result);
-            if($result['is_vote'] != 0 )//是投票
+           $activity->where(array('id'=>$$activityID))->setInc('activity_count',1);//点击量加一
+            /*foreach ($activityInf as $value)
             {
-                redirect( U('Activity/Vote/index','voteid = $activityID')  );//  转向投票页
-            }
-            else
+                $value = htmlspecialchars($value); //转义，防止XSS
+            }*///在配置文件中增加自动过滤
+            $this->assign('result',$activityInf);
+            if($activityInf['is_vote'] != 0 )//是投票
             {
-               foreach ($result as $value) 
-               {
-                   $value = htmlspecialchars($value); //转义，防止XSS
-               }
-               $this->assign('result',$result);
-               $this ->display();
+                $vote = M('vote');
+                $voteInf = $vote->find($activityID);
+                $this->assign($voteInf);//todo 过滤？
+                $voteItem = M('vote_item');
+                $voteItemInf = $voteItem ->where(array('vote_id'=>$activityInf['id']))->select(); //找到所有选项
+                $this->assign($voteItemInf);//todo 过滤？
+                $voteResult = M('vote_result');
+                foreach($voteItemInf as $n => $item)
+                {
+                    $itemCount[$n] = $voteResult->where(array('item_id'=> $item['id']))->count();//统计选项个数
+                }
+                $this->assign($itemCount);
             }
-
+            $attention = M('attention');
+            $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
+            $user = M('user');
+            foreach($attentionInf as $n => $uid)
+            {
+                $userInf = $user->find($uid['id']);
+                $attender[$n]->name = $userInf['nick_name'];
+                $attender[$n]->avatr = $userInf['user_avater_add'];
+            }
+            $this->assign($attender);
         }
     }
 }
