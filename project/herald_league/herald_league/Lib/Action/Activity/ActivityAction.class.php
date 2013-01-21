@@ -30,7 +30,7 @@ class ActivityAction extends Action
             {
                 $value = htmlspecialchars($value); //转义，防止XSS
             }*///在配置文件中增加自动过滤
-            $this->assign('result',$activityInf);
+            $this->assign('activityinf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
                 $vote = M('vote');
@@ -55,6 +55,9 @@ class ActivityAction extends Action
                $attender[$n]['name'] = $userInf['nick_name'];
                $attender[$n]['avatar'] = $userInf['user_avatar_add'];
            }
+            $this->assign('attender',$attender); //todo 处理关注着是社团
+            var_dump($attender);
+            $this->display();
         }
     }
 }
