@@ -46,18 +46,28 @@ class ActivityAction extends Action
                 }
                 $this->assign($itemCount);
             }
-           $attention = M('attention');
-           $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
-           $user = M('user');
-           foreach($attentionInf as $n => $uid)
-           {
-               $userInf = $user->find($uid['id']);
-               $attender[$n]['name'] = $userInf['nick_name'];
-               $attender[$n]['avatar'] = $userInf['user_avatar_add'];
-           }
+            $attender = $this->getattender($activityID);
             $this->assign('attender',$attender); //todo 处理关注着是社团
-            var_dump($attender);
             $this->display();
         }
+    }
+    private function getattender($activityID)
+    {
+        /*
+         * 功能 获取关注者
+         * 修改日期 2013.1.21
+         *
+         */
+
+        $attention = M('attention');
+        $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
+        $user = M('user');
+        foreach($attentionInf as $n => $uid)
+        {
+            $userInf = $user->find($uid['id']);
+            $attender[$n]['name'] = $userInf['nick_name'];
+            $attender[$n]['avatar'] = $userInf['user_avatar_add'];
+        }
+        return $attender;
     }
 }
