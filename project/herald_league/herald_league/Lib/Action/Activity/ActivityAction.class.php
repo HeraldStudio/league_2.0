@@ -46,12 +46,13 @@ class ActivityAction extends Action
                 }
                 $this->assign($itemCount);
             }
-            $attender = $this->getattender($activityID);
-            $this->assign('attender',$attender); //todo 处理关注着是社团
+            $attender = $this->getAttender($activityID);
+            //var_dump($attender);
+            $this->assign('attender',$attender);
             $this->display();
         }
     }
-    private function getattender($activityID)
+    private function getAttender($activityID)
     {
         /*
          * 功能 获取关注者
@@ -60,11 +61,12 @@ class ActivityAction extends Action
          */
 
         $attention = M('attention');
-        $attentionInf = $attention ->where(array('attended_id'=>$activityID))->select();
+        $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
         $user = M('user');
-        foreach($attentionInf as $n => $uid)
+        $attender = null;
+        foreach($attentionInf as $n => $u)
         {
-            $userInf = $user->find($uid['id']);
+            $userInf = $user->find($u['user_id']);
             $attender[$n]['name'] = $userInf['nick_name'];
             $attender[$n]['avatar'] = $userInf['user_avatar_add'];
         }
