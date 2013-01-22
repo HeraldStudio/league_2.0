@@ -1,13 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit();?><h1>用户空间页：</h1>
-<img src = "__Uploads__/<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/>
-姓名:<a><?php echo ($userinfo["true_name"]); ?></a><br/>
-昵称:<a><?php echo ($userinfo["nick_name"]); ?></a><br/>
-学院:<a><?php echo ($userinfo["user_college"]); ?></a><br/>
-年级:<a><?php echo ($userinfo["user_grade"]); ?></a><br/>
-QQ:<a><?php echo ($userinfo["user_qq"]); ?></a><br/>
-E-mail:<a><?php echo ($userinfo["user_mail"]); ?></a><br/>
-手机：<a><?php echo ($userinfo["user_phone"]); ?></a><br/>
-<a href = "__URL__/updateInfo/userid/<?php echo ($userinfo["id"]); ?>">修改我的信息</a>
+<?php if (!defined('THINK_PATH')) exit();?><h1>修改空间信息：</h1>
+<img src = "__Uploads__/<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/><a href = "__URL__/changeAvatar/userid/<?php echo ($userinfo["id"]); ?>">修改头像</a><br/>
+姓名:<input name = "true_name" type = "text" value = "<?php echo ($userinfo["true_name"]); ?>"/><br/>
+昵称:<input name = "nick_name" type = "text" value = "<?php echo ($userinfo["nick_name"]); ?>"/><br/>
+院系:<input name = "user_college" type = "text" value = "<?php echo ($userinfo["user_college"]); ?>"/><br/>
+年级:<input name = "user_grade" type = "text" value = "<?php echo ($userinfo["user_grade"]); ?>"/><br/>
+QQ:<input name = "user_qq" type = "text" value = "<?php echo ($userinfo["user_qq"]); ?>"/><br/>
+E-mail:<input name = "user_mail" type = "text" value = "<?php echo ($userinfo["user_mail"]); ?>"/><br/>
+手机：<input name = "user_phone" type = "text" value = "<?php echo ($userinfo["user_phone"]); ?>"/><br/>
 <h2>留言区</h2>
 <form name = "comment_form" id = "comment_form" method = "post" action = "__URL__/getCommentAndAnswer">
 	 <textarea name = "content_c" rows="2" cols="50" placeholder = "给主人留言..."></textarea><br/>
