@@ -43,7 +43,7 @@ class ActivityAction extends Action
                 $this->assign($itemCount);
             }
             $attender = $activity->getAttender($activityID);
-            $class = $ctivity->getClass($activityID);
+            $class    = $activity->getClass($activityID);
             $this->assign('class',$class);
             $this->assign('attender',$attender);
             $this->display();
