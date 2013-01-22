@@ -17,7 +17,7 @@ class ActivityAction extends Action
 
        // $heraldSession = D('UserSessionControl'); //控制会话
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
-        $activity = M('activity');
+        $activity = D('Activity');
         $activityInf = $activity->find($activityID); //读取主键为$activityID值的数据
         if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
         {
@@ -42,55 +42,12 @@ class ActivityAction extends Action
                 }
                 $this->assign($itemCount);
             }
-            $attender = $this->getAttender($activityID);
-            $class = $this->getClass($activityID);
+            $attender = $activity->getAttender($activityID);
+            $class = $ctivity->getClass($activityID);
             $this->assign('class',$class);
             $this->assign('attender',$attender);
             $this->display();
         }
-    }
-    private function getAttender($activityID)
-    {
-        /*
-         * 功能 获取关注者
-         * 修改日期 2013.1.21
-         *
-         */
-
-        $attention = M('attention');
-        $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
-        if($attentionInf == false ||$attentionInf == null)//查询失败
-        {
-            return null;
-        }
-        $user = M('user');
-        foreach($attentionInf as $n => $u)
-        {
-            $userInf = $user->find($u['user_id']);
-            $attender[$n]['name'] = $userInf['nick_name'];
-            $attender[$n]['avatar'] = $userInf['user_avatar_add'];
-        }
-        return $attender;
-    }
-    private function getClass($activityID)
-    {
-        /*
-         * 功能：得到活动标签
-         * 日期:2013.1.21
-         */
-        $class_activity = M('class_activity');
-        $activity_class = M('activity_class');
-        $classInf = $class_activity->where(array('activityid'=>$activityID))->select();
-        if($classInf == null  || $classInf ==false)
-        {
-            return null;
-        }
-        foreach ($classInf as $n=>$c)
-        {
-            $tag = $activity_class->find($c['class_id']);
-            $activity[$n]=$tag['class_name'];
-        }
-        return $activity;
     }
 }
 
