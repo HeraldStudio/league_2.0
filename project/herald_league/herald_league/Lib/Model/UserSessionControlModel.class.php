@@ -7,7 +7,7 @@
 
 *作者：Xie
 
-*更新日期：2012.1.3
+*更新日期：2012.1.22
 
 */
     class UserSessionControlModel
