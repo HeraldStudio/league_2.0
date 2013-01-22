@@ -12,7 +12,7 @@
 */
 class ActivityAction extends Action
 {//todo use field 输出的时候还要过滤？
-    public function index()
+    public function detail()
     {
 
        // $heraldSession = D('UserSessionControl'); //控制会话
