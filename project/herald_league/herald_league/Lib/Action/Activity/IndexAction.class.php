@@ -12,6 +12,7 @@
 */
 class IndexAction extends Action {
     public function index(){
-
+        $heraldSession = D('UserSessionControl');
+        echo $heraldSession->getCardNumber();
     }
 }

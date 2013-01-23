@@ -40,5 +40,53 @@ class ActivityModel extends Model
     	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
+
+    public function getAttender($activityID)
+    {
+    /*
+     * 功能        获取关注者
+     * 修改日期   2013.1.22
+     *作者        xie
+     * 参数      活动的id
+     * 返回值    一个二维数组，每个元素里面包含昵称和头像
+     */
+
+        $attention = M('attention');
+        $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
+        if($attentionInf == false ||$attentionInf == null)//查询失败
+        {
+            return null;
+        }
+        $user = M('user');
+        foreach($attentionInf as $n => $u)
+        {
+            $userInf = $user->find($u['user_id']);
+            $attender[$n]['name'] = $userInf['nick_name'];
+            $attender[$n]['avatar'] = $userInf['user_avatar_add'];
+        }
+        return $attender;
+        }
+    public function getClass($activityID)
+    {
+        /*
+         * 功能：得到活动标签
+         * 日期:2013.1.21
+         * 作者: xie
+         * 参数 活动的id
+         * 返回值：一个标签的数组
+         */
+        $class_activity = M('class_activity');
+        $activity_class = M('activity_class');
+        $classInf = $class_activity->where(array('activityid'=>$activityID))->select();
+        if($classInf == null  || $classInf ==false)
+        {
+            return null;
+        }
+        foreach ($classInf as $n=>$c)
+        {
+            $tag = $activity_class->find($c['class_id']);
+            $activity[$n]=$tag['class_name'];
+        }
+        return $activity;
+    }
 }
-?>

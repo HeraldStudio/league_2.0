@@ -115,7 +115,7 @@ function htmlencode($str)
 function htmldecode($str)
 {
 	if(empty($str)) 
-		return;
+		return ;
 	if($str=="") 
 		return $str;
 
@@ -174,4 +174,3 @@ function countdim($array)
 
     return $return;
 }
-?>
