@@ -3,16 +3,20 @@
 
 *名称：活动主页
 
-*功能: 主页）
+*功能: 主页
 
 *作者：Xie
 
-*更新日期：2013.1.17
+*更新日期：2013.1.23
 
 */
 class IndexAction extends Action {
-    public function index(){
+    public function Index(){
         $heraldSession = D('UserSessionControl');
         echo $heraldSession->getCardNumber();
+        $verfy = U('Public/VerifyCode/generate/');
+        $this->assign('verfy',$verfy);
+        $this->display();
+        
     }
 }

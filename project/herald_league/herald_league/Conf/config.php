@@ -23,7 +23,7 @@ return array(
 	'DB_PREFIX' => 'lg_', // 数据库表前缀
 	
 	/* 分组设置 */
-	'APP_GROUP_LIST' => 'User,League,Activity,Admin',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin' 这里的逗号后面千万不能有空格 否则会报错
+	'APP_GROUP_LIST' => 'User,League,Activity,Admin,Public',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin' 这里的逗号后面千万不能有空格 否则会报错
 	'DEFAULT_GROUP'  => 'Activity',  // 默认分组
 	
 	'URL_MODEL' => 1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
