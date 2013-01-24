@@ -89,4 +89,14 @@ class ActivityModel extends Model
         }
         return $activity;
     }
+    public function recent($limit)
+    {
+        /*
+         * 功能：获取最近的活动
+         * 输入：数量限制
+         * 返回: 二维数组，每一个元素都是活动各项信息的数组
+         */
+        $map['end_time']=array('egt',date('Y-m-d'));
+        return $this->where($map)->order('start_time')->limit($limit)->select();
+    }
 }

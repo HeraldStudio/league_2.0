@@ -1,5 +1,15 @@
-<html>
-aaa
-{$verfy}</br>
-<img src="{$verfy}"/>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<foreach name="recent" item="r">
+    {$r.isstart}
+    <if condition="$r.isstart lt 0">
+        进行中
+        <else/>
+        未开始
+    </if>
+    <br>
+</foreach>
+<foreach name = "heatclass" item = "c">
+    {$c.class_name}
+</foreach>
 </html>

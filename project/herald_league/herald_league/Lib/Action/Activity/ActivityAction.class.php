@@ -56,6 +56,7 @@ class ActivityAction extends Action
          * 参数 : 活动id，动作
          * 作者 : xie
          * 日期 ：2013.1.24
+         * todo 修改标签热度
          */
         $activityID = intval($this->_param('activityid'));//todo 检查活动的存在
         $action = $this->_param('action');
