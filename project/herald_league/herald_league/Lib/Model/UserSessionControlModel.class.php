@@ -27,7 +27,7 @@
                 $this->applySessionID();//申请SessionID
                 $this->dealXML();  //分析xml
                 cookie('herald_session_id',$this->sessionID,$sessionTimeOut);//设置cookie
-                $this->userType = "visitor";
+                $this->userType = 'user';
             }
             else
             {

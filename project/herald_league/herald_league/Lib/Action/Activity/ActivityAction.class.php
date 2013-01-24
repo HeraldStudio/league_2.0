@@ -49,5 +49,40 @@ class ActivityAction extends Action
             $this->display();
         }
     }
+    public function addAttender()
+    {
+        /*
+         * 功能 ：添加关注者
+         * 作者 : xie
+         * 日期 ：2013.1.24
+         */
+        $activityID = intval($this->_param('activityid'));//todo 检查活动的存在
+        $heraldSession = M('UserSessionControl');
+        if( !$heraldSession->islogin())
+        {
+            $this->error('请先登录');
+        }
+        else if($heraldSession->getUserType() != 'user' )
+        {
+            $this->error('请以个人用户登录');
+        }
+        else
+        {
+            $attention = D('attention');
+            $data['user_id'] = $heraldSession->getUserID();
+            $data['attended_id']=$activityID;
+            $data['isleague'] = 0;
+            if($attention->create($data))
+            {
+                $this->success('关注成功');
+            }
+            else
+            {
+                $this->error('关注失败');
+            }
+        }
+
+    }
+
 }
 

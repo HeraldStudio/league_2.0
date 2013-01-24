@@ -13,10 +13,5 @@
 class IndexAction extends Action {
     public function Index(){
         $heraldSession = D('UserSessionControl');
-        echo $heraldSession->getCardNumber();
-        $verfy = U('Public/VerifyCode/generate/');
-        $this->assign('verfy',$verfy);
-        $this->display();
-        
     }
 }
