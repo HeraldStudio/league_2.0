@@ -34,6 +34,12 @@ display:block;
 margin-top:5px;
 }
 </style>
+<style media="screen" type="text/css">
+#fileUploadContent {
+outline:none;
+margin:2px 0;
+}
+</style>
 <script>
 var squarex = 0, squarey = 0, user = XN.user.id;
 XN.DOM.readyDo(function(){
@@ -204,7 +210,7 @@ onError: function() {}
 <img src = "__Uploads__/UserAvatar/m_{$avataraddress}"/>
 <h3>小头像</h3>
 <div id = "squarebox">
-<img src = "__Uploads__/UserAvatar/s_{$avataraddress}" id = "squarepicture">
+<img id = "squarepicture" src = "__Uploads__/UserAvatar/s_{$avataraddress}">
 
 </div>
 <input type = "submit" id = "savebutton" value = "保存小头像" />

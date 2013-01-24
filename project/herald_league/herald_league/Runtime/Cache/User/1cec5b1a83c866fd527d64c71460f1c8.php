@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><h1>用户空间页：</h1>
-<img src = "__Uploads__/<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/>
+<img src = "__Uploads__/UserAvatar/m_<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/>
 姓名:<a><?php echo ($userinfo["true_name"]); ?></a><br/>
 昵称:<a><?php echo ($userinfo["nick_name"]); ?></a><br/>
 学院:<a><?php echo ($userinfo["user_college"]); ?></a><br/>

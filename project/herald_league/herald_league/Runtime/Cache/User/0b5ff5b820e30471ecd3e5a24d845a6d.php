@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><h1>修改空间信息：</h1>
-<img src = "__Uploads__/<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/><a href = "__URL__/changeAvatar/userid/<?php echo ($userinfo["id"]); ?>">修改头像</a><br/>
+<img src = "__Uploads__/UserAvatar/m_<?php echo ($userinfo["user_avatar_add"]); ?>"/><br/><a href = "__URL__/changeAvatar/userid/<?php echo ($userinfo["id"]); ?>">修改头像</a><br/>
 姓名:<input name = "true_name" type = "text" value = "<?php echo ($userinfo["true_name"]); ?>"/><br/>
 昵称:<input name = "nick_name" type = "text" value = "<?php echo ($userinfo["nick_name"]); ?>"/><br/>
 院系:<input name = "user_college" type = "text" value = "<?php echo ($userinfo["user_college"]); ?>"/><br/>
