@@ -49,14 +49,15 @@ class ActivityAction extends Action
             $this->display();
         }
     }
-    public function addAttender()
+    public function changeAttender()
     {
         /*
-         * 功能 ：添加关注者
+         * 功能 ：添加,删除关注者
          * 作者 : xie
          * 日期 ：2013.1.24
          */
         $activityID = intval($this->_param('activityid'));//todo 检查活动的存在
+        $action = $this->_param('action');
         $heraldSession = M('UserSessionControl');
         if( !$heraldSession->islogin())
         {
@@ -68,21 +69,30 @@ class ActivityAction extends Action
         }
         else
         {
+
             $attention = D('attention');
-            $data['user_id'] = $heraldSession->getUserID();
+            $data['user_id'] = intval($heraldSession->getUserID());
             $data['attended_id']=$activityID;
-            $data['isleague'] = 0;
-            if($attention->create($data))
+            if($action == 'add') //增加关注
             {
-                $this->success('关注成功');
+                $data['isleague'] = 0;
+                if($attention->create($data))
+                {
+                    $this->success('关注成功');
+                }
+                else
+                {
+                    $this->error('关注失败');
+                }
             }
-            else
+            else if($action == 'del') //取消关注
             {
-                $this->error('关注失败');
+                $attention->where($data)->del();
             }
         }
 
     }
+
 
 }
 
