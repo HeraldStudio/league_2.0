@@ -49,45 +49,78 @@ class ActivityAction extends Action
             $this->display();
         }
     }
-    public function changeAttender()
+    public function changeAttention()
     {
         /*
          * 功能 ：添加,删除关注者
+         * 参数 : 活动id，动作
          * 作者 : xie
          * 日期 ：2013.1.24
          */
         $activityID = intval($this->_param('activityid'));//todo 检查活动的存在
         $action = $this->_param('action');
-        $heraldSession = M('UserSessionControl');
+        $heraldSession = D('UserSessionControl');
         if( !$heraldSession->islogin())
         {
             $this->error('请先登录');
         }
         else if($heraldSession->getUserType() != 'user' )
         {
+            var_dump($heraldSession);
             $this->error('请以个人用户登录');
         }
         else
         {
 
             $attention = D('attention');
-            $data['user_id'] = intval($heraldSession->getUserID());
+            $cardNumber =$heraldSession->getCardNumber();
+            $user = M('user');
+            $userInf = $user->where(array('card_num'=>$cardNumber))->find();
+            $data['user_id'] = $userInf['id'];
             $data['attended_id']=$activityID;
             if($action == 'add') //增加关注
             {
                 $data['isleague'] = 0;
-                if($attention->create($data))
+                if($attention->where($data)->find() != null)
                 {
-                    $this->success('关注成功');
+                    echo "你已经关注";
                 }
                 else
                 {
-                    $this->error('关注失败');
+                    if($attention->add($data))
+                    {
+                        $this->success('关注成功');
+                        //echo "成功";
+                    }
+                    else
+                    {
+                        $this->error('关注失败');
+                    }
                 }
+
             }
             else if($action == 'del') //取消关注
             {
-                $attention->where($data)->del();
+                if($attention->where($data)->find() == null)
+                {
+                   $this->error('你还未关注此活动');
+                }
+                else
+                {
+                    if($attention->where($data)->delete())
+                    {
+                        $this->success('成功取消关注');
+                    }
+                    else
+                    {
+                        $this->error('取消关注失败');
+                    }
+                }
+
+            }
+            else
+            {
+                $this->error('非法的操作');
             }
         }
 

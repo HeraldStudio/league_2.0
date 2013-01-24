@@ -50,6 +50,7 @@
             $this -> cardNumber = $this->xml->properties->{'herald.sso.studentUser.cardNumber'};
             $this -> userName =$this-> xml->properties->{'herald.sso.studentUser.fullName'};
             $this -> sessionID =$this->xml->id;
+            $this ->userType = 'user';
         }
         private function applySessionID() //向服务器要session ID
         {
