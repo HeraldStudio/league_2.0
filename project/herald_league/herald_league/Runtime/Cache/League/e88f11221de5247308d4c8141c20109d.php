@@ -7,3 +7,7 @@
 <?php if($attentionstate): ?><a href = "__APP__/League/Home/attention/leagueid/<?php echo ($league[0]['id']); ?>/action/del">取消关注</a>
 <?php else: ?> 
 	<a href = "__APP__/League/Home/attention/leagueid/<?php echo ($league[0]['id']); ?>/action/add">关注</a><?php endif; ?>
+<form name = "search_form" method = "post" action = "__APP__/League/Home/index">
+	<input name = "search" type = "text" />
+	<input name = "submit" type = "submit" value = "搜索"/>
+</form>

@@ -53,6 +53,14 @@ class HomeAction extends Action
 		 );
 		$this -> attentionstate = $Attention -> getAttentionState( $data );
 
+		import('@.ORG.Search');
+
+		$search = new Search();
+		if(!empty($_POST['search']))
+		{
+			$result = $search -> getSearchResult($_POST['search']);
+			print_r($result);
+		}	
 		$this -> display();
     }
 	
