@@ -34,6 +34,7 @@ class HomeAction extends Action
 		
 		/*获取社团信息*/
 		$League = D('LeagueInfo');
+		$Attention = D('Attention');
 		$league = $League -> getLeagueInfo ( $leagueid );
 
 		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
@@ -46,6 +47,20 @@ class HomeAction extends Action
 		$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
 
+		$data = array('user_id' => 1,
+			'attended_id' => $leagueid,
+			'isleague' => 1
+		 );
+		$this -> attentionstate = $Attention -> getAttentionState( $data );
+
+		import('@.ORG.Search');
+
+		$search = new Search();
+		if(!empty($_POST['search']))
+		{
+			$result = $search -> getSearchResult($_POST['search']);
+			print_r($result);
+		}	
 		$this -> display();
     }
 	
@@ -93,7 +108,7 @@ class HomeAction extends Action
 	{
 		/*获取URL参数*/
 		$leagueid = intval($this -> _param('leagueid'));
-		
+
 		/*获取相册信息*/
 		$Album = D('League_album');
 		$album = $Album -> where('league_id ='.$leagueid) -> select();
@@ -115,6 +130,33 @@ class HomeAction extends Action
 		}
 		
         $this -> display();
+	}
+
+	/*
+
+	函数功能：用户关注控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
+
+	public function attention()
+	{
+		/*获取URL参数*/
+		$leagueid = intval($this -> _param('leagueid'));
+		$action = $this -> _param('action');
+		$data['user_id'] = 2;
+		$data['attended_id'] = $leagueid;
+		$data['isleague'] = 1;
+		$Attention = D('Attention');
+		$result = $Attention -> changeAttention ( $data, $action );
+		$this -> error( $result );
 	}
 	
 	/*
