@@ -4,13 +4,14 @@
  * Date: 13-1-25
  *
  */
-class VoteActionModel extends Action
+class VoteModel extends Model
 {
     public function getVoteResult($voteid)
     {
-        $voteItem = $this->find($voteid);
+        $voteItem = D('VoteItem');
+        $voteItemInf = $voteItem->getVoteItem($voteid);
         $voteResult = M('vote_result');
-        foreach($voteItem as $n=>$v)
+        foreach($voteItemInf as $n=>$v)
         {
             $result[$n]['item']=$v['item_name'];
             $result[$n]['count']=$voteResult->where(array('item_id'=> $v['id']))->count();

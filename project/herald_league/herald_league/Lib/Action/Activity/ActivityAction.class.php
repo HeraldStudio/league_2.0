@@ -29,11 +29,11 @@ class ActivityAction extends Action
             $this->assign('activityinf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
-                $vote = D('vote');
-                $voteInf = $vote->getVoteInf($activityID);
-                $this->assign('voteinf',$voteInf);
-                $voteItem = D('vote_item');
-                $this->assign('vote',$voteItem->getVoteResult());
+                $this->assign('isvote',true);
+                $vote = D('Vote');
+                $voteResult = $vote->getVoteResult($activityID);
+                $this->assign('voteresult',$voteResult);
+                //print_r($voteResult);
             }
             $attender = $activity->getAttender($activityID);
             $class    = $activity->getClass($activityID);

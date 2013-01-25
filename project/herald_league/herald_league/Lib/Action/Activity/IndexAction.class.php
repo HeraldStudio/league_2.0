@@ -13,15 +13,48 @@
 class IndexAction extends Action {
     public function Index(){
         $heraldSession = D('UserSessionControl');
-        import('ORG.Util.Date');
+        if($heraldSession->islogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('name',$heraldSession->getUserName());
+            $user = D('User');
+            $uid = $user->getIDbyCardNumber($heraldSession->getCardNumber());
+        }
+        else
+        {
+            $this->assign('islogin',0);
+            $uid = 0;
+        }
+
         /* 上面大海报的近期活动*/
+        import('ORG.Util.Date');
         $activity = D('Activity');
+        $attention = D('Attention');
         $recent = $activity->recent(5);//上面的近期活动
         $date = new Date (date('Y-m-d'));
         foreach($recent as $n=>$r)
         {
             $recent[$n]['isstart']=  $date->dateDiff($r['start_time']); //与当前日期比较判断是否已经开始
+            if($uid==0)
+                $recent[$n]['isattended'] =false; //没登录，自然没关注
+            else
+            {
+                $codition = array(
+                    'user_id'=>$uid,
+                    'attended_id'=>$recent[$n]['id'],
+                    'isleague'=>0,
+                );
+                if($attention->getAttentionState($codition))
+                {
+                    $recent[$n]['isattended'] = true;//已经关注了
+                }
+                else
+                {
+                    $recent[$n]['isattended'] =false;//没关注
+                }
+            }
         }
+        $this->assign('detail',U('Activity/Activity/detail/'));
         $this->assign('recent',$recent);
         /* 热门标签*/
         $class = M('activity_class');

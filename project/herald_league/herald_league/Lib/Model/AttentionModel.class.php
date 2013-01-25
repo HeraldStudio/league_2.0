@@ -59,7 +59,7 @@ class AttentionModel extends Model
 
       返回值：关注返回true 未关注返回false
 
-        作者：Tairy
+        作者：Tairy & xie
     
     更新日期：2013/01/17
     
@@ -67,8 +67,8 @@ class AttentionModel extends Model
 
     public function getAttentionState( $data )
     {
-        if( $this -> select( $data ))
-            return ture;
+        if( $this -> where($data)->select( ))
+            return true;
         else
             return false;
     }
@@ -133,5 +133,5 @@ class AttentionModel extends Model
         }
 
     }
+
 }
-?>
