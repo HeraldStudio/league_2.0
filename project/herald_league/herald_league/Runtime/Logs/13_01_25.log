@@ -12,3 +12,4 @@
  [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE user_id = 1AND isleague = 0 
 [ 2013-01-25T13:10:31+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
  [ SQL语句 ] : SELECT * FROM `lg_league_info` WHERE id = 
+[ 2013-01-25T16:41:48+08:00 ] ERR: (ThinkException) Model:selsct您所请求的方法不存在！

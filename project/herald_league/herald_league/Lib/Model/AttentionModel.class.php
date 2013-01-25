@@ -27,19 +27,28 @@ class AttentionModel extends Model
         switch ($action)
         {
             case 'add':
-                if($this->where($data)->selsct())
+                if($this->where($data)->select())
                     return '你已经关注';
                 else
                 {
-                    $this->create($data);
-                    return '关注成功';
+                    if($this->add($data))
+                    {
+                        return '关注成功';
+                    }
+                    else
+                    {
+                        return '关注失败';
+                    }
+
                 }
                 break;
             case 'del':
                 if($this->select($data))
                 {
-                    $this->delete($data);
-                    return '取消关注成功';
+                    if($this->delete($data))
+                        return '取消关注成功';
+                    else
+                        return '取消关注失败';
                 }
                 else
                 {
