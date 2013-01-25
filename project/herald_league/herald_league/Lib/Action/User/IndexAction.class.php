@@ -21,7 +21,7 @@ class IndexAction extends Action {
 		$User = D('User');
 		$userinfo = $User -> getUserInfo( $userid );
 
-		$this -> getCommentAndAnswer( $userid );
+		//$this -> getCommentAndAnswer( $userid );
 
 		$this -> assign('userinfo', $userinfo );
 
@@ -36,7 +36,6 @@ class IndexAction extends Action {
 		$User = D('User');
 		$userinfo = $User -> getUserInfo( $userid );
 
-		$this -> getCommentAndAnswer( $userid );
 
 		$this -> assign('userinfo', $userinfo );
 
@@ -62,6 +61,67 @@ class IndexAction extends Action {
         }
 
 	    $this -> display();
+    }
+
+    public function comment()
+    {
+    	/*获取URL参数*/
+		$userid = intval($this -> _param('userid'));
+
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $userid, $Comment -> getCommentedType("user") );//1表示社团交流区信息
+
+		$this -> assign( 'comment', $comment );
+
+		$Answer = D ( 'Answer' );
+		$answer = $Answer -> getAnswerInfo( $comment );
+
+		$this -> assign('answer', $answer);
+
+		$this -> userid = $userid;
+
+		if( !empty( $_POST['submit'] ) )
+		{
+			$this -> addCommentAndAnswerInfo( $Comment, $Answer, $Comment -> getCommentedType("user") );
+		}
+
+    	$this -> display();
+    }
+
+    public function attentionLeague()
+    {
+    	/*获取URL参数*/
+		$userid = intval($this -> _param('userid'));
+
+    	$Attention = D('Attention');
+    	$LeagueInfo = D('LeagueInfo');
+    	$attentionleague = $Attention -> getAttentionLeague ( $userid );
+
+
+    	foreach ( $attentionleague as $attentionleagues ) 
+    	{
+    		$leagueinfo[$attentionleagues['attended_id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
+    	}
+    	$this -> assign ( 'leagueinfo', $leagueinfo );
+    	$this -> display();
+    }
+    public function attentionActivity ()
+    {
+    	/*获取URL参数*/
+		$userid = intval($this -> _param('userid'));
+
+		$Attention = D("Attention");
+		$Activity = D('Activity');
+
+		$attentionactivity = $Attention -> getAttentionActivity( $userid );
+		
+		foreach ( $attentionactivity as $attentionactivitys ) 
+    	{
+    		$activityinfo[$attentionactivitys['attended_id']] = $Activity -> getActivityInfoById($attentionactivitys['attended_id'] )[0];
+    	}
+		$this -> assign ( 'activityinfo', $activityinfo );
+		$this -> display();
+    	
     }
 
     // 文件上传
@@ -118,30 +178,6 @@ class IndexAction extends Action {
             $this->error('上传图片失败!');
         }
     }
-
-    public function getCommentAndAnswer()
-    {
-    	/*获取URL参数*/
-		$userid = intval($this -> _param('userid'));
-
-		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $userid, $Comment -> getCommentedType("user") );//1表示社团交流区信息
-
-		$this -> assign( 'comment', $comment );
-
-		$Answer = D ( 'Answer' );
-		$answer = $Answer -> getAnswerInfo( $comment );
-
-		$this -> assign('answer', $answer);
-
-		$this -> userid = $userid;
-
-		if( !empty( $_POST['submit'] ) )
-		{
-			$this -> addCommentAndAnswerInfo( $Comment, $Answer, $Comment -> getCommentedType("user") );
-		}
-    }
-
 
     /*
 

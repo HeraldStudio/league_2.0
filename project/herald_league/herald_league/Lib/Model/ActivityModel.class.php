@@ -40,7 +40,11 @@ class ActivityModel extends Model
     	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
-
+    public function getActivityInfoById( $activityid )
+    {
+        $activity = $this -> where( 'id ='.$activityid ) -> select();
+        return $activity;
+    }
     public function getAttender($activityID)
     {
     /*

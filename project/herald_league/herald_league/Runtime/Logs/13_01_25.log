@@ -1,0 +1,14 @@
+[ 2013-01-25T11:22:57+08:00 ] ERR: (ThinkException) Unknown column 'heat' in 'order clause'
+ [ SQL语句 ] : SELECT `class_name` FROM `lg_activity_class` ORDER BY heat desc LIMIT 6  
+[ 2013-01-25T12:24:21+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_comment` WHERE commed_id = 1 AND commed_type =  
+[ 2013-01-25T12:25:14+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_comment` WHERE commed_id = 1 AND commed_type =  
+[ 2013-01-25T12:38:23+08:00 ] ERR: (ThinkException) Action:getCommentAndAnswer您所请求的方法不存在！
+[ 2013-01-25T12:38:53+08:00 ] ERR: (ThinkException) 非法操作:getCommentAndAnswer
+[ 2013-01-25T12:39:31+08:00 ] ERR: (ThinkException) 非法操作:getCommentAndAnswer
+[ 2013-01-25T12:40:54+08:00 ] ERR: (ThinkException) 非法操作:getCommentAndAnswer
+[ 2013-01-25T13:01:40+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE user_id = 1AND isleague = 0 
+[ 2013-01-25T13:10:31+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_league_info` WHERE id = 

@@ -1,0 +1,22 @@
+<h2>留言区</h2>
+<form name = "comment_form" id = "comment_form" method = "post" action = "__URL__/getCommentAndAnswer">
+	 <textarea name = "content_c" rows="2" cols="50" placeholder = "给主人留言..."></textarea><br/>
+	 <input type="submit" name="submit" id="submit" value="留言" />
+	 <input type = "hidden" name = "subdata_c" value = "{$userid}" />
+</form>
+<volist name = "comment" id = "vo">
+	<h3>{$vo['comming_id']*10+$vo['comming_type']|getCommenterInfo}留言:{$vo.content}</h3>
+	<foreach name = "answer" item = "va" key = "vak">
+		<eq name = "vak" value = "$vo.id">
+			<volist name = "va" id = "vae">
+				<a>{$vae['answering_id']*10+$vae['answering_type']|getCommenterInfo}回复:{$vae.content}</a><br/>
+			</volist>
+		</eq>
+	</foreach>
+	<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/comment">
+		<textarea name = "content_a" rows="1" cols="50" placeholder = "回复..."></textarea>
+		<input type = "hidden" name = "subdata_a" value = "{$vo.id}" />
+		<input type="submit" name="submit" id="submit" value="回复" />
+	</form>
+	<hr/>
+</volist>
