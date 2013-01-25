@@ -67,66 +67,19 @@ class ActivityAction extends Action
         }
         else if($heraldSession->getUserType() != 'user' )
         {
-            var_dump($heraldSession);
             $this->error('请以个人用户登录');
         }
         else
         {
-
-            $attention = D('attention');
+            $attention = D('Attention');
             $cardNumber =$heraldSession->getCardNumber();
-            $user = M('user');
-            $userInf = $user->where(array('card_num'=>$cardNumber))->find();
-            $data['user_id'] = $userInf['id'];
+            $user = D('User');
+            $data['user_id'] = $user->getIDbyCardNumber($cardNumber);
             $data['attended_id']=$activityID;
-            if($action == 'add') //增加关注
-            {
-                $data['isleague'] = 0;
-                if($attention->where($data)->find() != null)
-                {
-                    echo "你已经关注";
-                }
-                else
-                {
-                    if($attention->add($data))
-                    {
-                        $this->success('关注成功');
-                        //echo "成功";
-                    }
-                    else
-                    {
-                        $this->error('关注失败');
-                    }
-                }
-
-            }
-            else if($action == 'del') //取消关注
-            {
-                if($attention->where($data)->find() == null)
-                {
-                   $this->error('你还未关注此活动');
-                }
-                else
-                {
-                    if($attention->where($data)->delete())
-                    {
-                        $this->success('成功取消关注');
-                    }
-                    else
-                    {
-                        $this->error('取消关注失败');
-                    }
-                }
-
-            }
-            else
-            {
-                $this->error('非法的操作');
-            }
+            $data['isleague'] = 0;
+            $this->assign('result',$attention->changeAttention($data,$action));
         }
-
+        $this->display();
     }
-
-
 }
 
