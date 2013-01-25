@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-
+近期活动<br>
 <foreach name="recent" item="r">
-    {$r.isstart}
+    {$r.activity_name}
     <if condition="$r.isstart lt 0">
         进行中
         <else/>
@@ -9,9 +9,11 @@
     </if>
     <br>
 </foreach>
+<a>热门标签</a>
 <foreach name = "heatclass" item = "c">
     {$c.class_name}
 </foreach><br>
+
 <a href="{$attention}/activityid/1/action/add">关注活动1</a><br>
 <a href="{$attention}/activityid/1/action/del">取消关注活动1</a><br>
 </html>
