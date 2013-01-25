@@ -27,7 +27,7 @@ class IndexAction extends Action {
         $class = M('activity_class');
         $heatClass = $class->order('heat desc')->limit(6)->field('class_name')->select();
         $this->assign('heatclass',$heatClass);
-
+        $this->assign('attention',U('/Activity/Activity/changeAttention/'));
         $this->display();
     }
 }
