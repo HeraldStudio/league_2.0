@@ -1,13 +1,33 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
+/*
+
+*名称：活动主页
+
+*功能: 主页
+
+*作者：Xie
+
+*更新日期：2013.1.24
+
+*/
 class IndexAction extends Action {
-    public function index(){
-	echo "__HeraldLeague__";
-	//$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
-	//$this->name = '郭耿瑞';
-	//$this->display();
-	//$Data = M('Data'); // 实例化Data数据模型
-	//$this->data = $Data->select();
-	//$this->display();
+    public function Index(){
+        $heraldSession = D('UserSessionControl');
+        import('ORG.Util.Date');
+        /* 上面大海报的近期活动*/
+        $activity = D('Activity');
+        $recent = $activity->recent(5);//上面的近期活动
+        $date = new Date (date('Y-m-d'));
+        foreach($recent as $n=>$r)
+        {
+            $recent[$n]['isstart']=  $date->dateDiff($r['start_time']); //与当前日期比较判断是否已经开始
+        }
+        $this->assign('recent',$recent);
+        /* 热门标签*/
+        $class = M('activity_class');
+        $heatClass = $class->order('heat desc')->limit(6)->field('class_name')->select();
+        $this->assign('heatclass',$heatClass);
+
+        $this->display();
     }
 }
