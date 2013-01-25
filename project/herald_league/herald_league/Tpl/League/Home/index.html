@@ -5,4 +5,9 @@
 	</volist>
 <a href = "__APP__/League/Home/album/leagueid/{$league[0]['id']}">相册<a/><br/>
 <a href = "__APP__/League/Home/communion/leagueid/{$league[0]['id']}">交流区<a/><br/>
-<a href = "__APP__/League/Home/leagueAdmin/leagueid/{$league[0]['id']}">管理我的信息</a>
+<a href = "__APP__/League/Home/leagueAdmin/leagueid/{$league[0]['id']}">管理我的信息</a><br/>
+<if condition = "$attentionstate">
+	<a href = "__APP__/League/Home/attention/leagueid/{$league[0]['id']}/action/del">取消关注</a>
+<else /> 
+	<a href = "__APP__/League/Home/attention/leagueid/{$league[0]['id']}/action/add">关注</a>
+</if>

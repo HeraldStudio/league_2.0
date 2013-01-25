@@ -12,6 +12,19 @@
 */
 class StreetAction extends Action
 {
+	/*
+
+	函数功能：社团类型页面
+
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function index()
 	{
 		/*获取URL参数*/
@@ -28,6 +41,19 @@ class StreetAction extends Action
 		$this -> assign('league',$league);
 		$this -> display();
     }
+    /*
+
+	函数功能：社团列表控制页面
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
 	public function leaguelist()
 	{
 		/*获取街道id*/

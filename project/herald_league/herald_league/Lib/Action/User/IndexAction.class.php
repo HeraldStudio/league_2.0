@@ -10,9 +10,22 @@
 *更新日期：2012.12.17
 
 */
-class IndexAction extends Action {
+class IndexAction extends Action 
+{
 
-    /*这个函数实现用户空间静态信息的显示*/
+   /*
+
+	函数功能：用户空间首页
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function index()
     {
     	/*获取URL参数*/
@@ -28,6 +41,19 @@ class IndexAction extends Action {
 		$this -> display();
     }
 
+/*
+
+	函数功能：更新用户信息页面
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function updateInfo ()
     {
     	/*获取URL参数*/
@@ -42,7 +68,19 @@ class IndexAction extends Action {
 		$this -> display();
 	    
     }
+    /*
 
+	函数功能：修改头像页面
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function changeAvatar ()
     {
     	/*获取URL参数*/
@@ -63,6 +101,19 @@ class IndexAction extends Action {
 	    $this -> display();
     }
 
+    /*
+
+	函数功能：用户留言版页面
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function comment()
     {
     	/*获取URL参数*/
@@ -88,6 +139,20 @@ class IndexAction extends Action {
     	$this -> display();
     }
 
+    /*
+
+	函数功能：关注的社团页面
+
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
+
     public function attentionLeague()
     {
     	/*获取URL参数*/
@@ -105,6 +170,19 @@ class IndexAction extends Action {
     	$this -> assign ( 'leagueinfo', $leagueinfo );
     	$this -> display();
     }
+    /*
+
+	函数功能：关注的活动页面
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function attentionActivity ()
     {
     	/*获取URL参数*/
@@ -124,7 +202,19 @@ class IndexAction extends Action {
     	
     }
 
-    // 文件上传
+    /*
+
+	函数功能：文件上传函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     protected function _upload() 
     {
         import('@.ORG.UploadFile');

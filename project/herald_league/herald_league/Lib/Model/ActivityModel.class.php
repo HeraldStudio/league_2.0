@@ -40,12 +40,26 @@ class ActivityModel extends Model
     	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
+    /*
+
+    函数功能：根据id获取活动信息
+    
+    参数信息：活动id
+
+      返回值：返回包含当前社团对应的所有活动信息的二维数组
+              
+        作者：Tairy
+    
+    更新日期：2013/01/17
+    
+    */
     public function getActivityInfoById( $activityid )
     {
         $activity = $this -> where( 'id ='.$activityid ) -> select();
         return $activity;
     }
-    public function getAttender($activityID)
+
+    public function getAttender( $activityID )
     {
     /*
      * 功能        获取关注者
@@ -69,8 +83,9 @@ class ActivityModel extends Model
             $attender[$n]['avatar'] = $userInf['user_avatar_add'];
         }
         return $attender;
-        }
-    public function getClass($activityID)
+    }
+
+    public function getClass( $activityID )
     {
         /*
          * 功能：得到活动标签
@@ -93,6 +108,7 @@ class ActivityModel extends Model
         }
         return $activity;
     }
+    
     public function recent($limit)
     {
         /*

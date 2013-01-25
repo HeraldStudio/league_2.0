@@ -12,3 +12,7 @@
  [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE user_id = 1AND isleague = 0 
 [ 2013-01-25T13:10:31+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
  [ SQL语句 ] : SELECT * FROM `lg_league_info` WHERE id = 
+[ 2013-01-25T15:48:01+08:00 ] ERR: (ThinkException) No connection could be made because the target machine actively refused it.
+
+[ 2013-01-25T16:45:03+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 7 行.
+[ 2013-01-25T16:46:02+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 7 行.
