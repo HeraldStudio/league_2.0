@@ -39,7 +39,8 @@ class UserModel extends Model
          *日期 :  2013.1.25
          */
         $cardnumber = intval($cardnumber);
-        return $this->where(array('card_num'=>$cardnumber))->field('id')->find();
+        $id=$this->where(array('card_num'=>$cardnumber))->field('id')->find();
+        return $id['id'];
     }
 }
 

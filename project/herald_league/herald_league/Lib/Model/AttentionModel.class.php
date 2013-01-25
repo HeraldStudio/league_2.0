@@ -27,7 +27,7 @@ class AttentionModel extends Model
         switch ($action)
         {
             case 'add':
-                if($this->select($data))
+                if($this->where($data)->selsct())
                     return '你已经关注';
                 else
                 {
