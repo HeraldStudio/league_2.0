@@ -36,7 +36,8 @@ class AttentionModel extends Model
                 }
             default:
                 {
-                    return '非法的操作';                }
+                    return '非法的操作';
+                }
         }
 
     }
