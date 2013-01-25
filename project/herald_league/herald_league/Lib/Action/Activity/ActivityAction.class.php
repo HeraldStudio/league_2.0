@@ -29,18 +29,11 @@ class ActivityAction extends Action
             $this->assign('activityinf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
-                $vote = M('vote');
-                $voteInf = $vote->find($activityID);
-                $this->assign($voteInf);
-                $voteItem = M('vote_item');
-                $voteItemInf = $voteItem ->where(array('vote_id'=>$activityInf['id']))->select(); //找到所有选项
-                $this->assign($voteItemInf);
-                $voteResult = M('vote_result');
-                foreach($voteItemInf as $n => $item)
-                {
-                    $itemCount[$n] = $voteResult->where(array('item_id'=> $item['id']))->count();//统计选项个数
-                }
-                $this->assign($itemCount);
+                $vote = D('vote');
+                $voteInf = $vote->getVoteInf($activityID);
+                $this->assign('voteinf',$voteInf);
+                $voteItem = D('vote_item');
+                $this->assign('vote',$voteItem->getVoteResult());
             }
             $attender = $activity->getAttender($activityID);
             $class    = $activity->getClass($activityID);
@@ -74,7 +67,7 @@ class ActivityAction extends Action
             $attention = D('Attention');
             $cardNumber =$heraldSession->getCardNumber();
             $user = D('User');
-            $data['user_id'] = $user->getIDbyCardNumber($cardNumber);
+            $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
             $data['attended_id']=$activityID;
             $data['isleague'] = 0;
             $this->assign('result',$attention->changeAttention($data,$action));
