@@ -11,6 +11,17 @@ class AttentionModel extends Model
         array('activity_id','number','活动无效'),
         array('isleague',array(0,1),'信息无效'),
     );
+    public function getAttentionLeague ( $userid )
+    {
+        $attentionleague = $this -> where('user_id = '.$userid.' AND isleague = 1') -> select();
+        return $attentionleague;
+    }
+
+    public function getAttentionActivity ( $userid )
+    {
+        $attentionactivity = $this -> where('user_id = '.$userid.' AND isleague = 0') -> select();
+        return $attentionactivity;
+    }
     public function changeAttention($data,$action = 'add')
     {
         switch ($action)
@@ -36,9 +47,10 @@ class AttentionModel extends Model
                 }
             default:
                 {
-                    return '非法的操作';
+                    return '非法的操作';                
                 }
         }
 
     }
 }
+?>
