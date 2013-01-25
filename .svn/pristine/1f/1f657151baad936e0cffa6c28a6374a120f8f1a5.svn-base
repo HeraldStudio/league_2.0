@@ -1,3 +1,0 @@
-<volist name = "street" id = "vo">
-<a>{$vo.street_name}</a><br/>
-</volist>
