@@ -67,8 +67,13 @@ class AttentionModel extends Model
 
     public function getAttentionState( $data )
     {
+
+        if( $this -> select($data))
+            return ture;
+
         if( $this -> where($data)->select( ))
             return true;
+
         else
             return false;
     }

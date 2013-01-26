@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.5
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 26, 2013 at 10:02 AM
--- Server version: 5.5.28
--- PHP Version: 5.2.17
+-- Generation Time: Jan 22, 2013 at 08:26 AM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS `lg_activity` (
 --
 
 INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `end_time`, `activity_introduce`, `activity_post_add`, `contact_info`, `activity_org_name`, `activity_release_time`, `activity_count`, `comment_id`, `is_vote`) VALUES
-(1, 1, '测试活动', '2013-01-26', '2013-01-31', '这是一个测试活动', '1.jpg', '15850888888', '东南大学先声网', '2012-12-21', 23, 1, 0),
-(2, 1, '测试投票', '2013-01-02', '2013-01-31', '测试投票介绍', '测试投票', '131-1111111', '测试投票组织', '2013-01-01', 64, 2, 1);
+(1, 1, '测试活动', '2012-12-21', '2012-12-21', '这是一个测试活动', '1.jpg', '15850888888', '东南大学先声网', '2012-12-21', 19, 1, 0),
+(2, 1, '测试投票', '2013-01-02', '2013-01-10', '测试投票介绍', '测试投票', '131-1111111', '测试投票组织<div><a><img><frame>', '2013-01-01', 18, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,6 @@ INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `en
 CREATE TABLE IF NOT EXISTS `lg_activity_class` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `class_name` varchar(255) NOT NULL,
-  `heat` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -68,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `lg_activity_class` (
 -- Dumping data for table `lg_activity_class`
 --
 
-INSERT INTO `lg_activity_class` (`id`, `class_name`, `heat`) VALUES
-(1, '招新', 1);
+INSERT INTO `lg_activity_class` (`id`, `class_name`) VALUES
+(1, '招新');
 
 -- --------------------------------------------------------
 
@@ -123,15 +122,16 @@ CREATE TABLE IF NOT EXISTS `lg_attention` (
   `attended_id` int(11) NOT NULL COMMENT '被关注者id',
   `isleague` int(4) NOT NULL COMMENT '0表示活动 1表示社团',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `lg_attention`
 --
 
 INSERT INTO `lg_attention` (`id`, `user_id`, `attended_id`, `isleague`) VALUES
-(8, 3, 2, 0),
-(9, 3, 1, 0);
+(2, 2, 1, 0),
+(3, 1, 1, 1),
+(4, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -371,7 +371,7 @@ CREATE TABLE IF NOT EXISTS `lg_user` (
   `last_login_time` date NOT NULL,
   `times` int(11) NOT NULL DEFAULT '0' COMMENT '登陆次数 ',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `lg_user`
@@ -379,8 +379,7 @@ CREATE TABLE IF NOT EXISTS `lg_user` (
 
 INSERT INTO `lg_user` (`id`, `card_num`, `true_name`, `nick_name`, `user_avatar_add`, `user_qq`, `user_mail`, `user_phone`, `user_grade`, `user_college`, `last_login_time`, `times`) VALUES
 (1, '213111517', '郭耿瑞', 'Tairy', '/UserAvatar/psu.jpg', '1210137461', 'tairyguo@gmail.com', '15850692128', 2, '物理系', '2012-12-17', 0),
-(2, '213111516', '张三', 'zhangsan', '/UserAvatar/psu.jpg', '000000000', '00@00.com', '111111', 1, '数学系', '2012-12-25', 0),
-(3, '888888', 'a', 'b', 'c', '保密', '保密', '保密', 1, '保密', '2012-04-01', 0);
+(2, '213111516', '张三', 'zhangsan', '/UserAvatar/psu.jpg', '000000000', '00@00.com', '111111', 1, '数学系', '2012-12-25', 0);
 
 -- --------------------------------------------------------
 
@@ -422,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `lg_vote_item` (
 --
 
 INSERT INTO `lg_vote_item` (`id`, `vote_id`, `item_name`, `item_content`) VALUES
-(1, 2, '111', '选项1'),
+(1, 2, '选项1', '选项1'),
 (2, 2, '选项2', '选项2');
 
 -- --------------------------------------------------------
