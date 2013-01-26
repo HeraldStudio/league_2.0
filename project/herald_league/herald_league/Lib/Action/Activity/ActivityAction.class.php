@@ -26,7 +26,7 @@ class ActivityAction extends Action
         else
         {
             $activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
-            $this->assign('activityinf',$activityInf);
+            $this->assign('activityinf',$activityInf[0]);
             if($activityInf['is_vote'] != 0 )//是投票
             {
                 $this->assign('isvote',true);

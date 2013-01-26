@@ -26,8 +26,7 @@
             }
             else
             {
-                echo"请先登录";
-                //todo 转向错误页
+                $this->error('请先登录');
             }
         }
         public function stepTwo()
