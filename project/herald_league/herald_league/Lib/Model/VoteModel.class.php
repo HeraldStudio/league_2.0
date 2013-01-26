@@ -19,6 +19,8 @@ class VoteModel extends Model
         }
         return $result;
     }
-
+    /*
+     * 功能
+     */
 
 }

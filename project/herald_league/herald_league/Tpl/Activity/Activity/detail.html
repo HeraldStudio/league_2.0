@@ -11,7 +11,11 @@
 <if condition ="$isvote eq true">
     <foreach name = "voteresult" item="v">
         {$v.item}得票{$v.count} <br>
-        <a href="{$voteadd}/itemid/{$v.id}">投他一票</a><br>
+            <if condition="$v.isvoted eq 0">
+                <a href="{$voteadd}/itemid/{$v.id}">投他一票</a><br>
+            <else/>
+                已经投过票了</br>
+            </if>
     </foreach>
 </if>
 </body>

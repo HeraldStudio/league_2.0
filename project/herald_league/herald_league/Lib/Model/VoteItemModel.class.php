@@ -62,8 +62,8 @@ class VoteItemModel extends Model
             {
                 return -4;
             }
-            $voteResult=M('voteResult');
-            if($voteResult->where(array('item_id'=>$VoteItemID,'user_id'=>$uid))->find())
+            $voteResult=D('VoteResult');
+            if($voteResult->isvoted($uid,$VoteItemID))
             {
                    return -1;
             }

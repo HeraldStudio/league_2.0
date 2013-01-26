@@ -15,7 +15,9 @@ class ActivityAction extends Action
     public function detail()
     {
 
-       // $heraldSession = D('UserSessionControl'); //控制会话
+        $heraldSession = D('UserSessionControl'); //控制会话
+        $user = D('User');
+        $uid = $user->getIDbyCardNumber($heraldSession->getCardNumber());
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = D('Activity');
         $activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
@@ -32,7 +34,19 @@ class ActivityAction extends Action
             {
                 $this->assign('isvote',true);
                 $vote = D('Vote');
+                $VoteResult = D('VoteResult');
                 $voteResult = $vote->getVoteResult($activityID);
+                foreach($voteResult as $n=>$v)
+                {
+                    if($uid==null || !$VoteResult -> isvoted($uid,$v['id']) )
+                    {
+                        $voteResult[$n]['isvoted']=0;
+                    }
+                    else
+                    {
+                        $voteResult[$n]['isvoted']=1;
+                    }
+                }
                 $this->assign('voteresult',$voteResult);
                 $this->assign('voteadd',U('/Activity/Vote/Vote/'));
             }

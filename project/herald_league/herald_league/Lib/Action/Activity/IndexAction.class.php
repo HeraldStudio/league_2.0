@@ -61,6 +61,10 @@ class IndexAction extends Action {
         $heatClass = $class->order('heat desc')->limit(6)->field('class_name')->select();
         $this->assign('heatclass',$heatClass);
         $this->assign('attention',U('/Activity/Activity/changeAttention/'));
+//        import('@.ORG.VerifyCode');
+//        $ver = new VerifyCode();
+//        $this->assign('ver',$ver->generate());
+
         $this->display();
     }
 }

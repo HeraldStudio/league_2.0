@@ -97,3 +97,61 @@
 [ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
 [ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
 [ 2013-01-26T13:12:38+08:00 ] ERR: [1] Call to a member function count() on a non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T21:51:06+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:41+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:42+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:43+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:43+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:43+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:43+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:44+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:44+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:44+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:44+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:44+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:45+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:46+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:55:47+08:00 ] ERR: [1] Class 'VerifyCode' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:57:26+08:00 ] ERR: [1] Class 'Imagine' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:57:44+08:00 ] ERR: [1] Class 'Image' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T21:59:14+08:00 ] ERR: [1] Class 'UploadFile' not found D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 65 行.
+[ 2013-01-26T22:03:22+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2013-01-26T22:04:36+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2013-01-26T22:23:03+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:27:12+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:00+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:01+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:02+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:18+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:19+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:28:26+08:00 ] ERR: (ThinkException) Model:getVoteResult您所请求的方法不存在！
+[ 2013-01-26T22:28:37+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:29:05+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:29:07+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
+[ 2013-01-26T22:29:07+08:00 ] ERR: (ThinkException) Model:isvoted您所请求的方法不存在！
