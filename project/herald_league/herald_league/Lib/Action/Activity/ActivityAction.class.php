@@ -19,6 +19,7 @@ class ActivityAction extends Action
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = D('Activity');
         $activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
+        $activityInf = $activityInf[0];//返回的是数组的数组，只取第一个
         if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
         {
             $this->error('你所查找的活动不存在');
@@ -26,7 +27,7 @@ class ActivityAction extends Action
         else
         {
             $activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
-            $this->assign('activityinf',$activityInf[0]);
+            $this->assign('activityinf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
                 $this->assign('isvote',true);
