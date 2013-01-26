@@ -13,10 +13,12 @@ class VoteModel extends Model
         $voteResult = M('vote_result');
         foreach($voteItemInf as $n=>$v)
         {
+            $result[$n]['id']=$v['id'];
             $result[$n]['item']=$v['item_name'];
             $result[$n]['count']=$voteResult->where(array('item_id'=> $v['id']))->count();
         }
         return $result;
     }
+
 
 }

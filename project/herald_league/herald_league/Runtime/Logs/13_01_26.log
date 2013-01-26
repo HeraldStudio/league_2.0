@@ -1,1 +1,99 @@
 [ 2013-01-26T09:28:06+08:00 ] ERR: (ThinkException) Access denied for user 'root'@'localhost' (using password: YES)
+[ 2013-01-26T12:08:06+08:00 ] ERR: (ThinkException) 非法操作:Voteitemid1
+[ 2013-01-26T12:11:41+08:00 ] ERR: (ThinkException) 非法操作:Voteitemid1
+[ 2013-01-26T12:12:06+08:00 ] ERR: (ThinkException) 非法操作:Voteitemid1
+[ 2013-01-26T12:12:59+08:00 ] ERR: (ThinkException) Model:vote您所请求的方法不存在！
+[ 2013-01-26T12:14:13+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:18:31+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:18:32+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:14+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:16+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:17+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:19+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:21+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:54+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:57+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:32:58+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:00+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:00+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:00+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:00+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:01+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:33:51+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:34:48+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:20+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:21+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:22+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:22+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:22+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:22+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:22+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:37:23+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.
+[ 2013-01-26T12:44:13+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:44:14+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:44:14+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:44:16+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:02+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:04+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:04+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:04+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:04+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:05+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:25+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:26+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:26+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:27+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:28+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:53:29+08:00 ] ERR: [1] Call to undefined function where() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 54 行.
+[ 2013-01-26T12:54:27+08:00 ] ERR: (ThinkException) Unknown column 'available_num' in 'field list'
+ [ SQL语句 ] : SELECT `available_num` FROM `lg_vote_item` WHERE ( (`id` = null)  ) 
+[ 2013-01-26T12:57:34+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:02+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:04+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:05+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:26+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:28+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:28+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:29+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:29+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:29+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:29+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:29+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T12:58:30+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Vote/Vote.html]
+[ 2013-01-26T13:12:38+08:00 ] ERR: [1] Call to a member function count() on a non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\VoteItemModel.class.php 第 53 行.

@@ -33,7 +33,6 @@
         {
             $address = U('Activity/Addactivity/stepThree');
             $this->assign('address',$address);
-            $this->show();
         }
         public function stepThree()
         {}

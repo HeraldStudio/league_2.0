@@ -34,7 +34,7 @@ class ActivityAction extends Action
                 $vote = D('Vote');
                 $voteResult = $vote->getVoteResult($activityID);
                 $this->assign('voteresult',$voteResult);
-                //print_r($voteResult);
+                $this->assign('voteadd',U('/Activity/Vote/Vote/'));
             }
             $attender = $activity->getAttender($activityID);
             $class    = $activity->getClass($activityID);
@@ -79,6 +79,7 @@ class ActivityAction extends Action
                 $data['attended_id']=$activityID;
                 $data['isleague'] = 0;
                 $this->assign('result',$attention->changeAttention($data,$action));
+
             }
             $this->display();
         }
