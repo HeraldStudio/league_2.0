@@ -95,7 +95,7 @@ class AttentionModel extends Model
     */
 
     public function changeAttention($data,$action = 'add')
-    {trace($data,'data');
+    {
         switch ($action)
         {
             case 'add':
