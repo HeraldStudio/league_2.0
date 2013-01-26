@@ -95,11 +95,11 @@ class AttentionModel extends Model
     */
 
     public function changeAttention($data,$action = 'add')
-    {
+    {trace($data,'data');
         switch ($action)
         {
             case 'add':
-                if( $this -> select( $data ) )
+                if( $this -> where( $data )->find() )
                     return -1;
                 else
                 {
@@ -115,7 +115,7 @@ class AttentionModel extends Model
                 }
                 break;
             case 'del':
-                if( $this -> select($data) )
+                if( $this -> where($data)->find() )
                 {
                     if($this->delete($data))
                         return 2;
