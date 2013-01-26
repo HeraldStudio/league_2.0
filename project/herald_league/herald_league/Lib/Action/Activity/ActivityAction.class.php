@@ -7,7 +7,7 @@
 
 *作者：xie
 
-*更新日期：2013.1.21
+*更新日期：2013.1.26
 
 */
 class ActivityAction extends Action
@@ -18,22 +18,22 @@ class ActivityAction extends Action
        // $heraldSession = D('UserSessionControl'); //控制会话
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = D('Activity');
-        $activityInf = $activity->find($activityID); //读取主键为$activityID值的数据
+        $activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
         if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
         {
-            // todo echo "ERROR";
+            $this->error('你所查找的活动不存在');
         }
         else
         {
-            $activity->where(array('id'=>$activityID))->setInc('activity_count');//点击量加一
+            $activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
             $this->assign('activityinf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
-                $vote = D('vote');
-                $voteInf = $vote->getVoteInf($activityID);
-                $this->assign('voteinf',$voteInf);
-                $voteItem = D('vote_item');
-                $this->assign('vote',$voteItem->getVoteResult());
+                $this->assign('isvote',true);
+                $vote = D('Vote');
+                $voteResult = $vote->getVoteResult($activityID);
+                $this->assign('voteresult',$voteResult);
+                //print_r($voteResult);
             }
             $attender = $activity->getAttender($activityID);
             $class    = $activity->getClass($activityID);
@@ -51,28 +51,36 @@ class ActivityAction extends Action
          * 日期 ：2013.1.24
          * todo 修改标签热度
          */
-        $activityID = intval($this->_param('activityid'));//todo 检查活动的存在
+        $activityID = intval($this->_param('activityid'));
         $action = $this->_param('action');
-        $heraldSession = D('UserSessionControl');
-        if( !$heraldSession->islogin())
+        $activity = D('Activity');
+        if(!$activity->isexist($activityID))
         {
-            $this->error('请先登录');
-        }
-        else if($heraldSession->getUserType() != 'user' )
-        {
-            $this->error('请以个人用户登录');
+            $this->error('请求的活动不存在');
         }
         else
         {
-            $attention = D('Attention');
-            $cardNumber =$heraldSession->getCardNumber();
-            $user = D('User');
-            $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
-            $data['attended_id']=$activityID;
-            $data['isleague'] = 0;
-            $this->assign('result',$attention->changeAttention($data,$action));
+            $heraldSession = D('UserSessionControl');
+            if( !$heraldSession->islogin())
+            {
+                $this->error('请先登录');
+            }
+            else if($heraldSession->getUserType() != 'user' )
+            {
+                $this->error('请以个人用户登录');
+            }
+            else
+            {
+                $attention = D('Attention');
+                $cardNumber =$heraldSession->getCardNumber();
+                $user = D('User');
+                $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
+                $data['attended_id']=$activityID;
+                $data['isleague'] = 0;
+                $this->assign('result',$attention->changeAttention($data,$action));
+            }
+            $this->display();
         }
-        $this->display();
     }
 }
 

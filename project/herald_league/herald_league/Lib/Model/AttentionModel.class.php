@@ -59,7 +59,7 @@ class AttentionModel extends Model
 
       返回值：关注返回true 未关注返回false
 
-        作者：Tairy
+        作者：Tairy & xie
     
     更新日期：2013/01/17
     
@@ -67,8 +67,13 @@ class AttentionModel extends Model
 
     public function getAttentionState( $data )
     {
+
         if( $this -> select($data))
             return ture;
+
+        if( $this -> where($data)->select( ))
+            return true;
+
         else
             return false;
     }
@@ -77,13 +82,20 @@ class AttentionModel extends Model
 
     函数功能：改变关注状态函数
     
-    参数信息：社团的id
+    参数信息：数组，包括活动/社团的id，关注着的id，是否为社团
 
       返回值：返回数据改变结果
+             1：关注成功
+             2: 取消关注成功
+            -1：已经关注
+            -2：关注失败
+            -3: 还未关注，无法取消
+            -4: 取消关注失败
+            -5: 非法的操作
               
-        作者：Tairy
+        作者：Tairy & xie
     
-    更新日期：2013/01/17
+    更新日期：2013/01/25
     
     */
 
@@ -92,39 +104,39 @@ class AttentionModel extends Model
         switch ($action)
         {
             case 'add':
-                if( $this -> select( $data ) )
-                    return '你已经关注';
+                if( $this -> where( $data )->find() )
+                    return -1;
                 else
                 {
                     if($this->add($data))
                     {
-                        return '关注成功';
+                        return 1;
                     }
                     else
                     {
-                        return '关注失败';
+                        return -2;
                     }
 
                 }
                 break;
             case 'del':
-                if( $this -> select($data) )
+                if( $this -> where($data)->find() )
                 {
                     if($this->delete($data))
-                        return '取消关注成功';
+                        return 2;
                     else
-                        return '取消关注失败';
+                        return -4;
                 }
                 else
                 {
-                    return '你还未关注';
+                    return -3;
                 }
             default:
                 {
-                    return '非法的操作';                
+                    return -5;
                 }
         }
 
     }
+
 }
-?>

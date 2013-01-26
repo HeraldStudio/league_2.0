@@ -3,7 +3,7 @@
   * User: xie
  * Date: 13-1-25
  */
-class Vote_itemModel extends Model
+class VoteItemModel extends Model
 {
     public function getVoteItem($voteid)
     {

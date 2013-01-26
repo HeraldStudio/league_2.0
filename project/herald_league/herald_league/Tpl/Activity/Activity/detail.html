@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title></title>
+</head>
+<body>
+名称:{$activityinf.activity_name}<br>
+关注者:<foreach name = "attender" item = "a">
+    {$a.name}<br>
+</foreach>
+<if condition ="$isvote eq true">
+    <foreach name = "voteresult" item="v">
+        {$v.item}得票{$v.count} <br>
+    </foreach>
+</if>
+</body>
+</html>

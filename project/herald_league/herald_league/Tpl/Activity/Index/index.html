@@ -1,17 +1,29 @@
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-
+<if condition="$islogin eq 1">
+    欢迎你{$name}
+    <else/>
+    请先登录
+</if></br>
+近期活动<br>
 <foreach name="recent" item="r">
-    {$r.isstart}
+    <a href="{$detail}/activityid/{$r.id}"> {$r.activity_name}</a> 点击量{$r.activity_count}
     <if condition="$r.isstart lt 0">
         进行中
         <else/>
         未开始
     </if>
     <br>
+    <if condition="$r.isattended eq false">
+        <a href="{$attention}/activityid/{$r.id}/action/add">关注它</a><br>
+        <else/>
+        <a href="{$attention}/activityid/｛$r.id｝/action/del">取消关注</a><br>
+    </if>
 </foreach>
+<a>热门标签</a>
 <foreach name = "heatclass" item = "c">
     {$c.class_name}
 </foreach><br>
-<a href="{$attention}/activityid/1/action/add">关注活动1</a><br>
-<a href="{$attention}/activityid/1/action/del">取消关注活动1</a><br>
+
+
+
 </html>

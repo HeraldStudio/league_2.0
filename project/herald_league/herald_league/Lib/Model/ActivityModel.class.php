@@ -108,15 +108,27 @@ class ActivityModel extends Model
         }
         return $activity;
     }
-    
+
+    /*
+     * 功能：获取最近的活动
+     * 输入：数量限制
+     * 返回: 二维数组，每一个元素都是活动各项信息的数组
+     * 作者：xie
+     * 日期：2013.1.26
+     */
     public function recent($limit)
     {
-        /*
-         * 功能：获取最近的活动
-         * 输入：数量限制
-         * 返回: 二维数组，每一个元素都是活动各项信息的数组
-         */
-        $map['end_time']=array('egt',date('Y-m-d'));
-        return $this->where($map)->order('start_time')->limit($limit)->select();
+       $map['end_time']=array('egt',date('Y-m-d'));
+       return $this->where($map)->order('start_time')->limit($limit)->select();
+    }
+
+    /**
+     * @param $activityid
+     */
+    public function isexist($activityid)
+    {
+        if($this->find($activityid));
+            return true;
+        return false;
     }
 }
