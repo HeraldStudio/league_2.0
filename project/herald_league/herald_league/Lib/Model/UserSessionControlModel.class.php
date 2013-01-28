@@ -17,7 +17,7 @@
         private $cardNumber;       //登陆用户的一卡通号
         private $xml;              //得到的xml
         private $message;          //收到的信息
-        private $userType;         //用户类型，社团/个人
+        private $userType;         //用户类型，社团0/个人1
 
         function __construct()     //构造函数,创建cookie存储sessionID
         {
@@ -27,7 +27,6 @@
                 $this->applySessionID();//申请SessionID
                 $this->dealXML();  //分析xml
                 cookie('herald_session_id',$this->sessionID,$sessionTimeOut);//设置cookie
-                $this->userType = 'user';
             }
             else
             {
@@ -36,7 +35,7 @@
             }
             if(session('league') != null)//社团已登录
             {
-                $this->userType = "league";
+                $this->userType = 0;
                 $leagueid = session('league');
                 $lg = M('league_info');
                 $lgInf = $lg->find($leagueid);
@@ -50,7 +49,7 @@
             $this -> cardNumber = $this->xml->properties->{'herald.sso.studentUser.cardNumber'};
             $this -> userName =$this-> xml->properties->{'herald.sso.studentUser.fullName'};
             $this -> sessionID =$this->xml->id;
-            $this ->userType = 'user';
+            $this ->userType = 1;
         }
         private function applySessionID() //向服务器要session ID
         {
@@ -109,5 +108,15 @@ STR;
         public function getUserType()  //返回用户类型
         {
             return $this->userType;
+        }
+        public function getUserID() //用户在数据库中的id
+        {
+            if($this->getUserType() == 0)
+                return null;
+            else
+            {
+                $user = D('user');
+                return $user-getIDbyCardNumber($this->getCardNumber());
+            }
         }
     }

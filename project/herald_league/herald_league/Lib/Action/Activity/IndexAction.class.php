@@ -17,8 +17,7 @@ class IndexAction extends Action {
         {
             $this->assign('islogin',1);
             $this->assign('name',$heraldSession->getUserName());
-            $user = D('User');
-            $uid = $user->getIDbyCardNumber($heraldSession->getCardNumber());
+            $uid=$heraldSession->getUserID();
         }
         else
         {

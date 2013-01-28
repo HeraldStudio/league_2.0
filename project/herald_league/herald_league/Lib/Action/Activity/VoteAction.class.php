@@ -26,8 +26,7 @@ class VoteAction extends Action
         }
         else
         {
-            $user = D('User');
-            $uid = $user->getIDbyCardNumber($heraldSession->getCardNumber());
+            $uid = $heraldSession->getUserID();
             $result=$voteItem->voteIt(intval($itemid),$uid);
             //todo deal with result
             trace('r',$result);
