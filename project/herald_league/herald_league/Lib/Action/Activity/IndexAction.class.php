@@ -53,7 +53,7 @@ class IndexAction extends Action {
                 }
             }
         }
-        $this->assign('detail',U('Activity/Activity/detail/'));
+        $this->assign('detailadd',U('Activity/Activity/detail/'));
         $this->assign('recent',$recent);
         /* 热门标签*/
         $class = M('activity_class');

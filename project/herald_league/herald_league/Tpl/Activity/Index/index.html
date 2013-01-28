@@ -7,7 +7,7 @@
 <link href="__ROOT__/Public/css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/wowslider-container1.css" />
-<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/public/__ROOT__/Public/engine1/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
 <style type="text/css">
@@ -30,7 +30,11 @@ a:hover {
     <div id="header">
 	  <div id="header_top">
 	    <div id="header_top_text">
-		  <a href="#" id="login">登录</a>
+		    <if condition="$islogin eq 0">
+		  	    <a href="#" id="login">登录</a>
+		  	<else/>
+		  		<a href="#" id="login">欢迎你{$name}</a>
+		  	</if>
 		</div>
 		<div id="tubiao">
 		  <a href="#" id="xinxi">
@@ -63,92 +67,36 @@ a:hover {
 	    <div id="wowslider-container1">
 	      <div class="ws_images">
 		    <ul>
-              <li>
-			    <a href="herald.seu.edu.cn" target="_blank"><img src="data1/images/1_43.jpg" alt="先声之夜" title="http://herald.seu.edu.cn///////" id="wows1_0"/></a>
-				<h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li>
-			    <a href="www.seu.edu.cn"><img src="data1/images/3.jpg" alt="极坐标话剧之夜" title="http://herald.seu.edu.cn///////" id="wows1_1"/></a>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/60e5ae0eb45142caaa645779.jpg" alt="60e5ae0eb45142caaa645779" title="60e5ae0eb45142caaa645779" id="wows1_2"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/1366_768_20110228011010637636.jpg" alt="1366_768_20110228011010637636" title="1366_768_20110228011010637636" id="wows1_3"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/220713c87f762fad53664fba.jpg" alt="220713c87f762fad53664fba" title="220713c87f762fad53664fbafkfkfkfk" id="wows1_4"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/jingxuan036.jpg" alt="Jingxuan036" title="Jingxuan036" id="wows1_5"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/mxmt_2014.jpg" alt="MXMT_2014" title="MXMT_2014" id="wows1_6"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-              <li><img src="data1/images/10.jpg" alt="截图10" title="截图10" id="wows1_7"/>
-			    <h1>先声之夜</h1>
-			    </br>
-			    <p>(未开始)</p>
-			    <p>时间:2013年11月11日</p>
-				<p>地点：东南大学九龙湖校区</p>
-				<p>联系方式:15651003633</p>
-				<p>主办方:东南大学先声网</p>
-			  </li>
-            </ul>
+		    	<foreach name="recent" item="r">
+		    	    <li>
+			        <a href="{$detailadd}/activityid/{$r.id}" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
+				    <h1>{$r.activity_name}</h1>
+			        </br>
+			        <p>
+			        	<if condition="$r.isstart gt 0">
+			        		未开始
+			        	<else/>
+			        		进行中
+			        	</if>
+			        </p>
+			        <p>开始时间:{$r.start_time}</p>
+			        <p>结束时间:{$r.end_time}<p>
+				    <p>联系方式:{$r.contact_info}</p>
+				    <p>主办方:{$r.activity_org_name}</p>
+			        </li>
+		    	</foreach>
+                          </ul>
 		  </div>
           <div class="ws_bullets">
 		    <div>
-              <a href="#" title="先声之夜"><img src="data1/tooltips/1_43.jpg" alt="先声之夜"/>1</a>
-              <a href="#" title="极坐标话剧之夜"><img src="data1/tooltips/3.jpg" alt="极坐标话剧之夜"/>2</a>
-              <a href="#" title="60e5ae0eb45142caaa645779"><img src="data1/tooltips/60e5ae0eb45142caaa645779.jpg" alt="60e5ae0eb45142caaa645779"/>3</a>
-              <a href="#" title="1366_768_20110228011010637636"><img src="data1/tooltips/1366_768_20110228011010637636.jpg" alt="1366_768_20110228011010637636"/>4</a>
-              <a href="#" title="220713c87f762fad53664fba"><img src="data1/tooltips/220713c87f762fad53664fba.jpg" alt="220713c87f762fad53664fba"/>5</a>
-              <a href="#" title="Jingxuan036"><img src="data1/tooltips/jingxuan036.jpg" alt="Jingxuan036"/>6</a>
-              <a href="#" title="MXMT_2014"><img src="data1/tooltips/mxmt_2014.jpg" alt="MXMT_2014"/>7</a>
-              <a href="#" title="截图10"><img src="data1/tooltips/10.jpg" alt="截图10"/>8</a>
+              <a href="#" title="先声之夜"><img src="__ROOT__/Public/data1/tooltips/1_43.jpg" alt="先声之夜"/>1</a>
+              <a href="#" title="极坐标话剧之夜"><img src="__ROOT__/Public/data1/tooltips/3.jpg" alt="极坐标话剧之夜"/>2</a>
+              <a href="#" title="60e5ae0eb45142caaa645779"><img src="__ROOT__/Public/data1/tooltips/60e5ae0eb45142caaa645779.jpg" alt="60e5ae0eb45142caaa645779"/>3</a>
+              <a href="#" title="1366_768_20110228011010637636"><img src="__ROOT__/Public/data1/tooltips/1366_768_20110228011010637636.jpg" alt="1366_768_20110228011010637636"/>4</a>
+              <a href="#" title="220713c87f762fad53664fba"><img src="__ROOT__/Public/data1/tooltips/220713c87f762fad53664fba.jpg" alt="220713c87f762fad53664fba"/>5</a>
+              <a href="#" title="Jingxuan036"><img src="__ROOT__/Public/data1/tooltips/jingxuan036.jpg" alt="Jingxuan036"/>6</a>
+              <a href="#" title="MXMT_2014"><img src="__ROOT__/Public/data1/tooltips/mxmt_2014.jpg" alt="MXMT_2014"/>7</a>
+              <a href="#" title="截图10"><img src="__ROOT__/Public/data1/tooltips/10.jpg" alt="截图10"/>8</a>
             </div>
 		  </div>
           <div class="ws_shadow"></div>		
@@ -360,8 +308,8 @@ a:hover {
    };
    toTop.goto("toTop");
    </script>
-<script type="text/javascript" src="engine1/wowslider.js"></script>
-<script type="text/javascript" src="engine1/script.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/engine1/wowslider.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/engine1/script.js"></script>
 <script type="text/javascript">
 			$(document).ready(function(){
 				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute

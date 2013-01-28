@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 26, 2013 at 10:02 AM
+-- Generation Time: Jan 28, 2013 at 10:26 PM
 -- Server version: 5.5.28
 -- PHP Version: 5.2.17
 
@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS `lg_activity` (
 --
 
 INSERT INTO `lg_activity` (`id`, `league_id`, `activity_name`, `start_time`, `end_time`, `activity_introduce`, `activity_post_add`, `contact_info`, `activity_org_name`, `activity_release_time`, `activity_count`, `comment_id`, `is_vote`) VALUES
-(1, 1, '测试活动', '2013-01-26', '2013-01-31', '这是一个测试活动', '1.jpg', '15850888888', '东南大学先声网', '2012-12-21', 23, 1, 0),
-(2, 1, '测试投票', '2013-01-02', '2013-01-31', '测试投票介绍', '测试投票', '131-1111111', '测试投票组织', '2013-01-01', 64, 2, 1);
+(1, 1, '测试活动', '2013-01-31', '2013-01-31', '这是一个测试活动', '1.jpg', '15850888888', '东南大学先声网', '2012-12-21', 31, 1, 0),
+(2, 1, '测试投票', '2013-01-02', '2013-01-31', '测试投票介绍', '2.jpg', '131-1111111', '测试投票组织', '2013-01-01', 107, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -124,14 +124,6 @@ CREATE TABLE IF NOT EXISTS `lg_attention` (
   `isleague` int(4) NOT NULL COMMENT '0表示活动 1表示社团',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
-
---
--- Dumping data for table `lg_attention`
---
-
-INSERT INTO `lg_attention` (`id`, `user_id`, `attended_id`, `isleague`) VALUES
-(8, 3, 2, 0),
-(9, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -401,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `lg_vote` (
 --
 
 INSERT INTO `lg_vote` (`id`, `league_id`, `vote_name`, `available_num`) VALUES
-(2, 1, '测试投票名称', 1);
+(2, 1, '测试投票名称', 10);
 
 -- --------------------------------------------------------
 
@@ -436,17 +428,14 @@ CREATE TABLE IF NOT EXISTS `lg_vote_result` (
   `item_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `lg_vote_result`
 --
 
 INSERT INTO `lg_vote_result` (`id`, `item_id`, `user_id`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 1, 3),
-(4, 1, 5);
+(5, 1, 3);
 
 -- --------------------------------------------------------
 
