@@ -1,0 +1,92 @@
+﻿@charset "utf-8";
+* {
+   margin: 0px;
+   padding: 0px;
+   font-size:14px;
+  }
+body 
+{
+	text-align:center;	
+}
+a{
+    text-decoration:none;
+	}
+#main {
+
+	width:840px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;	
+}
+#main_body{
+	overflow:hidden;
+	position:relative;
+	background-color:#fff;
+	}
+.liuyan{
+    width:230px;
+	float:left;
+	margin-top:50px;
+	margin-left:30px;
+	background-color:#fdfede;
+	-webkit-box-shadow: 5px 5px 7px #999;
+	border-style:solid;
+	border-width:1px;
+	border-color:#cccccc #cccccc #cccccc #cccccc;
+}
+.top{
+    float:left;
+	width:230px;
+	}
+.club_name{
+    float:left;
+	margin-left:10px;
+	margin-top:10px;
+	color:#00c0ff;
+	font-family:"微软雅黑", "宋体", serif;
+}
+.liuyanshu{
+    float:left;
+	margin-top:5px;
+	margin-left:40px;
+}
+.liuyan_img{
+    background:url(../images/liuyan.png);
+	background-repeat:no-repeat;
+	height:17px;
+	width:20px;
+	float:left;
+}
+.liuyan_num{
+    color:#f0746d;
+	float:left;
+}
+.time{
+    float:left;
+	margin-left:10px;
+	color:#6d6d6d;
+	font-family:"微软雅黑", "宋体", serif;
+}
+.club_touxiang{  
+    position:relative;
+	float:left;
+    width:35px;
+	height:35px;
+	margin-left:10px;
+	margin-top:10px;
+	}
+.bottom{
+    float:left;
+	width:230px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.liuyan_content{
+  font-family:"微软雅黑", "宋体", serif;
+  padding-left:20px;
+  width:190px;
+  color:#6d6d6d;
+}
+p{
+     text-indent:2em;
+}

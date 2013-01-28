@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+#toTop{
+    background:url(../images/gototop.png);
+	background-repeat:no-repeat;
+	position:fixed;
+	bottom:130px;
+	right:100px;
+	_position: absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-75-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+	}
+#toTop:hover{
+    opacity:0.7;
+}

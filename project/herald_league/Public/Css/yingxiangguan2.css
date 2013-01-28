@@ -1,0 +1,35 @@
+﻿iframe{
+    height:500px;
+	width:840px;
+	float:left;
+	border:none;
+}
+#door{
+    position:absolute;
+	top:250px;
+	right:194px;
+	height:200px;
+	width:8px;
+	background-color:#fff;
+}
+#wall1{
+    position:absolute;
+	top:700px;
+	right:194px;
+	height:20px;
+	width:960px;
+	background-color:#aebaba;
+}
+#arrow{
+    position:absolute;
+	top:330px;
+	right:205px;
+	height:35px;
+	width:39px;
+	float:left;
+	background:url(../images/arrow_right.png);
+	background-repeat:no-repeat;
+}
+#arrow:hover{
+    opacity:0.7;
+	}

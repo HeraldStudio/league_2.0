@@ -115,8 +115,8 @@ STR;
                 return null;
             else
             {
-                $user = D('user');
-                return $user-getIDbyCardNumber($this->getCardNumber());
+                $user = D('User');
+                return $user->getIDbyCardNumber($this->getCardNumber());
             }
         }
     }

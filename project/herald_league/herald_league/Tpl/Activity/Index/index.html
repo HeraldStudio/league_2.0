@@ -1,29 +1,416 @@
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<if condition="$islogin eq 1">
-    欢迎你{$name}
-    <else/>
-    请先登录
-</if></br>
-近期活动<br>
-<foreach name="recent" item="r">
-    <a href="{$detail}/activityid/{$r.id}"> {$r.activity_name}</a> 点击量{$r.activity_count}
-    <if condition="$r.isstart lt 0">
-        进行中
-        <else/>
-        未开始
-    </if>
-    <br>
-    <if condition="$r.isattended eq false">
-        <a href="{$attention}/activityid/{$r.id}/action/add">关注它</a><br>
-        <else/>
-        <a href="{$attention}/activityid/｛$r.id｝/action/del">取消关注</a><br>
-    </if>
-</foreach>
-<a>热门标签</a>
-<foreach name = "heatclass" item = "c">
-    {$c.class_name}
-</foreach><br>
-
-
-
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动信息平台首页</title>
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<link href="../css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/wowslider-container1.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script> 
+<script type="text/javascript" src="../js/jquery.masonry.min.js"></script> 
+<style type="text/css">
+a:link {
+	color: #cccccc;;
+	font-weight: bold;
+}
+a:visited {
+	color: #cccccc;
+	font-weight: bold;
+}
+a:hover {
+	color: #34c5c3;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+	  <div id="header_top">
+	    <div id="header_top_text">
+		  <a href="#" id="login">登录</a>
+		</div>
+		<div id="tubiao">
+		  <a href="#" id="xinxi">
+		  </a>
+		  <a href="#" id="shouye">
+		  </a>
+		</div>
+	  </div>
+	  <div id="header_bottom">
+	    <div id="logo">
+		</div>
+		<div id="navigation">
+		  <div id="herald" class="navigation_link">
+		    <a href="#" >先声首页</a>
+		  </div>
+		   <div id="map" class="navigation_link">
+		    <a href="#" >社团地图</a>
+		  </div>
+		   <div id="activity" class="navigation_link">
+		    <a href="#" >活动信息</a>
+		  </div>
+		   <div id="wall" class="navigation_link">
+		    <a href="#" >海报墙</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div id="main_body">
+	  <div id="main_body_top">
+	    <div id="wowslider-container1">
+	      <div class="ws_images">
+		    <ul>
+              <li>
+			    <a href="herald.seu.edu.cn" target="_blank"><img src="data1/images/1_43.jpg" alt="先声之夜" title="http://herald.seu.edu.cn///////" id="wows1_0"/></a>
+				<h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li>
+			    <a href="www.seu.edu.cn"><img src="data1/images/3.jpg" alt="极坐标话剧之夜" title="http://herald.seu.edu.cn///////" id="wows1_1"/></a>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/60e5ae0eb45142caaa645779.jpg" alt="60e5ae0eb45142caaa645779" title="60e5ae0eb45142caaa645779" id="wows1_2"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/1366_768_20110228011010637636.jpg" alt="1366_768_20110228011010637636" title="1366_768_20110228011010637636" id="wows1_3"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/220713c87f762fad53664fba.jpg" alt="220713c87f762fad53664fba" title="220713c87f762fad53664fbafkfkfkfk" id="wows1_4"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/jingxuan036.jpg" alt="Jingxuan036" title="Jingxuan036" id="wows1_5"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/mxmt_2014.jpg" alt="MXMT_2014" title="MXMT_2014" id="wows1_6"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+              <li><img src="data1/images/10.jpg" alt="截图10" title="截图10" id="wows1_7"/>
+			    <h1>先声之夜</h1>
+			    </br>
+			    <p>(未开始)</p>
+			    <p>时间:2013年11月11日</p>
+				<p>地点：东南大学九龙湖校区</p>
+				<p>联系方式:15651003633</p>
+				<p>主办方:东南大学先声网</p>
+			  </li>
+            </ul>
+		  </div>
+          <div class="ws_bullets">
+		    <div>
+              <a href="#" title="先声之夜"><img src="data1/tooltips/1_43.jpg" alt="先声之夜"/>1</a>
+              <a href="#" title="极坐标话剧之夜"><img src="data1/tooltips/3.jpg" alt="极坐标话剧之夜"/>2</a>
+              <a href="#" title="60e5ae0eb45142caaa645779"><img src="data1/tooltips/60e5ae0eb45142caaa645779.jpg" alt="60e5ae0eb45142caaa645779"/>3</a>
+              <a href="#" title="1366_768_20110228011010637636"><img src="data1/tooltips/1366_768_20110228011010637636.jpg" alt="1366_768_20110228011010637636"/>4</a>
+              <a href="#" title="220713c87f762fad53664fba"><img src="data1/tooltips/220713c87f762fad53664fba.jpg" alt="220713c87f762fad53664fba"/>5</a>
+              <a href="#" title="Jingxuan036"><img src="data1/tooltips/jingxuan036.jpg" alt="Jingxuan036"/>6</a>
+              <a href="#" title="MXMT_2014"><img src="data1/tooltips/mxmt_2014.jpg" alt="MXMT_2014"/>7</a>
+              <a href="#" title="截图10"><img src="data1/tooltips/10.jpg" alt="截图10"/>8</a>
+            </div>
+		  </div>
+          <div class="ws_shadow"></div>		
+	    </div>
+	  </div>
+	  <div id="main_body_bottom">
+	    <div id="main_body_bottom_left">
+	      <ul class="list">
+			<li>
+              <a href="#"><img src="../images/1.jpg" alt="" /></a>
+			  <div class="activity_title">今天我要嫁给你</div>
+			  <a href="#"id="attention">
+			    <div id="attention_img">
+			    </div>
+			    <div id="attention_text">关注
+			    </div>			  
+			  </a>
+            </li>
+            <li>
+              <a href="#"><img src="../images/2.jpg" class="cover" alt="" /></a>
+			  <div class="activity_title">今天我要嫁给你</div>
+            </li>
+            <li>
+			  <a href="#"><img src="../images/3.jpg" alt="" /></a>
+			  <div class="activity_title">今天我要嫁给你</div>
+			</li>
+            <li>
+			  <a href="#"><img src="../images/4.jpg" alt="" /></a>
+			  <div class="activity_title">今天我要嫁给你</div>
+			</li>
+            <li>
+			  <a href="#"><img src="../images/5.jpg" alt="" /></a>
+			  <div class="activity_title">今天我要嫁给你</div>
+			</li>
+            <li>
+			  <img src="../images/6.jpg" alt="" />
+			  <div class="activity_title">今天我要嫁给你</div>
+			</li>
+            <li>
+			  <img src="../images/7.jpg" alt="" />
+			  <div class="activity_title">今天我要嫁给你</div>
+			</li>
+            <li><img src="../images/1.jpg" alt="" /></li>
+            <li><img src="../images/2.jpg" alt="" /></li>
+            <li><img src="../images/3.jpg" alt="" /></li>
+            <li><img src="../images/4.jpg" alt="" /></li>
+            <li><img src="../images/5.jpg" alt="" /></li>
+            <li><img src="../images/6.jpg" alt="" /></li>
+            <li><img src="../images/7.jpg" alt="" /></li>
+            <li><img src="../images/1.jpg" alt="" /></li>
+            <li><img src="../images/2.jpg" alt="" /></li>
+            <li><img src="../images/3.jpg" alt="" /></li>
+            <li><img src="../images/4.jpg" alt="" /></li>
+            <li><img src="../images/5.jpg" alt="" /></li>
+            <li><img src="../images/6.jpg" alt="" /></li>
+          </ul>
+		  <div id="all">
+		    <a href="#" id="btn_all">点击查看全部</a>
+		  </div>
+		</div>
+		<div id="main_body_bottom_right">
+		  <div id="right_inner">
+		    <div id="search">
+	          <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+	            <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+		      </form>
+		      <a href="#" id="search_image">
+		      </a>
+	        </div>
+			<div id="hot_biaoqian" class="hot">
+			  <div id="hot_biaoqian_title" class="hot_title">
+			    <div id="hot_img" class="hot_img">
+				</div>
+				<div id="hot_text" class="hot_text">热门标签
+				</div>
+			  </div>
+			  <div id="biaoqian_content" class="content">
+			    <a id="biaoqian3" class="bq" href="#">全部活动
+			    </a>
+				<div id="biaoqian1" class="bq">音乐
+				</div>
+			    <div id="biaoqian2" class="bq">体育
+			    </div>
+			    <div id="biaoqian3" class="bq">讲座
+			    </div>
+				<div id="biaoqian3" class="bq">社团招新
+			    </div>
+				<div id="biaoqian3" class="bq">宣讲
+			    </div>
+			  </div>
+			</div>
+			<div id="hot_activity" class="hot">
+			  <div id="hot_activity_title" class="hot_title">
+			    <div id="hot_img" class="hot_img">
+				</div>
+				<div id="hot_text" class="hot_text">热门活动
+				</div>
+			  </div>
+			  <div id="activity_content" class="content">
+			    <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="activity_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+			  </div>
+			  <div class="more">
+			     <a href="#" class="more_text">More...
+			     </a>
+			  </div>
+			</div>
+			<div id="hot_club" class="hot">
+			  <div id="hot_club_title" class="hot_title">
+			    <div id="hot_img" class="hot_img">
+				</div>
+				<div id="hot_text" class="hot_text">热门社团
+				</div>
+			  </div>
+			  <div id="club_content" class="content">
+			    <div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+				<div id="club_content_text" class="content_text">活动活动活动活动活动活动
+				</div>
+			  </div>
+			  <div class="more">
+			     <a href="#" class="more_text">More...
+			     </a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+    </div>
+	<div id="footer">
+	  <div id="footer_link">
+	    <a href="#" id="f_about" class="link">关于我们</a>
+		<a href="#" id="f_contact" class="link">联系我们</a>
+		<a href="#" id="f_join" class="link">加入我们</a>
+	  </div>
+	  <div id="footer_text">
+      <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
+	  </div>
+	</div>
+  </div>
+  <a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+   <script type="text/javascript">
+   window.onscroll=function()
+   {
+   		var top=document.documentElement.scrollTop||document.body.scrollTop;
+		var toTop=document.getElementById("toTop");
+   		if(top>400)
+		{
+			toTop.style.display="inline";
+		}
+		else
+		{
+			toTop.style.display="none";
+		}
+   };
+   var toTop=new function()
+   {
+   		var Timer=null;
+   		function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+		this.goto=function(objName)
+		{
+			$id(objName).onclick=function()
+			{
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				startNove();
+				return false;
+			};
+			var startNove=function()
+			{
+				if(Timer)clearInterval(Timer);
+				Timer=setInterval(doMove,30);
+			};
+			var doMove=function()
+			{
+				var iSpeed=0;
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				iSpeed=(0-top)/5;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+				if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+				{
+					clearInterval(Timer);
+					Timer=null;
+				}
+				window.scrollTo(0,(top+iSpeed));
+			};
+		};
+   };
+   toTop.goto("toTop");
+   </script>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<script type="text/javascript">
+			$(document).ready(function(){
+				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+				//Vertical Sliding
+				$('.boxgrid.slidedown').hover(function(){
+					$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+				});
+				//Horizontal Sliding
+				$('.boxgrid.slideright').hover(function(){
+					$(".cover", this).stop().animate({left:'205px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+				});
+				//Diagnal Sliding
+				$('.boxgrid.thecombo').hover(function(){
+					$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+				});
+				//Partial Sliding (Only show some of background)
+				$('.boxgrid.peek').hover(function(){
+					$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+				});
+				//Full Caption Sliding (Hidden to Visible)
+				$('.boxgrid.captionfull').hover(function(){
+					$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:160});
+				});
+				//Caption Sliding (Partially Hidden to Visible)
+				$('.boxgrid.caption').hover(function(){
+					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
+				});
+			});
+		</script>
+<script>
+var $list= $(".list");
+$list.imagesLoaded(function(){
+  $list.masonry({
+    itemSelector : ".list li",
+    columnWidth : 225
+  });
+});
+</script>
+</body>
 </html>

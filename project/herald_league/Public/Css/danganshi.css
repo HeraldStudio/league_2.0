@@ -1,0 +1,138 @@
+﻿@charset "utf-8";
+* {
+   margin: 0px;
+   padding: 0px;
+   font-size:14px;
+  }
+body 
+{
+	text-align:center;	
+}
+a{
+    text-decoration:none;
+	}
+#main {
+
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;	
+}
+#main_body{
+	overflow:hidden;
+	position:relative;
+	background-color:#fff;
+	}
+#top{
+    float:left;
+	}
+#touxiang{
+    float:left;
+	padding-top:50px;
+	padding-left:50px;
+	}
+#title{
+    color:#46c9c7;
+	font-size:25px;
+	font-weight: bold;
+	padding-top:50px;
+	padding-left:50px;
+	width:300px;
+	float:left;
+	font-family:"微软雅黑", "宋体", serif;
+	}
+#attention{
+    float:left;
+	margin-left:250px;
+	}
+#attention_img{
+    height:15px;
+	width:15px;
+	background:url(../images/attention.png);
+	background-repeat:no-repeat;
+	float:left;
+	}
+#attention_text{
+    margin-left:3px;
+    float:left;
+	color:#46c9c7;
+	}
+#member{
+    padding-top:30px;
+	float:left;
+	width:350px;
+	}
+#member_title{
+    font-family:"微软雅黑", "宋体", serif;
+	font-size:16px;
+	padding-left:30px;
+	width:320px;
+	color:#34c5c3;
+	float:left;
+}
+#member_text{
+    float:left;
+	font-family:"微软雅黑", "宋体", serif;
+	font-size:14px;
+	padding-left:30px;
+	width:270px;
+	color:#6e6e6e;
+	padding-top:10px;
+}
+p{
+    line-height:24px;
+	word-spacing: 5px;
+}
+#middle{
+    float:left;
+}
+#club{
+    padding-top:30px;
+	float:left;
+	width:600px;
+	}
+#club_title{
+    font-family:"微软雅黑", "宋体", serif;
+	font-size:16px;
+	padding-left:50px;
+	width:500px;
+	color:#34c5c3;
+	float:left;
+}
+#club_text{
+    float:left;
+	font-family:"微软雅黑", "宋体", serif;
+	font-size:14px;
+	padding-left:50px;
+	width:500px;
+	color:#6e6e6e;
+	padding-top:10px;
+}
+#club_text p{
+    text-indent:2em;
+	}
+#bottom{
+    float:left;
+}
+#contact{
+    padding-top:30px;
+	float:left;
+	width:600px;
+	}
+#contact_title{
+    font-family:"微软雅黑", "宋体", serif;
+	font-size:16px;
+	padding-left:50px;
+	width:500px;
+	color:#34c5c3;
+	float:left;
+}
+#contact_text{
+    float:left;
+	font-family:"微软雅黑", "宋体", serif;
+	font-size:14px;
+	padding-left:50px;
+	width:500px;
+	color:#6e6e6e;
+	padding-top:10px;
+}

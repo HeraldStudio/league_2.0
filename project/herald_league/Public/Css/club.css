@@ -1,0 +1,294 @@
+﻿@charset "utf-8";
+* {
+   margin: 0px;
+   padding: 0px;
+   font-size:14px;
+  }
+body 
+{
+	text-align:center;	
+}
+a{
+    text-decoration:none;
+	display:block;
+	}
+#main {
+
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;	
+}
+#header{
+    background-color:#46c9c7;
+	height:30px;
+	border-bottom:solid #384e4d 5px;
+}
+#logo{
+    height:18px;
+	width:101px;
+	background:url(../images/logo1.png);
+	background-repeat:no-repeat;
+	margin-top:6px;
+	margin-left:30px;
+	float:left;
+	}
+#navigation{
+	float:left;
+	padding-left:20px;
+	}
+.navigation_link{
+    text-align:center;
+	width:50px;
+	line-height:30px;
+	float:left;
+	}
+.navigation_link a:hover{
+    background-color:#fff;
+	}
+#wall{
+    width:60px;
+	}
+#search{
+    padding-left:280px;
+	padding-top:4px;
+	float:left;
+	}
+#search input{
+    width:130px;
+	height:17px;
+	float:left;
+	}
+#search_image{
+    background:url(../images/search.png);
+	background-repeat:no-repeat;
+	width:23px;
+	height:20px;
+	margin-left:-25px;
+	float:left;
+	}
+#message{
+    float:left;
+	padding-left:15px;
+	padding-top:6px;
+	}
+#message_image{
+    height:20px;
+	width:23px;
+	background:url(../images/message.png);
+	background-repeat:no-repeat;
+	}
+#love{
+    float:left;
+	padding-left:10px;
+	padding-top:6px;
+	}
+#love_image{
+    height:20px;
+	width:23px;
+	background:url(../images/love.png);
+	background-repeat:no-repeat;
+	}
+#user{
+    text-align:center;
+	line-height:30px;
+	padding-left:15px;
+	float:left;
+  }
+#exit{
+    text-align:center;
+	line-height:30px;
+	padding-left:15px;
+	float:left;
+    }
+#user a:hover{
+    background-color:#fff;
+	}	
+#exit a:hover{
+    background-color:#fff;
+	}
+#main_body{
+	overflow:hidden;
+	position:relative;
+	background-color:#d4dada;
+	}
+#main_body_inner{
+    margin-left:10px;
+	margin-top:10px;
+	margin-right:10px;
+	float:left;
+	height:660px;
+	width:940px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#97c4c4 #97c4c4 #f0fafa #97c4c4;
+	background:url(../images/background.png);
+	}
+#footer{
+   border-top:dashed #999 thin;
+   height:70px;
+   background-color:#f0fafa;
+}
+#footer_link{
+    float:left;
+	padding-top:50px;
+}
+#footer_text{
+    float:left;
+	padding-top:50px;
+	padding-left:360px;
+}
+#footer_text pre{
+    font-family:"微软雅黑", "宋体", serif;
+	font-size:12px;
+	float:left;
+	color:#999;
+}
+.link{
+    float:left;
+	padding-left:20px;
+	font-family:"微软雅黑", "宋体", serif;
+	}
+.link:link{
+    color:#46c9c7;
+	}
+a.link:hover{
+    color:#999;
+}
+.link:visited{
+    color:#46c9c7;
+	}	
+#gua1{
+    position:absolute;
+	top:35px;
+	left:280px;
+	height:15px;
+	width:2px;
+	background-color:#9abebe;
+}
+#gua2{
+    position:absolute;
+	top:35px;
+	left:430px;
+	height:15px;
+	width:2px;
+	background-color:#9abebe;
+}
+#club_lable{
+    position:absolute;
+	top:50px;
+	left:230px;
+	height:80px;
+	width:250px;
+	}
+#lable_top{
+    height:50px;
+	background-color:#41c2c0;
+	opacity:0.8;
+	position:relative;
+	}
+#lable_bottom{
+    height:30px;
+	background-color:#268887;
+	opacity:0.8;
+	position:relative;
+	}
+#touxiang2{  
+    position:relative;
+	float:left;
+    width:35px;
+	height:35px;
+	margin-left:10px;
+	margin-top:10px;
+	}
+#name{
+  float:left;
+  padding-top:15px;
+  padding-left:10px;
+  color:#fff;
+  font-size:18px;
+  font-family:"微软雅黑", "宋体", serif;
+}
+#address{
+    float:left;
+	padding-top:25px;
+    padding-left:10px;
+    color:#fff;
+    font-size:12px;
+    font-family:"微软雅黑", "宋体", serif;
+}
+#guanzhu{
+    float:left;
+	margin-top:5px;
+    margin-left:10px;
+    color:#fff;
+    font-size:12px;
+    font-family:"微软雅黑", "宋体", serif;
+	width:40px;
+	height:20px;
+	background-color:#fdcd00;
+	text-align:center;
+	line-height:20px;
+}
+#number{
+    float:left;
+	margin-top:5px;
+    margin-left:10px;
+    color:#cccccc;
+    font-size:12px;
+    font-family:"微软雅黑", "宋体", serif;
+	text-align:center;
+	line-height:20px;
+}
+#chumen{
+    float:left;
+	margin-top:5px;
+    margin-left:70px;
+	width:60px;
+	height:20px;
+	background-color:#5ea8a7;
+	text-align:center;
+}	
+#chumen_img{
+    float:left;
+	margin-top:2px;
+	margin-left:5px;
+    height:18px;
+	width:12px;
+	background:url(../images/jiantou.png);
+	background-repeat:no-repeat;
+}
+#chumen_text{
+    float:left;
+	color:#fff;
+	line-height:20px;
+	margin-left:5px;
+}
+#danganshi{
+    height:500px;
+	width:840px;
+	margin-left:50px;
+	float:left;
+	margin-top:70px;
+	-webkit-box-shadow: 5px 5px 7px #999;
+	border-style:solid;
+	border-width:1px;
+	border-color:#cccccc #cccccc #cccccc #cccccc;
+}
+#danganshi_biaoti{
+    position:absolute;
+	top:100px;
+	right:600px;
+	height:40px;
+	width:160px;
+	background-color:#fff;
+	color:#999;
+	font-size:16px;
+	font-weight:bold;
+	font-family:"微软雅黑", "宋体", serif;
+	line-height:40px;
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#cccccc #cccccc #cccccc #cccccc;
+}
