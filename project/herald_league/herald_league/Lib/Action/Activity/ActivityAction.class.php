@@ -79,22 +79,39 @@ class ActivityAction extends Action
             {
                 $this->error('请先登录');
             }
-            else if($heraldSession->getUserType() != 'user' )
-            {
-                $this->error('请以个人用户登录');
+            else {
+                if($heraldSession->getUserType() != 1)
+                {
+                    $this->error('请以个人用户登录');
+                }
+                else
+                {
+                    $attention = D('Attention');
+                    $cardNumber =$heraldSession->getCardNumber();
+                    $user = D('User');
+                    $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
+                    $data['attended_id']=$activityID;
+                    $data['isleague'] = 0;
+                    $result = $attention->changeAttention($data, $action);
+                    $message = array(
+                        1=>'关注成功',
+                        2=>' 取消关注成功',
+                       -1=>'已经关注',
+                       -2=>'关注失败',
+                       -3=>' 还未关注，无法取消',
+                       -4=>' 取消关注失败',
+                       -5=>' 非法的操作',
+                    );
+                    if($result >0)
+                    {
+                        $this->success($message[$result]);
+                    }
+                    else
+                    {
+                        $this->error($message[$result]);
+                    }
+                }
             }
-            else
-            {
-                $attention = D('Attention');
-                $cardNumber =$heraldSession->getCardNumber();
-                $user = D('User');
-                $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
-                $data['attended_id']=$activityID;
-                $data['isleague'] = 0;
-                $this->assign('result',$attention->changeAttention($data,$action));
-
-            }
-            $this->display();
         }
     }
 }
