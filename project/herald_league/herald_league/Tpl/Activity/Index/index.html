@@ -185,20 +185,10 @@ a:hover {
                 </div>
               </div>
               <div id="activity_content" class="content">
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="activity_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
+                <volist name="heatActivity" id="h">
+                  <div id="activity_content_text" class = "content_text">{$h.activity_name}
+                  </div>
+                </volist>
               </div>
               <div class="more">
                  <a href="#" class="more_text">More...
