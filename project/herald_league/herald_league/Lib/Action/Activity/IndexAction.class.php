@@ -60,7 +60,7 @@ class IndexAction extends Action {
         define('HeatClassLimit', 6);
         $heatClass = $class->getHeatClass(HeatClassLimit);
         $this->assign('heatClass',$heatClass);
-        $this->assign('attention',U('/Activity/Activity/changeAttention/'));
+        $this->assign('attentionadd',U('/Activity/Activity/changeAttention/'));
         /*热门活动*/
         $heatActivity = $activity->getHeatActivity();
         $this->assign('heatActivity',$heatActivity);
