@@ -56,14 +56,11 @@ class IndexAction extends Action {
         $this->assign('detailadd',U('Activity/Activity/detail/'));
         $this->assign('recent',$recent);
         /* 热门标签*/
-        $class = M('activity_class');
-        $heatClass = $class->order('heat desc')->limit(6)->field('class_name')->select();
-        $this->assign('heatclass',$heatClass);
+        $class = D('ActivityClass');
+        define('HeatClassLimit', 6);
+        $heatClass = $class->getHeatClass(HeatClassLimit);
+        $this->assign('heatClass',$heatClass);
         $this->assign('attention',U('/Activity/Activity/changeAttention/'));
-//        import('@.ORG.VerifyCode');
-//        $ver = new VerifyCode();
-//        $this->assign('ver',$ver->generate());
-
         $this->display();
     }
 }
