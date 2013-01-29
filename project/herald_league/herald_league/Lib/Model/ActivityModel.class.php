@@ -96,7 +96,7 @@ class ActivityModel extends Model
          */
         $class_activity = M('class_activity');
         $activity_class = M('activity_class');
-        $classInf = $class_activity->where(array('activityid'=>$activityID))->select();
+        $classInf = $class_activity->where(array('activity_id'=>$activityID))->select();
         if($classInf == null  || $classInf ==false)
         {
             return null;

@@ -62,7 +62,7 @@ class IndexAction extends Action {
         $this->assign('heatClass',$heatClass);
         $this->assign('attentionadd',U('/Activity/Activity/changeAttention/'));
         /*热门活动*/
-        $heatActivity = $activity->getHeatActivity();
+        $heatActivity = $activity->getHeatActivity();//默认选6个
         $this->assign('heatActivity',$heatActivity);
         $this->display();
     }
