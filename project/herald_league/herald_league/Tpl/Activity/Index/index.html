@@ -7,12 +7,11 @@
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
-<script type="text/javascript" src="__ROOT__/public/__ROOT__/Public/engine1/jquery.js"></script>
+
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
-  
-  function changeAttention(activityid,action,key)
+function changeAttention(activityid,action,key)
   {
     var xmlhttp;
     xmlhttp=new XMLHttpRequest();
@@ -129,7 +128,8 @@ a:hover {
           <div class="ws_bullets">
             <div>
               <foreach name="recent" item="r">
-                  <a href="#" title="{$r.activity_name}"><img src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/></a>
+                  <a href="#" title="{$r.activity_name}"><img src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
+                    {$key+1}</a>
               </foreach>
             </div>
           </div>
@@ -300,8 +300,8 @@ a:hover {
    };
    toTop.goto("toTop");
    </script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/wowslider.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/script.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/wowslider.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/script.js"></script>
 <script type="text/javascript">
             $(document).ready(function(){
                 //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
