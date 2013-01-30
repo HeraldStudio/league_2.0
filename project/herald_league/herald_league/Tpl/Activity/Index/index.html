@@ -149,7 +149,7 @@ a:hover {
                   </div>            
                 </a>
               
-                <a onclick="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
+                <a href="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
                  <div class="attention_img" id="attention_img">
                  </div>
                  <div class="attention_text" id="attention_text">关注
