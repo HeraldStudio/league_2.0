@@ -144,12 +144,12 @@ a:hover {
               <a href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
               <a href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
               
-                <a href="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
+                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
                   <div class="attention_text" id="attention_text">取消关注
                   </div>            
                 </a>
               
-                <a href="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
+                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
                  <div class="attention_img" id="attention_img">
                  </div>
                  <div class="attention_text" id="attention_text">关注
