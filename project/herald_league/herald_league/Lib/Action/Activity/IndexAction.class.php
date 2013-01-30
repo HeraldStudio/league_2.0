@@ -7,7 +7,7 @@
 
 *作者：Xie
 
-*更新日期：2013.1.24
+*更新日期：2013.1.30
 
 */
 class IndexAction extends Action {
@@ -34,26 +34,8 @@ class IndexAction extends Action {
         foreach($recent as $n=>$r)
         {
             $recent[$n]['isstart']=  $date->dateDiff($r['start_time']); //与当前日期比较判断是否已经开始
-            if($uid==0)
-                $recent[$n]['isattended'] =false; //没登录，自然没关注
-            else
-            {
-                $codition = array(
-                    'user_id'=>$uid,
-                    'attended_id'=>$recent[$n]['id'],
-                    'isleague'=>0,
-                );
-                if($attention->getAttentionState($codition))
-                {
-                    $recent[$n]['isattended'] = true;//已经关注了
-                }
-                else
-                {
-                    $recent[$n]['isattended'] =false;//没关注
-                }
-            }
         }
-        $this->assign('detailadd',U('Activity/Activity/detail/'));
+            
         $this->assign('recent',$recent);
         /* 热门标签*/
         $class = D('ActivityClass');
@@ -64,6 +46,30 @@ class IndexAction extends Action {
         /*热门活动*/
         $heatActivity = $activity->getHeatActivity();//默认选6个
         $this->assign('heatActivity',$heatActivity);
+        /*主体部分的活动*/
+        $activities = $activity->getActivitybyLimit();//默认选取10个
+        foreach ($activities as $n => $a) {
+            if($uid==0)
+                $activities[$n]['isattended'] =0; //没登录，自然没关注
+            else
+            {
+                $codition = array(
+                    'user_id'=>$uid,
+                    'attended_id'=>$activities[$n]['id'],
+                    'isleague'=>0,
+                );
+                if($attention->getAttentionState($codition))
+                {
+                    $activities[$n]['isattended'] = 1;//已经关注了
+                }
+                else
+                {
+                    $activities[$n]['isattended'] =0;//没关注
+                }
+            }
+        }
+        $this->assign('activities',$activities);
+        
         $this->display();
     }
 }

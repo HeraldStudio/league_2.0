@@ -53,7 +53,7 @@ class AttentionModel extends Model
 
     /*
 
-    函数功能：获取当前用户与当前社团的关注状态
+    函数功能：获取当前用户与当前社团或者活动的关注状态
     
     参数信息：用户的id
 
@@ -67,9 +67,6 @@ class AttentionModel extends Model
 
     public function getAttentionState( $data )
     {
-
-        if( $this -> select($data))
-            return ture;
 
         if( $this -> where($data)->select( ))
             return true;
@@ -122,7 +119,7 @@ class AttentionModel extends Model
             case 'del':
                 if( $this -> where($data)->find() )
                 {
-                    if($this->delete($data))
+                    if($this->where($data)->delete())
                         return 2;
                     else
                         return -4;
@@ -138,5 +135,18 @@ class AttentionModel extends Model
         }
 
     }
+    /*
 
+    函数功能：获取当前用户与当前社团的关注状态
+    
+    参数信息：用户的id
+
+      返回值：关注返回true 未关注返回false
+
+        作者： xie
+    
+    更新日期：2013/01/17
+    
+    */
+    
 }

@@ -61,8 +61,19 @@ class ActivityAction extends Action
         /*
          * 功能 ：添加,删除关注者
          * 参数 : 活动id，动作
+         * 返回 :       1=>'关注成功',
+                        2=>' 取消关注成功',
+                       -1=>'已经关注',
+                       -2=>'关注失败',
+                       -3=>' 还未关注，无法取消',
+                       -4=>' 取消关注失败',
+                       -5=>' 非法的操作',
+                       -6=>'请求的活动不存在'
+                       -7=>'请先登录'
+                       -8=>'请以个人用户登录'
+
          * 作者 : xie
-         * 日期 ：2013.1.24
+         * 日期 ：2013.1.30
          * todo 修改标签热度
          */
         $activityID = intval($this->_param('activityid'));
@@ -70,19 +81,19 @@ class ActivityAction extends Action
         $activity = D('Activity');
         if(!$activity->isexist($activityID))
         {
-            $this->error('请求的活动不存在');
+            echo -6;
         }
         else
         {
             $heraldSession = D('UserSessionControl');
             if( !$heraldSession->islogin())
             {
-                $this->error('请先登录');
+                echo -7;
             }
             else {
                 if($heraldSession->getUserType() != 1)
                 {
-                    $this->error('请以个人用户登录');
+                    echo -8;
                 }
                 else
                 {
@@ -93,7 +104,7 @@ class ActivityAction extends Action
                     $data['attended_id']=$activityID;
                     $data['isleague'] = 0;
                     $result = $attention->changeAttention($data, $action);
-                    $message = array(
+                    /*$message = array(
                         1=>'关注成功',
                         2=>' 取消关注成功',
                        -1=>'已经关注',
@@ -101,15 +112,9 @@ class ActivityAction extends Action
                        -3=>' 还未关注，无法取消',
                        -4=>' 取消关注失败',
                        -5=>' 非法的操作',
-                    );
-                    if($result >0)
-                    {
-                        $this->success($message[$result]);
-                    }
-                    else
-                    {
-                        $this->error($message[$result]);
-                    }
+                    );*/
+                     echo $result;
+                    
                 }
             }
         }
