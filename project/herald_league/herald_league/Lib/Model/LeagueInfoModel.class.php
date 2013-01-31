@@ -123,5 +123,22 @@ class LeagueInfoModel extends Model
     	$result = $this -> where ('id = '.$leagueid) -> save ( $updateleagueinfo );
     	return $result;
     }
+    /*
+
+    函数功能：返回热门社团
+    参数信息：数量限制
+
+      返回值：社团的数组，包括名称和id
+              
+        作者：xie
+    
+    更新日期：2013/01/31
+    
+    */
+    public function getHeatLeague($limit=7)
+    {
+        return $this->order('heat desc')->limit($limit)->field('league_name,id')->select();
+    }
+
 }
 ?>

@@ -71,16 +71,17 @@ class ActivityModel extends Model
 
         $attention = M('attention');
         $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
-        if($attentionInf == false ||$attentionInf == null)//查询失败
-        {
+        if($attentionInf == false || $attentionInf == null)//查询失败
+        {//var_dump($attentionInf);
             return null;
         }
         $user = M('user');
         foreach($attentionInf as $n => $u)
         {
             $userInf = $user->find($u['user_id']);
-            $attender[$n]['name'] = $userInf['nick_name'];
-            $attender[$n]['avatar'] = $userInf['user_avatar_add'];
+            $attender[$n]['id']=$u['user_id'];
+            $attender[$n]['nick_name'] = $userInf['nick_name'];
+            $attender[$n]['user_avatar_add'] = $userInf['user_avatar_add'];
         }
         return $attender;
     }
@@ -137,7 +138,7 @@ class ActivityModel extends Model
     }
     /*
      * 功能：获取热门活动
-     * 输入：个数限制
+     * 输入：个数限制，默认为6
      * 返回: 二维数组，每一个元素都是活动的名称，id
      * 作者：xie
      * 日期：2013.1.29
@@ -145,6 +146,17 @@ class ActivityModel extends Model
     public function getHeatActivity($limit=6)
     {
         $date=date("Y-m-d");
-        return $this->where(array('end_time'=>array('egt',$date)))->order('activity_count desc')->limit($limit)->select();
+        return $this->where(array('end_time'=>array('egt',$date)))->order('activity_count desc')->limit($limit)->field('id,activity_name')->select();
+    }
+    /*
+     * 功能：获取指定数量的活动
+     * 输入：个数限制
+     * 返回: 二维数组，每一个元素都是活动的名称，id,海报
+     * 作者：xie
+     * 日期：2013.1.29
+     */
+    public function getActivitybyLimit($limit=10)
+    {
+        return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
     }
 }

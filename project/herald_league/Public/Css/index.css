@@ -293,20 +293,29 @@ a.more_text:hover{
 	color:#fff;
 	font-size:18px;
 }
-#attention{
+.attention{
     float:left;
 	margin-top:5px;
 	margin-left:120px;
 	}
-#attention_img{
+.attention_img{
     height:15px;
 	width:15px;
 	background:url(../images/attention.png);
 	background-repeat:no-repeat;
 	float:left;
 	}
-#attention_text{
+.attention_text{
     margin-left:3px;
     float:left;
 	color:#46c9c7;
 	}
+#loginBox{
+    display: none;
+    position: absolute;
+    right: 20;
+    width:260px;
+    z-index: 29;
+    background-color: #F2606A;
+
+}

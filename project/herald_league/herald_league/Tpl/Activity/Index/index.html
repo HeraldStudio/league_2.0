@@ -3,13 +3,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
-<link href="__ROOT__/Public/css/index.css" rel="stylesheet" type="text/css" />
-<link href="__ROOT__/Public/css/footer.css" rel="stylesheet" type="text/css" />
-<link href="__ROOT__/Public/css/totop.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/wowslider-container1.css" />
-<script type="text/javascript" src="__ROOT__/public/__ROOT__/Public/engine1/jquery.js"></script>
+<link href="__ROOT__/Public/Css/index.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
+
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
+<script type="text/javascript">
+function changeAttention(activityid,action,key)
+  {
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange=function()
+    {
+      if(xmlhttp.readyState == 4 && xmlhttp.status==200)
+      {
+        var message=new Array();
+            message[ 1]='关注成功'
+            message[ 2]='取消关注成功'
+            message[-1]='已经关注'
+            message[-2]='关注失败'
+            message[-3]='还未关注，无法取消'
+            message[-4]='取消关注失败'
+            message[-5]='非法的操作'
+            message[-6]='请求的活动不存在'
+            message[-7]='请先登录'
+            message[-8]='请以个人用户登录'
+            alert(message[xmlhttp.responseText]);
+            if(xmlhttp.responseText == 1)
+            {
+              document.getElementById("attention"+key+"_isattended").style.display="inline";
+              document.getElementById("attention"+key+"_notattended").style.display="none";
+            }
+            else if(xmlhttp.responseText ==2)
+            {
+              document.getElementById("attention"+key+"_isattended").style.display="none";
+              document.getElementById("attention"+key+"_notattended").style.display="inline";
+            }
+      }
+    }
+    xmlhttp.open("GET","{:U('Activity/Activity/changeAttention')}/activityid/"+activityid+"/action/"+action,true);
+    xmlhttp.send();
+  }
+</script>
 <style type="text/css">
 a:link {
     color: #cccccc;;
@@ -30,17 +75,19 @@ a:hover {
     <div id="header">
       <div id="header_top">
         <div id="header_top_text">
+          <div id="loginBox" style="display:none"><a >111</a></div>
             <if condition="$islogin eq 0">
                 <a href="#" id="login">登录</a>
+                </div>
+                <div id="tubiao">
             <else/>
                 <a href="#" id="login">欢迎你{$name}</a>
+                </div>
+                <div id="tubiao">
+                  <a href="#" id="xinxi"></a>
+                  
             </if>
-        </div>
-        <div id="tubiao">
-          <a href="#" id="xinxi">
-          </a>
-          <a href="#" id="shouye">
-          </a>
+        <a href="#" id="shouye"></a>
         </div>
       </div>
       <div id="header_bottom">
@@ -69,7 +116,7 @@ a:hover {
             <ul>
                 <foreach name="recent" item="r">
                     <li>
-                    <a href="{$detailadd}/activityid/{$r.id}" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
+                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
                     <h1>{$r.activity_name}</h1>
                     </br>
                     <p>
@@ -90,7 +137,8 @@ a:hover {
           <div class="ws_bullets">
             <div>
               <foreach name="recent" item="r">
-                  <a href="#" title="{$r.activity_name}"><img src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/></a>
+                  <a href="#" title="{$r.activity_name}"><img src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
+                    {$key+1}</a>
               </foreach>
             </div>
           </div>
@@ -100,53 +148,25 @@ a:hover {
       <div id="main_body_bottom">
         <div id="main_body_bottom_left">
           <ul class="list">
+            <volist name="activities" id="a">
             <li>
-              <a href="#"><img src="__ROOT__/Public/images/1.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-              <a href="#"id="attention">
-                <div id="attention_img">
-                </div>
-                <div id="attention_text">关注
-                </div>            
-              </a>
+              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
+              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
+              
+                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
+                  <div class="attention_text" id="attention_text">取消关注
+                  </div>            
+                </a>
+              
+                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
+                 <div class="attention_img" id="attention_img">
+                 </div>
+                 <div class="attention_text" id="attention_text">关注
+                 </div>            
+                </a>
+              
             </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/2.jpg" class="cover" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/3.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/4.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/5.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <img src="__ROOT__/Public/images/6.jpg" alt="" />
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <img src="__ROOT__/Public/images/7.jpg" alt="" />
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li><img src="__ROOT__/Public/images/1.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/2.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/3.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/4.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/5.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/6.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/7.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/1.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/2.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/3.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/4.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/5.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/6.jpg" alt="" /></li>
+            </volist>          
           </ul>
           <div id="all">
             <a href="#" id="btn_all">点击查看全部</a>
@@ -172,7 +192,9 @@ a:hover {
                 <a id="biaoqian3" class="bq" href="#">全部活动
                 </a>
                 <volist name="heatClass" id="h">
+                  <a href="#">
                   <div id="biaoqian1" class = "bq">{$h.class_name} 
+                  </a>
                   </div>
                 </volist>
               </div>
@@ -186,7 +208,7 @@ a:hover {
               </div>
               <div id="activity_content" class="content">
                 <volist name="heatActivity" id="h">
-                  <a href="{$detailadd}/activityid/{$h.id}"><div id="activity_content_text" class = "content_text">{$h.activity_name}
+                  <a href="{:U('Activity/Activity/detail/')}/activityid/{$h.id}"><div id="activity_content_text" class = "content_text">{$h.activity_name}
                   </div></a>
                 </volist>
               </div>
@@ -203,20 +225,11 @@ a:hover {
                 </div>
               </div>
               <div id="club_content" class="content">
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
+                <volist name="heatLeague" id="h">
+                  <a href="#">
+                  <div id="club_content_text" class = "content_text">{$h.league_name}
+                  </div></a>
+                </volist>
               </div>
               <div class="more">
                  <a href="#" class="more_text">More...
@@ -287,8 +300,8 @@ a:hover {
    };
    toTop.goto("toTop");
    </script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/wowslider.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/script.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/wowslider.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/script.js"></script>
 <script type="text/javascript">
             $(document).ready(function(){
                 //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
