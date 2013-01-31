@@ -1,0 +1,10 @@
+[ 2013-01-30T10:45:09+08:00 ] ERR: (ThinkException) Table 'herald_league.lg_class_activity' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lg_class_activity`
+[ 2013-01-30T14:29:09+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T14:32:53+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T14:37:31+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T17:32:48+08:00 ] ERR: (ThinkException) 模板不存在[E:/Web/Working/league_2.0/project/herald_league/herald_league/Tpl/League/Home/clubIndex.html]
+[ 2013-01-30T17:35:37+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T17:35:37+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T17:37:44+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-01-30T17:37:44+08:00 ] ERR: (ThinkException) 无法加载模块:images

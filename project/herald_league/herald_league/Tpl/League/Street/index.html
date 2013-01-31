@@ -6,7 +6,7 @@
 		<foreach name = "league" item = "vl" key = "vlk">
 			<eq name = "vlk" value = "$vs.id">
 				<volist name = "vl" id = "vle">
-					<a href = "__APP__/League/Home/index/leagueid/{$vle.id}">{$vle.league_name}</a><br/>
+					<a href = "__APP__/League/Home/clubIndex/leagueid/{$vle.id}">{$vle.league_name}</a><br/>
 				</volist>
 			</eq>
 		</foreach>

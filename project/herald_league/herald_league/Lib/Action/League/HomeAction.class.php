@@ -51,6 +51,7 @@ class HomeAction extends Action
 			'attended_id' => $leagueid,
 			'isleague' => 1
 		 );
+
 		$this -> attentionstate = $Attention -> getAttentionState( $data );
 
 		import('@.ORG.Search');
@@ -63,10 +64,62 @@ class HomeAction extends Action
 		}	
 		$this -> display();
     }
+
+    public function clubIndex()
+    {
+    	/*获取URL参数*/
+		$this -> leagueid = intval($this -> _param('leagueid'));
+
+		/*获取活动信息*/
+		$Activity = D('Activity');
+		$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
+		$this -> assign('activity', $activity);
+
+		/*获取关注信息*/
+		$Attention = D('Attention');
+		$User = D("User");
+
+		$attention = $Attention -> getActivityAttention( $activity[0]['id'] );
+		$userinfo = $User -> getUserInfo( $attention );
+		$this -> assign( 'userinfo', $userinfo );
+
+		$this -> display();
+    }
+
+    public function clubInfoRoom ()
+    {
+    	/*获取URL参数*/
+		$this -> leagueid = intval($this -> _param('leagueid'));
+
+		/*获取关注信息*/
+		$Attention = D('Attention');
+		$User = D("User");
+
+		$attention = $Attention -> getLeagueAttention( $this -> leagueid );
+		$userinfo = $User -> getUserInfo( $attention );
+		$this -> assign( 'userinfo', $userinfo );
+
+    	$this -> display();
+    }
+
+    public function infoRoom()
+    {
+    	/*获取URL参数*/
+		$leagueid = intval($this -> _param('leagueid'));
+
+		/*获取社团信息*/
+		$League = D('LeagueInfo');
+		$Attention = D('Attention');
+		$league = $League -> getLeagueInfo ( $leagueid );
+
+		$this -> assign( 'league', $league );
+
+		$this -> display();
+    }
 	
 	/*
 
-	函数功能：社团信息页面控制函数
+	函数功能：社团信息页面控制函数(此函数无用)
 	
 	参数信息：无参数
 
@@ -88,6 +141,14 @@ class HomeAction extends Action
 		$information = $Information -> where('id ='.$leagueid) -> select();
 		$this -> assign('information', $information);
 		$this ->display();
+	}
+
+	public function clubAlbum()
+	{
+		/*获取URL参数*/
+		$this -> leagueid = intval($this -> _param('leagueid'));
+
+		$this -> display();
 	}
 	
 	/*
@@ -201,6 +262,13 @@ class HomeAction extends Action
 		$this -> display();
 	}
 	
+	public function clubCommunion()
+	{
+		/*获取URL参数*/
+		$this -> leagueid = intval($this -> _param('leagueid'));
+
+    	$this -> display();
+	}
 	/*
 
 	函数功能：社团交流区控制函数

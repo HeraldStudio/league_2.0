@@ -139,4 +139,14 @@ class AttentionModel extends Model
 
     }
 
+    public function getLeagueAttention( $leagueid )
+    {
+        return $this -> where ('attended_id = '.$leagueid. ' AND isleague = 1') -> select();
+    }
+
+    public function getActivityAttention( $activityid )
+    {
+        return $this -> where ('attended_id = '.$activityid. ' AND isleague = 0') -> select();
+    }
+
 }
