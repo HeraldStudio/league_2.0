@@ -86,7 +86,7 @@ class ActivityAction extends Action
                 $this->assign('isstart',1);
             if(date("Y-m-d",strtotime($activityInf['end_time']))>date("Y-m-d"))
                 $this->assign('isend',1);
-
+            $this->assign('uid',$uid);
             $this->display();
         }
     }

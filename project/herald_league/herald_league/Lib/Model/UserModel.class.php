@@ -44,7 +44,9 @@ class UserModel extends Model
         {
             foreach ( $userdata as $userdatas ) 
             {
-                $userinfo[$userdatas['user_id']] = $this -> where ( 'id = '.$userdatas['user_id'] ) -> select()[0];
+                $temp=$this -> where ( 'id = '.$userdatas['user_id'] ) -> select();
+                $userinfo[$userdatas['user_id']] =$temp[0];
+            
             }
             return $userinfo;
         }

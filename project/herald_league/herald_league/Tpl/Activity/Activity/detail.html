@@ -7,6 +7,8 @@
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
 function changeAttention(activityid,action)
   {
@@ -38,13 +40,20 @@ function changeAttention(activityid,action)
             alert(message[xmlhttp.responseText]);
             if(xmlhttp.responseText == 1)
             {
-              document.getElementById("attended").style.display="inline";
-              document.getElementById("notattended").style.display="none";
+              $("#attended").show();
+              $("#notattended").hide();
+              $("#touxiang").append("<a id=\"touxiang_tmp\"></a>");
+              $("#touxiang_tmp").attr({
+              	"class":"tx",
+              	"href":"#"
+              });
+              $("#touxiang_tmp").html("<div id=\"touxiang_img1 \" class=\"touxiang_img\"><img width=\"50px\" height=\"50px\" alt=\"\" src=\"__ROOT__/Uploads/UserAvatar/{$uid}.jpg\" ></div><div id=\"touxiang_text1\" class=\"touxiang_text\">{$userName}</div>");
             }
             else if(xmlhttp.responseText ==2)
             {
-              document.getElementById("attended").style.display="none";
-              document.getElementById("notattended").style.display="inline";
+			   $("#attended").hide();
+               $("#notattended").show();
+               $("#touxiang{$uid}").hide();
             }
       }
     }
@@ -270,15 +279,14 @@ a:hover {
 			<div id="right2">
 			  <div id="touxiang">
 				<volist name="attender" id="a">
-					<a href="#"id="touxiang1" class="tx">
+					<a href="#"id="touxiang{$a.id}" class="tx">
 				  	<div id="touxiang_img1" class="touxiang_img"><img width=50px height=50px src="__ROOT__/Uploads/UserAvatar/{$a.user_avatar_add|default="default.jpg"}" alt="" />
 				  	</div>
-				  	<div id="touxiang_text1" class="touxiang_text">{$a.nick_name}
+				  	<div id="touxiang_text1" class="touxiang_text">{$a.true_name}
 				  	</div>
 					</a>
 				</volist>
-
-			  </div>
+				
 			</div>
 			<div id="right3">
 			  <div id="interest_title">猜你感兴趣...
