@@ -148,5 +148,13 @@ class AttentionModel extends Model
     更新日期：2013/01/17
     
     */
-    
+    public function getLeagueAttention( $leagueid )
+    {
+        return $this -> where ('attended_id = '.$leagueid. ' AND isleague = 1') -> select();
+    }
+
+    public function getActivityAttention( $activityid )
+    {
+        return $this -> where ('attended_id = '.$activityid. ' AND isleague = 0') -> select();
+    }
 }

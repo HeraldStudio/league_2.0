@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>留言板</title>
-<link href="__Public__/Css/yingxiangguan.css" rel="stylesheet" type="text/css" />
+<title>档案室</title>
+<link href="__Public__/Css/danganshi.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/header.css" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -14,30 +15,54 @@ a:visited {
 }
 a:hover {
 	color: #34c5c3;
-	opacity:0.7;
 }
 </style>
 </head>
 <body>
   <div id="main">
 	<div id="main_body">
-	<volist name = "album" id = "vo">
-	  <div class="photo">
-	    <div class="photo_img">
-	    	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">
-				<img src = "__Uploads__/{$vo.album_cover_add}"/>
-			</a>
+	  <div id="top">
+	    <div id="touxiang">
+	    	<img src="__Uploads__/LeagueAvatar/l_<?php echo ($league[0]['avater_address']); ?>" />
 		</div>
-		<div class="photo_text">
-		  <div class="photo_name">
-		  	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">{$vo.album_name}
-			</a>
+		<div id="title"><?php echo ($league[0]['league_name']); ?>
+		</div>
+		<a href="#"id="attention">
+		  <div id="attention_img">
 		  </div>
-		  <div class="photo_num">2张
+		  <div id="attention_text">关注
+		  </div>			  
+		</a>
+		<div id="member">
+		  <div id="member_title">社团成员：
+		  </div>
+		  <div id="member_text">
+		    <p>
+		    	<?php echo ($league[0]['league_member']); ?>  
+		    </p>
 		  </div>
 		</div>
 	  </div>
-	</volist>
+	  <div id="middle">
+	    <div id="club">
+		  <div id="club_title">社团简介：
+		  </div>
+		  <div id="club_text">
+		    <p>
+		    	<?php echo ($league[0]['league_introduce']); ?>
+		    </p>
+		  </div>
+		</div>
+	  </div>
+	   <div id="bottom">
+	    <div id="contact">
+		  <div id="contact_title">联系我们：
+		  </div>
+		  <div id="contact_text">
+	    	<?php echo ($league[0]['contact']); ?>
+		  </div>
+		</div>
+	  </div>
 	</div>
   </div>
 <a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>

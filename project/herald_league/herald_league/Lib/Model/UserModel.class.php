@@ -33,10 +33,21 @@ class UserModel extends Model
     更新日期：2013/01/17
     
     */
-    public function getUserInfo ( $userid )
+    public function getUserInfo ( $userdata )
     {
-    	$userinfo = $this -> where( 'id = '.$userid ) -> find();
-    	return $userinfo;
+        if(is_int($userdata))
+        {
+        	$userinfo = $this -> where( 'id = '.$userdata ) -> find();
+        	return $userinfo;
+        }
+        else
+        {
+            foreach ( $userdata as $userdatas ) 
+            {
+                $userinfo[$userdatas['user_id']] = $this -> where ( 'id = '.$userdatas['user_id'] ) -> select()[0];
+            }
+            return $userinfo;
+        }
     }
     /*
 
