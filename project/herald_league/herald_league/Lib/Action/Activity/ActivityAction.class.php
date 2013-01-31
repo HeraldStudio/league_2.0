@@ -54,7 +54,7 @@ class ActivityAction extends Action
                 }
                 $this->assign('voteresult',$voteResult);
             }
-            $attender = $activity->getAttender($activityID);var_dump($attender);
+            $attender = $activity->getAttender($activityID);
             if($attender==NULL)
             {
                  $this->assign('isattended',0);
@@ -81,6 +81,12 @@ class ActivityAction extends Action
             $class    = $activity->getClass($activityID);
             $this->assign('class',$class);
             $this->assign('attender',$attender);
+
+            if(date("Y-m-d",strtotime($activityInf['start_time']))<date("Y-m-d"))
+                $this->assign('isstart',1);
+            if(date("Y-m-d",strtotime($activityInf['end_time']))>date("Y-m-d"))
+                $this->assign('isend',1);
+
             $this->display();
         }
     }

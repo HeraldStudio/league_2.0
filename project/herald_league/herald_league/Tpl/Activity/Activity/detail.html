@@ -139,7 +139,15 @@ a:hover {
 			  <div id="time" class="information">
                 <div id="time_img">
 				</div>
-				<div id="time_text">开始时间:{$activityInf.start_time},结束时间:{$activityInf.end_time}
+				<div id="time_text">时间:{$activityInf.start_time}---{$activityInf.end_time}
+					<if condition=" $isstart neq 1 ">
+						【未开始】
+					<else/>
+					<if condition="$isend neq 1">
+						【进行中】
+					<else/>
+						【已结束】
+					</if></if>
 				</div>
 				
 				
@@ -269,12 +277,7 @@ a:hover {
 				  	</div>
 					</a>
 				</volist>
-				
-				
-				
-				
-				
-				
+
 			  </div>
 			</div>
 			<div id="right3">
