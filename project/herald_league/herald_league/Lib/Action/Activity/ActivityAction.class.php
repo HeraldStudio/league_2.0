@@ -16,6 +16,12 @@ class ActivityAction extends Action
     {
 
         $heraldSession = D('UserSessionControl'); //控制会话
+        if($heraldSession->isLogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('userName',$heraldSession->getUserName());
+            $uid=$heraldSession->getUserID();
+        }
         $uid = $heraldSession->getUserID();
         $activityID =intval( $this ->_param('activityid') ); //获取url参数
         $activity = D('Activity');
@@ -28,7 +34,7 @@ class ActivityAction extends Action
         else
         {
             $activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
-            $this->assign('activityinf',$activityInf);
+            $this->assign('activityInf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {
                 $this->assign('isvote',true);
@@ -47,9 +53,31 @@ class ActivityAction extends Action
                     }
                 }
                 $this->assign('voteresult',$voteResult);
-                $this->assign('voteadd',U('/Activity/Vote/Vote/'));
             }
-            $attender = $activity->getAttender($activityID);
+            $attender = $activity->getAttender($activityID);var_dump($attender);
+            if($attender==NULL)
+            {
+                 $this->assign('isattended',0);
+            }
+            else if(!$heraldSession->isLogin() )
+            {
+                $this->assign('isattended',0);
+            }
+            else
+            {
+                foreach ($attender as $a)
+                {
+                    if($a['id']==$uid)
+                    {
+                        $this->assign('isattended',1);
+                        break;
+                    }
+                    else
+                    {
+                        $this->assign('isattended',0);
+                    }
+                }
+            }
             $class    = $activity->getClass($activityID);
             $this->assign('class',$class);
             $this->assign('attender',$attender);
@@ -74,7 +102,7 @@ class ActivityAction extends Action
 
          * 作者 : xie
          * 日期 ：2013.1.30
-         * todo 修改标签热度
+         * todo 修改标签热度?
          */
         $activityID = intval($this->_param('activityid'));
         $action = $this->_param('action');
@@ -113,7 +141,7 @@ class ActivityAction extends Action
                        -4=>' 取消关注失败',
                        -5=>' 非法的操作',
                     );*/
-                     echo $result;
+                    echo $result;
                     
                 }
             }

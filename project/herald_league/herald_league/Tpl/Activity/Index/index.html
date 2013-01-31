@@ -14,7 +14,15 @@
 function changeAttention(activityid,action,key)
   {
     var xmlhttp;
-    xmlhttp=new XMLHttpRequest();
+    if (window.XMLHttpRequest)
+    {
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
     xmlhttp.onreadystatechange=function()
     {
       if(xmlhttp.readyState == 4 && xmlhttp.status==200)
@@ -67,6 +75,7 @@ a:hover {
     <div id="header">
       <div id="header_top">
         <div id="header_top_text">
+          <div id="loginBox" style="display:none"><a >111</a></div>
             <if condition="$islogin eq 0">
                 <a href="#" id="login">登录</a>
                 </div>
@@ -141,8 +150,8 @@ a:hover {
           <ul class="list">
             <volist name="activities" id="a">
             <li>
-              <a href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
-              <a href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
+              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
+              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
               
                 <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
                   <div class="attention_text" id="attention_text">取消关注
@@ -216,20 +225,11 @@ a:hover {
                 </div>
               </div>
               <div id="club_content" class="content">
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
+                <volist name="heatLeague" id="h">
+                  <a href="#">
+                  <div id="club_content_text" class = "content_text">{$h.league_name}
+                  </div></a>
+                </volist>
               </div>
               <div class="more">
                  <a href="#" class="more_text">More...

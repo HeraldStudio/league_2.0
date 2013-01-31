@@ -71,16 +71,17 @@ class ActivityModel extends Model
 
         $attention = M('attention');
         $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
-        if($attentionInf == false ||$attentionInf == null)//查询失败
-        {
+        if($attentionInf == false || $attentionInf == null)//查询失败
+        {//var_dump($attentionInf);
             return null;
         }
         $user = M('user');
         foreach($attentionInf as $n => $u)
         {
             $userInf = $user->find($u['user_id']);
-            $attender[$n]['name'] = $userInf['nick_name'];
-            $attender[$n]['avatar'] = $userInf['user_avatar_add'];
+            $attender[$n]['id']=$u['user_id'];
+            $attender[$n]['nick_name'] = $userInf['nick_name'];
+            $attender[$n]['user_avatar_add'] = $userInf['user_avatar_add'];
         }
         return $attender;
     }

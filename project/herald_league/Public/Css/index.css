@@ -310,3 +310,12 @@ a.more_text:hover{
     float:left;
 	color:#46c9c7;
 	}
+#loginBox{
+    display: none;
+    position: absolute;
+    right: 20;
+    width:260px;
+    z-index: 29;
+    background-color: #F2606A;
+
+}

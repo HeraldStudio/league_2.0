@@ -69,7 +69,9 @@ class IndexAction extends Action {
             }
         }
         $this->assign('activities',$activities);
-        
+        /*热门社团*/
+        $leagueInfo=D('LeagueInfo');
+        $this->assign('heatLeague',$leagueInfo->getHeatLeague());//默认选取7个
         $this->display();
     }
 }
