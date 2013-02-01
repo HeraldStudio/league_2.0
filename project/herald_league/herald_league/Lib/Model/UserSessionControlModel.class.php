@@ -3,7 +3,7 @@
 
 *名称：用户session控制模块
 
-*功能: 建立并控制herald_session_id
+*功能: 建立并控制HERALD_SESSION_ID
 
 *作者：Xie
 
@@ -21,12 +21,12 @@
 
         function __construct()     //构造函数,创建cookie存储sessionID
         {
-            if( cookie('herald_session_id')==null )    //如果不存在cookie
+            if( cookie('HERALD_SESSION_ID')==null )    //如果不存在cookie
             {
                 define('SessionTimeOut',3600*3);//cookie超时，单位秒
                 $this->applySessionID();//申请SessionID
                 $this->dealXML();  //分析xml
-                cookie('herald_session_id',$this->sessionID,SessionTimeOut);//设置cookie
+                cookie('HERALD_SESSION_ID',$this->sessionID,SessionTimeOut);//设置cookie
             }
             else
             {
@@ -77,7 +77,7 @@ STR;
         }
         private function update()
         {
-            $this -> sessionID = cookie('herald_session_id');
+            $this -> sessionID = cookie('HERALD_SESSION_ID');
             /*$ch = curl_init("121.248.63.105/sessionservice/sessions/$this->sessionID");
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

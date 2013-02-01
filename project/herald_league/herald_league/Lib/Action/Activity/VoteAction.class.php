@@ -18,11 +18,11 @@ class VoteAction extends Action
         $heraldSession = D('UserSessionControl');
         if( !$heraldSession->islogin())
         {
-            $this->error('请先登录');
+            $this->ajaxReturn('请先登录','EVAL');
         }
-        else if($heraldSession->getUserType() != 'user' )
+        else if($heraldSession->getUserType() != 1 )
         {
-            $this->error('请以个人用户登录');
+            $this->ajaxReturn('请以个人用户登录','EVAL');
         }
         else
         {
@@ -31,7 +31,7 @@ class VoteAction extends Action
             //todo deal with result
             if($result==1)
             {
-                $this->success('投票成功');
+                $this->ajaxReturn('投票成功','EVAL');
             }
             else
             {
@@ -43,7 +43,7 @@ class VoteAction extends Action
                   -5=>'投票不存在',
                   -6=>'写入数据库错误',
                 );
-                $this->error($message[$result]);
+                $this->ajaxReturn($message[$result],'EVAL');
             }
         }
     }

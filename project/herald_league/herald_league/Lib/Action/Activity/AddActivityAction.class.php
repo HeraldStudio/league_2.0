@@ -33,10 +33,14 @@
             if(getLeagueName()!=false)
             {
                 $activity=D('Activity');
-                $activity->create();
-                $activity->release_time=date("Y-m-d");
-                $activity->activity_org_name=getLeagueName();
-                $activity->add();
+                if($activity->create())
+                {
+                    $activity->release_time=date("Y-m-d");
+                    $activity->activity_org_name=getLeagueName();
+                    $activity->add();
+                }
+                else
+                    $this->error('error');
             }
             else
             {

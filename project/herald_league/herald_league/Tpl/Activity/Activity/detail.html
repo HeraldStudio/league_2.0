@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -60,7 +60,18 @@ function changeAttention(activityid,action)
     }
     xmlhttp.open("GET","{:U('Activity/Activity/changeAttention')}/activityid/"+activityid+"/action/"+action,true);
     xmlhttp.send();
-  }</script>
+  }
+function vote(voteItemId)
+{
+	 $.get("{:U('/Activity/Vote/vote/')}",{itemid:voteItemId},function(data,status){
+		if(status=="success")
+			$("#vote"+voteItemId).html(data);
+		else
+			alert(data);
+	});
+}
+</script>
+
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -187,6 +198,19 @@ a:hover {
 			  </div>
 			  <div id="activity_img"><img width=500px height=300px src="__ROOT__/Uploads/LeaguePost/Large/{$activityInf.activity_post_add|default="default.jpg"}"/>
 			  </div>
+			  <notempty name="isvote">
+			  	<div>
+			  	<volist name="voteResult" id="v">
+			  		<div>{$v.item}:{$v.count}
+			  			<if condition="$v.isvoted eq 1">
+			  				<a>已经投过了</a>
+			  			<else/>
+			  				<a id="vote{$v.id}" onclick="javascript:vote({$v.id})">投他一票</a>
+			  			</if>
+			  		</div>
+			  	</volist>
+			  	</div>
+			  </notempty>
 			  <div id="share">
 			     <div id="share_text">分享至
 				 </div>

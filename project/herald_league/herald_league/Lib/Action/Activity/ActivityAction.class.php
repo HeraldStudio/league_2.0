@@ -52,7 +52,7 @@ class ActivityAction extends Action
                         $voteResult[$n]['isvoted']=1;
                     }
                 }
-                $this->assign('voteresult',$voteResult);
+                $this->assign('voteResult',$voteResult);
             }
             $attender = $activity->getAttender($activityID);
             if($attender==NULL)
