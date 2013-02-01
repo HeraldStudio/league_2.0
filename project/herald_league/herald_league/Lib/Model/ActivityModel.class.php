@@ -79,9 +79,6 @@ class ActivityModel extends Model
         foreach($attentionInf as $n => $u)
         {
             $userInf = $user->find($u['user_id']);
-            // $attender[$n]['id']=$u['user_id'];
-            // $attender[$n]['nick_name'] = $userInf['nick_name'];
-            // $attender[$n]['user_avatar_add'] = $userInf['user_avatar_add'];
             $attender[$n]=$userInf;
         }
         return $attender;

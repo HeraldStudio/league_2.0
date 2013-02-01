@@ -107,10 +107,10 @@ class AttentionModel extends Model
                 {
                     if($this->add($data))
                     {
-                        if($data->isleague==1)//关注社团时增加社团热度
+                        if($data->isleague==1)//关注社团时增加社团热度 todo 测试
                         {
                             $leagueInfo = D('leagueInfo');
-                            if($leagueInfo->where(array('id'=>$data->id))->setInc('heat',1))
+                            if($leagueInfo->getbyID($data['id'])->setInc('heat',1))
                                 return 1;
                             else
                                 return -2;
@@ -132,7 +132,7 @@ class AttentionModel extends Model
                        if($data->isleague==1)//取消关注社团时减小热度
                        {
                             $leagueInfo = D('leagueInfo');
-                            if($leagueInfo->where(array('id'=>$data->id))->setDec('heat',1))
+                            if($leagueInfo->getbyID($data['id'])->setDec('heat',1))
                                 return 2;
                             else
                                 return -4;
