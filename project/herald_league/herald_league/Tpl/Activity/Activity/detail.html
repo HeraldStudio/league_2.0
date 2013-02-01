@@ -42,12 +42,13 @@ function changeAttention(activityid,action)
             {
               $("#attended").show();
               $("#notattended").hide();
-              $("#touxiang").append("<a id=\"touxiang_tmp\"></a>");
-              $("#touxiang_tmp").attr({
+              $("#touxiang").append("<a id=\"touxiang{$uid}\"></a>");
+              $("#touxiang{$uid}").attr({
               	"class":"tx",
               	"href":"#"
               });
-              $("#touxiang_tmp").html("<div id=\"touxiang_img1 \" class=\"touxiang_img\"><img width=\"50px\" height=\"50px\" alt=\"\" src=\"__ROOT__/Uploads/UserAvatar/{$uid}.jpg\" ></div><div id=\"touxiang_text1\" class=\"touxiang_text\">{$userName}</div>");
+              $("#touxiang{$uid}").html("<div id=\"touxiang_img1 \" class=\"touxiang_img\"><img width=\"50px\" height=\"50px\" alt=\"\" src=\"__ROOT__/Uploads/UserAvatar/{$uid}.jpg\" ></div><div id=\"touxiang_text1\" class=\"touxiang_text\">{$userName}</div>");
+              $("#touxiang{$uid}").show();
             }
             else if(xmlhttp.responseText ==2)
             {
@@ -149,14 +150,14 @@ a:hover {
                 <div id="time_img">
 				</div>
 				<div id="time_text">时间:{$activityInf.start_time}---{$activityInf.end_time}
-					<if condition=" $isstart neq 1 ">
+					<empty name="isstart">
 						【未开始】
 					<else/>
-					<if condition="$isend neq 1">
+					<empty name="isend">
 						【进行中】
 					<else/>
 						【已结束】
-					</if></if>
+					</empty></empty>
 				</div>
 				
 				
