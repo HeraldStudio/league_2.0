@@ -113,21 +113,33 @@ class ActivityAction extends Action
         $activityID = intval($this->_param('activityid'));
         $action = $this->_param('action');
         $activity = D('Activity');
+        $message=array(
+                1=>'关注成功',
+                2=>' 取消关注成功',
+               -1=>'已经关注',
+               -2=>'关注失败',
+               -3=>' 还未关注，无法取消',
+               -4=>' 取消关注失败',
+               -5=>' 非法的操作',
+               -6=>'请求的活动不存在',
+               -7=>'请先登录',
+               -8=>'请以个人用户登录',
+            );
         if(!$activity->isexist($activityID))
         {
-            echo -6;
+            $this->error($message[-6]);
         }
         else
         {
             $heraldSession = D('UserSessionControl');
             if( !$heraldSession->islogin())
             {
-                echo -7;
+                $this->error($message[-7]);
             }
             else {
                 if($heraldSession->getUserType() != 1)
                 {
-                    echo -8;
+                    $this->error($message[-8]);
                 }
                 else
                 {
@@ -138,17 +150,14 @@ class ActivityAction extends Action
                     $data['attended_id']=$activityID;
                     $data['isleague'] = 0;
                     $result = $attention->changeAttention($data, $action);
-                    /*$message = array(
-                        1=>'关注成功',
-                        2=>' 取消关注成功',
-                       -1=>'已经关注',
-                       -2=>'关注失败',
-                       -3=>' 还未关注，无法取消',
-                       -4=>' 取消关注失败',
-                       -5=>' 非法的操作',
-                    );*/
-                    echo $result;
-                    
+                    if($result>0)
+                    {
+                        $this->success($message[$result]);
+                    }
+                    else
+                    {
+                        $this->error($message[$result]);
+                    }    
                 }
             }
         }

@@ -13,46 +13,12 @@
 <script type="text/javascript">
 function changeAttention(activityid,action,key)
   {
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-    {
-      xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {
-      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
-    xmlhttp.onreadystatechange=function()
-    {
-      if(xmlhttp.readyState == 4 && xmlhttp.status==200)
-      {
-        var message=new Array();
-            message[ 1]='关注成功'
-            message[ 2]='取消关注成功'
-            message[-1]='已经关注'
-            message[-2]='关注失败'
-            message[-3]='还未关注，无法取消'
-            message[-4]='取消关注失败'
-            message[-5]='非法的操作'
-            message[-6]='请求的活动不存在'
-            message[-7]='请先登录'
-            message[-8]='请以个人用户登录'
-            alert(message[xmlhttp.responseText]);
-            if(xmlhttp.responseText == 1)
-            {
-              document.getElementById("attention"+key+"_isattended").style.display="inline";
-              document.getElementById("attention"+key+"_notattended").style.display="none";
-            }
-            else if(xmlhttp.responseText ==2)
-            {
-              document.getElementById("attention"+key+"_isattended").style.display="none";
-              document.getElementById("attention"+key+"_notattended").style.display="inline";
-            }
-      }
-    }
-    xmlhttp.open("GET","{:U('Activity/Activity/changeAttention')}/activityid/"+activityid+"/action/"+action,true);
-    xmlhttp.send();
+    $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
+      $("#attention"+key+"_isattended").toggle();
+      $("#attention"+key+"_notattended").toggle();
+      if(data.status!=1) //失败了
+        alert(data.info);
+    });
   }
 </script>
 <style type="text/css">
@@ -116,7 +82,7 @@ a:hover {
             <ul>
                 <foreach name="recent" item="r">
                     <li>
-                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
+                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
                     <h1>{$r.activity_name}</h1>
                     </br>
                     <p>
@@ -132,12 +98,12 @@ a:hover {
                     <p>主办方:{$r.activity_org_name}</p>
                     </li>
                 </foreach>
-                          </ul>
+            </ul>
           </div>
           <div class="ws_bullets">
             <div>
               <foreach name="recent" item="r">
-                  <a href="#" title="{$r.activity_name}"><img src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
+                  <a href="#" title="{$r.activity_name}"><img width=96px height=48px src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
                     {$key+1}</a>
               </foreach>
             </div>

@@ -9,20 +9,20 @@ class VoteAction extends Action
     /*
      * 功能：增加投票
      * 输入：itemID
-     * 返回：代码
+     * 返回：ajax时返回一个json，直接访问跳转到success/error页面
      */
     public function Vote()
     {
         $voteItem = D('VoteItem');
-        $itemid = $this->_param('itemid');
+        $itemid = $this->intval(_param('itemid'));
         $heraldSession = D('UserSessionControl');
         if( !$heraldSession->islogin())
         {
-            $this->ajaxReturn('请先登录','EVAL');
+            $this->error('请先登录');
         }
         else if($heraldSession->getUserType() != 1 )
         {
-            $this->ajaxReturn('请以个人用户登录','EVAL');
+            $this->error('请以个人用户登录');
         }
         else
         {
@@ -43,7 +43,7 @@ class VoteAction extends Action
                   -5=>'投票不存在',
                   -6=>'写入数据库错误',
                 );
-                $this->ajaxReturn($message[$result],'EVAL');
+                $this->error($message[$result]);
             }
         }
     }

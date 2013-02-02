@@ -10,56 +10,24 @@
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
-function changeAttention(activityid,action)
+function changeAttention(id,act)
   {
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-  	{
-  		xmlhttp=new XMLHttpRequest();
-  	}
-	else//for ie6
-  	{
-  		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  	}
-
-    xmlhttp.onreadystatechange=function()
-    {
-      if(xmlhttp.readyState == 4 && xmlhttp.status==200)
-      {
-        var message=new Array();
-            message[ 1]='关注成功'
-            message[ 2]='取消关注成功'
-            message[-1]='已经关注'
-            message[-2]='关注失败'
-            message[-3]='还未关注，无法取消'
-            message[-4]='取消关注失败'
-            message[-5]='非法的操作'
-            message[-6]='请求的活动不存在'
-            message[-7]='请先登录'
-            message[-8]='请以个人用户登录'
-            alert(message[xmlhttp.responseText]);
-            if(xmlhttp.responseText == 1)
-            {
-              $("#attended").show();
-              $("#notattended").hide();
-              $("#touxiang").append("<a id=\"touxiang{$uid}\"></a>");
-              $("#touxiang{$uid}").attr({
-              	"class":"tx",
-              	"href":"#"
-              });
-              $("#touxiang{$uid}").html("<div id=\"touxiang_img1 \" class=\"touxiang_img\"><img width=\"50px\" height=\"50px\" alt=\"\" src=\"__ROOT__/Uploads/UserAvatar/{$uid}.jpg\" ></div><div id=\"touxiang_text1\" class=\"touxiang_text\">{$userName}</div>");
-              $("#touxiang{$uid}").show();
-            }
-            else if(xmlhttp.responseText ==2)
-            {
-			   $("#attended").hide();
-               $("#notattended").show();
-               $("#touxiang{$uid}").hide();
-            }
-      }
-    }
-    xmlhttp.open("GET","{:U('Activity/Activity/changeAttention')}/activityid/"+activityid+"/action/"+action,true);
-    xmlhttp.send();
+  $.getJSON("{:U('Activity/Activity/changeAttention')}",{activityid:id,action:act},function(data,status){
+    		
+    			$("#attended").toggle();
+    			$("#notattended").toggle();
+    			$("#touxiang").append("<a id=\"touxiang{$uid}\"></a>");
+    			$("#touxiang{$uid}").attr({
+    				"class":"tx",
+    				"href":"#"
+    			});
+    			$("#touxiang{$uid}").html("<div id=\"touxiang_img1 \" class=\"touxiang_img\"><img width=\"50px\" height=\"50px\" alt=\"\" src=\"__ROOT__/Uploads/UserAvatar/{$uid}.jpg\" ></div><div id=\"touxiang_text1\" class=\"touxiang_text\">{$userName}</div>");
+    			$("#touxiang{$uid}").toggle();
+    			if(data.status !=1) //操作失败了
+    			{
+    				alert(data.info);
+				}    		
+    })
   }
 function vote(voteItemId)
 {
@@ -74,7 +42,7 @@ function vote(voteItemId)
 			{
 				alert(data.info);
 			}		
-	});
+		});
 }
 </script>
 
@@ -136,13 +104,13 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title">{$activityInf.activity_name}</div>
-			  <a href="javascript:void(0)" onclick="javascript:changeAttention({$activityInf.id},'add')" id="notattended" class="attention" <if condition="$isattended eq 1">style="display:none"</if>> 
+			  <a href="javascript:;" onclick="javascript:changeAttention({$activityInf.id},'add')" id="notattended" class="attention" <if condition="$isattended eq 1">style="display:none"</if>> 
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">关注
 			    </div>			  
 			  </a>
-			  <a href="javascript:void(0)" onclick="javascript:changeAttention({$activityInf.id},'del')" class="attention" id="attended" <if condition="$isattended eq 0 ">  style="display:none" </if>>
+			  <a href="javascript:;" onclick="javascript:changeAttention({$activityInf.id},'del')" class="attention" id="attended" <if condition="$isattended eq 0 ">  style="display:none" </if>>
 			    <div id="attention_text">取消关注
 			    </div>			  
 			  </a>
