@@ -31,7 +31,7 @@ class VoteAction extends Action
             //todo deal with result
             if($result==1)
             {
-                $this->ajaxReturn('投票成功','EVAL');
+                $this->success('投票成功');
             }
             else
             {

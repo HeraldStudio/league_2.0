@@ -63,11 +63,17 @@ function changeAttention(activityid,action)
   }
 function vote(voteItemId)
 {
-	 $.get("{:U('/Activity/Vote/vote/')}",{itemid:voteItemId},function(data,status){
-		if(status=="success")
-			$("#vote"+voteItemId).html(data);
-		else
-			alert(data);
+	 $.getJSON("{:U('/Activity/Vote/vote/')}",{itemid:voteItemId},function(data,status){
+			if(data.status==1)//成功
+			{
+				$("#vote"+voteItemId).html(data.info);
+				var old=$("#count"+voteItemId).html();
+				$("#count"+voteItemId).text(parseInt(old)+1);
+			}
+			else
+			{
+				alert(data.info);
+			}		
 	});
 }
 </script>
@@ -201,7 +207,7 @@ a:hover {
 			  <notempty name="isvote">
 			  	<div>
 			  	<volist name="voteResult" id="v">
-			  		<div>{$v.item}:{$v.count}
+			  		<div>{$v.item}:<a id="count{$v.id}">{$v.count}</a>
 			  			<if condition="$v.isvoted eq 1">
 			  				<a>已经投过了</a>
 			  			<else/>
