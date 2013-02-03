@@ -14,10 +14,13 @@
 function changeAttention(activityid,action,key)
   {
     $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
-      $("#attention"+key+"_isattended").toggle();
-      $("#attention"+key+"_notattended").toggle();
       if(data.status!=1) //失败了
         alert(data.info);
+      else
+      {
+        $("#attention"+key+"_isattended").toggle();
+        $("#attention"+key+"_notattended").toggle();
+      }
     });
   }
 </script>
