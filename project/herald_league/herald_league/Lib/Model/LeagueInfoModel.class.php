@@ -139,6 +139,26 @@ class LeagueInfoModel extends Model
     {
         return $this->order('heat desc')->limit($limit)->field('league_name,id')->select();
     }
+    /*
+    *函数功能：社团登录
+    *参数：用户名，密码
+    *返回：true/false
+    *作者：xie
+    */
+    public function login($username,$password)
+    {
+        if($username==null || $password==null)
+        {
+            return false;
+        }
+        else
+        {
+            $conditon['username']=$username;
+            $conditon['password']=md5($password);
+            if($this->where($conditon)->find())
+               return true;
+            return flase;
+        }
+    }
 
 }
-?>

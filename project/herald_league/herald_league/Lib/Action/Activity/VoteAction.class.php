@@ -28,7 +28,6 @@ class VoteAction extends Action
         {
             $uid = $heraldSession->getUserID();
             $result=$voteItem->voteIt(intval($itemid),$uid);
-            //todo deal with result
             if($result==1)
             {
                 $this->success('投票成功');

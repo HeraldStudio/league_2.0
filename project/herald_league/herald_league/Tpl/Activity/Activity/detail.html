@@ -39,6 +39,7 @@ function changeAttention(id,act)
         }
     });
   }
+<notempty name="isvote">
 function vote(voteItemId)
 {
      $.getJSON("{:U('/Activity/Vote/vote/')}",{itemid:voteItemId},function(data,status){
@@ -54,6 +55,7 @@ function vote(voteItemId)
             }        
         });
 }
+</notempty>
 </script>
 
 <style type="text/css">
