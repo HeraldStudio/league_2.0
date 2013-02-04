@@ -42,21 +42,24 @@ a:hover {
   <div id="main">
     <div id="header">
       <div id="header_top">
-        <div id="header_top_text">
-            <if condition="$islogin eq 0">
-                <a href="#" id="login">登录</a>
-                </div>
-                <div id="tubiao">
-            <else/>
-                <a href="#" id="login">{$name}</a>
-                <a href="{:U('Public/Logout/')}" id="login" >退出</a>
-                </div>
-                <div id="tubiao">
-                  <a href="#" id="xinxi"></a>
-                  
-            </if>
-        <a href="#" id="shouye"></a>
-        </div>
+          <div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
+              <div id="header_top_text">
+                <a href="{:U('/Public/Logout/')}" id="header_top_text">退出</a>
+                <a href="#" id="header_top_text">{$name}</a>
+              </div>
+              <div id="tubiao">
+                <a href="#" id="xinxi"></a>
+                <a href="#" id="shouye"></a>
+              </div>
+          </div>
+          <div id="notlogin" <if condition="$islogin eq 1"> style="display:none"</if> >
+              <div id="header_top_text">
+                <a href="{:U('/League/Login/LoginTest')}" id="login">登录</a>
+              </div>
+              <div id="tubiao">
+                <a href="#" id="shouye"></a>
+              </div>
+          </div>   
       </div>
       <div id="header_bottom">
         <div id="logo">
@@ -84,7 +87,7 @@ a:hover {
             <ul>
                 <foreach name="recent" item="r">
                     <li>
-                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
+                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
                     <h1>{$r.activity_name}</h1>
                     </br>
                     <p>
@@ -94,8 +97,7 @@ a:hover {
                             进行中
                         </if>
                     </p>
-                    <p>开始时间:{$r.start_time}</p>
-                    <p>结束时间:{$r.end_time}<p>
+                    <p>时间:{$r.start_time}---{$r.end_time}</p>
                     <p>地点：{$r.activity_place|default=""}</p>
                     <p>联系方式:{$r.contact_info}</p>
                     <p>主办方:{$r.activity_org_name}</p>
@@ -119,7 +121,7 @@ a:hover {
           <ul class="list">
             <volist name="activities" id="a">
             <li>
-              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
+              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img width=190px src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
               <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
               
                 <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>

@@ -21,7 +21,7 @@
             $this->error($result);
         }
     }
-    public function loginTest()
+    public function LoginTest()
     {
         $this->display();
     }

@@ -18,4 +18,4 @@ function ws_fly(c,a,b){var d=jQuery;var f={position:"absolute",left:0,top:0,widt
 // Obfuscated by Javascript Obfuscator
 // http://javascript-source.com
 //***********************************************
-jQuery("#wowslider-container1").wowSlider({effect:"fly",prev:"",next:"",duration:20*100,delay:20*100,width:600,height:300,autoPlay:true,stopOnHover:true,loop:false,bullets:true,caption:true,captionEffect:"slide",controls:true,logo:"engine1/loading.gif",onBeforeStep:0,images:[{src:"./1_43.jpg",title:"1 (43)"},{src:"./3.jpg",title:"3"},{src:"./h_15.jpg",title:"h (15)"},{src:"./jingxuan036.jpg",title:"Jingxuan036"},{src:"./02.jpg",title:"截图02"},{src:"./10.jpg",title:"截图10"}]});
+jQuery("#wowslider-container1").wowSlider({effect:"fly",prev:"",next:"",duration:20*100,delay:20*100,width:600,height:300,autoPlay:true,stopOnHover:true,loop:false,bullets:true,caption:true,captionEffect:"slide",controls:true,onBeforeStep:0,images:[{src:"./1_43.jpg",title:"1 (43)"},{src:"./3.jpg",title:"3"},{src:"./h_15.jpg",title:"h (15)"},{src:"./jingxuan036.jpg",title:"Jingxuan036"},{src:"./02.jpg",title:"截图02"},{src:"./10.jpg",title:"截图10"}]});
