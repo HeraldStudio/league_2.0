@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
@@ -7,9 +7,8 @@
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
-
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
 function changeAttention(activityid,action,key)
   {
@@ -22,7 +21,7 @@ function changeAttention(activityid,action,key)
         $("#attention"+key+"_notattended").toggle();
       }
     });
-  }
+  };
 </script>
 <style type="text/css">
 a:link {
@@ -44,13 +43,13 @@ a:hover {
     <div id="header">
       <div id="header_top">
         <div id="header_top_text">
-          <div id="loginBox" style="display:none"><a >111</a></div>
             <if condition="$islogin eq 0">
                 <a href="#" id="login">登录</a>
                 </div>
                 <div id="tubiao">
             <else/>
-                <a href="#" id="login">欢迎你{$name}</a>
+                <a href="#" id="login">{$name}</a>
+                <a href="{:U('Public/Logout/')}" id="login" >退出</a>
                 </div>
                 <div id="tubiao">
                   <a href="#" id="xinxi"></a>
@@ -97,6 +96,7 @@ a:hover {
                     </p>
                     <p>开始时间:{$r.start_time}</p>
                     <p>结束时间:{$r.end_time}<p>
+                    <p>地点：{$r.activity_place|default=""}</p>
                     <p>联系方式:{$r.contact_info}</p>
                     <p>主办方:{$r.activity_org_name}</p>
                     </li>
@@ -269,8 +269,8 @@ a:hover {
    };
    toTop.goto("toTop");
    </script>
-<script type="text/javascript" src="__ROOT__/Public/Js/wowslider.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/Js/script.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/engine1/wowslider.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/engine1/script.js"></script>
 <script type="text/javascript">
             $(document).ready(function(){
                 //To switch directions up/down and left/right just place a "-" in front of the top/left attribute

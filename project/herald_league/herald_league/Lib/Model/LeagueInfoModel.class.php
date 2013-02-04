@@ -142,22 +142,25 @@ class LeagueInfoModel extends Model
     /*
     *函数功能：社团登录
     *参数：用户名，密码
-    *返回：true/false
+    *返回：成功返回社团的信息，失败返回null,
     *作者：xie
     */
     public function login($username,$password)
     {
         if($username==null || $password==null)
         {
-            return false;
+            return null;
         }
         else
         {
             $conditon['username']=$username;
             $conditon['password']=md5($password);
-            if($this->where($conditon)->find())
-               return true;
-            return flase;
+            $result=$this->where($conditon)->find();
+            if($result!=null && $result!=error)
+            {
+                return $result;
+            }
+            return null;
         }
     }
 

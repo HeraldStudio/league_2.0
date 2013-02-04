@@ -14,7 +14,7 @@ class VoteAction extends Action
     public function Vote()
     {
         $voteItem = D('VoteItem');
-        $itemid = $this->intval(_param('itemid'));
+        $itemid = intval($this->_param('itemid'));
         $heraldSession = D('UserSessionControl');
         if( !$heraldSession->islogin())
         {

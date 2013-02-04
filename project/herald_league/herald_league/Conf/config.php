@@ -46,5 +46,9 @@ return array(
     'TOKEN_RESET'=>true,  //令牌验证出错后是否重置令牌 默认为true
 
     'SHOW_PAGE_TRACE' =>true,//开启trace
+
+    'SESSION_OPTIONS'=>array( //session的设置
+    'expire'=>1200, //session.gc_maxlifetime
+    ),
 );
 ?>
