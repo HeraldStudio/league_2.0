@@ -62,7 +62,7 @@ function getCommenterInfo ( $commentingArgument )
 	
 */
 
-function htmlencode($str)
+function htmlencode(&$str)
 {
 	if(empty($str))
 		return;
@@ -112,7 +112,7 @@ function htmlencode($str)
 	
 */
 
-function htmldecode($str)
+function htmldecode(&$str)
 {
 	if(empty($str)) 
 		return ;

@@ -12,14 +12,14 @@
 */
     class AddActivityAction extends Action
     {
-        private function getLeagueName()
+        private function getLeagueInfo()
         {
-            
-            return true;//todo 社团登录才能继续，测试时先忽略
+            $lg = array('id' => 1, 'name'=>'东南大学先声网');
+            return $lg;//todo 社团登录才能继续，测试时先忽略
         }
-        public function add()
+        public function Add()
         {
-            if(getLeagueName()!=false)
+            if($this->getLeagueInfo()!=false)
             {
                 $this->display();
             }
@@ -28,19 +28,22 @@
                 $this->error('请先登录');
             }
         }
-        public function deal() //最终处理
+        public function Deal() //最终处理
         {
-            if(getLeagueName()!=false)
+            if($this->getLeagueInfo()!=false)
             {
                 $activity=D('Activity');
-                if($activity->create())
+                if($activity->create($this->_param()))
                 {
-                    $activity->release_time=date("Y-m-d");
-                    $activity->activity_org_name=getLeagueName();
+                    $lg=$this->getLeagueInfo();
+                    $activity->activity_release_time=date("Y-m-d");
+                    $activity->league_id=$lg['id'];
+                    $activity->activity_org_name=$lg['name'];
                     $activity->add();
+                    $this->success('');
                 }
                 else
-                    $this->error('error');
+                    $this->error('添加失败，请检查数据');
             }
             else
             {

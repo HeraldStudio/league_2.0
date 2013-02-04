@@ -1,6 +1,7 @@
 <?php
     class ActivityClassModel extends Model
     {
+        
         /*
          * 作者:xie
          * 日期：2013.1.29

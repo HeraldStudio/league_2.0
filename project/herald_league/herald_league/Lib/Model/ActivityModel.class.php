@@ -14,12 +14,35 @@
 class ActivityModel extends Model
 {
 	// 定义自动验证
-    protected $_validate = array(
-        //array('content','require','内容必须'),
+    protected $_validate = array(//todo 自动验证的信息好像没用
+        array('activity_name','require','活动名称必须填写'),
+        array('activity_introduce','require','活动简介必须填写'),
+        array('start_time','checkStartTime','开始时间无效','function'),
+        array('end_time','checkEndTime','结束时间无效','function'),
+        array('isvote',array(0,1),'请选择是否为投票',2,'in'),
+        array('activity_place','require','活动地点必须填写'),
         );
+    protected function checkStartTime($time) //判断开始时间是否早于今天
+    {
+        if(date('Y-m-d',strtotime($time)) < date("Y-m-d"))
+            return flase;
+        return true;
+    }
+    protected function checkEndTime($time)//判断结束时间是否不小于开始时间
+    {
+        if(date('Y-m-d',strtotime($time))<date('Y-m-d',strtotime($this->data['start_time'])))
+            return false;
+        return true;
+    }
     // 定义自动完成
     protected $_auto = array(
-       // array('content','htmlencode',3,'function'),
+        array('league_id',1,'intval'),
+        array('activity_name','htmlencode',1,'function'),
+        array('activity_introduce','htmlencode',1,'function'),
+        array('start_time','htmlencode',1,'function'),
+        array('end_time','htmlencode',1,'function'),
+        array('activity_org_name','htmlencode',1,'function'),
+        array('activity_place','htmlencode',1,'function'),
         );
 
     /*
