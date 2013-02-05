@@ -33,7 +33,7 @@
             if($this->getLeagueInfo()!=false)
             {
                 $activity=D('Activity');
-                if($activity->create($this->_param()))
+                if($activity->create())
                 {
                     $lg=$this->getLeagueInfo();
                     $activity->activity_release_time=date("Y-m-d");
@@ -43,7 +43,7 @@
                     $this->success('');
                 }
                 else
-                    $this->error('添加失败，请检查数据');
+                    $this->error($activity->getError());
             }
             else
             {

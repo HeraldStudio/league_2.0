@@ -736,6 +736,7 @@ class Model {
         }elseif(is_object($data)){
             $data   =   get_object_vars($data);
         }
+        $this->data=$data;//xie 2013.2.5修改，便于自动验证时候处理数据
         // 验证数据
         if(empty($data) || !is_array($data)) {
             $this->error = L('_DATA_TYPE_INVALID_');

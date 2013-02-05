@@ -17,22 +17,27 @@ class ActivityModel extends Model
     protected $_validate = array(//todo 自动验证的信息好像没用
         array('activity_name','require','活动名称必须填写'),
         array('activity_introduce','require','活动简介必须填写'),
-        array('start_time','checkStartTime','开始时间无效','function'),
-        array('end_time','checkEndTime','结束时间无效','function'),
-        array('isvote',array(0,1),'请选择是否为投票',2,'in'),
+        array('start_time','checkStartTime','开始时间无效',1,'callback',1),
+        array('end_time','checkEndTime','结束时间无效',1,'callback',1),
+        array('is_vote',array(0,1),'请选择是否为投票',2,'in'),
         array('activity_place','require','活动地点必须填写'),
         );
     protected function checkStartTime($time) //判断开始时间是否早于今天
     {
-        if(date('Y-m-d',strtotime($time)) < date("Y-m-d"))
-            return flase;
-        return true;
+        import('ORG.Util.Date');
+        $today = new Date(date('Y-m-d'));
+        trace('d',$today->dateDiff($time));
+        if($today->dateDiff($time) > 0)
+            return true;
+        return false;
     }
     protected function checkEndTime($time)//判断结束时间是否不小于开始时间
     {
-        if(date('Y-m-d',strtotime($time))<date('Y-m-d',strtotime($this->data['start_time'])))
-            return false;
-        return true;
+        import('ORG.Util.Date');
+        $start_time= new Date($this->data['start_time']);
+        if($start_time->dateDiff($time)>0)
+            return true;
+        return false;
     }
     // 定义自动完成
     protected $_auto = array(
