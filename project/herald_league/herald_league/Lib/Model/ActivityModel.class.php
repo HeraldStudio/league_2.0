@@ -14,7 +14,8 @@
 class ActivityModel extends Model
 {
 	// 定义自动验证
-    protected $_validate = array(//todo 自动验证的信息好像没用
+    protected $_validate = array(
+        array('verfyCode','checkVerfyCode','验证码错误',1,'callback'),
         array('activity_name','require','活动名称必须填写'),
         array('activity_introduce','require','活动简介必须填写'),
         array('start_time','checkStartTime','开始时间无效',1,'callback',1),
@@ -39,6 +40,14 @@ class ActivityModel extends Model
             return true;
         return false;
     }
+    protected function checkVerfyCode($code)
+    {
+        trace('ver',$_SESSION['verfy']);
+        trace('code',md5(strtolower($code)));
+        if($_SESSION['verfy']==md5(strtolower($code)))
+            return true;
+        return false;
+    }
     // 定义自动完成
     protected $_auto = array(
         array('league_id',1,'intval'),
@@ -48,6 +57,7 @@ class ActivityModel extends Model
         array('end_time','htmlencode',1,'function'),
         array('activity_org_name','htmlencode',1,'function'),
         array('activity_place','htmlencode',1,'function'),
+        array('contact_info','htmlencode',1,'function'),
         );
 
     /*
