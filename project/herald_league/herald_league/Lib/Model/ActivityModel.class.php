@@ -132,14 +132,14 @@ class ActivityModel extends Model
          */
         $class_activity = M('class_activity');
         $activity_class = M('activity_class');
-        $classInf = $class_activity->where(array('activity_id'=>$activityID))->select();
+        $classInf = $class_activity->field('class_id')->where(array('activity_id'=>$activityID))->select();
         if($classInf == null  || $classInf ==false)
         {
             return null;
         }
         foreach ($classInf as $n=>$c)
         {
-            $tag = $activity_class->find($c['class_id']);
+            $tag = $activity_class->field('class_name')->find($c['class_id']);
             $activity[$n]=$tag['class_name'];
         }
         return $activity;

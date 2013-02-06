@@ -10,6 +10,10 @@ class VoteModel extends Model
     {
         $voteItem = D('VoteItem');
         $voteItemInf = $voteItem->getVoteItem($voteid);
+        if(!is_array($voteItemInf))
+        {
+            return null;
+        }
         $voteResult = M('vote_result');
         foreach($voteItemInf as $n=>$v)
         {

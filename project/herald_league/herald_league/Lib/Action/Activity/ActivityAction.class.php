@@ -41,17 +41,21 @@ class ActivityAction extends Action
                 $vote = D('Vote');
                 $VoteResult = D('VoteResult');
                 $voteResult = $vote->getVoteResult($activityID);
-                foreach($voteResult as $n=>$v)
+                if(is_array($voteResult))
                 {
-                    if($uid==null || !$VoteResult -> isvoted($uid,$v['id']) )
+                    foreach($voteResult as $n=>$v)
                     {
-                        $voteResult[$n]['isvoted']=0;
-                    }
-                    else
-                    {
-                        $voteResult[$n]['isvoted']=1;
+                        if($uid==null || !$VoteResult -> isvoted($uid,$v['id']) )
+                        {
+                            $voteResult[$n]['isvoted']=0;
+                        }
+                        else
+                        {
+                            $voteResult[$n]['isvoted']=1;
+                        }
                     }
                 }
+
                 $this->assign('voteResult',$voteResult);
             }
             $attender = $activity->getAttender($activityID);

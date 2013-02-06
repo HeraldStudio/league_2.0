@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 * {
-   margin: 0px;
-   padding: 0px;
+   margin: 0;
+   padding: 0;
    font-size:14px;
   }
 body 
@@ -78,6 +78,7 @@ a{
 #shuoming{
     padding-top:35px;
 	float:left;
+    width:520px;
 	}
 #biaoqian{
     float:left;
@@ -95,12 +96,12 @@ a{
 	}
 #redu{
     color:#999;
-	float:left;
-	padding-left:120px;
+	float:right;
+	padding-right:5px;
 	}
 #pinglun{
-   float:left;
-   padding-left:165px;
+   float:right;
+   padding-right:76px;
    }
 #pinglun:link{
    color:#999;

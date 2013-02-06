@@ -10,7 +10,7 @@
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
-$(document).ready(function(){
+
   function changeAttention(activityid,action,key)
   {
     $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
@@ -23,7 +23,7 @@ $(document).ready(function(){
       }
     });
   };
-});
+
 </script>
 <style type="text/css">
 a:link {
