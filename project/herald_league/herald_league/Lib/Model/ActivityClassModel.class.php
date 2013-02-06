@@ -13,4 +13,35 @@
         {
             return $this->order('heat desc')->limit($limit)->field('class_name,id')->select();
         }
+
+        /**在标签表里面增加标签，自动去掉重复
+         * @param $className
+         * @return classid,
+         *          -1 if failed
+         * @version 2013.2.6
+         * @author xie
+         */
+        public function addClass($className)
+        {
+            $classInf=$this->getFieldByClassName($className,'id');
+            if($classInf !=null && $classInf!= false)
+            {
+                return $classInf;
+            }
+            else
+            {
+                $data=array(
+                    'class_name'=>$className,
+                );
+                if($this->create($data))
+                {
+                    $this->add();
+                    return $this->getFieldByClassName($className,'id');
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+        }
     }

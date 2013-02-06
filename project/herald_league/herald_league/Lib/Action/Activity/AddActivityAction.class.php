@@ -3,7 +3,7 @@
 
 *名称：活动添加页
 
-*功能: 添加活动，分三步
+*功能: 添加活动
 
 *作者：xie
 
@@ -39,8 +39,19 @@
                     $activity->activity_release_time=date("Y-m-d");
                     $activity->league_id=$lg['id'];
                     $activity->activity_org_name=$lg['name'];
-                    $activity->add();
-                    $this->success('');
+                    $activityID=$activity->add();
+                    if($activityID!=false)
+                    {
+                        $class=htmlencode($_POST['class']);
+                        $classActivity=D('ClassActivity');
+                        $newClass = explode(',',$class);
+                        foreach($newClass as $v)
+                        {
+                            $classActivity->addClass($activityID,$v);
+                        }
+                        $this->success('');
+                    }
+
                 }
                 else
                     $this->error($activity->getError());

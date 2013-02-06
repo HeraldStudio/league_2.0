@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,7 +10,8 @@
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
-function changeAttention(activityid,action,key)
+$(document).ready(function(){
+  function changeAttention(activityid,action,key)
   {
     $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
       if(data.status!=1) //失败了
@@ -22,6 +23,7 @@ function changeAttention(activityid,action,key)
       }
     });
   };
+});
 </script>
 <style type="text/css">
 a:link {

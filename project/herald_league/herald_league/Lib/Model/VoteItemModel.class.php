@@ -50,7 +50,7 @@ class VoteItemModel extends Model
         else
         {
             $voteID = $this->where(array('id'=>$VoteItemID))->field('vote_id')->find();
-            $voteID = $voteID['vote_id'];trace('vid',$voteID);//从数组里取出
+            $voteID = $voteID['vote_id'];
             $vote = D('Vote');
             $limit = $vote->where(array('id'=>$voteID))->field('available_num')->find();
             $limit = $limit['available_num'];//从数组里取出

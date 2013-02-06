@@ -14,13 +14,13 @@
             $type       =  'png';     //验证码的图片类型，默认为png
             $width      =  50;        //验证码的宽度，默认会自动根据验证码长度自动计算
             $height     =  22;        //  验证码的高度，默认为22
-            $verifyName =  'verfy';   //验证码的SESSION记录名称，默认为verify
+            $verifyName =  'verify';   //验证码的SESSION记录名称，默认为verify
             Image::buildImageVerify($length,$mode,$type,$width,$height,$verifyName);
         }
         public function Check()//验证，用于ajax
         {
             $code=strtolower($this->_param('code'));
-            if($_SESSION['verfy']==md5($code))
+            if($_SESSION['verify']==md5($code))
                 $this->success('');
             else
                 $this->error('');
