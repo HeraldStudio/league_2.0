@@ -18,7 +18,7 @@ class LeagueInfoModel extends Model
         );
     // 定义自动完成
     protected $_auto = array(
-       // array('content','htmlencode',3,'function'),
+        //array('username','htmlencode',3,'function'),
         );
 
     /*
@@ -153,10 +153,10 @@ class LeagueInfoModel extends Model
         }
         else
         {
-            $conditon['username']=$username;
-            $conditon['password']=md5($password);
-            $result=$this->where($conditon)->find();
-            if($result!=null && $result!=error)
+            $condition['username']=htmlencode($username);
+            $condition['password']=md5($password);
+            $result=$this->where($condition)->find();
+            if($result!=null && $result!=false)
             {
                 return $result;
             }
