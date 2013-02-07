@@ -14,19 +14,20 @@
             return $this->order('heat desc')->limit($limit)->field('class_name,id')->select();
         }
 
-        /**在标签表里面增加标签，自动去掉重复
+        /**在标签表里面增加标签，自动去掉重复,重复的增加热度
          * @param $className
-         * @return classid,
+         * @return classID,
          *          -1 if failed
          * @version 2013.2.6
          * @author xie
          */
         public function addClass($className)
         {
-            $classInf=$this->getFieldByClassName($className,'id');
-            if($classInf !=null && $classInf!= false)
+            $classID=$this->getFieldByClassName($className,'id');
+            if($classID !=null )
             {
-                return $classInf;
+                $this->where(array('id'=>$classID))->setInc('heat',1);
+                return $classID;
             }
             else
             {
