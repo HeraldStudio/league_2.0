@@ -48,17 +48,18 @@ class IndexAction extends Action {
         $this->assign('heatActivity',$heatActivity);
         /*主体部分的活动*/
         $activities = $activity->getActivitybyLimit();//默认选取10个
-        foreach ($activities as $n => $a) {
+        foreach ($activities as $n => $a)
+        {
             if($uid==0)
                 $activities[$n]['isattended'] =0; //没登录，自然没关注
             else
             {
-                $codition = array(
+                $condition = array(
                     'user_id'=>$uid,
                     'attended_id'=>$activities[$n]['id'],
                     'isleague'=>0,
                 );
-                if($attention->getAttentionState($codition))
+                if($attention->getAttentionState($condition))
                 {
                     $activities[$n]['isattended'] = 1;//已经关注了
                 }
