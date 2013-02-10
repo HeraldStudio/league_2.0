@@ -25,6 +25,8 @@ class ActivityModel extends Model
         );
     protected function checkStartTime($time) //判断开始时间是否早于今天
     {
+        if(preg_match('/^[2][0]\d{2}-[0-1]\d-[0-3]\d$/',$time)==0)//日期格式20xx-xx-xx
+            return false;
         import('ORG.Util.Date');
         $today = new Date(date('Y-m-d'));
         if($today->dateDiff($time) > 0)
@@ -33,6 +35,8 @@ class ActivityModel extends Model
     }
     protected function checkEndTime($time)//判断结束时间是否不小于开始时间
     {
+        if(preg_match('/^[2][0]\d{2}-[0-1]\d-[0-3]\d$/',$time)==0)//日期格式20xx-xx-xx
+            return false;
         import('ORG.Util.Date');
         $start_time= new Date($this->start_time);
         if($start_time->dateDiff($time)>0)
