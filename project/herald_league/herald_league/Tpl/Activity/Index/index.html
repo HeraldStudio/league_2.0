@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,6 +24,39 @@
     });
   };
 
+</script>
+<script type="text/javascript">
+    $.fn.wait = function(time, type) {
+        time = time || 1000;
+        type = type || "fx";
+        return this.queue(type, function() {
+            var self = this;
+            setTimeout(function() {
+                $(self).dequeue();
+            }, time);
+        });
+    };
+    function getMore()
+    {
+        if(typeof getMore.count == 'undefined')
+            getMore.count=10;
+        getMore.uid = {$uid};
+        getMore.count+=10;
+        $.getJSON("{:U('/Activity/Index/GetMore/')}",{"count":getMore.count,"uid":getMore.uid},function(data){
+            if(data == "")
+            {
+                $("#btn_all").text("没有更多了").wait().slideUp(1000);
+            }
+            else
+            {
+                $.each(data,function(key,val){
+                    $("#list").append(val);
+                })
+                $("#list").masonry('reload');
+            }
+
+        })
+    }
 </script>
 <style type="text/css">
 a:link {
@@ -120,7 +153,7 @@ a:hover {
       </div>
       <div id="main_body_bottom">
         <div id="main_body_bottom_left">
-          <ul class="list">
+          <ul class="list" id="list">
             <volist name="activities" id="a">
             <li>
               <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img width=190px src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
@@ -142,7 +175,7 @@ a:hover {
             </volist>          
           </ul>
           <div id="all">
-            <a href="#" id="btn_all">点击查看全部</a>
+            <a href="javascript:;" id="btn_all" onclick="javascript:getMore()">点击查看更多</a>
           </div>
         </div>
         <div id="main_body_bottom_right">

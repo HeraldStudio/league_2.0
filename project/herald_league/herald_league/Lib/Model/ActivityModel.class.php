@@ -194,8 +194,28 @@ class ActivityModel extends Model
      * 作者：xie
      * 日期：2013.1.29
      */
-    public function getActivitybyLimit($limit=10)
+    public function getActivityByLimit($limit=10)
     {
         return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
+    }
+
+
+    /**获取更多
+     * @param $n 最大值
+     */
+    public function getMore($n)
+    {
+        $temp=$this->getActivityByLimit($n);
+        if($temp == null || $temp==false)
+            return null;
+        $num = count($temp);
+        for($i=$n-10;$i<$n;$i++)
+        {
+            if (isset($temp[$i]))
+            {
+                $result[$i] =$temp[$i];
+            }
+        }
+        return $result;
     }
 }
