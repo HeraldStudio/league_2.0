@@ -7,7 +7,7 @@
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
-<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
 <script type="text/javascript">
 
@@ -26,16 +26,6 @@
 
 </script>
 <script type="text/javascript">
-    $.fn.wait = function(time, type) {
-        time = time || 1000;
-        type = type || "fx";
-        return this.queue(type, function() {
-            var self = this;
-            setTimeout(function() {
-                $(self).dequeue();
-            }, time);
-        });
-    };
     function getMore()
     {
         if(typeof getMore.count == 'undefined')
@@ -43,14 +33,17 @@
         getMore.uid = {$uid};
         getMore.count+=10;
         $.getJSON("{:U('/Activity/Index/GetMore/')}",{"count":getMore.count,"uid":getMore.uid},function(data){
-            if (data != "") {
+            if (data == "") {
+                $("#btn_all").text("没有更多了");
+                if(typeof getMore.nomore =="undefined")
+                    getMore.nomore = 1;
+                else
+                    $("#btn_all").fadeOut(1000);
+            } else {
                 $.each(data, function (key, val) {
-                    var $boxes = $(val);
-                    $("#list").append($boxes)
+                    $("#list").append(val)
                 })
                 $("#list").masonry('reload');
-            } else {
-                $("#btn_all").text("没有更多了").wait(1000).slideUp(1000);
             }
 
         })
