@@ -43,16 +43,14 @@
         getMore.uid = {$uid};
         getMore.count+=10;
         $.getJSON("{:U('/Activity/Index/GetMore/')}",{"count":getMore.count,"uid":getMore.uid},function(data){
-            if(data == "")
-            {
-                $("#btn_all").text("没有更多了").wait().slideUp(1000);
-            }
-            else
-            {
-                $.each(data,function(key,val){
-                    $("#list").append(val);
+            if (data != "") {
+                $.each(data, function (key, val) {
+                    var $boxes = $(val);
+                    $("#list").append($boxes)
                 })
                 $("#list").masonry('reload');
+            } else {
+                $("#btn_all").text("没有更多了").wait(1000).slideUp(1000);
             }
 
         })
