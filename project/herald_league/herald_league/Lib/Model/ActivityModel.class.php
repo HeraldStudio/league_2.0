@@ -1,3 +1,4 @@
+
 <?php
 /*
 
@@ -14,11 +15,51 @@ class ActivityModel extends Model
 {
 	// 定义自动验证
     protected $_validate = array(
-        //array('content','require','内容必须'),
+        array('verifyCode','checkVerifyCode','验证码错误',1,'callback'),
+        array('activity_name','require','活动名称必须填写'),
+        array('activity_introduce','require','活动简介必须填写'),
+        array('start_time','checkStartTime','开始时间无效',1,'callback',1),
+        array('end_time','checkEndTime','结束时间无效',1,'callback',1),
+        array('is_vote',array(0,1),'请选择是否为投票',2,'in'),
+        array('activity_place','require','活动地点必须填写'),
         );
+    protected function checkStartTime($time) //判断开始时间是否早于今天
+    {
+        if(preg_match('/^[2][0]\d{2}-[0-1]\d-[0-3]\d$/',$time)==0)//日期格式20xx-xx-xx
+            return false;
+        import('ORG.Util.Date');
+        $today = new Date(date('Y-m-d'));
+        if($today->dateDiff($time) > 0)
+            return true;
+        return false;
+    }
+    protected function checkEndTime($time)//判断结束时间是否不小于开始时间
+    {
+        if(preg_match('/^[2][0]\d{2}-[0-1]\d-[0-3]\d$/',$time)==0)//日期格式20xx-xx-xx
+            return false;
+        import('ORG.Util.Date');
+        $start_time= new Date($this->start_time);
+        if($start_time->dateDiff($time)>0)
+            return true;
+        return false;
+    }
+    protected function checkVerifyCode($code)
+    {
+        if($_SESSION['verify']==md5(strtolower($code)))
+            return true;
+        return false;
+    }
     // 定义自动完成
     protected $_auto = array(
-       // array('content','htmlencode',3,'function'),
+        array('league_id',1,'intval'),
+        array('activity_name','htmlencode',1,'function'),
+        array('activity_introduce','htmlencode',1,'function'),
+        array('start_time','htmlencode',1,'function'),
+        array('end_time','htmlencode',1,'function'),
+        array('activity_org_name','htmlencode',1,'function'),
+        array('activity_place','htmlencode',1,'function'),
+        array('contact_info','htmlencode',1,'function'),
+        array('class','htmlencode',1,'function'),
         );
 
     /*
@@ -35,9 +76,9 @@ class ActivityModel extends Model
 	
 	*/
 
-    public function getActivityInfoByLeague ( $leagueid, $limitnum = null )
+    public function getActivityInfoByLeague ( $leagueid )
     {
-    	$activity = $this ->order('activity_release_time') -> limit($limitnum) -> where( 'league_id ='.$leagueid ) -> select();
+    	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
     /*
@@ -55,7 +96,7 @@ class ActivityModel extends Model
     */
     public function getActivityInfoById( $activityid )
     {
-        $activity = $this -> where( 'id ='.$activityid ) -> find();
+        $activity = $this -> where( 'id ='.$activityid ) -> select();
         return $activity;
     }
 
@@ -72,16 +113,14 @@ class ActivityModel extends Model
         $attention = M('attention');
         $attentionInf = $attention ->where(array('attended_id'=>$activityID,'isleague'=>0))->select();
         if($attentionInf == false || $attentionInf == null)//查询失败
-        {//var_dump($attentionInf);
+        {
             return null;
         }
         $user = M('user');
         foreach($attentionInf as $n => $u)
         {
             $userInf = $user->find($u['user_id']);
-            $attender[$n]['id']=$u['user_id'];
-            $attender[$n]['nick_name'] = $userInf['nick_name'];
-            $attender[$n]['user_avatar_add'] = $userInf['user_avatar_add'];
+            $attender[$n]=$userInf;
         }
         return $attender;
     }
@@ -97,14 +136,14 @@ class ActivityModel extends Model
          */
         $class_activity = M('class_activity');
         $activity_class = M('activity_class');
-        $classInf = $class_activity->where(array('activity_id'=>$activityID))->select();
+        $classInf = $class_activity->field('class_id')->where(array('activity_id'=>$activityID))->select();
         if($classInf == null  || $classInf ==false)
         {
             return null;
         }
         foreach ($classInf as $n=>$c)
         {
-            $tag = $activity_class->find($c['class_id']);
+            $tag = $activity_class->field('class_name')->find($c['class_id']);
             $activity[$n]=$tag['class_name'];
         }
         return $activity;
@@ -155,19 +194,28 @@ class ActivityModel extends Model
      * 作者：xie
      * 日期：2013.1.29
      */
-    public function getActivitybyLimit($limit=10)
+    public function getActivityByLimit($limit=10)
     {
         return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
     }
-    public function getActivityState( $activityid )
+
+
+    /**获取更多
+     * @param $n 最大值
+     */
+    public function getMore($n)
     {
-        $activityinfo = $this -> getActivityInfoById( $activityid );
-        /*判断活动状态*/
-        if( strtotime($activityinfo['start_time']) > time() )
-            return '未开始';
-        elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time()) 
-            return '正在进行';
-        else
-            return '已结束';
+        $temp=$this->getActivityByLimit($n);
+        if($temp == null || $temp==false)
+            return null;
+        $num = count($temp);
+        for($i=$n-10;$i<$n;$i++)
+        {
+            if (isset($temp[$i]))
+            {
+                $result[$i] =$temp[$i];
+            }
+        }
+        return $result;
     }
 }

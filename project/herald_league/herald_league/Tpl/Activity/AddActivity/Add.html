@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){  
+  $("#verify").keyup(function(){
+     $.getJSON("{:U('Public/VerifyCode/Check')}",{"code":$("#verify").val()},function(data,status){
+        if(data.status==1)
+            $("#verify").css("background-color","#00FF00");
+        else
+            $("#verify").css("background-color","#FF0000");
+    });
+  });
+ $("#vimg").click(function(){
+     var time=new Date().getTime();
+     $(this).attr("src","{:U('/Public/VerifyCode/Generate/')}"+"/"+time);
+     if($("#verify").val()!="")
+        $("#verify").css("background-color","#FF0000");
+    });
+ });
+</script>
+</head>
+<body>
+<form action = "{:U('/Activity/AddActivity/Deal')}" method="POST">
+    <input type="text" name="activity_name">活动名称 </input><br>
+    <input type="text" name="start_time">开始时间 </input><br>
+    <input type="text" name="end_time">结束时间 </input><br>
+    <input type="text" name="activity_introduce">活动介绍 </input><br>
+    <input type="text" name="activity_post_add">海报地址 </input><br>
+    <input type="text" name="contact_info">联系方式 </input><br>
+    <input type="text" name="is_vote">是否投票 </input><br>
+    <input type="text" name="activity_place">活动地址 </input><br>
+    <input type="text" name="class">标签，以逗号分开</input></br>
+    <img id="vimg" src="{:U('/Public/VerifyCode/Generate/')}"></img>
+    <input id="verify" type="text" name="verifyCode" >验证码 </input></br>
+    <input type="submit" > </input>
+
+</form>
+</body>
+</html>

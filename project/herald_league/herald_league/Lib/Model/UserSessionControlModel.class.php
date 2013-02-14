@@ -3,7 +3,7 @@
 
 *名称：用户session控制模块
 
-*功能: 建立并控制herald_session_id
+*功能: 建立并控制HERALD_SESSION_ID
 
 *作者：Xie
 
@@ -19,21 +19,9 @@
         private $message;          //收到的信息
         private $userType;         //用户类型，社团0/个人1
 
-        function __construct()     //构造函数,创建cookie存储sessionID
+        function __construct()
         {
-            if( cookie('herald_session_id')==null )    //如果不存在cookie
-            {
-                define('SessionTimeOut',3600*3);//cookie超时，单位秒
-                $this->applySessionID();//申请SessionID
-                $this->dealXML();  //分析xml
-                cookie('herald_session_id',$this->sessionID,SessionTimeOut);//设置cookie
-            }
-            else
-            {
-                $this->update();//用cookie更新数据
-                $this->dealXML();
-            }
-            if(session('league') != null)//社团已登录
+            if(session('?league') )//社团已登录
             {
                 $this->userType = 0;
                 $leagueid = session('league');
@@ -42,13 +30,29 @@
                 $this->userName = $lgInf['league_name'];
                 $this->cardNumber = 0;
             }
+            else
+            {   
+                if( $_COOKIE['HERALD_SESSION_ID']==null )    //如果不存在cookie
+                {
+                    define('SessionTimeOut',3600*3);//cookie超时，单位秒
+                    $this->applySessionID();//申请SessionID
+                    $this->dealXML();  //分析xml
+                    setcookie('HERALD_SESSION_ID',$this->sessionID,time()+SessionTimeOut);//设置$_COOKIE
+                }
+                else
+                {
+                    $this->update();//用cookie更新数据
+                    $this->dealXML();
+                }
+                
+            }
         }
         private function dealXML() //处理得到的xml
         {
             $this ->xml = new SimpleXMLElement($this->message);
-            $this -> cardNumber = $this->xml->properties->{'herald.sso.studentUser.cardNumber'};
-            $this -> userName =$this-> xml->properties->{'herald.sso.studentUser.fullName'};
-            $this -> sessionID =$this->xml->id;
+            $this -> cardNumber = intval($this->xml->properties->{'herald.sso.studentUser.cardNumber'});
+            $this -> userName =strval($this-> xml->properties->{'herald.sso.studentUser.fullName'});
+            $this -> sessionID =strval($this->xml->id);
             $this ->userType = 1;
         }
         private function applySessionID() //向服务器要session ID
@@ -68,8 +72,7 @@
             111222333
             </id>
             <properties>
-                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
-                <herald.sso.studentUser.fullName>tset</herald.sso.studentUser.fullName>
+                
             </properties>
             </xml>
 STR;
@@ -77,7 +80,7 @@ STR;
         }
         private function update()
         {
-            $this -> sessionID = cookie('herald_session_id');
+            $this -> sessionID = $_COOKIE['HERALD_SESSION_ID'];
             /*$ch = curl_init("121.248.63.105/sessionservice/sessions/$this->sessionID");
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -85,11 +88,11 @@ STR;
             $this -> message = curl_exec($ch);
             curl_close($ch);
             */
-            $this->applySessionID();//临时措施，从字符串读数据，仅用来测试
+            $this->applySessionID();//todo临时措施，从字符串读数据，仅用来测试
         }
         public function isLogin()   //判断用户是否登陆,返回true或者false
         {
-            if($this->userName != null)
+            if($this->userName != "")
                 return true;
             return false;
         }

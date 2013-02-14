@@ -3,7 +3,7 @@
 
 *名称：活动添加页
 
-*功能: 添加活动，分三步
+*功能: 添加活动
 
 *作者：xie
 
@@ -12,32 +12,53 @@
 */
     class AddActivityAction extends Action
     {
-        private function isAuthorized()
+        private function getLeagueInfo()
         {
-            return true;//todo 社团登录才能继续，测试时先忽略
+            $lg = array('id' => 1, 'name'=>'东南大学先声网');
+            return $lg;//todo 社团登录才能继续，测试时先忽略
         }
-        public function stepOne()
+        public function Add()
         {
-            if(isAuthorized())
+            if($this->getLeagueInfo()!=false)
             {
-            $address = U('Activity/AddActivity/stepTwo');
-            $this->assign('add',$address);
-            $this->display();
+                $this->display();
             }
             else
             {
                 $this->error('请先登录');
             }
         }
-        public function stepTwo()
+        public function Deal() //最终处理
         {
-            $address = U('Activity/Addactivity/stepThree');
-            $this->assign('address',$address);
-        }
-        public function stepThree()
-        {}
-        public function deal() //最终处理
-        {
+            if($this->getLeagueInfo()!=false)
+            {
+                $activity=D('Activity');
+                if($activity->create())
+                {
+                    $lg=$this->getLeagueInfo();
+                    $activity->activity_release_time=date("Y-m-d");
+                    $activity->league_id=$lg['id'];
+                    $activity->activity_org_name=$lg['name'];
+                    $activityID=$activity->add();
+                    if($activityID!=false)
+                    {
+                        $class=htmlencode($_POST['class']);
+                        $classActivity=D('ClassActivity');
+                        $newClass = explode(',',$class);
+                        foreach($newClass as $v)
+                        {
+                            $classActivity->addClass($activityID,$v);
+                        }
+                        $this->success('');
+                    }
 
+                }
+                else
+                    $this->error($activity->getError());
+            }
+            else
+            {
+                $this->error('请先登录');
+            }
         }
     }

@@ -18,7 +18,7 @@ class LeagueInfoModel extends Model
         );
     // 定义自动完成
     protected $_auto = array(
-       // array('content','htmlencode',3,'function'),
+        //array('username','htmlencode',3,'function'),
         );
 
     /*
@@ -144,6 +144,29 @@ class LeagueInfoModel extends Model
     {
         return $this->order('heat desc')->limit($limit)->field('league_name,id')->select();
     }
+    /*
+    *函数功能：社团登录
+    *参数：用户名，密码
+    *返回：成功返回社团的信息，失败返回null,
+    *作者：xie
+    */
+    public function login($username,$password)
+    {
+        if($username==null || $password==null)
+        {
+            return null;
+        }
+        else
+        {
+            $condition['username']=htmlencode($username);
+            $condition['password']=md5($password);
+            $result=$this->where($condition)->find();
+            if($result!=null && $result!=false)
+            {
+                return $result;
+            }
+            return null;
+        }
+    }
 
 }
-?>

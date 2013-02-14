@@ -92,7 +92,7 @@ class AttentionModel extends Model
               
         作者：Tairy & xie
     
-    更新日期：2013/01/25
+    更新日期：2013/02/1
     
     */
 
@@ -107,6 +107,14 @@ class AttentionModel extends Model
                 {
                     if($this->add($data))
                     {
+                        if($data->isleague==1)//关注社团时增加社团热度 todo 测试
+                        {
+                            $leagueInfo = D('leagueInfo');
+                            if($leagueInfo->getByID($data['id'])->setInc('heat',1))
+                                return 1;
+                            else
+                                return -2;
+                        }
                         return 1;
                     }
                     else
@@ -120,7 +128,17 @@ class AttentionModel extends Model
                 if( $this -> where($data)->find() )
                 {
                     if($this->where($data)->delete())
-                        return 2;
+                    {
+                       if($data->isleague==1)//取消关注社团时减小热度
+                       {
+                            $leagueInfo = D('leagueInfo');
+                            if($leagueInfo->getByID($data['id'])->setDec('heat',1))
+                                return 2;
+                            else
+                                return -4;
+                       }
+                       return 2;
+                    }                    
                     else
                         return -4;
                 }

@@ -44,7 +44,9 @@ class UserModel extends Model
         {
             foreach ( $userdata as $userdatas ) 
             {
-                $userinfo[$userdatas['user_id']] = $this -> where ( 'id = '.$userdatas['user_id'] ) -> select()[0];
+                $temp=$this -> where ( 'id = '.$userdatas['user_id'] ) -> select();
+                $userinfo[$userdatas['user_id']] =$temp[0];
+            
             }
             return $userinfo;
         }
@@ -74,7 +76,7 @@ class UserModel extends Model
          *日期 :  2013.1.25
          */
         $cardnumber = intval($cardnumber);
-        $id=$this->where(array('card_num'=>$cardnumber))->field('id')->find();
+        $id =$this->field('id')->getByCardNum($cardnumber);
         return $id['id'];
     }
 }
