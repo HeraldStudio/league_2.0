@@ -55,10 +55,10 @@ a:hover {
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">
-		 <iframe name="i" src="__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>"></iframe>
-		  <div id="inner_right">
-		  <div id="right_content">
-		    <div id="right3">
+			<iframe name="i" src="__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>"></iframe>
+			<div id="inner_right">
+			<div id="right_content">
+			<div id="right3">
 			  <div id="interest_title">我们的活动
 			  </div>
 			  <a href="#" id="more3" class="more">
@@ -71,14 +71,14 @@ a:hover {
 			  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><li><a href="#"><?php echo ($vi["activity_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 			  </ul>
 			</div>
-		    <div id="right1">
-		      <div id="guanzhu_title">此活动的关注者
+			<div id="right1">
+			  <div id="guanzhu_title">此活动的关注者
 			  </div>
 			  <a href="#" id="more1" class="more">
 			  </a>
 			  <a href="#" id="more2" class="more">
 			  </a>
-		    </div>
+			</div>
 			<div id="right2">
 			  <div id="touxiang">
 			  	<?php if(is_array($userinfo)): $i = 0; $__LIST__ = $userinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vu): $mod = ($i % 2 );++$i;?><a href="#"id="touxiang1" class="tx">
@@ -91,8 +91,8 @@ a:hover {
 					</a><?php endforeach; endif; else: echo "" ;endif; ?>
 			  </div>
 			</div>
-		  </div>
-		  </div>
+			</div>
+			</div>
 		</div>
 	  </div>
 	</div>
@@ -114,11 +114,12 @@ a:hover {
   <div id="club_lable">
     <div id="lable_top">
 	  <div id="touxiang2">
-	  	<img src="../images/herald.jpg" />
+	  	<img src="__Uploads__/LeagueAvatar/s_<?php echo ($league[0]['avater_address']); ?>" />
 	  </div>
-	  <div id="name">先声网
+	  <div id="name"><?php echo ($league[0]['league_name']); ?>
 	  </div>
-	  <div id="address">地址：
+	  <div id="address">
+	  	<?php echo ($classname); ?>--<?php echo ($streetname); ?>
 	  </div>
 	</div>
 	<div id="lable_bottom">

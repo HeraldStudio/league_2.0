@@ -40,3 +40,35 @@
  [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
 [ 2013-01-31T12:20:59+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
  [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:21:25+08:00 ] ERR: (ThinkException) Unknown column 'heat' in 'order clause'
+ [ SQL语句 ] : SELECT `league_name`,`id` FROM `lg_league_info` ORDER BY heat desc LIMIT 7  
+[ 2013-01-31T18:28:17+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:34:42+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:36:24+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:37:20+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:37:47+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:39:03+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:40:42+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:44:45+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:45:17+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:46:04+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:48:46+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:52:39+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_league_info` WHERE id = 
+[ 2013-01-31T18:53:14+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:53:36+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-01-31T18:54:08+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 

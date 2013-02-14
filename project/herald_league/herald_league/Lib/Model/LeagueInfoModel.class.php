@@ -41,6 +41,11 @@ class LeagueInfoModel extends Model
 		return $league;
     }
 
+    public function getleagueAvaterAdd( $leagueid )
+    {
+        $avataradd = $this -> getFieldById( $leagueid, 'avater_address');
+        return $avataradd;
+    }
     /*
 
 	函数功能：获取当前社团的类别名称

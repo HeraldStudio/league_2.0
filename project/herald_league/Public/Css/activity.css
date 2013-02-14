@@ -3,6 +3,7 @@
    margin: 0px;
    padding: 0px;
    font-size:14px;
+   font-family:"微软雅黑", "宋体", serif
   }
 body 
 {
@@ -22,12 +23,12 @@ a{
 	overflow:hidden;
 	position:relative;
 	background-color:#ecebeb;
+	padding-bottom:50px;
 	}
 #main_body_inner{
     margin-left:40px;
 	margin-top:30px;
 	margin-right:40px;
-	margin-bottom:50px;
 	float:left;
 	border-style:solid;
 	border-width:1px;
@@ -44,7 +45,7 @@ a{
 	float:left;
 }
 #left1{
-    height:140px;
+    height:150px;
 	width:520px;
 	border-style:solid;
 	border-width:1px;
@@ -58,7 +59,7 @@ a{
 	float:left;
 	font-family:"微软雅黑", "宋体", serif;
 	}
-.attention{
+#attention{
     float:left;
 	margin-top:65px;
 	margin-left:300px;
@@ -219,7 +220,7 @@ a{
 	}
 #remark{
     float:left;
-	padding-top:20px;
+	padding-top:10px;
 }
 #user_img{
     height:50px;
@@ -248,12 +249,11 @@ a{
     padding-left:20px;
     float:left;
 	line-height:20px;
-	font-weight:bold;
 	color:#999;
 	}
 #middle{
     float:left;
-	padding-top:20px;
+	padding-top:5px;
 	}
 #middle p{
     letter-spacing: 1px;
@@ -262,7 +262,7 @@ a{
 	}
 #bottom{
     float:left;
-	padding-top:20px;
+	padding-top:5px;
 	}
 #btn_replay{
     margin-left:400px;
@@ -393,7 +393,6 @@ li{
 	color:#999;
 	padding-top:5px;
 	text-align:left;
-	list-style-position:inside;
 	list-style-type:none;
 	font-family:"微软雅黑", "宋体", serif;
 }
@@ -406,3 +405,71 @@ ul li a:hover{
 li a:visited{
   color:#999;
 }
+.remark1{
+    float:left;
+	padding-top:10px;
+	padding-bottom:10px;
+	width:470px;
+}
+.user_img{
+    height:50px;
+	width:50px;
+	background-color:#e2f4f4;
+	float:left;
+}
+.remark_content1{
+    float:left;
+	padding-left:20px;
+	width:380px;
+}
+.top1{
+    float:left;
+	width:380px;
+	background-color:#e2f4f4;
+	}
+.remark_time{
+    padding-left:20px;
+    float:left;
+	line-height:20px;
+	color:#999;
+	}
+.remark_time pre{
+	font-size:12px;
+	}
+.username1{
+    float:left;
+	padding-left:5px;
+	color:#39bebc;
+	line-height:20px;
+	font-weight:bold;
+	font-size:12px;
+	}
+.middle1{
+    float:left;
+	width:380px;
+	padding-top:5px;
+	}
+.bottom1{
+    float:left;
+}
+.middle1 p{
+    text-indent:2em;
+	color:#5b5b5b;
+	padding-top:10px;
+	font-size:12px;
+}
+.remark_content1{
+    float:left;
+	padding-left:20px;
+	width:380px;
+}
+.btn_replay_3{
+	background-color:#e2f4f4;
+	margin-left:350px;
+	}
+.btn_replay_3:link{
+    color:#999;
+	}
+.btn_replay_3:visited{
+    color:#999;
+	}

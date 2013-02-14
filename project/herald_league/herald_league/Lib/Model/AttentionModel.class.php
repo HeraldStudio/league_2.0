@@ -157,4 +157,13 @@ class AttentionModel extends Model
     {
         return $this -> where ('attended_id = '.$activityid. ' AND isleague = 0') -> select();
     }
+
+    public function getAttentionLeagueNum( $attendedid )
+    {
+        return $this -> where('attended_id = '.$attendedid.' AND isleague = 1') -> count();
+    }
+    public function getAttentionActivityNum( $attendedid )
+    {
+        return $this -> where('attended_id = '.$attendedid.' AND isleague = 0') -> count();
+    }
 }

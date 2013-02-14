@@ -1,4 +1,3 @@
-<!--这是获取街道及该街道下的社团名称的模版 模版格式不能变-->
 <a href = "__APP__/League/Home/leagueRegister">社团注册</a>
 <hr/>
 <volist name = "street" id = "vs">
@@ -6,7 +5,7 @@
 		<foreach name = "league" item = "vl" key = "vlk">
 			<eq name = "vlk" value = "$vs.id">
 				<volist name = "vl" id = "vle">
-					<a href = "__APP__/League/Home/clubIndex/leagueid/{$vle.id}">{$vle.league_name}</a><br/>
+					<a href = "__APP__/League/Home/club/title/dt/leagueid/{$vle.id}">{$vle.league_name}</a><br/>
 				</volist>
 			</eq>
 		</foreach>

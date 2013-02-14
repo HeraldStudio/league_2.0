@@ -35,9 +35,9 @@ class ActivityModel extends Model
 	
 	*/
 
-    public function getActivityInfoByLeague ( $leagueid )
+    public function getActivityInfoByLeague ( $leagueid, $limitnum = null )
     {
-    	$activity = $this -> where( 'league_id ='.$leagueid ) -> select();
+    	$activity = $this ->order('activity_release_time') -> limit($limitnum) -> where( 'league_id ='.$leagueid ) -> select();
     	return $activity;
     }
     /*
@@ -55,7 +55,7 @@ class ActivityModel extends Model
     */
     public function getActivityInfoById( $activityid )
     {
-        $activity = $this -> where( 'id ='.$activityid ) -> select();
+        $activity = $this -> where( 'id ='.$activityid ) -> find();
         return $activity;
     }
 
@@ -158,5 +158,16 @@ class ActivityModel extends Model
     public function getActivitybyLimit($limit=10)
     {
         return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
+    }
+    public function getActivityState( $activityid )
+    {
+        $activityinfo = $this -> getActivityInfoById( $activityid );
+        /*判断活动状态*/
+        if( strtotime($activityinfo['start_time']) > time() )
+            return '未开始';
+        elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time()) 
+            return '正在进行';
+        else
+            return '已结束';
     }
 }

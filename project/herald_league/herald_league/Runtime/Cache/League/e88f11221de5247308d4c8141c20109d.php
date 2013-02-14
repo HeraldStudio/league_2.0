@@ -22,26 +22,21 @@ a:hover {
 	    <div id="inner_left">
 		  <div id="left_content">
             <div id="left1">
-		      <div id="title"><?php echo ($activity[0]['activity_name']); ?></div>
+		      <div id="title"><?php echo ($activity['activity_name']); ?></div>
 			  <a href="#"id="attention">
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">
-			    	<?php if($attentionstate): ?><a href = "__APP__/League/Home/attention/leagueid/<?php echo ($league[0]['id']); ?>/action/del">取消关注</a>
-					<?php else: ?> 
-						<a href = "__APP__/League/Home/attention/leagueid/<?php echo ($league[0]['id']); ?>/action/add">关注</a><?php endif; ?>
+			    	关注
 			    </div>			  
 			  </a>
 			  <div id="shuoming">
 			    <div id="biaoqian">
-				  <div id="biaoqian1" class="bq">音乐
-				  </div>
-				  <div id="biaoqian2" class="bq">体育
-				  </div>
-				  <div id="biaoqian3" class="bq">讲座
-				  </div>
+				  	<?php if($class == null): ?><div id="biaoqian1" class="bq">没有标签</div>
+				    <?php else: ?>
+					  <?php if(is_array($class)): foreach($class as $key=>$c): ?><div id="biaoqian1" class="bq"><?php echo ($c); ?></div><?php endforeach; endif; endif; ?>
 				</div>
-				<div id="redu">热度：*****
+				<div id="redu">热度：<?php echo ($activity['activity_count']); ?>
 				</div>
 				<a href="#" id="pinglun">5条评论
 				</a>
@@ -51,34 +46,34 @@ a:hover {
 			  <div id="time" class="information">
                 <div id="time_img">
 				</div>
-				<div id="time_text">时间:<?php echo ($activity[0]['start_time']); ?>---<?php echo ($activity[0]['end_time']); ?>【已结束】
+				<div id="time_text">时间:<?php echo ($activity['start_time']); ?>---<?php echo ($activity['end_time']); ?>【<?php echo ($actiitystate); ?>】
 				</div>
 			  </div>
 			  <div id="place" class="information">
 			    <div id="place_img">
 				</div>
-				<div id="place_text">地点:<?php echo ($activity[0]['activity_place']); ?>
+				<div id="place_text">地点:<?php echo ($activity['activity_place']); ?>
 				</div>
 			  </div>
 			  <div id="host" class="information">
 			    <div id="host_img">
 				</div>
-				<div id="host_text">主办：<?php echo ($activity[0]['activity_org_name']); ?>
+				<div id="host_text">主办：<?php echo ($activity['activity_org_name']); ?>
 				</div>
 			  </div>
 			  <div id="contact" class="information">
 			    <div id="contact_img">
 				</div>
-				<div id="contact_text">联系方式：<?php echo ($activity[0]['contact_info']); ?>
+				<div id="contact_text">联系方式：<?php echo ($activity['contact_info']); ?>
 				</div>
 			  </div>
 			</div>
 			<div id="left3">
 			  <div id="activity_introduction">
-			    <?php echo ($activity[0]['activity_introduce']); ?>
+			    <?php echo ($activity['activity_introduce']); ?>
 			  </div>
 			  <div id="activity_img">
-			  	<img src="__Uploads__/LeaguePost/Large/<?php echo ($activity[0]['activity_post_add']); ?>"/>
+			  	<img src="__Uploads__/LeaguePost/Large/<?php echo ($activity['activity_post_add']); ?>"/>
 			  </div>
 			  <div id="share">
 			     <div id="share_text">分享至
@@ -87,7 +82,7 @@ a:hover {
 			</div>
 			<div id="left4">
 			  <div id="remark">
-			    <div id="user_img">
+			    <div id="user_img"><img src="../images/small.jpg" alt="" />
 				</div>
 				<div id="remark_content">
 				  <div id="top">
@@ -105,6 +100,27 @@ a:hover {
 				  <div id="bottom">
 				    <a href="#" id="btn_replay">回复</a>
 				  </div>
+				  <div id="remark_3" class="remark1">
+			          <div id="user_img_3" class="user_img"><img src="../images/small.jpg" alt="" />
+				      </div>
+				      <div id="remark_content_3" class="remark_content1">
+				        <div id="top_3" class="top1">
+				          <div id="username_3" class="username1">赵亮
+					      </div>
+					      <div id="remark_time_3" class="remark_time"><pre>2012-12-22  12:12:12</pre>
+					      </div>
+				        </div>
+				        <div id="middle_3" class="middle1">
+				          <p>本站通过聚合各团体组织信息、活动信息，
+				             形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
+				             同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+				          </p>
+				        </div>
+				        <div id="bottom_3" class="bottom1">
+				          <a href="#" class="btn_replay_3" >回复</a>
+				        </div>
+				      </div>
+			        </div>
 				</div>
 			  </div>
 			   <div id="remark">

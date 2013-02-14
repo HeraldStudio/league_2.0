@@ -1,0 +1,14 @@
+
+/* tab pane styling */
+.panes div {
+    display:none;
+    padding:15px 10px;
+    border-top:0;
+    font-size:14px;
+	float:left;
+}
+.panes2 div {
+    display:none;
+    border-top:0;
+	float:left;
+}

@@ -26,27 +26,44 @@ class HomeAction extends Action
 	更新日期：2013/01/16
 	
 	*/
-	
+	private $pagetitle = array(
+		'dt' => '大厅',
+		'zls' => '资料室',
+		'lyb' => '留言版',
+		'yxg' => '影像馆'
+		);
+
     public function index()
 	{
 		/*获取URL参数*/
 		$leagueid = intval($this -> _param('leagueid'));
-		
+		$this -> activityid = intval($this -> _param('actid'));
+
 		/*获取社团信息*/
 		$League = D('LeagueInfo');
 		$Attention = D('Attention');
 		$league = $League -> getLeagueInfo ( $leagueid );
 
-		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
-		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
+		
 		
 		/*获取活动信息*/
 		$Activity = D('Activity');
-		$activity = $Activity -> getActivityInfoByLeague ( $leagueid );
-		
-		$this -> assign('activity', $activity);
+		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid );
+		//print_r($activity);
+		//echo $this -> activityname = $activity[2]['activity_name'];
+
+		//$this -> assign('activity', $activity);
 		$this -> assign('league', $league);
 
+		//if($this -> activityid == null)
+        	//$this -> activityid = 0;
+
+		/*活动标签*/
+		$class = $Activity->getClass($this -> activity['id']);
+        $this -> assign('class',$class);
+        /*活动状态*/
+        $this -> actiitystate = $Activity -> getActivityState( $this -> activityid );
+		/*判断关注状态*/
 		$data = array('user_id' => 1,
 			'attended_id' => $leagueid,
 			'isleague' => 1
@@ -54,6 +71,7 @@ class HomeAction extends Action
 
 		$this -> attentionstate = $Attention -> getAttentionState( $data );
 
+		/*搜索框*/
 		import('@.ORG.Search');
 
 		$search = new Search();
@@ -61,45 +79,9 @@ class HomeAction extends Action
 		{
 			$result = $search -> getSearchResult($_POST['search']);
 			print_r($result);
-		}	
-		$this -> display();
-    }
-
-    public function clubIndex()
-    {
-    	/*获取URL参数*/
-		$this -> leagueid = intval($this -> _param('leagueid'));
-
-		/*获取活动信息*/
-		$Activity = D('Activity');
-		$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
-		$this -> assign('activity', $activity);
-
-		/*获取关注信息*/
-		$Attention = D('Attention');
-		$User = D("User");
-
-		$attention = $Attention -> getActivityAttention( $activity[0]['id'] );
-		$userinfo = $User -> getUserInfo( $attention );
-		$this -> assign( 'userinfo', $userinfo );
+		}
 
 		$this -> display();
-    }
-
-    public function clubInfoRoom ()
-    {
-    	/*获取URL参数*/
-		$this -> leagueid = intval($this -> _param('leagueid'));
-
-		/*获取关注信息*/
-		$Attention = D('Attention');
-		$User = D("User");
-
-		$attention = $Attention -> getLeagueAttention( $this -> leagueid );
-		$userinfo = $User -> getUserInfo( $attention );
-		$this -> assign( 'userinfo', $userinfo );
-
-    	$this -> display();
     }
 
     public function infoRoom()
@@ -141,14 +123,6 @@ class HomeAction extends Action
 		$information = $Information -> where('id ='.$leagueid) -> select();
 		$this -> assign('information', $information);
 		$this ->display();
-	}
-
-	public function clubAlbum()
-	{
-		/*获取URL参数*/
-		$this -> leagueid = intval($this -> _param('leagueid'));
-
-		$this -> display();
 	}
 	
 	/*
@@ -262,13 +236,6 @@ class HomeAction extends Action
 		$this -> display();
 	}
 	
-	public function clubCommunion()
-	{
-		/*获取URL参数*/
-		$this -> leagueid = intval($this -> _param('leagueid'));
-
-    	$this -> display();
-	}
 	/*
 
 	函数功能：社团交流区控制函数
@@ -432,6 +399,75 @@ class HomeAction extends Action
 		{
 			return;
 		}
+	}
+
+	/*
+
+	函数功能：社团空间公共框架控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/02/02
+	
+	*/
+
+	public function club()
+	{
+		/*获取URL参数*/
+		$this -> gettitle = $this -> _param('title');
+		$this -> leagueid = intval($this -> _param('leagueid'));
+		$this -> activityid = intval($this -> _param('actid'));
+
+		$League = D('LeagueInfo');
+		$league = $League -> getLeagueInfo ( $this -> leagueid );
+		$this -> assign( 'league', $league );
+
+		switch($this -> gettitle)
+		{
+			case dt:
+			/*获取活动信息*/
+			$Activity = D('Activity');
+			$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
+			if(!$this -> activityid)
+				$this -> activityid = $activity[0]['id'];
+			$this -> assign('activity', $activity);
+
+			/*获取关注信息*/
+			$Attention = D('Attention');
+			$User = D("User");
+
+			$attention = $Attention -> getActivityAttention( $activity[0]['id'] );
+			$userinfo = $User -> getUserInfo( $attention );
+			$this -> assign( 'userinfo', $userinfo );
+			$this -> assign('activity', $activity);
+			break;
+			case zls:
+			/*获取关注信息*/
+			$Attention = D('Attention');
+			$User = D("User");
+
+			$attention = $Attention -> getLeagueAttention( $this -> leagueid );
+			$userinfo = $User -> getUserInfo( $attention );
+			$this -> assign( 'userinfo', $userinfo );
+			break;
+			case lyb:
+			break;
+			case yxg:
+			break;
+		}
+		
+		/*小标签内容*/
+		$Attention = D('Attention');
+		$this -> attentionnum = $Attention -> getAttentionLeagueNum( $this -> leagueid );
+		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
+		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
+		$this -> title = $this -> pagetitle[$this -> gettitle];
+
+		$this -> display();
 	}
 }
 ?>

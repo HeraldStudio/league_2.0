@@ -1,0 +1,8 @@
+
+a:active {
+    outline:none;
+}
+
+:focus {
+    -moz-outline-style:none;
+}

@@ -31,13 +31,20 @@ class IndexAction extends Action
     	/*获取URL参数*/
 	    $userid = intval( $this -> _param( 'userid' ) );
 
+	    /*get user information*/
 		$User = D('User');
 		$userinfo = $User -> getUserInfo( $userid );
-
-		//$this -> getCommentAndAnswer( $userid );
-
 		$this -> assign('userinfo', $userinfo );
+		
+		/*get attention league information*/
+		$leagueinfo = $this -> attentionLeague( $userid )[0];
+		$lastactivity = $this -> attentionLeague( $userid )[1];
+		$this -> assign ( 'leagueinfo', $leagueinfo );
+		$this -> assign( 'lastactivity', $lastactivity );
 
+		/*get attention activity information*/
+		$activityinfo = $this -> attentionActivity ( $userid );
+		$this -> assign ( 'activityinfo', $activityinfo );
 		$this -> display();
     }
 
@@ -62,6 +69,7 @@ class IndexAction extends Action
 		$User = D('User');
 		$userinfo = $User -> getUserInfo( $userid );
 
+		
 
 		$this -> assign('userinfo', $userinfo );
 
@@ -143,38 +151,38 @@ class IndexAction extends Action
 
 	函数功能：关注的社团页面
 
-	参数信息：无参数
+	参数信息：用户id
 
 	  返回值：无返回值
 			  
 	    作者：Tairy
 	
-	更新日期：2013/01/16
+	更新日期：2013/02/03
 	
 	*/
 
-    public function attentionLeague()
+    public function attentionLeague( $userid )
     {
-    	/*获取URL参数*/
-		$userid = intval($this -> _param('userid'));
-
     	$Attention = D('Attention');
     	$LeagueInfo = D('LeagueInfo');
+    	$Activity = D('Activity');
     	$attentionleague = $Attention -> getAttentionLeague ( $userid );
 
-
     	foreach ( $attentionleague as $attentionleagues ) 
-    	{
-    		$leagueinfo[$attentionleagues['attended_id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
+    	{	
+    		
+    		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
+    		$leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
+    		$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'], 4 );
     	}
-    	$this -> assign ( 'leagueinfo', $leagueinfo );
-    	$this -> display();
+    	//print_r($lastactivity);
+    	return array( $leagueinfo, $lastactivity);
     }
     /*
 
 	函数功能：关注的活动页面
 	
-	参数信息：无参数
+	参数信息：用户id
 
 	  返回值：无返回值
 			  
@@ -183,23 +191,22 @@ class IndexAction extends Action
 	更新日期：2013/01/16
 	
 	*/
-    public function attentionActivity ()
+    public function attentionActivity ( $userid )
     {
-    	/*获取URL参数*/
-		$userid = intval($this -> _param('userid'));
-
 		$Attention = D("Attention");
 		$Activity = D('Activity');
+		$League = D('LeagueInfo');
 
 		$attentionactivity = $Attention -> getAttentionActivity( $userid );
 		
 		foreach ( $attentionactivity as $attentionactivitys ) 
     	{
-    		$activityinfo[$attentionactivitys['attended_id']] = $Activity -> getActivityInfoById($attentionactivitys['attended_id'] )[0];
+    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );
+    		$activityinfo[$attentionactivitys['id']]['activitystate'] = $Activity -> getActivityState( $attentionactivitys['attended_id'] );
+    		$activityinfo[$attentionactivitys['id']]['attentionnum'] = $Attention -> getAttentionActivityNum($attentionactivitys['attended_id']);  
+    		$activityinfo[$attentionactivitys['id']]['leagueavatar'] = $League -> getleagueAvaterAdd( $activityinfo[$attentionactivitys['id']]['league_id']);
     	}
-		$this -> assign ( 'activityinfo', $activityinfo );
-		$this -> display();
-    	
+		return $activityinfo;
     }
 
     /*

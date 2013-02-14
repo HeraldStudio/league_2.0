@@ -3,13 +3,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
-<link href="__ROOT__/Public/css/index.css" rel="stylesheet" type="text/css" />
-<link href="__ROOT__/Public/css/footer.css" rel="stylesheet" type="text/css" />
-<link href="__ROOT__/Public/css/totop.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/wowslider-container1.css" />
-<script type="text/javascript" src="__ROOT__/public/__ROOT__/Public/engine1/jquery.js"></script>
+<link href="__ROOT__/Public/Css/index.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
+
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.js"></script> 
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.masonry.min.js"></script> 
+<script type="text/javascript">
+function changeAttention(activityid,action,key)
+  {
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange=function()
+    {
+      if(xmlhttp.readyState == 4 && xmlhttp.status==200)
+      {
+        var message=new Array();
+            message[ 1]='关注成功'
+            message[ 2]='取消关注成功'
+            message[-1]='已经关注'
+            message[-2]='关注失败'
+            message[-3]='还未关注，无法取消'
+            message[-4]='取消关注失败'
+            message[-5]='非法的操作'
+            message[-6]='请求的活动不存在'
+            message[-7]='请先登录'
+            message[-8]='请以个人用户登录'
+            alert(message[xmlhttp.responseText]);
+            if(xmlhttp.responseText == 1)
+            {
+              document.getElementById("attention"+key+"_isattended").style.display="inline";
+              document.getElementById("attention"+key+"_notattended").style.display="none";
+            }
+            else if(xmlhttp.responseText ==2)
+            {
+              document.getElementById("attention"+key+"_isattended").style.display="none";
+              document.getElementById("attention"+key+"_notattended").style.display="inline";
+            }
+      }
+    }
+    xmlhttp.open("GET","<?php echo U('Activity/Activity/changeAttention');?>/activityid/"+activityid+"/action/"+action,true);
+    xmlhttp.send();
+  }
+</script>
 <style type="text/css">
 a:link {
     color: #cccccc;;
@@ -30,15 +75,16 @@ a:hover {
     <div id="header">
       <div id="header_top">
         <div id="header_top_text">
+          <div id="loginBox" style="display:none"><a >111</a></div>
             <?php if($islogin == 0): ?><a href="#" id="login">登录</a>
+                </div>
+                <div id="tubiao">
             <?php else: ?>
-                <a href="#" id="login">欢迎你<?php echo ($name); ?></a><?php endif; ?>
-        </div>
-        <div id="tubiao">
-          <a href="#" id="xinxi">
-          </a>
-          <a href="#" id="shouye">
-          </a>
+                <a href="#" id="login">欢迎你<?php echo ($name); ?></a>
+                </div>
+                <div id="tubiao">
+                  <a href="#" id="xinxi"></a><?php endif; ?>
+        <a href="#" id="shouye"></a>
         </div>
       </div>
       <div id="header_bottom">
@@ -66,7 +112,7 @@ a:hover {
           <div class="ws_images">
             <ul>
                 <?php if(is_array($recent)): foreach($recent as $key=>$r): ?><li>
-                    <a href="<?php echo ($detailadd); ?>/activityid/<?php echo ($r["id"]); ?>" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/<?php echo ($r["activity_post_add"]); ?>" alt="<?php echo ($r["activity_name"]); ?>" title="<?php echo ($r["activity_org_name"]); ?>" id="wows1_0"/></a>
+                    <a href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($r["id"]); ?>" target="_blank"><img src="__ROOT__/Uploads/LeaguePost/Large/<?php echo ($r["activity_post_add"]); ?>" alt="<?php echo ($r["activity_name"]); ?>" title="<?php echo ($r["activity_org_name"]); ?>" id="wows1_0"/></a>
                     <h1><?php echo ($r["activity_name"]); ?></h1>
                     </br>
                     <p>
@@ -83,7 +129,8 @@ a:hover {
           </div>
           <div class="ws_bullets">
             <div>
-              <?php if(is_array($recent)): foreach($recent as $key=>$r): ?><a href="#" title="<?php echo ($r["activity_name"]); ?>"><img src="__ROOT__/Uploads/LeaguePost/Small/<?php echo ($r["activity_post_add"]); ?>" alt="<?php echo ($r["activity_name"]); ?>"/></a><?php endforeach; endif; ?>
+              <?php if(is_array($recent)): foreach($recent as $key=>$r): ?><a href="#" title="<?php echo ($r["activity_name"]); ?>"><img src="__ROOT__/Uploads/LeaguePost/Small/<?php echo ($r["activity_post_add"]); ?>" alt="<?php echo ($r["activity_name"]); ?>"/>
+                    <?php echo ($key+1); ?></a><?php endforeach; endif; ?>
             </div>
           </div>
           <div class="ws_shadow"></div>     
@@ -92,53 +139,23 @@ a:hover {
       <div id="main_body_bottom">
         <div id="main_body_bottom_left">
           <ul class="list">
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/1.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-              <a href="#"id="attention">
-                <div id="attention_img">
-                </div>
-                <div id="attention_text">关注
-                </div>            
-              </a>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/2.jpg" class="cover" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/3.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/4.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <a href="#"><img src="__ROOT__/Public/images/5.jpg" alt="" /></a>
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <img src="__ROOT__/Public/images/6.jpg" alt="" />
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li>
-              <img src="__ROOT__/Public/images/7.jpg" alt="" />
-              <div class="activity_title">今天我要嫁给你</div>
-            </li>
-            <li><img src="__ROOT__/Public/images/1.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/2.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/3.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/4.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/5.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/6.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/7.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/1.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/2.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/3.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/4.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/5.jpg" alt="" /></li>
-            <li><img src="__ROOT__/Public/images/6.jpg" alt="" /></li>
+            <?php if(is_array($activities)): $i = 0; $__LIST__ = $activities;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><li>
+              <a target="_blank" href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($a["id"]); ?>"><img src="__ROOT__/Uploads/LeaguePost/Fall/<?php echo ($a["activity_post_add"]); ?>" alt="" /></a>
+              <a target="_blank" href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($a["id"]); ?>"><div class="activity_title"><?php echo ($a["activity_name"]); ?></div></a>
+              
+                <a href="javascript:void(0)" onclick="javascript:changeAttention(<?php echo ($a["id"]); ?>,'del',<?php echo ($key); ?>)" class="attention" id="attention<?php echo ($key); ?>_isattended" <?php if($a["isattended"] == 0): ?>style="display:none"<?php endif; ?>>
+                  <div class="attention_text" id="attention_text">取消关注
+                  </div>            
+                </a>
+              
+                <a href="javascript:void(0)" onclick="javascript:changeAttention(<?php echo ($a["id"]); ?>,'add',<?php echo ($key); ?>)" class="attention" id="attention<?php echo ($key); ?>_notattended" <?php if($a["isattended"] == 1): ?>style="display:none"<?php endif; ?>>
+                 <div class="attention_img" id="attention_img">
+                 </div>
+                 <div class="attention_text" id="attention_text">关注
+                 </div>            
+                </a>
+              
+            </li><?php endforeach; endif; else: echo "" ;endif; ?>          
           </ul>
           <div id="all">
             <a href="#" id="btn_all">点击查看全部</a>
@@ -163,7 +180,9 @@ a:hover {
               <div id="biaoqian_content" class="content">
                 <a id="biaoqian3" class="bq" href="#">全部活动
                 </a>
-                <?php if(is_array($heatClass)): $i = 0; $__LIST__ = $heatClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h): $mod = ($i % 2 );++$i;?><div id="biaoqian1" class = "bq"><?php echo ($h["class_name"]); ?> 
+                <?php if(is_array($heatClass)): $i = 0; $__LIST__ = $heatClass;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h): $mod = ($i % 2 );++$i;?><a href="#">
+                  <div id="biaoqian1" class = "bq"><?php echo ($h["class_name"]); ?> 
+                  </a>
                   </div><?php endforeach; endif; else: echo "" ;endif; ?>
               </div>
             </div>
@@ -175,7 +194,7 @@ a:hover {
                 </div>
               </div>
               <div id="activity_content" class="content">
-                <?php if(is_array($heatActivity)): $i = 0; $__LIST__ = $heatActivity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h): $mod = ($i % 2 );++$i;?><a href="<?php echo ($detailadd); ?>/activityid/<?php echo ($h["id"]); ?>"><div id="activity_content_text" class = "content_text"><?php echo ($h["activity_name"]); ?>
+                <?php if(is_array($heatActivity)): $i = 0; $__LIST__ = $heatActivity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($h["id"]); ?>"><div id="activity_content_text" class = "content_text"><?php echo ($h["activity_name"]); ?>
                   </div></a><?php endforeach; endif; else: echo "" ;endif; ?>
               </div>
               <div class="more">
@@ -191,20 +210,9 @@ a:hover {
                 </div>
               </div>
               <div id="club_content" class="content">
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
-                <div id="club_content_text" class="content_text">活动活动活动活动活动活动
-                </div>
+                <?php if(is_array($heatLeague)): $i = 0; $__LIST__ = $heatLeague;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h): $mod = ($i % 2 );++$i;?><a href="#">
+                  <div id="club_content_text" class = "content_text"><?php echo ($h["league_name"]); ?>
+                  </div></a><?php endforeach; endif; else: echo "" ;endif; ?>
               </div>
               <div class="more">
                  <a href="#" class="more_text">More...
@@ -275,8 +283,8 @@ a:hover {
    };
    toTop.goto("toTop");
    </script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/wowslider.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/engine1/script.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/wowslider.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/script.js"></script>
 <script type="text/javascript">
             $(document).ready(function(){
                 //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
