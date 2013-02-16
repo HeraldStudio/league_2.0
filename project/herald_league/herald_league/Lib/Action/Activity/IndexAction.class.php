@@ -154,9 +154,7 @@ HTML;
     {
         foreach($activity as &$v)
         {
-            if(substr($v['activity_post_add'],-4,1)!='.')
-                $v['activity_post_add'] .='.jpg';
-            if(!file_exists('../Uploads/LeaguePost/Fall/'.$v['activity_post_add']))
+            if(!is_file('../Uploads/LeaguePost/Fall/'.$v['activity_post_add']))
                 $v['activity_post_add']='default.jpg';
         }
     }

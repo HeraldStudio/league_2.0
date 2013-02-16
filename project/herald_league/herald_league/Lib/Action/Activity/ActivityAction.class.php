@@ -34,6 +34,8 @@ class ActivityAction extends Action
         else
         {
             $activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
+            if(!is_file('../Uploads/LeaguePost/Large/'.$activityInf['activity_post_add']))
+                $activityInf['activity_post_add']='default.jpg';
             $this->assign('activityInf',$activityInf);
             if($activityInf['is_vote'] != 0 )//是投票
             {

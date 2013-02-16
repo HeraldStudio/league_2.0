@@ -17,16 +17,17 @@
         private $cardNumber;       //登陆用户的一卡通号
         private $xml;              //得到的xml
         private $message;          //收到的信息
-        private $userType;         //用户类型，社团0/个人1
+        private $userType;       //用户类型，社团0/个人1
+        private  $leagueid;             //社团id
 
         function __construct()
         {
             if(session('?league') )//社团已登录
             {
                 $this->userType = 0;
-                $leagueid = session('league');
+                $this->leagueid = session('league');
                 $lg = M('league_info');
-                $lgInf = $lg->find($leagueid);
+                $lgInf = $lg->find($this->leagueid);
                 $this->userName = $lgInf['league_name'];
                 $this->cardNumber = 0;
             }
@@ -115,7 +116,9 @@ STR;
         public function getUserID() //用户在数据库中的id
         {
             if($this->getUserType() == 0)
-                return null;
+            {
+                return $this->leagueid;
+            }
             else
             {
                 $user = D('User');

@@ -48,16 +48,20 @@
                     $upload->thumb = true;
                     if(!is_dir("../Uploads/LeaguePost/Fall/$lg[id]/$time"))
                         mkdir("../Uploads/LeaguePost/Fall/$lg[id]/$time",0777,true);
-                    $upload->thumbPrefix="Fall/$lg[id]/$time/";
-                    $upload->thumbMaxWidth = '190';
-                    $upload->thumbMaxHeight = '1000';
+                    if(!is_dir("../Uploads/LeaguePost/Large/$lg[id]/$time"))
+                        mkdir("../Uploads/LeaguePost/Large/$lg[id]/$time",0777,true);
+                    if(!is_dir("../Uploads/LeaguePost/Small/$lg[id]/$time"))
+                        mkdir("../Uploads/LeaguePost/Small/$lg[id]/$time",0777,true);
+                    $upload->thumbPrefix="Fall/$lg[id]/$time/,Large/$lg[id]/$time/,Small/$lg[id]/$time/";
+                    $upload->thumbMaxWidth = '190,600,96';
+                    $upload->thumbMaxHeight = '1000,300,48';
                     $upload->thumbPath='../Uploads/LeaguePost/';
                     $upload->thumbRemoveOrigin = false;
                     if(!$upload->upload())
                         $this->error($upload->getErrorMsg());
                     else
                     {
-                        $uploadInf = $upload->getUploadFileInfo();var_dump($uploadInf[0]);
+                        $uploadInf = $upload->getUploadFileInfo();
                         $name = $uploadInf[0][savename];
                         $activity->activity_post_add="$lg[id]/$time/$name";
                     }
