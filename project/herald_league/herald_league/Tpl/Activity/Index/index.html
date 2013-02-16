@@ -49,6 +49,18 @@
         })
     }
 </script>
+<script type="text/javascript">
+    function logout()
+    {
+        $.ajax({
+            url:'{:U('/Public/Logout/')}',
+            success:function(){
+            $("#islogin").hide();
+            $("#notlogin").show();
+            location.reload();//todo 
+        }})
+    }
+</script>
 <style type="text/css">
 a:link {
     color: #cccccc;;
@@ -70,7 +82,7 @@ a:hover {
       <div id="header_top">
           <div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
               <div id="header_top_text">
-                <a href="{:U('/Public/Logout/')}" id="header_top_text">退出</a>
+                <a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
                 <a href="#" id="header_top_text">{$name}</a>
               </div>
               <div id="tubiao">
