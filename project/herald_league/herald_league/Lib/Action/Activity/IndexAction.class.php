@@ -29,7 +29,7 @@ class IndexAction extends Action {
         import('ORG.Util.Date');
         $activity = D('Activity');
 
-        $recent = $activity->recent(5);//上面的近期活动
+        $recent = $activity->recent(5);
         $date = new Date (date('Y-m-d'));
         foreach($recent as $n=>$r)
         {
@@ -49,6 +49,7 @@ class IndexAction extends Action {
         /*主体部分的活动*/
         $activities = $activity->getActivityByLimit();//默认选取10个
         $activities = $this->dealAttention($activities,$uid);
+        $this->dealpost($activities);
         $this->assign('activities',$activities);
         /*热门社团*/
         $leagueInfo=D('LeagueInfo');
@@ -101,6 +102,7 @@ class IndexAction extends Action {
             $this->ajaxReturn("");
         else
         {
+            $this->dealpost($activities);
             $activities = $this->dealAttention($activities,$uid);
             foreach($activities as $k=>$v)
             {
@@ -142,6 +144,20 @@ HTML;
 
 
             $this->ajaxReturn($result);
+        }
+    }
+
+    /**将无效的海报替换为默认
+     * @param $acticity
+     */
+    private function dealpost(&$activity)
+    {
+        foreach($activity as &$v)
+        {
+            if(substr($v['activity_post_add'],-4,1)!='.')
+                $v['activity_post_add'] .='.jpg';
+            if(!file_exists('../Uploads/LeaguePost/Fall/'.$v['activity_post_add']))
+                $v['activity_post_add']='default.jpg';
         }
     }
 }

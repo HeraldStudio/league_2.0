@@ -218,4 +218,17 @@ class ActivityModel extends Model
         }
         return $result;
     }
+
+    public function getActivityState( $activityid )
+    {
+        $activityinfo = $this -> getActivityInfoById( $activityid );
+        /*判断活动状态*/
+        if( strtotime($activityinfo['start_time']) > time() )
+            return '未开始';
+        elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time())
+            return '正在进行';
+        else
+            return '已结束';
+    }
+
 }

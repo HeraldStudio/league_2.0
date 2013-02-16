@@ -158,7 +158,7 @@ class UploadFile {//类定义开始
                 $savePath	=	base64_decode($savePath);
             }else{
                 // 尝试创建目录
-                if(!mkdir($savePath)){
+                if(!mkdir($savePath,0777,true)){//xie修改，递归建立目录
                     $this->error  =  '上传目录'.$savePath.'不存在';
                     return false;
                 }

@@ -36,9 +36,32 @@
                 if($activity->create())
                 {
                     $lg=$this->getLeagueInfo();
-                    $activity->activity_release_time=date("Y-m-d");
+                    $time = date('Y-m-d');
+                    $activity->activity_release_time=$time;
                     $activity->league_id=$lg['id'];
                     $activity->activity_org_name=$lg['name'];
+
+                    import('ORG.Net.UploadFile');
+                    $upload = new UploadFile();
+                    $upload ->savePath ="../Uploads/LeaguePost/Original/$lg[id]/$time/";
+                    $upload->allowExts = array('jpg','gif','png','jpeg');
+                    $upload->thumb = true;
+                    if(!is_dir("../Uploads/LeaguePost/Fall/$lg[id]/$time"))
+                        mkdir("../Uploads/LeaguePost/Fall/$lg[id]/$time",0777,true);
+                    $upload->thumbPrefix="Fall/$lg[id]/$time/";
+                    $upload->thumbMaxWidth = '190';
+                    $upload->thumbMaxHeight = '1000';
+                    $upload->thumbPath='../Uploads/LeaguePost/';
+                    $upload->thumbRemoveOrigin = false;
+                    if(!$upload->upload())
+                        $this->error($upload->getErrorMsg());
+                    else
+                    {
+                        $uploadInf = $upload->getUploadFileInfo();var_dump($uploadInf[0]);
+                        $name = $uploadInf[0][savename];
+                        $activity->activity_post_add="$lg[id]/$time/$name";
+                    }
+
                     $activityID=$activity->add();
                     if($activityID!=false)
                     {
@@ -49,6 +72,8 @@
                         {
                             $classActivity->addClass($activityID,$v);
                         }
+
+
                         $this->success('');
                     }
 
