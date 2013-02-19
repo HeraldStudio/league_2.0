@@ -207,7 +207,7 @@ a.bq:hover{
 	-webkit-border-radius:10px;
 	}
 #search_image{
-    background:url(../images/search.png);
+    background:url(../Images/search.png);
 	background-repeat:no-repeat;
 	width:23px;
 	height:20px;
@@ -230,7 +230,7 @@ a.bq:hover{
 .hot_img{
     height:16px;
 	width:17px;
-	background:url(../images/hot.png);
+	background:url(../Images/hot.png);
 	background-repeat:no-repeat;
 	float:left;
 	margin-top:5px;
@@ -303,7 +303,7 @@ a.more_text:hover{
 .attention_img{
     height:15px;
 	width:15px;
-	background:url(../images/attention.png);
+	background:url(../Images/attention.png);
 	background-repeat:no-repeat;
 	float:left;
 	}

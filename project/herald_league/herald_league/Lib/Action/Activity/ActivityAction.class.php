@@ -71,8 +71,12 @@ class ActivityAction extends Action
             }
             else
             {
-                foreach ($attender as $a)
+                foreach ($attender as &$a)
                 {
+                    if( !file_exists ('../Uploads/UserAvatar/'.$a['user_avatar_add']) )
+                    {
+                        $a['user_avatar_add'] = 'default.jpg';
+                    }
                     if($a['id']==$uid)
                     {
                         $this->assign('isattended',1);
@@ -82,12 +86,12 @@ class ActivityAction extends Action
                     {
                         $this->assign('isattended',0);
                     }
+
                 }
             }
             $class    = $activity->getClass($activityID);
             $this->assign('class',$class);
             $this->assign('attender',$attender);
-
             if(date("Y-m-d",strtotime($activityInf['start_time']))<date("Y-m-d"))
                 $this->assign('isstart',1);
             if(date("Y-m-d",strtotime($activityInf['end_time']))<date("Y-m-d"))

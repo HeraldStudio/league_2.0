@@ -6,9 +6,8 @@
  {
     public function index()
     {
-        cookie('HERALD_SESSION_ID',null);
+        setcookie('HERALD_SESSION_ID',null);
         session('league',null);
-        //$this->redirect(U('/Activity/Index'));
-        echo "succes";
+        $this->ajaxreturn( 'succes');
     }
  }

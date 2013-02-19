@@ -9,6 +9,11 @@
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+        frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 <script type="text/javascript">
 
   function changeAttention(activityid,action,key)
@@ -57,7 +62,7 @@
             success:function(){
             $("#islogin").hide();
             $("#notlogin").show();
-            location.reload();//todo 
+            location.reload();//todo
         }})
     }
 </script>
@@ -92,7 +97,7 @@ a:hover {
           </div>
           <div id="notlogin" <if condition="$islogin eq 1"> style="display:none"</if> >
               <div id="header_top_text">
-                <a href="{:U('/League/Login/LoginTest')}" id="login">登录</a>
+                <a href="{:U('/User/Login/')}" target="MyGreyFrame" id="login">登录</a>
               </div>
               <div id="tubiao">
                 <a href="#" id="shouye"></a>
