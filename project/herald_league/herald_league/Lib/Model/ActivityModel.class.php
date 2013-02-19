@@ -158,8 +158,8 @@ class ActivityModel extends Model
      */
     public function recent($limit)
     {
-       $map['end_time']=array('egt',date('Y-m-d'));
-       return $this->where($map)->order('start_time')->limit($limit)->select();
+       //$map['end_time']=array('egt',date('Y-m-d'));
+       return $this->order('start_time')->limit($limit)->select();
     }
 
     /*

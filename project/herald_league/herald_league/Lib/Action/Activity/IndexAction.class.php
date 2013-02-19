@@ -28,14 +28,14 @@ class IndexAction extends Action {
         /* 上面大海报的近期活动*/
         import('ORG.Util.Date');
         $activity = D('Activity');
-
         $recent = $activity->recent(5);
         $date = new Date (date('Y-m-d'));
         foreach($recent as $n=>$r)
         {
-            $recent[$n]['isstart']=  $date->dateDiff($r['start_time']); //与当前日期比较判断是否已经开始
+            $recent[$n]['isstart'] =  $date->dateDiff($r['start_time']); //与当前日期比较判断是否已经开始
+            $recent[$n]['isend'] =$date->dateDiff($r['end_time']);
         }
-            
+        $recent =$this->dealAttention($recent,$uid);
         $this->assign('recent',$recent);
         /* 热门标签*/
         $class = D('ActivityClass');
