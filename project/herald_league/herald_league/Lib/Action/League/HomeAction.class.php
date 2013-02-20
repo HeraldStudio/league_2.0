@@ -45,7 +45,8 @@ class HomeAction extends Action
 
 		/*获取活动信息*/
 		$Activity = D('Activity');
-		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid )[0];
+		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid );
+        $this -> activity =$this->activity[0];
 		$this -> assign('league', $league);
 
 		/*活动标签*/
@@ -59,7 +60,7 @@ class HomeAction extends Action
 			'isleague' => 1
 		 );
 
-		$this -> attentionstate = $Attention -> getAttentionState( $data );
+		$this -> attentionstate = $Attention -> getAttentionState( $data );trace('aa',$this -> attentionstate);
 		$this -> display();
     }
     /*

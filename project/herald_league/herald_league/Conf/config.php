@@ -34,8 +34,8 @@ return array(
 	
 	// 模板引擎要自动替换的字符串，必须是数组形式。
 	'TMPL_PARSE_STRING'     => array(
-		'__Public__' =>  'http://localhost/league_2.0/project/herald_league/Public',
-		'__Uploads__' => 'http://localhost/league_2.0/project/herald_league/Uploads',
+		'__Public__' =>  __ROOT__.'/Public',
+		'__Uploads__' =>  __ROOT__.'/Uploads',
 		//'__HeraldLeague__' => 'http://herald.seu.edu.cn/herald_league',
 	),
     'DEFAULT_FILTER'=>'strip_tags,htmlspecialchars,htmlencode',//1.21增加 默认的过滤器

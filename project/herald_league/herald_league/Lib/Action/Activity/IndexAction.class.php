@@ -17,7 +17,10 @@ class IndexAction extends Action {
         {
             $this->assign('islogin',1);
             $this->assign('name',$heraldSession->getUserName());
-            $uid=$heraldSession->getUserID();
+            if($heraldSession->getUserType()==1)
+                $uid=$heraldSession->getUserID();
+            else
+                $uid =0;
         }
         else
         {
