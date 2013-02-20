@@ -214,6 +214,8 @@ a.bq:hover{
 	margin-left:-25px;
 	margin-top:13px;
 	float:left;
+	border: 0;
+	text-indent:-3000px;
 	}
 .hot{
     float:left;

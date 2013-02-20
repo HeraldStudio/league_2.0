@@ -52,7 +52,7 @@ a:hover {
 			  <div id="place" class="information">
 			    <div id="place_img">
 				</div>
-				<div id="place_text">地点:<?php echo ($activity['activity_place']); ?>
+				<div id="place_text">地点:<?php echo ($activity['activity_place']); echo ($isactivityempty); ?>
 				</div>
 			  </div>
 			  <div id="host" class="information">

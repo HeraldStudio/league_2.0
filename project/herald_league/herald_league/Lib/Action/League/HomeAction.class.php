@@ -13,6 +13,12 @@
 
 class HomeAction extends Action
 {	
+	private $pagetitle = array(
+		'dt' => '大厅',
+		'zls' => '资料室',
+		'lyb' => '留言版',
+		'yxg' => '影像馆'
+		);
 	/*
 
 	函数功能：社团空间首页控制函数
@@ -26,13 +32,6 @@ class HomeAction extends Action
 	更新日期：2013/01/16
 	
 	*/
-	private $pagetitle = array(
-		'dt' => '大厅',
-		'zls' => '资料室',
-		'lyb' => '留言版',
-		'yxg' => '影像馆'
-		);
-
     public function index()
 	{
 		/*获取URL参数*/
@@ -44,19 +43,10 @@ class HomeAction extends Action
 		$Attention = D('Attention');
 		$league = $League -> getLeagueInfo ( $leagueid );
 
-		
-		
 		/*获取活动信息*/
 		$Activity = D('Activity');
-		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid );
-		//print_r($activity);
-		//echo $this -> activityname = $activity[2]['activity_name'];
-
-		//$this -> assign('activity', $activity);
+		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid )[0];
 		$this -> assign('league', $league);
-
-		//if($this -> activityid == null)
-        	//$this -> activityid = 0;
 
 		/*活动标签*/
 		$class = $Activity->getClass($this -> activity['id']);
@@ -70,20 +60,21 @@ class HomeAction extends Action
 		 );
 
 		$this -> attentionstate = $Attention -> getAttentionState( $data );
-
-		/*搜索框*/
-		import('@.ORG.Search');
-
-		$search = new Search();
-		if(!empty($_POST['search']))
-		{
-			$result = $search -> getSearchResult($_POST['search']);
-			print_r($result);
-		}
-
 		$this -> display();
     }
+    /*
 
+	函数功能：社团资料室控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/02/20
+	
+	*/
     public function infoRoom()
     {
     	/*获取URL参数*/
@@ -98,32 +89,6 @@ class HomeAction extends Action
 
 		$this -> display();
     }
-	
-	/*
-
-	函数功能：社团信息页面控制函数(此函数无用)
-	
-	参数信息：无参数
-
-	  返回值：无返回值
-			  
-	    作者：Tairy
-	
-	更新日期：2013/01/16
-	
-	*/
-	
-	public function information()
-	{
-		/*获取URL参数*/
-		$leagueid = intval($this -> _param('leagueid'));
-		
-		/*获取社团信息*/
-		$Information = D('League_info');
-		$information = $Information -> where('id ='.$leagueid) -> select();
-		$this -> assign('information', $information);
-		$this ->display();
-	}
 	
 	/*
 
@@ -422,30 +387,42 @@ class HomeAction extends Action
 		$this -> leagueid = intval($this -> _param('leagueid'));
 		$this -> activityid = intval($this -> _param('actid'));
 
+		if($this -> leagueid == 0)
+		{
+			echo "<script>history.go(-1);</script>";
+			return ;
+		}
+
 		$League = D('LeagueInfo');
 		$league = $League -> getLeagueInfo ( $this -> leagueid );
 		$this -> assign( 'league', $league );
 
 		switch($this -> gettitle)
 		{
-			case dt:
+			case 'dt':
 			/*获取活动信息*/
 			$Activity = D('Activity');
 			$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
-			if(!$this -> activityid)
+			if(!empty($activity))
+			{
+				$this -> isactivityempty = false;
+				if(!$this -> activityid)
 				$this -> activityid = $activity[0]['id'];
-			$this -> assign('activity', $activity);
 
-			/*获取关注信息*/
-			$Attention = D('Attention');
-			$User = D("User");
-
-			$attention = $Attention -> getActivityAttention( $activity[0]['id'] );
-			$userinfo = $User -> getUserInfo( $attention );
-			$this -> assign( 'userinfo', $userinfo );
-			$this -> assign('activity', $activity);
+				/*获取活动的关注信息*/
+				$Attention = D('Attention');
+				$User = D('User');
+				$attention = $Attention -> getActivityAttention( $this -> activityid );
+				$userinfo = $User -> getUserInfo( $attention );
+				$this -> assign( 'userinfo', $userinfo );
+				$this -> assign('activity', $activity);
+			}
+			else
+			{
+				$this -> isactivityempty = true;
+			}
 			break;
-			case zls:
+			case 'zls':
 			/*获取关注信息*/
 			$Attention = D('Attention');
 			$User = D("User");
@@ -454,12 +431,12 @@ class HomeAction extends Action
 			$userinfo = $User -> getUserInfo( $attention );
 			$this -> assign( 'userinfo', $userinfo );
 			break;
-			case lyb:
+			case 'lyb':
 			break;
-			case yxg:
+			case 'yxg':
 			break;
 		}
-		
+
 		/*小标签内容*/
 		$Attention = D('Attention');
 		$this -> attentionnum = $Attention -> getAttentionLeagueNum( $this -> leagueid );

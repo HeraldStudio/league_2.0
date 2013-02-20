@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
 <script src="__Public__/Js/jquery.tools.min.js"></script>  
   <!-- standalone page styling (can be removed) -->
-<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
-<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
+<link href="__Public__/Css/standalone.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/tabs.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="__Public__/Css/tabs-panes.css" rel="stylesheet" type="text/css" media="screen" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -44,11 +44,10 @@ a:hover {
 		</div>
 	  </div>
 	  <div id="search">
-	    <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-	      <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+			<input type = "submit" value = "搜索" id="search_image">
 		</form>
-		<a href="#" id="search_image">
-		</a>
 	  </div>
 	  <div id="message">
 	    <a href="#" id="message_image"></a>
@@ -256,7 +255,7 @@ a:hover {
 		</div>
 	  </div>
 	</div>
-  </div>
+  	</div>
   <div id="footer">
 	<div id="footer_link">
 	  <a href="#" id="f_about" class="link">关于我们</a>
@@ -267,7 +266,7 @@ a:hover {
       <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
 	</div>
   </div>
-<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+<a id="toTop" href="javascript:void(0);" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
 <script>
 // perform JavaScript after the document is scriptable.
 $(function() {
@@ -277,62 +276,62 @@ $(function() {
 </script>
 <script type="text/javascript">
 // perform JavaScript after the document is scriptable.
-	    $(function() {
-		for(var i=3;i<10;i++){
-        // setup ul.tabs to work as tabs for each div directly under div.panes
-		$("ul.tabs2").tabs("#bottom"+i);
-	    $("ul.tabs2").tabs("#middle"+i);
-	    $("ul.tabs2").tabs("#username"+i);
-	    $("ul.tabs2").tabs("#top"+i);
-	    $("ul.tabs2").tabs("#remark_content"+i);
-	    $("ul.tabs2").tabs("#user_img"+i);
-        $("ul.tabs2").tabs("#remark"+i);
-	    $("ul.tabs2").tabs("div.panes2 > div");
-		}
+    $(function() {
+	for(var i=3;i<10;i++){
+    // setup ul.tabs to work as tabs for each div directly under div.panes
+	$("ul.tabs2").tabs("#bottom"+i);
+    $("ul.tabs2").tabs("#middle"+i);
+    $("ul.tabs2").tabs("#username"+i);
+    $("ul.tabs2").tabs("#top"+i);
+    $("ul.tabs2").tabs("#remark_content"+i);
+    $("ul.tabs2").tabs("#user_img"+i);
+    $("ul.tabs2").tabs("#remark"+i);
+    $("ul.tabs2").tabs("div.panes2 > div");
+	}
+    });
+ $(function() {
+	for(var i=3;i<10;i++){
+    // setup ul.tabs to work as tabs for each div directly under div.panes
+	$("ul.tabs2").tabs("#abottom"+i);
+    $("ul.tabs2").tabs("#amiddle"+i);
+    $("ul.tabs2").tabs("#activityname"+i);
+    $("ul.tabs2").tabs("#atop"+i);
+    $("ul.tabs2").tabs("#activity_content"+i);
+	$("ul.tabs2").tabs("#clubname"+i);
+    $("ul.tabs2").tabs("#club_img"+i);
+	$("ul.tabs2").tabs("#left"+i);
+    $("ul.tabs2").tabs("#activity"+i);
+    $("ul.tabs2").tabs("div.panes2 > div");
+	}
     });
 	 $(function() {
-		for(var i=3;i<10;i++){
-        // setup ul.tabs to work as tabs for each div directly under div.panes
-		$("ul.tabs2").tabs("#abottom"+i);
-	    $("ul.tabs2").tabs("#amiddle"+i);
-	    $("ul.tabs2").tabs("#activityname"+i);
-	    $("ul.tabs2").tabs("#atop"+i);
-	    $("ul.tabs2").tabs("#activity_content"+i);
-		$("ul.tabs2").tabs("#clubname"+i);
-	    $("ul.tabs2").tabs("#club_img"+i);
-		$("ul.tabs2").tabs("#left"+i);
-        $("ul.tabs2").tabs("#activity"+i);
-	    $("ul.tabs2").tabs("div.panes2 > div");
-		}
+	for(var i=3;i<10;i++){
+    // setup ul.tabs to work as tabs for each div directly under div.panes
+	$("ul.tabs2").tabs("#replay_bottom"+i);
+	$("ul.tabs2").tabs("#bottom_"+i);
+    $("ul.tabs2").tabs("#middle_"+i);
+    $("ul.tabs2").tabs("#username_"+i);
+    $("ul.tabs2").tabs("#top_"+i);
+	$("ul.tabs2").tabs("#remark_time_"+i);
+    $("ul.tabs2").tabs("#remark_content_"+i);
+    $("ul.tabs2").tabs("#user_img_"+i);
+    $("ul.tabs2").tabs("#remark_"+i);
+	$("ul.tabs2").tabs("#bbottom"+i);
+    $("ul.tabs2").tabs("#bmiddle"+i);
+    $("ul.tabs2").tabs("#bactivityname"+i);
+    $("ul.tabs2").tabs("#btop"+i);
+    $("ul.tabs2").tabs("#liuyan_content"+i);
+	$("ul.tabs2").tabs("#huifu"+i);
+	$("ul.tabs2").tabs("#huodong"+i);
+	$("ul.tabs2").tabs("#zai"+i);
+	$("ul.tabs2").tabs("#bclubname"+i);
+    $("ul.tabs2").tabs("#bclub_img"+i);
+	$("ul.tabs2").tabs("#bleft"+i);
+    $("ul.tabs2").tabs("#liuyan"+i);
+    $("ul.tabs2").tabs("div.panes2 > div");
+	}
     });
-		 $(function() {
-		for(var i=3;i<10;i++){
-        // setup ul.tabs to work as tabs for each div directly under div.panes
-		$("ul.tabs2").tabs("#replay_bottom"+i);
-		$("ul.tabs2").tabs("#bottom_"+i);
-	    $("ul.tabs2").tabs("#middle_"+i);
-	    $("ul.tabs2").tabs("#username_"+i);
-	    $("ul.tabs2").tabs("#top_"+i);
-		$("ul.tabs2").tabs("#remark_time_"+i);
-	    $("ul.tabs2").tabs("#remark_content_"+i);
-	    $("ul.tabs2").tabs("#user_img_"+i);
-        $("ul.tabs2").tabs("#remark_"+i);
-		$("ul.tabs2").tabs("#bbottom"+i);
-	    $("ul.tabs2").tabs("#bmiddle"+i);
-	    $("ul.tabs2").tabs("#bactivityname"+i);
-	    $("ul.tabs2").tabs("#btop"+i);
-	    $("ul.tabs2").tabs("#liuyan_content"+i);
-		$("ul.tabs2").tabs("#huifu"+i);
-		$("ul.tabs2").tabs("#huodong"+i);
-		$("ul.tabs2").tabs("#zai"+i);
-		$("ul.tabs2").tabs("#bclubname"+i);
-	    $("ul.tabs2").tabs("#bclub_img"+i);
-		$("ul.tabs2").tabs("#bleft"+i);
-        $("ul.tabs2").tabs("#liuyan"+i);
-	    $("ul.tabs2").tabs("div.panes2 > div");
-		}
-    });
-</script>
+   </script>
    <script type="text/javascript">
    window.onscroll=function()
    {
@@ -381,5 +380,6 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-<body>
+</div>
+</body>
 </html>

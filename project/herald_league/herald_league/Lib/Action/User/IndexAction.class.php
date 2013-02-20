@@ -37,14 +37,17 @@ class IndexAction extends Action
 		$this -> assign('userinfo', $userinfo );
 		
 		/*get attention league information*/
-		$leagueinfo = $this -> attentionLeague( $userid )[0];
-		$lastactivity = $this -> attentionLeague( $userid )[1];
+		$result = $this -> attentionLeague( $userid );
+		$leagueinfo = $result[0];
+		$lastactivity = $result[1];
 		$this -> assign ( 'leagueinfo', $leagueinfo );
 		$this -> assign( 'lastactivity', $lastactivity );
 
 		/*get attention activity information*/
 		$activityinfo = $this -> attentionActivity ( $userid );
 		$this -> assign ( 'activityinfo', $activityinfo );
+
+		//print_r($lastactivity);
 		$this -> display();
     }
 
@@ -170,13 +173,11 @@ class IndexAction extends Action
 
     	foreach ( $attentionleague as $attentionleagues ) 
     	{	
-    		
     		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
     		$leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
     		$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'], 4 );
     	}
-    	//print_r($lastactivity);
-    	return array( $leagueinfo, $lastactivity);
+    	return array( $leagueinfo, $lastactivity );
     }
     /*
 
@@ -193,7 +194,7 @@ class IndexAction extends Action
 	*/
     public function attentionActivity ( $userid )
     {
-		$Attention = D("Attention");
+		$Attention = D('Attention');
 		$Activity = D('Activity');
 		$League = D('LeagueInfo');
 
@@ -201,7 +202,7 @@ class IndexAction extends Action
 		
 		foreach ( $attentionactivity as $attentionactivitys ) 
     	{
-    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );
+    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] )[0];
     		$activityinfo[$attentionactivitys['id']]['activitystate'] = $Activity -> getActivityState( $attentionactivitys['attended_id'] );
     		$activityinfo[$attentionactivitys['id']]['attentionnum'] = $Attention -> getAttentionActivityNum($attentionactivitys['attended_id']);  
     		$activityinfo[$attentionactivitys['id']]['leagueavatar'] = $League -> getleagueAvaterAdd( $activityinfo[$attentionactivitys['id']]['league_id']);

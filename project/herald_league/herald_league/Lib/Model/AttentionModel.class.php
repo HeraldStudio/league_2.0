@@ -155,33 +155,71 @@ class AttentionModel extends Model
     }
     /*
 
-    函数功能：获取当前用户与当前社团的关注状态
+    函数功能：获取当前社团的关注信息
     
-    参数信息：用户的id
+    参数信息：社团的id
 
-      返回值：关注返回true 未关注返回false
+      返回值：返回包含关注信息的一个二维数组
 
-        作者： xie
+        作者： tairy
     
-    更新日期：2013/01/17
+    更新日期：2013/02/17
     
     */
     public function getLeagueAttention( $leagueid )
     {
         return $this -> where ('attended_id = '.$leagueid. ' AND isleague = 1') -> select();
     }
+    /*
 
+    函数功能：获取当前活动的关注信息
+    
+    参数信息：活动的id
+
+      返回值：返回包含关注信息的一个二维数组
+
+        作者： tairy
+    
+    更新日期：2013/02/17
+    
+    */
     public function getActivityAttention( $activityid )
     {
         return $this -> where ('attended_id = '.$activityid. ' AND isleague = 0') -> select();
     }
+    /*
 
+    函数功能：获取社团关注者数量
+    
+    参数信息：社团的id
+
+      返回值：返回关注的数量
+
+        作者： tairy
+    
+    更新日期：2013/02/17
+    
+    */
     public function getAttentionLeagueNum( $attendedid )
     {
         return $this -> where('attended_id = '.$attendedid.' AND isleague = 1') -> count();
     }
+    /*
+
+    函数功能：获取当前活动的关注信息
+    
+    参数信息：社团的id
+
+      返回值：返回关注的数量
+
+        作者： tairy
+    
+    更新日期：2013/02/17
+    
+    */
     public function getAttentionActivityNum( $attendedid )
     {
         return $this -> where('attended_id = '.$attendedid.' AND isleague = 0') -> count();
     }
 }
+?>

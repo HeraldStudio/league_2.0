@@ -55,7 +55,7 @@ a{
 	padding-top:4px;
 	float:left;
 	}
-#search input{
+#search_text{
     width:130px;
 	height:17px;
 	float:left;
@@ -67,6 +67,8 @@ a{
 	height:20px;
 	margin-left:-25px;
 	float:left;
+	border: 0;
+	text-indent:-3000px;
 	}
 #message{
     float:left;

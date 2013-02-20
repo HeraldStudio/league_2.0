@@ -1,0 +1,166 @@
+﻿@charset "utf-8";
+* {
+   margin: 0px;
+   padding: 0px;
+   font-size:14px;
+   font-family:"微软雅黑", "宋体", serif
+  }
+body 
+{
+	text-align:center;	
+}
+a{
+    text-decoration:none;
+	}
+#main {
+
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;	
+}
+#main_body{
+	overflow:hidden;
+	position:relative;
+	background-color:#ecebeb;
+	padding-bottom:50px;
+	}
+#main_body_inner{
+    margin-left:40px;
+	margin-top:30px;
+	margin-right:40px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	background-color:#fff;
+	border-color:#cccccc #cccccc #cccccc #cccccc;
+	}
+#inner_top{
+    width:880px;
+	height:120px;
+	}
+#top_inner{
+    float:left;
+	margin-left:50px;
+	margin-right:50px;
+	width:778px;
+	height:120px;
+	border-bottom:solid #3ad9d4 thin;
+}
+#search_logo{
+    height:97px;
+	width:98px;
+	margin-left:70px;
+	margin-top:24px;
+	background:url(../Images/search_logo.png);
+	background-repeat:no-repeat;
+	float:left;
+}
+#search2{
+    float:left;
+	padding-left:50px;
+	padding-top:50px;
+	}
+#search2 input{
+    width:500px;
+	height:25px;
+	float:left;
+}
+form{
+    float:left;
+}
+#search_btn{
+    height:27px;
+	width:27px;
+	margin-left:25px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	background-color:#fff;
+	border-color:#cccccc #cccccc #cccccc #cccccc;
+	text-align:center;
+}
+#search_image2{
+    background:url(../Images/search.png);
+	background-repeat:no-repeat;
+	width:23px;
+	height:20px;
+	float:left;
+	margin-top:4px;
+	margin-left:2px;
+	}
+#inner_bottom{
+    float:left;
+}
+#bottom_left{
+    width:200px;
+	float:left;
+}
+#bottom_right{
+    width:680px;
+	float:left;
+	padding-top:50px;
+}
+.remark{
+    float:left;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-left:50px;
+	width:558px;
+	border-bottom:1px solid #999;
+}
+.user_img{
+    height:50px;
+	width:50px;
+	background-color:#e2f4f4;
+	float:left;
+}
+.remark_content{
+    float:left;
+	padding-left:20px;
+	width:450px;
+}
+.top{
+    float:left;
+	width:450px;
+	}
+.username{
+    float:left;
+	color:#39bebc;
+	width:450px;
+	line-height:20px;
+	font-weight:bold;
+	font-size:16px;
+	}
+.middle{
+    float:left;
+	width:450px;
+	padding-top:5px;
+	}
+.panes3 div ul li{
+	height:20px;
+	padding-top:5px;
+	text-align:left;
+	list-style-position:inside;
+	list-style-type:none;
+}
+.panes3 div ul li a{
+	color:#5b5b5b;
+	line-height:20px;
+	text-align:left;
+	font-family:"微软雅黑", "宋体", serif;
+}
+.bottom{
+    float:left;
+}
+.left{
+    width:50px;
+	float:left;
+}
+.clubname{
+    float:left;
+	color:#39bebc;
+	line-height:20px;
+	font-weight:bold;
+	font-size:12px;
+	}

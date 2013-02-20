@@ -138,3 +138,75 @@ ul.tabs2 a.xl.current { background-position: 0 -62px; }
 .panes2 .pane {
     display:none;
 }
+/* root element for tabs  */
+ul.tabs3 {
+    list-style:none;
+	float:left;
+	padding-left:80px;
+	padding-top:50px;
+	width:100px;
+}
+
+/* single tab */
+ul.tabs3 li {
+    float:left;
+	text-align:center;
+    text-indent:0;
+    padding:0;
+	width:100px;
+	height:40px;
+	line-height:30px;
+    list-style-image:none !important;
+}
+
+/* link inside the tab. uses a background image */
+ul.tabs3 a {
+    font-size:14px;
+    display:block;
+    color:#000;
+    position:relative;
+	font-weight:bold;
+}
+
+ul.tabs3 a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs3 a:hover {
+    background-position: -420px -31px;
+    color:#999;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs3 a.current, ul.tabs3 a.current:hover, ul.tabs3 li.current a {
+    background-position: -420px -62px;
+    cursor:default !important;
+    color:#fff !important;
+	background-color:#3ad9d4;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+ul.tabs3 a.s { background-position: -553px 0; width:81px; }
+ul.tabs3 a.s:hover { background-position: -553px -31px; }
+ul.tabs3 a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.tabs3 a.l { background-position: -248px -0px; width:174px; }
+ul.tabs3 a.l:hover { background-position: -248px -31px; }
+ul.tabs3 a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.tabs3 a.xl { background-position: 0 -0px; width:248px; }
+ul.tabs3 a.xl:hover { background-position: 0 -31px; }
+ul.tabs3 a.xl.current { background-position: 0 -62px; }
+
+
+/* initially all panes are hidden */
+.panes3 .pane {
+    display:none;
+}

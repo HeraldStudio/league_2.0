@@ -41,10 +41,42 @@ class LeagueInfoModel extends Model
 		return $league;
     }
 
+     /*
+
+    函数功能：获取社团头像地址
+    
+    参数信息：社团的id
+
+      返回值：头像地址
+              
+        作者：Tairy
+    
+    更新日期：2013/02/17
+    
+    */
+
     public function getleagueAvaterAdd( $leagueid )
     {
         $avataradd = $this -> getFieldById( $leagueid, 'avater_address');
         return $avataradd;
+    }
+    /*
+
+    函数功能：获取社团名称
+    
+    参数信息：社团的id
+
+      返回值：社团名称
+              
+        作者：Tairy
+    
+    更新日期：2013/02/17
+    
+    */
+    public function getleagueName( $leagueid )
+    {
+        $leaguename = $this -> getFieldById( $leagueid, 'league_name');
+        return $leaguename;
     }
     /*
 
