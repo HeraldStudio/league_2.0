@@ -1,3 +1,4 @@
+
 <?php
 /*
 
@@ -157,8 +158,8 @@ class ActivityModel extends Model
      */
     public function recent($limit)
     {
-       $map['end_time']=array('egt',date('Y-m-d'));
-       return $this->where($map)->order('start_time')->limit($limit)->select();
+       //$map['end_time']=array('egt',date('Y-m-d'));
+       return $this->order('start_time')->limit($limit)->select();
     }
 
     /*
@@ -217,23 +218,17 @@ class ActivityModel extends Model
         }
         return $result;
     }
-    /*
-     * 功能：获取活动状态
-     * 输入：活动id
-     * 返回: 活动状态
-     * 作者：tairy
-     * 日期：2013.2.17
-     */
+
     public function getActivityState( $activityid )
     {
-        $starttime = $this -> getFieldById($activityid,'start_time');
-        $endtime = $this -> getFieldById($activityid,'end_time');
-        if( strtotime($starttime) > strtotime(date("Y-m-d")) )
+        $activityinfo = $this -> getActivityInfoById( $activityid );
+        /*判断活动状态*/
+        if( strtotime($activityinfo['start_time']) > time() )
             return '未开始';
-        elseif (strtotime($starttime) <= strtotime(date("Y-m-d")) && strtotime($endtime) >= strtotime(date("Y-m-d"))) 
+        elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time())
             return '正在进行';
-        elseif(strtotime($endtime) < strtotime(date("Y-m-d")))
+        else
             return '已结束';
     }
+
 }
-?>

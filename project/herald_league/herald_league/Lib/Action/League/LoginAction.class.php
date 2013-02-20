@@ -5,7 +5,7 @@
  */
  class LoginAction extends Action
 {
-    public function Login()
+    public function index()
     {
         $userName=$this->_param('username');
         $passWord=$this->_param('password');
@@ -21,8 +21,5 @@
             $this->error($result);
         }
     }
-    public function LoginTest()
-    {
-        $this->display();
-    }
+
 }

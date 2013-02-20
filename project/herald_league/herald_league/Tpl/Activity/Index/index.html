@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
@@ -8,7 +8,12 @@
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+        frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 <script type="text/javascript">
 
   function changeAttention(activityid,action,key)
@@ -49,6 +54,18 @@
         })
     }
 </script>
+<script type="text/javascript">
+    function logout()
+    {
+        $.ajax({
+            url:'{:U('/Public/Logout/')}',
+            success:function(){
+            $("#islogin").hide();
+            $("#notlogin").show();
+            location.reload();//todo
+        }})
+    }
+</script>
 <style type="text/css">
 a:link {
     color: #cccccc;;
@@ -70,7 +87,7 @@ a:hover {
       <div id="header_top">
           <div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
               <div id="header_top_text">
-                <a href="{:U('/Public/Logout/')}" id="header_top_text">退出</a>
+                <a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
                 <a href="#" id="header_top_text">{$name}</a>
               </div>
               <div id="tubiao">
@@ -80,7 +97,7 @@ a:hover {
           </div>
           <div id="notlogin" <if condition="$islogin eq 1"> style="display:none"</if> >
               <div id="header_top_text">
-                <a href="{:U('/League/Login/LoginTest')}" id="login">登录</a>
+                <a href="{:U('/User/Login/')}" target="MyGreyFrame" id="login">登录</a>
               </div>
               <div id="tubiao">
                 <a href="#" id="shouye"></a>
@@ -114,15 +131,21 @@ a:hover {
                 <foreach name="recent" item="r">
                     <li>
                     <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
-                    <h1>{$r.activity_name}</h1>
-                    </br>
+                    <h1 class="title">{$r.activity_name}</h1>
                     <p>
                         <if condition="$r.isstart gt 0">
                             未开始
                         <else/>
-                            进行中
+                            <if condition ="$r.isend gt 0">
+                                进行中
+                            <else/>
+                                已结束
+                            </if>
                         </if>
                     </p>
+
+                        <div href="javascript:;"  id="attention_-{$key}_isattended" <if condition ="$r.isattended eq 1">style="display:none"</if> ><a onclick="javascript:changeAttention({$r.id},'add',{-$key})"><p class="guanzhu">+关注</p> </a></div>
+                        <div href="javascript:;"  id="attention_-{$key}_isattended" <if condition ="$r.isattended eq 0">style="display:none"</if> ><a onclick="javascript:changeAttention({$r.id},'del',{-$key})"><p class="guanzhu">取消关注</p> </a></div>
                     <p>时间:{$r.start_time}---{$r.end_time}</p>
                     <p>地点：{$r.activity_place|default=""}</p>
                     <p>联系方式:{$r.contact_info}</p>

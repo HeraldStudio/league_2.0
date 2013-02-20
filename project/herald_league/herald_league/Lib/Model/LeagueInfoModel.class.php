@@ -195,6 +195,8 @@ class LeagueInfoModel extends Model
             $result=$this->where($condition)->find();
             if($result!=null && $result!=false)
             {
+                $leagueID = $result['id'];
+                $this->where('id=%d',$leagueID)->setField('last_login_time',date('Y-m-d'));
                 return $result;
             }
             return null;

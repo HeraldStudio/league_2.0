@@ -40,9 +40,9 @@
     width:60px;
 	}
 #search{
-    padding-left:280px;
 	padding-top:4px;
-	float:left;
+	float:right;
+    margin-right: 10px;
 	}
 #search_text{
     width:130px;
@@ -60,8 +60,8 @@
 	text-indent:-3000px;
 	}
 #message{
-    float:left;
-	padding-left:15px;
+    float:right;
+	padding-right:15px;
 	padding-top:6px;
 	}
 #message_image{
@@ -71,8 +71,8 @@
 	background-repeat:no-repeat;
 	}
 #love{
-    float:left;
-	padding-left:10px;
+    float:right;
+	padding-right:10px;
 	padding-top:6px;
 	}
 #love_image{
@@ -84,14 +84,14 @@
 #user{
     text-align:center;
 	line-height:30px;
-	padding-left:15px;
-	float:left;
+	padding-right:15px;
+	float:right;
   }
 #exit{
     text-align:center;
 	line-height:30px;
-	padding-left:15px;
-	float:left;
+	padding-right:15px;
+	float:right;
     }
 #user a:hover{
     background-color:#fff;

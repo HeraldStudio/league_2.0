@@ -21,12 +21,12 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<form action = "{:U('/Activity/AddActivity/Deal')}" method="POST">
+<form action = "{:U('/Activity/AddActivity/Deal')}" method="POST" enctype="multipart/form-data">
     <input type="text" name="activity_name">活动名称 </input><br>
     <input type="text" name="start_time">开始时间 </input><br>
     <input type="text" name="end_time">结束时间 </input><br>
     <input type="text" name="activity_introduce">活动介绍 </input><br>
-    <input type="text" name="activity_post_add">海报地址 </input><br>
+    <input type="file" name="post">海报地址 </input><br>
     <input type="text" name="contact_info">联系方式 </input><br>
     <input type="text" name="is_vote">是否投票 </input><br>
     <input type="text" name="activity_place">活动地址 </input><br>
