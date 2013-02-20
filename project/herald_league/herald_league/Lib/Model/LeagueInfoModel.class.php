@@ -203,4 +203,14 @@ class LeagueInfoModel extends Model
         }
     }
 
+    /**判断活动是否存在
+     * @return boolean
+     * @param $leagueID
+     */
+    public function isexist($leagueID)
+    {
+        if($this->find($leagueID))
+            return true;
+        return false;
+    }
 }

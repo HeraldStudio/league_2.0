@@ -447,5 +447,72 @@ class HomeAction extends Action
 
 		$this -> display();
 	}
+    public function changeAttention()
+    {
+         /*
+         * 功能 ：添加,删除关注者
+         * 参数 : 活动id，动作
+         * 返回 :       1=>'关注成功',
+                        2=>' 取消关注成功',
+                       -1=>'已经关注',
+                        -2=>'关注失败',
+                        -3=>' 还未关注，无法取消',
+                        -4=>' 取消关注失败',
+                        -5=>' 非法的操作',
+                        -6=>'请求的社团不存在'
+                        -7=>'请先登录'
+                        -8=>'请以个人用户登录'
+
+          */
+        $leagueID = intval($this->_param('leagueid'));
+        $action = $this->_param('action');
+        $leagueInfo = D('LeagueInfo');
+        $message=array(
+            1=>'关注成功',
+            2=>' 取消关注成功',
+            -1=>'已经关注',
+            -2=>'关注失败',
+            -3=>' 还未关注，无法取消',
+            -4=>' 取消关注失败',
+            -5=>' 非法的操作',
+            -6=>'请求的社团不存在',
+            -7=>'请先登录',
+            -8=>'请以个人用户登录',
+        );
+        if(!$leagueInfo->isexist($leagueID))
+        {
+            $this->error($message[-6]);
+        }
+        else
+        {
+            $heraldSession = D('UserSessionControl');
+            if( !$heraldSession->islogin())
+            {
+                $this->error($message[-7]);
+            }
+            else {
+                if($heraldSession->getUserType() != 1)
+                {
+                    $this->error($message[-8]);
+                }
+                else
+                {
+                    $attention = D('Attention');
+                    $data['user_id'] = intval($heraldSession->getUserID());
+                    $data['attended_id']=$leagueID;
+                    $data['isleague'] = 1;
+                    $result = $attention->changeAttention($data, $action);
+                    if($result>0)
+                    {
+                        $this->success($message[$result]);
+                    }
+                    else
+                    {
+                        $this->error($message[$result]);
+                    }
+                }
+            }
+        }
+    }
 }
 ?>

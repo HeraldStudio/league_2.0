@@ -154,9 +154,9 @@ class ActivityAction extends Action
                 else
                 {
                     $attention = D('Attention');
-                    $cardNumber =$heraldSession->getCardNumber();
-                    $user = D('User');
-                    $data['user_id'] = intval($user->getIDbyCardNumber($cardNumber));
+                    //$cardNumber =$heraldSession->getCardNumber();
+                    //$user = D('User');
+                    $data['user_id'] = intval($heraldSession->getUserID());
                     $data['attended_id']=$activityID;
                     $data['isleague'] = 0;
                     $result = $attention->changeAttention($data, $action);
