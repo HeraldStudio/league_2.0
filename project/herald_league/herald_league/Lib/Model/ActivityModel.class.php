@@ -62,7 +62,7 @@ class ActivityModel extends Model
     }
     protected function checkVerifyCode($code)
     {
-        return true;
+        return true;//todo 验证码？
         if($_SESSION['verify']==md5(strtolower($code)))
             return true;
         return false;
