@@ -13,9 +13,26 @@
 */
 class ActivityModel extends Model
 {
+	//字段缓存
+    protected $fields = array(
+            0  =>id  ,
+            1  =>league_id   ,
+            2  =>activity_name   ,
+            3  =>start_time  ,
+            4  =>end_time    ,
+            5  =>activity_introduce  ,
+            6  =>activity_post_add   ,
+            7  =>contact_info    ,
+            8  =>activity_org_name   ,
+            9  =>activity_release_time   ,
+            10 =>activity_count  ,
+            11 =>is_vote ,
+            12 =>activity_place,
+    );
 	// 定义自动验证
     protected $_validate = array(
         array('verifyCode','checkVerifyCode','验证码错误',1,'callback'),
+
         array('activity_name','require','活动名称必须填写'),
         array('activity_introduce','require','活动简介必须填写'),
         array('start_time','checkStartTime','开始时间无效',1,'callback',1),
