@@ -1,0 +1,75 @@
+
+/* tab pane styling */
+.panes div {
+    display:none;
+}
+#student{
+    display:none;
+    padding:10px 10px;
+    border:1px solid #999;
+    border-top:0;
+    height:120px;
+    font-size:14px;
+    background-color:#fff;
+}
+#club{
+    display:none;
+    padding:10px 10px;
+    border:1px solid #999;
+    border-top:0;
+    height:120px;
+    font-size:14px;
+    background-color:#fff;
+}
+.username{
+    float:left;
+	line-height:29px;
+	padding-left:10px;
+}
+.username_text{
+    float:left;
+	width:250px;
+	margin-left:10px;
+	height:25px;
+}
+.password{
+    float:left;
+	line-height:29px;
+	padding-left:10px;
+	
+}
+.password_text{
+    float:left;
+	width:250px;
+	height:25px;
+	margin-left:24px;
+}
+.line{
+    float:left;
+	width:320px;
+	margin-top:10px;
+	margin-left:20px;
+	}
+.input{
+    float:left;
+	}
+.btn_login{
+    float:left;
+	height:25px;
+	width:60px;
+	background-color:#ff6600;
+	text-align:center;
+	color:#fff;
+	line-height:25px;
+	margin-top:10px;
+	margin-left:83px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	}
+.btn_sine{
+    float:left;
+	color:#999;
+	margin-top:20px;
+	margin-left:30px;
+	font-size:12px;
+	}
