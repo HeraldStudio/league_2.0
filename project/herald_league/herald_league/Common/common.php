@@ -69,7 +69,6 @@ function htmlencode(&$str)
 
 	if($str=="") 
 		return $str;
-    $str=strtolower($str);//xie 2013.10.11修改，todo可能会影响正常的大写
 	$str=trim($str);
 	$str=str_ireplace("&","&amp;",$str);
 	$str=str_ireplace(" ","&nbsp;",$str);

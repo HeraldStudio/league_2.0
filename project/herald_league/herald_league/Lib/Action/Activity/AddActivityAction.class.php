@@ -84,8 +84,8 @@
                     if($activityID!=false)
                     {
                         $class=htmlencode($_POST['class']);
-                        if($class == '多个标签用,分开')
-                            $class=array();
+                        $class = str_replace('多个标签用,分开', '', $class);
+                        $class = str_replace('，', ',', $class);//中文逗号替换为英文以便后面分割标签
                         $classActivity=D('ClassActivity');
                         $newClass = explode(',',$class);
                         foreach($newClass as $v)

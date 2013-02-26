@@ -4,7 +4,7 @@
 
 *名称：ActivityModel.class.php
 
-*功能: 信息模块类文件
+*功能: 信息模块类
 
 *作者：Tairy
 
@@ -15,19 +15,21 @@ class ActivityModel extends Model
 {
 	//字段缓存
     protected $fields = array(
-            0  =>id  ,
-            1  =>league_id   ,
-            2  =>activity_name   ,
-            3  =>start_time  ,
-            4  =>end_time    ,
-            5  =>activity_introduce  ,
-            6  =>activity_post_add   ,
-            7  =>contact_info    ,
-            8  =>activity_org_name   ,
-            9  =>activity_release_time   ,
-            10 =>activity_count  ,
-            11 =>is_vote ,
-            12 =>activity_place,
+            0  =>'id',
+            1  =>'league_id' ,
+            2  =>'activity_name' ,
+            3  =>'start_time' ,
+            4  =>'end_time'  ,
+            5  =>'activity_introduce' ,
+            6  =>'activity_post_add' ,
+            7  =>'contact_info'  ,
+            8  =>'activity_org_name'  ,
+            9  =>'activity_release_time'  ,
+            10 =>'activity_count' ,
+            11 =>'is_vote',
+            12 =>'activity_place',
+   '_autoinc' => true,
+         '_pk' => 'id',
     );
 	// 定义自动验证
     protected $_validate = array(
