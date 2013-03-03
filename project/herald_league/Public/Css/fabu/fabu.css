@@ -126,3 +126,7 @@ a{
 	float:left;
 	border: 5px solid #999;
 }
+#specificTime{
+    margin-left: 25px;
+    width:238px;
+}
