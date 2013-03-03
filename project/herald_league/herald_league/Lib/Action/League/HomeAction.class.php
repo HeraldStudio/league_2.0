@@ -45,7 +45,8 @@ class HomeAction extends Action
 
 		/*获取活动信息*/
 		$Activity = D('Activity');
-		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid )[0];
+		$result = $Activity -> getActivityInfoById ( $this -> activityid );
+		$this -> activity = $result[0];
 		$this -> assign('league', $league);
 
 		/*活动标签*/
