@@ -37,3 +37,4 @@ class ClassActivityModel extends Model
         }
     }
 }
+?>

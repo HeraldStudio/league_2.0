@@ -150,7 +150,7 @@ a:hover {
               <div id="time" class="information">
                 <div id="time_img">
                 </div>
-                <div id="time_text">时间:{$activityInf.start_time}---{$activityInf.end_time}
+                <div id="time_text">时间：{$activityInf.start_time}---{$activityInf.end_time}
                     <empty name="isstart">
                         【未开始】
                     <else/>
@@ -159,6 +159,7 @@ a:hover {
                     <else/>
                         【已结束】
                     </empty></empty>
+                    <if condition="$activityInf.specific_time neq null"><div style="margin-left: 38px">({$activityInf.specific_time})</div></if>
                 </div>
                 
                 

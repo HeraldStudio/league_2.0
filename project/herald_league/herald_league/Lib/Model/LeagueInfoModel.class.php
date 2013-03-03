@@ -214,3 +214,4 @@ class LeagueInfoModel extends Model
         return false;
     }
 }
+?>

@@ -38,7 +38,7 @@
                 {
                     define('SessionTimeOut',3600*3);//cookie超时，单位秒
                     $this->applySessionID();//申请SessionID
-                    //$this->dealXML();  //分析xml
+                    $this->dealXML();  //分析xml
                     setcookie('HERALD_SESSION_ID',$this->sessionID,time()+SessionTimeOut);//设置$_COOKIE
                 }
                 else
@@ -47,52 +47,34 @@
                     $this->dealXML();
                 }
             trace('message',$this->message);
-            trace('username',$this->userName);
+            trace('id',$this->sessionID);
             }
         }
         private function dealXML() //处理得到的xml
         {
             $this ->xml = new SimpleXMLElement($this->message);
             $this -> cardNumber = intval($this->xml->properties->{'herald.sso.studentUser.cardNumber'});
-            $this -> userName =strval($this-> xml->properties->{'herald.sso.studentUser.fullName'});
+            $this -> userName =strval($this->xml->properties->{'herald.sso.studentUser.fullName'});
             $this -> sessionID =strval($this->xml->id);
             $this ->userType = 1;
         }
         private function applySessionID() //向服务器要session ID
         {
-//          $ch = curl_init('121.248.63.105:8080/sessionservice/sessions/');
-            $ch = curl_init('127.0.0.1/'.__ROOT__.'/sso.php');
+            $ch = curl_init();
+            curl_setopt($ch,CURLOPT_URL,'121.248.63.105:8080/sessionservice/sessions/');
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //保存在字符串中
-//            curl_setopt($ch, CURLOPT_PORT,8080);  //8080端口
             curl_setopt($ch, CURLOPT_POST,true); //使用post提交
             $this -> message=curl_exec($ch);
-            curl_close($ch);
-
-            //临时使用字符串代替进行测试
-//            $tempxml=<<<STR
-//    <xml>
-//       <id>111222333</id>
-//            <properties>
-//                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
-//                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
-//            </properties>
-//     </xml>
-//STR;
-//            $this->message = $tempxml;
         }
         private function update()
         {
             $this -> sessionID = $_COOKIE['HERALD_SESSION_ID'];
-//            $ch = curl_init("121.248.63.105/sessionservice/sessions/$this->sessionID");
-            $ch = curl_init('127.0.0.1/'.__ROOT__.'/sso.php');
+            $ch = curl_init('121.248.63.105:8080/sessionservice/sessions/'.$this->sessionID);
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//            curl_setopt($ch, CURLOPT_PORT,8080);
             $this -> message = curl_exec($ch);
             curl_close($ch);
-
-//            $this->applySessionID();//todo临时措施，从字符串读数据，仅用来测试
         }
         public function isLogin()   //判断用户是否登陆,返回true或者false
         {
@@ -129,3 +111,4 @@
             }
         }
     }
+?>
