@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
@@ -8,7 +8,12 @@
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+        frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 <script type="text/javascript">
 
   function changeAttention(activityid,action,key)
@@ -49,6 +54,18 @@
         })
     }
 </script>
+<script type="text/javascript">
+    function logout()
+    {
+        $.ajax({
+            url:'<?php echo U('/Public/Logout/');?>',
+            success:function(){
+            $("#islogin").hide();
+            $("#notlogin").show();
+            location.reload();//todo
+        }})
+    }
+</script>
 <style type="text/css">
 a:link {
     color: #cccccc;;
@@ -70,7 +87,7 @@ a:hover {
       <div id="header_top">
           <div id="islogin" <?php if($islogin == 0): ?>style="display:none"<?php endif; ?> >
               <div id="header_top_text">
-                <a href="<?php echo U('/Public/Logout/');?>" id="header_top_text">退出</a>
+                <a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
                 <a href="#" id="header_top_text"><?php echo ($name); ?></a>
               </div>
               <div id="tubiao">
@@ -80,7 +97,7 @@ a:hover {
           </div>
           <div id="notlogin" <?php if($islogin == 1): ?>style="display:none"<?php endif; ?> >
               <div id="header_top_text">
-                <a href="<?php echo U('/League/Login/LoginTest');?>" id="login">登录</a>
+                <a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame" id="login">登录</a>
               </div>
               <div id="tubiao">
                 <a href="#" id="shouye"></a>
@@ -113,13 +130,17 @@ a:hover {
             <ul>
                 <?php if(is_array($recent)): foreach($recent as $key=>$r): ?><li>
                     <a href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($r["id"]); ?>" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/<?php echo (($r["activity_post_add"])?($r["activity_post_add"]):"default.jpg"); ?>" alt="<?php echo ($r["activity_name"]); ?>" title="<?php echo ($r["activity_org_name"]); ?>" id="wows1_0"/></a>
-                    <h1><?php echo ($r["activity_name"]); ?></h1>
-                    </br>
+                    <h1 class="title"><?php echo ($r["activity_name"]); ?></h1>
                     <p>
                         <?php if($r["isstart"] > 0): ?>未开始
                         <?php else: ?>
-                            进行中<?php endif; ?>
+                            <?php if($r["isend"] > 0): ?>进行中
+                            <?php else: ?>
+                                已结束<?php endif; endif; ?>
                     </p>
+
+                        <div href="javascript:;"  id="attention_-<?php echo ($key); ?>_isattended" <?php if($r["isattended"] == 1): ?>style="display:none"<?php endif; ?> ><a onclick="javascript:changeAttention(<?php echo ($r["id"]); ?>,'add',<?php echo -$key;?>)"><p class="guanzhu">+关注</p> </a></div>
+                        <div href="javascript:;"  id="attention_-<?php echo ($key); ?>_isattended" <?php if($r["isattended"] == 0): ?>style="display:none"<?php endif; ?> ><a onclick="javascript:changeAttention(<?php echo ($r["id"]); ?>,'del',<?php echo -$key;?>)"><p class="guanzhu">取消关注</p> </a></div>
                     <p>时间:<?php echo ($r["start_time"]); ?>---<?php echo ($r["end_time"]); ?></p>
                     <p>地点：<?php echo (($r["activity_place"])?($r["activity_place"]):""); ?></p>
                     <p>联系方式:<?php echo ($r["contact_info"]); ?></p>
