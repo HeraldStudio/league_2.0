@@ -14,7 +14,7 @@
     {
         private function getLeagueInfo()
         {
-            $lg = array('id' => 1, 'name'=>'东南大学先声网');
+            $lg = array('id' => 1, 'name'=>'先声网');
             return $lg;//todo 社团登录才能继续，测试时先忽略
         }
         public function Add()
@@ -26,6 +26,20 @@
             else
             {
                 $this->error('请先登录');
+            }
+        }
+        public function content()
+        {
+            $lg=$this->getLeagueInfo();
+            if($lg==false)
+                $this->error('请先登录');
+            else
+            {
+                $activityClass = D('ActivityClass');
+                $heatClass = $activityClass->getHeatClass(10);
+                $this->assign('league',$lg['name']);
+                $this->assign('heatClass',$heatClass);
+                $this->display();
             }
         }
         public function Deal() //最终处理
@@ -62,7 +76,7 @@
                     else
                     {
                         $uploadInf = $upload->getUploadFileInfo();
-                        $name = $uploadInf[0][savename];
+                        $name = $uploadInf[0]['savename'];
                         $activity->activity_post_add="$lg[id]/$time/$name";
                     }
 
@@ -70,15 +84,15 @@
                     if($activityID!=false)
                     {
                         $class=htmlencode($_POST['class']);
+                        $class = str_replace('多个标签用,分开', '', $class);
+                        $class = str_replace('，', ',', $class);//中文逗号替换为英文以便后面分割标签
                         $classActivity=D('ClassActivity');
                         $newClass = explode(',',$class);
                         foreach($newClass as $v)
                         {
                             $classActivity->addClass($activityID,$v);
                         }
-
-
-                        $this->success('');
+                        $this->success('活动发布成功');
                     }
 
                 }

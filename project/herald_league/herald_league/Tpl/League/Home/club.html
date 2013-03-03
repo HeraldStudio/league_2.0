@@ -5,6 +5,21 @@
 <title>{$title}</title>
 <link rel="stylesheet" type="text/css" href="__Public__/Css/club.css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/leaguehome.css"/>
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript">
+    function changeLeagueAttention(leagueid,action)
+    {
+        $.getJSON("{:U('/League/Home/changeAttention')}",{"leagueid":leagueid,"action":action},function(data,status){
+            if(data.status!=1) //失败了
+                alert(data.info);
+            else
+            {
+                $("#guanzhu").val("已关注");
+            }
+        });
+    };
+
+</script>
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -171,7 +186,7 @@ a:hover {
 	  </div>
 	</div>
 	<div id="lable_bottom">
-	  <div id="guanzhu">关注
+	  <div id="guanzhu" class ="lg_notattended" onclick="changeLeagueAttention({$league[0]['id']},'add')">关注
 	  </div>
 	  <div id="number">{$attentionnum}人关注
 	  </div>
