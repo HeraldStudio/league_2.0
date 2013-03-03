@@ -28,17 +28,19 @@ class ActivityModel extends Model
             10 =>'activity_count' ,
             11 =>'is_vote',
             12 =>'activity_place',
+            13 =>'specific_time',
    '_autoinc' => true,
-         '_pk' => 'id',
+        '_pk' => 'id',
     );
 	// 定义自动验证
     protected $_validate = array(
         array('verifyCode','checkVerifyCode','验证码错误',1,'callback'),
 
         array('activity_name','require','活动名称必须填写'),
-        array('activity_introduce','require','活动简介必须填写'),
         array('start_time','checkStartTime','开始时间无效',1,'callback',1),
         array('end_time','checkEndTime','结束时间无效',1,'callback',1),
+        array('activity_introduce','require','活动简介必须填写'),
+        array('contact_info','require','联系方式必须填写'),
         array('is_vote',array(0,1),'请选择是否为投票',2,'in'),
         array('activity_place','require','活动地点必须填写'),
         );
@@ -80,6 +82,7 @@ class ActivityModel extends Model
         array('activity_place','htmlencode',1,'function'),
         array('contact_info','htmlencode',1,'function'),
         array('class','htmlencode',1,'function'),
+        array('specific_time','htmlencode',1,'function'),
         );
 
     /*
