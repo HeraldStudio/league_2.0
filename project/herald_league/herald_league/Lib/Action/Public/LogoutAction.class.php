@@ -6,7 +6,7 @@
  {
     public function index()
     {
-        setcookie('HERALD_SESSION_ID',null);
+        session('heraldUser',null);
         session('league',null);
         $this->ajaxreturn( 'succes');
     }

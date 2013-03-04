@@ -69,15 +69,42 @@ class UserModel extends Model
         $result = $this -> where( 'id = '.$userid ) ->setField ( 'user_avatar_add', $avatar_name );
         return $result;
     }   
+    /*功能：一卡通号转userid
+     *作者:   xie
+     *日期 :  2013.1.25
+     */
     public function getIDbyCardNumber($cardnumber)
     {
-        /*功能：一卡通号转userid
-         *作者:   xie
-         *日期 :  2013.1.25
-         */
+        
         $cardnumber = intval($cardnumber);
         $id =$this->field('id')->getByCardNum($cardnumber);
         return $id['id'];
+    }
+    /*功能：登陆后更新数据
+     *作者:   xie
+     *日期 :  2013.3.4
+     */
+    public function update($result)
+    {
+        $result = explode(',', $result);
+        $name = $result[0];
+        $card = $result[1];
+        $info = $this->getByCardNum($card);
+        if($info == null || $info == false)//没有注册
+        {
+            $data=array(
+                'card_num'=>$card,
+                'true_name'=>$name,
+                'last_login_time',date('Y-m-d'),
+                'nick_name'=>$name,
+                );
+            $this->add($data);
+        }
+        else
+        {
+            $this->where("card_num = $card")->setField('last_login_time',date('Y-m-d'));
+            $this->where("card_num = $card")->setInc('times',1);
+        }
     }
 }
 

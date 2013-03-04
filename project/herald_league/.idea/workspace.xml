@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a34cb094-4d53-4d0d-a134-6ad7e59e998c" name="Default" comment="修复名称太长导致的bug">
-      <change type="DELETED" beforePath="D:\php\www\lg2.0\league_2.0\.gitignore" afterPath="" />
+    <list default="true" id="a34cb094-4d53-4d0d-a134-6ad7e59e998c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php" afterPath="$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/content.html" afterPath="$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Lib/Action/Public/LogoutAction.class.php" afterPath="$PROJECT_DIR$/herald_league/Lib/Action/Public/LogoutAction.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Lib/Action/User/LoginAction.class.php" afterPath="$PROJECT_DIR$/herald_league/Lib/Action/User/LoginAction.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Lib/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/herald_league/Lib/Model/UserModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php" afterPath="$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_league/Tpl/User/Login/index.html" afterPath="$PROJECT_DIR$/herald_league/Tpl/User/Login/index.html" />
     </list>
     <ignored path="herald_league.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,96 +48,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomeAction.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/League/HomeAction.class.php">
+      <file leaf-file-name="UserSessionControlModel.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="449" column="36" selection-start="8090" selection-end="8090" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeagueInfoModel.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/LeagueInfoModel.class.php">
+      <file leaf-file-name="UserModel.class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/UserModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="5" selection-start="3960" selection-end="3960" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityModel.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="127" selection-end="2725" vertical-scroll-proportion="8.866667">
-              <folding>
-                <element signature="e#151#692#0" expanded="false" />
-                <element signature="n#checkStartTime#0;n#ActivityModel#0;n#!!top" expanded="false" />
-                <element signature="n#checkEndTime#0;n#ActivityModel#0;n#!!top" expanded="false" />
-                <element signature="n#checkVerifyCode#0;n#ActivityModel#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/Activity/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="20" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1361521500838" expanded="true" signature="1128:1134" placeholder="{...}" />
-                <marker date="1361521500838" expanded="true" signature="1203:1209" placeholder="{...}" />
-                <marker date="1361521500838" expanded="true" signature="1387:1393" placeholder="{...}" />
-                <marker date="1361521500838" expanded="true" signature="1532:1538" placeholder="{...}" />
-                <marker date="1361521500838" expanded="true" signature="1800:1806" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Css/header.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="16" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Model.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="574" column="35" selection-start="18325" selection-end="18325" vertical-scroll-proportion="-25.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="71" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.5893224">
-              <folding>
-                <element signature="tag#div#1;tag#form#0;tag#body#0;tag#html#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#form#0;tag#body#0;tag#html#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddActivityAction.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Activity/AddActivityAction.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="72.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityClassModel.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/ActivityClassModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="22" selection-start="538" selection-end="538" vertical-scroll-proportion="-4.8">
+            <state line="2" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="-5.7401576">
               <folding />
             </state>
           </provider>
@@ -154,22 +79,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/herald_league/Tpl/User/Login/index.html" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/Index/index.html" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Action/Activity/IndexAction.class.php" />
-        <option value="$PROJECT_DIR$/herald_league/Conf/config.php" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Action/Activity/ActivityAction.class.php" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Model/LeagueInfoModel.class.php" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/League/Home/index.html" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Action/League/HomeAction.class.php" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/League/Home/club.html" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/fabu.html" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/Add.html" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Action/Activity/AddActivityAction.class.php" />
-        <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/Activity/detail.html" />
         <option value="$PROJECT_DIR$/Public/Css/header.css" />
-        <option value="$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php" />
         <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/content.html" />
+        <option value="$PROJECT_DIR$/Public/Css/fabu/fabu.css" />
+        <option value="$PROJECT_DIR$/herald_league/Runtime/Cache/Activity/0813e72ab3634315923d8a692546b982.php" />
+        <option value="$PROJECT_DIR$/herald_league/Tpl/Activity/Activity/detail.html" />
+        <option value="$PROJECT_DIR$/Public/Css/activity.css" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/LeagueInfoModel.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/ClassActivityModel.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Action/Admin/IndexAction.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Action/League/LoginAction.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/ActivityClassModel.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Action/User/LoginAction.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Tpl/User/Login/index.html" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php" />
+        <option value="$PROJECT_DIR$/herald_league/Lib/Model/UserModel.class.php" />
       </list>
     </option>
   </component>
@@ -275,6 +200,52 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ThinkPHP">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Css">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="herald_league">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -297,25 +268,11 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
+            <PATH_ELEMENT USER_OBJECT="User">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="herald_league">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="herald_league">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Tpl">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Activity">
+            <PATH_ELEMENT USER_OBJECT="Login">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -337,11 +294,25 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Activity">
+            <PATH_ELEMENT USER_OBJECT="User">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="AddActivity">
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Tpl">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -360,6 +331,80 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="Lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Model">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Action">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="User">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="herald_league">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Action">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Public">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -656,7 +701,15 @@
       <created>1361842049275</created>
       <updated>1361842049275</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="活动发布的具体时间">
+      <created>1362277845877</created>
+      <updated>1362277845877</updated>
+    </task>
+    <task id="LOCAL-00043" summary="加？&gt; 修改个人登录">
+      <created>1362314669266</created>
+      <updated>1362314669266</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -683,21 +736,21 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16212338" sideWeight="0.32458565" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1689394" sideWeight="0.6756757" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1689394" sideWeight="0.6773649" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16212338" sideWeight="0.3383978" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.4978479" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32263514" sideWeight="0.5007576" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243243" sideWeight="0.49713057" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32263514" sideWeight="0.4939394" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872927" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -739,7 +792,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复几个错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="加？&gt; 修改个人登录" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -752,8 +805,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="发布活动的验证码" />
-    <MESSAGE value="取消了对内核的修改，发布活动的标签" />
     <MESSAGE value="一些小修改" />
     <MESSAGE value="一些小修改，push丢到的一些文件" />
     <MESSAGE value="修改css错误" />
@@ -777,6 +828,8 @@
     <MESSAGE value="增加activity字段缓存" />
     <MESSAGE value="图标错位" />
     <MESSAGE value="修复几个错误" />
+    <MESSAGE value="活动发布的具体时间" />
+    <MESSAGE value="加？&gt; 修改个人登录" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,92 +841,65 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/AttentionModel.class.php">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Public/SearchAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.3150241" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="49" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/LeagueInfoModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="5" selection-start="3960" selection-end="3960" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.464567">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/Add.html">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Public/LogoutAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="56" selection-end="56" vertical-scroll-proportion="0.058346838" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.38195777">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/League/Home/club.html">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/League/StreetAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="16" selection-start="789" selection-end="789" vertical-scroll-proportion="0.3489499" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.470226">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Css/totop.css">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/League/LoginAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="24" column="2" selection-start="558" selection-end="558" vertical-scroll-proportion="0.6456693">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Css/activity.css">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/League/IndexAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="31" selection-start="890" selection-end="891" vertical-scroll-proportion="0.33282208" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.86564296">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/Index/index.html">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Admin/IndexAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="218" selection-start="8213" selection-end="8362" vertical-scroll-proportion="0.36395758" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/League/HomeAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="449" column="36" selection-start="8090" selection-end="8090" vertical-scroll-proportion="0.0">
+        <state line="483" column="35" selection-start="9068" selection-end="9068" vertical-scroll-proportion="1.1149898">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/Activity/detail.html">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/AnswerModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="20" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1361521500838" expanded="true" signature="1128:1134" placeholder="{...}" />
-            <marker date="1361521500838" expanded="true" signature="1203:1209" placeholder="{...}" />
-            <marker date="1361521500838" expanded="true" signature="1387:1393" placeholder="{...}" />
-            <marker date="1361521500838" expanded="true" signature="1532:1538" placeholder="{...}" />
-            <marker date="1361521500838" expanded="true" signature="1800:1806" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="16" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Model.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="574" column="35" selection-start="18325" selection-end="18325" vertical-scroll-proportion="-25.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/ActivityClassModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="538" selection-end="538" vertical-scroll-proportion="-4.8">
+        <state line="97" column="0" selection-start="1637" selection-end="1637" vertical-scroll-proportion="2.062992">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/ActivityModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="127" selection-end="2725" vertical-scroll-proportion="8.866667">
+        <state line="257" column="2" selection-start="6687" selection-end="6687" vertical-scroll-proportion="0.6456693">
           <folding>
             <element signature="e#151#692#0" expanded="false" />
             <element signature="n#checkStartTime#0;n#ActivityModel#0;n#!!top" expanded="false" />
@@ -883,20 +909,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Activity/AddActivityAction.class.php">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/ActivityClassModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="72.0">
+        <state line="48" column="2" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.5748032">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/Activity/AddActivity/content.html">
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/User/LoginAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="71" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.5893224">
-          <folding>
-            <element signature="tag#div#1;tag#form#0;tag#body#0;tag#html#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#form#0;tag#body#0;tag#html#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="14" column="66" selection-start="380" selection-end="380" vertical-scroll-proportion="-8.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Action/Activity/AddActivityAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.8267717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_league/Tpl/User/Login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="36" selection-start="5524" selection-end="5524" vertical-scroll-proportion="0.36220473">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Behavior/logIPBehavior.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="1.5201535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/UserSessionControlModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_league/Lib/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="-5.7401576">
+          <folding />
         </state>
       </provider>
     </entry>
