@@ -60,7 +60,7 @@
         function userLogin()
         {
             var card = $("#username_text1").val();
-            var pass = $("password_text1").val();
+            var pass = $("#password_text1").val();
             if (card == "") 
                 alert("请输入一卡通号");
             else if (pass == "")
@@ -69,13 +69,14 @@
             {
                 $.ajax({
                     url:"{:U('User/Login/Login/')}",
-                    data:{cardNumber:card,password:pass},
+                    data:{cardNumber:card,passWord:pass},
                     type:"POST",
                     dataType:"json",
                     success:function(data,status)
                     {
                         if(data.status == 1)
                             parent.location.reload();
+                        
                         else
                             alert("登录失败");
                     },
@@ -84,6 +85,21 @@
                     
 
         }
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        $("#password_text1").keydown(function(e){
+        if(e.keyCode == 13)
+            userLogin();
+        });
+    });
+    $(function(){
+        $("#password_text2").keydown(function(e){
+        if(e.keyCode == 13)
+            leagueLogin();
+        });
+    });
+    
     </script>
 </head>
 <body><!-- the tabs -->

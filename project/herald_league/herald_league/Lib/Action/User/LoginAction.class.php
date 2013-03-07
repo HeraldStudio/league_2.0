@@ -25,18 +25,36 @@ class LoginAction extends Action
             session('heraldUser',$result);
             $user  = D('User');
             $user->update($result);
-            $this->success('');
+            $this->success($result);
         }
         else
         {
-            $this->error('');
+            $this->error($result);
         }
 
+
     }
-    private function authen($card,$pass) //验证一卡通，密码是否正确
+    public function authen($card,$pass) //验证一卡通，密码是否正确
     {
-        if($card == 1) //todo 等待java那边处理好
-            return 'test,1234';
-        return null ;
+        $ch = curl_init('121.248.63.105:8080/authentication/');
+        curl_setopt($ch, CURLOPT_HEADER, false);  
+        curl_setopt($ch, CURLOPT_FAILONERROR,1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+        curl_setopt($ch, CURLOPT_POST,1);
+        curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+        $param ="username=$card&password=$pass";
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+        $result=curl_exec($ch);  
+        $info = curl_getinfo($ch);
+        if($info['http_code']==200)
+        {
+            return $result;
+        }
+        else
+        {
+            return null;
+        }
+        
+        
     }
 }
