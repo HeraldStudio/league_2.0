@@ -1,0 +1,784 @@
+[ 2013-02-03T11:04:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002400s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005832s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005619s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005600s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.014326s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:04:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002203s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033176s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005525s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006780s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000201s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.033550s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:04:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002348s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.089801s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005965s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006586s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000358s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001268s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:04:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002581s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005938s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005171s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006907s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000167s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.022430s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:04:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002251s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032357s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007276s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005702s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001558s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:04:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003319s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006754s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005729s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005498s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.030921s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:04:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002329s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.020014s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005735s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006087s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002072s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:04:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002344s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.160831s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005639s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005629s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.009025s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:04:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002240s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.057448s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005533s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005832s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001361s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:05:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002381s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025829s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006048s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.031904s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001527s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:05:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002231s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.047996s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005613s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005726s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.018887s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:05:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002671s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027036s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008071s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006033s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.010359s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:05:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002363s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022568s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006743s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006394s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001305s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:05:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002427s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005908s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005870s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005740s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.014187s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:05:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027399s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.015960s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005802s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002117s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:05:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006013s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005478s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005793s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000470s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.002421s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:06:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002338s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025021s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005884s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005893s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001359s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:06:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002411s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005722s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005427s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005916s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001661s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:06:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002230s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021585s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005648s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005896s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001198s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:06:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002192s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032047s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005875s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005574s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001518s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:06:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002398s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005727s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005342s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005542s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002404s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:06:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002482s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.012370s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006876s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.018982s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.007680s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:06:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002420s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005536s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006240s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005572s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002500s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:06:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002415s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033719s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005638s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005958s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000271s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001686s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:18:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023747s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005766s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005884s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000260s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001171s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:18:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002408s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.040837s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005681s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005895s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.017650s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:18:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002388s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006137s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006015s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005877s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001622s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:18:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002409s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.052393s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006344s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006297s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000346s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001355s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:18:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002183s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006218s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005979s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006008s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.086502s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:18:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002174s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.041078s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006367s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006377s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.013934s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:18:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002174s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006358s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006058s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006274s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002061s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:18:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002183s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.051792s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006315s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006046s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000260s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.048616s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:19:16+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002489s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035636s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006663s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006544s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2013-02-03T11:19:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002290s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.016894s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005756s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006050s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001175s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:19:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002190s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022682s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005838s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005802s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.016885s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:19:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002197s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.034259s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006079s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005997s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001788s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:19:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002200s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006356s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005877s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006218s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.002468s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:19:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002191s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006359s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005761s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005813s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002378s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:19:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002197s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033333s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005848s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006301s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001843s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:19:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002203s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.043580s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006091s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006267s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001835s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:19:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002272s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006054s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005638s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006410s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000255s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001627s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:19:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002199s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006112s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005923s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005686s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002705s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:19:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002191s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005913s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005707s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005814s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.002268s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:20:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002181s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022207s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005712s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006020s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000214s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001187s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:20:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002196s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006153s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005977s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006126s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.022979s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:20:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002186s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006182s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005924s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006184s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000428s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001961s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:26:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.011886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002162s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.039220s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006305s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006005s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.033297s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:27:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035098s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005874s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006071s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.017976s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:27:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.049960s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005957s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006263s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.026397s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:27:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.030356s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006260s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005955s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.029317s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:27:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006215s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005985s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005997s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.015748s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:29:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.011152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003021s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027940s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006084s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006017s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.012005s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:29:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002749s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.016013s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005740s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006098s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001480s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T11:29:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002848s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.041805s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006243s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006107s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001780s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-03T11:29:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002812s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.007331s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007342s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006941s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.016316s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-03T16:53:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002485s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006674s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.006150s ]
+SQL: SELECT * FROM `lg_league_info` LIMIT 1   [ RunTime:0.000281s ]
+
+[ 2013-02-03T16:53:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002961s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006861s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.006875s ]
+SQL: SELECT * FROM `lg_league_info` LIMIT 1   [ RunTime:0.000548s ]
+
+[ 2013-02-03T17:07:58+08:00 ] ERR: [4] syntax error, unexpected T_VARIABLE D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\League\LoginAction.class.php 第 11 行.
+[ 2013-02-03T17:36:19+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:36:41+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:37:28+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:37:47+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:39:07+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:39:41+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:39:45+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:40:16+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T17:40:53+08:00 ] ERR: (ThinkException) 无法加载模块:lg2.0
+[ 2013-02-03T18:17:12+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:17:35+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:22:19+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:23:10+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:38:58+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:40:46+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:42:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.058633s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000420s ]
+
+[ 2013-02-03T18:45:21+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:48:15+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:49:12+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:50:23+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:53:20+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:54:05+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T18:54:47+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T19:39:16+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001999s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024208s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000340s ]
+
+[ 2013-02-03T21:19:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005955s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000311s ]
+
+[ 2013-02-03T21:19:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025593s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000400s ]
+
+[ 2013-02-03T21:29:03+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-03T21:29:31+08:00 ] ERR: (ThinkException) 无法加载模块:engine1

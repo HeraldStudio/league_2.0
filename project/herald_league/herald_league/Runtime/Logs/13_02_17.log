@@ -1,0 +1,20 @@
+[ 2013-02-17T21:05:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.017921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001816s ]
+
+[ 2013-02-17T21:05:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-17T21:05:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+
+[ 2013-02-17T21:06:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+

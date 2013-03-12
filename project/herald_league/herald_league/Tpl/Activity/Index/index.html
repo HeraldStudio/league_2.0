@@ -9,365 +9,364 @@
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
-<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script tupe="text/javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript" >
+ function logout()
+{
+		$.ajax({
+			url:'{:U('/Public/Logout/')}',
+			success:function(){
+			$("#islogin").hide();
+			$("#notlogin").show();
+			location.reload();//todo
+			}
+		})
+}
+</script>
 <script type="text/javascript">
-        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
-        frameContect = new GreyFrame("ContactFrame", 350, 120);
+				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+				frameContect = new GreyFrame("ContactFrame", 350, 120);
 </script>
 <script type="text/javascript">
 
-  function changeAttention(activityid,action,key)
-  {
-    $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
-      if(data.status!=1) //失败了
-        alert(data.info);
-      else
-      {
-        $("#attention"+key+"_isattended").toggle();
-        $("#attention"+key+"_notattended").toggle();
-      }
-    });
-  };
+	function changeAttention(activityid,action,key)
+	{
+		$.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
+			if(data.status!=1) //失败了
+				alert(data.info);
+			else
+			{
+				$("#attention"+key+"_isattended").toggle();
+				$("#attention"+key+"_notattended").toggle();
+			}
+		});
+	};
 
 </script>
 <script type="text/javascript">
-    function getMore()
-    {
-        if(typeof getMore.count == 'undefined')
-            getMore.count=10;
-        getMore.uid = {$uid};
-        getMore.count+=10;
-        $.getJSON("{:U('/Activity/Index/GetMore/')}",{"count":getMore.count,"uid":getMore.uid},function(data){
-            if (data == "") {
-                $("#btn_all").text("没有更多了");
-                if(typeof getMore.nomore =="undefined")
-                    getMore.nomore = 1;
-                else
-                    $("#btn_all").fadeOut(1000);
-            } else {
-                $.each(data, function (key, val) {
-                    $("#list").append(val)
-                })
-                $("#list").masonry('reload');
-            }
+		function getMore()
+		{
+				if(typeof getMore.count == 'undefined')
+						getMore.count=10;
+				getMore.uid = {$uid};
+				getMore.count+=10;
+				$.getJSON("{:U('/Activity/Index/GetMore/')}",{"count":getMore.count,"uid":getMore.uid},function(data){
+						if (data == "") {
+								$("#btn_all").text("没有更多了");
+								if(typeof getMore.nomore =="undefined")
+										getMore.nomore = 1;
+								else
+										$("#btn_all").fadeOut(1000);
+						} else {
+								$.each(data, function (key, val) {
+										$("#list").append(val)
+								})
+								$("#list").masonry('reload');
+						}
 
-        })
-    }
+				})
+		}
 </script>
-<script type="text/javascript">
-    function logout()
-    {
-        $.ajax({
-            url:'{:U('/Public/Logout/')}',
-            success:function(){
-            $("#islogin").hide();
-            $("#notlogin").show();
-            location.reload();//todo
-        }})
-    }
-</script>
+
 <style type="text/css">
 a:link {
-    color: #cccccc;;
-    font-weight: bold;
+		color: #cccccc;;
+		font-weight: bold;
 }
 a:visited {
-    color: #cccccc;
-    font-weight: bold;
+		color: #cccccc;
+		font-weight: bold;
 }
 a:hover {
-    color: #34c5c3;
-    font-weight: bold;
+		color: #34c5c3;
+		font-weight: bold;
 }
 </style>
 </head>
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="header_top">
-          <div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
-              <div id="header_top_text">
-                <a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
-                <a href="#" id="header_top_text">{$name}</a>
-              </div>
-              <div id="tubiao">
-                <a href="#" id="xinxi"></a>
-                <a href="#" id="shouye"></a>
-              </div>
-          </div>
-          <div id="notlogin" <if condition="$islogin eq 1"> style="display:none"</if> >
-              <div id="header_top_text">
-                <a href="{:U('/User/Login/')}" target="MyGreyFrame" id="login">登录</a>
-              </div>
-              <div id="tubiao">
-                <a href="#" id="shouye"></a>
-              </div>
-          </div>   
-      </div>
-      <div id="header_bottom">
-        <div id="logo">
-        </div>
-        <div id="navigation">
-          <div id="herald" class="navigation_link">
-            <a href="#" >先声首页</a>
-          </div>
-           <div id="map" class="navigation_link">
-            <a href="#" >社团地图</a>
-          </div>
-           <div id="activity" class="navigation_link">
-            <a href="#" >活动信息</a>
-          </div>
-           <div id="wall" class="navigation_link">
-            <a href="#" >海报墙</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="main_body">
-      <div id="main_body_top">
-        <div id="wowslider-container1">
-          <div class="ws_images">
-            <ul>
-                <foreach name="recent" item="r">
-                    <li>
-                    <a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
-                    <h1 class="title">{$r.activity_name}</h1>
-                    <p>
-                        <if condition="$r.isstart gt 0">
-                            未开始
-                        <else/>
-                            <if condition ="$r.isend gt 0">
-                                进行中
-                            <else/>
-                                已结束
-                            </if>
-                        </if>
-                    </p>
-
-                        <div href="javascript:;"  id="attention_-{$key}_isattended" <if condition ="$r.isattended eq 1">style="display:none"</if> ><a onclick="javascript:changeAttention({$r.id},'add',{-$key})"><p class="guanzhu">+关注</p> </a></div>
-                        <div href="javascript:;"  id="attention_-{$key}_isattended" <if condition ="$r.isattended eq 0">style="display:none"</if> ><a onclick="javascript:changeAttention({$r.id},'del',{-$key})"><p class="guanzhu">取消关注</p> </a></div>
-                    <p>时间:{$r.start_time}---{$r.end_time}</p>
-                    <p>地点：{$r.activity_place|default=""}</p>
-                    <p>联系方式:{$r.contact_info}</p>
-                    <p>主办方:{$r.activity_org_name}</p>
-                    </li>
-                </foreach>
-            </ul>
-          </div>
-          <div class="ws_bullets">
-            <div>
-              <foreach name="recent" item="r">
-                  <a href="#" title="{$r.activity_name}"><img width=96px height=48px src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
-                    {$key+1}</a>
-              </foreach>
-            </div>
-          </div>
-          <div class="ws_shadow"></div>     
-        </div>
-      </div>
-      <div id="main_body_bottom">
-        <div id="main_body_bottom_left">
-          <ul class="list" id="list">
-            <volist name="activities" id="a">
-            <li>
-              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img width=190px src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
-              <a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
-              
-                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
-                  <div class="attention_text" id="attention_text">取消关注
-                  </div>            
-                </a>
-              
-                <a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
-                 <div class="attention_img" id="attention_img">
-                 </div>
-                 <div class="attention_text" id="attention_text">关注
-                 </div>            
-                </a>
-              
-            </li>
-            </volist>          
-          </ul>
-          <div id="all">
-            <a href="javascript:;" id="btn_all" onclick="javascript:getMore()">点击查看更多</a>
-          </div>
-        </div>
-        <div id="main_body_bottom_right">
-          <div id="right_inner">
-            <div id="search">
-              <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-                <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-              </form>
-              <a href="#" id="search_image">
-              </a>
-            </div>
-            <div id="hot_biaoqian" class="hot">
-              <div id="hot_biaoqian_title" class="hot_title">
-                <div id="hot_img" class="hot_img">
-                </div>
-                <div id="hot_text" class="hot_text">热门标签
-                </div>
-              </div>
-              <div id="biaoqian_content" class="content">
-                <a id="biaoqian3" class="bq" href="#">全部活动</a>
-                <volist name="heatClass" id="h">
-                  <a href="#">
-                  <div id="biaoqian1" class = "bq">{$h.class_name}</div>
-                  </a>
-                </volist>
-              </div>
-            </div>
-            <div id="hot_activity" class="hot">
-              <div id="hot_activity_title" class="hot_title">
-                <div id="hot_img" class="hot_img">
-                </div>
-                <div id="hot_text" class="hot_text">热门活动
-                </div>
-              </div>
-              <div id="activity_content" class="content">
-                <volist name="heatActivity" id="h">
-                  <a href="{:U('Activity/Activity/detail/')}/activityid/{$h.id}"><div id="activity_content_text" class = "content_text">{$h.activity_name}
-                  </div></a>
-                </volist>
-              </div>
-              <div class="more">
-                 <a href="#" class="more_text">More...
-                 </a>
-              </div>
-            </div>
-            <div id="hot_club" class="hot">
-              <div id="hot_club_title" class="hot_title">
-                <div id="hot_img" class="hot_img">
-                </div>
-                <div id="hot_text" class="hot_text">热门社团
-                </div>
-              </div>
-              <div id="club_content" class="content">
-                <volist name="heatLeague" id="h">
-                  <a href="#">
-                  <div id="club_content_text" class = "content_text">{$h.league_name}
-                  </div></a>
-                </volist>
-              </div>
-              <div class="more">
-                 <a href="#" class="more_text">More...
-                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="footer_link">
-        <a href="#" id="f_about" class="link">关于我们</a>
-        <a href="#" id="f_contact" class="link">联系我们</a>
-        <a href="#" id="f_join" class="link">加入我们</a>
-      </div>
-      <div id="footer_text">
-      <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
-      </div>
-    </div>
-  </div>
-  <a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
-   <script type="text/javascript">
-   window.onscroll=function()
-   {
-        var top=document.documentElement.scrollTop||document.body.scrollTop;
-        var toTop=document.getElementById("toTop");
-        if(top>400)
-        {
-            toTop.style.display="inline";
-        }
-        else
-        {
-            toTop.style.display="none";
-        }
-   };
-   var toTop=new function()
-   {
-        var Timer=null;
-        function $id(id){return typeof id=="string"?document.getElementById(id):id;};
-        this.goto=function(objName)
-        {
-            $id(objName).onclick=function()
-            {
-                var top=document.documentElement.scrollTop||document.body.scrollTop;
-                startNove();
-                return false;
-            };
-            var startNove=function()
-            {
-                if(Timer)clearInterval(Timer);
-                Timer=setInterval(doMove,30);
-            };
-            var doMove=function()
-            {
-                var iSpeed=0;
-                var top=document.documentElement.scrollTop||document.body.scrollTop;
-                iSpeed=(0-top)/5;
-                iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
-                if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
-                {
-                    clearInterval(Timer);
-                    Timer=null;
-                }
-                window.scrollTo(0,(top+iSpeed));
-            };
-        };
-   };
-   toTop.goto("toTop");
-   </script>
+	<div id="main">
+		<div id="header">
+			<div id="header_top">
+					<div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
+							<div id="header_top_text">
+								<a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
+								<a href="#" id="header_top_text">{$name}</a>
+							</div>
+							<div id="tubiao">
+								<a href="#" id="xinxi"></a>
+								<a href="__APP__" id="shouye"></a>
+							</div>
+					</div>
+					<div id="notlogin" <if condition="$islogin eq 1"> style="display:none"</if> >
+							<div id="header_top_text">
+								<a href="{:U('/User/Login/')}" target="MyGreyFrame" id="login">登录</a>
+							</div>
+							<div id="tubiao">
+								<a href="__APP__" id="shouye"></a>
+							</div>
+					</div>   
+			</div>
+			<div id="header_bottom">
+				<div id="logo">
+				</div>
+				<div id="navigation">
+					<div id="herald" class="navigation_link">
+						<a href="http://herald.seu.edu.cn" >先声首页</a>
+					</div>
+					 <div id="map" class="navigation_link">
+						<a href="#" >社团地图</a>
+					</div>
+					 <div id="activity" class="navigation_link">
+						<a href="#" >活动信息</a>
+					</div>
+					 <div id="wall" class="navigation_link">
+						<a href="{:U('Activity/Activity/wall')}" >海报墙</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main_body">
+			<div id="main_body_top">
+				<div id="wowslider-container1">
+					<div class="ws_images">
+						<ul>
+								<foreach name="recent" item="r">
+										<li>
+										<a href="{:U('Activity/Activity/detail/')}/activityid/{$r.id}" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/{$r.activity_post_add|default="default.jpg"}" alt="{$r.activity_name}" title="{$r.activity_org_name}" id="wows1_0"/></a>
+										<h1 class="title">{$r.activity_name}</h1>
+										<p>
+												<if condition="$r.isstart gt 0">
+														未开始
+												<else/>
+														<if condition ="$r.isend gt 0">
+																进行中
+														<else/>
+																已结束
+														</if>
+												</if>
+										</p>
+										<p>时间:{$r.start_time}---{$r.end_time}</p>
+										<p>地点：{$r.activity_place|default=""}</p>
+										<p>联系方式:{$r.contact_info}</p>
+										<p>主办方:{$r.activity_org_name}</p>
+										</li>
+								</foreach>
+						</ul>
+					</div>
+					<div class="ws_bullets">
+						<div>
+							<foreach name="recent" item="r">
+									<a href="#" title="{$r.activity_name}"><img width=96px height=48px src="__ROOT__/Uploads/LeaguePost/Small/{$r.activity_post_add}" alt="{$r.activity_name}"/>
+										{$key+1}</a>
+							</foreach>
+						</div>
+					</div>
+					<div class="ws_shadow"></div>     
+				</div>
+			</div>
+			<div id="main_body_bottom">
+				<div id="main_body_bottom_left">
+					<ul class="list" id="list">
+						<volist name="activities" id="a">
+						<li>
+							<a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><img width=190px src="__ROOT__/Uploads/LeaguePost/Fall/{$a.activity_post_add}" alt="" /></a>
+							<a target="_blank" href="{:U('Activity/Activity/detail/')}/activityid/{$a.id}"><div class="activity_title">{$a.activity_name}</div></a>
+							
+								<a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'del',{$key})" class="attention" id="attention{$key}_isattended" <if condition ="$a.isattended eq 0"> style="display:none" </if>>
+									<div class="attention_text" id="attention_text">取消关注
+									</div>            
+								</a>
+							
+								<a href="javascript:void(0)" onclick="javascript:changeAttention({$a.id},'add',{$key})" class="attention" id="attention{$key}_notattended" <if condition ="$a.isattended eq 1"> style="display:none" </if>>
+								 <div class="attention_img" id="attention_img">
+								 </div>
+								 <div class="attention_text" id="attention_text">关注
+								 </div>            
+								</a>
+							
+						</li>
+						</volist>          
+					</ul>
+					<div id="all">
+						<a href="javascript:;" id="btn_all" onclick="javascript:getMore()">点击查看更多</a>
+					</div>
+				</div>
+				<div id="main_body_bottom_right">
+					<div id="right_inner">
+						<div id="search">
+							<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+								<input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+							</form>
+							<a href="#" id="search_image">
+							</a>
+						</div>
+						<div id="hot_biaoqian" class="hot">
+							<div id="hot_biaoqian_title" class="hot_title">
+								<div id="hot_img" class="hot_img">
+								</div>
+								<div id="hot_text" class="hot_text">热门标签
+								</div>
+							</div>
+							<div id="biaoqian_content" class="content">
+								<a id="biaoqian3" class="bq" href="#">全部活动</a>
+								<volist name="heatClass" id="h">
+									<a href="#">
+									<div id="biaoqian1" class = "bq">{$h.class_name}</div>
+									</a>
+								</volist>
+							</div>
+						</div>
+						<div id="hot_activity" class="hot">
+							<div id="hot_activity_title" class="hot_title">
+								<div id="hot_img" class="hot_img">
+								</div>
+								<div id="hot_text" class="hot_text">热门活动
+								</div>
+							</div>
+							<div id="activity_content" class="content">
+								<volist name="heatActivity" id="h">
+									<a href="{:U('Activity/Activity/detail/')}/activityid/{$h.id}"><div id="activity_content_text" class = "content_text">{$h.activity_name}
+									</div></a>
+								</volist>
+							</div>
+							<div class="more">
+								 <a href="#" class="more_text">More...
+								 </a>
+							</div>
+						</div>
+						<div id="hot_club" class="hot">
+							<div id="hot_club_title" class="hot_title">
+								<div id="hot_img" class="hot_img">
+								</div>
+								<div id="hot_text" class="hot_text">热门社团
+								</div>
+							</div>
+							<div id="club_content" class="content">
+								<volist name="heatLeague" id="h">
+									<a href="#">
+									<div id="club_content_text" class = "content_text">{$h.league_name}
+									</div></a>
+								</volist>
+							</div>
+							<div class="more">
+								 <a href="#" class="more_text">More...
+								 </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer_link">
+				<a href="#" id="f_about" class="link">关于我们</a>
+				<a href="#" id="f_contact" class="link">联系我们</a>
+				<a href="#" id="f_join" class="link">加入我们</a>
+			</div>
+			<div id="footer_text">
+			<pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
+			</div>
+		</div>
+	</div>
+	<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+	 <script type="text/javascript">
+	 window.onscroll=function()
+	 {
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				var toTop=document.getElementById("toTop");
+				if(top>400)
+				{
+						toTop.style.display="inline";
+				}
+				else
+				{
+						toTop.style.display="none";
+				}
+	 };
+	 var toTop=new function()
+	 {
+				var Timer=null;
+				function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+				this.goto=function(objName)
+				{
+						$id(objName).onclick=function()
+						{
+								var top=document.documentElement.scrollTop||document.body.scrollTop;
+								startNove();
+								return false;
+						};
+						var startNove=function()
+						{
+								if(Timer)clearInterval(Timer);
+								Timer=setInterval(doMove,30);
+						};
+						var doMove=function()
+						{
+								var iSpeed=0;
+								var top=document.documentElement.scrollTop||document.body.scrollTop;
+								iSpeed=(0-top)/5;
+								iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+								if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+								{
+										clearInterval(Timer);
+										Timer=null;
+								}
+								window.scrollTo(0,(top+iSpeed));
+						};
+				};
+	 };
+	 toTop.goto("toTop");
+	 </script>
 <script type="text/javascript" src="__ROOT__/Public/Js/engine1/wowslider.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/engine1/script.js"></script>
 <script type="text/javascript">
-            $(document).ready(function(){
-                //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
-                //Vertical Sliding
-                $('.boxgrid.slidedown').hover(function(){
-                    $(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
-                }, function() {
-                    $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
-                });
-                //Horizontal Sliding
-                $('.boxgrid.slideright').hover(function(){
-                    $(".cover", this).stop().animate({left:'205px'},{queue:false,duration:300});
-                }, function() {
-                    $(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
-                });
-                //Diagnal Sliding
-                $('.boxgrid.thecombo').hover(function(){
-                    $(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
-                }, function() {
-                    $(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
-                });
-                //Partial Sliding (Only show some of background)
-                $('.boxgrid.peek').hover(function(){
-                    $(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
-                }, function() {
-                    $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
-                });
-                //Full Caption Sliding (Hidden to Visible)
-                $('.boxgrid.captionfull').hover(function(){
-                    $(".cover", this).stop().animate({top:'200px'},{queue:false,duration:160});
-                }, function() {
-                    $(".cover", this).stop().animate({top:'300px'},{queue:false,duration:160});
-                });
-                //Caption Sliding (Partially Hidden to Visible)
-                $('.boxgrid.caption').hover(function(){
-                    $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
-                }, function() {
-                    $(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
-                });
-            });
-        </script>
+						$(document).ready(function(){
+								//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+								//Vertical Sliding
+								$('.boxgrid.slidedown').hover(function(){
+										$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+								}, function() {
+										$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+								});
+								//Horizontal Sliding
+								$('.boxgrid.slideright').hover(function(){
+										$(".cover", this).stop().animate({left:'205px'},{queue:false,duration:300});
+								}, function() {
+										$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+								});
+								//Diagnal Sliding
+								$('.boxgrid.thecombo').hover(function(){
+										$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+								}, function() {
+										$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+								});
+								//Partial Sliding (Only show some of background)
+								$('.boxgrid.peek').hover(function(){
+										$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+								}, function() {
+										$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+								});
+								//Full Caption Sliding (Hidden to Visible)
+								$('.boxgrid.captionfull').hover(function(){
+										$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:160});
+								}, function() {
+										$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:160});
+								});
+								//Caption Sliding (Partially Hidden to Visible)
+								$('.boxgrid.caption').hover(function(){
+										$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+								}, function() {
+										$(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
+								});
+						});
+				</script>
 <script>
 var $list= $(".list");
 $list.imagesLoaded(function(){
-  $list.masonry({
-    itemSelector : ".list li",
-    columnWidth : 225
-  });
+	$list.masonry({
+		itemSelector : ".list li",
+		columnWidth : 225
+	});
 });
 </script>
 </body>

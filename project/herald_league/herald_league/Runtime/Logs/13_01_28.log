@@ -1,0 +1,6 @@
+[ 2013-01-28T10:18:55+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/changeattention.html]
+[ 2013-01-28T20:24:07+08:00 ] ERR: [1] Call to undefined function getIDbyCardNumber() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 119 行.
+[ 2013-01-28T20:24:54+08:00 ] ERR: (ThinkException) Model:getIDbyCardNumber您所请求的方法不存在！
+[ 2013-01-28T20:31:06+08:00 ] ERR: (ThinkException) 无法加载模块:css
+[ 2013-01-28T20:55:09+08:00 ] ERR: [4] syntax error, unexpected T_VARIABLE D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 19 行.
+[ 2013-01-28T21:56:03+08:00 ] ERR: [1] Call to undefined function tarce() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 57 行.

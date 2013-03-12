@@ -8,17 +8,18 @@
     float:left;
 	width:940px;
 	padding-top:20px;
-	padding-left:20px;
+	padding-left:10%;
 }
 #footer_text{
     float:left;
 	padding-top:10px;
+	width:100%;
 }
 #footer_text pre{
     font-family:"微软雅黑", "宋体", serif;
 	font-size:12px;
 	float:left;
-	padding-left:590px;
+	padding-left:60%;
 	color:#999;
 }
 .link{

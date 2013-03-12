@@ -1,0 +1,15 @@
+[ 2013-02-07T19:01:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.388532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.139242s ]
+
+[ 2013-02-07T19:01:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+
+[ 2013-02-07T19:02:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=lviu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.005948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002511s ]
+

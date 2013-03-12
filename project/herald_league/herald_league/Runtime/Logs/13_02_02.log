@@ -1,0 +1,1910 @@
+[ 2013-02-02T18:08:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002349s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005983s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006148s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000211s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005834s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.019939s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006109s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.014971s ]
+
+[ 2013-02-02T18:13:16+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002472s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005996s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005968s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000167s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000143s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005794s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005760s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.017653s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.016989s ]
+
+[ 2013-02-02T18:13:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002179s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005908s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006080s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000186s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005651s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000178s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005778s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000257s ]
+
+[ 2013-02-02T18:13:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002171s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005911s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006131s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000318s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000221s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005889s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006358s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000299s ]
+
+[ 2013-02-02T18:13:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005921s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005701s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000169s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005513s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005715s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000287s ]
+
+[ 2013-02-02T18:13:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002181s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005839s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005883s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.020150s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000192s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005968s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006142s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000424s ]
+
+[ 2013-02-02T18:13:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002451s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006064s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006343s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000227s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005827s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006217s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000315s ]
+
+[ 2013-02-02T18:13:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002466s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005917s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006370s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000178s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006464s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000181s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006715s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000325s ]
+
+[ 2013-02-02T18:13:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002173s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.007154s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006658s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001122s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005930s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006021s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000272s ]
+
+[ 2013-02-02T18:13:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002323s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006368s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007380s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000334s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000210s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005753s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000318s ]
+
+[ 2013-02-02T18:13:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002406s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005731s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006117s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000207s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005654s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006366s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000270s ]
+
+[ 2013-02-02T18:18:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006779s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006719s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000165s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000141s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005487s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000173s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005876s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000181s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.025749s ]
+
+[ 2013-02-02T18:20:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005845s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006025s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000176s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000146s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005659s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000147s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005754s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.023385s ]
+
+[ 2013-02-02T18:20:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005926s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006392s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000166s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005891s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005880s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000279s ]
+
+[ 2013-02-02T18:23:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002220s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005676s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006548s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000201s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006021s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005850s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.009615s ]
+
+[ 2013-02-02T18:25:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006071s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006292s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000216s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006068s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005794s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.015177s ]
+
+[ 2013-02-02T18:25:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006258s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006294s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000351s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000219s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006318s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000341s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.007331s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000488s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.001957s ]
+
+[ 2013-02-02T18:26:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006011s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006258s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000215s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006212s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005919s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.018128s ]
+
+[ 2013-02-02T18:27:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005962s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006251s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000203s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005827s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006027s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.017148s ]
+
+[ 2013-02-02T18:27:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006033s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006435s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000215s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005938s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006218s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.021672s ]
+
+[ 2013-02-02T18:28:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006016s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006107s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000203s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005753s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005743s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000288s ]
+
+[ 2013-02-02T18:29:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005711s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006698s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000201s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005760s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000179s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005559s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000182s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.002398s ]
+
+[ 2013-02-02T18:29:16+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005889s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006005s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000163s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006005s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005650s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000265s ]
+
+[ 2013-02-02T18:30:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005804s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006173s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000209s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005687s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000178s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005652s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.002764s ]
+
+[ 2013-02-02T18:31:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005832s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006012s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000167s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005795s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005827s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000288s ]
+
+[ 2013-02-02T18:31:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005977s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006439s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000163s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006339s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005796s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.021823s ]
+
+[ 2013-02-02T18:31:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005929s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006198s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000253s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000144s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.007590s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000171s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.007331s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.053094s ]
+
+[ 2013-02-02T18:31:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005959s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006050s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000168s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005582s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005956s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.017630s ]
+
+[ 2013-02-02T18:33:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003118s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.007054s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007671s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000214s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006144s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005971s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.010922s ]
+
+[ 2013-02-02T18:36:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005818s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006625s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000190s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006068s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005967s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.001264s ]
+
+[ 2013-02-02T18:36:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006069s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006184s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000166s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005730s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000252s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006159s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.021940s ]
+
+[ 2013-02-02T18:37:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006031s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005971s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000169s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005585s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005790s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.021051s ]
+
+[ 2013-02-02T18:38:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005895s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006408s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000203s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005748s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005903s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.014573s ]
+
+[ 2013-02-02T18:38:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006112s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006194s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.020778s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000232s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006155s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006157s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.002646s ]
+
+[ 2013-02-02T18:58:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005563s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006062s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000200s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005760s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005793s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.027052s ]
+
+[ 2013-02-02T18:59:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.018292s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007127s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000158s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005945s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.007957s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.030774s ]
+
+[ 2013-02-02T19:00:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005911s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006125s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000209s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.006033s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005806s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000442s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.021210s ]
+
+[ 2013-02-02T19:04:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002281s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.024631s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006302s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000187s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005694s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005684s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.011752s ]
+
+[ 2013-02-02T19:04:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002188s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.006171s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005766s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000318s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000177s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005661s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000198s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005761s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.002759s ]
+
+[ 2013-02-02T19:05:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002239s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.021699s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006103s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000209s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005856s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.006068s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.015800s ]
+
+[ 2013-02-02T19:06:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002184s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.025930s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006273s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000211s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005885s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005940s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.009920s ]
+
+[ 2013-02-02T19:07:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002502s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.028013s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006148s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000178s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005743s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005908s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.037492s ]
+
+[ 2013-02-02T19:07:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005978s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006200s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000176s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005737s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000183s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005722s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000204s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.021457s ]
+
+[ 2013-02-02T19:09:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003122s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005996s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006220s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000198s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005878s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005879s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.022911s ]
+
+[ 2013-02-02T19:09:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003014s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005613s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005956s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000142s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005874s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005588s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.040398s ]
+
+[ 2013-02-02T19:10:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003067s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.018526s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006168s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000146s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005843s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000177s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005410s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000190s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.001536s ]
+
+[ 2013-02-02T19:10:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003042s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.050449s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006549s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000398s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000164s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005951s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000183s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005765s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.035434s ]
+
+[ 2013-02-02T19:10:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002880s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.038688s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006489s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000207s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005848s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005889s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.008411s ]
+
+[ 2013-02-02T19:11:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003054s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.005904s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005886s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000205s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005990s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005789s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 1 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (1,3) [ RunTime:0.001746s ]
+
+[ 2013-02-02T19:25:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.031115s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005742s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000217s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005605s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005503s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000601s ]
+SQL: INSERT INTO `lg_vote_result` (`item_id`,`user_id`) VALUES (2,3) [ RunTime:0.006405s ]
+
+[ 2013-02-02T19:25:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.026691s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005489s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT `vote_id` FROM `lg_vote_item` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000202s ]
+DEBUG: 2:vid
+SQL: SHOW COLUMNS FROM `lg_vote` [ RunTime:0.005413s ]
+SQL: SELECT `available_num` FROM `lg_vote` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT * FROM `lg_vote` LIMIT 1   [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `lg_vote_result` [ RunTime:0.005992s ]
+SQL: SELECT * FROM `lg_vote_result` WHERE ( `item_id` = 2 ) AND ( `user_id` = 3 ) LIMIT 1   [ RunTime:0.000286s ]
+
+[ 2013-02-02T19:36:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036339s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005962s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005798s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001383s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005768s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006044s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005865s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.011572s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005985s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005515s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005720s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000359s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.002401s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036167s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005535s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005870s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001696s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006380s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005425s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005681s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.020073s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005937s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005464s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006026s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.025184s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036251s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006330s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005654s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001840s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005778s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005429s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006206s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.002091s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006056s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005487s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005958s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000197s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001165s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026288s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005539s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005904s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.028610s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005809s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005743s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005538s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.002359s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035872s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005622s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005612s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.036559s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:37:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005749s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005719s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005459s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000270s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001797s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:37:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.037741s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005461s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005608s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001785s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:45:21+08:00 ] ERR: [4] syntax error, unexpected T_DOUBLE_ARROW, expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\ActivityAction.class.php 第 125 行.
+[ 2013-02-02T19:45:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.034020s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005814s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005871s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.034679s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:46:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032846s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005936s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006320s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000198s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.005007s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:47:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001902s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005998s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005853s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005730s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000169s ]
+
+[ 2013-02-02T19:48:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023568s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006029s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005806s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000244s ]
+
+[ 2013-02-02T19:48:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025031s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005420s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005402s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000495s ]
+
+[ 2013-02-02T19:48:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036490s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005647s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006260s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001746s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:49:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.030548s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005959s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005599s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2013-02-02T19:49:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038941s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005410s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005728s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.007615s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:49:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022701s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005429s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005509s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001179s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:49:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024962s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005325s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005628s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000198s ]
+
+[ 2013-02-02T19:49:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029477s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007034s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006505s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000205s ]
+
+[ 2013-02-02T19:50:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.065086s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006449s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006576s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.027544s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:50:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026963s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005563s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005783s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000189s ]
+
+[ 2013-02-02T19:52:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035696s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005784s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005526s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001647s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:52:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.018599s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005731s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005580s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+
+[ 2013-02-02T19:53:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025072s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005879s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005637s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001283s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:54:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002166s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023576s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005729s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005524s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001163s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:55:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001863s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.039899s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005975s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006037s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000479s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.005344s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:56:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035227s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005531s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005461s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000172s ]
+
+[ 2013-02-02T19:56:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003610s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.017755s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006628s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006396s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001021s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T19:56:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003478s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.031329s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006593s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007183s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000289s ]
+
+[ 2013-02-02T19:56:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003022s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032941s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006321s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.008429s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000291s ]
+
+[ 2013-02-02T19:58:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002608s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.037213s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.017991s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005928s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.010968s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T19:58:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.050070s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005566s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005450s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.002334s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:00:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.065203s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005468s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005611s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001716s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:00:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.053123s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005406s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005897s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001267s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:00:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038678s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006606s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005748s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000170s ]
+
+[ 2013-02-02T20:00:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002982s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.016210s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005436s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005774s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001245s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:02:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002963s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.070852s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005741s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006875s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001198s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:03:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002972s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.019263s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005689s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006864s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000223s ]
+
+[ 2013-02-02T20:06:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005657s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006441s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005552s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.001660s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:06:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.057003s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005877s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005824s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001668s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:07:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023876s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005365s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005798s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000230s ]
+
+[ 2013-02-02T20:07:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033350s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005623s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005404s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.008684s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:07:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.065294s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005584s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005624s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000441s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000272s ]
+
+[ 2013-02-02T20:08:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029062s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005448s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005978s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001746s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:08:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033291s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005446s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005875s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.023573s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:14:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.053488s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005896s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006277s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001245s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:14:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036282s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005532s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006110s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001340s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:14:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.019289s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005780s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005468s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,2,0) [ RunTime:0.009784s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:14:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038875s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008542s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006402s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000393s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001229s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:14:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.045684s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008868s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007050s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000221s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001399s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:14:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029171s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006380s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.008548s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001535s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:14:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033833s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005508s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005904s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 2 ) AND ( `isleague` = 0 ) [ RunTime:0.001324s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:15:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006297s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005692s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.007449s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001953s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:15:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.005835s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007131s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005774s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.022464s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:15:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.046981s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007044s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005809s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000651s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001457s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:15:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006766s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005694s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005859s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.021100s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:15:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006085s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005931s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005665s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000477s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000228s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001661s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:15:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.048248s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005584s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006217s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000389s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.011502s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:26:13+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:26:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.031338s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006008s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006085s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001400s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:26:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024203s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006050s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006342s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.011609s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:26:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.015101s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006052s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006190s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001252s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:26:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006225s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006386s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005709s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.022146s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:26:31+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:26:43+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:26:47+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:26:53+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:27:01+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:27:07+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:27:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002777s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.040377s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005806s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006190s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000417s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001547s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002268s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025939s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006132s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006634s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000348s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.014136s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:27:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002517s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035125s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005985s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006142s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001653s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002208s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.017171s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005870s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006088s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001241s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:27:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002190s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023156s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005904s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005963s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001790s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002208s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.046495s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007849s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006295s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.031931s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:27:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006523s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005785s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006578s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001881s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002217s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006293s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005520s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006143s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.026233s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:27:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002184s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026323s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005921s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006161s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.002025s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002215s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.028190s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006042s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006656s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.006486s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T20:27:26+08:00 ] ERR: (ThinkException) 无法加载模块:engine1
+[ 2013-02-02T20:27:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.014485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001733s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029407s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006249s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006075s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) [ RunTime:0.001522s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-02-02T20:27:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.067793s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006939s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.005896s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000290s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,1,0) [ RunTime:0.001440s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-02-02T22:11:57+08:00 ] ERR: (ThinkException) 无法加载模块:module

@@ -1,0 +1,375 @@
+[ 2013-03-03T09:55:34+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T09:55:34+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:03:54+08:00 ] ERR: (ThinkException) Column 'specific_time' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_place`,`contact_info`,`activity_introduce`,`activity_org_name`,`specific_time`,`activity_release_time`,`league_id`,`activity_post_add`) VALUES ('upp','2013-03-04','2013-03-11','111','1111','aaaaaaaaaaaaaaaaaaaaaaaaa','先声网',null,'2013-03-03',1,'1/2013-03-03/5132af8a41f26.jpg')
+[ 2013-03-03T10:04:31+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:04:31+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:05:00+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:05:00+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:05:46+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:05:46+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:08:23+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:08:23+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:09:42+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:09:43+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:12:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002757s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.061246s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:12:03') [ RunTime:0.014808s ]
+INFO: Run logIP Behavior [ RunTime:-0.009732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.126376s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.020814s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.031637s ]
+DEBUG: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>413 Request Entity Too Large</title>
+</head><body>
+<h1>Request Entity Too Large</h1>
+The requested resource<br />/lg2.0/league_2.0/project/herald_league/sso.php<br />
+does not allow request data with POST requests, or the amount of data provided in
+the request exceeds the capacity limit.
+</body></html>
+    <session>
+       <id>111222333</id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
+            </properties>
+     </session>:message
+DEBUG: username
+
+[ 2013-03-03T10:12:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001685s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.088816s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:12:06') [ RunTime:0.001687s ]
+INFO: Run logIP Behavior [ RunTime:-0.002851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.114802s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.022603s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000657s ]
+DEBUG: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>413 Request Entity Too Large</title>
+</head><body>
+<h1>Request Entity Too Large</h1>
+The requested resource<br />/lg2.0/league_2.0/project/herald_league/sso.php<br />
+does not allow request data with POST requests, or the amount of data provided in
+the request exceeds the capacity limit.
+</body></html>
+    <session>
+       <id>111222333</id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
+            </properties>
+     </session>:message
+DEBUG: username
+
+[ 2013-03-03T10:12:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001832s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.084725s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:12:10') [ RunTime:0.002388s ]
+INFO: Run logIP Behavior [ RunTime:-0.003134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.114645s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000931s ]
+DEBUG: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>413 Request Entity Too Large</title>
+</head><body>
+<h1>Request Entity Too Large</h1>
+The requested resource<br />/lg2.0/league_2.0/project/herald_league/sso.php<br />
+does not allow request data with POST requests, or the amount of data provided in
+the request exceeds the capacity limit.
+</body></html>
+    <session>
+       <id>111222333</id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
+            </properties>
+     </session>:message
+DEBUG: username
+
+[ 2013-03-03T10:12:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001824s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.044663s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:12:31') [ RunTime:0.015178s ]
+INFO: Run logIP Behavior [ RunTime:-0.005058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.084770s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000695s ]
+DEBUG: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>413 Request Entity Too Large</title>
+</head><body>
+<h1>Request Entity Too Large</h1>
+The requested resource<br />/lg2.0/league_2.0/project/herald_league/sso.php<br />
+does not allow request data with POST requests, or the amount of data provided in
+the request exceeds the capacity limit.
+</body></html>
+    <session>
+       <id>111222333</id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
+            </properties>
+     </session>:message
+DEBUG: username
+
+[ 2013-03-03T10:12:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001671s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.061138s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:12:33') [ RunTime:0.002442s ]
+INFO: Run logIP Behavior [ RunTime:-0.004509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087929s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.022237s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000636s ]
+DEBUG: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>413 Request Entity Too Large</title>
+</head><body>
+<h1>Request Entity Too Large</h1>
+The requested resource<br />/lg2.0/league_2.0/project/herald_league/sso.php<br />
+does not allow request data with POST requests, or the amount of data provided in
+the request exceeds the capacity limit.
+</body></html>
+    <session>
+       <id>111222333</id>
+            <properties>
+                <herald.sso.studentUser.cardNumber>888888</herald.sso.studentUser.cardNumber>
+                <herald.sso.studentUser.fullName>test</herald.sso.studentUser.fullName>
+            </properties>
+     </session>:message
+DEBUG: username
+
+[ 2013-03-03T10:17:19+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:17:19+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:19:49+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:19:49+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:20:48+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:20:48+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:22:02+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:22:03+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:22:30+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:22:30+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:23:22+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:23:22+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:24:18+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:24:18+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:25:35+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:25:35+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:25:48+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:25:48+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:25:54+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:25:54+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:26:01+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:26:02+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:27:07+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:27:07+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:27:29+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:27:29+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:27:29+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:28:05+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:28:05+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:28:06+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:29:00+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:29:00+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:29:00+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:29:08+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:29:09+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:29:47+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:29:48+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:29:57+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:29:57+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:42:12+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:42:12+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:47:05+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-03T10:47:05+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:48:23+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-03T10:59:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.047072s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001237s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.048337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038747s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.087131s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.087835s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.088241s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.088555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001850s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.089053s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2013-03-03T10:59:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000747s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016250s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:59:51') [ RunTime:0.001598s ]
+INFO: Run logIP Behavior [ RunTime:-0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027733s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010456s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `username` = 'test' ) AND ( `password` = '098f6bcd4621d373cade4e832627b4f6' ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: UPDATE `lg_league_info` SET `last_login_time`='2013-03-03' WHERE id=1 [ RunTime:0.022950s ]
+
+[ 2013-03-03T10:59:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001015s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011376s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 10:59:54') [ RunTime:0.035084s ]
+INFO: Run logIP Behavior [ RunTime:-0.001877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.058182s ]
+
+[ 2013-03-03T10:59:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.033597s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001572s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.035203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015441s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.050688s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.051596s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.052377s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.053052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003251s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.054005s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2013-03-03T11:01:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.118423s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001197s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.119662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010313s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.130014s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.130418s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.130835s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.131105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001568s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.131647s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2013-03-03T12:11:44+08:00 ] ERR: [4] syntax error, unexpected ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Runtime\Cache\Activity\0813e72ab3634315923d8a692546b982.php 第 151 行.
+[ 2013-03-03T13:26:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000645s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.028977s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 13:26:45') [ RunTime:0.021734s ]
+INFO: Run logIP Behavior [ RunTime:-0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060139s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000388s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
+[ 2013-03-03T13:26:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000713s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011325s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 13:26:46') [ RunTime:0.014164s ]
+INFO: Run logIP Behavior [ RunTime:-0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035036s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000381s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
+[ 2013-03-03T13:26:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=111&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000665s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015280s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-03 13:26:52') [ RunTime:0.002100s ]
+INFO: Run logIP Behavior [ RunTime:-0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031329s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 111 ) LIMIT 1   [ RunTime:0.000363s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 56 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 56 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 57 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 57 行.
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 58 行.
+DEBUG: message
+DEBUG: id
+
+[ 2013-03-03T13:26:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.044523s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001352s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.045917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045864s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.091821s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.092559s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.093733s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.094803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004233s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.096106s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2013-03-03T21:00:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-22.605942s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001685s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-22.607664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016524s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-22.624259s ]
+INFO: Run TokenBuild Behavior [ RunTime:-22.625169s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-22.627060s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-22.628328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005627s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-22.629928s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001922s ]
+
+[ 2013-03-03T21:00:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-18.731743s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002094s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-18.733886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012510s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-18.746433s ]
+INFO: Run TokenBuild Behavior [ RunTime:-18.747674s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-18.748827s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-18.749882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004650s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-18.751135s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001309s ]
+
+[ 2013-03-03T21:00:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.057700s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001910s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.059639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016274s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.075956s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.077376s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078970s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.080135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005450s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.081465s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001510s ]
+
+[ 2013-03-03T21:28:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+
