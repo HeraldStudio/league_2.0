@@ -238,7 +238,7 @@ $(function(){
 						</div>
 						<div id="left3">
 							<div id="activity_introduction">
-								<?php echo ($activityInf["activity_introduce"]); ?>
+								<?php echo (htmldecode($activityInf["activity_introduce"])); ?>
 							</div>
 							<div id="activity_img"><img width=500px  src="__ROOT__/Uploads/LeaguePost/Large/<?php echo (($activityInf["activity_post_add"])?($activityInf["activity_post_add"]):"default.jpg"); ?>"/>
 							</div>
@@ -369,13 +369,13 @@ $(function(){
 						</div>
 						<div id="right2">
 							<div id="touxiang">
-								<?php if(is_array($attender)): $i = 0; $__LIST__ = $attender;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><a href="#"id="touxiang<?php echo ($a["id"]); ?>" class="tx">
-											<div id="touxiang_img1" class="touxiang_img"><img width=50px height=50px src="__ROOT__/Uploads/UserAvatar/<?php echo (($a["user_avatar_add"])?($a["user_avatar_add"]):"default.jpg"); ?>" alt="" />
-											</div>
-											<div id="touxiang_text1" class="touxiang_text"><?php echo ($a["true_name"]); ?>
-											</div>
-										</a><?php endforeach; endif; else: echo "" ;endif; ?>
-								
+								<?php if(is_array($attender)): $i = 0; $__LIST__ = array_slice($attender,0,12,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><a  href="#"id="touxiang<?php echo (($a["id"])?($a["id"]):0); ?>" class="tx">
+										<div id="touxiang_img1" class="touxiang_img"><img width=50px height=50px src="__ROOT__/Uploads/UserAvatar/<?php echo (($a["user_avatar_add"])?($a["user_avatar_add"]):"default.jpg"); ?>" alt="" />
+										</div>
+										<div id="touxiang_text1" class="touxiang_text"><?php echo (($a["true_name"])?($a["true_name"]):匿名); ?>
+										</div>
+									</a><?php endforeach; endif; else: echo "" ;endif; ?>
+							<?php if(count($attender) > 11): ?>...<?php endif; ?>	
 						</div>
 						<div id="right3">
 							<div id="interest_title">猜你感兴趣...

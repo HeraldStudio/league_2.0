@@ -46,7 +46,7 @@ a:hover {
 			    </div>			  
 			  </a>
               <?php else: ?>
-                  <a href="#" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')>
+                  <a href="#" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
                       <div id="attention_text">
                           取消关注
                       </div>
