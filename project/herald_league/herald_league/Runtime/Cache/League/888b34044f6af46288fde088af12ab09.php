@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,13 +23,14 @@ a:hover {
 	<div id="main_body">
 	<?php if(is_array($album)): $i = 0; $__LIST__ = $album;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="photo">
 	    <div class="photo_img">
-	    	<a href = "__APP__/League/Home/picture/albumid/<?php echo ($vo["id"]); ?>">
+	    	<a href = "__APP__/League/Home/club/title/zpq/leagueid/<?php echo ($leagueid); ?>/albumid/<?php echo ($vo["id"]); ?>" target = "blank">
 				<img src = "__Uploads__/<?php echo ($vo["album_cover_add"]); ?>"/>
 			</a>
 		</div>
 		<div class="photo_text">
 		  <div class="photo_name">
-		  	<a href = "__APP__/League/Home/picture/albumid/<?php echo ($vo["id"]); ?>"><?php echo ($vo["album_name"]); ?>
+		  	<a href = "__APP__/League/Home/club/title/zpq/leagueid/<?php echo ($leagueid); ?>/albumid/<?php echo ($vo["id"]); ?>" target = "blank">
+		  		<?php echo ($vo["album_name"]); ?>
 			</a>
 		  </div>
 		  <div class="photo_num">2张

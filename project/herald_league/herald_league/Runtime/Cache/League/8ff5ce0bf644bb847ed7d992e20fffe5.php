@@ -4,8 +4,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo ($title); ?></title>
 <link rel="stylesheet" type="text/css" href="__Public__/Css/club.css" />
-<link rel="stylesheet" type="text/css" href="__Public__/Css/leaguehome.css"/>
+<link rel="stylesheet" type="text/css" href="__Public__/Css/dating.css"/>
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+				frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
+<script type="text/javascript">
+ function logout()
+{
+		$.ajax({
+			url:'<?php echo U('/Public/Logout/');?>',
+			success:function(){
+			$("#islogin").hide();
+			$("#notlogin").show();
+			location.reload();//todo
+			}
+		})
+}
+</script>
 <script type="text/javascript">
     function changeLeagueAttention(leagueid,action)
     {
@@ -14,7 +34,9 @@
                 alert(data.info);
             else
             {
-                $("#guanzhu").val("已关注");
+                $(".guanzhu1").toggle();
+                $(".guanzhu2").toggle();
+
             }
         });
     };
@@ -35,42 +57,48 @@ a:hover {
 <body>
 <div id="main">
     <div id="header">
-	  <div id="logo">
-	  </div>
-	  <div id="navigation">
-		<div id="herald" class="navigation_link">
-		  <a href="#" >先声</a>
+			<div id="logo">
+			</div>
+			<div id="navigation">
+				<div id="herald" class="navigation_link">
+					<a href="#" >先声</a>
+				</div>
+				<div id="map" class="navigation_link">
+					<a href="#" >社团</a>
+				</div>
+				<div id="activity" class="navigation_link">
+					 <a href="__APP__" >活动</a>
+				</div>
+				<div id="wall" class="navigation_link">
+					<a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+				</div>
+			</div>
+			<div id="search">
+						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+						</form>
+						<a href="#" id="search_image">
+						</a>
 		</div>
-		<div id="map" class="navigation_link">
-		  <a href="#" >社团</a>
-		</div>
-	    <div id="activity" class="navigation_link">
-     	  <a href="#" >活动</a>
-		</div>
-		<div id="wall" class="navigation_link">
-		  <a href="#" >海报墙</a>
-		</div>
-	  </div>
-	  <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
-		</form>
-	  </div>
-	  <div id="message">
-	    <a href="#" id="message_image"></a>
-	  </div>
-	  <div id="love">
-	    <a href="#" id="love_image"></a>
-	  </div>
-	  <div id="user"><a href="#">赵亮</a></div>
-	  <div id="exit"><a href="#">退出</a></div>
+		<?php if($islogin == 1): ?><div id="message">
+							<a href="#" id="message_image"></a>
+							<div id="m_num">5</div>
+					</div>
+					<div id="love">
+							<a href="#" id="love_image"></a>
+					</div>
+			
+			<div id="user"><a href="#"><?php echo ($name); ?></a></div>
+			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+		<?php else: ?>
+			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+
 	</div>
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">
-	    <?php if($isactivityempty): ?><h1 style = "margin: 100px;">该社团尚未添加活动，这里需要前台做一个替换页面</h1>
-		  <?php else: ?>
+		<?php if($isactivityempty): ?><h1 style = "margin: 100px;">该社团尚未添加活动，这里需要前台做一个替换页面</h1>
+		<?php else: ?>
 		  <?php switch($gettitle): case "zls": ?><iframe name="i" src="__APP__/League/Home/infoRoom/leagueid/<?php echo ($leagueid); ?>" id = 'zls'></iframe>
 				<div id="inner_right">
 				<div id="right_content">
@@ -96,7 +124,8 @@ a:hover {
 				</div>
 				</div>
 				</div><?php break;?>
-		  	<?php case "dt": ?><iframe name="i" src="__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($activityid); ?>" id = 'dt'></iframe>
+		  	<?php case "dt": ?><iframe name="i" src="__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($activityid); ?>" id = 'dt'>
+				</iframe>
 				<div id="inner_right">
 				<div id="right_content">
 				<div id="right3">
@@ -136,8 +165,12 @@ a:hover {
 				</div>
 				</div>
 				</div><?php break;?>
-		  	<?php case "lyb": ?><iframe name="i" src="__APP__/League/Home/communion/leagueid/<?php echo ($leagueid); ?>" id = 'lyb'></iframe><?php break;?>
-		  	<?php case "yxg": ?><iframe name="i" src="__APP__/League/Home/album/leagueid/<?php echo ($leagueid); ?>" id = 'yxg'></iframe><?php break; endswitch; endif; ?>
+		  	<?php case "lyb": ?><iframe name="i" src="__APP__/League/Home/communion/leagueid/<?php echo ($leagueid); ?>" id = 'lyb'>
+		  		</iframe><?php break;?>
+		  	<?php case "yxg": ?><iframe name="i" src="__APP__/League/Home/album/leagueid/<?php echo ($leagueid); ?>" id = 'yxg'>
+		  		</iframe><?php break;?>
+		  	<?php case "zpq": ?><iframe name="i" src="__APP__/League/Home/picture/albumid/<?php echo ($albumid); ?>" id = 'yxg'>
+		  		</iframe><?php break; endswitch; endif; ?>
 		</div>
 	  </div>
 	</div>
@@ -152,25 +185,29 @@ a:hover {
 	  </div>
 	</div>
   </div>
-<div id="gua1" class="gua">
+  <div id="gua1" class="gua">
   </div>
   <div id="gua2" class="gua">
   </div>
   <div id="club_lable">
     <div id="lable_top">
-	  <div id="touxiang2"><img src="__Uploads__/LeagueAvatar/s_<?php echo ($league[0]['avater_address']); ?>" />
+	  <div id="touxiang2">
+	  	<img src="__Uploads__/LeagueAvatar/s_<?php echo ($league['avater_address']); ?>" />
 	  </div>
 	  <div id="name">
-	  	<?php echo ($league[0]['league_name']); ?>
+	  	<?php echo ($league['league_name']); ?>
 	  </div>
 	  <div id="address">
 	  	<?php echo ($classname); ?>--<?php echo ($streetname); ?>
 	  </div>
 	</div>
 	<div id="lable_bottom">
-	  <div id="guanzhu" class ="lg_notattended" onclick="changeLeagueAttention(<?php echo ($league[0]['id']); ?>,'add')">关注
+	  <div id="guanzhu" class = "guanzhu1"<?php if($isattended == true): ?>style="display:none"<?php endif; ?>onclick="javascript:changeLeagueAttention(<?php echo ($league['id']); ?>,'add')">关注
 	  </div>
-	  <div id="number"><?php echo ($attentionnum); ?>人关注
+	  <div id="guanzhu" class = "guanzhu2" <?php if($isattended == false): ?>style="display:none"<?php endif; ?>onclick="javascript:changeLeagueAttention(<?php echo ($league['id']); ?>,'del')">已关注
+	  </div>
+	  <div id="number">
+	  	<?php echo ($attentionnum); ?>人关注
 	  </div>
 	  <a href="#" id="chumen">
 	    <div id="chumen_img">

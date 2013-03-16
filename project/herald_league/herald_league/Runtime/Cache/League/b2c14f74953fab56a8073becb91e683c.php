@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>档案室</title>
 <link href="__Public__/Css/danganshi.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="../css/header.css" />
+<link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -23,22 +23,17 @@ a:hover {
 	<div id="main_body">
 	  <div id="top">
 	    <div id="touxiang">
-	    	<img src="__Uploads__/LeagueAvatar/l_<?php echo ($league[0]['avater_address']); ?>" />
+	    	<img src="__Uploads__/LeagueAvatar/l_<?php echo ($league['avater_address']); ?>" />
 		</div>
-		<div id="title"><?php echo ($league[0]['league_name']); ?>
+		<div id="title"><?php echo ($league['league_name']); ?>
 		</div>
-		<a href="#"id="attention">
-		  <div id="attention_img">
-		  </div>
-		  <div id="attention_text">关注
-		  </div>			  
-		</a>
+		
 		<div id="member">
 		  <div id="member_title">社团成员：
 		  </div>
 		  <div id="member_text">
 		    <p>
-		    	<?php echo ($league[0]['league_member']); ?>  
+		    	<?php echo ($league['league_member']); ?>  
 		    </p>
 		  </div>
 		</div>
@@ -49,7 +44,7 @@ a:hover {
 		  </div>
 		  <div id="club_text">
 		    <p>
-		    	<?php echo ($league[0]['league_introduce']); ?>
+		    	<?php echo ($league['league_introduce']); ?>
 		    </p>
 		  </div>
 		</div>
@@ -59,7 +54,7 @@ a:hover {
 		  <div id="contact_title">联系我们：
 		  </div>
 		  <div id="contact_text">
-	    	<?php echo ($league[0]['contact']); ?>
+	    	<?php echo ($league['contact']); ?>
 		  </div>
 		</div>
 	  </div>

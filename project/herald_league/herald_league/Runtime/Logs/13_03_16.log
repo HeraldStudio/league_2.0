@@ -215,6 +215,7 @@ SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.0008
 [ 2013-03-16T15:48:36+08:00 ] ERR: [4] syntax error, unexpected 'break' (T_BREAK) E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\League\HomeAction.class.php 第 461 行.
 [ 2013-03-16T16:06:28+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-03-16T16:06:28+08:00 ] ERR: (ThinkException) 无法加载模块:images
+<<<<<<< HEAD
 [ 2013-03-16T16:36:09+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-03-16T17:04:40+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
 [ 2013-03-16T17:05:43+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
@@ -222,3 +223,948 @@ SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.0008
 [ 2013-03-16T17:06:33+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
 [ 2013-03-16T17:08:01+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
 [ 2013-03-16T17:18:30+08:00 ] ERR: [1] Call to undefined function ch() E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 57 行.
+=======
+[ 2013-03-16T16:41:41+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-16T16:41:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001169s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012925s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:41:53') [ RunTime:0.016526s ]
+INFO: Run logIP Behavior [ RunTime:-0.002175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047874s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000413s ]
+
+[ 2013-03-16T16:43:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.111302s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001651s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.112987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088034s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.201062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.202054s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.203135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.204581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004581s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.205721s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001605s ]
+
+[ 2013-03-16T16:43:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.060323s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000451s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.060810s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007765s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.068619s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.069058s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.069437s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.069752s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001730s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.070511s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2013-03-16T16:43:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.377125s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001441s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.378609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014888s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.393532s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.393944s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.394342s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.394578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001492s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.395087s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2013-03-16T16:44:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.043595s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001166s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.044798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016891s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.061738s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.062180s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062548s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001536s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.063338s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2013-03-16T16:44:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.066236s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002287s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.068459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010966s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.079505s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.080755s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.081798s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.082840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004296s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.083856s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001072s ]
+
+[ 2013-03-16T16:44:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.067650s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001240s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.068915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009107s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078062s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.078821s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.080446s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.081633s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004958s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.083090s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2013-03-16T16:45:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.104098s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001725s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.105859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011095s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.116994s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.117946s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.118781s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.119480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003449s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.120522s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001458s ]
+
+[ 2013-03-16T16:45:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.054635s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000610s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.055383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010119s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.065556s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.066119s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.066636s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.066973s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001961s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.067613s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2013-03-16T16:46:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.072740s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001420s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.074258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010590s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.084858s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.085275s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.085621s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.085857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001455s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.086381s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2013-03-16T16:46:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.053483s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002123s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.055641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013384s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.069311s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.070436s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.071346s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.072083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003896s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.073262s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001083s ]
+
+[ 2013-03-16T16:47:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.040385s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001339s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.041742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011665s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.053445s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.053881s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.054238s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.054479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001504s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.055018s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2013-03-16T16:48:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.056910s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002298s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.059251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018532s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.077840s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.078808s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.079656s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.080375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003486s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.081398s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001058s ]
+
+[ 2013-03-16T16:48:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.055194s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001851s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.057025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010408s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.067464s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.067857s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.068190s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.068416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001385s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.068909s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-03-16T16:48:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046622s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001830s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.048459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013793s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.062284s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.063022s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.063625s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.064098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002959s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.065373s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2013-03-16T16:49:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.047082s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001643s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.048781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015260s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.064068s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.064467s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.064803s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.065064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001449s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.065579s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2013-03-16T16:49:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000663s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011745s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:49:14') [ RunTime:0.001354s ]
+INFO: Run logIP Behavior [ RunTime:-0.001796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024609s ]
+
+[ 2013-03-16T16:49:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000724s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013745s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:49:18') [ RunTime:0.019422s ]
+INFO: Run logIP Behavior [ RunTime:-0.001867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044540s ]
+
+[ 2013-03-16T16:49:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000743s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011535s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:49:24') [ RunTime:0.010129s ]
+INFO: Run logIP Behavior [ RunTime:-0.001995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033058s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010166s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `username` = 'test' ) AND ( `password` = '098f6bcd4621d373cade4e832627b4f6' ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: UPDATE `lg_league_info` SET `last_login_time`='2013-03-16' WHERE id=1 [ RunTime:0.010614s ]
+
+[ 2013-03-16T16:52:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001063s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012232s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:52:40') [ RunTime:0.029801s ]
+INFO: Run logIP Behavior [ RunTime:-0.001970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.054115s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009689s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000318s ]
+
+[ 2013-03-16T16:52:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.098229s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001565s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.099824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012749s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.112623s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.113643s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.114503s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.115224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003561s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.116254s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2013-03-16T16:52:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000696s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011452s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:52:49') [ RunTime:0.020981s ]
+INFO: Run logIP Behavior [ RunTime:-0.001241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042571s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.018978s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.015564s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.020647s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.016231s ]
+
+[ 2013-03-16T16:52:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001048s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012110s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:52:53') [ RunTime:0.002333s ]
+INFO: Run logIP Behavior [ RunTime:-0.001990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026505s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009678s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011143s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015537s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.058559s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T16:52:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000743s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011430s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:52:55') [ RunTime:0.020950s ]
+INFO: Run logIP Behavior [ RunTime:-0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041906s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009955s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010999s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015864s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000234s ]
+
+[ 2013-03-16T16:52:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000832s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011325s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:52:57') [ RunTime:0.001859s ]
+INFO: Run logIP Behavior [ RunTime:-0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022549s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009718s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010773s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015736s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000220s ]
+
+[ 2013-03-16T16:54:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000853s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011318s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:54:30') [ RunTime:0.012441s ]
+INFO: Run logIP Behavior [ RunTime:-0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033504s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010137s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011064s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.071276s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000263s ]
+
+[ 2013-03-16T16:56:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000670s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011118s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:56:50') [ RunTime:0.002472s ]
+INFO: Run logIP Behavior [ RunTime:-0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023124s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009655s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011678s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015574s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000156s ]
+
+[ 2013-03-16T16:56:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000802s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015068s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:56:53') [ RunTime:0.001629s ]
+INFO: Run logIP Behavior [ RunTime:-0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026097s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009398s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010730s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.018705s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000170s ]
+
+[ 2013-03-16T16:57:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001062s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.034108s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:57:46') [ RunTime:0.001682s ]
+INFO: Run logIP Behavior [ RunTime:-0.002045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048289s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010140s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011201s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015748s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.072570s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T16:57:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000751s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013878s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:57:47') [ RunTime:0.001643s ]
+INFO: Run logIP Behavior [ RunTime:-0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025102s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009518s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010547s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015693s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000153s ]
+
+[ 2013-03-16T16:57:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000865s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010638s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:57:50') [ RunTime:0.032832s ]
+INFO: Run logIP Behavior [ RunTime:-0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053010s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009717s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010745s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016329s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000161s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.033726s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T16:59:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001099s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010868s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:59:09') [ RunTime:0.002358s ]
+INFO: Run logIP Behavior [ RunTime:-0.002076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024981s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009666s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010872s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015178s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000391s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000176s ]
+
+[ 2013-03-16T16:59:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000770s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011846s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 16:59:12') [ RunTime:0.001421s ]
+INFO: Run logIP Behavior [ RunTime:-0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043537s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009255s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010868s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015529s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000217s ]
+
+[ 2013-03-16T17:06:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001074s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011494s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:10') [ RunTime:0.002267s ]
+INFO: Run logIP Behavior [ RunTime:-0.002073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025628s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009507s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011087s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015982s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.002759s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000726s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012027s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:11') [ RunTime:0.023084s ]
+INFO: Run logIP Behavior [ RunTime:-0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044607s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010414s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.012199s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016922s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000260s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000179s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.004691s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:06:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000809s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011735s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:26') [ RunTime:0.002224s ]
+INFO: Run logIP Behavior [ RunTime:-0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026232s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.012647s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011342s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.019773s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000150s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.000968s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000688s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.022239s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:27') [ RunTime:0.001927s ]
+INFO: Run logIP Behavior [ RunTime:-0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033955s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009659s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011305s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.066400s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.012843s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:06:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000654s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011637s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:28') [ RunTime:0.022422s ]
+INFO: Run logIP Behavior [ RunTime:-0.001195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043821s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009750s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010644s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.060178s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.001353s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000664s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010927s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:29') [ RunTime:0.001814s ]
+INFO: Run logIP Behavior [ RunTime:-0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022720s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009926s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010613s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016059s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000162s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.007804s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:06:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000697s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012608s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:31') [ RunTime:0.013597s ]
+INFO: Run logIP Behavior [ RunTime:-0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035745s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009586s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011333s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.067766s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.001442s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000684s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010688s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:44') [ RunTime:0.001843s ]
+INFO: Run logIP Behavior [ RunTime:-0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022485s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009465s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010958s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015466s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.026483s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:06:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000684s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012478s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:45') [ RunTime:0.002544s ]
+INFO: Run logIP Behavior [ RunTime:-0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024646s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010002s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011328s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016684s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000412s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.001403s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000694s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010219s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:46') [ RunTime:0.002274s ]
+INFO: Run logIP Behavior [ RunTime:-0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022000s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009724s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010882s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.014709s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.001423s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:06:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000694s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.009447s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:46') [ RunTime:0.002430s ]
+INFO: Run logIP Behavior [ RunTime:-0.001157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021682s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009269s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010304s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015683s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) [ RunTime:0.002909s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:06:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/League/Home/changeAttention?leagueid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000795s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011435s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:06:54') [ RunTime:0.001517s ]
+INFO: Run logIP Behavior [ RunTime:-0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022487s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.009713s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011295s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.020059s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000565s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 1 ) AND ( `isleague` = 1 ) LIMIT 1   [ RunTime:0.000468s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1,1) [ RunTime:0.003268s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:12:04+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-16T17:12:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001153s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011294s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:12:36') [ RunTime:0.002014s ]
+INFO: Run logIP Behavior [ RunTime:-0.002100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025127s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `lg_league_info` [ RunTime:0.010107s ]
+SQL: SELECT * FROM `lg_league_info` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000293s ]
+
+[ 2013-03-16T17:13:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000791s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010931s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:13:10') [ RunTime:0.002314s ]
+INFO: Run logIP Behavior [ RunTime:-0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023385s ]
+
+[ 2013-03-16T17:13:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.025817s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001625s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.027478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010633s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.038152s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039066s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.040337s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.041473s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004683s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.042898s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001534s ]
+
+[ 2013-03-16T17:13:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000729s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017404s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:13:18') [ RunTime:0.018394s ]
+INFO: Run logIP Behavior [ RunTime:-0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048579s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016615s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.019855s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.015658s ]
+
+[ 2013-03-16T17:13:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000773s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010775s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:13:27') [ RunTime:0.001702s ]
+INFO: Run logIP Behavior [ RunTime:-0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021620s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011338s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015955s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000206s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,106,0) [ RunTime:0.025813s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:21:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000728s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011743s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:21:29') [ RunTime:0.016163s ]
+INFO: Run logIP Behavior [ RunTime:-0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038186s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011473s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016965s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000326s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000322s ]
+
+[ 2013-03-16T17:21:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000747s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.014855s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:21:42') [ RunTime:0.001535s ]
+INFO: Run logIP Behavior [ RunTime:-0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025966s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011222s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.018655s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000164s ]
+
+[ 2013-03-16T17:23:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000785s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011588s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:23:04') [ RunTime:0.001862s ]
+INFO: Run logIP Behavior [ RunTime:-0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024152s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011449s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016459s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000177s ]
+
+[ 2013-03-16T17:32:30+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\League\HomeAction.class.php 第 73 行.
+[ 2013-03-16T17:32:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001039s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011347s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:32:53') [ RunTime:0.032406s ]
+INFO: Run logIP Behavior [ RunTime:-0.001709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057441s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011603s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016441s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000242s ]
+
+[ 2013-03-16T17:39:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001042s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011022s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:39:09') [ RunTime:0.002327s ]
+INFO: Run logIP Behavior [ RunTime:-0.002311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025750s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010731s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015301s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000205s ]
+
+[ 2013-03-16T17:43:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000724s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011484s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:43:41') [ RunTime:0.353748s ]
+INFO: Run logIP Behavior [ RunTime:-0.001828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.376613s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.031421s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015625s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) [ RunTime:0.069055s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T17:47:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000667s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011040s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:47:33') [ RunTime:0.021513s ]
+INFO: Run logIP Behavior [ RunTime:-0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044589s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011172s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015787s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,106,0) [ RunTime:0.052601s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-16T17:52:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000673s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011341s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:52:27') [ RunTime:0.002187s ]
+INFO: Run logIP Behavior [ RunTime:-0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025850s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011250s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016028s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000145s ]
+
+[ 2013-03-16T17:53:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001051s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011003s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:53:42') [ RunTime:0.012327s ]
+INFO: Run logIP Behavior [ RunTime:-0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036860s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010963s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015756s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000175s ]
+
+[ 2013-03-16T17:55:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000747s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011083s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:55:03') [ RunTime:0.024597s ]
+INFO: Run logIP Behavior [ RunTime:-0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047751s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011162s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015390s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000164s ]
+
+[ 2013-03-16T17:59:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000780s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011008s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 17:59:39') [ RunTime:0.001458s ]
+INFO: Run logIP Behavior [ RunTime:-0.001991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023413s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011126s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015822s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000191s ]
+
+[ 2013-03-16T18:00:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000681s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011122s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 18:00:05') [ RunTime:0.002092s ]
+INFO: Run logIP Behavior [ RunTime:-0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026704s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010839s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015191s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000130s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) [ RunTime:0.009739s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-16T18:00:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000871s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012334s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 18:00:06') [ RunTime:0.002190s ]
+INFO: Run logIP Behavior [ RunTime:-0.001433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026917s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011638s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016265s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000320s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,106,0) [ RunTime:0.032976s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+>>>>>>> e177044e9ec6be8d0bc9df9648acaee6c487bb61
