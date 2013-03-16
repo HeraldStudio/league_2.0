@@ -1,0 +1,50 @@
+[ 2013-03-10T12:01:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001208s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010753s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-10 12:01:49') [ RunTime:0.001342s ]
+INFO: Run logIP Behavior [ RunTime:-0.002130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057801s ]
+
+[ 2013-03-10T12:01:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.101733s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003923s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.105777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024523s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.130410s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.132194s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.135820s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.139101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012635s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.143235s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004971s ]
+
+[ 2013-03-10T12:01:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002515s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.028181s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-10 12:01:57') [ RunTime:0.002529s ]
+INFO: Run logIP Behavior [ RunTime:-0.004025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.054374s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.036532s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000553s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-10' WHERE card_num = 213123363 [ RunTime:0.001852s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001140s ]
+
+[ 2013-03-10T12:04:15+08:00 ] ERR: [4] syntax error, unexpected ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\ActivityAction.class.php 第 107 行.
+[ 2013-03-10T12:29:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=6
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001594s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016741s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-10 12:29:18') [ RunTime:0.012484s ]
+INFO: Run logIP Behavior [ RunTime:-0.007980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.150509s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.017744s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 111 ) AND ( `isleague` = 0 )  [ RunTime:0.000358s ]
+

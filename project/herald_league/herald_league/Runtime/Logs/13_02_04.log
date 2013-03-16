@@ -1,0 +1,44 @@
+[ 2013-02-04T19:01:02+08:00 ] ERR: (ThinkException) 非法操作:LeagueLoginLoginTest
+[ 2013-02-04T19:01:21+08:00 ] ERR: (ThinkException) 非法操作:LeagueLoginLoginTest
+[ 2013-02-04T19:01:24+08:00 ] ERR: (ThinkException) 非法操作:LeagueLoginLoginTest
+[ 2013-02-04T19:02:18+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/League/Login/LoginTest.html]
+[ 2013-02-04T19:11:10+08:00 ] ERR: (ThinkException) 非法操作:PublicLoout
+[ 2013-02-04T19:11:19+08:00 ] ERR: (ThinkException) 非法操作:PublicLoout
+[ 2013-02-04T19:12:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.009691s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000416s ]
+
+[ 2013-02-04T19:16:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025777s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000286s ]
+
+[ 2013-02-04T19:46:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=1&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001902s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023274s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000281s ]
+
+[ 2013-02-04T19:55:42+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2013-02-04T19:55:46+08:00 ] ERR: [1] Call to undefined function getLeagueName() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\AddActivityAction.class.php 第 22 行.
+[ 2013-02-04T19:58:19+08:00 ] ERR: [1] Call to undefined function getLeagueName() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\AddActivityAction.class.php 第 33 行.
+[ 2013-02-04T20:11:49+08:00 ] ERR: (ThinkException) Column 'league_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`activity_post_add`,`contact_info`,`is_vote`,`activity_place`,`league_id`,`activity_org_name`) VALUES ('11','2013-1-1','2013-1-1','1','1','1',0,'',null,null)
+[ 2013-02-04T20:13:44+08:00 ] ERR: (ThinkException) Column 'league_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`activity_post_add`,`contact_info`,`is_vote`,`activity_place`,`league_id`,`activity_org_name`) VALUES ('11','2013-1-1','2013-1-1','1','1','1',1,'1',null,null)
+[ 2013-02-04T21:07:07+08:00 ] ERR: [4] syntax error, unexpected '{' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\AddActivityAction.class.php 第 37 行.
+[ 2013-02-04T21:07:30+08:00 ] ERR: (ThinkException) Action:param您所请求的方法不存在！
+[ 2013-02-04T21:12:54+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_activity` WHERE id = 
+[ 2013-02-04T22:18:20+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 23 行.
+[ 2013-02-04T22:23:36+08:00 ] ERR: (ThinkException) Column 'activity_name' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`activity_post_add`,`contact_info`,`is_vote`,`activity_place`,`activity_release_time`,`league_id`,`activity_org_name`) VALUES (null,'','','','','',0,'','2013-02-04',1,'东南大学先声网')
+[ 2013-02-04T22:24:07+08:00 ] ERR: (ThinkException) Column 'activity_name' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`activity_post_add`,`contact_info`,`is_vote`,`activity_place`,`activity_release_time`,`league_id`,`activity_org_name`) VALUES (null,'','','','','',0,'','2013-02-04',1,'东南大学先声网')
+[ 2013-02-04T22:41:47+08:00 ] ERR: [4] syntax error, unexpected T_ARRAY, expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 23 行.

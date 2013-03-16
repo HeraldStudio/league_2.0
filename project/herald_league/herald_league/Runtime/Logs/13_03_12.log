@@ -1,0 +1,180 @@
+[ 2013-03-12T16:01:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002630s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.024977s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:01:32') [ RunTime:0.031254s ]
+INFO: Run logIP Behavior [ RunTime:-0.004921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.084166s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000776s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
+[ 2013-03-12T16:01:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001815s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.025753s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:01:33') [ RunTime:0.002405s ]
+INFO: Run logIP Behavior [ RunTime:-0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050565s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000740s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
+[ 2013-03-12T16:01:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=111&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003219s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.060300s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:01:39') [ RunTime:0.001862s ]
+INFO: Run logIP Behavior [ RunTime:-0.006550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.090885s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 111 ) LIMIT 1   [ RunTime:0.000674s ]
+
+[ 2013-03-12T16:01:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.171940s ]
+INFO: [ view_template ] --END-- [ RunTime:0.021684s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.193716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118017s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.311815s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.315346s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.318243s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.322107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013862s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.325830s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004250s ]
+
+[ 2013-03-12T16:02:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001687s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.025931s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:01:49') [ RunTime:0.003381s ]
+INFO: Run logIP Behavior [ RunTime:-0.004467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055572s ]
+
+[ 2013-03-12T16:02:31+08:00 ] ERR: [1] Maximum execution time of 30 seconds exceeded D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\LoginAction.class.php 第 47 行.
+[ 2013-03-12T16:02:31+08:00 ] ERR: [1] Maximum execution time of 30 seconds exceeded D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+[ 2013-03-12T16:02:31+08:00 ] ERR: [1] Maximum execution time of 30 seconds exceeded D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+[ 2013-03-12T16:02:31+08:00 ] ERR: [1] Maximum execution time of 30 seconds exceeded D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+[ 2013-03-12T16:03:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001945s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.049718s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:03:15') [ RunTime:0.031147s ]
+INFO: Run logIP Behavior [ RunTime:-0.005166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.138204s ]
+
+[ 2013-03-12T16:03:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.418344s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004317s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.422739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033850s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.456680s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.459101s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.462642s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.465432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012287s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.469124s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007418s ]
+
+[ 2013-03-12T16:04:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003210s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.035045s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:04:06') [ RunTime:0.001899s ]
+INFO: Run logIP Behavior [ RunTime:-0.007037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.098248s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.099848s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000676s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-12' WHERE card_num = 213123363 [ RunTime:0.043376s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001470s ]
+
+[ 2013-03-12T16:04:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002422s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.062073s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:04:07') [ RunTime:0.001513s ]
+INFO: Run logIP Behavior [ RunTime:-0.012636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.101707s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.038749s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.001660s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-12' WHERE card_num = 213123363 [ RunTime:0.005859s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001536s ]
+
+[ 2013-03-12T16:04:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001734s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.025381s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:04:24') [ RunTime:0.038732s ]
+INFO: Run logIP Behavior [ RunTime:-0.004582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.088182s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.071578s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.044326s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000462s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000435s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 106 ) AND ( `isleague` = 0 ) [ RunTime:0.046756s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-12T16:04:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=109&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001920s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.024902s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:04:27') [ RunTime:0.002489s ]
+INFO: Run logIP Behavior [ RunTime:-0.004806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051529s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 109 ) LIMIT 1   [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.026584s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.036261s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000494s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 109 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,109,0) [ RunTime:0.039103s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-12T16:05:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001943s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.025666s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:05:01') [ RunTime:0.002513s ]
+INFO: Run logIP Behavior [ RunTime:-0.003162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050340s ]
+
+[ 2013-03-12T16:05:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001857s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.031897s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:05:07') [ RunTime:0.006506s ]
+INFO: Run logIP Behavior [ RunTime:-0.005301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.064925s ]
+
+[ 2013-03-12T16:25:48+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/Wall.html]
+[ 2013-03-12T16:26:00+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/Wall.html]
+[ 2013-03-12T16:26:28+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/Wall.html]
+[ 2013-03-12T16:26:39+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/Wall.html]
+[ 2013-03-12T16:26:44+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-12T16:27:35+08:00 ] ERR: (ThinkException) 无法加载模块:Actiity
+[ 2013-03-12T16:27:50+08:00 ] ERR: (ThinkException) 无法加载模块:Actiity
+[ 2013-03-12T16:27:54+08:00 ] ERR: (ThinkException) 无法加载模块:Actiity
+[ 2013-03-12T16:27:59+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-12T16:28:00+08:00 ] ERR: (ThinkException) 模板不存在[D:/php/www/lg2.0/league_2.0/project/herald_league/herald_league/Tpl/Activity/Activity/Wall.html]
+[ 2013-03-12T16:28:03+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-12T16:28:14+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-12T16:30:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=112&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001948s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.026979s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-12 16:30:00') [ RunTime:0.001698s ]
+INFO: Run logIP Behavior [ RunTime:-0.003184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051458s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 112 ) LIMIT 1   [ RunTime:0.000590s ]
+

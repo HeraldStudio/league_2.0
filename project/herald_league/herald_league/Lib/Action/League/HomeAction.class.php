@@ -393,7 +393,25 @@ class HomeAction extends Action
 			echo "<script>history.go(-1);</script>";
 			return ;
 		}
+        /*控制登陆*/
+		$heraldSession = D('UserSessionControl');
+        if($heraldSession->islogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('name',$heraldSession->getUserName());
+            if($heraldSession->getUserType()==1)
+                $uid=$heraldSession->getUserID();
+            else
+                $uid =0;
+        }
+        else
+        {
+            $this->assign('islogin',0);
+            $uid = 0;
+        }
+        $this->assign('uid',$uid);
 
+		
 		$League = D('LeagueInfo');
 		$league = $League -> getLeagueInfo ( $this -> leagueid );
 		$this -> assign( 'league', $league );

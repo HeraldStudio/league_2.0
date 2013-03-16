@@ -1,0 +1,2134 @@
+[ 2013-02-16T10:34:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=g
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+
+[ 2013-02-16T10:34:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-02-16T10:34:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gpc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+
+[ 2013-02-16T10:34:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gpck
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2013-02-16T10:35:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gpckb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.011926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+
+[ 2013-02-16T10:35:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gpck
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2013-02-16T10:36:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=zx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+
+[ 2013-02-16T10:36:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=zx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+
+[ 2013-02-16T10:36:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=zxs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-02-16T10:36:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=zxst
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T10:36:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=we
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+
+[ 2013-02-16T10:36:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=we
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T10:36:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=wed
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2013-02-16T10:36:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=wedr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+
+[ 2013-02-16T10:39:40+08:00 ] ERR: [4] syntax error, unexpected T_ELSE D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\AddActivityAction.class.php 第 48 行.
+[ 2013-02-16T10:40:18+08:00 ] ERR: (ThinkException) Column 'activity_post_add' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`contact_info`,`is_vote`,`activity_place`,`activity_org_name`,`activity_release_time`,`league_id`,`activity_post_add`) VALUES ('up','2013-04-01','2013-05-01','qqq','1111',1,'111','东南大学先声网','2013-02-16',1,null)
+[ 2013-02-16T10:42:27+08:00 ] ERR: (ThinkException) Column 'activity_post_add' cannot be null
+ [ SQL语句 ] : INSERT INTO `lg_activity` (`activity_name`,`start_time`,`end_time`,`activity_introduce`,`contact_info`,`is_vote`,`activity_place`,`activity_org_name`,`activity_release_time`,`league_id`,`activity_post_add`) VALUES ('up','2013-04-01','2013-05-01','qqq','1111',1,'111','东南大学先声网','2013-02-16',1,null)
+[ 2013-02-16T10:47:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+
+[ 2013-02-16T10:47:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T10:47:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=twp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+
+[ 2013-02-16T10:47:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=twpf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2013-02-16T10:47:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xe
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+
+[ 2013-02-16T10:47:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xe
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+
+[ 2013-02-16T10:47:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xev
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+
+[ 2013-02-16T10:47:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xe
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+
+[ 2013-02-16T10:47:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xeup
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+
+[ 2013-02-16T10:47:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xeup
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+
+[ 2013-02-16T10:47:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=g
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001702s ]
+
+[ 2013-02-16T10:47:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gm
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T10:47:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gmv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T10:47:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gmvf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-02-16T10:49:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=x
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+
+[ 2013-02-16T10:49:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+
+[ 2013-02-16T10:49:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xyr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+
+[ 2013-02-16T10:49:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xyre
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+
+[ 2013-02-16T10:50:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+
+[ 2013-02-16T10:50:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ti
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T10:50:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tidy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-02-16T10:50:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tidy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+
+[ 2013-02-16T11:22:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001832s ]
+
+[ 2013-02-16T11:22:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+
+[ 2013-02-16T11:22:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+
+[ 2013-02-16T11:22:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfgz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+
+[ 2013-02-16T11:49:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+
+[ 2013-02-16T11:49:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+
+[ 2013-02-16T11:49:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kpg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-16T11:49:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kpgz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T11:49:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kpg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+
+[ 2013-02-16T11:49:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-02-16T11:49:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kpy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2013-02-16T11:49:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kpyz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2013-02-16T11:50:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002785s ]
+
+[ 2013-02-16T11:50:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+
+[ 2013-02-16T11:50:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+
+[ 2013-02-16T11:50:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfgz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+
+[ 2013-02-16T11:50:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=k
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+
+[ 2013-02-16T11:50:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+
+[ 2013-02-16T11:50:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kri
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+
+[ 2013-02-16T11:50:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=krib
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2013-02-16T11:51:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=s
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003061s ]
+
+[ 2013-02-16T11:51:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+
+[ 2013-02-16T11:51:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+
+[ 2013-02-16T11:51:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=sfgz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+
+[ 2013-02-16T11:51:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=m
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T11:51:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-02-16T11:51:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mjio
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2013-02-16T11:51:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mjio
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+
+[ 2013-02-16T11:51:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mji
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+
+[ 2013-02-16T11:51:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+
+[ 2013-02-16T11:51:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mji
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-16T11:51:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mjio
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+
+[ 2013-02-16T11:51:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mjio%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2013-02-16T11:52:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=w
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+
+[ 2013-02-16T11:52:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=wu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2013-02-16T11:52:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=wuxs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-02-16T11:52:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=wuxs
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+
+[ 2013-02-16T11:53:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T11:53:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+
+[ 2013-02-16T11:53:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-02-16T11:53:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boop
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+
+[ 2013-02-16T11:53:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boopq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+
+[ 2013-02-16T11:53:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boop
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+
+[ 2013-02-16T11:53:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boopw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T11:53:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boop
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+[ 2013-02-16T11:53:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=boo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2013-02-16T11:53:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+
+[ 2013-02-16T11:53:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bop
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+
+[ 2013-02-16T11:53:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bopw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+
+[ 2013-02-16T11:55:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=d
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+
+[ 2013-02-16T11:55:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T11:55:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dte
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+
+[ 2013-02-16T11:55:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dtex
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2013-02-16T11:57:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+
+[ 2013-02-16T11:57:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=u
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+
+[ 2013-02-16T11:57:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ue
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+
+[ 2013-02-16T11:57:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uex
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+
+[ 2013-02-16T11:57:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uexl
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+
+[ 2013-02-16T11:58:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=u
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+
+[ 2013-02-16T11:58:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-02-16T11:58:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uobk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T11:58:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uobk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+
+[ 2013-02-16T12:02:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=o
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001712s ]
+
+[ 2013-02-16T12:02:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=oh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2013-02-16T12:02:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ohn
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+
+[ 2013-02-16T12:02:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ohnr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2013-02-16T12:06:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=b
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2013-02-16T12:06:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+
+[ 2013-02-16T12:06:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bof
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+
+[ 2013-02-16T12:06:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=bofp
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+
+[ 2013-02-16T12:07:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=k
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+
+[ 2013-02-16T12:07:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+
+[ 2013-02-16T12:07:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kve
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2013-02-16T12:07:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kven
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T12:11:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=f
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001822s ]
+
+[ 2013-02-16T12:11:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=fj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2013-02-16T12:11:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=fjy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T12:11:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=fjyb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+
+[ 2013-02-16T12:12:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=r
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+
+[ 2013-02-16T12:12:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ry
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+
+[ 2013-02-16T12:13:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ryj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+
+[ 2013-02-16T12:13:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ryjg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+
+[ 2013-02-16T12:13:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ryj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+
+[ 2013-02-16T12:13:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ryjf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+
+[ 2013-02-16T12:15:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=k
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001729s ]
+
+[ 2013-02-16T12:15:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ka
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-02-16T12:15:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kaew
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+
+[ 2013-02-16T12:15:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kaew
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+
+[ 2013-02-16T12:18:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=g
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+
+[ 2013-02-16T12:18:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gl
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T12:18:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=glx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+
+[ 2013-02-16T12:18:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=glxv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+
+[ 2013-02-16T12:19:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=y
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T12:19:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=yv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+
+[ 2013-02-16T12:19:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=yvb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+
+[ 2013-02-16T12:19:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=yvbc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+
+[ 2013-02-16T12:19:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=yvbc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+
+[ 2013-02-16T12:20:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022200s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.011986s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006050s ]
+
+[ 2013-02-16T12:20:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.017249s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.014356s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007209s ]
+
+[ 2013-02-16T12:20:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029636s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.003222s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006014s ]
+
+[ 2013-02-16T12:20:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021632s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.012706s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007766s ]
+
+[ 2013-02-16T12:20:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.028094s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.001373s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007254s ]
+
+[ 2013-02-16T12:20:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.003243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001963s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.019857s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007838s ]
+
+[ 2013-02-16T12:20:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.060021s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006313s ]
+
+[ 2013-02-16T12:20:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022066s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000609s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T12:20:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=100&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024549s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 100   [ RunTime:0.000661s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T12:31:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006464s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006027s ]
+
+[ 2013-02-16T12:32:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=k
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+
+[ 2013-02-16T12:32:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ka
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+
+[ 2013-02-16T12:32:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kae
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+
+[ 2013-02-16T12:32:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=kaew
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-02-16T12:32:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=c
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T12:32:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=cj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+
+[ 2013-02-16T12:32:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=cjb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T12:32:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=cjba
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+
+[ 2013-02-16T12:32:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=cjba
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+
+[ 2013-02-16T12:32:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+
+[ 2013-02-16T12:32:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-02-16T12:33:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001811s ]
+
+[ 2013-02-16T12:33:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqbb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T12:33:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+
+[ 2013-02-16T12:33:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T12:33:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+
+[ 2013-02-16T12:33:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqhb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+
+[ 2013-02-16T12:36:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=c
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001728s ]
+
+[ 2013-02-16T12:36:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ch
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T12:36:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=chq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T12:36:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=chqx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2013-02-16T12:37:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=al
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+
+[ 2013-02-16T12:37:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=al
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-02-16T12:37:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=alo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+
+[ 2013-02-16T12:37:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=aloi
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+
+[ 2013-02-16T12:54:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=e
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+
+[ 2013-02-16T12:54:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ez
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+
+[ 2013-02-16T12:54:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ezw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-16T12:54:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ezwb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-02-16T12:58:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.030426s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.009027s ]
+
+[ 2013-02-16T12:58:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026085s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006204s ]
+
+[ 2013-02-16T12:58:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006502s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006114s ]
+
+[ 2013-02-16T12:58:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.011028s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011103s ]
+
+[ 2013-02-16T12:58:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033596s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006069s ]
+
+[ 2013-02-16T12:58:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.016488s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007063s ]
+
+[ 2013-02-16T12:58:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.039201s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006165s ]
+
+[ 2013-02-16T12:58:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035882s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000808s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T12:58:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=100&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023796s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 100   [ RunTime:0.000593s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T12:58:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=110&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.008819s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 110   [ RunTime:0.001174s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T13:00:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=d
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001765s ]
+
+[ 2013-02-16T13:00:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-16T13:00:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dxv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+
+[ 2013-02-16T13:00:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dxvw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+
+[ 2013-02-16T13:00:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dxv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+
+[ 2013-02-16T13:00:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dx
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+
+[ 2013-02-16T13:00:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dxu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-02-16T13:00:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dxuw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+
+[ 2013-02-16T13:01:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T13:01:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+
+[ 2013-02-16T13:01:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gtj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-02-16T13:01:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+
+[ 2013-02-16T13:01:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gtk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+
+[ 2013-02-16T13:01:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=gtkq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+[ 2013-02-16T13:02:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=s
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+
+[ 2013-02-16T13:02:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=st
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+
+[ 2013-02-16T13:02:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=stu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+
+[ 2013-02-16T13:02:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=stuh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+[ 2013-02-16T13:02:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=stuh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+
+[ 2013-02-16T13:02:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=o
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+
+[ 2013-02-16T13:02:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=od
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T13:02:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=odu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+
+[ 2013-02-16T13:02:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=odun
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2013-02-16T13:02:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=odu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T13:02:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=od
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+
+[ 2013-02-16T13:02:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=odv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T13:02:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=odvn
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+
+[ 2013-02-16T13:02:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T13:03:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=u
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+
+[ 2013-02-16T13:03:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uv
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-02-16T13:03:03+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uva
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2013-02-16T13:03:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=uvap
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-02-16T13:04:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=m
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+
+[ 2013-02-16T13:04:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-02-16T13:04:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mzn
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+
+[ 2013-02-16T13:04:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=mzng
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2013-02-16T13:04:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T13:04:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+
+[ 2013-02-16T13:04:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=twy
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+
+[ 2013-02-16T13:04:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=twyc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+
+[ 2013-02-16T13:05:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.025389s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006241s ]
+
+[ 2013-02-16T13:05:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006581s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006244s ]
+
+[ 2013-02-16T13:05:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021156s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006374s ]
+
+[ 2013-02-16T13:05:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021932s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006000s ]
+
+[ 2013-02-16T13:05:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.051997s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007863s ]
+
+[ 2013-02-16T13:05:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021584s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008946s ]
+
+[ 2013-02-16T13:05:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006334s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006317s ]
+
+[ 2013-02-16T13:05:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001946s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.042186s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011115s ]
+
+[ 2013-02-16T13:11:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.044053s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.009774s ]
+
+[ 2013-02-16T13:13:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027245s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006273s ]
+
+[ 2013-02-16T13:13:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038435s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010274s ]
+
+[ 2013-02-16T13:13:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026158s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.009734s ]
+
+[ 2013-02-16T13:13:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.022615s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006253s ]
+
+[ 2013-02-16T13:13:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.040780s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006362s ]
+
+[ 2013-02-16T13:13:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.019330s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000543s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006282s ]
+
+[ 2013-02-16T13:15:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.059716s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006313s ]
+
+[ 2013-02-16T13:15:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033968s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006245s ]
+
+[ 2013-02-16T13:15:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026567s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006338s ]
+
+[ 2013-02-16T13:15:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.020028s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008759s ]
+
+[ 2013-02-16T13:15:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027255s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006171s ]
+
+[ 2013-02-16T13:16:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032221s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007862s ]
+
+[ 2013-02-16T13:16:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.031954s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007172s ]
+
+[ 2013-02-16T13:16:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.034584s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000543s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006759s ]
+
+[ 2013-02-16T13:17:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.007101s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006535s ]
+
+[ 2013-02-16T13:17:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024424s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006130s ]
+
+[ 2013-02-16T13:17:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029408s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006527s ]
+
+[ 2013-02-16T13:17:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.020300s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.001091s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007931s ]
+
+[ 2013-02-16T13:17:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.034249s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.027056s ]
+
+[ 2013-02-16T13:17:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038201s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006564s ]
+
+[ 2013-02-16T13:17:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001275s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023123s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008080s ]
+
+[ 2013-02-16T13:17:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023729s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006555s ]
+
+[ 2013-02-16T13:17:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=100&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021525s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 100   [ RunTime:0.000962s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T13:26:00+08:00 ] ERR: [1] Call to undefined function srtchar() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 157 行.
+[ 2013-02-16T13:26:20+08:00 ] ERR: [1] Call to undefined function srtchr() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Activity\IndexAction.class.php 第 157 行.
+[ 2013-02-16T13:26:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.007962s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008170s ]
+
+[ 2013-02-16T13:26:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024720s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010939s ]
+
+[ 2013-02-16T13:26:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033786s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007113s ]
+
+[ 2013-02-16T13:26:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.013268s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007213s ]
+
+[ 2013-02-16T13:26:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006619s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006188s ]
+
+[ 2013-02-16T13:27:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.028379s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008212s ]
+
+[ 2013-02-16T13:27:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.028998s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006594s ]
+
+[ 2013-02-16T13:27:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024063s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006523s ]
+
+[ 2013-02-16T13:30:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=100&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001686s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006738s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 100   [ RunTime:0.000682s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T13:30:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=110&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.043441s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 110   [ RunTime:0.000630s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T13:32:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.007496s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007361s ]
+
+[ 2013-02-16T13:32:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.042401s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010561s ]
+
+[ 2013-02-16T13:32:26+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.017801s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006478s ]
+
+[ 2013-02-16T13:32:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.033218s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006507s ]
+
+[ 2013-02-16T13:32:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.009744s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006897s ]
+
+[ 2013-02-16T13:32:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.060779s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006463s ]
+
+[ 2013-02-16T13:32:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.045729s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006797s ]
+
+[ 2013-02-16T13:32:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027233s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007762s ]
+
+[ 2013-02-16T13:33:06+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=69&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.037867s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000372s ]
+
+[ 2013-02-16T13:34:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.007824s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007932s ]
+
+[ 2013-02-16T13:34:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023758s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006004s ]
+
+[ 2013-02-16T13:34:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006369s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006070s ]
+
+[ 2013-02-16T13:34:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023296s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000629s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008355s ]
+
+[ 2013-02-16T13:34:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.021645s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006360s ]
+
+[ 2013-02-16T13:34:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.027347s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006590s ]
+
+[ 2013-02-16T13:34:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.008431s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007867s ]
+
+[ 2013-02-16T13:34:37+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.045460s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006183s ]
+
+[ 2013-02-16T13:34:38+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=100&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.020151s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 100   [ RunTime:0.000991s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T13:34:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=110&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.020790s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 110   [ RunTime:0.000610s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T15:57:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029794s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007110s ]
+
+[ 2013-02-16T15:57:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.026317s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006230s ]
+
+[ 2013-02-16T15:57:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.040831s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010994s ]
+
+[ 2013-02-16T15:57:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=50&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.040851s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 50   [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011175s ]
+
+[ 2013-02-16T15:57:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=60&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.038253s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 60   [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006481s ]
+
+[ 2013-02-16T15:57:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=70&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.036381s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 70   [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006524s ]
+
+[ 2013-02-16T15:57:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=80&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.023835s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 80   [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.007986s ]
+
+[ 2013-02-16T15:57:52+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=90&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029151s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 90   [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.008603s ]
+
+[ 2013-02-16T16:10:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002424s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006427s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.005943s ]
+
+[ 2013-02-16T16:10:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002568s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.019325s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006171s ]
+
+[ 2013-02-16T16:10:16+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004192s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.031789s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000412s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T16:12:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=i
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001774s ]
+
+[ 2013-02-16T16:12:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=iw
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+
+[ 2013-02-16T16:12:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=iwoh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+
+[ 2013-02-16T16:12:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=iwoh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+
+[ 2013-02-16T16:12:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=h
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002558s ]
+
+[ 2013-02-16T16:12:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=hr
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002299s ]
+
+[ 2013-02-16T16:13:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=hrt
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002277s ]
+
+[ 2013-02-16T16:13:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=hrty
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002305s ]
+
+[ 2013-02-16T16:13:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002362s ]
+
+[ 2013-02-16T16:13:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002306s ]
+
+[ 2013-02-16T16:13:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002426s ]
+
+[ 2013-02-16T16:13:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqby
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002394s ]
+
+[ 2013-02-16T16:13:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xqb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002300s ]
+
+[ 2013-02-16T16:13:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=xq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002344s ]
+
+[ 2013-02-16T16:13:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=x
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002298s ]
+
+[ 2013-02-16T16:13:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002473s ]
+
+[ 2013-02-16T16:13:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002285s ]
+
+[ 2013-02-16T16:13:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002320s ]
+
+[ 2013-02-16T16:13:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tbg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002925s ]
+
+[ 2013-02-16T16:13:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tbgo
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002333s ]
+
+[ 2013-02-16T16:13:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tbg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002410s ]
+
+[ 2013-02-16T16:13:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tbgq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002279s ]
+
+[ 2013-02-16T16:13:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tbg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002323s ]
+
+[ 2013-02-16T16:13:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tb
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002280s ]
+
+[ 2013-02-16T16:13:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002301s ]
+
+[ 2013-02-16T16:13:15+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002434s ]
+
+[ 2013-02-16T16:13:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=dj
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002284s ]
+
+[ 2013-02-16T16:13:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=djk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002314s ]
+
+[ 2013-02-16T16:13:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=djk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002320s ]
+
+[ 2013-02-16T16:13:19+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=djki
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003640s ]
+
+[ 2013-02-16T16:13:22+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=djk
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002328s ]
+
+[ 2013-02-16T16:13:23+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=djkl
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002288s ]
+
+[ 2013-02-16T16:17:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+
+[ 2013-02-16T16:17:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tq
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+
+[ 2013-02-16T16:17:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tqn
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-16T16:17:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tqnd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+
+[ 2013-02-16T16:24:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=v
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002806s ]
+
+[ 2013-02-16T16:24:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=v1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002507s ]
+
+[ 2013-02-16T16:24:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=v
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002286s ]
+
+[ 2013-02-16T16:24:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vl
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002302s ]
+
+[ 2013-02-16T16:24:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vle
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002281s ]
+
+[ 2013-02-16T16:24:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vlec
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002307s ]
+
+[ 2013-02-16T16:24:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=p
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002641s ]
+
+[ 2013-02-16T16:24:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=pf
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003453s ]
+
+[ 2013-02-16T16:24:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=pfa
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002288s ]
+
+[ 2013-02-16T16:24:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=pfaz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002289s ]
+
+[ 2013-02-16T16:26:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002463s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.044065s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000320s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T16:26:13+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002334s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.032941s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000301s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T16:29:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=t
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2013-02-16T16:29:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=ta
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+
+[ 2013-02-16T16:29:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=tax
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+
+[ 2013-02-16T16:29:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=taxh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+
+[ 2013-02-16T16:29:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.024176s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.000421s ]
+
+[ 2013-02-16T16:38:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.035703s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000422s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T16:53:12+08:00 ] ERR: [1] Call to undefined function ajaxreturn() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Public\LogoutAction.class.php 第 11 行.
+[ 2013-02-16T16:53:55+08:00 ] ERR: [1] Call to undefined function ajaxreturn() D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\Public\LogoutAction.class.php 第 11 行.
+[ 2013-02-16T16:55:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+
+[ 2013-02-16T16:56:34+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001785s ]
+
+[ 2013-02-16T16:57:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002013s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029310s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000304s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T17:05:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+
+[ 2013-02-16T17:05:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vh
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+
+[ 2013-02-16T17:05:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vhl
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+
+[ 2013-02-16T17:05:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/VerifyCode/Check?code=vhlz
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+
+[ 2013-02-16T17:06:20+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=108&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.041242s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 108 ) LIMIT 1   [ RunTime:0.000336s ]
+
+[ 2013-02-16T17:19:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004611s ]
+
+[ 2013-02-16T17:19:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=1
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002435s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.029919s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000341s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-16T17:19:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002752s ]
+
+[ 2013-02-16T17:19:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=107&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002460s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006392s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 107 ) LIMIT 1   [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index:  HERALD_SESSION_ID D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserSessionControlModel.class.php 第 37 行.
+
+[ 2013-02-16T17:26:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003772s ]
+
+[ 2013-02-16T17:30:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+
+[ 2013-02-16T17:30:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002554s ]
+
+[ 2013-02-16T20:45:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=108&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.006340s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 108 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.006066s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.006031s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 888888 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 3 ) AND ( `attended_id` = 108 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000241s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (3,108,0) [ RunTime:0.041724s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+

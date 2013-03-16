@@ -1,0 +1,33 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+<head>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#fileInput').uploadify({
+//以下参数均是可选
+'uploader' : './up/uploadify.swf',   //指定上传控件的主体文件，默认‘uploader.swf’
+'script'    : '<?php echo U('Activiry/AddActivity/uploadPic');?>',       //指定服务器端上传处理文件，默认‘upload.php’
+'cancelImg' : './up/cancel.png',   //指定取消上传的图片，默认‘cancel.png’
+'buttonImg':'./up//upload2.jpg',
+'auto'      : true,               //选定文件后是否自动上传，默认false
+'folder'    : '/userphoto'   ,     //要上传到的服务器路径，默认‘/’
+'multi'     : false,               //是否允许同时上传多文件，默认false
+'fileDesc' : '图片文件' , //出现在上传对话框中的文件类型描述
+'fileExt'   : '*.jpg;*.bmp;*.png;*.gif',      //控制可上传文件的扩展名，启用本项时需同时声明fileDesc
+'sizeLimit': 86400,          //控制上传文件的大小，单位byte
+'onComplete': function(event,queueID,fileObj,response,data) {
+$('#image').attr("src","<%=basePath%>userphoto/"+response);
+$('#image').show();
+$('#photo').attr("value",response);
+},
+'onError'          : function(event, queueID, fileObj)  
+{   
+alert("文件:" + fileObj.name + " 上传失败");   
+}
+});
+});
+</script> 
+</head>
+<body>
+<img src=""></img>
+</body>
+</html>

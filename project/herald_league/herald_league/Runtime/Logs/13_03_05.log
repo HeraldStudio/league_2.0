@@ -1,0 +1,96 @@
+[ 2013-03-05T16:37:44+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:37:45+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:41:53+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:41:53+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:42:51+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:42:51+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:43:23+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:43:23+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:44:08+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:44:08+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:44:53+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:44:53+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:45:19+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:45:19+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:45:31+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:45:31+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:45:47+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:45:47+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:45:58+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:45:58+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T16:51:59+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T16:51:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/AddActivity/uploadPic
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.060446s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003152s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.063634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020101s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.083818s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.084539s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.085400s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.085920s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003038s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.086982s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2013-03-05T16:52:00+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T17:21:05+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T17:21:05+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/AddActivity/uploadPic
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.052900s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003589s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.056591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036223s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.092948s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.093976s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.094942s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.095655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004279s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.097512s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001257s ]
+
+[ 2013-03-05T17:21:05+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-05T17:21:40+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T17:21:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/AddActivity/uploadPic
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.052272s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002555s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.054846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018134s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.073057s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.074024s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.074809s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.075305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003136s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.076310s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001124s ]
+
+[ 2013-03-05T17:22:02+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-05T17:22:02+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/AddActivity/uploadPic
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.090735s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002567s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.093354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018494s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.111933s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.112932s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.113863s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.114383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003399s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.115458s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2013-03-05T17:22:15+08:00 ] ERR: (ThinkException) 非法操作:showimg
+[ 2013-03-05T17:22:58+08:00 ] ERR: (ThinkException) 非法操作:showimg

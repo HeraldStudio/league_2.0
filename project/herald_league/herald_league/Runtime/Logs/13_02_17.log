@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2013-02-17T14:13:16+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-02-17T14:13:47+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-02-17T14:13:48+08:00 ] ERR: (ThinkException) 无法加载模块:images
@@ -75,3 +76,25 @@
 [ 2013-02-17T16:30:46+08:00 ] ERR: (ThinkException) Model:getleagueName您所请求的方法不存在！
 [ 2013-02-17T16:31:01+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-02-17T16:31:50+08:00 ] ERR: (ThinkException) 无法加载模块:images
+=======
+[ 2013-02-17T21:05:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.017921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001816s ]
+
+[ 2013-02-17T21:05:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-02-17T21:05:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+
+[ 2013-02-17T21:06:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+
+>>>>>>> a8658bb36851aea2f20db8dba05fb6a09f84138d

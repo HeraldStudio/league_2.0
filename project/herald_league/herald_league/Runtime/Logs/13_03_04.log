@@ -1,0 +1,1146 @@
+[ 2013-03-04T14:18:05+08:00 ] ERR: (ThinkException) 非法操作:style
+[ 2013-03-04T14:18:05+08:00 ] ERR: (ThinkException) 非法操作:A3
+[ 2013-03-04T15:18:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.062413s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001889s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.064340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036711s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.101083s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.102247s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.103305s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.104271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004335s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.105471s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001257s ]
+
+[ 2013-03-04T15:18:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001881s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.018221s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:18:30') [ RunTime:0.015511s ]
+INFO: Run logIP Behavior [ RunTime:-0.003384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.059203s ]
+
+[ 2013-03-04T15:18:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.044894s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001874s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014396s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.061234s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.062395s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.063854s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.065216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005222s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.066519s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2013-03-04T15:18:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001214s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012313s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:18:57') [ RunTime:0.030616s ]
+INFO: Run logIP Behavior [ RunTime:-0.001898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055972s ]
+
+[ 2013-03-04T15:19:07+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001062s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.029689s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:19:07') [ RunTime:0.014652s ]
+INFO: Run logIP Behavior [ RunTime:-0.001797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057865s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.072045s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: INSERT INTO `lg_user` (`card_num`,`true_name`) VALUES ('test','1234') [ RunTime:0.049723s ]
+
+[ 2013-03-04T15:19:08+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:19:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001167s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017069s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:19:08') [ RunTime:0.032020s ]
+INFO: Run logIP Behavior [ RunTime:-0.001987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.065843s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.023045s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000399s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.027909s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:20:01+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.048715s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002004s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.050723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011368s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.062131s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.063441s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.064645s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.065770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004915s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.067104s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001288s ]
+
+[ 2013-03-04T15:20:04+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:20:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001232s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.014007s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:20:03') [ RunTime:0.021640s ]
+INFO: Run logIP Behavior [ RunTime:-0.002211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049524s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016807s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000174s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:20:04+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:20:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001934s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013830s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:20:04') [ RunTime:0.014354s ]
+INFO: Run logIP Behavior [ RunTime:-0.003136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047989s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.021662s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.001228s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000538s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:22:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.040227s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001960s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.042219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011418s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.053675s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.054931s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.056089s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.057136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004709s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.058441s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001303s ]
+
+[ 2013-03-04T15:22:04+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:22:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001668s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017747s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:22:04') [ RunTime:0.002119s ]
+INFO: Run logIP Behavior [ RunTime:-0.002687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.028919s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.001287s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000965s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:22:31+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:22:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001767s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.019011s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:22:31') [ RunTime:0.019725s ]
+INFO: Run logIP Behavior [ RunTime:-0.002718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.058836s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.022986s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.001134s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000235s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:22:32+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:22:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001772s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.014697s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:22:32') [ RunTime:0.040030s ]
+INFO: Run logIP Behavior [ RunTime:-0.002689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071615s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.025603s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000176s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:22:32+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:22:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001125s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.009790s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:22:32') [ RunTime:0.022892s ]
+INFO: Run logIP Behavior [ RunTime:-0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046118s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015334s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000155s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:22:35+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:22:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001354s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017666s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:22:35') [ RunTime:0.017478s ]
+INFO: Run logIP Behavior [ RunTime:-0.002308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055046s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.020860s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000427s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000185s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:23:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001084s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013160s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:23:53') [ RunTime:0.011556s ]
+INFO: Run logIP Behavior [ RunTime:-0.002217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041802s ]
+
+[ 2013-03-04T15:23:56+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:23:56+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002282s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017713s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:23:56') [ RunTime:0.024489s ]
+INFO: Run logIP Behavior [ RunTime:-0.003462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060673s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.028060s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:23:57+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:23:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002401s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.029845s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:23:57') [ RunTime:0.018241s ]
+INFO: Run logIP Behavior [ RunTime:-0.003714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.089205s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.041535s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000784s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000261s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001108s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013347s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:31') [ RunTime:0.018537s ]
+INFO: Run logIP Behavior [ RunTime:-0.001850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048871s ]
+
+[ 2013-03-04T15:25:44+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001117s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015903s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:44') [ RunTime:0.013518s ]
+INFO: Run logIP Behavior [ RunTime:-0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043002s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016694s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000154s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:44+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001064s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010198s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:44') [ RunTime:0.017089s ]
+INFO: Run logIP Behavior [ RunTime:-0.001777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040607s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016035s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001098s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012016s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.001940s ]
+INFO: Run logIP Behavior [ RunTime:-0.001839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028583s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.017468s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000154s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001100s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.014274s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.025336s ]
+INFO: Run logIP Behavior [ RunTime:-0.001764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052609s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.019143s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000353s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000190s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001154s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.021352s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.022175s ]
+INFO: Run logIP Behavior [ RunTime:-0.002254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071004s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.019939s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000280s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001504s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017143s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.029646s ]
+INFO: Run logIP Behavior [ RunTime:-0.002308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067029s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.026443s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.001470s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000741s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001305s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.025170s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.033708s ]
+INFO: Run logIP Behavior [ RunTime:-0.002047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087404s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.041843s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000422s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000235s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:45+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:25:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.004815s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.024404s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:45') [ RunTime:0.035573s ]
+INFO: Run logIP Behavior [ RunTime:-0.007538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.122315s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.031517s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000136s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:25:57+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000716s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016723s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:25:57') [ RunTime:0.003041s ]
+INFO: Run logIP Behavior [ RunTime:-0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032595s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+
+[ 2013-03-04T15:26:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001025s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015423s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:26:04') [ RunTime:0.002787s ]
+INFO: Run logIP Behavior [ RunTime:-0.003316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035885s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.022590s ]
+
+[ 2013-03-04T15:27:10+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:27:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001138s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.014284s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:27:10') [ RunTime:0.019640s ]
+INFO: Run logIP Behavior [ RunTime:-0.001900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051524s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.022689s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.002239s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000278s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:27:10+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:27:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001089s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010776s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:27:10') [ RunTime:0.019165s ]
+INFO: Run logIP Behavior [ RunTime:-0.001833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043518s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.017367s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000176s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:27:10+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:27:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001110s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010411s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:27:10') [ RunTime:0.002537s ]
+INFO: Run logIP Behavior [ RunTime:-0.001797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026112s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016574s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 'test' ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test [ RunTime:0.000159s ]
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class LoginAction could not be converted to string D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\ThinkException.class.php 第 63 行.
+
+[ 2013-03-04T15:28:48+08:00 ] ERR: (ThinkException) 非法操作:cardNumber
+[ 2013-03-04T15:29:07+08:00 ] ERR: (ThinkException) 非法操作:Login
+[ 2013-03-04T15:29:14+08:00 ] ERR: (ThinkException) 非法操作:login
+[ 2013-03-04T15:29:26+08:00 ] ERR: (ThinkException) Unknown column 'test' in 'where clause'
+ [ SQL语句 ] : UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = test
+[ 2013-03-04T15:30:19+08:00 ] ERR: (ThinkException) 非法操作:login
+[ 2013-03-04T15:30:19+08:00 ] ERR: (ThinkException) 非法操作:Login
+[ 2013-03-04T15:30:20+08:00 ] ERR: (ThinkException) 非法操作:cardNumber
+[ 2013-03-04T15:30:21+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.050830s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001154s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.052020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020908s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.072981s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.073688s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.074301s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.075402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003781s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.076824s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001430s ]
+
+[ 2013-03-04T15:30:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.072827s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001997s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.074851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013999s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.088936s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.090444s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.091928s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.094169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008733s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.098353s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004362s ]
+
+[ 2013-03-04T15:30:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000673s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011522s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:30:28') [ RunTime:0.019973s ]
+INFO: Run logIP Behavior [ RunTime:-0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040998s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.023414s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000362s ]
+
+[ 2013-03-04T15:31:30+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000730s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011934s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:30') [ RunTime:0.001758s ]
+INFO: Run logIP Behavior [ RunTime:-0.001269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023483s ]
+
+[ 2013-03-04T15:31:32+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.060209s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001374s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.061619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015145s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.076803s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.077663s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078860s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.079866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004414s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.081283s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001483s ]
+
+[ 2013-03-04T15:31:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000686s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.018483s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:36') [ RunTime:0.015093s ]
+INFO: Run logIP Behavior [ RunTime:-0.001469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047842s ]
+
+[ 2013-03-04T15:31:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000685s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011337s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:39') [ RunTime:0.017526s ]
+INFO: Run logIP Behavior [ RunTime:-0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038340s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016029s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000359s ]
+
+[ 2013-03-04T15:31:45+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=115&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000719s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.030596s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:45') [ RunTime:0.024681s ]
+INFO: Run logIP Behavior [ RunTime:-0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.065308s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 115 ) LIMIT 1   [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.012503s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.017386s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 0 ) AND ( `attended_id` = 115 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (0,115,0) [ RunTime:0.043401s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-04T15:31:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=115&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001031s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015452s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:46') [ RunTime:0.012077s ]
+INFO: Run logIP Behavior [ RunTime:-0.001695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039343s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 115 ) LIMIT 1   [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.014763s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.018866s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 0 ) AND ( `attended_id` = 115 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000126s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 0 ) AND ( `attended_id` = 115 ) AND ( `isleague` = 0 ) [ RunTime:0.094096s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-04T15:31:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=115&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001162s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016393s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:31:47') [ RunTime:0.018499s ]
+INFO: Run logIP Behavior [ RunTime:-0.001740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.045211s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 115 ) LIMIT 1   [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.015008s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.020413s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 0 ) AND ( `attended_id` = 115 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000142s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (0,115,0) [ RunTime:0.010947s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-04T15:32:10+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000653s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011837s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:32:10') [ RunTime:0.015294s ]
+INFO: Run logIP Behavior [ RunTime:-0.001158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036385s ]
+
+[ 2013-03-04T15:32:11+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.059865s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001370s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.061272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015636s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.076953s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.077945s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078816s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.079967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003972s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.080995s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001298s ]
+
+[ 2013-03-04T15:32:14+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.002205s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017952s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:32:14') [ RunTime:0.023145s ]
+INFO: Run logIP Behavior [ RunTime:-0.002985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.058276s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.039576s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000419s ]
+
+[ 2013-03-04T15:32:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001131s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016980s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:32:39') [ RunTime:0.023619s ]
+INFO: Run logIP Behavior [ RunTime:-0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055543s ]
+
+[ 2013-03-04T15:32:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.036296s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001522s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.037853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021377s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.059271s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.060155s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.061572s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.062798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004936s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.064301s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001499s ]
+
+[ 2013-03-04T15:32:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000654s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011283s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:32:43') [ RunTime:0.002473s ]
+INFO: Run logIP Behavior [ RunTime:-0.001739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023573s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016350s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: INSERT INTO `lg_user` (`card_num`,`true_name`) VALUES ('1234','test') [ RunTime:0.001497s ]
+
+[ 2013-03-04T15:33:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001040s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011632s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:25') [ RunTime:0.016810s ]
+INFO: Run logIP Behavior [ RunTime:-0.002290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042512s ]
+
+[ 2013-03-04T15:33:25+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.034470s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002778s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.037496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014470s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.051952s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.053545s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.054763s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004702s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.056717s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001447s ]
+
+[ 2013-03-04T15:33:27+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserModel.class.php 第 98 行.
+[ 2013-03-04T15:33:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000777s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.018849s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:27') [ RunTime:0.002329s ]
+INFO: Run logIP Behavior [ RunTime:-0.001590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036236s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+
+[ 2013-03-04T15:33:28+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserModel.class.php 第 98 行.
+[ 2013-03-04T15:33:28+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001309s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.020527s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:28') [ RunTime:0.002924s ]
+INFO: Run logIP Behavior [ RunTime:-0.002597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048006s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+
+[ 2013-03-04T15:33:29+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserModel.class.php 第 98 行.
+[ 2013-03-04T15:33:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001042s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011300s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:29') [ RunTime:0.002361s ]
+INFO: Run logIP Behavior [ RunTime:-0.001897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025487s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+
+[ 2013-03-04T15:33:29+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserModel.class.php 第 98 行.
+[ 2013-03-04T15:33:29+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000666s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010816s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:29') [ RunTime:0.002079s ]
+INFO: Run logIP Behavior [ RunTime:-0.001131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022345s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+NOTIC: [8] Undefined index:  class D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 39 行.
+NOTIC: [8] Undefined index:  file D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+NOTIC: [8] Undefined index:  line D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 38 行.
+
+[ 2013-03-04T15:33:32+08:00 ] ERR: [4] syntax error, unexpected ';', expecting ')' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\UserModel.class.php 第 98 行.
+[ 2013-03-04T15:33:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001035s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011824s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:45') [ RunTime:0.016473s ]
+INFO: Run logIP Behavior [ RunTime:-0.001993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039920s ]
+
+[ 2013-03-04T15:33:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.026757s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001113s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.027907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010381s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.038330s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039586s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.040757s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.041818s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004686s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.043088s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001622s ]
+
+[ 2013-03-04T15:33:50+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000672s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.019227s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:33:50') [ RunTime:0.036750s ]
+INFO: Run logIP Behavior [ RunTime:-0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.070752s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.024518s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000350s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = 1234 [ RunTime:0.047354s ]
+
+[ 2013-03-04T15:34:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001119s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011525s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:34:43') [ RunTime:0.002424s ]
+INFO: Run logIP Behavior [ RunTime:-0.002564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027924s ]
+
+[ 2013-03-04T15:34:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.036029s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002627s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.038676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014466s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.053221s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.054792s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.057523s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.063232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011732s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.065025s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001642s ]
+
+[ 2013-03-04T15:34:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/Login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.005490s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017407s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:34:46') [ RunTime:0.003122s ]
+INFO: Run logIP Behavior [ RunTime:-0.006933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040836s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.028690s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = '1234' ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-04' WHERE card_num = 1234 [ RunTime:0.013844s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 1234 [ RunTime:0.035433s ]
+
+[ 2013-03-04T15:36:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=114&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001031s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011567s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:36:42') [ RunTime:0.002014s ]
+INFO: Run logIP Behavior [ RunTime:-0.002316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027963s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 114 ) LIMIT 1   [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011571s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015923s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000140s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (5,114,0) [ RunTime:0.030447s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-04T15:36:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=114&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001083s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012157s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:36:53') [ RunTime:0.015699s ]
+INFO: Run logIP Behavior [ RunTime:-0.002011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040400s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 114 ) LIMIT 1   [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.012566s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.019461s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) [ RunTime:0.016332s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-04T15:36:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=114&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000649s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011343s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:36:54') [ RunTime:0.002739s ]
+INFO: Run logIP Behavior [ RunTime:-0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023377s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 114 ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011659s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016635s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (5,114,0) [ RunTime:0.017463s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-04T15:36:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=114&action=del
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000685s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011839s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:36:55') [ RunTime:0.010804s ]
+INFO: Run logIP Behavior [ RunTime:-0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032068s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 114 ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.011335s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.016085s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000265s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000193s ]
+SQL: DELETE FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) [ RunTime:0.032436s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 132 行.
+
+[ 2013-03-04T15:36:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=114&action=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000701s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.009553s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:36:55') [ RunTime:0.001743s ]
+INFO: Run logIP Behavior [ RunTime:-0.001253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020594s ]
+NOTIC: [8] Undefined index:  _type D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 114 ) LIMIT 1   [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010625s ]
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.015992s ]
+SQL: SELECT `id` FROM `lg_user` WHERE ( `card_num` = 1234 ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 5 ) AND ( `attended_id` = 114 ) AND ( `isleague` = 0 ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (5,114,0) [ RunTime:0.011033s ]
+NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
+
+[ 2013-03-04T15:38:59+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001042s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012150s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:38:59') [ RunTime:0.002563s ]
+INFO: Run logIP Behavior [ RunTime:-0.001916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027363s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000435s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
+[ 2013-03-04T15:39:00+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000666s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011782s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-04 15:39:00') [ RunTime:0.016093s ]
+INFO: Run logIP Behavior [ RunTime:-0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037229s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000409s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 242 行.
+
