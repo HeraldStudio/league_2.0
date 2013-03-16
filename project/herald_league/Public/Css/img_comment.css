@@ -1,0 +1,307 @@
+﻿* {
+   margin: 0px;
+   padding: 0px;
+   font-size:14px;
+   font-family:"微软雅黑", "宋体", serif
+  }
+#left3{
+    float:left;
+	width:520px;
+	margin-left:10%;
+	border-bottom:dashed #999 thin;
+	}
+#activity_introduction{
+    padding-top:30px;
+	line-height:20px;
+	}
+#activity_introduction p{
+    font-family:"微软雅黑", "宋体", serif;
+    letter-spacing: 1px;
+	text-indent:2.2em;
+	}
+#activity_img{
+    float:left;
+    padding-top:20px;
+	}
+#activity_img img{
+    border-style:solid;
+	border-width:5px;
+	border-color:#999 #999 #999 #999;
+}
+#share{
+    float:left;
+	width:220px;
+	padding-top:20px;
+	padding-left:300px;
+	padding-bottom:20px;
+}
+#share_text{
+    color:#999;
+	}
+#left4{
+    float:left;
+	padding-bottom:50px;
+	padding-left:10%;
+	}
+#remark{
+    float:left;
+	padding-top:10px;
+}
+#user_img{
+    height:50px;
+	width:50px;
+	background-color:#e2f4f4;
+	float:left;
+}
+#remark_content{
+    float:left;
+	padding-left:20px;
+	width:450px;
+}
+#top{
+    float:left;
+	width:450px;
+	}
+#username{
+    float:left;
+	font-size:12px;
+	padding-left:20px;
+	color:#39bebc;
+	line-height:16px;
+	font-weight:bold;
+	}
+#remark_time{
+    padding-left:20px;
+    float:left;
+	line-height:16px;
+	color:#999;
+	}
+#remark_time pre{
+    font-size:12px;
+}
+#middle{
+    float:left;
+	padding-top:5px;
+	}
+#middle p{
+    font-size:12px;
+    letter-spacing: 1px;
+	text-indent:2.2em;
+	font-family:"微软雅黑", "宋体", serif;
+	color:#5b5b5b;
+	}
+#bottom{
+    float:left;
+	padding-top:5px;
+	}
+#bottom input{
+    width:450px;
+}
+#btn_replay{
+    margin-left:400px;
+	font-size:12px;
+	}
+#btn_replay:link{
+    color:#999;
+	}
+#btn_replay:visited{
+    color:#999;
+	}
+#replay{
+    float:left;
+	padding-top:20px;
+}
+#replay_text{
+    float:left;
+	padding-top:5px;
+	}
+textarea{
+    height:100px;
+	width:520px;
+	resize:none;
+}
+#replay_bottom{
+    float:left;
+	padding-top:5px;
+	}
+#submit{
+    background-color:#e2f4f4; 
+    float:left;	
+}
+#aite{
+    background-color:#e2f4f4;
+	float:left;	
+	margin-left:440px;
+}
+#submit:link{
+    color:#999;
+	}
+#submit:visited{
+    color:#999;
+	}
+#aite:link{
+    color:#999;
+	}
+#aite:visited{
+    color:#999;
+	}
+#inner_right{
+    background-color:#e2f4f4;
+	width:240px;
+	float:left;
+}
+#right_content{
+    padding-left:15px;
+	float:left;
+	}
+#right1{
+    border-bottom:solid #999 thin;
+	height:100px;
+	width:208px;
+	float:left;
+}
+#guanzhu_title{
+    padding-left:15px;
+	padding-top:70px;
+	color:#999;
+	font-size:16px;
+	font-weight:bold;
+	font-family:"微软雅黑", "宋体", serif;
+}
+#right2{
+	width:208px;
+	float:left;
+}
+#touxiang{
+    padding-top:30px;
+	padding-left:10px;
+	float:left;
+}
+#touxiang_img1{
+    background-color:#f5e817;
+	}
+.touxiang_img{
+    height:50px;
+	width:50px;
+}
+.touxiang_text{
+    font-family:"微软雅黑", "宋体", serif;
+    color:#999;
+    width:50px;
+    text-align:center;
+    line-height:25px;	
+}
+.tx{
+    margin-right:15px;
+	margin-bottom:20px;
+	float:left;
+}
+#right3{
+    border-bottom:solid #999 thin;
+	height:60px;
+	width:208px;
+	float:left;
+	padding-top:30px;
+}
+#interest_title{
+    padding-left:15px;
+	padding-top:30px;
+	color:#999;
+	font-size:16px;
+	font-weight:bold;
+	font-family:"微软雅黑", "宋体", serif;
+}
+#right4{
+	width:208px;
+	float:left;
+	padding-top:30px;
+	padding-bottom:50px;
+}
+ul {
+	padding:1.1em 1.1em 2px 1.1em;
+}
+li{
+    border-bottom:dashed #999 thin;
+	height:20px;
+	color:#999;
+	padding-top:5px;
+	text-align:left;
+	list-style-type:none;
+	font-family:"微软雅黑", "宋体", serif;
+}
+li a:link{
+  color:#999;
+}
+ul li a:hover{
+  color:#46c9c7;
+}
+li a:visited{
+  color:#999;
+}
+.remark1{
+    float:left;
+	padding-top:10px;
+	width:470px;
+}
+.user_img{
+    height:50px;
+	width:50px;
+	background-color:#e2f4f4;
+	float:left;
+}
+.remark_content1{
+    float:left;
+	padding-left:20px;
+	width:380px;
+}
+.top1{
+    float:left;
+	width:380px;
+	}
+.remark_time{
+    padding-left:20px;
+    float:left;
+	line-height:16px;
+	color:#999;
+	}
+.remark_time pre{
+	font-size:12px;
+	}
+.username1{
+    float:left;
+	padding-left:5px;
+	color:#39bebc;
+	line-height:16px;
+	font-weight:bold;
+	font-size:12px;
+	}
+.middle1{
+    float:left;
+	width:380px;
+	padding-top:5px;
+	}
+.bottom1{
+    float:left;
+}
+.middle1 p{
+    text-indent:2em;
+	color:#5b5b5b;
+	padding-top:10px;
+	font-size:12px;
+}
+.remark_content1{
+    float:left;
+	padding-left:20px;
+	width:380px;
+}
+.btn_replay_3{
+    font-size:12px;
+	margin-left:350px;
+	color:#999;
+	}
+.btn_replay_3:link{
+    color:#999;
+	}
+.btn_replay_3:visited{
+    color:#999;
+	}

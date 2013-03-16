@@ -37,7 +37,7 @@ class LeagueInfoModel extends Model
 
     public function getLeagueInfo ( $leagueid )
     {
-		$league = $this -> where( 'id ='.$leagueid ) -> select();
+		$league = $this -> where( 'id ='.$leagueid ) -> find();
 		return $league;
     }
 

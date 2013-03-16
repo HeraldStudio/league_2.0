@@ -1,25 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动详情</title>
-<link href="__Public__/Css/dating2.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript">
-    function changeActivityAttention(activityid,action)
-    {
-        $.getJSON("{:U('Activity/Activity/changeAttention')}",{"activityid":activityid,"action":action},function(data,status){
-            if(data.status!=1) //失败了
-                alert(data.info);
-            else
-            {
-                $(".attended").toggle();
-                $(".notattended").toggle();
-            }
-        });
-    };
-</script>
+<link href="__Public__/Css/clubliuyan.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
+<script src="__Public__/Js/jquery.min.js"></script> 
 <style type="text/css">
+a:link {
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+a:hover {
+	color: #34c5c3;
+}
+</style>
+<style type="text/css">
+<!--
 .layout{float:left;}
 .box{background:#ebf3f7;padding:6px;float:left;}
 .input-button{background:#46c9c7;border-color:#B8D4E8 #124680 #124680 #B8D4E8;border-style:solid;border-width:1px;color:#fff;cursor:pointer;
@@ -29,6 +30,7 @@ textarea{width:432px;height:22px;border:1px solid #bdc7d8;background:#fff;line-h
 p{display:none;padding-top:3px;}
 p input{float:left;}
 p span{float:left;color:#ccc;font-size:12px;line-height:25px;padding-left:5px;}
+-->
 </style>
 <script type="text/javascript">
 $(function(){
@@ -60,97 +62,15 @@ $(function(){
                         $(this).val($(this).attr("title"));
                 }
         });
-		
 });
 </script>
-<style type="text/css">
-a:link {
-	color: #fff;
-}
-a:visited {
-	color: #fff;
-}
-a:hover {
-	color: #34c5c3;
-}
-</style>
 </head>
 <body>
   <div id="main">
 	<div id="main_body">
+	  <div id="main_body_inner">
 	    <div id="inner_left">
 		  <div id="left_content">
-            <div id="left1">
-		      <div id="title">{$activity['activity_name']}</div>
-			  <if condition="$attentionstate eq false">
-              <a href="javascript:void(0)" id="attention" class="notattended" onclick="javascript:changeActivityAttention({$activity['id']},'add')">
-			    <div id="attention_img">
-			    </div>
-			    <div id="attention_text">
-			    	关注
-			    </div>			  
-			  </a>
-              <else/>
-                  <a href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention({$activity['id']},'del')">
-                      <div id="attention_text">
-                          取消关注
-                      </div>
-                  </a>
-              </if>
-			  <div id="shuoming">
-			    <div id="biaoqian">
-				  	<if condition="$class eq null">
-			    	<div id="biaoqian1" class="bq">没有标签</div>
-				    <else/>
-					  <foreach name="class" item ="c">
-					  	<div id="biaoqian1" class="bq">{$c}</div>
-					  </foreach>
-					</if>
-				</div>
-				<div id="redu">热度：{$activity['activity_count']}
-				</div>
-				<a href="#" id="pinglun">5条评论
-				</a>
-			  </div>
-		    </div>
-			<div id="left2">
-			  <div id="time" class="information">
-                <div id="time_img">
-				</div>
-				<div id="time_text">时间:{$activity['start_time']}---{$activity['end_time']}【{$actiitystate}】
-				</div>
-			  </div>
-			  <div id="place" class="information">
-			    <div id="place_img">
-				</div>
-				<div id="place_text">地点:{$activity['activity_place']}{$isactivityempty}
-				</div>
-			  </div>
-			  <div id="host" class="information">
-			    <div id="host_img">
-				</div>
-				<div id="host_text">主办：{$activity['activity_org_name']}
-				</div>
-			  </div>
-			  <div id="contact" class="information">
-			    <div id="contact_img">
-				</div>
-				<div id="contact_text">联系方式：{$activity['contact_info']}
-				</div>
-			  </div>
-			</div>
-			<div id="left3">
-			  <div id="activity_introduction">
-			    {$activity['activity_introduce']}
-			  </div>
-			  <div id="activity_img">
-			  	<img src="__Uploads__/LeaguePost/Large/{$activity['activity_post_add']}"/>
-			  </div>
-			  <div id="share">
-			     <div id="share_text">分享至
-				 </div>
-			  </div>
-			</div>
 			<div id="left4">
 			  <div id="remark">
 			    <div id="user_img"><img src="../images/small.jpg" alt="" />
@@ -239,13 +159,13 @@ a:hover {
 				          </p>
 				        </div>
 				        <div id="bottom_3" class="bottom1">
-				          <button class="btn_replay_3">回复</button>
+				          <button class="btn_replay_3" >回复</button>
 				        </div>
 				      </div>
 			        </div>
 					<div class="layout">
                     <div class="box">
-                    <textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
+                    <textarea name="textarea" class="textlimit" id="textlimit1" cols="45" rows="1" placeholder="添加回复"></textarea>
                     <p>
                         <input class="input-button" type="button" value="回复" />
                         <span class="textCount">0/140</span>
@@ -257,6 +177,7 @@ a:hover {
 			</div>
 		  </div> 
 		</div>
+	  </div>
 	</div>
   </div>
 <a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>

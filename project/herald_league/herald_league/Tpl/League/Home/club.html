@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{$title}</title>
 <link rel="stylesheet" type="text/css" href="__Public__/Css/club.css" />
-<link rel="stylesheet" type="text/css" href="__Public__/Css/leaguehome.css"/>
+<link rel="stylesheet" type="text/css" href="__Public__/Css/dating.css"/>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript">
     function changeLeagueAttention(leagueid,action)
@@ -52,16 +52,19 @@ a:hover {
 		</div>
 	  </div>
 	  <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
+	    <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+	      <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
 		</form>
+		<a href="#" id="search_image">
+		</a>
 	  </div>
 	  <div id="message">
 	    <a href="#" id="message_image"></a>
+		<div id="m_num">5</div>
 	  </div>
 	  <div id="love">
 	    <a href="#" id="love_image"></a>
+		<div id="g_num">55</div>
 	  </div>
 	  <div id="user"><a href="#">赵亮</a></div>
 	  <div id="exit"><a href="#">退出</a></div>
@@ -69,9 +72,9 @@ a:hover {
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">
-	    <if condition = "$isactivityempty">
+		<if condition = "$isactivityempty">
 		  <h1 style = "margin: 100px;">该社团尚未添加活动，这里需要前台做一个替换页面</h1>
-		  <else />
+		<else />
 		  <switch name = 'gettitle'>
 		  	<case value = "zls">
 				<iframe name="i" src="__APP__/League/Home/infoRoom/leagueid/{$leagueid}" id = 'zls'></iframe>
@@ -103,7 +106,8 @@ a:hover {
 				</div>
 		  	</case>
 		  	<case value = "dt">
-				<iframe name="i" src="__APP__/League/Home/index/leagueid/{$leagueid}/actid/{$activityid}" id = 'dt'></iframe>
+				<iframe name="i" src="__APP__/League/Home/index/leagueid/{$leagueid}/actid/{$activityid}" id = 'dt'>
+				</iframe>
 				<div id="inner_right">
 				<div id="right_content">
 				<div id="right3">
@@ -149,10 +153,16 @@ a:hover {
 				</div>
 		  	</case>
 		  	<case value = "lyb">
-		  		<iframe name="i" src="__APP__/League/Home/communion/leagueid/{$leagueid}" id = 'lyb'></iframe>
+		  		<iframe name="i" src="__APP__/League/Home/communion/leagueid/{$leagueid}" id = 'lyb'>
+		  		</iframe>
 		  	</case>
 		  	<case value = "yxg">
-		  		<iframe name="i" src="__APP__/League/Home/album/leagueid/{$leagueid}" id = 'yxg'></iframe>
+		  		<iframe name="i" src="__APP__/League/Home/album/leagueid/{$leagueid}" id = 'yxg'>
+		  		</iframe>
+		  	</case>
+		  	<case value = "zpq">
+		  		<iframe name="i" src="__APP__/League/Home/picture/albumid/{$albumid}" id = 'yxg'>
+		  		</iframe>
 		  	</case>
 		  </switch>
 		</if>
@@ -170,25 +180,27 @@ a:hover {
 	  </div>
 	</div>
   </div>
-<div id="gua1" class="gua">
+  <div id="gua1" class="gua">
   </div>
   <div id="gua2" class="gua">
   </div>
   <div id="club_lable">
     <div id="lable_top">
-	  <div id="touxiang2"><img src="__Uploads__/LeagueAvatar/s_{$league[0]['avater_address']}" />
+	  <div id="touxiang2">
+	  	<img src="__Uploads__/LeagueAvatar/s_{$league['avater_address']}" />
 	  </div>
 	  <div id="name">
-	  	{$league[0]['league_name']}
+	  	{$league['league_name']}
 	  </div>
 	  <div id="address">
 	  	{$classname}--{$streetname}
 	  </div>
 	</div>
 	<div id="lable_bottom">
-	  <div id="guanzhu" class ="lg_notattended" onclick="changeLeagueAttention({$league[0]['id']},'add')">关注
+	  <div id="guanzhu">关注
 	  </div>
-	  <div id="number">{$attentionnum}人关注
+	  <div id="number">
+	  	{$attentionnum}人关注
 	  </div>
 	  <a href="#" id="chumen">
 	    <div id="chumen_img">

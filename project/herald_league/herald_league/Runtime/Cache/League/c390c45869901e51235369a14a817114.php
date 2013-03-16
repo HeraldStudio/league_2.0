@@ -1,27 +1,99 @@
-<?php if (!defined('THINK_PATH')) exit(); if(is_array($picture)): $i = 0; $__LIST__ = $picture;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><h2>照片名称：
-		<a href = "__Uploads__/<?php echo ($vo["large_picture_add"]); ?>"><?php echo ($vo["picture_name"]); ?>
-		</a>
-	</h2>
-	<p>
-		照片信息：<?php echo ($vo["picture_info"]); ?>
-	</p>
-	<a href = "__Uploads__/<?php echo ($vo["large_picture_add"]); ?>">
-		<img src = "__Uploads__/<?php echo ($vo["small_picture_add"]); ?>"/>
-	</a>
-	<br/>
-	<?php if(is_array($comment)): foreach($comment as $vck=>$vc): if(($vck) == $vo["id"]): if(is_array($vc)): $i = 0; $__LIST__ = $vc;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vce): $mod = ($i % 2 );++$i;?><h3>
-					<?php echo (getcommenterinfo($vce['comming_id']*10+$vce['comming_type'])); ?>评论：<?php echo ($vce["content"]); ?>
-				</h3>
-				<?php if(is_array($answer)): foreach($answer as $vak=>$va): if(($vak) == $vce["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vae): $mod = ($i % 2 );++$i;?><a><?php echo (getcommenterinfo($vae['answering_id']*10+$vae['answering_type'])); ?>回复:<?php echo ($vae["content"]); ?></a><br/><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?>
-				<form name = "answer_form" id = "answer_form" method = "post" action = "__URL__/picture">
-					<textarea name = "content_a" rows="1" cols="50" placeholder = "回复..."></textarea>
-					<input type="submit" name="submit" id="submit" value="回复" />
-					<input type = "hidden" name = "subdata_a" value = "<?php echo ($vce["id"]); ?>" />
-				</form>
-				<hr/><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?>
-	<form name = "comment_form" id = "comment_form" method = "post" action = "__URL__/picture">
-		 <textarea name = "content_c" rows="1" cols="50" placeholder = "评论..."></textarea><br/>
-		 <input type = "hidden" name = "subdata_c" value = "<?php echo ($vo["id"]); ?>" />
-		 <input type="submit" name="submit" id="submit" value="评论" />
-	</form>
-	<hr color = "red"/><?php endforeach; endif; else: echo "" ;endif; ?>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>照片墙</title>
+<link href="__Public__/Css/yingxiangguan.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="__Public__/Css/colorbox.css" />
+<script src="__Public__/Js/jquery.min.js"></script>
+<script src="__Public__/Js/jquery.colorbox.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".iframe").colorbox({iframe:true, width:"80%", height:"90%"});
+	});
+</script>
+
+<style type="text/css">
+a:link {
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+a:hover {
+	color: #34c5c3;
+	opacity:0.7;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+	<div id="main_body">
+	<?php if(is_array($picture)): $i = 0; $__LIST__ = $picture;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="photo">
+	    <div class="photo_img">
+	    	<a href = "__URL__/imgComment/pictureid/<?php echo ($vo["id"]); ?>" class="iframe">
+				<img src = "__Uploads__/LeagueAlbum/Small/<?php echo ($vo["small_picture_add"]); ?>"/>
+			</a>
+		</div>
+		<div class="photo_text">
+		  <div class="photo_name">
+		  	<a href = "__Uploads__/LeagueAlbum/Large/<?php echo ($vo["large_picture_add"]); ?>">
+		  		<?php echo ($vo["picture_name"]); ?>
+			</a>
+		  </div>
+		</div>
+	  </div><?php endforeach; endif; else: echo "" ;endif; ?>
+	</div>
+  </div>
+<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+   <script type="text/javascript">
+   window.onscroll=function()
+   {
+   		var top=document.documentElement.scrollTop||document.body.scrollTop;
+		var toTop=document.getElementById("toTop");
+   		if(top>400)
+		{
+			toTop.style.display="inline";
+		}
+		else
+		{
+			toTop.style.display="none";
+		}
+   };
+   var toTop=new function()
+   {
+   		var Timer=null;
+   		function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+		this.goto=function(objName)
+		{
+			$id(objName).onclick=function()
+			{
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				startNove();
+				return false;
+			};
+			var startNove=function()
+			{
+				if(Timer)clearInterval(Timer);
+				Timer=setInterval(doMove,30);
+			};
+			var doMove=function()
+			{
+				var iSpeed=0;
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				iSpeed=(0-top)/5;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+				if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+				{
+					clearInterval(Timer);
+					Timer=null;
+				}
+				window.scrollTo(0,(top+iSpeed));
+			};
+		};
+   };
+   toTop.goto("toTop");
+   </script>
+<body>
+</html>

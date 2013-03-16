@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动详情</title>
-<link href="__Public__/Css/dating.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/dating2.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript">
     function changeActivityAttention(activityid,action)
@@ -18,6 +18,50 @@
             }
         });
     };
+</script>
+<style type="text/css">
+.layout{float:left;}
+.box{background:#ebf3f7;padding:6px;float:left;}
+.input-button{background:#46c9c7;border-color:#B8D4E8 #124680 #124680 #B8D4E8;border-style:solid;border-width:1px;color:#fff;cursor:pointer;
+font-size:12px;width:60px;padding:2px 15px;text-align:center;line-height:16px;}
+textarea{width:432px;height:22px;border:1px solid #bdc7d8;background:#fff;line-height:20px;padding:0 2px;font-size:14px;word-wrap:break-word;}
+.focus{border:1px solid #5D74A2;height:38px;overflow:hidden;overflow-y:auto;}
+p{display:none;padding-top:3px;}
+p input{float:left;}
+p span{float:left;color:#ccc;font-size:12px;line-height:25px;padding-left:5px;}
+</style>
+<script type="text/javascript">
+$(function(){
+        function maxLimit(){
+                var num=$(this).val().substr(0,140);
+                $(this).val(num);
+                $(this).next().children("span").text($(this).val().length+"/140");
+        };
+        $(".textlimit").keyup(maxLimit);
+        $(".textlimit").focus(function(){
+                $(this).addClass("focus").next().show();
+                if($(this).val() == $(this).attr("title")){
+                        $(this).val("");
+                }
+        });
+		 $(".btn_replay_3").click(function(){
+                $("#textlimit1").addClass("focus").next().show();
+                if($("#textlimit1").val() == $(".textlimit1").attr("title")){
+                        $("#textlimit1").val("");
+                }
+        });
+        $(".textlimit").blur(function(){
+                if($(this).val().length > 0){
+                        $(this).addClass("focus").next().show();
+                }else{
+                        $(this).removeClass("focus").next().hide();
+                }
+                if($(this).val() == ""){
+                        $(this).val($(this).attr("title"));
+                }
+        });
+		
+});
 </script>
 <style type="text/css">
 a:link {
@@ -38,7 +82,7 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title"><?php echo ($activity['activity_name']); ?></div>
-			  <?php if($attentionstate == false): ?><a href="#" id="attention" class="notattended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
+			  <?php if($attentionstate == false): ?><a href="javascript:void(0)" id="attention" class="notattended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">
@@ -46,7 +90,7 @@ a:hover {
 			    </div>			  
 			  </a>
               <?php else: ?>
-                  <a href="#" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
+                  <a href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
                       <div id="attention_text">
                           取消关注
                       </div>
@@ -113,15 +157,66 @@ a:hover {
 					</div>
 				  </div>
 				  <div id="middle">
-				    <p>本站通过聚合各团体组织信息、活动信息，
+				    <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
+				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
+				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+				    </p>
+					 <div class="layout">
+                    <div class="box">
+                    <textarea name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
+                    <p>
+                        <input class="input-button" type="button" value="回复" />
+                        <span class="textCount">0/140</span>
+                    </p>
+                    </div>
+                    </div>
+				  </div>
+				</div>
+			  </div>
+			   <div id="remark">
+			    <div id="user_img"><img src="../images/small.jpg" alt="" />
+				</div>
+				<div id="remark_content">
+				  <div id="top">
+				    <div id="username">赵亮
+					</div>
+					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
+					</div>
+				  </div>
+				  <div id="middle">
+				    <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
+				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
+				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+				    </p>
+					 <div class="layout">
+                    <div class="box">
+                    <textarea name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
+                    <p>
+                        <input class="input-button" type="button" value="回复" />
+                        <span class="textCount">0/140</span>
+                    </p>
+                    </div>
+                    </div>
+				  </div>
+				</div>
+			  </div>
+			   <div id="remark">
+			    <div id="user_img"><img src="../images/small.jpg" alt="" />
+				</div>
+				<div id="remark_content">
+				  <div id="top">
+				    <div id="username">赵亮
+					</div>
+					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
+					</div>
+				  </div>
+				  <div id="middle">
+				    <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
 				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
 				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
 				    </p>
 				  </div>
-				  <div id="bottom">
-				    <a href="#" id="btn_replay">回复</a>
-				  </div>
-				  <div id="remark_3" class="remark1">
+				   <div id="remark_3" class="remark1">
 			          <div id="user_img_3" class="user_img"><img src="../images/small.jpg" alt="" />
 				      </div>
 				      <div id="remark_content_3" class="remark_content1">
@@ -132,70 +227,25 @@ a:hover {
 					      </div>
 				        </div>
 				        <div id="middle_3" class="middle1">
-				          <p>本站通过聚合各团体组织信息、活动信息，
+				          <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
 				             形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
 				             同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
 				          </p>
 				        </div>
 				        <div id="bottom_3" class="bottom1">
-				          <a href="#" class="btn_replay_3" >回复</a>
+				          <button class="btn_replay_3">回复</button>
 				        </div>
 				      </div>
 			        </div>
-				</div>
-			  </div>
-			   <div id="remark">
-			    <div id="user_img"><img src="../images/small.jpg" alt="" />
-				</div>
-				<div id="remark_content">
-				  <div id="top">
-				    <div id="username">赵亮
-					</div>
-					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
-					</div>
-				  </div>
-				  <div id="middle">
-				    <p>本站通过聚合各团体组织信息、活动信息，
-				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
-				    </p>
-				  </div>
-				  <div id="bottom">
-				    <a href="#" id="btn_replay">回复</a>
-				  </div>
-				</div>
-			  </div>
-			   <div id="remark">
-			    <div id="user_img"><img src="../images/small.jpg" alt="" />
-				</div>
-				<div id="remark_content">
-				  <div id="top">
-				    <div id="username">赵亮
-					</div>
-					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
-					</div>
-				  </div>
-				  <div id="middle">
-				    <p>本站通过聚合各团体组织信息、活动信息，
-				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
-				    </p>
-				  </div>
-				  <div id="bottom">
-				    <a href="#" id="btn_replay">回复</a>
-				  </div>
-				</div>
-			  </div>
-			  <div id="replay">
-			    <div id="replay_top">你的回应：
-				</div>
-				<div id="replay_text"><textarea type="text"></textarea>
-				</div>
-				<div id="replay_bottom">
-				  <a href="#" id="submit">回应
-				  </a>
-				  <a href="#" id="aite">@某人
-				  </a>
+					<div class="layout">
+                    <div class="box">
+                    <textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
+                    <p>
+                        <input class="input-button" type="button" value="回复" />
+                        <span class="textCount">0/140</span>
+                    </p>
+                    </div>
+                    </div>
 				</div>
 			  </div>
 			</div>

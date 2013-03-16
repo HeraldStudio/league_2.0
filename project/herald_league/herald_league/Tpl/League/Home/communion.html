@@ -5,6 +5,14 @@
 <title>留言板</title>
 <link href="__Public__/Css/liuyanban.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="__Public__/Css/colorbox.css" />
+<script src="__Public__/Js/jquery.min.js"></script>
+<script src="__Public__/Js/jquery.colorbox.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".iframe").colorbox({iframe:true, width:"80%", height:"90%"});
+	});
+</script>
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -27,7 +35,7 @@ a:hover {
 		  </div>
 		  <div class="club_name">东南大学先声网
 		  </div>
-		  <a class="liuyanshu" href="#">
+		  <a class='iframe' href="liuyan.html">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -47,7 +55,7 @@ a:hover {
 		  </div>
 		  <div class="club_name">东南大学先声网
 		  </div>
-		  <a class="liuyanshu" href="#">
+		  <a class='iframe' href="liuyan.html">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -67,87 +75,7 @@ a:hover {
 		  </div>
 		  <div class="club_name">东南大学先声网
 		  </div>
-		  <a class="liuyanshu" href="#">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class="liuyanshu" href="#">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class="liuyanshu" href="#">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class="liuyanshu" href="#">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class="liuyanshu" href="#">
+		  <a class='iframe' href="__URL__/liuyan">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2

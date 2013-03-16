@@ -17,7 +17,8 @@ class HomeAction extends Action
 		'dt' => '大厅',
 		'zls' => '资料室',
 		'lyb' => '留言版',
-		'yxg' => '影像馆'
+		'yxg' => '影像馆',
+		'zpq' => '照片墙'
 		);
 	/*
 
@@ -108,11 +109,11 @@ class HomeAction extends Action
 	public function album()
 	{
 		/*获取URL参数*/
-		$leagueid = intval($this -> _param('leagueid'));
+		$this -> leagueid = intval($this -> _param('leagueid'));
 
 		/*获取相册信息*/
 		$Album = D('League_album');
-		$album = $Album -> where('league_id ='.$leagueid) -> select();
+		$album = $Album -> where('league_id ='.$this -> leagueid) -> select();
 		$this -> assign( 'album', $album );
 
 		$Comment = D('Comment');
@@ -185,20 +186,6 @@ class HomeAction extends Action
 
 		$this -> assign( 'picture', $picture );
 
-		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $picture, $Comment -> getCommentedType("picture") );
-
-		$this -> assign( 'comment', $comment );
-
-		$Answer = D('Answer');
-		$answer = $Answer -> getAnswerInfo( $comment );
-
-		$this -> assign( 'answer', $answer );
-
-		if( !empty( $_POST['submit'] ) )
-		{
-			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("picture") );
-		}
 		$this -> display();
 	}
 	
@@ -237,6 +224,34 @@ class HomeAction extends Action
 		{
 			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
 		}
+		$this -> display();
+	}
+
+	public function imgComment()
+	{
+		/*获取URL参数*/
+		$pictureid = intval($this -> _param('pictureid'));
+
+		$Picture = D('League_picture');
+		$this -> picture = $Picture -> where('id='.$pictureid) -> find();
+
+		// /$this -> assign( 'picture', $picture );
+
+		// $Comment = D('Comment');
+		// $comment = $Comment -> getCommentInfo( $picture, $Comment -> getCommentedType("picture") );
+
+		// $this -> assign( 'comment', $comment );
+
+		// $Answer = D('Answer');
+		// $answer = $Answer -> getAnswerInfo( $comment );
+
+		// $this -> assign( 'answer', $answer );
+
+		// if( !empty( $_POST['submit'] ) )
+		// {
+		// 	$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("picture") );
+		// }
+
 		$this -> display();
 	}
 
@@ -384,86 +399,91 @@ class HomeAction extends Action
 	public function club()
 	{
 		/*获取URL参数*/
-		$this -> gettitle = $this -> _param('title');
-		$this -> leagueid = intval($this -> _param('leagueid'));
-		$this -> activityid = intval($this -> _param('actid'));
+		 $this -> gettitle = $this -> _param('title');
+		 $this -> leagueid = intval($this -> _param('leagueid'));
+		 $this -> activityid = intval($this -> _param('actid'));
+		 $this -> albumid = intval($this -> _param('albumid'));
 
-		if($this -> leagueid == 0)
-		{
-			echo "<script>history.go(-1);</script>";
-			return ;
-		}
-        /*控制登陆*/
-		$heraldSession = D('UserSessionControl');
-        if($heraldSession->islogin())
-        {
-            $this->assign('islogin',1);
-            $this->assign('name',$heraldSession->getUserName());
-            if($heraldSession->getUserType()==1)
-                $uid=$heraldSession->getUserID();
-            else
-                $uid =0;
-        }
-        else
-        {
-            $this->assign('islogin',0);
-            $uid = 0;
-        }
-        $this->assign('uid',$uid);
+		 if($this -> leagueid <= 0)
+		 {
+		 	echo "<script>history.go(-1);</script>";
+		 	return ;
+		 }
+  //       /*控制登陆*/
+		// $heraldSession = D('UserSessionControl');
+  //       if($heraldSession->islogin())
+  //       {
+  //           $this->assign('islogin',1);
+  //           $this->assign('name',$heraldSession->getUserName());
+  //           if($heraldSession->getUserType()==1)
+  //               $uid=$heraldSession->getUserID();
+  //           else
+  //               $uid =0;
+  //       }
+  //       else
+  //       {
+  //           $this->assign('islogin',0);
+  //           $uid = 0;
+  //       }
+  //       $this->assign('uid',$uid);
 
 		
-		$League = D('LeagueInfo');
-		$league = $League -> getLeagueInfo ( $this -> leagueid );
-		$this -> assign( 'league', $league );
+		 $League = D('LeagueInfo');
+		 $league = $League -> getLeagueInfo ( $this -> leagueid );
+		 //print_r($league);
+		 $this -> assign( 'league', $league );
 
-		switch($this -> gettitle)
-		{
-			case 'dt':
-			/*获取活动信息*/
-			$Activity = D('Activity');
-			$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
-			if(!empty($activity))
-			{
-				$this -> isactivityempty = false;
-				if(!$this -> activityid)
-				$this -> activityid = $activity[0]['id'];
+		 switch($this -> gettitle)
+		 {
+		 	case 'dt':
+		 	/*获取活动信息*/
+		 	$Activity = D('Activity');
+		 	$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
+		 	if(!empty($activity))
+		 	{
+		 		$this -> isactivityempty = false;
+		 		if(!$this -> activityid)
+		 		$this -> activityid = $activity[0]['id'];
 
-				/*获取活动的关注信息*/
-				$Attention = D('Attention');
-				$User = D('User');
-				$attention = $Attention -> getActivityAttention( $this -> activityid );
+		 		/*获取活动的关注信息*/
+		 		$Attention = D('Attention');
+		 		$User = D('User');
+		 		$attention = $Attention -> getActivityAttention( $this -> activityid );
 				$userinfo = $User -> getUserInfo( $attention );
-				$this -> assign( 'userinfo', $userinfo );
-				$this -> assign('activity', $activity);
-			}
-			else
-			{
-				$this -> isactivityempty = true;
-			}
-			break;
-			case 'zls':
-			/*获取关注信息*/
-			$Attention = D('Attention');
-			$User = D("User");
+		 		$this -> assign( 'userinfo', $userinfo );
+		 		$this -> assign('activity', $activity);
+		 	}
+		 	else
+		 	{
+		 		$this -> isactivityempty = true;
+		 	}
+		 	break;
+		 	case 'zls':
+		 	/*获取关注信息*/
+		 	$Attention = D('Attention');
+		 	$User = D("User");
 
-			$attention = $Attention -> getLeagueAttention( $this -> leagueid );
-			$userinfo = $User -> getUserInfo( $attention );
-			$this -> assign( 'userinfo', $userinfo );
-			break;
-			case 'lyb':
-			break;
-			case 'yxg':
-			break;
-		}
+		 	$attention = $Attention -> getLeagueAttention( $this -> leagueid );
+		 	$userinfo = $User -> getUserInfo( $attention );
+		 	$this -> assign( 'userinfo', $userinfo );
+		 	break;
+		 	case 'lyb':
+		 	break;
+		 	case 'yxg':
+		 	break;
+		 	case 'zpq':
+		 	break;
+		 }
 
-		/*小标签内容*/
-		$Attention = D('Attention');
-		$this -> attentionnum = $Attention -> getAttentionLeagueNum( $this -> leagueid );
-		$this -> classname = $League -> getClassName ( $league[0]['league_class'] );
-		$this -> streetname = $League -> getStreetName ( $league[0]['street_id'] );
-		$this -> title = $this -> pagetitle[$this -> gettitle];
+		// /*小标签内容*/
+		 $Attention = D('Attention');
+		 $this -> attentionnum = $Attention -> getAttentionLeagueNum( $this -> leagueid );
+		 $this -> classname = $League -> getClassName ( $league['league_class'] );
+		 $this -> streetname = $League -> getStreetName ( $league['street_id'] );
 
-		$this -> display();
+		 $this -> title = $this -> pagetitle[$this -> gettitle];
+
+		 $this -> display();
 	}
     public function changeAttention()
     {

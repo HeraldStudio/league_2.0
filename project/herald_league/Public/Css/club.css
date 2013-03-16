@@ -15,15 +15,42 @@ a{
 	}
 #main {
 
-	width:960px;
+	width:100%;
 	margin-left:auto;
 	margin-right:auto;
 	text-align:left;	
 }
 #header{
     background-color:#46c9c7;
+	width:100%;
 	height:30px;
 	border-bottom:solid #384e4d 5px;
+}
+#m_num{
+    color:#fff;
+    float:left;	
+	text-align:center;
+	margin-left:-5px;
+	margin-top:5px;
+	height:16px;
+	width:16px;
+	font-size:12px;
+	background-color:red;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+}
+#g_num{
+	color:#fff;
+	float:left;	
+    text-align:center;	
+	height:16px;
+	width:16px;
+	margin-left:-8px;
+	margin-top:5px;
+	font-size:12px;
+	background-color:red;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
 }
 #logo{
     height:18px;
@@ -51,12 +78,12 @@ a{
     width:60px;
 	}
 #search{
-    padding-left:280px;
+    padding-left:30%;
 	padding-top:4px;
 	float:left;
 	}
-#search_text{
-    width:130px;
+#search input{
+    width:180px;
 	height:17px;
 	float:left;
 	}
@@ -67,26 +94,26 @@ a{
 	height:20px;
 	margin-left:-25px;
 	float:left;
-	border: 0;
-	text-indent:-3000px;
 	}
 #message{
     float:left;
-	padding-left:15px;
+	padding-left:1%;
 	padding-top:6px;
 	}
 #message_image{
     height:20px;
+	float:left;
 	width:23px;
 	background:url(../images/message.png);
 	background-repeat:no-repeat;
 	}
 #love{
     float:left;
-	padding-left:10px;
+	padding-left:1%;
 	padding-top:6px;
 	}
 #love_image{
+    float:left;
     height:20px;
 	width:23px;
 	background:url(../images/love.png);
@@ -95,13 +122,13 @@ a{
 #user{
     text-align:center;
 	line-height:30px;
-	padding-left:15px;
+	padding-left:1%;
 	float:left;
   }
 #exit{
     text-align:center;
 	line-height:30px;
-	padding-left:15px;
+	padding-left:1%;
 	float:left;
     }
 #user a:hover{
@@ -116,12 +143,12 @@ a{
 	background-color:#d4dada;
 	}
 #main_body_inner{
-    margin-left:10px;
+    margin-left:2%;
 	margin-top:10px;
-	margin-right:10px;
+	margin-right:2%px;
 	float:left;
 	height:660px;
-	width:940px;
+	width:96%;
 	border-style:solid;
 	border-width:1px;
 	border-color:#97c4c4 #97c4c4 #f0fafa #97c4c4;
@@ -130,21 +157,24 @@ a{
 #footer{
    border-top:dashed #999 thin;
    height:70px;
-   background-color:#f0fafa;
+   background-color:#ecebeb;
 }
 #footer_link{
     float:left;
-	padding-top:50px;
+	width:940px;
+	padding-top:20px;
+	padding-left:10%;
 }
 #footer_text{
     float:left;
-	padding-top:50px;
-	padding-left:360px;
+	padding-top:10px;
+	width:100%;
 }
 #footer_text pre{
     font-family:"微软雅黑", "宋体", serif;
 	font-size:12px;
 	float:left;
+	padding-left:60%;
 	color:#999;
 }
 .link{
@@ -164,7 +194,7 @@ a.link:hover{
 #gua1{
     position:absolute;
 	top:35px;
-	left:280px;
+	left:8%;
 	height:15px;
 	width:2px;
 	background-color:#9abebe;
@@ -172,7 +202,7 @@ a.link:hover{
 #gua2{
     position:absolute;
 	top:35px;
-	left:430px;
+	left:18%;
 	height:15px;
 	width:2px;
 	background-color:#9abebe;
@@ -180,12 +210,12 @@ a.link:hover{
 #club_lable{
     position:absolute;
 	top:50px;
-	left:230px;
+	left:5%;
 	height:80px;
 	width:250px;
 	}
 #lable_top{
-    height:50px;
+    height:65px;
 	background-color:#41c2c0;
 	opacity:0.8;
 	position:relative;
@@ -208,13 +238,15 @@ a.link:hover{
   float:left;
   padding-top:15px;
   padding-left:10px;
+  width:180px;
   color:#fff;
   font-size:18px;
   font-family:"微软雅黑", "宋体", serif;
+  text-align:left;
 }
 #address{
     float:left;
-	padding-top:25px;
+	padding-top:5px;
     padding-left:10px;
     color:#fff;
     font-size:12px;
@@ -269,8 +301,8 @@ a.link:hover{
 }
 #danganshi{
     height:500px;
-	width:840px;
-	margin-left:50px;
+	width:70%;
+	margin-left:15%;
 	float:left;
 	margin-top:70px;
 	-webkit-box-shadow: 5px 5px 7px #999;
@@ -281,7 +313,7 @@ a.link:hover{
 #danganshi_biaoti{
     position:absolute;
 	top:100px;
-	right:600px;
+	right:45%;
 	height:40px;
 	width:160px;
 	background-color:#fff;
@@ -294,4 +326,12 @@ a.link:hover{
 	border-style:solid;
 	border-width:1px;
 	border-color:#cccccc #cccccc #cccccc #cccccc;
+}
+#lyb, #yxg
+{
+	height:500px;
+	width:100%;
+	float:left;
+	border:none;
+	background-color:#fff;
 }

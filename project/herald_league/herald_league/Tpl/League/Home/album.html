@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,13 +24,14 @@ a:hover {
 	<volist name = "album" id = "vo">
 	  <div class="photo">
 	    <div class="photo_img">
-	    	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">
+	    	<a href = "__APP__/League/Home/club/title/zpq/leagueid/{$leagueid}/albumid/{$vo.id}" target = "blank">
 				<img src = "__Uploads__/{$vo.album_cover_add}"/>
 			</a>
 		</div>
 		<div class="photo_text">
 		  <div class="photo_name">
-		  	<a href = "__APP__/League/Home/picture/albumid/{$vo.id}">{$vo.album_name}
+		  	<a href = "__APP__/League/Home/club/title/zpq/leagueid/{$leagueid}/albumid/{$vo.id}" target = "blank">
+		  		{$vo.album_name}
 			</a>
 		  </div>
 		  <div class="photo_num">2张
