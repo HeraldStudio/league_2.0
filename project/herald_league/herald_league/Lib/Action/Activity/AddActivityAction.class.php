@@ -55,30 +55,9 @@
                     $activity->league_id=$lg['id'];
                     $activity->activity_org_name=$lg['name'];
 
-                    import('ORG.Net.UploadFile');
-                    $upload = new UploadFile();
-                    $upload ->savePath ="../Uploads/LeaguePost/Original/$lg[id]/$time/";
-                    $upload->allowExts = array('jpg','gif','png','jpeg');
-                    $upload->thumb = true;
-                    if(!is_dir("../Uploads/LeaguePost/Fall/$lg[id]/$time"))
-                        mkdir("../Uploads/LeaguePost/Fall/$lg[id]/$time",0777,true);
-                    if(!is_dir("../Uploads/LeaguePost/Large/$lg[id]/$time"))
-                        mkdir("../Uploads/LeaguePost/Large/$lg[id]/$time",0777,true);
-                    if(!is_dir("../Uploads/LeaguePost/Small/$lg[id]/$time"))
-                        mkdir("../Uploads/LeaguePost/Small/$lg[id]/$time",0777,true);
-                    $upload->thumbPrefix="Fall/$lg[id]/$time/,Large/$lg[id]/$time/,Small/$lg[id]/$time/";
-                    $upload->thumbMaxWidth = '190,600,96';
-                    $upload->thumbMaxHeight = '1000,300,48';
-                    $upload->thumbPath='../Uploads/LeaguePost/';
-                    $upload->thumbRemoveOrigin = false;
-                    if(!$upload->upload())
-                        $this->error($upload->getErrorMsg());
-                    else
-                    {
-                        $uploadInf = $upload->getUploadFileInfo();
-                        $name = $uploadInf[0]['savename'];
-                        $activity->activity_post_add="$lg[id]/$time/$name";
-                    }
+                    $name = htmlencode($this->_param('imgAdd'));
+                    $activity->activity_post_add=$name;
+
 
                     $activityID=$activity->add();
                     if($activityID!=false)
@@ -104,6 +83,45 @@
                 $this->error('请先登录');
             }
         }
-    }
 
+        public function upload()
+        {
+
+
+            $lg=$this->getLeagueInfo();
+            if($lg==false)
+                $this->error('请先登录');
+            else
+            {
+                //$activity=D('Activity');
+                $time=date('Y-m-d');
+                import('ORG.Net.UploadFile');
+                $upload = new UploadFile();
+                $upload ->savePath ="../Uploads/LeaguePost/Original/$lg[id]/$time/";
+                $upload->allowExts = array('jpg','gif','png','jpeg');
+                $upload->thumb = true;
+                if(!is_dir("../Uploads/LeaguePost/Fall/$lg[id]/$time"))
+                    mkdir("../Uploads/LeaguePost/Fall/$lg[id]/$time",0755,true);
+                if(!is_dir("../Uploads/LeaguePost/Large/$lg[id]/$time"))
+                    mkdir("../Uploads/LeaguePost/Large/$lg[id]/$time",0755,true);
+                if(!is_dir("../Uploads/LeaguePost/Small/$lg[id]/$time"))
+                    mkdir("../Uploads/LeaguePost/Small/$lg[id]/$time",0755,true);
+                $upload->thumbPrefix="Fall/$lg[id]/$time/,Large/$lg[id]/$time/,Small/$lg[id]/$time/";
+                $upload->thumbMaxWidth = '190,600,96';
+                $upload->thumbMaxHeight = '1000,300,48';
+                $upload->thumbPath='../Uploads/LeaguePost/';
+                $upload->thumbRemoveOrigin = false;
+                if(!$upload->upload())
+                    $this->error($upload->getErrorMsg());
+                else
+                {
+                    $uploadInf = $upload->getUploadFileInfo();
+                    $name = $uploadInf[0]['savename'];
+                    //$activity->activity_post_add="$lg[id]/$time/$name";
+                    echo "/$lg[id]/$time/$name";
+                }
+            }
+        }
+    }
+}
 ?>

@@ -121,7 +121,7 @@ a{
 .haibao{
     width:400px;
 	height:200px;
-	margin-left:45px;
+	margin-left:90px;
 	margin-top:10px;
 	float:left;
 	border: 5px solid #999;

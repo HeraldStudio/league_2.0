@@ -56,6 +56,50 @@
                 });
             }
         }
+
+        function userLogin()
+        {
+            var card = $("#username_text1").val();
+            var pass = $("#password_text1").val();
+            if (card == "") 
+                alert("请输入一卡通号");
+            else if (pass == "")
+                alert("请输入密码");
+            else
+            {
+                $.ajax({
+                    url:"{:U('User/Login/Login/')}",
+                    data:{cardNumber:card,passWord:pass},
+                    type:"POST",
+                    dataType:"json",
+                    success:function(data,status)
+                    {
+                        if(data.status == 1)
+                            parent.location.reload();
+                        
+                        else
+                            alert("登录失败");
+                    },
+                });
+            }
+                    
+
+        }
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        $("#password_text1").keydown(function(e){
+        if(e.keyCode == 13)
+            userLogin();
+        });
+    });
+    $(function(){
+        $("#password_text2").keydown(function(e){
+        if(e.keyCode == 13)
+            leagueLogin();
+        });
+    });
+    
     </script>
 </head>
 <body><!-- the tabs -->
@@ -69,14 +113,14 @@
     <div>
         <div id="student">
             <div class="line" id="line1">
-                <div id="username1" class="username">用户名</div>
+                <div id="username1" class="username">一卡通</div>
                 <div id="input1" class="input"><input id="username_text1" class="username_text" type="username"  placeholder="个人用户名"/></div>
             </div>
             <div class="line" id="line2">
                 <div id="password1" class="password">密码</div>
                 <div id="input2" class="input"><input id="password_text1" class="password_text" type="password" placeholder="密码(一卡通密码)"/></div>
             </div>
-            <div id="btn_login1" class="btn_login" type="submit">登录</div>
+            <div id="btn_login1" class="btn_login" type="submit" onclick="javascript:userLogin() ">登录</div>
         </div>
     </div><!--存放每个页面的内容-->
     <div>

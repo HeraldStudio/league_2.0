@@ -5,9 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="__ROOT__/Public/Css/fabu/fabu.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="__ROOT__/Public/Css/fabu/jquery-ui.css" />
+    <link rel="stylesheet" href="__ROOT__/Public/Css/uploadify/uploadify.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="__ROOT__/Public/Js/jquery.js"></script>
     <script src="__ROOT__/Public/Js/fabu/jquery-ui.js"></script>
-    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="__ROOT__/Public/Js/Uploadify/jquery.uploadify-3.1.min.js"></script>
     <script>
         $(function() {
             $( "#startdate" ).datepicker();
@@ -24,6 +27,34 @@
             })
             $("#step"+x).show();
         }
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#file_upload').uploadify({
+                'swf'      : '__ROOT__/Public/Images/uploadify/uploadify.swf',
+                'uploader' : "{:U('Activity/AddActivity/Upload/')}",
+                'auto'     : true,
+                'width'    : 500,
+                'buttonText' : '选择海报',
+                'fileTypeExts' : '*.gif; *.jpg; *.png',
+                'fileTypeDesc' : '图像文件',
+           
+                'onDialogClose'      : function(event,ID,fileObj) {
+                        $('#haibao').css('border',"0px solid #999");
+                        $("#preview").hide();
+                        $("#file_upload-queue").show();
+                    },
+                'onUploadSuccess' : function(file, data, response) {
+                    //alert('The file was saved to: ' + data);
+                    $("#file_upload-queue").hide();
+                    $("#imgAdd").val(data);
+                    $('#haibao').css('border',"5px solid #999");
+                    $("#preview").attr('src',"__ROOT__/Uploads/LeaguePost/Original"+data).show();
+                    
+                }
+                
+            });
+        });
     </script>
 </head>
 <body>
@@ -90,20 +121,18 @@
         </div>
     </div>
     <div id="step3" class="step" style="display: none">
-        <div class="line" id="line1">
-            <div id="activitybiaoqian" class="title">添加海报</div>
-            <div class="xing">*</div>
-            <div id="input1" class="input"><input name="post" id="activity_text1" class="input_text" type="file"/></div>
-        </div>
-        <div class="line" id="line8">
-            <div class="haibao"><img src="A3.jpg" /></div>
-        </div>
-        <div class="line" id="line11">
-            <a href="javascript:;" onclick="javascript:step(2)" target="MyGreyFrame" id="pre" class="pre"><上一步</a>
-            <input type="submit" id="next" class="next" value="确认发布"/>
-
+        <div class="line">
+            <input type="file" name="file_upload" id="file_upload" />
+            <div class="haibao" id="haibao">
+            <img id="preview" style="display:none" width="100%" height="100%"></img>
+            </div>
+            </div>
+        <div class="line">
+        <a href="javascript:;" onclick="javascript:step(2)" target="MyGreyFrame" id="pre" class="pre"><上一步</a>
+        <input type="submit" value="确认发布" id="next" class="next"/>
+        <input type="hidden" id="imgAdd" name="imgAdd"/>
         </div>
     </div>
 </form>
 </body>
-</html>
+</html

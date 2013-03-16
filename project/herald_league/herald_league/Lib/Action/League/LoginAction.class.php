@@ -21,6 +21,5 @@
             $this->error($result);
         }
     }
-
 }
 ?>
