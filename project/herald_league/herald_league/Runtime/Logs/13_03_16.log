@@ -215,3 +215,10 @@ SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.0008
 [ 2013-03-16T15:48:36+08:00 ] ERR: [4] syntax error, unexpected 'break' (T_BREAK) E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\League\HomeAction.class.php 第 461 行.
 [ 2013-03-16T16:06:28+08:00 ] ERR: (ThinkException) 无法加载模块:images
 [ 2013-03-16T16:06:28+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T16:36:09+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T17:04:40+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
+[ 2013-03-16T17:05:43+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
+[ 2013-03-16T17:06:12+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
+[ 2013-03-16T17:06:33+08:00 ] ERR: [4] syntax error, unexpected ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
+[ 2013-03-16T17:08:01+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 52 行.
+[ 2013-03-16T17:18:30+08:00 ] ERR: [1] Call to undefined function ch() E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\9922fbdb711655600075855547d4d6c2.php 第 57 行.

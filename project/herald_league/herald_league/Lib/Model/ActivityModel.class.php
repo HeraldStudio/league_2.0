@@ -118,7 +118,7 @@ class ActivityModel extends Model
 		*/
 		public function getActivityInfoById( $activityid )
 		{
-				$activity = $this -> where( 'id ='.$activityid ) -> select();
+				$activity = $this -> where( 'id ='.$activityid ) -> find();
 				return $activity;
 		}
 

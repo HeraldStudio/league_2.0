@@ -57,6 +57,11 @@ class AnswerModel extends Model
 		}
     }
 
+    public function getAnswerByCommentId( $commentid )
+    {
+    	return $this -> where( 'comment_id ='.$commentid ) -> select();
+    }
+
     /*
 
 	函数功能：添加回复函数

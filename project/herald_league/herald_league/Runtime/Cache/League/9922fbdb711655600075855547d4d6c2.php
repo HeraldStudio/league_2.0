@@ -29,66 +29,36 @@ a:hover {
 <body>
   <div id="main">
 	<div id="main_body">
-	  <div class="liuyan">
+	<?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div class="liuyan">
 	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
+	      <div class="club_touxiang">
+	      	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vc['comming_id']*10+$vc['comming_type'])); ?>" />
 		  </div>
-		  <div class="club_name">东南大学先声网
+		  <div class="club_name">
+		  	<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>
 		  </div>
-		  <a class='iframe' href="liuyan.html">
+		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
 			</div>
 		  </a>
-		  <div class="time">2012-12-12 12:12:12
+		  <div class="time">
+		  	<?php echo ($vc["comment_date"]); ?> <?php echo ($vc["comment_time"]); ?>
 		  </div>
 		</div>
 		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
+		  <div class="liuyan_content">
+		  <?php if(strlen($vc['content']) < 186): ?><p>
+		  		<?php echo ($vc['content']); ?>
+		  	</p>
+		  	<?php else: ?>
+		  	<p>
+		  		<?php echo substr($vc['content'],0,186)?>......
+		  	</p><?php endif; ?>
 		  </div>
 		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class='iframe' href="liuyan.html">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="liuyan">
-	    <div class="top">
-	      <div class="club_touxiang"><img src="../images/herald.jpg" />
-		  </div>
-		  <div class="club_name">东南大学先声网
-		  </div>
-		  <a class='iframe' href="__URL__/liuyan">
-		    <div class="liuyan_img">
-			</div>
-			<div class="liuyan_num">2
-			</div>
-		  </a>
-		  <div class="time">2012-12-12 12:12:12
-		  </div>
-		</div>
-		<div class="bottom">
-		  <div class="liuyan_content"><p>东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网东南大学先声网</p>
-		  </div>
-		</div>
-	  </div>
+	  </div><?php endforeach; endif; else: echo "" ;endif; ?>
 	</div>
   </div>
 <a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
