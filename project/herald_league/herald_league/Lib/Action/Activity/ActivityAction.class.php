@@ -22,7 +22,9 @@ class ActivityAction extends Action
 						$this->assign('userName',$heraldSession->getUserName());
 						$uid=$heraldSession->getUserID();
 				}
-				$uid = $heraldSession->getUserID();
+				else{
+					$uid = 0;
+				}
 				$activityID =intval( $this ->_param('activityid') ); //获取url参数
 				$activity = D('Activity');
 				$activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据

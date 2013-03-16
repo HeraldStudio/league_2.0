@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,6 +12,25 @@
 <link href="__Public__/Css/standalone.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/tabs.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="__Public__/Css/tabs-panes.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+function logout()
+{
+		$.ajax({
+			url:'{:U('/Public/Logout/')}',
+			success:function(){
+			$("#islogin").hide();
+			$("#notlogin").show();
+			location.reload();//todo
+			}
+		})
+}
+</script>
+<script type="text/javascript">
+				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+				frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -27,37 +46,45 @@ a:hover {
 <body>
   <div id="main">
     <div id="header">
-	  <div id="logo">
-	  </div>
-	  <div id="navigation">
-		<div id="herald" class="navigation_link">
-		  <a href="#" >先声</a>
+			<div id="logo">
+			</div>
+			<div id="navigation">
+				<div id="herald" class="navigation_link">
+					<a href="#" >先声</a>
+				</div>
+				<div id="map" class="navigation_link">
+					<a href="#" >社团</a>
+				</div>
+				<div id="activity" class="navigation_link">
+					 <a href="__APP__" >活动</a>
+				</div>
+				<div id="wall" class="navigation_link">
+					<a href="{:U('Activity/Activity/wall/')}" >海报墙</a>
+				</div>
+			</div>
+			<div id="search">
+						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+						</form>
+						<a href="#" id="search_image">
+						</a>
 		</div>
-		<div id="map" class="navigation_link">
-		  <a href="#" >社团</a>
+		<if condition="$islogin eq 1">
+					<div id="message">
+							<a href="#" id="message_image"></a>
+							<div id="m_num">5</div>
+					</div>
+					<div id="love">
+							<a href="#" id="love_image"></a>
+					</div>
+			
+			<div id="user"><a href="#">{$userName}</a></div>
+			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+		<else/>
+			<div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>
+		</if>
+
 		</div>
-	    <div id="activity" class="navigation_link">
-     	  <a href="#" >活动</a>
-		</div>
-		<div id="wall" class="navigation_link">
-		  <a href="#" >海报墙</a>
-		</div>
-	  </div>
-	  <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
-		</form>
-	  </div>
-	  <div id="message">
-	    <a href="#" id="message_image"></a>
-	  </div>
-	  <div id="love">
-	    <a href="#" id="love_image"></a>
-	  </div>
-	  <div id="user"><a href="#">赵亮</a></div>
-	  <div id="exit"><a href="#">退出</a></div>
-	</div>
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="inner_left">
@@ -390,6 +417,5 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-</div>
-</body>
+<body>
 </html>

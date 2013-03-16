@@ -1158,3 +1158,257 @@ SQL: SELECT * FROM `lg_attention` WHERE ( `user_id` = 6 ) AND ( `attended_id` = 
 SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,106,0) [ RunTime:0.032976s ]
 NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
 
+[ 2013-03-16T21:00:57+08:00 ] ERR: [4] syntax error, unexpected '[' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 175 行.
+[ 2013-03-16T21:01:57+08:00 ] ERR: [4] syntax error, unexpected '[' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 175 行.
+[ 2013-03-16T21:02:27+08:00 ] ERR: [4] syntax error, unexpected '[' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 175 行.
+[ 2013-03-16T21:03:03+08:00 ] ERR: [4] syntax error, unexpected '[' D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 206 行.
+[ 2013-03-16T21:03:48+08:00 ] ERR: [1] Call to a member function getActivityInfoById() on a non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 206 行.
+[ 2013-03-16T21:04:10+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:13:21+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:16:08+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:18:18+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:19:00+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:21:01+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:21:05+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-16T21:21:21+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:21:28+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:23:16+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:26:46+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:29:50+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:29:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.085733s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004438s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.090307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101519s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.191963s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.195070s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.197000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.198556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008556s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.200659s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002281s ]
+
+[ 2013-03-16T21:30:42+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:30:43+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:30:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.089460s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002763s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.092304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021391s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.113782s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.114680s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.115477s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.116029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003398s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.117321s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001326s ]
+
+[ 2013-03-16T21:30:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.076797s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002886s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.079768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020217s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.100060s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.100903s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.101644s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.102147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003051s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.103241s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2013-03-16T21:31:41+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:31:42+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:31:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.051944s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002169s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.054177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018103s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.072367s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.073158s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.073836s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.074288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002818s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.075299s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2013-03-16T21:31:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001696s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.030624s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 21:31:48') [ RunTime:0.002951s ]
+INFO: Run logIP Behavior [ RunTime:-0.002938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056590s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.038264s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000625s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.041097s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001884s ]
+
+[ 2013-03-16T21:31:49+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:31:49+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:32:52+08:00 ] ERR: (ThinkException) 非法操作:userid
+[ 2013-03-16T21:33:18+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-16T21:33:18+08:00 ] ERR: (ThinkException) 非法操作:images
+[ 2013-03-16T21:33:24+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:49:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001099s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012050s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 21:49:43') [ RunTime:0.001962s ]
+INFO: Run logIP Behavior [ RunTime:-0.002174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028547s ]
+
+[ 2013-03-16T21:49:43+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T21:49:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.049477s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001263s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.050732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016421s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.067196s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.068570s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.069831s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.070938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005030s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.072294s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001775s ]
+
+[ 2013-03-16T22:25:44+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001243s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.026664s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:25:44') [ RunTime:0.003335s ]
+INFO: Run logIP Behavior [ RunTime:-0.002187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046968s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.017324s ]
+
+[ 2013-03-16T22:25:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000767s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.017011s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:25:47') [ RunTime:0.001701s ]
+INFO: Run logIP Behavior [ RunTime:-0.001267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029740s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000367s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 241 行.
+
+[ 2013-03-16T22:30:09+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001176s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011603s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:30:09') [ RunTime:0.013265s ]
+INFO: Run logIP Behavior [ RunTime:-0.002058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036483s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010872s ]
+
+[ 2013-03-16T22:30:17+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001096s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010679s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:30:17') [ RunTime:0.019240s ]
+INFO: Run logIP Behavior [ RunTime:-0.001998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041825s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010553s ]
+
+[ 2013-03-16T22:30:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001031s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011788s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:30:39') [ RunTime:0.001975s ]
+INFO: Run logIP Behavior [ RunTime:-0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029690s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.012022s ]
+
+[ 2013-03-16T22:30:55+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000666s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010566s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:30:55') [ RunTime:0.016026s ]
+INFO: Run logIP Behavior [ RunTime:-0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035925s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `lg_attention` [ RunTime:0.010708s ]
+
+[ 2013-03-16T22:32:35+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T22:32:36+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.042876s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001123s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.044032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008432s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.052503s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.052998s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.054400s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004432s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.057002s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001430s ]
+
+[ 2013-03-16T22:32:42+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000706s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010454s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:32:42') [ RunTime:0.002448s ]
+INFO: Run logIP Behavior [ RunTime:-0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022592s ]
+
+[ 2013-03-16T22:32:46+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000675s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010967s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:32:46') [ RunTime:0.001385s ]
+INFO: Run logIP Behavior [ RunTime:-0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021615s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.017435s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.023531s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001349s ]
+
+[ 2013-03-16T22:32:46+08:00 ] ERR: (ThinkException) 无法加载模块:images
+[ 2013-03-16T22:36:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=30&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001114s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011406s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:36:08') [ RunTime:0.001992s ]
+INFO: Run logIP Behavior [ RunTime:-0.002053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026195s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 30   [ RunTime:0.000375s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 241 行.
+
+[ 2013-03-16T22:36:08+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=40&uid=0
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000733s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010715s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 22:36:08') [ RunTime:0.001741s ]
+INFO: Run logIP Behavior [ RunTime:-0.001261s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022087s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 40   [ RunTime:0.000438s ]
+NOTIC: [8] Undefined variable: result D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 241 行.
+

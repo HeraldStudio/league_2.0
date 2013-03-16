@@ -16,23 +16,21 @@ class LoginAction extends Action
 
 		public function login()//处理登录
 		{
-				$card = intval($this->_param('cardNumber'));
-				$pass = $this->_param('passWord');
-				$result = $this->authen($card,$pass);
-				if($result != null)
-				{
-						session(array('name'=>'heraldUser','expire'=>3600));
-						session('heraldUser',$result);
-						$user  = D('User');
-						$user->update($result);
-						$this->success($result);
-				}
-				else
-				{
-						$this->error($result);
-				}
-
-
+			$card = intval($this->_param('cardNumber'));
+			$pass = $this->_param('passWord');
+			$result = $this->authen($card,$pass);
+			if($result != null)
+			{
+					session(array('name'=>'heraldUser','expire'=>3600));
+					session('heraldUser',$result);
+					$user  = D('User');
+					$updateResult=$user->update($result);
+					$this->success($updateResult);
+			}
+			else
+			{
+					$this->error('');
+			}
 		}
 		private function authen($card,$pass) //验证一卡通，密码是否正确
 		{
