@@ -142,12 +142,13 @@ a:hover {
               <div id="time" class="information">
                 <div id="time_img">
                 </div>
-                <div id="time_text">时间:<?php echo ($activityInf["start_time"]); ?>---<?php echo ($activityInf["end_time"]); ?>
+                <div id="time_text">时间：<?php echo ($activityInf["start_time"]); ?>---<?php echo ($activityInf["end_time"]); ?>
                     <?php if(empty($isstart)): ?>【未开始】
                     <?php else: ?>
                     <?php if(empty($isend)): ?>【进行中】
                     <?php else: ?>
                         【已结束】<?php endif; endif; ?>
+                    <?php if($activityInf["specific_time"] != null): ?><div style="margin-left: 38px">(<?php echo ($activityInf["specific_time"]); ?>)</div><?php endif; ?>
                 </div>
                 
                 
