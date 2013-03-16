@@ -1,0 +1,10 @@
+[ 2013-02-18T18:43:23+08:00 ] ERR: [1] Call to a member function getActivityInfoById() on a non-object E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 205 行.
+[ 2013-02-18T19:10:23+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.050569s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000595s ]
+

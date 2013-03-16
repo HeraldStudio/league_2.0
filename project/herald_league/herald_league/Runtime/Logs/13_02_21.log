@@ -1,0 +1,13 @@
+[ 2013-02-21T16:51:59+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000695s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.027668s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-02-21 16:51:59') [ RunTime:0.038258s ]
+INFO: Run logIP Behavior [ RunTime:-0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.140136s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.045446s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000365s ]
+NOTIC: [8] Undefined variable: result E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+

@@ -1,0 +1,17 @@
+[ 2013-03-02T21:28:27+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-1.133405s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002135s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.135623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080889s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.216520s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.217112s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.217820s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.218254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002445s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.219024s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000718s ]
+

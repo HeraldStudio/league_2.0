@@ -1,0 +1,8 @@
+[ 2013-02-19T11:05:31+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-02-19T11:08:15+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND isleague = 0' at line 1
+ [ SQL语句 ] : SELECT * FROM `lg_attention` WHERE attended_id =  AND isleague = 0 
+[ 2013-02-19T11:25:09+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 20 行.
+[ 2013-02-19T11:26:23+08:00 ] ERR: [4] syntax error, unexpected '<' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 20 行.
+[ 2013-02-19T12:30:04+08:00 ] ERR: (ThinkException) 模板不存在[E:/Web/Working/league_2.0/project/herald_league/herald_league/Tpl/User/Index/updateinfo.html]
+[ 2013-02-19T12:30:15+08:00 ] ERR: (ThinkException) 非法操作:updatainfo

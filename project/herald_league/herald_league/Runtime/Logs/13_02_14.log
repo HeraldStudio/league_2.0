@@ -1,0 +1,36 @@
+[ 2013-02-14T14:32:15+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.024388s ]
+
+[ 2013-02-14T14:33:01+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=2&action=add
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.065842s ]
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000987s ]
+
+[ 2013-02-14T14:33:19+08:00 ] ERR: (ThinkException) Model:getActivityState您所请求的方法不存在！
+[ 2013-02-14T15:17:24+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Index/GetMore?count=20&uid=0
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `lg_activity` [ RunTime:0.058224s ]
+SQL: SELECT `id`,`activity_name`,`activity_post_add` FROM `lg_activity` ORDER BY start_time desc LIMIT 20   [ RunTime:0.000478s ]
+NOTIC: [8] Undefined variable: result E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Model\ActivityModel.class.php 第 219 行.
+
+[ 2013-02-14T16:03:40+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Vote/vote?itemid=2
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `lg_vote_item` [ RunTime:0.026043s ]
+
