@@ -36,6 +36,7 @@
 								$heatClass = $activityClass->getHeatClass(5);
 								$this->assign('league',$lg['name']);
 								$this->assign('heatClass',$heatClass);
+								$this->assign('username',$lg['name']);
 								$this->display();
 						}
 				}
@@ -46,30 +47,25 @@
 								$activity=D('Activity');
 								if($activity->create())
 								{
-										$lg=$this->getLeagueInfo();
-										$time = date('Y-m-d');
-										$activity->activity_release_time=$time;
-										$activity->league_id=$lg['id'];
-										$activity->activity_org_name=$lg['name'];
-
-										$name = htmlencode($this->_param('imgAdd'));
-										$activity->activity_post_add=$name;
-
-
-										$activityID=$activity->add();
-										if($activityID!=false)
-										{
-												$class=htmlencode($_POST['class']);
-												$class = str_replace('多个标签用,分开', '', $class);
-												$class = str_replace('，', ',', $class);//中文逗号替换为英文以便后面分割标签
-												$classActivity=D('ClassActivity');
-												$newClass = explode(',',$class);
-												foreach($newClass as $v)
-												{
-														$classActivity->addClass($activityID,$v);
-												}
-												$this->success('活动发布成功');
-										}
+									$lg=$this->getLeagueInfo();
+									$time = date('Y-m-d');
+									$activity->activity_release_time=$time;
+									$activity->league_id=$lg['id'];
+									$activity->activity_org_name=$lg['name'];										
+									$activityID=$activity->add();
+									if($activityID!=false)
+									{
+											$class=htmlencode($_POST['class']);
+											$class = str_replace('多个标签用,分开', '', $class);
+											$class = str_replace('，', ',', $class);//中文逗号替换为英文以便后面分割标签
+											$classActivity=D('ClassActivity');
+											$newClass = explode(',',$class);
+											foreach($newClass as $v)
+											{
+													$classActivity->addClass($activityID,$v);
+											}
+											$this->success('活动发布成功');
+									}
 
 								}
 								else
@@ -90,7 +86,6 @@
 								$this->error('请先登录');
 						else
 						{
-								//$activity=D('Activity');
 								$time=date('Y-m-d');
 								import('ORG.Net.UploadFile');
 								$upload = new UploadFile();
@@ -117,11 +112,5 @@
 										echo "$lg[id]/$time/$name";
 								}
 						}
-				}
-
-				public function Edit()
-				{
-					C('SHOW_PAGE_TRACE',false);
-					$this->display();
 				}
 		}

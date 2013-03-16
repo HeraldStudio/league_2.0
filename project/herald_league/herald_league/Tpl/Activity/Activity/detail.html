@@ -249,7 +249,7 @@ $(function(){
 						</div>
 						<div id="left3">
 							<div id="activity_introduction">
-								{$activityInf.activity_introduce}
+								{$activityInf.activity_introduce|htmldecode}
 							</div>
 							<div id="activity_img"><img width=500px  src="__ROOT__/Uploads/LeaguePost/Large/{$activityInf.activity_post_add|default="default.jpg"}"/>
 							</div>
@@ -386,15 +386,15 @@ $(function(){
 						</div>
 						<div id="right2">
 							<div id="touxiang">
-								<volist name="attender" id="a">
-										<a href="#"id="touxiang{$a.id}" class="tx">
-											<div id="touxiang_img1" class="touxiang_img"><img width=50px height=50px src="__ROOT__/Uploads/UserAvatar/{$a.user_avatar_add|default="default.jpg"}" alt="" />
-											</div>
-											<div id="touxiang_text1" class="touxiang_text">{$a.true_name}
-											</div>
-										</a>
+								<volist name="attender" id="a" offset="0" length='12'>
+									<a  href="#"id="touxiang{$a.id|default=0}" class="tx">
+										<div id="touxiang_img1" class="touxiang_img"><img width=50px height=50px src="__ROOT__/Uploads/UserAvatar/{$a.user_avatar_add|default="default.jpg"}" alt="" />
+										</div>
+										<div id="touxiang_text1" class="touxiang_text">{$a.true_name|default=匿名}
+										</div>
+									</a>
 								</volist>
-								
+							<if condition="count($attender) gt 11">...</if>	
 						</div>
 						<div id="right3">
 							<div id="interest_title">猜你感兴趣...

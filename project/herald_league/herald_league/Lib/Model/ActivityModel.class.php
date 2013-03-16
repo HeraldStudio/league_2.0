@@ -35,7 +35,6 @@ class ActivityModel extends Model
 	// 定义自动验证
 		protected $_validate = array(
 				array('verifyCode','checkVerifyCode','验证码错误',1,'callback'),
-
 				array('activity_name','require','活动名称必须填写'),
 				array('start_time','checkStartTime','开始时间无效',1,'callback',1),
 				array('end_time','checkEndTime','结束时间无效',1,'callback',1),

@@ -195,6 +195,7 @@ select{
 	margin-left:10%;
 	color:#999;
 	line-height:30px;
+    width:75%;
 }
 textarea{
     margin-left:25px;

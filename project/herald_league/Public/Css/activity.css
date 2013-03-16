@@ -48,7 +48,7 @@ a{
 	float:left;
 }
 #left1{
-    height:150px;
+    height:160px;
 	width:520px;
 	border-style:solid;
 	border-width:1px;
@@ -56,6 +56,7 @@ a{
 }
 #title{
     color:#46c9c7;
+    width:522px;
 	font-size:40px;
 	font-weight: bold;
 	padding-top:29px;
@@ -64,8 +65,7 @@ a{
 	}
 .attention{
     float:left;
-	margin-top:65px;
-	margin-left:300px;
+	margin-left:450px;
 	}
 #attention_img{
     height:15px;
@@ -113,7 +113,7 @@ a{
    color:#999;
    }
  #left2{
-    height:120px;
+    height:140px;
 	width:520px;
 	border-style:solid;
 	border-width:1px;

@@ -345,8 +345,8 @@ var m3D = function () {
 <div id="screen">
 	<div id="command">
 
-		<h1>deliberate lies</h1>
-		 Defiant, stony, deliberate, their lies will not get in my way.
+		<h1>海报墙</h1>
+		 
 		<div id="bar"></div>
 	</div>
 	<div id="urlInfo"></div>

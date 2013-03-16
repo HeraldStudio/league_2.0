@@ -59,7 +59,7 @@
 										$("#btn_all").fadeOut(1000);
 						} else {
 								$.each(data, function (key, val) {
-										$("#list").append(val)
+										$("#list").append(val);
 								})
 								$("#list").masonry('reload');
 						}
