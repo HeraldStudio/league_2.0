@@ -20,3 +20,4 @@ class logIPBehavior extends Behavior
         $ip->add($data);
     }
 }
+?>

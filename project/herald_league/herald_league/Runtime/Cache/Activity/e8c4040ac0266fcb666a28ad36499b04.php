@@ -101,11 +101,13 @@ a:hover {
       <?php else: ?>
       <div id="user"><a href="#">登录</a></div><?php endif; ?>
       <div id="search">
+
             <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+                <a href="#" id="search_image">
+                </a>
                 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
             </form>
-            <a href="#" id="search_image">
-            </a>
+
         </div>
     </div>
     <div id="main_body">

@@ -19,3 +19,4 @@ class VoteResultModel extends Model
         return false;
     }
  }
+ ?>

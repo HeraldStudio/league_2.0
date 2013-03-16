@@ -47,7 +47,6 @@ class IndexAction extends Action
 		$activityinfo = $this -> attentionActivity ( $userid );
 		$this -> assign ( 'activityinfo', $activityinfo );
 
-		//print_r($lastactivity);
 		$this -> display();
     }
 
@@ -168,15 +167,16 @@ class IndexAction extends Action
     {
     	$Attention = D('Attention');
     	$LeagueInfo = D('LeagueInfo');
-    	$Activity = D('Activity');
+    	//$Activity = D('Activity');
     	$attentionleague = $Attention -> getAttentionLeague ( $userid );
 
     	foreach ( $attentionleague as $attentionleagues ) 
     	{	
     		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
     		$leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
-    		$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'], 4 );
+    		//$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'] );
     	}
+    	//print_r($lastactivity);
     	return array( $leagueinfo, $lastactivity );
     }
     /*
@@ -195,7 +195,7 @@ class IndexAction extends Action
     public function attentionActivity ( $userid )
     {
 		$Attention = D('Attention');
-		$Activity = D('Activity');
+		//$Activity = D('Activity');
 		$League = D('LeagueInfo');
 
 		$attentionactivity = $Attention -> getAttentionActivity( $userid );

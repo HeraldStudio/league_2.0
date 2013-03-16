@@ -14,8 +14,7 @@
 		{
 				private function getLeagueInfo()
 				{
-						$lg = array('id' => 1, 'name'=>'先声网');
-						return $lg;//todo 社团登录才能继续，测试时先忽略
+
 						$heraldSession = D('UserSessionControl');
 						if($heraldSession->islogin() == true && $heraldSession->getUserType() == 0)
 						{

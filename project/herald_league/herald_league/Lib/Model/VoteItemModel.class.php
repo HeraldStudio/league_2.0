@@ -86,3 +86,5 @@ class VoteItemModel extends Model
         }
     }
 }
+
+?>

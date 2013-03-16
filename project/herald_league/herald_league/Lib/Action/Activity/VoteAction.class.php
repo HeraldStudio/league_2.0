@@ -47,3 +47,4 @@ class VoteAction extends Action
         }
     }
 }
+?>

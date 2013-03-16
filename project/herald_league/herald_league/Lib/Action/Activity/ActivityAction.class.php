@@ -188,4 +188,4 @@ class ActivityAction extends Action
 			$this->display();
 		}
 }
-
+?>
