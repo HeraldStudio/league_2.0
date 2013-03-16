@@ -47,12 +47,11 @@ class HomeAction extends Action
 		/*获取活动信息*/
 		$Activity = D('Activity');
 		$this -> activity = $Activity -> getActivityInfoById ( $this -> activityid );
-        $this -> activity =$this->activity[0];
 		$this -> assign('league', $league);
 
 		/*活动标签*/
-		$class = $Activity->getClass($this -> activity['id']);
-        $this -> assign('class',$class);
+		$class = $Activity -> getClass( $this -> activity['id'] );
+        $this -> assign('class', $class);
         /*活动状态*/
         $this -> actiitystate = $Activity -> getActivityState( $this -> activityid );
 		/*判断关注状态*/
@@ -66,8 +65,19 @@ class HomeAction extends Action
 				'isleague' => 0
 			 );
 
+
+		$this -> attentionstate = $Attention -> getAttentionState( $data );
+
+		//获取评论信息
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $this -> activityid, $Comment -> getCommentedType("activity") );
+		
+		$this -> assign( 'comment', $comment );
+
+
 			$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
 		}
+
 		$this -> display();
     }
     /*
@@ -194,45 +204,6 @@ class HomeAction extends Action
 
 		$this -> display();
 	}
-	
-	/*
-
-	函数功能：社团交流区控制函数
-	
-	参数信息：无参数
-
-	  返回值：无返回值
-			  
-	    作者：Tairy
-	
-	更新日期：2013/01/16
-	
-	*/
-	
-	public function communion()
-	{
-		/*获取URL参数*/
-		$leagueid = intval($this -> _param('leagueid'));
-
-		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $leagueid, $Comment -> getCommentedType("league") );//1表示社团交流区信息
-
-		$this -> assign( 'comment', $comment );
-
-		$Answer = D ( 'Answer' );
-		$answer = $Answer -> getAnswerInfo( $comment );
-
-		$this -> assign('answer', $answer);
-
-		$this -> leagueid = $leagueid;
-
-		if( !empty( $_POST['submit'] ) )
-		{
-			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
-		}
-		$this -> display();
-	}
-
 	public function imgComment()
 	{
 		/*获取URL参数*/
@@ -257,6 +228,58 @@ class HomeAction extends Action
 		// {
 		// 	$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("picture") );
 		// }
+
+		$this -> display();
+	}
+	/*
+
+	函数功能：社团交流区控制函数
+	
+	参数信息：无参数
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
+	
+	public function communion()
+	{
+		/*获取URL参数*/
+		$leagueid = intval($this -> _param('leagueid'));
+
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $leagueid, $Comment -> getCommentedType("league") );//1表示社团交流区信息
+
+		$this -> assign( 'comment', $comment );
+
+		// $Answer = D ( 'Answer' );
+		// $answer = $Answer -> getAnswerInfo( $comment );
+
+		// $this -> assign('answer', $answer);
+
+		// $this -> leagueid = $leagueid;
+
+		// if( !empty( $_POST['submit'] ) )
+		// {
+		// 	$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
+		// }
+		 $this -> display();
+	}
+	public function answer()
+	{
+		/*获取URL参数*/
+		$commentid = intval($this -> _param('commentid'));
+
+		$Comment = D ( 'Comment' );
+		$this -> comment = $Comment -> getCommentInfoById($commentid);
+
+		$Answer = D ( 'Answer' );
+		$answer = $Answer -> getAnswerByCommentId( $commentid );
+
+		$this -> assign('answer', $answer);
 
 		$this -> display();
 	}

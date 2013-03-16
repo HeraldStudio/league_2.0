@@ -225,6 +225,12 @@ a:hover {
 		<div id="wall3">
 		</div>
   		<a id="arrow3" href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>" title="返回大厅">
+		</a><?php break;?>
+  	<?php case "zpq": ?><div id="door2">
+		</div>
+		<div id="wall3">
+		</div>
+  		<a id="arrow3" href="__APP__/League/Home/club/title/yxg/leagueid/<?php echo ($leagueid); ?>" title="回到相册">
 		</a><?php break; endswitch;?>
   <div id="danganshi_biaoti">
   	<?php echo ($title); ?>

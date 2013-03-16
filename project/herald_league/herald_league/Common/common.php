@@ -29,7 +29,7 @@
 	
 */
 
-function getCommenterInfo ( $commentingArgument )
+function getCommenterName ( $commentingArgument )
 {
 	$commentingId = intval( $commentingArgument / 10 );
 	$commentingType = $commentingArgument % 10;
@@ -45,6 +45,25 @@ function getCommenterInfo ( $commentingArgument )
 		$League = M('league_info');
 		$league = $League -> where( 'id ='.$commentingId ) -> find();
 		echo $league['league_name'];
+	}
+}
+
+function getCommenterAvatar ( $commentingArgument )
+{
+	$commentingId = intval( $commentingArgument / 10 );
+	$commentingType = $commentingArgument % 10;
+	
+	if ( $commentingType == 1 )// 1表示普通用户
+	{
+		$User = M('user');
+		$user = $User -> where( 'id ='.$commentingId ) -> find();
+		echo $user['user_avatar_add'];
+	}
+	elseif ( $commentingType == 2 ) // 2表示社团用户
+	{
+		$League = M('league_info');
+		$league = $League -> where( 'id ='.$commentingId ) -> find();
+		echo $league['avatar_address'];
 	}
 }
 

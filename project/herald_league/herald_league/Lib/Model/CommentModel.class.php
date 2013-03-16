@@ -53,6 +53,11 @@ class CommentModel extends Model
 	    }
     }
 
+    public function getCommentInfoById( $commentid )
+    {
+    	return $this -> where('id = '.$commentid) -> find();
+    }
+
     /*
 
 	函数功能：添加评论信息函数
