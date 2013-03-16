@@ -4,6 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动详情</title>
 <link href="__Public__/Css/dating.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript">
+    function changeActivityAttention(activityid,action)
+    {
+        $.getJSON("<?php echo U('Activity/Activity/changeAttention');?>",{"activityid":activityid,"action":action},function(data,status){
+            if(data.status!=1) //失败了
+                alert(data.info);
+            else
+            {
+                $(".attended").toggle();
+                $(".notattended").toggle();
+            }
+        });
+    };
+</script>
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -23,13 +38,19 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title"><?php echo ($activity['activity_name']); ?></div>
-			  <a href="#"id="attention">
+			  <?php if($attentionstate == false): ?><a href="#" id="attention" class="notattended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">
 			    	关注
 			    </div>			  
 			  </a>
+              <?php else: ?>
+                  <a href="#" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
+                      <div id="attention_text">
+                          取消关注
+                      </div>
+                  </a><?php endif; ?>
 			  <div id="shuoming">
 			    <div id="biaoqian">
 				  	<?php if($class == null): ?><div id="biaoqian1" class="bq">没有标签</div>

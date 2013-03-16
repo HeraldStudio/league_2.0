@@ -14,3 +14,4 @@ class LoginAction extends Action
         $this->display();
     }
 }
+?>
