@@ -1,59 +1,242 @@
-<html xmlns="http://www.w3.org/1999/html">
-<!--todo 取消注释
-<head>
-<script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){  
-  $("#verify").keyup(function(){
-     $.getJSON("{:U('Public/VerifyCode/Check')}",{"code":$("#verify").val()},function(data,status){
-        if(data.status==1)
-            $("#verify").css("background-color","#00FF00");
-        else
-            $("#verify").css("background-color","#FF0000");
-    });
-  });
- $("#vimg").click(function(){
-     var time=new Date().getTime();
-     $(this).attr("src","{:U('/Public/VerifyCode/Generate/')}"+"/"+time);
-     if($("#verify").val()!="")
-        $("#verify").css("background-color","#FF0000");
-    });
- });
-</script>
-</head>
-<body>
-<form action = "{:U('/Activity/AddActivity/Deal')}" method="POST" enctype="multipart/form-data">
-    <input type="text" name="activity_name">活动名称 </input><br>
-    <input type="text" name="start_time">开始时间 </input><br>
-    <input type="text" name="end_time">结束时间 </input><br>
-    <input type="text" name="activity_introduce">活动介绍 </input><br>
-    <input type="file" name="post">海报地址 </input><br>
-    <input type="text" name="contact_info">联系方式 </input><br>
-    <input type="text" name="is_vote">是否投票 </input><br>
-    <input type="text" name="activity_place">活动地址 </input><br>
-    <input type="text" name="class">标签，以逗号分开</input></br>
-    <img id="vimg" src="{:U('/Public/VerifyCode/Generate/')}"></img>
-    <input id="verify" type="text" name="verifyCode" >验证码 </input></br>
-    <input type="submit" > </input>
-
-</form>
-</body>
-</html>
--->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>活动发布</title>
-    <script language="javascript" src="__ROOT__/Public/Js/jquery.js" ></script>
-    <script language="javascript" src="__ROOT__/Public/Js/fabu/GreyFrame.js" ></script>
-    <script type="text/javascript">
-        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
-        frameContect = new GreyFrame("ContactFrame", 350, 120);
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动发布</title>
+<link href="__ROOT__/Public/Css/post.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
+<SCRIPT src="__ROOT__/Public/Js/jquery.tools.min.js"></SCRIPT>
+<LINK href="__ROOT__/Public/Css/form.css" rel="stylesheet" type="text/css"> 
+<LINK href="__ROOT__/Public/Css/columns.css" rel="stylesheet" type="text/css"> 
+<link rel="stylesheet" href="__ROOT__/Public/Css/jquery-ui.css" />
+<script src="__ROOT__/Public/Js/jquery-ui.js"></script>
+<link rel="stylesheet" href="__ROOT__/Public/Css/style.css" />
+<script charset="utf-8" src="__ROOT__/Public/Js/kindeditor-min.js"></script>
+		<script charset="utf-8" src="__ROOT__/Public/Js/zh_CN.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : false,
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+			});
+		</script>
+<style type="text/css">
+a:link {
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+a:hover {
+	color: #34c5c3;
+}
+</style>
+  <script>
+    $(function() {
+        $( "#startdate" ).datepicker();
+		 $( "#startdate" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+    });
+	$(function() {
+        $( "#enddate" ).datepicker();
+		 $( "#enddate" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+    });
     </script>
 </head>
-<body onload="is_login()">
-<a style="position:absolute;position:fixed;right:0px;top:350px;display:block;height:60px;width:24px;font-size:16px;color:#fff;background-color:#000;opacity:.6;line-height:30px;" href="content.html" target="MyGreyFrame">发布</a>
+<body>
+  <div id="main">
+    <div id="header">
+	  <div id="logo">
+	  </div>
+	  <div id="navigation">
+		<div id="herald" class="navigation_link">
+		  <a href="#" >先声</a>
+		</div>
+		<div id="map" class="navigation_link">
+		  <a href="#" >社团</a>
+		</div>
+	    <div id="activity" class="navigation_link">
+     	  <a href="#" >活动</a>
+		</div>
+		<div id="wall" class="navigation_link">
+		  <a href="#" >海报墙</a>
+		</div>
+	  </div>
+	  <div id="search">
+	    <input type="text"/>
+		<a href="#" id="search_image">
+		</a>
+	  </div>
+	  <div id="message">
+	    <a href="#" id="message_image"></a>
+		<div id="m_num">5</div>
+	  </div>
+	  <div id="love">
+	    <a href="#" id="love_image"></a>
+		<div id="g_num">55</div>
+	  </div>
+	  <div id="user"><a href="#">赵亮</a></div>
+	  <div id="exit"><a href="#">退出</a></div>
+	</div>
+	<div id="main_body">
+	  <div id="main_body_inner">
+	    <div id="title">
+		  <div id="title_text">活动发布</div>
+		</div>
+		<div id="register">
+		<FORM class="cols" id="myform" method="POST" action = ":{U('Activity/AddACtivity/deal/')}">
+		  <div  class="register_content">
+		    <div class="title">活动名称:</div>
+			<div class="xing" id="xing1">*</div>
+			<input name="activityname" type="text" minlength="5"/>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">主办单位:</div>
+			<div class="xing" id="xing2">*</div>
+			<input type="text" required="required"/>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">活动日期:</div>
+			<div class="xing" id="xing3">*</div>
+			<input id="startdate"style="width:100px;" type="text"/>
+			<div class="title" style="width:30px;">至:</div>
+			<input  id="enddate" style="width:100px;" type="text"/>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">活动时间:</div>
+			<div class="xing" id="xing2">*</div>
+			<input name="time" type="time" maxlength="8"/>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">活动地点:</div>
+			<div class="xing" id="xing4">*</div>
+			<input type="text" name="place" type="text" minlength="4"/>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">联系方式:</div>
+			<div class="xing" id="xing5">*</div>
+			<input required="required" type="email"  minlength="9"/>
+		  </div>
+		   <div  class="register_content">
+		    <div class="title">活动标签:</div>
+			<div class="xing" id="xing2">*</div>
+			  <select id="object_class_id" class="item">
+                <option value="0" selected="selected">校内讲座</option>
+                <option value="1">晚会表演</option>
+                <option value="2">企业宣传</option>
+                <option value="3">社团招新</option>
+                <option value="4">校园比赛</option>
+				<option value="4">体育竞技</option>
+              </select>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">活动详情:</div>
+			<div class="xing" id="xing2">*</div>
+			 <a href="#" id="haibao">添加海报</a>
+			  <div style="margin-top:10px; float:left;" id="input6" class="input">
+                <textarea name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+		      </div>
+		  </div>
+		  <BUTTON id="tijiao" type="submit">确认提交</BUTTON>
+		  </FORM>
+		</div>
+	  </div>
+	</div>
+	<div id="footer">
+	  <div id="footer_link">
+	    <a href="#" id="f_about" class="link">关于我们</a>
+		<a href="#" id="f_contact" class="link">联系我们</a>
+		<a href="#" id="f_join" class="link">加入我们</a>
+	  </div>
+	  <div id="footer_text">
+      <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
+	  </div>
+	</div>
+  </div>
+<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+   <SCRIPT>
+      // Regular Expression to test whether the value is valid
+    $.tools.validator.fn("[type=time]", "Please supply a valid time", function(input, value) {
+    return /^\d\d:\d\d$/.test(value);
+    });
+        $.tools.validator.fn("[data-equals]", "Value not equal with the $1 field", function(input) {
+    var name = input.attr("data-equals"),
+    field = this.getInputs().filter("[name=" + name + "]");
+    return input.val() == field.val() ? true : [name];
+    });
+        $.tools.validator.fn("[minlength]", function(input, value) {
+    var min = input.attr("minlength");
 
-</body>
+    return value.length >= min ? true : {
+    en: "最少填写 " +min+ " 个字",
+    fi: "Kent&auml;n minimipituus on " +min+ " merkki&auml;"
+    };
+    });
+        $.tools.validator.localizeFn("[type=time]", {
+    en: '请填写正确时间',
+    fi: 'Virheellinen aika'
+    });
+        $("#myform").validator({
+    position: 'top left',
+    offset: [-12, 0],
+    message: '<div><em/></div>' // em element is the arrow
+    });
+  </SCRIPT>
+   <script type="text/javascript">
+   window.onscroll=function()
+   {
+   		var top=document.documentElement.scrollTop||document.body.scrollTop;
+		var toTop=document.getElementById("toTop");
+   		if(top>400)
+		{
+			toTop.style.display="inline";
+		}
+		else
+		{
+			toTop.style.display="none";
+		}
+   };
+   var toTop=new function()
+   {
+   		var Timer=null;
+   		function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+		this.goto=function(objName)
+		{
+			$id(objName).onclick=function()
+			{
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				startNove();
+				return false;
+			};
+			var startNove=function()
+			{
+				if(Timer)clearInterval(Timer);
+				Timer=setInterval(doMove,30);
+			};
+			var doMove=function()
+			{
+				var iSpeed=0;
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				iSpeed=(0-top)/5;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+				if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+				{
+					clearInterval(Timer);
+					Timer=null;
+				}
+				window.scrollTo(0,(top+iSpeed));
+			};
+		};
+   };
+   toTop.goto("toTop");
+   </script>
+<body>
 </html>

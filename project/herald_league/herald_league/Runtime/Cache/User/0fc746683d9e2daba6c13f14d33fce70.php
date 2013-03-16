@@ -67,8 +67,9 @@
                 alert("请输入密码");
             else
             {
+                $("#btn_login1").val("登陆中");
                 $.ajax({
-                    url:"<?php echo U('User/Login/Login/');?>",
+                    url:"<?php echo U('User/Login/login/');?>",
                     data:{cardNumber:card,passWord:pass},
                     type:"POST",
                     dataType:"json",
@@ -76,9 +77,11 @@
                     {
                         if(data.status == 1)
                             parent.location.reload();
-                        
                         else
+                        {
                             alert("登录失败");
+                            $("#btn_login1").val("登陆");
+                        }
                     },
                 });
             }

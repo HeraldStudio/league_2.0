@@ -34,38 +34,26 @@ a:hover {
 </head>
 <body>
 <div id="main">
-    <div id="header">
-	  <div id="logo">
-	  </div>
-	  <div id="navigation">
-		<div id="herald" class="navigation_link">
-		  <a href="#" >先声</a>
-		</div>
-		<div id="map" class="navigation_link">
-		  <a href="#" >社团</a>
-		</div>
-	    <div id="activity" class="navigation_link">
-     	  <a href="#" >活动</a>
-		</div>
-		<div id="wall" class="navigation_link">
-		  <a href="#" >海报墙</a>
-		</div>
-	  </div>
-	  <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
-		</form>
-	  </div>
-	  <div id="message">
-	    <a href="#" id="message_image"></a>
-	  </div>
-	  <div id="love">
-	    <a href="#" id="love_image"></a>
-	  </div>
-	  <div id="user"><a href="#">赵亮</a></div>
-	  <div id="exit"><a href="#">退出</a></div>
-	</div>
+    <div id="header_top">
+					<div id="islogin" <?php if($islogin == 0): ?>style="display:none"<?php endif; ?> >
+							<div id="header_top_text">
+								<a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
+								<a href="#" id="header_top_text"><?php echo ($name); ?></a>
+							</div>
+							<div id="tubiao">
+								<a href="#" id="xinxi"></a>
+								<a href="__APP__" id="shouye"></a>
+							</div>
+					</div>
+					<div id="notlogin" <?php if($islogin == 1): ?>style="display:none"<?php endif; ?> >
+							<div id="header_top_text">
+								<a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame" id="login">登录</a>
+							</div>
+							<div id="tubiao">
+								<a href="__APP__" id="shouye"></a>
+							</div>
+					</div>   
+			</div>
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">

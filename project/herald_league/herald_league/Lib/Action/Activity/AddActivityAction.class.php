@@ -16,19 +16,17 @@
 				{
 						$lg = array('id' => 1, 'name'=>'先声网');
 						return $lg;//todo 社团登录才能继续，测试时先忽略
-				}
-				public function Add()
-				{
-						if($this->getLeagueInfo()!=false)
+						$heraldSession = D('UserSessionControl');
+						if($heraldSession->islogin() == true && $heraldSession->getUserType() == 0)
 						{
-								$this->display();
+							return array('id'   =>$heraldSession->getUserID() , 
+									     'name' =>$heraldSession->getUserName(),
+								);
 						}
 						else
-						{
-								$this->error('请先登录');
-						}
+							return false;
 				}
-				public function content()
+				public function add()
 				{
 						$lg=$this->getLeagueInfo();
 						if($lg==false)
@@ -42,7 +40,7 @@
 								$this->display();
 						}
 				}
-				public function Deal() //最终处理
+				public function deal() //最终处理
 				{
 						if($this->getLeagueInfo()!=false)
 						{

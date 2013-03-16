@@ -170,7 +170,7 @@ $(function(){
 			
 			<div id="user"><a href="#"><?php echo ($userName); ?></a></div>
 			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
-			<?php else: ?>
+		<?php else: ?>
 			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
 
 		</div>
