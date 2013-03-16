@@ -221,5 +221,6 @@ class AttentionModel extends Model
     {
         return $this -> where('attended_id = '.$attendedid.' AND isleague = 0') -> count();
     }
+
 }
 ?>

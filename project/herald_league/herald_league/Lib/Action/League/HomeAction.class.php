@@ -56,12 +56,18 @@ class HomeAction extends Action
         /*活动状态*/
         $this -> actiitystate = $Activity -> getActivityState( $this -> activityid );
 		/*判断关注状态*/
-		$data = array('user_id' => 1,
-			'attended_id' => $leagueid,
-			'isleague' => 1
-		 );
+		$heraldSession = D('UserSessionControl');
+        if($heraldSession->islogin()==false || $heraldSession->getUserType()== 0)
+            $this-> attentionstate = 0;
+		else
+		{
+			$data = array('user_id' => $heraldSession->getUserID(),
+				'attended_id' => $this->activityid,
+				'isleague' => 0
+			 );
 
-		$this -> attentionstate = $Attention -> getAttentionState( $data );trace('aa',$this -> attentionstate);
+			$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
+		}
 		$this -> display();
     }
     /*
@@ -409,25 +415,30 @@ class HomeAction extends Action
 		 	echo "<script>history.go(-1);</script>";
 		 	return ;
 		 }
-  //       /*控制登陆*/
-		// $heraldSession = D('UserSessionControl');
-  //       if($heraldSession->islogin())
-  //       {
-  //           $this->assign('islogin',1);
-  //           $this->assign('name',$heraldSession->getUserName());
-  //           if($heraldSession->getUserType()==1)
-  //               $uid=$heraldSession->getUserID();
-  //           else
-  //               $uid =0;
-  //       }
-  //       else
-  //       {
-  //           $this->assign('islogin',0);
-  //           $uid = 0;
-  //       }
-  //       $this->assign('uid',$uid);
+         /*控制登陆*/
+	     $heraldSession = D('UserSessionControl');
+         if($heraldSession->islogin())
+         {
+             $this->assign('islogin',1);
+             $this->assign('name',$heraldSession->getUserName());
+             if($heraldSession->getUserType()==1)
+                 $uid=$heraldSession->getUserID();
+             else
+                 $uid =0;
+         }
+         else
+         {
+             $this->assign('islogin',0);
+             $uid = 0;
+         }
+         $this->assign('uid',$uid);
 
-		
+		$attention = D('Attention');
+		if($attention->getAttentionLeague($uid)!=null)
+			$isattended = true;	
+		else
+			$isattended = false;
+		$this->assign('isattended',$isattended);
 		 $League = D('LeagueInfo');
 		 $league = $League -> getLeagueInfo ( $this -> leagueid );
 		 //print_r($league);
@@ -451,7 +462,7 @@ class HomeAction extends Action
 		 		$attention = $Attention -> getActivityAttention( $this -> activityid );
 				$userinfo = $User -> getUserInfo( $attention );
 		 		$this -> assign( 'userinfo', $userinfo );
-		 		$this -> assign('activity', $activity);
+		 		$this -> assign(' activity', $activity);
 		 	}
 		 	else
 		 	{

@@ -82,21 +82,20 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title">{$activity['activity_name']}</div>
-			  <if condition="$attentionstate eq false">
-              <a href="javascript:void(0)" id="attention" class="notattended" onclick="javascript:changeActivityAttention({$activity['id']},'add')">
+			  
+              <a class="notattended"<if condition="$attentionstate eq 1"> style= "display:none"  </if>href="javascript:void(0)" id="attention" class="notattended"  onclick="javascript:changeActivityAttention({$activity['id']},'add')">
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">
 			    	关注
 			    </div>			  
 			  </a>
-              <else/>
-                  <a href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention({$activity['id']},'del')">
+                  <a <if condition="$attentionstate neq 1"> style="display:none"  </if> class ="attended" href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention({$activity['id']},'del')">
                       <div id="attention_text">
                           取消关注
                       </div>
                   </a>
-              </if>
+              
 			  <div id="shuoming">
 			    <div id="biaoqian">
 				  	<if condition="$class eq null">
