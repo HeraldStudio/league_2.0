@@ -47,7 +47,11 @@
                     dataType:"json",
                     success:function(data){
                         if(data.status == 1){
-                           parent.location.reload();
+                            if (data.data == 0) //第一次登陆
+                            {
+
+                            }
+                            parent.location.reload();
                         }
                         else{
                             alert("登录失败");

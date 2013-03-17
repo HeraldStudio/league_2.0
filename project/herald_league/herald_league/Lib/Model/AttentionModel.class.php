@@ -43,7 +43,6 @@ class AttentionModel extends Model
         作者：Tairy
     
     更新日期：2013/01/17
-    
     */
     public function getAttentionActivity ( $userid )
     {

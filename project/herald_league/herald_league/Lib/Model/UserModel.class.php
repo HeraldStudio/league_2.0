@@ -82,7 +82,8 @@ class UserModel extends Model
 		}
 		/*功能：登陆后更新数据
 		 *作者:   xie
-		 *日期 :  2013.3.4
+		 *日期:  2013.3.4
+		 *返回： 第一次登陆返回0
 		 */
 		public function update($result)
 		{
@@ -92,18 +93,20 @@ class UserModel extends Model
 				$info = $this->getByCardNum($card);
 				if($info == null || $info == false)//没有注册
 				{
-						$data=array(
-								'card_num'=>$card,
-								'true_name'=>$name,
-								'last_login_time',date('Y-m-d'),
-								'nick_name'=>$name,
-								);
-						$this->add($data);
+					$data=array(
+							'card_num'=>$card,
+							'true_name'=>$name,
+							'last_login_time',date('Y-m-d'),
+							'nick_name'=>$name,
+							);
+					$this->add($data);
+					return 0;
 				}
 				else
 				{
 						$this->where("card_num = $card")->setField('last_login_time',date('Y-m-d'));
 						$this->where("card_num = $card")->setInc('times',1);
+						return 1;
 				}
 		}
 }

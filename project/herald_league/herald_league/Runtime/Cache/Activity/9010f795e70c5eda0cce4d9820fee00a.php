@@ -9,7 +9,9 @@
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
-<script tupe="text/javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+
+
 <script type="text/javascript" >
  function logout()
 {
@@ -61,7 +63,10 @@
 								$.each(data, function (key, val) {
 										$("#list").append(val);
 								})
-								$("#list").masonry('reload');
+								$("img").load(function(){
+									$("#list").masonry('reload');
+								});
+								
 						}
 
 				})
@@ -82,6 +87,30 @@ a:hover {
 		font-weight: bold;
 }
 </style>
+<STYLE type="text/css">
+    .modal {
+    display:none;
+    padding:15px;
+    text-align:left;
+  }
+  #tishi
+  {
+	background:url(images/second.png);
+	background-repeat:no-repeat;
+	height:141px;
+	width:733px;
+  }
+  .modal button{
+      background-color:#000;
+	  background:none;
+	  border:none;
+	  text-shadow:1px 2px 1px #000;
+	  color:#fff;
+	  font-size:15px;
+	  font-family:"微软雅黑", "宋体", serif;
+	  margin-left:30px;
+  }
+  </STYLE>
 </head>
 <body>
 	<div id="main">
@@ -131,26 +160,26 @@ a:hover {
 					<div class="ws_images">
 						<ul>
 								<?php if(is_array($recent)): foreach($recent as $key=>$r): ?><li>
-										<a href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($r["id"]); ?>" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/<?php echo (($r["activity_post_add"])?($r["activity_post_add"]):"default.jpg"); ?>" alt="<?php echo ($r["activity_name"]); ?>" title="<?php echo ($r["activity_org_name"]); ?>" id="wows1_0"/></a>
-										<h1 class="title"><?php echo ($r["activity_name"]); ?></h1>
-										<p>
-												<?php if($r["isstart"] > 0): ?>未开始
-												<?php else: ?>
-														<?php if($r["isend"] > 0): ?>进行中
-														<?php else: ?>
-																已结束<?php endif; endif; ?>
-										</p>
-										<p>时间:<?php echo ($r["start_time"]); ?>---<?php echo ($r["end_time"]); ?></p>
-										<p>地点：<?php echo (($r["activity_place"])?($r["activity_place"]):""); ?></p>
-										<p>联系方式:<?php echo ($r["contact_info"]); ?></p>
-										<p>主办方:<?php echo ($r["activity_org_name"]); ?></p>
-										</li><?php endforeach; endif; ?>
+									<a href="<?php echo U('Activity/Activity/detail/');?>/activityid/<?php echo ($r["id"]); ?>" target="_blank"><img  width=600px height=300px src="__ROOT__/Uploads/LeaguePost/Large/<?php echo (($r["activity_post_add"])?($r["activity_post_add"]):"default.jpg"); ?>" alt="<?php echo ($r["activity_name"]); ?>" title="<?php echo ($r["activity_org_name"]); ?>" id="wows1_0"/></a>
+									<h1 class="title"><?php echo ($r["activity_name"]); ?></h1>
+									<p>
+											<?php if($r["isstart"] > 0): ?>未开始
+											<?php else: ?>
+													<?php if($r["isend"] > 0): ?>进行中
+													<?php else: ?>
+															已结束<?php endif; endif; ?>
+									</p>
+									<p>时间:<?php echo ($r["start_time"]); ?>---<?php echo ($r["end_time"]); ?></p>
+									<p>地点：<?php echo (($r["activity_place"])?($r["activity_place"]):""); ?></p>
+									<p>联系方式:<?php echo ($r["contact_info"]); ?></p>
+									<p>主办方:<?php echo ($r["activity_org_name"]); ?></p>
+									</li><?php endforeach; endif; ?>
 						</ul>
 					</div>
 					<div class="ws_bullets">
 						<div>
 							<?php if(is_array($recent)): foreach($recent as $key=>$r): ?><a href="#" title="<?php echo ($r["activity_name"]); ?>"><img width=96px height=48px src="__ROOT__/Uploads/LeaguePost/Small/<?php echo ($r["activity_post_add"]); ?>" alt="<?php echo ($r["activity_name"]); ?>"/>
-										<?php echo ($key+1); ?></a><?php endforeach; endif; ?>
+									<?php echo ($key+1); ?></a><?php endforeach; endif; ?>
 						</div>
 					</div>
 					<div class="ws_shadow"></div>     
@@ -304,46 +333,46 @@ a:hover {
 <script type="text/javascript" src="__ROOT__/Public/Js/engine1/wowslider.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/engine1/script.js"></script>
 <script type="text/javascript">
-						$(document).ready(function(){
-								//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
-								//Vertical Sliding
-								$('.boxgrid.slidedown').hover(function(){
-										$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
-								}, function() {
-										$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
-								});
-								//Horizontal Sliding
-								$('.boxgrid.slideright').hover(function(){
-										$(".cover", this).stop().animate({left:'205px'},{queue:false,duration:300});
-								}, function() {
-										$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
-								});
-								//Diagnal Sliding
-								$('.boxgrid.thecombo').hover(function(){
-										$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
-								}, function() {
-										$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
-								});
-								//Partial Sliding (Only show some of background)
-								$('.boxgrid.peek').hover(function(){
-										$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
-								}, function() {
-										$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
-								});
-								//Full Caption Sliding (Hidden to Visible)
-								$('.boxgrid.captionfull').hover(function(){
-										$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:160});
-								}, function() {
-										$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:160});
-								});
-								//Caption Sliding (Partially Hidden to Visible)
-								$('.boxgrid.caption').hover(function(){
-										$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
-								}, function() {
-										$(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
-								});
-						});
-				</script>
+$(document).ready(function(){
+		//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+		//Vertical Sliding
+		$('.boxgrid.slidedown').hover(function(){
+				$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+		}, function() {
+				$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+		});
+		//Horizontal Sliding
+		$('.boxgrid.slideright').hover(function(){
+				$(".cover", this).stop().animate({left:'205px'},{queue:false,duration:300});
+		}, function() {
+				$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+		});
+		//Diagnal Sliding
+		$('.boxgrid.thecombo').hover(function(){
+				$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+		}, function() {
+				$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+		});
+		//Partial Sliding (Only show some of background)
+		$('.boxgrid.peek').hover(function(){
+				$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+		}, function() {
+				$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+		});
+		//Full Caption Sliding (Hidden to Visible)
+		$('.boxgrid.captionfull').hover(function(){
+				$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:160});
+		}, function() {
+				$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:160});
+		});
+		//Caption Sliding (Partially Hidden to Visible)
+		$('.boxgrid.caption').hover(function(){
+				$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+		}, function() {
+				$(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});
+		});
+});
+</script>
 <script>
 var $list= $(".list");
 $list.imagesLoaded(function(){
@@ -353,5 +382,53 @@ $list.imagesLoaded(function(){
 	});
 });
 </script>
+<P>
+<BUTTON class="modalInput" rel="#yesno">Yes or no?</BUTTON>  
+<DIV class="modal" id="yesno">
+<div id="tishi">
+</div>
+<BUTTON class="close" style=" margin-left:230px;">进入个人主页</BUTTON>    
+<BUTTON class="close">等会儿再说</BUTTON>  
+ </P>
+ </DIV><!-- user input dialog --> 
+<SCRIPT>
+$(document).ready(function() {
+    var triggers = $(".modalInput").overlay({
+
+      // some mask tweaks suitable for modal dialogs
+      mask: {
+        color: '#000',
+        loadSpeed: 200,
+        opacity: 0.6
+      },
+
+      closeOnClick: false
+  });
+  
+    var buttons = $("#yesno button").click(function(e) {
+
+      // get user input
+      var yes = buttons.index(this) === 0;
+
+      // do something with the answer
+      triggers.eq(0).html("You clicked " + (yes ? "yes" : "no"));
+  });
+  
+    $("#prompt form").submit(function(e) {
+
+      // close the overlay
+      triggers.eq(1).overlay().close();
+
+      // get user input
+      var input = $("input", this).val();
+
+      // do something with the answer
+      triggers.eq(1).html(input);
+
+      // do not submit the form
+      return e.preventDefault();
+  });
+  });
+</SCRIPT>
 </body>
 </html>
