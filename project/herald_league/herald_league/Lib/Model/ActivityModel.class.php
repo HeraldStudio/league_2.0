@@ -1,4 +1,3 @@
-
 <?php
 /*
 
@@ -29,8 +28,8 @@ class ActivityModel extends Model
 						11 =>'is_vote',
 						12 =>'activity_place',
 						13 =>'specific_time',
-	 '_autoinc' => true,
-				'_pk' => 'id',
+	 			'_autoinc' => true,
+					 '_pk' => 'id'
 		);
 	// 定义自动验证
 		protected $_validate = array(
@@ -41,7 +40,7 @@ class ActivityModel extends Model
 				array('activity_introduce','require','活动简介必须填写'),
 				array('contact_info','require','联系方式必须填写'),
 				array('is_vote',array(0,1),'请选择是否为投票',2,'in'),
-				array('activity_place','require','活动地点必须填写'),
+				array('activity_place','require','活动地点必须填写')
 				);
 		protected function checkStartTime($time) //判断开始时间是否早于今天
 		{
@@ -118,8 +117,8 @@ class ActivityModel extends Model
 		*/
 		public function getActivityInfoById( $activityid )
 		{
-				$activity = $this -> where( 'id ='.$activityid ) -> find();
-				return $activity;
+			$activity = $this -> where( 'id ='.$activityid ) -> find();
+			return $activity;
 		}
 
 		public function getAttender( $activityID )
@@ -206,8 +205,8 @@ class ActivityModel extends Model
 		 */
 		public function getHeatActivity($limit=6)
 		{
-				$date=date("Y-m-d");
-				return $this->where(array('end_time'=>array('egt',$date)))->order('activity_count desc')->limit($limit)->field('id,activity_name')->select();
+			$date=date("Y-m-d");
+			return $this->where(array('end_time'=>array('egt',$date)))->order('activity_count desc')->limit($limit)->field('id,activity_name')->select();
 		}
 		/*
 		 * 功能：获取指定数量的活动
@@ -218,7 +217,7 @@ class ActivityModel extends Model
 		 */
 		public function getActivityByLimit($limit=10)
 		{
-				return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
+			return $this->order('start_time desc')->limit($limit)->field('id,activity_name,activity_post_add')->select();
 		}
 
 
@@ -227,30 +226,30 @@ class ActivityModel extends Model
 		 */
 		public function getMore($n)
 		{
-				$temp=$this->getActivityByLimit($n);
-				if($temp == null || $temp==false)
-						return null;
-				$num = count($temp);
-				for($i=$n-10;$i<$n;$i++)
-				{
-						if (isset($temp[$i]))
-						{
-								$result[$i] =$temp[$i];
-						}
-				}
-				return $result;
+			$temp=$this->getActivityByLimit($n);
+			if($temp == null || $temp==false)
+					return null;
+			$num = count($temp);
+			for($i=$n-10;$i<$n;$i++)
+			{
+					if (isset($temp[$i]))
+					{
+							$result[$i] =$temp[$i];
+					}
+			}
+			return $result;
 		}
 
 		public function getActivityState( $activityid )
 		{
-				$activityinfo = $this -> getActivityInfoById( $activityid );
-				/*判断活动状态*/
-				if( strtotime($activityinfo['start_time']) > time() )
-						return '未开始';
-				elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time())
-						return '正在进行';
-				else
-						return '已结束';
+			$activityinfo = $this -> getActivityInfoById( $activityid );
+			/*判断活动状态*/
+			if( strtotime($activityinfo['start_time']) > time() )
+					return '未开始';
+			elseif (strtotime($activityinfo['start_time']) <= time() && strtotime($activityinfo['end_time']) >= time())
+					return '正在进行';
+			else
+					return '已结束';
 		}
 
 		public function getWall()
@@ -306,4 +305,4 @@ class ActivityModel extends Model
 			return $result;
 		}
 }
-?>	
+?>

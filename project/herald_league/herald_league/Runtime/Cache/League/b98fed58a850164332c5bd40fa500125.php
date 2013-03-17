@@ -5,7 +5,27 @@
 <title><?php echo ($title); ?></title>
 <link rel="stylesheet" type="text/css" href="__Public__/Css/club.css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/dating.css"/>
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+				frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
+<script type="text/javascript">
+ function logout()
+{
+		$.ajax({
+			url:'<?php echo U('/Public/Logout/');?>',
+			success:function(){
+			$("#islogin").hide();
+			$("#notlogin").show();
+			location.reload();//todo
+			}
+		})
+}
+</script>
 <script type="text/javascript">
     function changeLeagueAttention(leagueid,action)
     {
@@ -14,7 +34,9 @@
                 alert(data.info);
             else
             {
-                $("#guanzhu").val("已关注");
+                $(".guanzhu1").toggle();
+                $(".guanzhu2").toggle();
+
             }
         });
     };
@@ -35,39 +57,42 @@ a:hover {
 <body>
 <div id="main">
     <div id="header">
-	  <div id="logo">
-	  </div>
-	  <div id="navigation">
-		<div id="herald" class="navigation_link">
-		  <a href="#" >先声</a>
+			<div id="logo">
+			</div>
+			<div id="navigation">
+				<div id="herald" class="navigation_link">
+					<a href="#" >先声</a>
+				</div>
+				<div id="map" class="navigation_link">
+					<a href="#" >社团</a>
+				</div>
+				<div id="activity" class="navigation_link">
+					 <a href="__APP__" >活动</a>
+				</div>
+				<div id="wall" class="navigation_link">
+					<a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+				</div>
+			</div>
+			<div id="search">
+						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+						</form>
+						<a href="#" id="search_image">
+						</a>
 		</div>
-		<div id="map" class="navigation_link">
-		  <a href="#" >社团</a>
-		</div>
-	    <div id="activity" class="navigation_link">
-     	  <a href="#" >活动</a>
-		</div>
-		<div id="wall" class="navigation_link">
-		  <a href="#" >海报墙</a>
-		</div>
-	  </div>
-	  <div id="search">
-	    <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-	      <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-		</form>
-		<a href="#" id="search_image">
-		</a>
-	  </div>
-	  <div id="message">
-	    <a href="#" id="message_image"></a>
-		<div id="m_num">5</div>
-	  </div>
-	  <div id="love">
-	    <a href="#" id="love_image"></a>
-		<div id="g_num">55</div>
-	  </div>
-	  <div id="user"><a href="#">赵亮</a></div>
-	  <div id="exit"><a href="#">退出</a></div>
+		<?php if($islogin == 1): ?><div id="message">
+							<a href="#" id="message_image"></a>
+							<div id="m_num">5</div>
+					</div>
+					<div id="love">
+							<a href="#" id="love_image"></a>
+					</div>
+			
+			<div id="user"><a href="#"><?php echo ($name); ?></a></div>
+			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+		<?php else: ?>
+			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+
 	</div>
 	<div id="main_body">
 	  <div id="main_body_inner">
@@ -114,7 +139,9 @@ a:hover {
 				<div id="right4">
 				  <ul>
 				  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><li>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>"><?php echo ($vi["activity_name"]); ?></a>
+			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
+			    			<?php echo ($vi["activity_name"]); ?>
+			    		</a>
 			    	</li><?php endforeach; endif; else: echo "" ;endif; ?>
 				  </ul>
 				</div>
@@ -177,7 +204,9 @@ a:hover {
 	  </div>
 	</div>
 	<div id="lable_bottom">
-	  <div id="guanzhu">关注
+	  <div id="guanzhu" class = "guanzhu1"<?php if($isattended == true): ?>style="display:none"<?php endif; ?>onclick="javascript:changeLeagueAttention(<?php echo ($league['id']); ?>,'add')">关注
+	  </div>
+	  <div id="guanzhu" class = "guanzhu2" <?php if($isattended == false): ?>style="display:none"<?php endif; ?>onclick="javascript:changeLeagueAttention(<?php echo ($league['id']); ?>,'del')">已关注
 	  </div>
 	  <div id="number">
 	  	<?php echo ($attentionnum); ?>人关注

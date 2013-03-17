@@ -256,8 +256,7 @@ a:hover {
 									</div></a><?php endforeach; endif; else: echo "" ;endif; ?>
 							</div>
 							<div class="more">
-								 <a href="#" class="more_text">More...
-								 </a>
+								 
 							</div>
 						</div>
 						<div id="hot_club" class="hot">
@@ -273,8 +272,7 @@ a:hover {
 									</div></a><?php endforeach; endif; else: echo "" ;endif; ?>
 							</div>
 							<div class="more">
-								 <a href="#" class="more_text">More...
-								 </a>
+								 
 							</div>
 						</div>
 					</div>

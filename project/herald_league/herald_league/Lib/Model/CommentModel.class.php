@@ -41,6 +41,7 @@ class CommentModel extends Model
     	if( is_int( $commedinfo ) )
     	{
 	    	$comment = $this -> where( 'commed_id = '.$commedinfo.' AND commed_type = '.$commedtype ) -> select();//对社团的评论 commed_id = 1
+	    	
 	    	return $comment;
 	    }
 	    else

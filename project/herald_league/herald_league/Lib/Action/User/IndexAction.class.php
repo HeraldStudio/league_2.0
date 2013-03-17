@@ -15,226 +15,214 @@ class IndexAction extends Action
 
    /*
 
-    函数功能：用户空间首页
-    
-    参数信息：无参数
+	函数功能：用户空间首页
+	
+	参数信息：无参数
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function index()
     {
-        /*获取URL参数*/
-        $userid = intval( $this -> _param( 'userid' ) );
+    	/*获取URL参数*/
+	    $userid = intval( $this -> _param( 'userid' ) );
 
-        /*get user information*/
-        $User = D('User');
-        $userinfo = $User -> getUserInfo( $userid );
-        $this -> assign('userinfo', $userinfo );
-        
-        /*get attention league information*/
-        $result = $this -> attentionLeague( $userid );
-        $leagueinfo = $result[0];
-        $lastactivity = $result[1];
-        $this -> assign ( 'leagueinfo', $leagueinfo );
-        $this -> assign( 'lastactivity', $lastactivity );
+	    /*get user information*/
+		$User = D('User');
+		$userinfo = $User -> getUserInfo( $userid );
+		$this -> assign('userinfo', $userinfo );
+		
+		/*get attention league information*/
+		$result = $this -> attentionLeague( $userid );
+		$leagueinfo = $result[0];
+		$lastactivity = $result[1];
+		$this -> assign ( 'leagueinfo', $leagueinfo );
+		$this -> assign( 'lastactivity', $lastactivity );
 
-        /*get attention activity information*/
-        $activityinfo = $this -> attentionActivity ( $userid );
-        $this -> assign ( 'activityinfo', $activityinfo );
-        /*user info for header*/
-        $heraldSession = D('UserSessionControl'); //控制会话
-        if($heraldSession->isLogin())
-        {
-            $this->assign('islogin',1);
-            $this->assign('userName',$heraldSession->getUserName());
-            $uid=$heraldSession->getUserID();
-        }
-        else
-        {
-            $uid = 0;
-        }
-        $this -> display();
+		/*get attention activity information*/
+		$activityinfo = $this -> attentionActivity ( $userid );
+		$this -> assign ( 'activityinfo', $activityinfo );
+
+		$this -> display();
     }
 
 /*
 
-    函数功能：更新用户信息页面
-    
-    参数信息：无参数
+	函数功能：更新用户信息页面
+	
+	参数信息：无参数
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function updateInfo ()
     {
-        /*获取URL参数*/
-        $userid = intval( $this -> _param( 'userid' ) );
+    	/*获取URL参数*/
+	    $userid = intval( $this -> _param( 'userid' ) );
 
-        $User = D('User');
-        $userinfo = $User -> getUserInfo( $userid );
+		$User = D('User');
+		$userinfo = $User -> getUserInfo( $userid );
 
-        
+		
 
-        $this -> assign('userinfo', $userinfo );
+		$this -> assign('userinfo', $userinfo );
 
-        $this -> display();
-        
+		$this -> display();
+	    
     }
     /*
 
-    函数功能：修改头像页面
-    
-    参数信息：无参数
+	函数功能：修改头像页面
+	
+	参数信息：无参数
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function changeAvatar ()
     {
-        /*获取URL参数*/
-        $userid = intval( $this -> _param( 'userid' ) );
+    	/*获取URL参数*/
+	    $userid = intval( $this -> _param( 'userid' ) );
 
-        $User = D('User');
-        $userinfo = $User -> getUserInfo( $userid );
+	    $User = D('User');
+		$userinfo = $User -> getUserInfo( $userid );
 
-        $this -> avataraddress = $userinfo['user_avatar_add'];
-        $this -> userid = $userid;
+		$this -> avataraddress = $userinfo['user_avatar_add'];
+		$this -> userid = $userid;
 
-        if (!empty($_FILES)) 
-        {
+		if (!empty($_FILES)) 
+		{
             //如果有文件上传 上传附件
             $this->_upload();
         }
 
-        $this -> display();
+	    $this -> display();
     }
 
     /*
 
-    函数功能：用户留言版页面
-    
-    参数信息：无参数
+	函数功能：用户留言版页面
+	
+	参数信息：无参数
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function comment()
     {
-        /*获取URL参数*/
-        $userid = intval($this -> _param('userid'));
+    	/*获取URL参数*/
+		$userid = intval($this -> _param('userid'));
 
-        $Comment = D ( 'Comment' );
-        $comment = $Comment -> getCommentInfo( $userid, $Comment -> getCommentedType("user") );//1表示社团交流区信息
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $userid, $Comment -> getCommentedType("user") );//1表示社团交流区信息
 
-        $this -> assign( 'comment', $comment );
+		$this -> assign( 'comment', $comment );
 
-        $Answer = D ( 'Answer' );
-        $answer = $Answer -> getAnswerInfo( $comment );
+		$Answer = D ( 'Answer' );
+		$answer = $Answer -> getAnswerInfo( $comment );
 
-        $this -> assign('answer', $answer);
+		$this -> assign('answer', $answer);
 
-        $this -> userid = $userid;
+		$this -> userid = $userid;
 
-        if( !empty( $_POST['submit'] ) )
-        {
-            $this -> addCommentAndAnswerInfo( $Comment, $Answer, $Comment -> getCommentedType("user") );
-        }
+		if( !empty( $_POST['submit'] ) )
+		{
+			$this -> addCommentAndAnswerInfo( $Comment, $Answer, $Comment -> getCommentedType("user") );
+		}
 
-        $this -> display();
+    	$this -> display();
     }
 
     /*
 
-    函数功能：关注的社团页面
+	函数功能：关注的社团页面
 
-    参数信息：用户id
+	参数信息：用户id
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/02/03
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/02/03
+	
+	*/
 
     public function attentionLeague( $userid )
     {
-        $Attention = D('Attention');
-        $LeagueInfo = D('LeagueInfo');
-        //$Activity = D('Activity');
-        $attentionleague = $Attention -> getAttentionLeague ( $userid );
+    	$Attention = D('Attention');
+    	$LeagueInfo = D('LeagueInfo');
+    	//$Activity = D('Activity');
+    	$attentionleague = $Attention -> getAttentionLeague ( $userid );
 
-        foreach ( $attentionleague as $attentionleagues ) 
-        {   
-            $leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] );
-            $leagueinfo[$attentionleagues['id']] =$leagueinfo[$attentionleagues['id']][0];
-            $leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
-            //$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'] );
-        }
-        //print_r($lastactivity);
-        return array( $leagueinfo, $lastactivity );
+    	foreach ( $attentionleague as $attentionleagues ) 
+    	{	
+    		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
+    		$leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
+    		//$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'] );
+    	}
+    	//print_r($lastactivity);
+    	return array( $leagueinfo, $lastactivity );
     }
     /*
 
-    函数功能：关注的活动页面
-    
-    参数信息：用户id
+	函数功能：关注的活动页面
+	
+	参数信息：用户id
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function attentionActivity ( $userid )
     {
-        $Attention = D('Attention');
-        $Activity = D('Activity');
-        $League = D('LeagueInfo');
+		$Attention = D('Attention');
+		$Activity = D('Activity');
+		$League = D('LeagueInfo');
 
-        $attentionactivity = $Attention -> getAttentionActivity( $userid );
-        
-        foreach ( $attentionactivity as $attentionactivitys ) 
-        {
-            $activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );
-            $activityinfo[$attentionactivitys['id']] =$activityinfo[$attentionactivitys['id']][0];            $activityinfo[$attentionactivitys['id']]['activitystate'] = $Activity -> getActivityState( $attentionactivitys['attended_id'] );
-            $activityinfo[$attentionactivitys['id']]['attentionnum'] = $Attention -> getAttentionActivityNum($attentionactivitys['attended_id']);  
-            $activityinfo[$attentionactivitys['id']]['leagueavatar'] = $League -> getleagueAvaterAdd( $activityinfo[$attentionactivitys['id']]['league_id']);
-        }
-        return $activityinfo;
+		$attentionactivity = $Attention -> getAttentionActivity( $userid );
+		
+		foreach ( $attentionactivity as $attentionactivitys ) 
+    	{
+    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );
+    		$activityinfo[$attentionactivitys['id']]['activitystate'] = $Activity -> getActivityState( $attentionactivitys['attended_id'] );
+    		$activityinfo[$attentionactivitys['id']]['attentionnum'] = $Attention -> getAttentionActivityNum($attentionactivitys['attended_id']);  
+    		$activityinfo[$attentionactivitys['id']]['leagueavatar'] = $League -> getleagueAvaterAdd( $activityinfo[$attentionactivitys['id']]['league_id']);
+    	}
+		return $activityinfo;
     }
 
     /*
 
-    函数功能：文件上传函数
-    
-    参数信息：无参数
+	函数功能：文件上传函数
+	
+	参数信息：无参数
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     protected function _upload() 
     {
         import('@.ORG.UploadFile');
@@ -291,70 +279,70 @@ class IndexAction extends Action
 
     /*
 
-    函数功能：判断是否提交数据
-    
-    参数信息：第一个参数是包含所有评论的数组
+	函数功能：判断是否提交数据
+	
+	参数信息：第一个参数是包含所有评论的数组
 
-              第二个参数是包含所有回复的数组
+			  第二个参数是包含所有回复的数组
 
-              第三个参数是被评论者类型
+			  第三个参数是被评论者类型
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/18
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/18
+	
+	*/
 
-    public function addCommentAndAnswerInfo( $Comment, $Answer, $commedtype )
-    {
-        if( !empty( $_POST['content_c'] ) )
-        {
-            $commentresult = $Comment -> addCommentInfo( 1, 1, $_POST['subdata_c'], $commedtype, $_POST );
+	public function addCommentAndAnswerInfo( $Comment, $Answer, $commedtype )
+	{
+		if( !empty( $_POST['content_c'] ) )
+		{
+			$commentresult = $Comment -> addCommentInfo( 1, 1, $_POST['subdata_c'], $commedtype, $_POST );
 
-            $this -> judgeAddState( $commentresult );
-        }
-        elseif( !empty( $_POST['content_a'] ) )
-        {
-            $answerresult = $Answer -> addAnswerinfo( $_POST['subdata_a'], 1, 1, $_POST );
+			$this -> judgeAddState( $commentresult );
+		}
+		elseif( !empty( $_POST['content_a'] ) )
+		{
+			$answerresult = $Answer -> addAnswerinfo( $_POST['subdata_a'], 1, 1, $_POST );
 
-            $this -> judgeAddState( $answerresult );
-        }
-        else
-        {
-            return;
-        }
-    }
-    /*
+			$this -> judgeAddState( $answerresult );
+		}
+		else
+		{
+			return;
+		}
+	}
+	/*
 
-    函数功能：判断数据写入结果
-    
-    参数信息：参数是从模型中返回的结果
+	函数功能：判断数据写入结果
+	
+	参数信息：参数是从模型中返回的结果
 
-      返回值：无返回值
-              
-        作者：Tairy
-    
-    更新日期：2013/01/16
-    
-    */
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
 
-    public function judgeAddState( $result )
-    {
-        if ( $result == "error" )
-        {
-            $this -> error('数据对象创建错误');
-        }
-        elseif ( is_int( $result ) ) 
-        {
-            $this -> success('操作成功！');
-        }
-        else
-        {
-            $this -> error('写入错误！');
-        }
+	public function judgeAddState( $result )
+	{
+		if ( $result == "error" )
+		{
+			$this -> error('数据对象创建错误');
+		}
+		elseif ( is_int( $result ) ) 
+		{
+			$this -> success('操作成功！');
+		}
+		else
+		{
+			$this -> error('写入错误！');
+		}
 
-    }
+	}
 }
 ?>

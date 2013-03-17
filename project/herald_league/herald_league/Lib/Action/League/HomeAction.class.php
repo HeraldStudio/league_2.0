@@ -52,8 +52,10 @@ class HomeAction extends Action
 		/*活动标签*/
 		$class = $Activity -> getClass( $this -> activity['id'] );
         $this -> assign('class', $class);
+
         /*活动状态*/
         $this -> actiitystate = $Activity -> getActivityState( $this -> activityid );
+
 		/*判断关注状态*/
 		$heraldSession = D('UserSessionControl');
         if($heraldSession->islogin()==false || $heraldSession->getUserType()== 0)
@@ -67,18 +69,25 @@ class HomeAction extends Action
 
 
 		$this -> attentionstate = $Attention -> getAttentionState( $data );
-
-		//获取评论信息
-		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $this -> activityid, $Comment -> getCommentedType("activity") );
-		
-		$this -> assign( 'comment', $comment );
-
-
-			$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
+		$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
 		}
 
+		//获取评论信息
+		$this -> getCommentAndAnswer( $this -> activityid, "activity");
+		
 		$this -> display();
+    }
+    public function getCommentAndAnswer( $commentid, $commenttype )
+    {
+    	//获取评论信息
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentInfo( $commentid, $Comment -> getCommentedType($commenttype) );
+		
+		$Answer = D( 'Answer' );
+		$answer = $Answer -> getAnswerInfo( $comment );
+		
+		$this -> assign( 'comment', $comment );
+		$this -> assign( 'answer', $answer );
     }
     /*
 
@@ -212,6 +221,8 @@ class HomeAction extends Action
 		$Picture = D('League_picture');
 		$this -> picture = $Picture -> where('id='.$pictureid) -> find();
 
+		$this -> getCommentAndAnswer( $pictureid, "album");
+		//print_r($comment);
 		// /$this -> assign( 'picture', $picture );
 
 		// $Comment = D('Comment');
@@ -462,10 +473,11 @@ class HomeAction extends Action
 		else
 			$isattended = false;
 		$this->assign('isattended',$isattended);
-		 $League = D('LeagueInfo');
-		 $league = $League -> getLeagueInfo ( $this -> leagueid );
-		 //print_r($league);
-		 $this -> assign( 'league', $league );
+
+		$League = D('LeagueInfo');
+		$league = $League -> getLeagueInfo ( $this -> leagueid );
+		
+		$this -> assign( 'league', $league );
 
 		 switch($this -> gettitle)
 		 {
@@ -473,6 +485,7 @@ class HomeAction extends Action
 		 	/*获取活动信息*/
 		 	$Activity = D('Activity');
 		 	$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
+		 	
 		 	if(!empty($activity))
 		 	{
 		 		$this -> isactivityempty = false;
@@ -484,8 +497,10 @@ class HomeAction extends Action
 		 		$User = D('User');
 		 		$attention = $Attention -> getActivityAttention( $this -> activityid );
 				$userinfo = $User -> getUserInfo( $attention );
+
 		 		$this -> assign( 'userinfo', $userinfo );
-		 		$this -> assign(' activity', $activity);
+		 		$this -> assign('activity', $activity);
+		 		//print_r($activity);
 		 	}
 		 	else
 		 	{

@@ -100,7 +100,7 @@ $(function(){
 			          	<?php echo (getcommentername($va['answering_id']*10+$va['answering_type'])); ?>
 				      </div>
 				      <div id="remark_time_3" class="remark_time">
-				      	<pre><?php echo ($va['answer_date']); ?> <?php echo ($comment['answer_time']); ?></pre>
+				      	<pre><?php echo ($va['answer_date']); ?> <?php echo ($va['answer_time']); ?></pre>
 				      </div>
 			        </div>
 			        <div id="middle_3" class="middle1">
