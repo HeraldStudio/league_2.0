@@ -1168,3 +1168,36 @@ SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1
 NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
 
 >>>>>>> e177044e9ec6be8d0bc9df9648acaee6c487bb61
+[ 2013-03-16T20:17:25+08:00 ] 127.0.0.1 /league_2.0/project/herald_league/herald_league/index.php/Activity/Activity/changeAttention?activityid=106&action=add
+NOTIC: [2] ob_start(): output handler 'ob_gzhandler' conflicts with 'zlib output compression' E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+NOTIC: [8] ob_start(): failed to create buffer E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\App.class.php 第 55 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000847s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.035074s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 20:17:25') [ RunTime:0.071033s ]
+INFO: Run logIP Behavior [ RunTime:-0.001788s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.120520s ]
+NOTIC: [8] Undefined index: _type E:\Web\Working\league_2.0\project\herald_league\ThinkPHP\Lib\Core\Model.class.php 第 571 行.
+SQL: SELECT * FROM `lg_activity` WHERE ( `id` = 106 ) LIMIT 1   [ RunTime:0.001005s ]
+
+[ 2013-03-16T21:20:00+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:20:16+08:00 ] ERR: [4] syntax error, unexpected '[' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:21:24+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:22:34+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:22:54+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:23:43+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 173 行.
+[ 2013-03-16T21:25:30+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 169 行.
+[ 2013-03-16T21:26:13+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 169 行.
+[ 2013-03-16T21:27:57+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 169 行.
+[ 2013-03-16T21:30:10+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 169 行.
+[ 2013-03-16T21:31:22+08:00 ] ERR: [4] syntax error, unexpected ')', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\League\e88f11221de5247308d4c8141c20109d.php 第 169 行.
+[ 2013-03-16T22:07:17+08:00 ] ERR: (ThinkException) 无法加载模块:__Pulic_
+[ 2013-03-16T22:07:17+08:00 ] ERR: (ThinkException) 无法加载模块:__Pulic_
+[ 2013-03-16T22:08:54+08:00 ] ERR: (ThinkException) 无法加载模块:__Pulic_
+[ 2013-03-16T22:08:54+08:00 ] ERR: (ThinkException) 无法加载模块:__Pulic_
+[ 2013-03-16T22:25:49+08:00 ] ERR: [4] syntax error, unexpected ']', expecting ')' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\User\1cec5b1a83c866fd527d64c71460f1c8.php 第 69 行.
+[ 2013-03-16T22:27:13+08:00 ] ERR: [4] syntax error, unexpected '<', expecting variable (T_VARIABLE) or '$' E:\Web\Working\league_2.0\project\herald_league\herald_league\Runtime\Cache\User\1cec5b1a83c866fd527d64c71460f1c8.php 第 69 行.
+[ 2013-03-16T22:43:08+08:00 ] ERR: [1] Call to a member function getActivityInfoById() on a non-object E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 205 行.
+[ 2013-03-16T22:52:27+08:00 ] ERR: [1] Call to a member function getActivityInfoById() on a non-object E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 205 行.
+[ 2013-03-16T22:58:20+08:00 ] ERR: [1] Call to a member function getActivityInfoById() on a non-object E:\Web\Working\league_2.0\project\herald_league\herald_league\Lib\Action\User\IndexAction.class.php 第 205 行.
+[ 2013-03-16T23:06:20+08:00 ] ERR: (ThinkException) Model:getActivityInfoById您所请求的方法不存在！

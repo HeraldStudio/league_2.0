@@ -195,14 +195,14 @@ class IndexAction extends Action
     public function attentionActivity ( $userid )
     {
 		$Attention = D('Attention');
-		//$Activity = D('Activity');
+		$Activity = D('Activity');
 		$League = D('LeagueInfo');
 
 		$attentionactivity = $Attention -> getAttentionActivity( $userid );
 		
 		foreach ( $attentionactivity as $attentionactivitys ) 
     	{
-    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] )[0];
+    		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );
     		$activityinfo[$attentionactivitys['id']]['activitystate'] = $Activity -> getActivityState( $attentionactivitys['attended_id'] );
     		$activityinfo[$attentionactivitys['id']]['attentionnum'] = $Attention -> getAttentionActivityNum($attentionactivitys['attended_id']);  
     		$activityinfo[$attentionactivitys['id']]['leagueavatar'] = $League -> getleagueAvaterAdd( $activityinfo[$attentionactivitys['id']]['league_id']);

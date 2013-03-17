@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
 <script src="__Public__/Js/jquery.tools.min.js"></script>  
   <!-- standalone page styling (can be removed) -->
-<link href="__Public__/Css/standalone.css" rel="stylesheet" type="text/css" />
-<link href="__Public__/Css/tabs.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="__Public__/Css/tabs-panes.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
+<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -44,16 +44,19 @@ a:hover {
 		</div>
 	  </div>
 	  <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
+	    <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+	      <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
 		</form>
+		<a href="#" id="search_image">
+		</a>
 	  </div>
 	  <div id="message">
 	    <a href="#" id="message_image"></a>
+		<div id="m_num">5</div>
 	  </div>
 	  <div id="love">
 	    <a href="#" id="love_image"></a>
+		<div id="g_num">55</div>
 	  </div>
 	  <div id="user"><a href="#">赵亮</a></div>
 	  <div id="exit"><a href="#">退出</a></div>
@@ -63,16 +66,23 @@ a:hover {
 	    <div id="inner_left">
 		  <div id="left_content1">
 		    <div id="left_content1_inner">
+		    <empty name = "userinfo['nick_name']">
+			  <div id="username">
+			  	{$userinfo.true_name}
+			  </div>
+			  <else/>
 			  <div id="username">
 			  	{$userinfo.nick_name}
 			  </div>
-			  <a id="edit" href="#">编辑
+			</empty>
+			  <a id="edit" href="#">
+			  	编辑
 			  </a>
 			   <a id="touxiang" href="#">
-			   	<img src="__Uploads__/UserAvatar/l_{$userinfo.user_avatar_add}">
+			   	<img src="__Uploads__/Avatar/l_{$userinfo.user_avatar_add}">
 			  </a>
 			  <div id="personal_information">
-			    <div id="name" class="information">
+			     <div id="name" class="information">
 			    	姓名：{$userinfo.true_name}
 				</div>
 				<div id="school" class="information">
@@ -99,7 +109,8 @@ a:hover {
 		  <div id="left_content2">
 		    <div id="left_content2_inner">
 			  <div id="top">
-			    <div id="interest_title">猜你感兴趣...
+			    <div id="interest_title">
+			    	猜你感兴趣...
 			    </div>
 			    <ul class="tabs">
 	              <li><a href="#">活动</a></li><!--存放每个页面的名称-->
@@ -154,7 +165,7 @@ a:hover {
 	            <volist name = "leagueinfo" id = "vo">
 				  <div id="remark{$i+2}" class="remark">
 			        <div id="user_img{$i+2}" class="user_img">
-			        	<img src="__Uploads__/LeagueAvatar/m_{$vo.avater_address}"/>
+			        	<img src="../images/small.jpg" alt="" />
 				    </div>
 				    <div id="remark_content{$i+2}" class="remark_content">
 				      <div id="top{$i+2}" class="top">
@@ -167,7 +178,7 @@ a:hover {
 				      </div>
 				      <div id="bottom{$i+2}" class="bottom">
 					    <ul>
-					   	<foreach name = "lastactivity" item = "va">
+					    <foreach name = "lastactivity" item = "va">
 			              <eq name = "key" value = "$vo.id">
 			              	<volist name = "va" id = "ve">
 			              	 <li>
@@ -180,10 +191,10 @@ a:hover {
 				      </div>
 				    </div>
 			      </div>
-			    </volist>
+			      </volist>
 				</div><!--存放每个页面的内容-->
 	            <div>
-	            <volist name = "activityinfo" id = "vac">
+				  <volist name = "activityinfo" id = "vac">
 				  <div id="activity3" class="remark">
 				    <div id="left3" class="left">
 			          <div id="club_img3" class="user_img">
@@ -265,7 +276,7 @@ a:hover {
 		</div>
 	  </div>
 	</div>
-  	</div>
+  </div>
   <div id="footer">
 	<div id="footer_link">
 	  <a href="#" id="f_about" class="link">关于我们</a>
@@ -276,7 +287,7 @@ a:hover {
       <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
 	</div>
   </div>
-<a id="toTop" href="javascript:void(0);" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
 <script>
 // perform JavaScript after the document is scriptable.
 $(function() {
@@ -286,62 +297,62 @@ $(function() {
 </script>
 <script type="text/javascript">
 // perform JavaScript after the document is scriptable.
-    $(function() {
-	for(var i=3;i<10;i++){
-    // setup ul.tabs to work as tabs for each div directly under div.panes
-	$("ul.tabs2").tabs("#bottom"+i);
-    $("ul.tabs2").tabs("#middle"+i);
-    $("ul.tabs2").tabs("#username"+i);
-    $("ul.tabs2").tabs("#top"+i);
-    $("ul.tabs2").tabs("#remark_content"+i);
-    $("ul.tabs2").tabs("#user_img"+i);
-    $("ul.tabs2").tabs("#remark"+i);
-    $("ul.tabs2").tabs("div.panes2 > div");
-	}
-    });
- $(function() {
-	for(var i=3;i<10;i++){
-    // setup ul.tabs to work as tabs for each div directly under div.panes
-	$("ul.tabs2").tabs("#abottom"+i);
-    $("ul.tabs2").tabs("#amiddle"+i);
-    $("ul.tabs2").tabs("#activityname"+i);
-    $("ul.tabs2").tabs("#atop"+i);
-    $("ul.tabs2").tabs("#activity_content"+i);
-	$("ul.tabs2").tabs("#clubname"+i);
-    $("ul.tabs2").tabs("#club_img"+i);
-	$("ul.tabs2").tabs("#left"+i);
-    $("ul.tabs2").tabs("#activity"+i);
-    $("ul.tabs2").tabs("div.panes2 > div");
-	}
+	    $(function() {
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs2").tabs("#bottom"+i);
+	    $("ul.tabs2").tabs("#middle"+i);
+	    $("ul.tabs2").tabs("#username"+i);
+	    $("ul.tabs2").tabs("#top"+i);
+	    $("ul.tabs2").tabs("#remark_content"+i);
+	    $("ul.tabs2").tabs("#user_img"+i);
+        $("ul.tabs2").tabs("#remark"+i);
+	    $("ul.tabs2").tabs("div.panes2 > div");
+		}
     });
 	 $(function() {
-	for(var i=3;i<10;i++){
-    // setup ul.tabs to work as tabs for each div directly under div.panes
-	$("ul.tabs2").tabs("#replay_bottom"+i);
-	$("ul.tabs2").tabs("#bottom_"+i);
-    $("ul.tabs2").tabs("#middle_"+i);
-    $("ul.tabs2").tabs("#username_"+i);
-    $("ul.tabs2").tabs("#top_"+i);
-	$("ul.tabs2").tabs("#remark_time_"+i);
-    $("ul.tabs2").tabs("#remark_content_"+i);
-    $("ul.tabs2").tabs("#user_img_"+i);
-    $("ul.tabs2").tabs("#remark_"+i);
-	$("ul.tabs2").tabs("#bbottom"+i);
-    $("ul.tabs2").tabs("#bmiddle"+i);
-    $("ul.tabs2").tabs("#bactivityname"+i);
-    $("ul.tabs2").tabs("#btop"+i);
-    $("ul.tabs2").tabs("#liuyan_content"+i);
-	$("ul.tabs2").tabs("#huifu"+i);
-	$("ul.tabs2").tabs("#huodong"+i);
-	$("ul.tabs2").tabs("#zai"+i);
-	$("ul.tabs2").tabs("#bclubname"+i);
-    $("ul.tabs2").tabs("#bclub_img"+i);
-	$("ul.tabs2").tabs("#bleft"+i);
-    $("ul.tabs2").tabs("#liuyan"+i);
-    $("ul.tabs2").tabs("div.panes2 > div");
-	}
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs2").tabs("#abottom"+i);
+	    $("ul.tabs2").tabs("#amiddle"+i);
+	    $("ul.tabs2").tabs("#activityname"+i);
+	    $("ul.tabs2").tabs("#atop"+i);
+	    $("ul.tabs2").tabs("#activity_content"+i);
+		$("ul.tabs2").tabs("#clubname"+i);
+	    $("ul.tabs2").tabs("#club_img"+i);
+		$("ul.tabs2").tabs("#left"+i);
+        $("ul.tabs2").tabs("#activity"+i);
+	    $("ul.tabs2").tabs("div.panes2 > div");
+		}
     });
-   </script>
+		 $(function() {
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs2").tabs("#replay_bottom"+i);
+		$("ul.tabs2").tabs("#bottom_"+i);
+	    $("ul.tabs2").tabs("#middle_"+i);
+	    $("ul.tabs2").tabs("#username_"+i);
+	    $("ul.tabs2").tabs("#top_"+i);
+		$("ul.tabs2").tabs("#remark_time_"+i);
+	    $("ul.tabs2").tabs("#remark_content_"+i);
+	    $("ul.tabs2").tabs("#user_img_"+i);
+        $("ul.tabs2").tabs("#remark_"+i);
+		$("ul.tabs2").tabs("#bbottom"+i);
+	    $("ul.tabs2").tabs("#bmiddle"+i);
+	    $("ul.tabs2").tabs("#bactivityname"+i);
+	    $("ul.tabs2").tabs("#btop"+i);
+	    $("ul.tabs2").tabs("#liuyan_content"+i);
+		$("ul.tabs2").tabs("#huifu"+i);
+		$("ul.tabs2").tabs("#huodong"+i);
+		$("ul.tabs2").tabs("#zai"+i);
+		$("ul.tabs2").tabs("#bclubname"+i);
+	    $("ul.tabs2").tabs("#bclub_img"+i);
+		$("ul.tabs2").tabs("#bleft"+i);
+        $("ul.tabs2").tabs("#liuyan"+i);
+	    $("ul.tabs2").tabs("div.panes2 > div");
+		}
+    });
+</script>
    <script type="text/javascript">
    window.onscroll=function()
    {
@@ -390,6 +401,5 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-</div>
-</body>
+<body>
 </html>

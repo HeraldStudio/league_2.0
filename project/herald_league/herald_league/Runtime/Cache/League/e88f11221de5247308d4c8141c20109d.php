@@ -82,19 +82,20 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title"><?php echo ($activity['activity_name']); ?></div>
-			  <?php if($attentionstate == false): ?><a href="javascript:void(0)" id="attention" class="notattended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
+			  
+              <a class="notattended"<?php if($attentionstate == 1): ?>style= "display:none"<?php endif; ?>href="javascript:void(0)" id="attention" class="notattended"  onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
 			    <div id="attention_img">
 			    </div>
 			    <div id="attention_text">
 			    	关注
 			    </div>			  
 			  </a>
-              <?php else: ?>
-                  <a href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
+                  <a <?php if($attentionstate != 1): ?>style="display:none"<?php endif; ?> class ="attended" href="javascript:void(0);" id="attention" class="attended" onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'del')">
                       <div id="attention_text">
                           取消关注
                       </div>
-                  </a><?php endif; ?>
+                  </a>
+              
 			  <div id="shuoming">
 			    <div id="biaoqian">
 				  	<?php if($class == null): ?><div id="biaoqian1" class="bq">没有标签</div>
@@ -146,42 +147,46 @@ a:hover {
 			  </div>
 			</div>
 			<div id="left4">
-			   <div id="remark">
-			    <div id="user_img"><img src="../images/small.jpg" alt="" />
+			<?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div id="remark">
+			    <div id="user_img">
+			    	<img src="__Uploads__/Avatar/m_<?php echo (getcommenteravatar($vc['comming_id']*10+$vc['comming_type'])); ?>" alt="" />
 				</div>
 				<div id="remark_content">
 				  <div id="top">
-				    <div id="username">赵亮
+				    <div id="username">
+				    	<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>
 					</div>
-					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
+					<div id="remark_time">
+						<pre><?php echo ($vc["comment_date"]); ?>  <?php echo ($vc["comment_time"]); ?></pre>
 					</div>
 				  </div>
 				  <div id="middle">
-				    <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-				       形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-				       同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+				    <p style="display:block;">
+				       <?php echo ($vc["content"]); ?>
 				    </p>
 				  </div>
 				   <div id="remark_3" class="remark1">
-			          <div id="user_img_3" class="user_img"><img src="../images/small.jpg" alt="" />
+				   	<?php if(is_array($answer)): foreach($answer as $vak=>$va): if(($vak) == $vc["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vae): $mod = ($i % 2 );++$i;?><div id="user_img_3" class="user_img">
+			          	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vae['answering_id']*10+$vae['answering_type'])); ?>" alt="" />
 				      </div>
 				      <div id="remark_content_3" class="remark_content1">
 				        <div id="top_3" class="top1">
-				          <div id="username_3" class="username1">赵亮
+				          <div id="username_3" class="username1">
+				          	<?php echo (getcommentername($vae['answering_id']*10+$vae['answering_type'])); ?>
 					      </div>
-					      <div id="remark_time_3" class="remark_time"><pre>2012-12-22  12:12:12</pre>
+					      <div id="remark_time_3" class="remark_time">
+					      	<pre><?php echo ($vae['answer_date']); ?> <?php echo ($vae['answer_time']); ?></pre>
 					      </div>
 				        </div>
 				        <div id="middle_3" class="middle1">
-				          <p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-				             形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-				             同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+				          <p style="display:block;">
+				          	<?php echo ($vae["content"]); ?>
 				          </p>
 				        </div>
 				        <div id="bottom_3" class="bottom1">
 				          <button class="btn_replay_3">回复</button>
 				        </div>
-				      </div>
+				      </div><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?>
 			        </div>
 					<div class="layout">
                     <div class="box">
@@ -193,7 +198,7 @@ a:hover {
                     </div>
                     </div>
 				</div>
-			  </div>
+			  </div><?php endforeach; endif; else: echo "" ;endif; ?>
 			</div>
 		  </div> 
 		</div>
