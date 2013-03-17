@@ -8,6 +8,7 @@
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/wowslider-container1.css" />
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/login/jquery.tools.min.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
 
@@ -87,7 +88,7 @@ a:hover {
 		font-weight: bold;
 }
 </style>
-<STYLE type="text/css">
+<STYLE>
     .modal {
     display:none;
     padding:15px;
@@ -95,10 +96,18 @@ a:hover {
   }
   #tishi
   {
-	background:url(images/second.png);
+	background:url(__PUBLIC__/Images/tishi.png);
 	background-repeat:no-repeat;
 	height:141px;
 	width:733px;
+  }
+
+  .modal h2 {
+    background:url(__PUBLIC__/global/info.png) 0 50% no-repeat;
+    margin:0px;
+    padding:10px 0 10px 45px;
+    border-bottom:1px solid #333;
+    font-size:20px;
   }
   .modal button{
       background-color:#000;
@@ -107,7 +116,7 @@ a:hover {
 	  text-shadow:1px 2px 1px #000;
 	  color:#fff;
 	  font-size:15px;
-	  font-family:"微软雅黑", "宋体", serif;
+	  font-family:"Î¢ÈíÑÅºÚ", "ËÎÌå", serif;
 	  margin-left:30px;
   }
   </STYLE>
@@ -118,8 +127,10 @@ a:hover {
 			<div id="header_top">
 					<div id="islogin" <if condition="$islogin eq 0"> style="display:none"</if> >
 							<div id="header_top_text">
-								<a href="javascript:;"  onclick="logout()"  id="header_top_text">退出</a>
-								<a href="#" id="header_top_text">{$name}</a>
+								<a href="javascript:;"  onclick="logout()"  >退出</a>
+							</div>
+							<div id="header_top_text">
+								<a href="#"  class="name">{$name}</a>
 							</div>
 							<div id="tubiao">
 								<a href="#" id="xinxi"></a>
@@ -399,52 +410,12 @@ $list.imagesLoaded(function(){
 });
 </script>
 <P>
-<BUTTON class="modalInput" rel="#yesno">Yes or no?</BUTTON>  
 <DIV class="modal" id="yesno">
 <div id="tishi">
 </div>
-<BUTTON class="close" style=" margin-left:230px;">进入个人主页</BUTTON>    
-<BUTTON class="close">等会儿再说</BUTTON>  
+<BUTTON class="close" style=" margin-left:230px;">进入主页</BUTTON>
+<BUTTON class="close" onclick="javascript:window.location.reload()">等会再说</BUTTON>  
  </P>
  </DIV><!-- user input dialog --> 
-<SCRIPT>
-$(document).ready(function() {
-    var triggers = $(".modalInput").overlay({
-
-      // some mask tweaks suitable for modal dialogs
-      mask: {
-        color: '#000',
-        loadSpeed: 200,
-        opacity: 0.6
-      },
-
-      closeOnClick: false
-  });
-  
-    var buttons = $("#yesno button").click(function(e) {
-
-      // get user input
-      var yes = buttons.index(this) === 0;
-
-      // do something with the answer
-      triggers.eq(0).html("You clicked " + (yes ? "yes" : "no"));
-  });
-  
-    $("#prompt form").submit(function(e) {
-
-      // close the overlay
-      triggers.eq(1).overlay().close();
-
-      // get user input
-      var input = $("input", this).val();
-
-      // do something with the answer
-      triggers.eq(1).html(input);
-
-      // do not submit the form
-      return e.preventDefault();
-  });
-  });
-</SCRIPT>
 </body>
 </html>

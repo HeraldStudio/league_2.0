@@ -1168,3 +1168,262 @@ SQL: INSERT INTO `lg_attention` (`user_id`,`attended_id`,`isleague`) VALUES (6,1
 NOTIC: [8] Trying to get property of non-object D:\php\www\lg2.0\league_2.0\project\herald_league\herald_league\Lib\Model\AttentionModel.class.php 第 110 行.
 
 >>>>>>> e177044e9ec6be8d0bc9df9648acaee6c487bb61
+[ 2013-03-16T23:15:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000709s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011148s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:15:39') [ RunTime:0.042538s ]
+INFO: Run logIP Behavior [ RunTime:-0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.063384s ]
+
+[ 2013-03-16T23:15:40+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.033070s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001709s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.034761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017865s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.052667s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.053086s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.054388s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004222s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.056956s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001485s ]
+
+[ 2013-03-16T23:15:49+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001145s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010914s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:15:48') [ RunTime:0.002647s ]
+INFO: Run logIP Behavior [ RunTime:-0.002051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024995s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.017360s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.001522s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.001325s ]
+
+[ 2013-03-16T23:15:53+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000697s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010449s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:15:53') [ RunTime:0.028682s ]
+INFO: Run logIP Behavior [ RunTime:-0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048458s ]
+
+[ 2013-03-16T23:16:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.047639s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001635s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.049305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011216s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.060561s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.061488s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.062771s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.063936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004768s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.065399s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001381s ]
+
+[ 2013-03-16T23:17:24+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000746s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010824s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:17:23') [ RunTime:0.001678s ]
+INFO: Run logIP Behavior [ RunTime:-0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023073s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\php\www\lg2.0\league_2.0\project\herald_league\ThinkPHP\Common\functions.php 第 526 行.
+SQL: SHOW COLUMNS FROM `lg_user` [ RunTime:0.038378s ]
+SQL: SELECT * FROM `lg_user` WHERE ( `card_num` = 213123363 ) LIMIT 1   [ RunTime:0.000341s ]
+SQL: UPDATE `lg_user` SET `last_login_time`='2013-03-16' WHERE card_num = 213123363 [ RunTime:0.001480s ]
+SQL: UPDATE `lg_user` SET `times`=times+1 WHERE card_num = 213123363 [ RunTime:0.008906s ]
+
+[ 2013-03-16T23:17:31+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/Public/Logout
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001122s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010622s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:17:31') [ RunTime:0.002488s ]
+INFO: Run logIP Behavior [ RunTime:-0.002026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024605s ]
+
+[ 2013-03-16T23:17:35+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.024698s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001116s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.025849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009780s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.035668s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.036091s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.037373s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.038799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004479s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.040213s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001448s ]
+
+[ 2013-03-16T23:18:58+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.051035s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001538s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.052612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015630s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.068278s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.069078s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.070458s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.071548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004545s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.072889s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001488s ]
+
+[ 2013-03-16T23:19:04+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.025295s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001113s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009365s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.035849s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.036250s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.037556s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.038723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004109s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.040019s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001333s ]
+
+[ 2013-03-16T23:20:12+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.025446s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001127s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013938s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.040585s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.040994s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.042270s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.043378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004216s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.044870s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001488s ]
+
+[ 2013-03-16T23:20:33+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031683s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001638s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.033364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012509s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.045916s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.046797s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.048047s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.049206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004617s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.050603s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001554s ]
+
+[ 2013-03-16T23:21:18+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001706s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.013124s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:21:18') [ RunTime:0.002135s ]
+INFO: Run logIP Behavior [ RunTime:-0.003034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030482s ]
+
+[ 2013-03-16T23:21:54+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000679s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010736s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:21:54') [ RunTime:0.146939s ]
+INFO: Run logIP Behavior [ RunTime:-0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.167326s ]
+
+[ 2013-03-16T23:22:27+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000813s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.012982s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:22:27') [ RunTime:0.002309s ]
+INFO: Run logIP Behavior [ RunTime:-0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029131s ]
+
+[ 2013-03-16T23:23:39+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.028134s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001557s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.029724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015424s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.045189s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.046453s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.047626s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.048667s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004681s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.049929s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001346s ]
+
+[ 2013-03-16T23:23:43+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000980s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.016673s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:23:43') [ RunTime:0.002367s ]
+INFO: Run logIP Behavior [ RunTime:-0.001678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048397s ]
+
+[ 2013-03-16T23:23:47+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000679s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.010847s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:23:47') [ RunTime:0.001711s ]
+INFO: Run logIP Behavior [ RunTime:-0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022083s ]
+
+[ 2013-03-16T23:25:41+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.033149s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001567s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.034748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017143s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.051935s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.052815s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.054054s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004633s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.056640s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002787s ]
+
+[ 2013-03-16T23:25:51+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000707s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.011771s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:25:50') [ RunTime:0.017651s ]
+INFO: Run logIP Behavior [ RunTime:-0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038764s ]
+
+[ 2013-03-16T23:26:48+08:00 ] 127.0.0.1 /lg2.0/league_2.0/project/herald_league/herald_league/index.php/User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001340s ]
+SQL: SHOW COLUMNS FROM `lg_ip` [ RunTime:0.015920s ]
+SQL: INSERT INTO `lg_ip` (`ip`,`date`) VALUES ('127.0.0.1','2013-03-16 23:26:48') [ RunTime:0.001940s ]
+INFO: Run logIP Behavior [ RunTime:-0.002478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030987s ]
+

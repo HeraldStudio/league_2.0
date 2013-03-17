@@ -28,7 +28,7 @@ class ActivityAction extends Action
 				$activityID =intval( $this ->_param('activityid') ); //获取url参数
 				$activity = D('Activity');
 				$activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
-				$activityInf = $activityInf[0];//返回的是数组的数组，只取第一个
+				
 				if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
 				{
 						$this->error('你所查找的活动不存在');
@@ -129,6 +129,7 @@ class ActivityAction extends Action
 				 * 日期 ：2013.1.30
 				 * todo 修改标签热度?
 				 */
+				
 				$activityID = intval($this->_param('activityid'));
 				$action = $this->_param('action');
 				$activity = D('Activity');
@@ -155,7 +156,8 @@ class ActivityAction extends Action
 						{
 								$this->error($message[-7]);
 						}
-						else {
+						else 
+						{
 								if($heraldSession->getUserType() != 1)
 								{
 										$this->error($message[-8]);
@@ -163,8 +165,6 @@ class ActivityAction extends Action
 								else
 								{
 										$attention = D('Attention');
-										//$cardNumber =$heraldSession->getCardNumber();
-										//$user = D('User');
 										$data['user_id'] = intval($heraldSession->getUserID());
 										$data['attended_id']=$activityID;
 										$data['isleague'] = 0;
@@ -182,7 +182,7 @@ class ActivityAction extends Action
 				}
 		}
 
-		public function wall()//海报强	
+		public function wall()//海报墙
 		{
 			$activity = D('Activity');
 			$wall = $activity->getWall();
