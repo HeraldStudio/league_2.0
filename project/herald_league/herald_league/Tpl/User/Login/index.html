@@ -13,7 +13,6 @@
     <!-- include the Tools -->
     <script src="__ROOT__/Public/Js/login/jquery.tools.min.js"></script>
 
-
     <!-- standalone page styling (can be removed) -->
 
     <link rel="stylesheet" type="text/css"
@@ -47,9 +46,9 @@
                     dataType:"json",
                     success:function(data){
                         if(data.status == 1){
-                            if (data.data == 0) //第一次登陆
+                            if (data.info == 0) //第一次登陆
                             {
-
+                                 // $("#yesno button").click();
                             }
                             parent.location.reload();
                         }
@@ -80,7 +79,18 @@
                     success:function(data,status)
                     {
                         if(data.status == 1)
-                            parent.location.reload();
+                        {
+                            if(data.info ==0 )//第一次登陆
+                            {
+                                $("#yesno",parent.document).attr('style','position: fixed; z-index: 9999; top: 38.5px; left: 301.5px; display: block;');
+                                $("body",parent.document).append('<div id="exposeMask" style="position: absolute; top: 0px; left: 0px; width: 1366px; height: 100%; display: block; opacity: 0.6; z-index: 9998; background-color: rgb(0, 0, 0);"></div>');
+                                $("body",parent.document).css('overflow-y','hidden');
+                                $(".GreyFrame_Fg",parent.document).css('z-index',-999);
+                            }
+                            else
+                               parent.location.reload();
+
+                        }
                         else
                         {
                             alert("登录失败");
