@@ -29,14 +29,85 @@ a:hover {
 <body>
   <div id="main">
 	<div id="main_body">
-	<volist name = "comment" id ="vc"> 
+		<!--显示社团空间流言信息-->
+	<volist name = "commed" id ="vc"> 
 	  <div class="liuyan">
 	    <div class="top">
 	      <div class="club_touxiang">
 	      	<img src="__Uploads__/Avatar/s_{$vc['comming_id']*10+$vc['comming_type']|getCommenterAvatar}" />
 		  </div>
 		  <div class="club_name">
-		  	{$vc['comming_id']*10+$vc['comming_type']|getCommenterName}
+		  	{$vc['comming_id']*10+$vc['comming_type']|getCommenterName}&nbsp<span style = "color:red;">给我留言：</span>
+		  </div>
+		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
+		    <div class="liuyan_img">
+			</div>
+			<div class="liuyan_num">2
+			</div>
+		  </a>
+		  <div class="time">
+		  	{$vc.comment_date} {$vc.comment_time}
+		  </div>
+		</div>
+		<div class="bottom">
+		  <div class="liuyan_content">
+		  <if condition = "strlen($vc['content']) lt 186">
+		  	<p>
+		  		{$vc['content']}
+		  	</p>
+		  	<else />
+		  	<p>
+		  		<?php echo substr($vc['content'],0,186)?>......
+		  	</p>	
+		   </if>
+		  </div>
+		</div>
+	  </div>
+	</volist>
+	<!--显示社团空间回复信息-->
+	<volist name = "commentinleagueanduserzone" id ="vc"> 
+	  <div class="liuyan">
+	    <div class="top">
+	      <div class="club_touxiang">
+	      	<img src="__Uploads__/Avatar/s_{$vc['comming_id']*10+$vc['comming_type']|getCommenterAvatar}" />
+		  </div>
+		  <div class="club_name">
+		  	{$vc['commed_id']*10+$vc['commed_type']|getCommenterName}&nbsp<span style = "color:red;">回复我：</span>
+		  </div>
+		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
+		    <div class="liuyan_img">
+			</div>
+			<div class="liuyan_num">2
+			</div>
+		  </a>
+		  <div class="time">
+		  	{$vc.comment_date} {$vc.comment_time}
+		  </div>
+		</div>
+		<div class="bottom">
+		  <div class="liuyan_content">
+		  <if condition = "strlen($vc['content']) lt 186">
+		  	<p>
+		  		{$vc['content']}
+		  	</p>
+		  	<else />
+		  	<p>
+		  		<?php echo substr($vc['content'],0,186)?>......
+		  	</p>	
+		   </if>
+		  </div>
+		</div>
+	  </div>
+	</volist>
+	<volist name = "commentinalbum" id ="vc"> 
+	  <div class="liuyan">
+	    <div class="top">
+	      <div class="club_touxiang">
+	      	<img src="__Uploads__/Avatar/s_{$vc['commed_id']*10+$vc['commed_type']|getCommenterAvatar}" />
+		  </div>
+		  <div class="club_name">
+		  	{$vc['commed_id']*10+$vc['commed_type']|getCommenterName}&nbsp
+		  	在相册&nbsp<span style = "color:red;">{$vc['commed_id']|getLeagueAlbumName}</span>&nbsp中回复我：
 		  </div>
 		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
 		    <div class="liuyan_img">

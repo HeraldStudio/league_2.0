@@ -77,6 +77,19 @@ class HomeAction extends Action
 		
 		$this -> display();
     }
+    /*
+
+	函数功能：获取某个特定id的评论和回复信息
+	
+	参数信息：id、被评论者的类型
+
+	  返回值：无返回值
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
     public function getCommentAndAnswer( $commentid, $commenttype )
     {
     	//获取评论信息
@@ -213,6 +226,9 @@ class HomeAction extends Action
 
 		$this -> display();
 	}
+	/**
+		照片评论页面控制函数
+	*/
 	public function imgComment()
 	{
 		/*获取URL参数*/
@@ -262,9 +278,22 @@ class HomeAction extends Action
 		$leagueid = intval($this -> _param('leagueid'));
 
 		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $leagueid, $Comment -> getCommentedType("league") );//1表示社团交流区信息
+		$commenttype = $Comment -> getCommentedType("league");
+		//获取当前用户被评论的信息
+		$commed = $Comment -> getCommentedInfo( $leagueid, $commenttype );//1表示社团交流区信息
+		$this -> assign( 'commed', $commed );
+		//获取当前用户评论过的信息
+		$comming = $Comment -> getCommentingInfo( $leagueid, $commenttype );
+		//这个数组是当前社团在别的社团或者用户空间评论后的回复信息
+		$commentinleagueanduserzone = $comming[0];
+		$this -> assign( 'commentinleagueanduserzone', $commentinleagueanduserzone );
+		//这个数组是当前社团在照片中评论被回复的信息
+		$commentinpicture = $comming[1];
+		$this -> assign( 'commentinalbum', $commentinalbum );
 
-		$this -> assign( 'comment', $comment );
+
+
+
 
 		// $Answer = D ( 'Answer' );
 		// $answer = $Answer -> getAnswerInfo( $comment );

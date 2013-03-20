@@ -47,7 +47,11 @@
                     dataType:"json",
                     success:function(data){
                         if(data.status == 1){
-                           parent.location.reload();
+                            if (data.data == 0) //第一次登陆
+                            {
+
+                            }
+                            parent.location.reload();
                         }
                         else{
                             alert("登录失败");
@@ -67,8 +71,9 @@
                 alert("请输入密码");
             else
             {
+                
                 $.ajax({
-                    url:"<?php echo U('User/Login/Login/');?>",
+                    url:"<?php echo U('User/Login/login/');?>",
                     data:{cardNumber:card,passWord:pass},
                     type:"POST",
                     dataType:"json",
@@ -76,9 +81,11 @@
                     {
                         if(data.status == 1)
                             parent.location.reload();
-                        
                         else
+                        {
                             alert("登录失败");
+                            
+                        }
                     },
                 });
             }

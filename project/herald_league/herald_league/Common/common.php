@@ -33,18 +33,23 @@ function getCommenterName ( $commentingArgument )
 {
 	$commentingId = intval( $commentingArgument / 10 );
 	$commentingType = $commentingArgument % 10;
-	
-	if ( $commentingType == 1 )// 1表示普通用户
-	{
-		$User = M('user');
-		$user = $User -> where( 'id ='.$commentingId ) -> find();
-		echo $user['true_name'];
-	}
-	elseif ( $commentingType == 2 ) // 2表示社团用户
-	{
-		$League = M('league_info');
-		$league = $League -> where( 'id ='.$commentingId ) -> find();
-		echo $league['league_name'];
+	switch ( $commentingType ) {
+		case 1:
+			$User = D('User');
+			$user = $User -> getUserInfo($commentingId);
+			echo $user['true_name'];
+			break;
+		case 2:
+			$League = D('LeagueInfo');
+			$league = $League -> getLeagueInfo($commentingId);
+			echo $league['league_name'];
+			break;
+		case 3:
+			$LeagueAlbum = D('LeagueAlbum');
+			$albumleagueid = $LeagueAlbum -> getLeagueId($commentingId);
+			$League = D('LeagueInfo');
+			$league = $League -> getLeagueInfo($albumleagueid);
+			echo $league['league_name'];
 	}
 }
 
@@ -52,20 +57,33 @@ function getCommenterAvatar ( $commentingArgument )
 {
 	$commentingId = intval( $commentingArgument / 10 );
 	$commentingType = $commentingArgument % 10;
-	
-	if ( $commentingType == 1 )// 1表示普通用户
-	{
-		$User = M('user');
-		$user = $User -> where( 'id ='.$commentingId ) -> find();
-		echo $user['user_avatar_add'];
-	}
-	elseif ( $commentingType == 2 ) // 2表示社团用户
-	{
-		$League = M('league_info');
-		$league = $League -> where( 'id ='.$commentingId ) -> find();
-		echo $league['avatar_address'];
+
+	switch ($commentingId) {
+		case 1:
+			$User = M('User');
+			$user = $User -> where( 'id ='.$commentingId ) -> find();
+			echo $user['user_avatar_add'];
+			break;
+		case 2:
+			$League = M('LeagueInfo');
+			$league = $League -> getLeagueInfo($getLeagueInfo);
+			echo $league['avatar_address'];
+		case 3:
+			$LeagueAlbum = D('LeagueAlbum');
+			$albumleagueid = $LeagueAlbum -> getLeagueId($commentingId);
+			$League = D('LeagueInfo');
+			$league = $League -> getLeagueInfo($albumleagueid);
+			echo $league['avatar_address'];
+
 	}
 }
+
+function getLeagueAlbumName($albumid)
+{
+	$LeagueAlbum = D('LeagueAlbum');
+	$albumleaguename = $LeagueAlbum -> getLeagueAlbumName($albumid);
+	echo $albumleaguename;
+}	
 
 /*
 

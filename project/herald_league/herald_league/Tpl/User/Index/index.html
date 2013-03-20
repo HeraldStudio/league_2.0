@@ -165,7 +165,7 @@ a:hover {
 	            <volist name = "leagueinfo" id = "vo">
 				  <div id="remark{$i+2}" class="remark">
 			        <div id="user_img{$i+2}" class="user_img">
-			        	<img src="../images/small.jpg" alt="" />
+			        	<img src="__Uploads__/Avatar/m_{$vo.avater_address}" alt="" />
 				    </div>
 				    <div id="remark_content{$i+2}" class="remark_content">
 				      <div id="top{$i+2}" class="top">
@@ -195,29 +195,31 @@ a:hover {
 				</div><!--存放每个页面的内容-->
 	            <div>
 				  <volist name = "activityinfo" id = "vac">
-				  <div id="activity3" class="remark">
-				    <div id="left3" class="left">
-			          <div id="club_img3" class="user_img">
-			          	<img src="__Uploads__/LeagueAvatar/m_{$vac.leagueavatar}">
+				  <notempty name = "vac['id']">
+				  <div id="activity{$i+2}" class="remark">
+				    <div id="left{$i+2}" class="left">
+			          <div id="club_img{$i+2}" class="user_img">
+			          	<img src="__Uploads__/Avatar/m_{$vac.leagueavatar}">
 				      </div>
-					  <div id="clubname3" class="clubname">
+					  <div id="clubname{$i+2}" class="clubname">
 					  	{$vac.activity_org_name}
 					  </div>
 					</div>
-				    <div id="activity_content3" class="remark_content">
-				      <div id="atop3" class="top">
-				        <div id="activityname3" class="username">
+				    <div id="activity_content{$i+2}" class="remark_content">
+				      <div id="atop{$i+2}" class="top">
+				        <div id="activityname{$i+2}" class="username">
 				        	{$vac.activity_name}
 					    </div>
 				      </div>
-				      <div id="amiddle3" class="middle">
+				      <div id="amiddle{$i+2}" class="middle">
 				        【{$vac.activitystate}】   {$vac.attentionnum}个关注者
 				      </div>
-				      <div id="abottom3" class="bottom">
+				      <div id="abottom{i+2}" class="bottom">
 					    {$vac.activity_introduce}
 				      </div>
 				    </div>
 			      </div>
+			      </notempty>
 			    </volist>
 				</div><!--存放每个页面的内容-->
 				<div>

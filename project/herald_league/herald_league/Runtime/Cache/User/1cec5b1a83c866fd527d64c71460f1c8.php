@@ -162,7 +162,7 @@ a:hover {
 	            <div>
 	            <?php if(is_array($leagueinfo)): $i = 0; $__LIST__ = $leagueinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div id="remark<?php echo ($i+2); ?>" class="remark">
 			        <div id="user_img<?php echo ($i+2); ?>" class="user_img">
-			        	<img src="../images/small.jpg" alt="" />
+			        	<img src="__Uploads__/Avatar/m_<?php echo ($vo["avater_address"]); ?>" alt="" />
 				    </div>
 				    <div id="remark_content<?php echo ($i+2); ?>" class="remark_content">
 				      <div id="top<?php echo ($i+2); ?>" class="top">
@@ -184,29 +184,29 @@ a:hover {
 			      </div><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div><!--存放每个页面的内容-->
 	            <div>
-				  <?php if(is_array($activityinfo)): $i = 0; $__LIST__ = $activityinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vac): $mod = ($i % 2 );++$i;?><div id="activity3" class="remark">
-				    <div id="left3" class="left">
-			          <div id="club_img3" class="user_img">
-			          	<img src="__Uploads__/LeagueAvatar/m_<?php echo ($vac["leagueavatar"]); ?>">
+				  <?php if(is_array($activityinfo)): $i = 0; $__LIST__ = $activityinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vac): $mod = ($i % 2 );++$i; if(!empty($vac['id'])): ?><div id="activity<?php echo ($i+2); ?>" class="remark">
+				    <div id="left<?php echo ($i+2); ?>" class="left">
+			          <div id="club_img<?php echo ($i+2); ?>" class="user_img">
+			          	<img src="__Uploads__/Avatar/m_<?php echo ($vac["leagueavatar"]); ?>">
 				      </div>
-					  <div id="clubname3" class="clubname">
+					  <div id="clubname<?php echo ($i+2); ?>" class="clubname">
 					  	<?php echo ($vac["activity_org_name"]); ?>
 					  </div>
 					</div>
-				    <div id="activity_content3" class="remark_content">
-				      <div id="atop3" class="top">
-				        <div id="activityname3" class="username">
+				    <div id="activity_content<?php echo ($i+2); ?>" class="remark_content">
+				      <div id="atop<?php echo ($i+2); ?>" class="top">
+				        <div id="activityname<?php echo ($i+2); ?>" class="username">
 				        	<?php echo ($vac["activity_name"]); ?>
 					    </div>
 				      </div>
-				      <div id="amiddle3" class="middle">
+				      <div id="amiddle<?php echo ($i+2); ?>" class="middle">
 				        【<?php echo ($vac["activitystate"]); ?>】   <?php echo ($vac["attentionnum"]); ?>个关注者
 				      </div>
-				      <div id="abottom3" class="bottom">
+				      <div id="abottom{i+2}" class="bottom">
 					    <?php echo ($vac["activity_introduce"]); ?>
 				      </div>
 				    </div>
-			      </div><?php endforeach; endif; else: echo "" ;endif; ?>
+			      </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 				</div><!--存放每个页面的内容-->
 				<div>
 				  <div id="liuyan3" class="remark">
