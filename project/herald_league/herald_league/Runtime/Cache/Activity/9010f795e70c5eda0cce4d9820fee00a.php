@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
+<link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
 <link href="__ROOT__/Public/Css/index.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
@@ -256,7 +257,8 @@ a:hover {
 									</div></a><?php endforeach; endif; else: echo "" ;endif; ?>
 							</div>
 							<div class="more">
-								 
+								 <a href="#" class="more_text">More...
+								 </a>
 							</div>
 						</div>
 						<div id="hot_club" class="hot">
@@ -272,7 +274,8 @@ a:hover {
 									</div></a><?php endforeach; endif; else: echo "" ;endif; ?>
 							</div>
 							<div class="more">
-								 
+								 <a href="#" class="more_text">More...
+								 </a>
 							</div>
 						</div>
 					</div>
