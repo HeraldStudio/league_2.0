@@ -40,12 +40,26 @@ class IndexAction extends Action
 		$result = $this -> attentionLeague( $userid );
 		$leagueinfo = $result[0];
 		$lastactivity = $result[1];
+		//print_r($leagueinfo);
 		$this -> assign ( 'leagueinfo', $leagueinfo );
 		$this -> assign( 'lastactivity', $lastactivity );
 
 		/*get attention activity information*/
 		$activityinfo = $this -> attentionActivity ( $userid );
 		$this -> assign ( 'activityinfo', $activityinfo );
+		//print_r($activityinfo);
+		/*user info for header*/
+        $heraldSession = D('UserSessionControl'); //控制会话
+        if($heraldSession->isLogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('userName',$heraldSession->getUserName());
+            $uid=$heraldSession->getUserID();
+        }
+        else
+        {
+            $uid = 0;
+        }
 
 		$this -> display();
     }
@@ -167,16 +181,15 @@ class IndexAction extends Action
     {
     	$Attention = D('Attention');
     	$LeagueInfo = D('LeagueInfo');
-    	//$Activity = D('Activity');
+    	$Activity = D('Activity');
     	$attentionleague = $Attention -> getAttentionLeague ( $userid );
-
+    	//print_r($attentionleague);
     	foreach ( $attentionleague as $attentionleagues ) 
     	{	
-    		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] )[0];
+    		$leagueinfo[$attentionleagues['id']] = $LeagueInfo -> getLeagueInfo($attentionleagues['attended_id'] );
     		$leagueinfo[$attentionleagues['id']]['attentionnum'] = $Attention -> getAttentionLeagueNum($attentionleagues['attended_id']);
-    		//$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'] );
+    		$lastactivity[$attentionleagues['attended_id']] = $Activity -> getActivityInfoByLeague( $attentionleagues['attended_id'] );
     	}
-    	//print_r($lastactivity);
     	return array( $leagueinfo, $lastactivity );
     }
     /*
@@ -199,7 +212,6 @@ class IndexAction extends Action
 		$League = D('LeagueInfo');
 
 		$attentionactivity = $Attention -> getAttentionActivity( $userid );
-		
 		foreach ( $attentionactivity as $attentionactivitys ) 
     	{
     		$activityinfo[$attentionactivitys['id']] = $Activity -> getActivityInfoById( $attentionactivitys['attended_id'] );

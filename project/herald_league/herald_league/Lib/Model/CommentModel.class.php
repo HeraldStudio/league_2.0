@@ -22,7 +22,7 @@ class CommentModel extends Model
         );
 	/*
 
-	函数功能：获取评论信息函数
+	函数功能：获取被评论的信息 主调者是被评论者
 	
 	参数信息：第一个参数是被评论者的id
 
@@ -36,12 +36,11 @@ class CommentModel extends Model
 	
 	*/
 
-    public function getCommentInfo ( $commedinfo, $commedtype )
+    public function getCommentedInfo ( $commedinfo, $commedtype )
     {	
     	if( is_int( $commedinfo ) )
     	{
-	    	$comment = $this -> where( 'commed_id = '.$commedinfo.' AND commed_type = '.$commedtype ) -> select();//对社团的评论 commed_id = 1
-	    	
+	    	$comment = $this -> where( 'commed_id = '.$commedinfo.' AND commed_type = '.$commedtype ) -> select();
 	    	return $comment;
 	    }
 	    else
@@ -53,6 +52,49 @@ class CommentModel extends Model
 			return $comment;
 	    }
     }
+
+    /*
+
+	函数功能：获取评论的信息 主调者是评论者
+	
+	参数信息：第一个参数是被评论者的id
+
+			  第二个参数是被评论者的类型
+
+	  返回值：返回当前需要的所有评论的一个数组
+			  
+	    作者：Tairy
+	
+	更新日期：2013/01/16
+	
+	*/
+
+	public function getCommentingInfo( $comminginfo, $commingtype )
+	{
+		if( is_int( $comminginfo ) )
+    	{
+	    	$comment = $this -> where( 'comming_id = '.$comminginfo.' AND comming_type = '.$commingtype ) -> select();
+	    	$leagueanduserzone = array();
+	    	$picture = array();
+	    	$activity = array();
+	    	foreach ( $comment as $comments ) 
+	    	{
+	    		switch ($comments['commed_type']) {
+	    			case 1: case 2:
+	    				array_push($leagueanduserzone, $comments);
+	    				break;
+	    			case 3:
+	    				array_push($picture, $comments);
+	    				break;
+	    			case 5:
+	    				array_push($activity, $comments);
+	    				break;
+	    		}
+	    	}
+	    	//print_r($leagueanduserzone);
+	    	return array( $leagueanduserzone, $album, $picture, $activity);
+	    }
+	}
 
     public function getCommentInfoById( $commentid )
     {
@@ -115,7 +157,7 @@ class CommentModel extends Model
 
     public function getCommentedType( $commenttypename )
     {
-    	$Commenttype = M('Commented_type');
+    	$Commenttype = M('CommentedType');
     	$commenttypeid = $Commenttype -> getFieldByType( $commenttypename, 'id' );
     	return $commenttypeid;
     }
