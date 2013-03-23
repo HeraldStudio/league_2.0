@@ -81,8 +81,10 @@ a:hover {
 			</div>
 		<if condition="$islogin eq 1">
 					<div id="message">
-							<a href="#" id="message_image"></a>
+						<a href="#" id="message_image"></a>
+						<if condition = "$newAnswerAndComment gt 0">
 							<div id="m_num">{$newAnswerAndComment}</div>
+						</if>
 					</div>
 					<div id="love">
 							<a href="#" id="love_image"></a>

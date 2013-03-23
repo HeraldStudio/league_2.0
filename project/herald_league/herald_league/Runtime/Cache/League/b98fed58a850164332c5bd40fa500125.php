@@ -80,8 +80,8 @@ a:hover {
 				</form>
 			</div>
 		<?php if($islogin == 1): ?><div id="message">
-							<a href="#" id="message_image"></a>
-							<div id="m_num"><?php echo ($newAnswerAndComment); ?></div>
+						<a href="#" id="message_image"></a>
+						<?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
 					</div>
 					<div id="love">
 							<a href="#" id="love_image"></a>
