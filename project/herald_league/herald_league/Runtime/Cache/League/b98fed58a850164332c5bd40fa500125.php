@@ -74,15 +74,14 @@ a:hover {
 				</div>
 			</div>
 			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
+				<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+			</div>
 		<?php if($islogin == 1): ?><div id="message">
 							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
+							<div id="m_num"><?php echo ($newAnswerAndComment); ?></div>
 					</div>
 					<div id="love">
 							<a href="#" id="love_image"></a>

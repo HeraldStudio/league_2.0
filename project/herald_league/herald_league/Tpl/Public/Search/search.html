@@ -25,6 +25,8 @@ a:hover {
 </style>
 </head>
 <body>
+
+
   <div id="main">
     <div id="header">
 	  <div id="logo">
@@ -43,17 +45,19 @@ a:hover {
 		  <a href="#" >海报墙</a>
 		</div>
 	  </div>
-	 <div id="search">
-	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
-			<input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-			<input type = "submit" value = "搜索" id="search_image">
+	  <div id="search">
+	    <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+			 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+			 <input type = "submit" value = "搜索" id="search_image">
 		</form>
 	  </div>
 	  <div id="message">
 	    <a href="#" id="message_image"></a>
+		<div id="m_num">5</div>
 	  </div>
 	  <div id="love">
 	    <a href="#" id="love_image"></a>
+		<div id="g_num">55</div>
 	  </div>
 	  <div id="user"><a href="#">赵亮</a></div>
 	  <div id="exit"><a href="#">退出</a></div>
@@ -65,13 +69,12 @@ a:hover {
 		   <div id="search_logo">
 		   </div>
 		   <div id="search2">
-		      <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-	            <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-		      </form>
+		      <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+	            <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
 			  <a href="#" id="search_btn">
-			    <div id="search_image2">
-				</div>
+			    <input type = "submit" value = "" id="search_image2">
 		      </a>
+		      </form>
 		   </div>
 		   </div>
 		 </div>
@@ -85,8 +88,7 @@ a:hover {
 		   </div>
 		   <div id="bottom_right">
             <!-- tab "panes" -->
-            
-           <div class="panes3">
+              <div class="panes3">
 	         <div>
 	         	<if condition = "$isresultempty">
 	         		搜索结果为空

@@ -170,6 +170,14 @@ class CommentModel extends Model
     	$commenttypeid = $Commenttype -> getFieldByType( $commenttypename, 'id' );
     	return $commenttypeid;
     }
+
+    public function getNewCommentNum($commedid,$commedtype)
+    {
+    	$data['commed_id'] = $commedid;
+    	$data['commed_type'] = $commedtype;
+    	$data['is_new'] = 1;
+    	return $this -> where($data) ->count();
+    }
 }
 
 ?>

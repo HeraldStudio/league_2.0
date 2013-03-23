@@ -77,24 +77,6 @@ a{
 #wall{
     width:60px;
 	}
-#search{
-    padding-left:30%;
-	padding-top:4px;
-	float:left;
-	}
-#search input{
-    width:180px;
-	height:17px;
-	float:left;
-	}
-#search_image{
-    background:url(../images/search.png);
-	background-repeat:no-repeat;
-	width:23px;
-	height:20px;
-	margin-left:-25px;
-	float:left;
-	}
 #message{
     float:left;
 	padding-left:1%;

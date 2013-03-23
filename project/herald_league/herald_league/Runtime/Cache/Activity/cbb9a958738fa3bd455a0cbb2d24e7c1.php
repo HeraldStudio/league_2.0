@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>活动信息平台首页</title>
+<link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
 <link href="__ROOT__/Public/Css/index.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
@@ -129,7 +130,7 @@ a:hover {
 							<div id="header_top_text">
 								<a href="javascript:;"  onclick="logout()"  >退出</a>
 							</div>
-							<div id="header_top_text">
+							<div id="header_top_text" style="padding-right:20px">
 								<a href="#"  class="name"><?php echo ($name); ?></a>
 							</div>
 							<div id="tubiao">
@@ -154,7 +155,7 @@ a:hover {
 						<a href="http://herald.seu.edu.cn" >先声首页</a>
 					</div>
 					 <div id="map" class="navigation_link">
-						<a href="#" >社团地图</a>
+						<a href="<?php echo U('League/Home/');?>" >社团地图</a>
 					</div>
 					 <div id="activity" class="navigation_link">
 						<a href="#" >活动信息</a>

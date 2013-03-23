@@ -5,7 +5,7 @@
 <title>活动详情</title>
 <link href="__Public__/Css/clubliuyan.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
-<link href="__Public__/totop.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
 <script src="__Public__/Js/jquery.min.js"></script> 
 <style type="text/css">
@@ -33,7 +33,7 @@ p span{float:left;color:#ccc;font-size:12px;line-height:25px;padding-left:5px;}
 -->
 </style>
 <script type="text/javascript">
-$(function(){
+$(document).ready(function(){
         function maxLimit(){
                 var num=$(this).val().substr(0,140);
                 $(this).val(num);
@@ -48,6 +48,10 @@ $(function(){
         });
 		 $(".btn_replay_3").click(function(){
                 $("#textlimit1").addClass("focus").next().show();
+                $("#textlimit1")[0].focus();
+                //alert($("#username_3").text());
+                $("#textlimit1").val("回复"+$.trim($("#username_3").html())+" : ");
+                $("#hidden").val($("#answer_hidden").val());
                 if($("#textlimit1").val() == $(".textlimit1").attr("title")){
                         $("#textlimit1").val("");
                 }
@@ -68,23 +72,15 @@ $(function(){
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#submitanswer").click(function(){
-		alert($("#textlimit1").val());
-		// if($("#textlimit1").val()!="")
-		// {
-		// 	$.ajax({
-		// 		url:'{:U('addAnswer')}',
-		// 		type: 'post',
-		// 		dataType:'html',
-		// 		data:'data='+$("#hidden").val()+'&content='+$("#textlimit1").val(),
-		// 		success:function(data){
-		// 			location.reload();//todo
-		// 		}
-		// 	})
-		// }
-		// else
-		// {
-		// 	alert("gg");
-		// }
+		$.ajax({
+			url:'{:U('addAnswer')}',
+			type: 'post',
+			dataType:'html',
+			data:'data='+$("#hidden").val()+'&content='+$("#textlimit1").val(),
+			success:function(data){
+				location.reload();//todo
+			}
+		})
 	});
 });
 </script>
@@ -121,6 +117,7 @@ $(document).ready(function(){
 			      <br/>
 			      <div id="remark_content_3" class="remark_content1">
 			        <div id="top_3" class="top1" style = "background-color:#f8efea;">
+			        <input type="hidden" id = "answer_hidden" value = "{$comment['id']}/{$va['answering_id']}/{$va['answering_type']}"></input>
 			          <div id="username_3" class="username1">
 			          	{$va['answering_id']*10+$va['answering_type']|getCommenterName}
 				      </div>
@@ -134,7 +131,7 @@ $(document).ready(function(){
 			          </p>
 			        </div>
 			        <div id="bottom_3" class="bottom1">
-			          <a class="btn_replay_3" herf = "javascript:void(0);">回复</a>
+			          <a class="btn_replay_3" href = "javascript:void(0);">回复</a>
 			        </div>
 			      </div>
 			      </volist>
