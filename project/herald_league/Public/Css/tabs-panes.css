@@ -2,10 +2,12 @@
 /* tab pane styling */
 .panes div {
     display:none;
-    padding:15px 10px;
+    padding:0 0 0 12px;
     border-top:0;
     font-size:14px;
 	float:left;
+	width:186px;
+	overflow:hidden;
 }
 .panes2 div {
     display:none;
