@@ -13,8 +13,10 @@
   <!-- standalone page styling (can be removed) -->
 <link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
 <link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
-<script src="__Public__/Js/jquery.tools.min.js"></script> 
+<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" /> 
+
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/Jquery.js"></script>
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -26,12 +28,23 @@ a:hover {
 	color: #34c5c3;
 }
 </style>
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
-<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+
 <script type="text/javascript">
 				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
 				frameContect = new GreyFrame("ContactFrame", 350, 120);
 </script>
+<script type="text/javascript">
+ function logout()
+{
+	$.ajax({
+		url:'{:U('/Public/Logout/')}',
+		success:function(){
+		$("#islogin").hide();
+		$("#notlogin").show();
+		location.reload();//todo
+		}
+	})
+}
 </head>
 <body>
   <div id="main">
@@ -123,8 +136,8 @@ a:hover {
 			    	猜你感兴趣...
 			    </div>
 			    <ul class="tabs">
-	              <li><a href="#">活动</a></li><!--存放每个页面的名称-->
-	              <li style="border:none"><a href="#">社团</a></li>
+	              <li><a href="">活动</a></li><!--存放每个页面的名称-->
+	              <li style="border:none"><a href="">社团</a></li>
                 </ul>
 			  </div>
             <!-- tab "panes" -->
