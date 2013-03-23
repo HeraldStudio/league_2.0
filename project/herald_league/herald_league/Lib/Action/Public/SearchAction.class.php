@@ -17,7 +17,17 @@ Class SearchAction extends Action
 	public function search()
 	{	
 		$searchtext = $_POST['search_text'];
-
+		$heraldSession = D('UserSessionControl'); //控制会话
+		if($heraldSession->isLogin())
+		{
+			$this->assign('islogin',1);
+			$this->assign('userName',$heraldSession->getUserName());
+			$uid=$heraldSession->getUserID();
+		}
+		else
+		{
+			$uid = 0;
+		}
 		/*搜索框*/
 		import('@.ORG.Search');
 
