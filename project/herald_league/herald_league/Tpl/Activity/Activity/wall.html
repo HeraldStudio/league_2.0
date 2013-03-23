@@ -346,7 +346,7 @@ var m3D = function () {
 	<div id="command">
 
 		<h1>海报墙</h1>
-		 
+		<h1 ><a href="__APP__">首页</a></h1>
 		<div id="bar"></div>
 	</div>
 	<div id="urlInfo"></div>
