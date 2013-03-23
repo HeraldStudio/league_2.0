@@ -16,8 +16,8 @@ class LoginAction extends Action
 
 		public function login()//处理登录
 		{
-			if(!$this->isAjax())
-				$this->error('method is not allowed');
+			//if(!$this->isAjax())
+			//	$this->error('method is not allowed');
 			
 			$card = intval($this->_param('cardNumber'));
 			$pass = $this->_param('passWord');
