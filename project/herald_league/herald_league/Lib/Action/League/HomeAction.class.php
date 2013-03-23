@@ -546,13 +546,17 @@ class HomeAction extends Action
 		 $this -> streetname = $League -> getStreetName ( $league['street_id'] );
 		 $this -> title = $this -> pagetitle[$this -> gettitle];
 		 //这里的参数应该是当前登录用户的id和type
-		 $Comment = D('Comment');
-		 $newCommentNum = $Comment -> getNewCommentNum($this -> leagueid, $Comment -> getCommentedType("league"));
+		 if($heraldSession->isLogin())
+		 {
+		 	$Comment = D('Comment');
+		 	$newCommentNum = $Comment -> getNewCommentNum($uid, $Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+	
+		 	$Answer = D('Answer'); 
+		 	$newAnswerNum = $Answer -> getNewAnswerNum($uid,$Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+			
+		 	$this -> newAnswerAndComment = $newCommentNum + $newAnswerNum;
+		}
 
-		 $Answer = D('Answer'); 
-		 $newAnswerNum = $Answer -> getNewAnswerNum($this -> leagueid,$Comment -> getCommentedType("league"));
-		 
-		 $this -> newAnswerAndComment = $newCommentNum + $newAnswerNum;
 		 $this -> display();
 	}
     public function changeAttention()

@@ -201,7 +201,8 @@ a.bq:hover{
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	}
-#search input{
+
+#search_text{
     width:213px;
 	height:30px;
 	float:left;
@@ -220,6 +221,7 @@ a.bq:hover{
 	margin-left:-25px;
 	margin-top:8px;
 	float:left;
+    border: 0;
 	}
 .hot{
     float:left;
