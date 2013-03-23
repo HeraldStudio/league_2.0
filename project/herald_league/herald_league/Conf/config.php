@@ -26,7 +26,7 @@ return array(
 	'APP_GROUP_LIST' => 'User,League,Activity,Admin,Public',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin' 这里的逗号后面千万不能有空格 否则会报错
 	'DEFAULT_GROUP'  => 'Activity',  // 默认分组
 	
-	'URL_MODEL' => 2,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
+	'URL_MODEL' => 1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
     // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式，提供最好的用户体验和SEO支持
 	
 	//'DEFAULT_MODULE' => 'Index', // 默认模块名称
