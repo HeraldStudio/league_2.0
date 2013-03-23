@@ -39,7 +39,7 @@ a:hover {
 		  <div class="club_name">
 		  	{$vc['comming_id']*10+$vc['comming_type']|getCommenterName}&nbsp<span style = "color:red;">给我留言：</span>
 		  </div>
-		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
+		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}/type/comming">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -51,13 +51,13 @@ a:hover {
 		</div>
 		<div class="bottom">
 		  <div class="liuyan_content">
-		  <if condition = "strlen($vc['content']) lt 186">
+		  <if condition = "strlen($vc['content']) lt 102">
 		  	<p>
 		  		{$vc['content']}
 		  	</p>
 		  	<else />
 		  	<p>
-		  		<?php echo substr($vc['content'],0,186)?>......
+		  		<?php echo substr($vc['content'],0,102)?>......
 		  	</p>	
 		   </if>
 		  </div>
@@ -72,9 +72,9 @@ a:hover {
 	      	<img src="__Uploads__/Avatar/s_{$vc['comming_id']*10+$vc['comming_type']|getCommenterAvatar}" />
 		  </div>
 		  <div class="club_name">
-		  	{$vc['commed_id']*10+$vc['commed_type']|getCommenterName}&nbsp<span style = "color:red;">回复我：</span>
+		  	{$vc['commed_id']*10+$vc['commed_type']|getCommenterName}&nbsp<span style = "color:red;">回复了我：</span>
 		  </div>
-		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
+		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}/type/commed">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -86,20 +86,57 @@ a:hover {
 		</div>
 		<div class="bottom">
 		  <div class="liuyan_content">
-		  <if condition = "strlen($vc['content']) lt 186">
+		  <if condition = "strlen($vc['content']) lt 102">
 		  	<p>
 		  		{$vc['content']}
 		  	</p>
 		  	<else />
 		  	<p>
-		  		<?php echo substr($vc['content'],0,186)?>......
+		  		<?php echo substr($vc['content'],0,102)?>......
 		  	</p>	
 		   </if>
 		  </div>
 		</div>
 	  </div>
 	</volist>
-	<volist name = "commentinalbum" id ="vc"> 
+	<!--显示照片评论信-->
+	<volist name = "commentinpicture" id ="vp"> 
+	  <div class="liuyan">
+	    <div class="top">
+	      <div class="club_touxiang">
+	      	<img src="__Uploads__/Avatar/s_{$vp['commed_id']*10+$vp['commed_type']|getCommenterAvatar}" />
+		  </div>
+		  <div class="club_name">
+		  	{$vp['commed_id']*10+$vp['commed_type']|getCommenterName}&nbsp
+		  	在照片&nbsp<span style = "color:red;">{$vp['commed_id']|getLeaguePictureName}</span>&nbsp中回复我：
+		  </div>
+		  <a class='iframe' href="__URL__/answer/commentid/{$vp.id}/type/commed">
+		    <div class="liuyan_img">
+			</div>
+			<div class="liuyan_num">2
+			</div>
+		  </a>
+		  <div class="time">
+		  	{$vp.comment_date} {$vp.comment_time}
+		  </div>
+		</div>
+		<div class="bottom">
+		  <div class="liuyan_content">
+		  <if condition = "strlen($vp['content']) lt 186">
+		  	<p>
+		  		{$vp['content']}
+		  	</p>
+		  	<else />
+		  	<p>
+		  		<?php echo substr($vp['content'],0,186)?>......
+		  	</p>	
+		   </if>
+		  </div>
+		</div>
+	  </div>
+	</volist>
+	<!--显示在活动中的评论信息-->
+	<volist name = "commentinactivity" id ="vc"> 
 	  <div class="liuyan">
 	    <div class="top">
 	      <div class="club_touxiang">
@@ -107,7 +144,7 @@ a:hover {
 		  </div>
 		  <div class="club_name">
 		  	{$vc['commed_id']*10+$vc['commed_type']|getCommenterName}&nbsp
-		  	在相册&nbsp<span style = "color:red;">{$vc['commed_id']|getLeagueAlbumName}</span>&nbsp中回复我：
+		  	在活动&nbsp<span style = "color:red;">{$vc['commed_id']|getLeagueActivityName}</span>&nbsp中回复我：
 		  </div>
 		  <a class='iframe' href="__URL__/answer/commentid/{$vc.id}">
 		    <div class="liuyan_img">

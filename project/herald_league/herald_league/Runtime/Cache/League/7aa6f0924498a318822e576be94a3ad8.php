@@ -65,6 +65,29 @@ $(function(){
 });
 </script>
 </head>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#submitanswer").click(function(){
+		alert($("#textlimit1").val());
+		// if($("#textlimit1").val()!="")
+		// {
+		// 	$.ajax({
+		// 		url:'<?php echo U('addAnswer');?>',
+		// 		type: 'post',
+		// 		dataType:'html',
+		// 		data:'data='+$("#hidden").val()+'&content='+$("#textlimit1").val(),
+		// 		success:function(data){
+		// 			location.reload();//todo
+		// 		}
+		// 	})
+		// }
+		// else
+		// {
+		// 	alert("gg");
+		// }
+	});
+});
+</script>
 <body>
   <div id="main">
 	<div id="main_body">
@@ -90,10 +113,11 @@ $(function(){
 			    	<?php echo ($comment['content']); ?>
 			    </p>
 			  </div>
-			  <?php if(is_array($answer)): $i = 0; $__LIST__ = $answer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><div id="remark_3" class="remark1">
-		          <div id="user_img_3" class="user_img">
+			   <div id="remark_3" class="remark1">
+			   	 <?php if(is_array($answer)): $i = 0; $__LIST__ = $answer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><div id="user_img_3" class="user_img">
 		          	<img src="__Uploads__/Avatar/m_<?php echo (getcommenteravatar($va['answering_id']*10+$va['answering_type'])); ?>" alt="" />
 			      </div>
+			      <br/>
 			      <div id="remark_content_3" class="remark_content1">
 			        <div id="top_3" class="top1" style = "background-color:#f8efea;">
 			          <div id="username_3" class="username1">
@@ -109,18 +133,19 @@ $(function(){
 			          </p>
 			        </div>
 			        <div id="bottom_3" class="bottom1">
-			          <button class="btn_replay_3">回复</button>
+			          <a class="btn_replay_3" herf = "javascript:void(0);">回复</a>
 			        </div>
-			      </div>
-		        </div><?php endforeach; endif; else: echo "" ;endif; ?>
+			      </div><?php endforeach; endif; else: echo "" ;endif; ?>
+		        </div>
 				<div class="layout">
-                <div class="box">
-                <textarea name="textarea" class="textlimit" id="textlimit1" cols="45" rows="1" placeholder="添加回复"></textarea>
-                <p>
-                    <input class="input-button" type="button" value="回复" />
-                    <span class="textCount">0/140</span>
-                </p>
-                </div>
+	                <div class="box">
+	                <textarea name="textarea" class="textlimit" id="textlimit1" cols="45" rows="1" placeholder="添加回复"></textarea>
+	                <p>
+	                	<input id = "hidden"type = "hidden" name = "subdata_a" value = "<?php echo ($comment['id']); ?>/<?php echo ($comment['comming_id']); ?>/<?php echo ($comment['comming_type']); ?>" />
+	                    <input class="input-button" name = "submit" type="submit" id = "submitanswer" value="回复" />
+	                    <span class="textCount">0/140</span>
+	                </p>
+	                </div>
                 </div>
 			</div>
 		  </div>

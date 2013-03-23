@@ -94,7 +94,7 @@ class HomeAction extends Action
     {
     	//获取评论信息
 		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentInfo( $commentid, $Comment -> getCommentedType($commenttype) );
+		$comment = $Comment -> getCommentedInfo( $commentid, $Comment -> getCommentedType($commenttype) );
 		
 		$Answer = D( 'Answer' );
 		$answer = $Answer -> getAnswerInfo( $comment );
@@ -153,21 +153,6 @@ class HomeAction extends Action
 		$Album = D('League_album');
 		$album = $Album -> where('league_id ='.$this -> leagueid) -> select();
 		$this -> assign( 'album', $album );
-
-		$Comment = D('Comment');
-		$comment = $Comment -> getCommentInfo( $album, $Comment -> getCommentedType("album") );
-
-		$this -> assign( 'comment', $comment );
-
-		$Answer = D('Answer');
-		$answer = $Answer -> getAnswerInfo( $comment );
-
-		$this -> assign( 'answer', $answer );
-
-		if( !empty( $_POST['submit'] ) )
-		{
-			$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("album") );
-		}
 		
         $this -> display();
 	}
@@ -237,7 +222,7 @@ class HomeAction extends Action
 		$Picture = D('League_picture');
 		$this -> picture = $Picture -> where('id='.$pictureid) -> find();
 
-		$this -> getCommentAndAnswer( $pictureid, "album");
+		$this -> getCommentAndAnswer( $pictureid, "picture");
 		//print_r($comment);
 		// /$this -> assign( 'picture', $picture );
 
@@ -289,25 +274,15 @@ class HomeAction extends Action
 		$this -> assign( 'commentinleagueanduserzone', $commentinleagueanduserzone );
 		//这个数组是当前社团在照片中评论被回复的信息
 		$commentinpicture = $comming[1];
-		$this -> assign( 'commentinalbum', $commentinalbum );
-
-
-
-
-
-		// $Answer = D ( 'Answer' );
-		// $answer = $Answer -> getAnswerInfo( $comment );
-
-		// $this -> assign('answer', $answer);
-
-		// $this -> leagueid = $leagueid;
-
-		// if( !empty( $_POST['submit'] ) )
-		// {
-		// 	$this -> judgeIfSubData( $Comment, $Answer, $Comment -> getCommentedType("league") );
-		// }
-		 $this -> display();
+		//print_r($commentinpicture);
+		$this -> assign( 'commentinpicture', $commentinpicture );
+		//这个数组是显示当前社团在活动中被回复的信息
+		$commentinactivity = $comming[2];
+		//print_r($commentinactivity);
+		$this -> assign( 'commentinactivity', $commentinactivity );
+		$this -> display();
 	}
+	//留言版回复页面
 	public function answer()
 	{
 		/*获取URL参数*/
@@ -322,6 +297,18 @@ class HomeAction extends Action
 		$this -> assign('answer', $answer);
 
 		$this -> display();
+	}
+
+	public function addAnswer()
+	{//echo $_POST['content'];
+		if(!empty($_POST['content']))
+		{
+			$answeringid = 1;
+			$answeringtype = 1;
+			$Answer = D ( 'Answer' );
+			$answer = $Answer -> addAnswerinfo( $answeringid, $answeringtype, $_POST );
+			echo $answer;
+		}
 	}
 
 	/*

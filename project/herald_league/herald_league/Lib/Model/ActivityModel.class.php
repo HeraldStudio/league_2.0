@@ -304,5 +304,13 @@ class ActivityModel extends Model
 			}
 			return $result;
 		}
+	public function getLeagueId( $activityid )
+	{
+		return $this -> getFieldById($activityid,'league_id');
+	}
+	public function getLeagueActivityName($activityid)
+	{
+		return $this -> getFieldById($activityid,'activity_name');
+	}
 }
 ?>

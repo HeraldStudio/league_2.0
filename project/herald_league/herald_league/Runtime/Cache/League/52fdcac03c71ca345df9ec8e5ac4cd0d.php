@@ -27,12 +27,7 @@ a:hover {
 		</div>
 		<div id="title"><?php echo ($league['league_name']); ?>
 		</div>
-		<a href="#"id="attention">
-		  <div id="attention_img">
-		  </div>
-		  <div id="attention_text">关注
-		  </div>			  
-		</a>
+		
 		<div id="member">
 		  <div id="member_title">社团成员：
 		  </div>

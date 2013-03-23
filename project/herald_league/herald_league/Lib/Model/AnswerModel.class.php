@@ -82,25 +82,28 @@ class AnswerModel extends Model
 	
 	*/
 
-    public function addAnswerinfo( $commentid, $answeringid, $answeringtype, $postdata )
+    public function addAnswerinfo( $answeringid, $answeringtype, $postdata )
     {
-    	$data_a['comment_id'] = $commentid;
+     	$temp = explode('/', $postdata['data']);
+     	$data_a['comment_id'] = $temp[0];
+     	$data_a['answered_id'] = $temp[1];
+     	$data_a['answered_type'] = $temp[2];
 		$data_a['answering_id'] = $answeringid;
 		$data_a['answering_type'] = $answeringtype;
 		$data_a['floor_id'] = 1;
 		$data_a['is_new'] = 1;
-		$data_a['content'] = htmlencode( $postdata['content_a'] );
+		$data_a['content'] = htmlencode( $postdata['content'] );
 
 
 		if($this->create()) 
 		{
-            return $this -> add($data_a);
+            $this -> add($data_a);
+            return "success";
         }
         else
         {
             return "error";
         }
-
     }
 }
 ?>

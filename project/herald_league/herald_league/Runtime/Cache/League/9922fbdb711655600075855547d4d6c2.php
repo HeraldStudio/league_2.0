@@ -38,7 +38,7 @@ a:hover {
 		  <div class="club_name">
 		  	<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>&nbsp<span style = "color:red;">给我留言：</span>
 		  </div>
-		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>">
+		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>/type/comming">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -50,12 +50,12 @@ a:hover {
 		</div>
 		<div class="bottom">
 		  <div class="liuyan_content">
-		  <?php if(strlen($vc['content']) < 186): ?><p>
+		  <?php if(strlen($vc['content']) < 102): ?><p>
 		  		<?php echo ($vc['content']); ?>
 		  	</p>
 		  	<?php else: ?>
 		  	<p>
-		  		<?php echo substr($vc['content'],0,186)?>......
+		  		<?php echo substr($vc['content'],0,102)?>......
 		  	</p><?php endif; ?>
 		  </div>
 		</div>
@@ -67,9 +67,9 @@ a:hover {
 	      	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vc['comming_id']*10+$vc['comming_type'])); ?>" />
 		  </div>
 		  <div class="club_name">
-		  	<?php echo (getcommentername($vc['commed_id']*10+$vc['commed_type'])); ?>&nbsp<span style = "color:red;">回复我：</span>
+		  	<?php echo (getcommentername($vc['commed_id']*10+$vc['commed_type'])); ?>&nbsp<span style = "color:red;">回复了我：</span>
 		  </div>
-		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>">
+		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>/type/commed">
 		    <div class="liuyan_img">
 			</div>
 			<div class="liuyan_num">2
@@ -81,24 +81,57 @@ a:hover {
 		</div>
 		<div class="bottom">
 		  <div class="liuyan_content">
-		  <?php if(strlen($vc['content']) < 186): ?><p>
+		  <?php if(strlen($vc['content']) < 102): ?><p>
 		  		<?php echo ($vc['content']); ?>
 		  	</p>
 		  	<?php else: ?>
 		  	<p>
-		  		<?php echo substr($vc['content'],0,186)?>......
+		  		<?php echo substr($vc['content'],0,102)?>......
 		  	</p><?php endif; ?>
 		  </div>
 		</div>
 	  </div><?php endforeach; endif; else: echo "" ;endif; ?>
-	<?php if(is_array($commentinalbum)): $i = 0; $__LIST__ = $commentinalbum;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div class="liuyan">
+	<!--显示照片评论信-->
+	<?php if(is_array($commentinpicture)): $i = 0; $__LIST__ = $commentinpicture;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vp): $mod = ($i % 2 );++$i;?><div class="liuyan">
+	    <div class="top">
+	      <div class="club_touxiang">
+	      	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vp['commed_id']*10+$vp['commed_type'])); ?>" />
+		  </div>
+		  <div class="club_name">
+		  	<?php echo (getcommentername($vp['commed_id']*10+$vp['commed_type'])); ?>&nbsp
+		  	在照片&nbsp<span style = "color:red;"><?php echo (getleaguepicturename($vp['commed_id'])); ?></span>&nbsp中回复我：
+		  </div>
+		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vp["id"]); ?>/type/commed">
+		    <div class="liuyan_img">
+			</div>
+			<div class="liuyan_num">2
+			</div>
+		  </a>
+		  <div class="time">
+		  	<?php echo ($vp["comment_date"]); ?> <?php echo ($vp["comment_time"]); ?>
+		  </div>
+		</div>
+		<div class="bottom">
+		  <div class="liuyan_content">
+		  <?php if(strlen($vp['content']) < 186): ?><p>
+		  		<?php echo ($vp['content']); ?>
+		  	</p>
+		  	<?php else: ?>
+		  	<p>
+		  		<?php echo substr($vp['content'],0,186)?>......
+		  	</p><?php endif; ?>
+		  </div>
+		</div>
+	  </div><?php endforeach; endif; else: echo "" ;endif; ?>
+	<!--显示在活动中的评论信息-->
+	<?php if(is_array($commentinactivity)): $i = 0; $__LIST__ = $commentinactivity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div class="liuyan">
 	    <div class="top">
 	      <div class="club_touxiang">
 	      	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vc['commed_id']*10+$vc['commed_type'])); ?>" />
 		  </div>
 		  <div class="club_name">
 		  	<?php echo (getcommentername($vc['commed_id']*10+$vc['commed_type'])); ?>&nbsp
-		  	在相册&nbsp<span style = "color:red;"><?php echo (getleaguealbumname($vc['commed_id'])); ?></span>&nbsp中回复我：
+		  	在活动&nbsp<span style = "color:red;"><?php echo (getleagueactivityname($vc['commed_id'])); ?></span>&nbsp中回复我：
 		  </div>
 		  <a class='iframe' href="__URL__/answer/commentid/<?php echo ($vc["id"]); ?>">
 		    <div class="liuyan_img">

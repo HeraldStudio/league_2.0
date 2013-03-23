@@ -35,21 +35,29 @@ function getCommenterName ( $commentingArgument )
 	$commentingType = $commentingArgument % 10;
 	switch ( $commentingType ) {
 		case 1:
-			$User = D('User');
-			$user = $User -> getUserInfo($commentingId);
-			echo $user['true_name'];
-			break;
-		case 2:
 			$League = D('LeagueInfo');
 			$league = $League -> getLeagueInfo($commentingId);
 			echo $league['league_name'];
 			break;
+		case 2:
+			$User = D('User');
+			$user = $User -> getUserInfo($commentingId);
+			echo $user['true_name'];
+			break;
 		case 3:
-			$LeagueAlbum = D('LeagueAlbum');
-			$albumleagueid = $LeagueAlbum -> getLeagueId($commentingId);
+			$LeaguePicture = D('LeaguePicture');
+			$pictureleagueid = $LeaguePicture -> getLeagueId($commentingId);
 			$League = D('LeagueInfo');
-			$league = $League -> getLeagueInfo($albumleagueid);
+			$league = $League -> getLeagueInfo($pictureleagueid);
 			echo $league['league_name'];
+			break;
+		case 5:
+			$Activity = D('Activity');
+			$activityleagueid = $Activity -> getLeagueId($commentingId);
+			$League = D('LeagueInfo');
+			$league = $League -> getLeagueInfo($activityleagueid);
+			echo $league['league_name'];
+			break;
 	}
 }
 
@@ -57,34 +65,47 @@ function getCommenterAvatar ( $commentingArgument )
 {
 	$commentingId = intval( $commentingArgument / 10 );
 	$commentingType = $commentingArgument % 10;
-
-	switch ($commentingId) {
+	switch ($commentingType) 
+	{
 		case 1:
-			$User = M('User');
-			$user = $User -> where( 'id ='.$commentingId ) -> find();
+			$User = D('User');
+			$user = $User -> getUserInfo($commentingId);//where( 'id ='.$commentingId ) -> find();
 			echo $user['user_avatar_add'];
 			break;
 		case 2:
-			$League = M('LeagueInfo');
-			$league = $League -> getLeagueInfo($getLeagueInfo);
-			echo $league['avatar_address'];
+			$LeagueInfo = D('LeagueInfo');
+			$league = $LeagueInfo -> getLeagueInfo($commentingId);
+			echo $league['avater_address'];
+			break;
 		case 3:
-			$LeagueAlbum = D('LeagueAlbum');
-			$albumleagueid = $LeagueAlbum -> getLeagueId($commentingId);
+			$LeaguePicture = D('LeaguePicture');
+			$pictureleagueid = $LeaguePicture -> getLeagueId($commentingId);
 			$League = D('LeagueInfo');
-			$league = $League -> getLeagueInfo($albumleagueid);
-			echo $league['avatar_address'];
-
+			$league = $League -> getLeagueInfo($pictureleagueid);
+			echo $league['avater_address'];
+			break;
+		case 5:
+			$Activity = D('Activity');
+			$activityleagueid = $Activity -> getLeagueId($commentingId);
+			$League = D('LeagueInfo');
+			$league = $League -> getLeagueInfo($activityleagueid);
+			echo $league['avater_address'];
+			break;
 	}
 }
 
-function getLeagueAlbumName($albumid)
+function getLeaguePictureName($albumid)
 {
-	$LeagueAlbum = D('LeagueAlbum');
-	$albumleaguename = $LeagueAlbum -> getLeagueAlbumName($albumid);
-	echo $albumleaguename;
+	$LeaguePicture = D('LeaguePicture');
+	$pictureleaguename = $LeaguePicture -> getLeaguePictureName($albumid);
+	echo $pictureleaguename;
 }	
-
+function getLeagueActivityName($activityid)
+{
+	$Activity = D('Activity');
+	$activityname = $Activity -> getLeagueActivityName($activityid);
+	echo $activityname;
+}
 /*
 
 	函数功能：php过滤函数
