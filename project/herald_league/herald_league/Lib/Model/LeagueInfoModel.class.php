@@ -213,5 +213,12 @@ class LeagueInfoModel extends Model
             return true;
         return false;
     }
+    /**返回所有社团信息及坐标供地图使用
+    *@return array
+    */
+    public function getAllLeague()
+    {
+        return $this->select();
+    }
 }
 ?>

@@ -1,3 +1,463 @@
-<volist name = "leagueclass" id = "vo">
-<a href = "__APP__/League/Street/index/classid/{$vo.id}">{$vo.class_name}</a><br/>
-</volist>
+<head>
+<title>Map</title>
+<link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
+<link href="__ROOT__/Public/Css/Map_Style.css" rel="stylesheet" >
+<link href="__ROOT__/Public/Css/club2.css" rel="stylesheet">
+<link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+                frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+                frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
+
+<script language="javascript">
+    var flag = true;
+    window.onload = function() {
+        var combox = document.getElementById("app-sidebar");
+        var cli_on = document.getElementById("toggle-appsidebar");
+        var map = document.getElementById("minilayer overview-map");
+        var canvas = document.getElementById("minicanvas");     
+        var timer = null, initime = null, r_len = 0;
+        var ul = document.getElementById("ul");
+        var pageup = document.getElementById("pageup");
+        var pagedown = document.getElementById("pagedown");
+        
+        
+        if(parseInt(ul.style.left)==0){
+            //pageup.style.cursor = "text";
+            //pageup.style.filter='alpha(opacity=10)';
+        }
+        pageup.onclick = function (){
+            if(parseInt(ul.style.left)==0){}
+            else{ul.style.left = ''+(parseInt(ul.style.left)+234)+'px';}
+            
+        }
+        pagedown.onclick = function(){
+            if(parseInt(ul.style.left)==-468){}
+            else{ul.style.left = ''+(parseInt(ul.style.left)-234)+'px';}
+        }
+    
+        map.style.width=''+(parseInt(document.body.clientWidth)-250)+'px';//初始加载
+        canvas.style.width=''+(parseInt(document.body.clientWidth)-250)+'px';
+        document.getElementById("viewport").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+        document.getElementById("minilayer overview-map").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+        document.getElementById("app-sidebar").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+        
+        cli_on.onmouseover = function(){
+            cli_on.style.width = "29px";
+            cli_on.style.left = "-31px";
+        }
+        cli_on.onmouseout = function(){
+            cli_on.style.width = "22px";
+            cli_on.style.left = "-24px";    
+        }
+        cli_on.onclick = sidebar;
+        document.onkeydown = function() {
+            event.keyCode == 73 ? sidebar() : null;
+        }
+        function sidebar() {
+            /*combox.style.right = flag?'-244px':0;
+            map.style.width = flag?'1360px':'1116px';
+            canvas.style.width = flag?'1360px':'1116px';
+            flag = !flag;*/
+        
+            clearTimeout(initime);
+            
+            if (flag) {
+                map.style.width = ''+(parseInt(document.body.clientWidth)-6)+'px';
+                canvas.style.width = ''+(parseInt(document.body.clientWidth)-6)+'px';
+                r_len = 0;
+                timer = setInterval(slideright, 10);
+            } else {
+                map.style.width = ''+(parseInt(document.body.clientWidth)-250)+'px';
+                canvas.style.width = ''+(parseInt(document.body.clientWidth)-250)+'px';
+                r_len = -245;
+                timer = setInterval(slideleft, 10);
+            }
+        }
+        
+        function slideright() {
+            cli_on.style.backgroundPosition = "-33px";
+            if (r_len <= -245) {
+                clearInterval(timer);
+                flag = !flag;
+                return false;
+            } else {
+                r_len -= 35;
+                combox.style.right = r_len + 'px';
+            }
+        }
+    
+        function slideleft() {
+            cli_on.style.backgroundPosition = "0px";
+            if (r_len >= 0) {
+                clearInterval(timer);
+                flag = !flag;
+                return false;
+            } else {
+                r_len += 35;
+                combox.style.right = r_len + 'px';
+            }
+        }
+        
+        initime = setTimeout("cli_on.click()", 3000);
+    }
+        
+    function r(){
+        if(flag){
+            document.getElementById("minilayer overview-map").style.width=''+(parseInt(document.body.clientWidth)-250)+'px';
+            document.getElementById("minicanvas").style.width=''+(parseInt(document.body.clientWidth)-250)+'px';
+        }else{
+            document.getElementById("minilayer overview-map").style.width=''+(parseInt(document.body.clientWidth)-6)+'px';
+            document.getElementById("minicanvas").style.width=''+(parseInt(document.body.clientWidth)-6)+'px';
+        }
+        document.getElementById("viewport").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+        document.getElementById("minilayer overview-map").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+        document.getElementById("app-sidebar").style.height=''+(parseInt(document.body.clientHeight)-35)+'px';
+    }
+
+    
+    var ie=document.all;
+    var nn6=document.getElementById && !document.all;
+    var isdrag=false;
+    var x,y;
+    var dobj;
+    
+    function movemouse(e){
+        if (isdrag){
+            w=document.body.clientWidth;
+            h=document.body.clientHeight;
+            canvasw=parseInt(document.getElementById("minicanvas").style.width);
+            
+            dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y;
+
+            if(parseInt(dobj.style.top+0)>80){
+                dobj.style.top = '80px';
+            }
+
+            if(parseInt(dobj.style.top+0)<h-800){
+                dobj.style.top=''+(h-800)+'px';
+            }
+            if(canvasw<700){
+                dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x;
+                if(parseInt(dobj.style.left+0)<canvasw-700){
+                    dobj.style.left=''+(canvasw-700)+'px';
+                }
+                if(parseInt(dobj.style.left+0)>0){
+                    dobj.style.left = '0px';
+                }
+            }
+            return false;
+        }
+    }
+
+    function selectmouse(e){
+        var fobj = nn6 ? e.target : event.srcElement;
+        var topelement = nn6 ? "HTML" : "BODY";
+        while (fobj.tagName != topelement  &&  fobj.className != "town-sketch"){
+            fobj = nn6 ? fobj.parentNode : fobj.parentElement;
+        }
+        if (fobj.className=="town-sketch"){
+            isdrag = true;
+            dobj = fobj;
+            tx = parseInt(dobj.style.left+0);
+            ty = parseInt(dobj.style.top+0);
+            x = nn6 ? e.clientX : event.clientX;
+            y = nn6 ? e.clientY : event.clientY;
+            document.onmousemove=movemouse;
+            return false;
+        }
+
+    }
+    document.onmousedown=selectmouse;
+    document.onmouseup=new Function("isdrag=false");
+</script>
+</head>
+
+<body ondragstart='return false' onselectstart ='return false' onresize="r();" >
+            <div id="header">
+      <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="{:U('League/Index/index/')}" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="{:U('Activity/Activity/wall/')}" >海报墙</a>
+        </div>
+      </div>
+      <div id="search">
+            <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+               <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+            </form>
+            <a href="#" id="search_image">
+            </a>
+    </div>
+    <if condition="$islogin eq 1">
+          <div id="message">
+              <a href="#" id="message_image"></a>
+              <div id="m_num">5</div>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#">{$userName}</a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <else/>
+      <div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>
+    </if>
+
+    </div>
+    <div id="viewport">
+        <div class="minilayer overview-map" id="minilayer overview-map" style="top:35px;">
+            <div class="minicanvas" id="minicanvas" style="height:800px;">
+                <div class="town-sketch">
+                    <a href="{:U('League/Index/map')}/left/-400/top/-200" id="fmap_area_1" class="sprite-area" style="top:30px;left:320px;">科学技术区</a>
+                    <a href="{:U('League/Index/map')}/left/-90/top/-495" id="fmap_area_2" class="sprite-area" style="top:150px;left:175px;">体育健身区</a>
+                    <a href="{:U('League/Index/map')}/left/-800/top/-470" id="fmap_area_3" class="sprite-area" style="top:140px;left:450px;">文化艺术区</a>
+                    <a href="{:U('League/Index/map')}/left/-500/top/-765" id="fmap_area_4" class="sprite-area" style="top:273px;left:322px;">文学传媒区</a>
+                    <a href="{:U('League/Index/map')}/left/-160/top/-1200" id="fmap_area_5" class="sprite-area" style="top:406px;left:172px;">学生会专区</a>
+                    <a href="{:U('League/Index/map')}/left/-820/top/-1150" id="fmap_area_6" class="sprite-area" style="top:415px;left:442px;">志愿服务区</a>
+                    <html>
+                </div>
+            </div>
+        </div>
+        <div class="app-sidebar" id="app-sidebar" style="right:0px;top:35px;">
+            <div class="box" id="box" style="height:100%;width:249px;">
+                <div class="hd">
+                    <div id="newclub">新入住社团</div>
+                    <a id="pageup" class="more"></a>
+                    <a id="pagedown" class="more"></a>
+                </div>
+                <div class="bd">
+                    <ul id="ul" style="left:0px;">
+                        <li>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                        <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">                  
+                                <a href="#" class="club_name">社团社团社团1</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团2</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                            <div class="club">
+                                <a href="#" class="club_name">社团社团社团3</a>
+                                <a href="#" class="attention">
+                                    <div class="attention_img"></div>
+                                    <div class="attention_text">关注</div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="toggle-appsidebar" id="toggle-appsidebar" title="隐藏/显示侧边栏（快捷键：i）"></a>
+        </div>
+    </div>  
+</body>
+
+</html>

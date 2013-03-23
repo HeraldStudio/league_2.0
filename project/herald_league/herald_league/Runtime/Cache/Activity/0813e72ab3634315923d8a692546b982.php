@@ -138,40 +138,40 @@ $(function(){
 <body>
 	<div id="main">
 		<div id="header">
-			<a  href ="__APP__" id="logo">
-			</a>
-			<div id="navigation">
-				<div id="herald" class="navigation_link">
-					<a href="#" >先声</a>
-				</div>
-				<div id="map" class="navigation_link">
-					<a href="#" >社团</a>
-				</div>
-				<div id="wall" class="navigation_link">
-					<a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
-				</div>
-			</div>
-			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
-		<?php if($islogin == 1): ?><div id="message">
-							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
-					</div>
-					<div id="love">
-							<a href="#" id="love_image"></a>
-					</div>
-			
-			<div id="user"><a href="#"><?php echo ($userName); ?></a></div>
-			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
-		<?php else: ?>
-			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+      <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="<?php echo U('League/Index');?>" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+        </div>
+      </div>
+      <div id="search">
+            <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+               <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+            </form>
+            <a href="#" id="search_image">
+            </a>
+    </div>
+    <?php if($islogin == 1): ?><div id="message">
+              <a href="#" id="message_image"></a>
+              <div id="m_num">5</div>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <?php else: ?>
+      <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
 
-		</div>
+    </div>
 		<div id="main_body">
 			<div id="main_body_inner">
 				<div id="inner_left">
