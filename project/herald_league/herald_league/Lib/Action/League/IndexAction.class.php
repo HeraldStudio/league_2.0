@@ -56,6 +56,7 @@ class IndexAction extends Action {
         return $m;
      }
     //ONLY FOR INIT,
+    //Will delet all data from league && street
      public function init()
      {
         $this->initStreet();
