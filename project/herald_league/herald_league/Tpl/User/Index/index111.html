@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,6 +25,8 @@ a:hover {
 </style>
 </head>
 <body>
+
+
   <div id="main">
     <div id="header">
 	  <div id="logo">
@@ -66,40 +68,26 @@ a:hover {
 	    <div id="inner_left">
 		  <div id="left_content1">
 		    <div id="left_content1_inner">
-		    <?php if(empty($userinfo['nick_name'])): ?><div id="username">
-			  	<?php echo ($userinfo["true_name"]); ?>
+			  <div id="username">赵亮
 			  </div>
-			  <?php else: ?>
-			  <div id="username">
-			  	<?php echo ($userinfo["nick_name"]); ?>
-			  </div><?php endif; ?>
-			  <a id="edit" href="#">
-			  	编辑
+			  <a id="edit" href="#">编辑
 			  </a>
-			   <a id="touxiang" href="#">
-			   	<img src="__Uploads__/Avatar/l_<?php echo ($userinfo["user_avatar_add"]); ?>">
+			   <a id="touxiang" href="#"><img src="../images/big.jpg">
 			  </a>
 			  <div id="personal_information">
-			     <div id="name" class="information">
-			    	姓名：<?php echo ($userinfo["true_name"]); ?>
+			    <div id="name" class="information">姓名：
 				</div>
-				<div id="school" class="information">
-					学院：<?php echo ($userinfo["user_college"]); ?>
+				<div id="school" class="information">学院：
 				</div>
-				<div id="time" class="information">
-					入学年份：
+				<div id="time" class="information">入学年份：
 				</div>
-				<div id="phone" class="information">
-					手机：<?php echo ($userinfo["user_phone"]); ?>
+				<div id="phone" class="information">手机：
 				</div>
-				<div id="qq" class="information">
-					qq：<?php echo ($userinfo["user_qq"]); ?>
+				<div id="qq" class="information">qq：
 				</div>
-				<div id="email" class="information">
-					Email：<?php echo ($userinfo["user_mail"]); ?>
+				<div id="email" class="information">Email：
 				</div>
-				<div id="qianming" class="information">
-					个人签名：
+				<div id="qianming" class="information">个人签名：
 				</div>
 			  </div>
 			</div>
@@ -107,8 +95,7 @@ a:hover {
 		  <div id="left_content2">
 		    <div id="left_content2_inner">
 			  <div id="top">
-			    <div id="interest_title">
-			    	猜你感兴趣...
+			    <div id="interest_title">猜你感兴趣...
 			    </div>
 			    <ul class="tabs">
 	              <li><a href="#">活动</a></li><!--存放每个页面的名称-->
@@ -160,53 +147,175 @@ a:hover {
             <!-- tab "panes" -->
               <div class="panes2">
 	            <div>
-	            <?php if(is_array($leagueinfo)): $i = 0; $__LIST__ = $leagueinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div id="remark<?php echo ($i+2); ?>" class="remark">
-			        <div id="user_img<?php echo ($i+2); ?>" class="user_img">
-			        	<img src="__Uploads__/Avatar/m_<?php echo ($vo["avater_address"]); ?>" alt="" />
+				  <div id="remark3" class="remark">
+			        <div id="user_img3" class="user_img"><img src="../images/small.jpg" alt="" />
 				    </div>
-				    <div id="remark_content<?php echo ($i+2); ?>" class="remark_content">
-				      <div id="top<?php echo ($i+2); ?>" class="top">
-				        <div id="username<?php echo ($i+2); ?>" class="username">
-				        	<?php echo ($vo["league_name"]); ?>
+				    <div id="remark_content3" class="remark_content">
+				      <div id="top3" class="top">
+				        <div id="username3" class="username">东南大学先声网
 					    </div>
 				      </div>
-				      <div id="middle<?php echo ($i+2); ?>" class="middle">
-				        <?php echo ($vo["attentionnum"]); ?>个关注者
+				      <div id="middle3" class="middle">
+				        100个关注者
 				      </div>
-				      <div id="bottom<?php echo ($i+2); ?>" class="bottom">
+				      <div id="bottom3" class="bottom">
 					    <ul>
-					    <?php if(is_array($lastactivity)): foreach($lastactivity as $key=>$va): if(($key) == $vo["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ve): $mod = ($i % 2 );++$i;?><li>
-			              	 	<a href="#"><?php echo ($ve["activity_name"]); ?></a>
-			              	 </li><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?> 
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
 			            </ul>
 				      </div>
 				    </div>
-			      </div><?php endforeach; endif; else: echo "" ;endif; ?>
-				</div><!--存放每个页面的内容-->
-	            <div>
-				  <?php if(is_array($activityinfo)): $i = 0; $__LIST__ = $activityinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vac): $mod = ($i % 2 );++$i; if(!empty($vac['id'])): ?><div id="activity<?php echo ($i+2); ?>" class="remark">
-				    <div id="left<?php echo ($i+2); ?>" class="left">
-			          <div id="club_img<?php echo ($i+2); ?>" class="user_img">
-			          	<img src="__Uploads__/Avatar/m_<?php echo ($vac["leagueavatar"]); ?>">
-				      </div>
-					  <div id="clubname<?php echo ($i+2); ?>" class="clubname">
-					  	<?php echo ($vac["activity_org_name"]); ?>
-					  </div>
-					</div>
-				    <div id="activity_content<?php echo ($i+2); ?>" class="remark_content">
-				      <div id="atop<?php echo ($i+2); ?>" class="top">
-				        <div id="activityname<?php echo ($i+2); ?>" class="username">
-				        	<?php echo ($vac["activity_name"]); ?>
+			      </div>
+				   <div id="remark4" class="remark">
+			        <div id="user_img4" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content4" class="remark_content">
+				      <div id="top4" class="top">
+				        <div id="username4" class="username">东南大学先声网
 					    </div>
 				      </div>
-				      <div id="amiddle<?php echo ($i+2); ?>" class="middle">
-				        【<?php echo ($vac["activitystate"]); ?>】   <?php echo ($vac["attentionnum"]); ?>个关注者
+				      <div id="middle4" class="middle">
+				        100个关注者
 				      </div>
-				      <div id="abottom{i+2}" class="bottom">
-					    <?php echo ($vac["activity_introduce"]); ?>
+				      <div id="bottom4" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
 				      </div>
 				    </div>
-			      </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+			      </div>
+				  <div id="remark5" class="remark">
+			        <div id="user_img5" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content5" class="remark_content">
+				      <div id="top5" class="top">
+				        <div id="username5" class="username">东南大学先声网
+					    </div>
+				      </div>
+				      <div id="middle5" class="middle">
+				        100个关注者
+				      </div>
+				      <div id="bottom5" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
+				      </div>
+				    </div>
+			      </div>
+				  <div id="remark6" class="remark">
+			        <div id="user_img6" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content6" class="remark_content">
+				      <div id="top6" class="top">
+				        <div id="username6" class="username">东南大学先声网
+					    </div>
+				      </div>
+				      <div id="middle6" class="middle">
+				        100个关注者
+				      </div>
+				      <div id="bottom6" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
+				      </div>
+				    </div>
+			      </div>
+				  <div id="remark7" class="remark">
+			        <div id="user_img7" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content7" class="remark_content">
+				      <div id="top7" class="top">
+				        <div id="username7" class="username">东南大学先声网
+					    </div>
+				      </div>
+				      <div id="middle7" class="middle">
+				        100个关注者
+				      </div>
+				      <div id="bottom7" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
+				      </div>
+				    </div>
+			      </div>
+				  <div id="remark8" class="remark">
+			        <div id="user_img8" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content8" class="remark_content">
+				      <div id="top8" class="top">
+				        <div id="username5" class="username">东南大学先声网
+					    </div>
+				      </div>
+				      <div id="middle8" class="middle">
+				        100个关注者
+				      </div>
+				      <div id="bottom8" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
+				      </div>
+				    </div>
+			      </div>
+				  <div id="remark9" class="remark">
+			        <div id="user_img9" class="user_img"><img src="../images/small.jpg" alt="" />
+				    </div>
+				    <div id="remark_content9" class="remark_content">
+				      <div id="top9" class="top">
+				        <div id="username9" class="username">东南大学先声网
+					    </div>
+				      </div>
+				      <div id="middle9" class="middle">
+				        100个关注者
+				      </div>
+				      <div id="bottom9" class="bottom">
+					    <ul>
+			              <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+				          <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</a></li>
+			            </ul>
+				      </div>
+				    </div>
+			      </div>
+				</div><!--存放每个页面的内容-->
+	            <div>
+				  <div id="activity3" class="remark">
+				    <div id="left3" class="left">
+			          <div id="club_img3" class="user_img"><img src="../images/small.jpg" alt="" />
+				      </div>
+					  <div id="clubname3" class="clubname">东南大学先声网
+					  </div>
+					</div>
+				    <div id="activity_content3" class="remark_content">
+				      <div id="atop3" class="top">
+				        <div id="activityname3" class="username">先声之夜
+					    </div>
+				      </div>
+				      <div id="amiddle3" class="middle">
+				        【未开始】   100个关注者
+				      </div>
+				      <div id="abottom3" class="bottom">
+					    <p>活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情活动详情</p>
+				      </div>
+				    </div>
+			      </div>
 				</div><!--存放每个页面的内容-->
 				<div>
 				  <div id="liuyan3" class="remark">
@@ -389,5 +498,5 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-</body>
+<body>
 </html>

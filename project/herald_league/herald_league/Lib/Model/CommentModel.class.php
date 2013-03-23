@@ -79,20 +79,29 @@ class CommentModel extends Model
 	    	$activity = array();
 	    	foreach ( $comment as $comments ) 
 	    	{
-	    		switch ($comments['commed_type']) {
-	    			case 1: case 2:
-	    				array_push($leagueanduserzone, $comments);
-	    				break;
-	    			case 3:
-	    				array_push($picture, $comments);
-	    				break;
-	    			case 5:
-	    				array_push($activity, $comments);
-	    				break;
+	    		$data['answered_id'] = $comments['comming_id'];
+	    		$data['answered_type'] = $comments['comming_type'];
+	    		$data['comment_id'] = $comments['id'];
+	    		//如果检测到有回复
+
+	    		$Answer = D('Answer');
+	    		if($Answer -> where($data) -> select())
+	    		{
+		    		switch ($comments['commed_type']) 
+		    		{
+		    			case 1: case 2:
+		    				array_push($leagueanduserzone, $comments);
+		    				break;
+		    			case 3:
+		    				array_push($picture, $comments);
+		    				break;
+		    			case 5:
+		    				array_push($activity, $comments);
+		    				break;
+		    		}
 	    		}
 	    	}
-	    	//print_r($leagueanduserzone);
-	    	return array( $leagueanduserzone, $album, $picture, $activity);
+	    	return array( $leagueanduserzone, $picture, $activity);
 	    }
 	}
 

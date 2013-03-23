@@ -12,103 +12,112 @@
 */
 class ActivityAction extends Action
 {//todo use field 输出的时候还要过滤？
-		public function detail()
+	public function detail()
+	{
+
+		$heraldSession = D('UserSessionControl'); //控制会话
+		if($heraldSession->isLogin())
 		{
-
-				$heraldSession = D('UserSessionControl'); //控制会话
-				if($heraldSession->isLogin())
-				{
-						$this->assign('islogin',1);
-						$this->assign('userName',$heraldSession->getUserName());
-						$uid=$heraldSession->getUserID();
-				}
-				else{
-					$uid = 0;
-				}
-				$activityID =intval( $this ->_param('activityid') ); //获取url参数
-				$activity = D('Activity');
-				$activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
-				
-				if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
-				{
-						$this->error('你所查找的活动不存在');
-				}
-				else
-				{
-						$activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
-						if(!is_file('../Uploads/LeaguePost/Large/'.$activityInf['activity_post_add']))
-								$activityInf['activity_post_add']='default.jpg';
-						$this->assign('activityInf',$activityInf);
-						if($activityInf['is_vote'] != 0 )//是投票
-						{
-								$this->assign('isvote',true);
-								$vote = D('Vote');
-								$VoteResult = D('VoteResult');
-								$voteResult = $vote->getVoteResult($activityID);
-								if(is_array($voteResult))
-								{
-										foreach($voteResult as $n=>$v)
-										{
-												if($uid==null || !$VoteResult -> isvoted($uid,$v['id']) )
-												{
-														$voteResult[$n]['isvoted']=0;
-												}
-												else
-												{
-														$voteResult[$n]['isvoted']=1;
-												}
-										}
-								}
-
-								$this->assign('voteResult',$voteResult);
-						}
-						$attender = $activity->getAttender($activityID);
-						if($attender==NULL)
-						{
-								 $this->assign('isattended',0);
-						}
-						else if(!$heraldSession->isLogin() )
-						{
-								$this->assign('isattended',0);
-						}
-						else
-						{
-								foreach ($attender as &$a)
-								{
-										if( !file_exists ('../Uploads/UserAvatar/'.$a['user_avatar_add']) )
-										{
-												$a['user_avatar_add'] = 'default.jpg';
-										}
-										if($a['id']==$uid)
-										{
-												$this->assign('isattended',1);
-												break;
-										}
-										else
-										{
-												$this->assign('isattended',0);
-										}
-
-								}
-						}
-						$class    = $activity->getClass($activityID);
-						$this->assign('class',$class);
-						$this->assign('attender',$attender);
-						if(date("Y-m-d",strtotime($activityInf['start_time']))<date("Y-m-d"))
-								$this->assign('isstart',1);
-						if(date("Y-m-d",strtotime($activityInf['end_time']))<date("Y-m-d"))
-								$this->assign('isend',1);
-						$this->assign('uid',$uid);
-
-						
-						
-
-						$this->assign('intrest',$activity->getInterest($activityID));
-
-
-						$this->display();
-				}
+			$this->assign('islogin',1);
+			$this->assign('userName',$heraldSession->getUserName());
+			$uid=$heraldSession->getUserID();
 		}
+		else
+		{
+			$uid = 0;
+		}
+		$activityID =intval( $this ->_param('activityid') ); //获取url参数
+		$activity = D('Activity');
+		$activityInf = $activity->getActivityInfoById($activityID); //读取主键为$activityID值的数据
+		
+		if($activityInf == null || $activityInf == false)  //找不到 或者 查询失败
+		{
+			$this->error('你所查找的活动不存在');
+		}
+		else
+		{
+			$activity->where(array('id'=>$activityID))->setInc('activity_count',1);//点击量加一
+			if(!is_file('../Uploads/LeaguePost/Large/'.$activityInf['activity_post_add']))
+					$activityInf['activity_post_add']='default.jpg';
+			$this->assign('activityInf',$activityInf);
+			if($activityInf['is_vote'] != 0 )//是投票
+			{
+				$this->assign('isvote',true);
+				$vote = D('Vote');
+				$VoteResult = D('VoteResult');
+				$voteResult = $vote->getVoteResult($activityID);
+				if(is_array($voteResult))
+				{
+						foreach($voteResult as $n=>$v)
+						{
+								if($uid==null || !$VoteResult -> isvoted($uid,$v['id']) )
+								{
+										$voteResult[$n]['isvoted']=0;
+								}
+								else
+								{
+										$voteResult[$n]['isvoted']=1;
+								}
+						}
+				}
+
+				$this->assign('voteResult',$voteResult);
+			}
+			$attender = $activity->getAttender($activityID);
+			if($attender==NULL)
+			{
+				$this->assign('isattended',0);
+			}
+			else if(!$heraldSession->isLogin() )
+			{
+				$this->assign('isattended',0);
+			}
+			else
+			{
+				foreach ($attender as &$a)
+				{
+					if( !file_exists ('../Uploads/UserAvatar/'.$a['user_avatar_add']) )
+					{
+							$a['user_avatar_add'] = 'default.jpg';
+					}
+					if($a['id']==$uid)
+					{
+							$this->assign('isattended',1);
+							break;
+					}
+					else
+					{
+							$this->assign('isattended',0);
+					}
+				}
+			}
+			$class = $activity->getClass($activityID);
+			$this->assign('class',$class);
+			$this->assign('attender',$attender);
+			if(date("Y-m-d",strtotime($activityInf['start_time']))<date("Y-m-d"))
+					$this->assign('isstart',1);
+			if(date("Y-m-d",strtotime($activityInf['end_time']))<date("Y-m-d"))
+					$this->assign('isend',1);
+			$this->assign('uid',$uid);
+			$this->assign('intrest',$activity->getInterest($activityID));
+			//交流区
+			$this -> getCommentAndAnswer( $activityID, "activity");
+
+			$this->display();
+		}
+	}
+	public function getCommentAndAnswer( $commentid, $commenttype )
+    {
+    	//获取评论信息
+		$Comment = D ( 'Comment' );
+		$comment = $Comment -> getCommentedInfo( $commentid, $Comment -> getCommentedType($commenttype) );
+		
+		$Answer = D( 'Answer' );
+		$answer = $Answer -> getAnswerInfo( $comment );
+		
+		$this -> assign( 'comment', $comment );
+		$this -> assign( 'answer', $answer );
+    }
 		public function changeAttention()
 		{
 				/*
