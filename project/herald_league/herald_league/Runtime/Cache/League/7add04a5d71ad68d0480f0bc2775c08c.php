@@ -33,7 +33,7 @@ p span{float:left;color:#ccc;font-size:12px;line-height:25px;padding-left:5px;}
 -->
 </style>
 <script type="text/javascript">
-$(function(){
+$(document).ready(function(){
         function maxLimit(){
                 var num=$(this).val().substr(0,140);
                 $(this).val(num);
@@ -48,6 +48,9 @@ $(function(){
         });
 		 $(".btn_replay_3").click(function(){
                 $("#textlimit1").addClass("focus").next().show();
+                $("#textlimit1")[0].focus();
+                $("#textlimit1").val("回复"+$.trim($("#username_3").html())+" : ");
+                $("#hidden").val($("#answer_hidden").val());
                 if($("#textlimit1").val() == $(".textlimit1").attr("title")){
                         $("#textlimit1").val("");
                 }
@@ -62,7 +65,21 @@ $(function(){
                         $(this).val($(this).attr("title"));
                 }
         });
-		
+});
+$(document).ready(function(){
+	$("#submitanswer").click(function(){
+		$.ajax({
+			url:'<?php echo U('addAnswer');?>',
+			type: 'post',
+			dataType:'html',
+			data:'data='+$("#hidden").val()+'&content='+$("#textlimit1").val(),
+			success:function(data){
+				//alert(data);
+				//document.write(data);
+				location.reload();//todo
+			}
+		})
+	});
 });
 </script>
 </head>
@@ -79,58 +96,75 @@ $(function(){
 			  </div>
 			</div>
 			<div id="left4">
-			   <?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div id="remark">
-			    <div id="user_img">
+			  <div id="remark_3" class="remark1">
+			   	<?php if(!empty($comment)): if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div id="user_img_3" class="user_img">
 			    	<img src="__Uploads__/Avatar/m_<?php echo (getcommenteravatar($vc['comming_id']*10+$vc['comming_type'])); ?>" alt="" />
 				</div>
-				<div id="remark_content">
-				  <div id="top">
-				    <div id="username">
-				    	<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>
+					<div id="remark_content_3" class="remark_content1">
+					  <div id="top_3" class="top1">
+					  	<input type="hidden" id = "answer_hidden" value = "<?php echo ($vc['id']); ?>/<?php echo ($vc['comming_id']); ?>/<?php echo ($vc['comming_type']); ?>"></input>
+					    <div id="username_3" class="username1">
+					    	<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>
+						</div>
+						<div id="remark_time_3" class="remark_time">
+							<pre><?php echo ($vc["comment_date"]); ?>  <?php echo ($vc["comment_time"]); ?></pre>
+						</div>
+					  </div>
+					  <div id="middle_3" class="middle1">
+					    <p style="display:block;">
+					       <?php echo ($vc["content"]); ?>
+					    </p>
+					  </div>
+					  <div id="bottom_3" class="bottom1">
+					      <a class="btn_replay_3" href = "javascript:void(0);">回复</a>
+					  </div>
 					</div>
-					<div id="remark_time">
-						<pre><?php echo ($vc["comment_date"]); ?>  <?php echo ($vc["comment_time"]); ?></pre>
-					</div>
-				  </div>
-				  <div id="middle">
-				    <p style="display:block;">
-				    	<?php echo ($vc["content"]); ?>
-				    </p>
-				  </div>
-				   <div id="remark_3" class="remark1">
 				   	<?php if(is_array($answer)): foreach($answer as $vak=>$va): if(($vak) == $vc["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vae): $mod = ($i % 2 );++$i;?><div id="user_img_3" class="user_img">
-			          	<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vae['answering_id']*10+$vae['answering_type'])); ?>" alt="" />
-				      </div>
-				      <div id="remark_content_3" class="remark_content1">
-				        <div id="top_3" class="top1">
-				          <div id="username_3" class="username1">
-				          	<?php echo (getcommentername($vae['answering_id']*10+$vae['answering_type'])); ?>
-					      </div>
-					      <div id="remark_time_3" class="remark_time">
-					      	<pre><?php echo ($vae['answer_date']); ?> <?php echo ($vae['answer_time']); ?></pre>
-					      </div>
-				        </div>
-				        <div id="middle_3" class="middle1">
-				          <p style="display:block;">
-				          	<?php echo ($vae["content"]); ?>
-				          </p>
-				        </div>
-				        <div id="bottom_3" class="bottom1">
-				          <button class="btn_replay_3">回复</button>
-				        </div>
-				      </div><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?>
-			        </div>
-					<div class="layout">
-                    <div class="box">
-                    <textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
-                    <p>
-                        <input class="input-button" type="button" value="回复" />
-                        <span class="textCount">0/140</span>
-                    </p>
-                    </div>
-                    </div>
-				</div>
-			  </div><?php endforeach; endif; else: echo "" ;endif; ?>
+								<img src="__Uploads__/Avatar/m_<?php echo (getcommenteravatar($vae['answering_id']*10+$vae['answering_type'])); ?>" alt="" />
+								</div>
+								<div id="remark_content_3" class="remark_content1">
+									<div id="top_3" class="top1">
+										<input type="hidden" id = "answer_hidden" value = "<?php echo ($vc['id']); ?>/<?php echo ($va['answering_id']); ?>/<?php echo ($va['answering_type']); ?>"></input>
+										<div id="username_3" class="username1">
+											<?php echo (getcommentername($vae['answering_id']*10+$vae['answering_type'])); ?>
+										</div>
+										<div id="remark_time_3" class="remark_time">
+											<pre><?php echo ($vae['answer_date']); ?> <?php echo ($vae['answer_time']); ?></pre>
+										</div>
+									</div>
+									<div id="middle_3" class="middle1">
+									<p style="display:block;">
+										<?php echo ($vae["content"]); ?>
+									</p>
+									</div>
+									<div id="bottom_3" class="bottom1">
+										<a class="btn_replay_3" href = "javascript:void(0);">回复</a>
+									</div>
+								</div><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; endforeach; endif; else: echo "" ;endif; ?>
+		        </div>
+			<div class="layout">
+                <div class="box">
+                	<textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="说点什么吧..."></textarea>
+	                <p>
+	                	<input id = "hidden"type = "hidden" name = "subdata_a" value = "<?php echo ($pictureid); ?>/<?php echo ($type); ?>/comment" />
+	                    <input class="input-button" name = "submit" type="submit" id = "submitanswer" value="回复" />
+	                    <span class="textCount">0/140</span>
+	                </p>
+                </div>
+            </div>
+			<?php else: ?>
+			<br/>
+			<div class="layout">
+                <div class="box">
+                <textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="说点什么吧..."></textarea>
+                <p>
+                	<input id = "hidden"type = "hidden" name = "subdata_a" value = "<?php echo ($activityid); ?>/<?php echo ($type); ?>/comment" />
+                    <input class="input-button" name = "submit" type="submit" id = "submitanswer" value="提交" />
+                    <span class="textCount">0/140</span>
+                </p>
+                </div>
+            </div><?php endif; ?>
+			</div>
 			</div>
 		  </div> 
 		</div>

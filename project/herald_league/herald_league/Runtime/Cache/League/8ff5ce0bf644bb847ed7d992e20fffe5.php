@@ -74,15 +74,14 @@ a:hover {
 				</div>
 			</div>
 			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
+				<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+			</div>
 		<?php if($islogin == 1): ?><div id="message">
 							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
+							<div id="m_num"><?php echo ($newAnswerAndComment); ?></div>
 					</div>
 					<div id="love">
 							<a href="#" id="love_image"></a>
@@ -139,7 +138,9 @@ a:hover {
 				<div id="right4">
 				  <ul>
 				  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><li>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>"><?php echo ($vi["activity_name"]); ?></a>
+			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
+			    			<?php echo ($vi["activity_name"]); ?>
+			    		</a>
 			    	</li><?php endforeach; endif; else: echo "" ;endif; ?>
 				  </ul>
 				</div>
@@ -252,6 +253,12 @@ a:hover {
 		<div id="wall3">
 		</div>
   		<a id="arrow3" href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>" title="返回大厅">
+		</a><?php break;?>
+  	<?php case "zpq": ?><div id="door2">
+		</div>
+		<div id="wall3">
+		</div>
+  		<a id="arrow3" href="__APP__/League/Home/club/title/yxg/leagueid/<?php echo ($leagueid); ?>" title="回到相册">
 		</a><?php break; endswitch;?>
   <div id="danganshi_biaoti">
   	<?php echo ($title); ?>

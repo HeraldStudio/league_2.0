@@ -55,12 +55,18 @@ class IndexAction extends Action
             $this->assign('islogin',1);
             $this->assign('userName',$heraldSession->getUserName());
             $uid=$heraldSession->getUserID();
+            $Comment = D('Comment');
+		 	$newCommentNum = $Comment -> getNewCommentNum($uid, $Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+	
+		 	$Answer = D('Answer'); 
+		 	$newAnswerNum = $Answer -> getNewAnswerNum($uid,$Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+			
+		 	$this -> newAnswerAndComment = $newCommentNum + $newAnswerNum;
         }
         else
         {
             $uid = 0;
         }
-
 		$this -> display();
     }
 

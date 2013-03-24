@@ -68,7 +68,7 @@
 	padding-top:4px;
 	float:left;
 	}
-#search input{
+#search_text{
     width:180px;
 	height:17px;
 	float:left;
@@ -79,6 +79,8 @@
 	width:23px;
 	height:20px;
 	margin-left:-25px;
+	border: 0;
+	text-indent:-3000px;
 	float:left;
 	}
 #message{

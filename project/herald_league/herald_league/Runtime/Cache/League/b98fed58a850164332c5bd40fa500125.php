@@ -74,15 +74,14 @@ a:hover {
 				</div>
 			</div>
 			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
+				<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+			</div>
 		<?php if($islogin == 1): ?><div id="message">
-							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
+						<a href="#" id="message_image"></a>
+						<?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
 					</div>
 					<div id="love">
 							<a href="#" id="love_image"></a>
@@ -97,7 +96,7 @@ a:hover {
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">
-		<?php if($isactivityempty): ?><h1 style = "margin: 100px;">该社团尚未添加活动，这里需要前台做一个替换页面</h1>
+		<?php if($isactivityempty): ?><img src = "__Public__/Images/noactivity.jpg"/>
 		<?php else: ?>
 		  <?php switch($gettitle): case "zls": ?><iframe name="i" src="__APP__/League/Home/infoRoom/leagueid/<?php echo ($leagueid); ?>" id = 'zls'></iframe>
 				<div id="inner_right">

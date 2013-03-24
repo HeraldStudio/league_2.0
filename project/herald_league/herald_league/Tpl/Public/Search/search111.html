@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索结果</title>
+<link href="__Public__/Css/search.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
+<script src="__Public__/Js/jquery.tools.min.js"></script>  
+  <!-- standalone page styling (can be removed) -->
+<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
+<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
+<style type="text/css">
+a:link {
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+a:hover {
+	color: #34c5c3;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+	  <div id="logo">
+	  </div>
+	  <div id="navigation">
+		<div id="herald" class="navigation_link">
+		  <a href="#" >先声</a>
+		</div>
+		<div id="map" class="navigation_link">
+		  <a href="#" >社团</a>
+		</div>
+	    <div id="activity" class="navigation_link">
+     	  <a href="#" >活动</a>
+		</div>
+		<div id="wall" class="navigation_link">
+		  <a href="#" >海报墙</a>
+		</div>
+	  </div>
+	 <div id="search">
+	  	<form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+			 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+			 <input type = "submit" value = "搜索" id="search_image">
+		</form>
+	  </div>
+	  <div id="message">
+	    <a href="#" id="message_image"></a>
+	  </div>
+	  <div id="love">
+	    <a href="#" id="love_image"></a>
+	  </div>
+	  <div id="user"><a href="#">赵亮</a></div>
+	  <div id="exit"><a href="#">退出</a></div>
+	</div>
+	<div id="main_body">
+	   <div id="main_body_inner">
+	     <div id="inner_top">
+		   <div id="top_inner">
+		   <div id="search_logo">
+		   </div>
+		   <div id="search2">
+		      <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+	            <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+		      </form>
+			  <a href="#" id="search_btn">
+			    <div id="search_image2">
+				</div>
+		      </a>
+		   </div>
+		   </div>
+		 </div>
+		 <div id="inner_bottom">
+		   <div id="bottom_left">
+		     <ul class="tabs3">
+			    <li><a href="#">全部</a></li><!--存放每个页面的名称-->
+	            <li><a href="#">活动</a></li><!--存放每个页面的名称-->
+	            <li><a href="#">社团</a></li>
+             </ul>
+		   </div>
+		   <div id="bottom_right">
+            <!-- tab "panes" -->
+            
+           <div class="panes3">
+	         <div>
+	         	<if condition = "$isresultempty">
+	         		搜索结果为空
+		   		<else />
+	         	<volist name = "league" id = "vl">
+			    <div id="aactivity{$i+2}" class="remark">
+				    <div id="aleft{$i+2}" class="left">
+			          <div id="aclub_img{$i+2}" class="user_img">
+			          	<img src="__Uploads__/LeagueAvatar/m_{$vl.avater_address}" alt="" />
+				      </div>
+					  <div id="aclubname{$i+2}" class="clubname">
+					  	{$vl.league_name}
+					  </div>
+					</div>
+				    <div id="aactivity_content{$i+2}" class="remark_content">
+				      <div id="atop3" class="top">
+				        <div id="aactivityname{$i+2}" class="username">
+				        	{$vl.league_name}
+					    </div>
+				      </div>
+				      <div id="amiddle{$i+2}" class="middle">
+				        	{$vl.attentednum}个关注者
+				      </div>
+				      <div id="abottom{$i+2}" class="bottom">
+					    {$vl.league_introduce}
+				      </div>
+				    </div>
+			    </div>
+				</volist>
+				<volist name = "activity" id = "va">
+				<div id="aactivity{$i+3}" class="remark">
+				    <div id="aleft{$i+3}" class="left">
+			          <div id="aclub_img{$i+3}" class="user_img">
+			          	<img src="__Uploads__/LeagueAvatar/m_{$va.leagueavatar}" alt="" />
+				      </div>
+					  <div id="aclubname{$i+3}" class="clubname">
+					  	{$va.leaguename}
+					  </div>
+					</div>
+				    <div id="aactivity_content{$i+3}" class="remark_content">
+				      <div id="atop{$i+3}" class="top">
+				        <div id="aactivityname{$i+3}" class="username">
+				        	{$va.activity_name}
+					    </div>
+				      </div>
+				      <div id="amiddle{$i+3}" class="middle">
+				        【{$va.acitvitystate}】   {$va.attentednum}个关注者
+				      </div>
+				      <div id="abottom{$i+3}" class="bottom">
+					    {$va.activity_introduce}
+				      </div>
+				    </div>
+			    </div>
+			    </volist>
+				</if>
+			 </div>
+			 <div>
+			 	<notempty name = "activity">
+			 	<volist name = "activity" id = "vae">
+			    <div id="bactivity{$i+2}" class="remark">
+				    <div id="bleft{$i+2}" class="left">
+			          <div id="bclub_img{$i+2}" class="user_img">
+			          	<img src="__Uploads__/LeagueAvatar/m_{$va.leagueavatar}" alt="" />
+				      </div>
+					  <div id="bclubname{$i+2}" class="clubname">
+					  	{$vae.leaguename}
+					  </div>
+					</div>
+				    <div id="bactivity_content{$i+2}" class="remark_content">
+				      <div id="btop{$i+2}" class="top">
+				        <div id="bactivityname{$i+2}" class="username">
+				        	{$vae.activity_name}
+					    </div>
+				      </div>
+				      <div id="bmiddle{$i+2}" class="middle">
+				        【{$vae.acitvitystate}】   {$vae.attentednum}个关注者
+				      </div>
+				      <div id="bbottom{$i+2}" class="bottom">
+					    {$vae.activity_introduce}
+				      </div>
+				    </div>
+			    </div>
+			    </volist>
+			    <else />
+			 搜索活动为空
+			</notempty>
+			 </div>
+			 <div>
+			 	<notempty name = "league">
+			 	<volist name = "league" id = "vle">
+			    <div id="cactivity{$i+2}" class="remark">
+				    <div id="cleft{$i+2}" class="left">
+			          <div id="cclub_img{$i+2}" class="user_img">
+			          	<img src="__Uploads__/LeagueAvatar/m_{$vle.avater_address}" alt="" />
+				      </div>
+					  <div id="cclubname{$i+2}" class="clubname">
+					  	{$vle.league_name}
+					  </div>
+					</div>
+				    <div id="cactivity_content{$i+2}" class="remark_content">
+				      <div id="ctop{$i+2}" class="top">
+				        <div id="cactivityname{$i+2}" class="username">
+				        	{$vle.league_name}
+					    </div>
+				      </div>
+				      <div id="cmiddle{$i+2}" class="middle">
+				        {$vl.attentednum}个关注者
+				      </div>
+				      <div id="cbottom{$i+2}" class="bottom">
+					    {$vle.league_introduce}
+				      </div>
+				    </div>
+			    </div>
+			    </volist>
+			    <else />
+			 搜索社团为空
+			    </notempty>
+			 </div>
+		   </div>
+		 </div>
+		 </div>
+	   </div>
+	</div>
+	<div id="footer">
+	  <div id="footer_link">
+	    <a href="#" id="f_about" class="link">关于我们</a>
+		<a href="#" id="f_contact" class="link">联系我们</a>
+		<a href="#" id="f_join" class="link">加入我们</a>
+	  </div>
+	  <div id="footer_text">
+      <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
+	  </div>
+	</div>
+  </div>
+<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+<script>
+// perform JavaScript after the document is scriptable.
+$(function() {
+    // setup ul.tabs to work as tabs for each div directly under div.panes
+    $("ul.tabs3").tabs("div.panes3 > div");
+});
+$(function() {
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs3").tabs("#abottom"+i);
+	    $("ul.tabs3").tabs("#amiddle"+i);
+	    $("ul.tabs3").tabs("#aactivityname"+i);
+	    $("ul.tabs3").tabs("#atop"+i);
+	    $("ul.tabs3").tabs("#aactivity_content"+i);
+		$("ul.tabs3").tabs("#aclubname"+i);
+	    $("ul.tabs3").tabs("#aclub_img"+i);
+		$("ul.tabs3").tabs("#aleft"+i);
+        $("ul.tabs3").tabs("#aactivity"+i);
+	    $("ul.tabs3").tabs("div.panes3 > div");
+		}
+    });
+	$(function() {
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs3").tabs("#bbottom"+i);
+	    $("ul.tabs3").tabs("#bmiddle"+i);
+	    $("ul.tabs3").tabs("#bactivityname"+i);
+	    $("ul.tabs3").tabs("#btop"+i);
+	    $("ul.tabs3").tabs("#bactivity_content"+i);
+		$("ul.tabs3").tabs("#bclubname"+i);
+	    $("ul.tabs3").tabs("#bclub_img"+i);
+		$("ul.tabs3").tabs("#bleft"+i);
+        $("ul.tabs3").tabs("#bactivity"+i);
+	    $("ul.tabs3").tabs("div.panes3 > div");
+		}
+    });
+		$(function() {
+		for(var i=3;i<10;i++){
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+		$("ul.tabs3").tabs("#cbottom"+i);
+	    $("ul.tabs3").tabs("#cmiddle"+i);
+	    $("ul.tabs3").tabs("#cactivityname"+i);
+	    $("ul.tabs3").tabs("#ctop"+i);
+	    $("ul.tabs3").tabs("#cactivity_content"+i);
+		$("ul.tabs3").tabs("#cclubname"+i);
+	    $("ul.tabs3").tabs("#cclub_img"+i);
+		$("ul.tabs3").tabs("#cleft"+i);
+        $("ul.tabs3").tabs("#cactivity"+i);
+	    $("ul.tabs3").tabs("div.panes3 > div");
+		}
+    });
+</script>
+   <script type="text/javascript">
+   window.onscroll=function()
+   {
+   		var top=document.documentElement.scrollTop||document.body.scrollTop;
+		var toTop=document.getElementById("toTop");
+   		if(top>400)
+		{
+			toTop.style.display="inline";
+		}
+		else
+		{
+			toTop.style.display="none";
+		}
+   };
+   var toTop=new function()
+   {
+   		var Timer=null;
+   		function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+		this.goto=function(objName)
+		{
+			$id(objName).onclick=function()
+			{
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				startNove();
+				return false;
+			};
+			var startNove=function()
+			{
+				if(Timer)clearInterval(Timer);
+				Timer=setInterval(doMove,30);
+			};
+			var doMove=function()
+			{
+				var iSpeed=0;
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				iSpeed=(0-top)/5;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+				if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+				{
+					clearInterval(Timer);
+					Timer=null;
+				}
+				window.scrollTo(0,(top+iSpeed));
+			};
+		};
+   };
+   toTop.goto("toTop");
+   </script>
+<body>
+</html>

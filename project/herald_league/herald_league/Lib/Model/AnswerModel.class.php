@@ -105,5 +105,12 @@ class AnswerModel extends Model
             return "error";
         }
     }
+    public function getNewAnswerNum( $answeredid, $answeredtype )
+    {
+    	$data['answered_id'] = $answeredid;
+    	$data['answered_type'] = $answeredtype;
+    	$data['is_new'] = 1;
+    	return $this -> where($data) -> count();
+    }
 }
 ?>

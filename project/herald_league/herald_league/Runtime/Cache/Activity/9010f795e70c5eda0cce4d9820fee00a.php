@@ -155,10 +155,7 @@ a:hover {
 						<a href="http://herald.seu.edu.cn" >先声首页</a>
 					</div>
 					 <div id="map" class="navigation_link">
-						<a href="<?php echo U('League/Home/');?>" >社团地图</a>
-					</div>
-					 <div id="activity" class="navigation_link">
-						<a href="#" >活动信息</a>
+						<a href="<?php echo U('League/Index');?>" >社团地图</a>
 					</div>
 					 <div id="wall" class="navigation_link">
 						<a href="<?php echo U('Activity/Activity/wall');?>" >海报墙</a>
@@ -225,11 +222,11 @@ a:hover {
 				<div id="main_body_bottom_right">
 					<div id="right_inner">
 						<div id="search">
-							<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-								<input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+							<form   method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search" onsubmit="checkInput('searchkey','关键字','请输入关键字')">
+								<input name = "search_text" id ="search_text"type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+							<input type = "submit" value = "" id="search_image">
 							</form>
-							<a href="#" id="search_image">
-							</a>
+							
 						</div>
 						<div id="hot_biaoqian" class="hot">
 							<div id="hot_biaoqian_title" class="hot_title">

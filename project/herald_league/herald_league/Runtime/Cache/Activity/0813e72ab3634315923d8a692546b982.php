@@ -14,14 +14,14 @@
 <script type="text/javascript">
  function logout()
 {
-		$.ajax({
-			url:'<?php echo U('/Public/Logout/');?>',
-			success:function(){
-			$("#islogin").hide();
-			$("#notlogin").show();
-			location.reload();//todo
-			}
-		})
+	$.ajax({
+		url:'<?php echo U('/Public/Logout/');?>',
+		success:function(){
+		$("#islogin").hide();
+		$("#notlogin").show();
+		location.reload();//todo
+		}
+	})
 }
 </script>
 <script type="text/javascript">
@@ -138,43 +138,39 @@ $(function(){
 <body>
 	<div id="main">
 		<div id="header">
-			<div id="logo">
-			</div>
-			<div id="navigation">
-				<div id="herald" class="navigation_link">
-					<a href="#" >先声</a>
-				</div>
-				<div id="map" class="navigation_link">
-					<a href="#" >社团</a>
-				</div>
-				<div id="activity" class="navigation_link">
-					 <a href="__APP__" >活动</a>
-				</div>
-				<div id="wall" class="navigation_link">
-					<a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
-				</div>
-			</div>
-			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
-		<?php if($islogin == 1): ?><div id="message">
-							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
-					</div>
-					<div id="love">
-							<a href="#" id="love_image"></a>
-					</div>
-			
-			<div id="user"><a href="#"><?php echo ($userName); ?></a></div>
-			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
-		<?php else: ?>
-			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+      <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="<?php echo U('League/Index');?>" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+        </div>
+      </div>
+      <div id="search">
+            <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+    </div>
+    <?php if($islogin == 1): ?><div id="message">
+              <a href="#" id="message_image"></a>
+              <div id="m_num">5</div>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <?php else: ?>
+      <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
 
-		</div>
+    </div>
 		<div id="main_body">
 			<div id="main_body_inner">
 				<div id="inner_left">
@@ -256,109 +252,59 @@ $(function(){
 							</div>
 						</div>
 						<div id="left4">
-							<div id="remark">
-					<div id="user_img"><img src="../images/small.jpg" alt="" />
+						<?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vc): $mod = ($i % 2 );++$i;?><div id="remark">
+								<div id="user_img">
+									<img src="__Uploads__/Avatar/m_<?php echo (getcommenteravatar($vc['comming_id']*10+$vc['comming_type'])); ?>" alt="" />
 								</div>
 								<div id="remark_content">
 									<div id="top">
-										<div id="username">赵亮
+										<div id="username">
+											<?php echo (getcommentername($vc['comming_id']*10+$vc['comming_type'])); ?>
 										</div>
-										<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
-										</div>
-									</div>
-									<div id="middle">
-						<p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-							 形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-							 同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
-						</p>
-					 <div class="layout">
-										<div class="box">
-										<textarea name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
-										<p>
-												<input class="input-button" type="button" value="回复" />
-												<span class="textCount">0/140</span>
-										</p>
-										</div>
-										</div>
-					</div>
-				</div>
-				</div>
-				 <div id="remark">
-					<div id="user_img"><img src="../images/small.jpg" alt="" />
-				</div>
-				<div id="remark_content">
-					<div id="top">
-						<div id="username">赵亮
-					</div>
-					<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
-					</div>
-					</div>
-					<div id="middle">
-						<p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-							 形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-							 同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
-						</p>
-					 <div class="layout">
-										<div class="box">
-										<textarea name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
-										<p>
-												<input class="input-button" type="button" value="回复" />
-												<span class="textCount">0/140</span>
-										</p>
-									</div>
-										</div>
-										<a href="#" id="btn_replay">回复</a>
-									</div>
-								</div>
-							</div>
-							 <div id="remark">
-								<div id="user_img"><img src="__ROOT__/Public/images/small.jpg" alt="" />
-								</div>
-								<div id="remark_content">
-									<div id="top">
-										<div id="username">赵亮
-										</div>
-										<div id="remark_time"><pre>2012-12-22  12:12:12</pre>
+										<div id="remark_time">
+											<pre><?php echo ($vc["comment_date"]); ?>  <?php echo ($vc["comment_time"]); ?></pre>
 										</div>
 									</div>
 									<div id="middle">
-						<p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-											 形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-											 同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
+										<p style="display:block;">
+											<?php echo ($vc["content"]); ?>
 										</p>
 									</div>
-					 <div id="remark_3" class="remark1">
-								<div id="user_img_3" class="user_img"><img src="../images/small.jpg" alt="" />
-							</div>
-							<div id="remark_content_3" class="remark_content1">
-								<div id="top_3" class="top1">
-									<div id="username_3" class="username1">赵亮
-								</div>
-								<div id="remark_time_3" class="remark_time"><pre>2012-12-22  12:12:12</pre>
-								</div>
-								</div>
-								<div id="middle_3" class="middle1">
-									<p style="display:block;">本站通过聚合各团体组织信息、活动信息，
-										 形成一个可以满足团体组织宣传自身、宣传所办活动需求的平台，
-										 同时吸引在校师生，满足他们便捷获取校园活动信息、团体组织信息的需求。
-									</p>
-								</div>
-								<div id="bottom_3" class="bottom1">
-									<button class="btn_replay_3">回复</button>
-								</div>
-							</div>
-								</div>
-					<div class="layout">
+									<div id="remark_3" class="remark1">
+									<?php if(is_array($answer)): foreach($answer as $vak=>$va): if(($vak) == $vc["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vae): $mod = ($i % 2 );++$i;?><div id="user_img_3" class="user_img">
+											<img src="__Uploads__/Avatar/s_<?php echo (getcommenteravatar($vae['answering_id']*10+$vae['answering_type'])); ?>" alt="" />
+										</div>
+										<div id="remark_content_3" class="remark_content1">
+											<div id="top_3" class="top1">
+												<div id="username_3" class="username1">
+													<?php echo (getcommentername($vae['answering_id']*10+$vae['answering_type'])); ?>
+												</div>
+												<div id="remark_time_3" class="remark_time">
+													<pre><?php echo ($vae['answer_date']); ?> <?php echo ($vae['answer_time']); ?></pre>
+												</div>
+											</div>
+											<div id="middle_3" class="middle1">
+												<p style="display:block;">
+													<?php echo ($vae["content"]); ?>
+												</p>
+											</div>
+											<div id="bottom_3" class="bottom1">
+												<button class="btn_replay_3">回复</button>
+											</div>
+										</div><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?>
+									</div>
+									<div class="layout">
 										<div class="box">
-										<textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复"></textarea>
+										<textarea  id="textlimit1" name="textarea" class="textlimit" cols="45" rows="1" placeholder="添加回复">
+										</textarea>
 										<p>
-												<input class="input-button" type="button" value="回复" />
-												<span class="textCount">0/140</span>
+											<input class="input-button" type="button" value="回复" />
+											<span class="textCount">0/140</span>
 										</p>
 										</div>
-										</div>
+									</div>
 								</div>
-							</div>
+							</div><?php endforeach; endif; else: echo "" ;endif; ?>
 						</div>
 					</div> 
 				</div>

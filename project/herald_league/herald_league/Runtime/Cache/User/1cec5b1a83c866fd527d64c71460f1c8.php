@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -7,6 +7,12 @@
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+	frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+	frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 <script src="__Public__/Js/jquery.tools.min.js"></script>  
   <!-- standalone page styling (can be removed) -->
 <link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
@@ -25,41 +31,41 @@ a:hover {
 </style>
 </head>
 <body>
+
+
   <div id="main">
     <div id="header">
-	  <div id="logo">
-	  </div>
-	  <div id="navigation">
-		<div id="herald" class="navigation_link">
-		  <a href="#" >先声</a>
-		</div>
-		<div id="map" class="navigation_link">
-		  <a href="#" >社团</a>
-		</div>
-	    <div id="activity" class="navigation_link">
-     	  <a href="#" >活动</a>
-		</div>
-		<div id="wall" class="navigation_link">
-		  <a href="#" >海报墙</a>
-		</div>
-	  </div>
+	  <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="<?php echo U('League/Index');?>" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+        </div>
+      </div>
 	  <div id="search">
-	    <form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-	      <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+	    <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
 		</form>
-		<a href="#" id="search_image">
-		</a>
 	  </div>
-	  <div id="message">
-	    <a href="#" id="message_image"></a>
-		<div id="m_num">5</div>
-	  </div>
-	  <div id="love">
-	    <a href="#" id="love_image"></a>
-		<div id="g_num">55</div>
-	  </div>
-	  <div id="user"><a href="#">赵亮</a></div>
-	  <div id="exit"><a href="#">退出</a></div>
+	  <?php if($islogin == 1): ?><div id="message">
+              <a href="#" id="message_image"></a>
+              <?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <?php else: ?>
+      <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
 	</div>
 	<div id="main_body">
 	  <div id="main_body_inner">
@@ -107,8 +113,7 @@ a:hover {
 		  <div id="left_content2">
 		    <div id="left_content2_inner">
 			  <div id="top">
-			    <div id="interest_title">
-			    	猜你感兴趣...
+			    <div id="interest_title">猜你感兴趣...
 			    </div>
 			    <ul class="tabs">
 	              <li><a href="#">活动</a></li><!--存放每个页面的名称-->
@@ -208,7 +213,7 @@ a:hover {
 				    </div>
 			      </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 				</div><!--存放每个页面的内容-->
-				<div>
+				<<div>
 				  <div id="liuyan3" class="remark">
 				    <div id="bleft3" class="left">
 			          <div id="bclub_img3" class="user_img"><img src="../images/small.jpg" alt="" />
@@ -389,5 +394,5 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-</body>
+<body>
 </html>

@@ -1,0 +1,75 @@
+  
+
+
+
+
+#menu a, #menu a:visited {
+  text-decoration:none; 
+  font-size:14px;
+  background-color:skyblue; 
+  color:#0066cc; 
+  display:block; 
+  width:10em; 
+  height:1.5em; 
+  border-bottom:1px solid #fff;  
+  border-right:1px solid #000; 
+  padding:0.5em;
+  }
+
+#menu a:hover {
+     border-bottom:1px solid #000; 
+     color:black;
+	 background-color:#FFFF66; 
+  }
+.app-sidebar {
+	z-index: 2;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	color: #333;
+	border: 1px solid #bfb9ac;
+	border-width: 1px 0 0 1px;
+	-moz-box-shadow: 0 0 10px #d9d0bb;
+	-webkit-box-shadow: 0 0 10px #d9d0bb;
+	box-shadow: 0 0 10px #d9d0bb;
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+.app-sidebar .box {
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 6px;
+	-moz-transition: width 400ms ease-in-out;
+	-webkit-transition: width 400ms ease-in-out;
+	-ms-transition: width 400ms ease-in-out;
+	-o-transition: width 400ms ease-in-out;
+}
+.toggle-appsidebar {
+	position: absolute;
+	top: 35px;
+	left: -23px;
+	display: block;
+	cursor: pointer;
+	width: 21px;
+	height: 35px;
+	background: #fff url(../Images/sidebar.png) no-repeat 0 3px;
+	border: 1px solid #bfb9ac;
+	border-width: 1px 0 1px 1px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-box-shadow: -1px 0 2px #d9d0bb;
+	-webkit-box-shadow: -1px 0 2px #d9d0bb;
+	box-shadow: -1px 0 2px #d9d0bb;
+	-moz-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-webkit-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-ms-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-o-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+}  

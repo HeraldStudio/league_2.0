@@ -138,11 +138,12 @@ class CommentModel extends Model
 		$data_c['comming_type'] = $commingtype;
 		$data_c['commed_id'] = $commedid;
 		$data_c['commed_type'] = $commedtype;
-		$data_c['content'] = htmlencode( $postdata['content_c'] );
+		$data_c['content'] = htmlencode( $postdata['content'] );
 		
 		if( $this->create() ) 
 		{
-            return $this -> add($data_c);
+          	return $this -> add($data_c);
+          	//return "success";
         }
         else
         {
@@ -169,6 +170,14 @@ class CommentModel extends Model
     	$Commenttype = M('CommentedType');
     	$commenttypeid = $Commenttype -> getFieldByType( $commenttypename, 'id' );
     	return $commenttypeid;
+    }
+
+    public function getNewCommentNum($commedid,$commedtype)
+    {
+    	$data['commed_id'] = $commedid;
+    	$data['commed_type'] = $commedtype;
+    	$data['is_new'] = 1;
+    	return $this -> where($data) ->count();
     }
 }
 

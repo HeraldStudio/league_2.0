@@ -1,0 +1,911 @@
+<html>  
+<head>
+<title>社团地图--东南大学先声网</title> 
+<link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/map.css" /> 
+<link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/club.css" />
+<link href="__ROOT__/Public/Css/header.css" rel="stylesheet">
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+        frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+        frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
+<script type="text/javascript">
+ function logout()
+{
+  $.ajax({
+    url:'{:U('/Public/Logout/')}',
+    success:function(){
+    $("#islogin").hide();
+    $("#notlogin").show();
+    location.reload();//todo
+    }
+  })
+}
+</script>
+<style type="text/css"> 
+
+body   
+{
+    font-size:12px;
+    color:#333333;
+    border : 0px solid blue;
+    scroll="no";
+    overflow:-Scroll;
+    overflow-y:hidden;
+    overflow:-Scroll;
+    overflow-x:hidden;
+    background: url('__ROOT__/Public/Images/backk.png');
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}  
+
+a:link {
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+a:hover {
+    color: #34c5c3;
+}
+
+
+
+.name{
+    background-color:#eb8040;
+    font-size:small;
+    color:#FFFFFF;
+    font-family:"微软雅黑", "宋体", serif;
+    text-align:center;
+}
+
+.c{
+    background-image:url(__ROOT__/Public/Images/c1.png);
+    background-repeat:no-repeat;
+    background-position:50% 100%;
+    font-family:"微软雅黑", "宋体", serif;
+    font-size:13;
+    text-align:center;
+    cursor:pointer;
+  }
+
+.dian{
+    background-image:url(__ROOT__/Public/Images/dian.png);
+} 
+ 
+.huang{
+     background-color:#fdfe85;
+}
+
+.bai{
+     background-color:white;
+}
+
+.dis{
+    background-image:url(__ROOT__/Public/Images/dis.png);
+    
+    font-size:1;
+}
+
+
+
+
+
+
+
+.jdname{
+     Line-height:33px; 
+     font-size:16px;
+     font-family:"微软雅黑", "宋体", serif
+}
+
+.jdname2{
+     letter-spacing:17px;
+     font-size:16px;
+     font-family:"微软雅黑", "宋体", serif
+}
+
+.jdname3{
+     letter-spacing:13px;
+     font-size:14px;
+     font-family:"微软雅黑", "宋体", serif
+}
+
+.jdname4{
+     Line-height:33px; 
+     font-size:14px;
+     font-family:"微软雅黑", "宋体", serif
+}
+
+</style>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>  
+<body ondragstart='return false' onselectstart ='return false' onload="xuxian();">  
+
+<script language="javascript">
+    var flag = true;
+    window.onload = function() {
+        var combox = document.getElementById("app-sidebar");
+        var cli_on = document.getElementById("toggle-appsidebar");
+        var map = document.getElementById("Maxmap");
+        var canvas = document.getElementById("mapx");
+        
+        var timer = null, initime = null, r_len = 0;
+    
+    
+    
+        cli_on.onmouseover = function(){
+            cli_on.style.left = "-31px";
+        }
+        cli_on.onmouseout = function(){
+            cli_on.style.width = "22px";
+            cli_on.style.left = "-24px";    
+        }
+        cli_on.onclick = sidebar;
+        document.onkeydown = function() {
+            event.keyCode == 73 ? sidebar() : null;
+         }
+
+        
+        function sidebar() {
+        
+            clearTimeout(initime);
+           
+            if (flag) {
+    
+                r_len = 0;
+                timer = setInterval(slideright, 10);
+            } else {
+    
+                r_len = -245;
+                timer = setInterval(slideleft, 10);
+            }
+        }
+        
+        function slideright() {
+            cli_on.style.backgroundPosition = "-33px";
+            if (r_len <= -245) {
+                clearInterval(timer);
+                flag = !flag;
+                return false;
+            } else {
+                r_len -= 35;
+                combox.style.right = r_len + 'px';
+            }
+        }
+    
+        function slideleft() {
+            cli_on.style.backgroundPosition = "0px";
+            if (r_len >= 0) {
+                clearInterval(timer);
+                flag = !flag;
+                return false;
+            } else {
+                r_len += 35;
+                combox.style.right = r_len + 'px';
+            }
+        }
+        
+        initime = setTimeout("cli_on.click()", 3000);
+    }
+
+
+    
+</script>
+
+<script language="javascript">
+    var ie=document.all;
+    var nn6=document.getElementById && !document.all;
+    var isdrag=false;
+    var x,y;
+    var dobj;
+    
+        function movemouse(e){
+        if (isdrag){
+            w=document.body.clientWidth;
+            h=document.body.clientHeight;
+            canvasw=parseInt(document.getElementById("mapx").style.width);
+            
+            dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y;
+
+            if(parseInt(dobj.style.top+0)>0){
+                dobj.style.top = '0px';
+            }
+
+            if(parseInt(dobj.style.top+0)<h-2270){
+                dobj.style.top=''+(h-2270)+'px';
+            }
+            if(canvasw<3250){
+                dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x;
+                if(parseInt(dobj.style.left+0)<canvasw-3200){
+                    dobj.style.left=''+(canvasw-3200)+'px';
+                }
+                if(parseInt(dobj.style.left+0)>0){
+                    dobj.style.left = '0px';
+                }
+            }
+            return false;
+        }
+    }
+
+    function selectmouse(e){
+        var fobj = nn6 ? e.target : event.srcElement;
+        var topelement = nn6 ? "HTML" : "BODY";
+        while (fobj.tagName != topelement  &&  fobj.className != "town-sketch"){
+            fobj = nn6 ? fobj.parentNode : fobj.parentElement;
+        }
+        if (fobj.className=="town-sketch"){
+            isdrag = true;
+            dobj = fobj;
+            tx = parseInt(dobj.style.left+0);
+            ty = parseInt(dobj.style.top+0);
+            x = nn6 ? e.clientX : event.clientX;
+            y = nn6 ? e.clientY : event.clientY;
+            document.onmousemove=movemouse;
+            return false;
+        }
+
+    }
+    document.onmousedown=selectmouse;
+    document.onmouseup=new Function("isdrag=false");
+</script>
+
+<script><!--show-->
+ var ys=null;
+ function show2(obj)
+ {
+  ys=obj.style.background;
+  obj.style.backgroundColor="#FFFF66";
+ }
+ function noshow2(obj)
+ {
+  obj.style.backgroundColor=ys;
+ }
+</script>
+
+<script><!--换背景图片-->
+
+var ys=null;
+function show(obj)
+{
+    ys=obj.style.backgroundImage;
+    obj.style.backgroundImage='url(__ROOT__/Public/Images/c2.png)';
+}
+function noshow(obj)
+{
+    obj.style.backgroundImage=ys;
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+        function click_a(divDisplay)
+        {
+            if(document.getElementById(divDisplay).style.display != "block")
+            {
+                document.getElementById(divDisplay).style.display = "block";
+            }
+            else
+            {
+                document.getElementById(divDisplay).style.display = "none";
+            }
+        }
+</script>
+
+<script>
+    function display(div)
+  {
+  n=new Array();
+   n[1]="dis1";
+   n[2]="dis2";
+   n[3]="dis3";
+   n[4]="dis4";
+   n[5]="dis5";
+   n[6]="dis6";
+   
+   for (i=1;i<7;i++)
+   {
+
+   if(div==n[i])
+   {
+   
+    document.getElementById(n[i]).style.display = "block";
+
+    }
+    else
+    {
+    document.getElementById(n[i]).style.display = "none";
+    }
+    }
+    
+  }
+</script>
+    
+<script>
+    function display2(div)
+  {
+  n=new Array();
+   n[1]="Cdis1";
+   n[2]="Cdis2";
+   n[3]="Cdis3";
+   n[4]="Cdis4";
+   n[5]="Cdis5";
+   n[6]="Cdis6";
+   
+   for (i=1;i<7;i++)
+   {
+
+   if(div==n[i])
+   {
+   
+    document.getElementById(n[i]).style.display = "block";
+
+    }
+    else
+    {
+    document.getElementById(n[i]).style.display = "none";
+    }
+    }
+    
+  }
+</script>
+    
+<script language="javascript">
+
+  function xuxian()
+   {
+
+    w=document.body.offsetWidth/2;
+    h=document.body.offsetHeight/2;
+   
+    t1=getAbsPoint(s18);
+    t2=getAbsPoint(s22);
+    t3=getAbsPoint(s39);
+    t4=getAbsPoint(s20);
+    t5=getAbsPoint(s57);
+    t6=getAbsPoint(s68);
+    var dis=new Array();
+   dis[1]=(t1[1]-w)*(t1[1]-w)+(t1[2]-h)*(t1[2]-h);
+   dis[2]=(t2[1]-w)*(t2[1]-w)+(t2[2]-h)*(t2[2]-h);
+   dis[3]=(t3[1]-w)*(t3[1]-w)+(t3[2]-h)*(t3[2]-h);
+   dis[4]=(t4[1]-w)*(t4[1]-w)+(t4[2]-h)*(t4[2]-h);
+   dis[5]=(t5[1]-w)*(t5[1]-w)+(t5[2]-h)*(t5[2]-h);
+   dis[6]=(t6[1]-w)*(t6[1]-w)+(t6[2]-h)*(t6[2]-h);
+   
+   flag=1;
+   mindis=dis[1];
+   for(i=1;i<7;++i)
+   {
+     if(dis[i]<mindis)
+        {
+           flag=i;
+           mindis=dis[i];
+        }
+   }  
+
+   switch(flag)
+   {
+   case 1:
+        display("dis1");
+        display2("Cdis1");
+        break;
+    case 2:
+        display("dis2");
+        display2("Cdis2");
+        break;
+    case 3:
+        display("dis3");
+        display2("Cdis3");
+        break;
+    case 4:
+        display("dis4");
+        display2("Cdis4");
+        break;
+    case 5:
+        display("dis5");
+        display2("Cdis5");
+        break;
+    case 6:
+        display("dis6");
+        display2("Cdis6");
+        break;
+    
+   }
+   
+    
+ 
+
+   }
+</script>
+
+<script>    
+function   getAbsPoint(e)  
+{  
+  
+    var x=new Array();
+    x[1]=e.offsetLeft;
+    x[2]=e.offsetTop;
+    while(e=e.offsetParent)
+    {
+       x[1]   +=   e.offsetLeft;  
+       x[2]   +=   e.offsetTop;
+    }
+    //alert("x:"+x+","+"y:"+y);
+    return x
+}   
+</script>   
+
+<script>
+ function setsize()
+ {
+    var x = new Array();
+    w=document.body.offsetWidth;
+    h=document.body.offsetHeight;
+    x[1]=w;
+    x[2]=h;
+    alert("width"+x[1]+","+"height"+x[2]);
+ }
+</script>
+
+<script language="javascript" >
+var downx=0;
+var downy=0;
+var upx=0;
+var upy=0;
+function func(event)
+{
+    downx=event.clientX;
+    downy=event.clientY;
+}
+function func22(event) <!------------------------应该是func2------------------------------------------------->
+{
+    upx=event.clientX;
+    upy=event.clientY;
+    if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
+    {
+        window.open("#");
+    }
+}
+
+</script>
+
+
+   
+<div id="Maxmap" >
+
+
+<div id="map2"  style="position:absolute;">
+    
+<div  id= "mapx" class="town-sketch"   onmouseup="xuxian();" onmouseover="xuxian();" style="cursor: move;height:2265px;width:2274px;position:absolute;left:{$left}px;top:{$top}px;"> 
+ 
+ <div id="dis1" style="display:none;position:absolute;left:371px;top:531px;background-image:url(__ROOT__/Public/Images/sport.png);width:573px;height:653px;"></div>
+ <div id="dis2" style="display:none;position:absolute;left:750px;top:258px;background-image:url(__ROOT__/Public/Images/science.png);width:564px;height:563px;"></div>
+ <div id="dis3" style="display:none;position:absolute;left:1100px;top:530px;background-image:url(__ROOT__/Public/Images/art.png);width:577px;height:574px;"></div>
+ <div id="dis4" style="display:none;position:absolute;left:380;top:1188px;background-image:url(__ROOT__/Public/Images/stu.png);width:756px;height:751px;"></div>
+ <div id="dis5" style="display:none;position:absolute;left:730;top:815px;background-image:url(__ROOT__/Public/Images/lit.png);width:684px;height:642px;"></div>
+ <div id="dis6" style="display:none;position:absolute;left:958;top:1178px;background-image:url(__ROOT__/Public/Images/vol.png);width:833px;height:655px;"></div> 
+   
+
+  <div class="bai"  style="position:absolute;left:0px;top:168px;width:2274px;height:16px;" ></div> 
+  <div class="bai"  style="position:absolute;left:0px;top:735px;width:2274px;height:16px;" ></div>
+  <div class="bai"  style="position:absolute;left:0px;top:1319px;width:2274px;height:16px;" ></div>
+  <div class="bai"  style="position:absolute;left:0px;top:1880px;width:2274px;height:16px;" ></div>
+  
+  <div class="bai"  style="position:absolute;left:188px;top:0px;width:16px;height:2265px;" ></div> 
+  <div class="bai"  style="position:absolute;left:695px;top:0px;width:16px;height:2265px;" ></div>
+  <div class="bai"  style="position:absolute;left:1354px;top:0px;width:16px;height:2265px;" ></div>
+  <div class="bai"  style="position:absolute;left:1860px;top:0px;width:16px;height:2265px;" ></div>
+  
+  <div class="bai"  style="position:absolute;left:20px;top:20px;width:16px;height:156px;" ></div>
+  <div class="bai"  style="position:absolute;left:522px;top:20px;width:16px;height:156px;" ></div>
+  <div class="bai"  style="position:absolute;left:1025px;top:20px;width:16px;height:156px;" ></div>
+  <div class="bai"  style="position:absolute;left:1185px;top:20px;width:16px;height:156px;" ></div>
+  <div class="bai"  style="position:absolute;left:1690px;top:20px;width:16px;height:156px;" ></div>
+  <div class="bai"  style="position:absolute;left:2190px;top:20px;width:16px;height:156px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:522px;top:340px;width:16px;height:398px;" ></div>
+ <div class="bai"  style="position:absolute;left:1025px;top:340px;width:16px;height:398px;" ></div>
+ <div class="bai"  style="position:absolute;left:1690px;top:340px;width:16px;height:398px;" ></div>
+ <div class="bai"  style="position:absolute;left:2190px;top:340px;width:16px;height:398px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:522px;top:905px;width:16px;height:415px;" ></div>
+ <div class="bai"  style="position:absolute;left:1025px;top:905px;width:16px;height:415px;" ></div>
+ <div class="bai"  style="position:absolute;left:1690px;top:905px;width:16px;height:415px;" ></div>
+ <div class="bai"  style="position:absolute;left:2190px;top:905px;width:16px;height:415px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:522px;top:1490px;width:16px;height:395px;" ></div>
+ <div class="bai"  style="position:absolute;left:1025px;top:1490px;width:16px;height:395px;" ></div>
+ <div class="bai"  style="position:absolute;left:1690px;top:1490px;width:16px;height:395px;" ></div>
+ <div class="bai"  style="position:absolute;left:2190px;top:1490px;width:16px;height:395px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:522px;top:2055px;width:16px;height:210px;" ></div>
+ <div class="bai"  style="position:absolute;left:1025px;top:2055px;width:16px;height:210px;" ></div>
+ <div class="bai"  style="position:absolute;left:1690px;top:2055px;width:16px;height:210px;" ></div>
+ <div class="bai"  style="position:absolute;left:2190px;top:2055px;width:16px;height:210px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:20px;top:508px;width:16px;height:230px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:508px;width:16px;height:230px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:20px;top:1068px;width:16px;height:260px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:1068px;width:16px;height:260px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:20px;top:1658px;width:16px;height:230px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:1658px;width:16px;height:230px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:20px;top:2220px;width:16px;height:45px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:2220px;width:16px;height:45px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:188px;top:340px;width:345px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:695px;top:340px;width:345px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1354px;top:340px;width:345px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1860px;top:340px;width:345px;height:16px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:188px;top:903px;width:350px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:695px;top:903px;width:346px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1354px;top:903px;width:352px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1860px;top:903px;width:346px;height:16px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:188px;top:1483px;width:350px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:695px;top:1483px;width:346px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1354px;top:1483px;width:352px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1860px;top:1483px;width:346px;height:16px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:188px;top:2053px;width:350px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:695px;top:2053px;width:346px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1354px;top:2053px;width:352px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1860px;top:2053px;width:346px;height:16px;" ></div>
+ 
+ <div class="bai"  style="position:absolute;left:20px;top:500px;width:1015px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:500px;width:1015px;height:16px;" ></div>
+ 
+  <div class="bai" style="position:absolute;left:20px;top:1065px;width:1015px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:1065px;width:1015px;height:16px;"></div>
+ 
+ <div class="bai" style="position:absolute;left:20px;top:1650px;width:1015px;height:16px;" ></div>
+ <div class="bai"  style="position:absolute;left:1185px;top:1650px;width:1015px;height:16px;"></div>
+ 
+ <div class="bai" style="position:absolute;left:20px;top:2220px;width:1015px;height:16px;" ></div>
+  <div class="bai"  style="position:absolute;left:1185px;top:2220px;width:1015px;height:16px;"></div>
+
+ <!--bai-->
+ 
+ <!--huang-->
+  <div class="huang"  style="position:absolute;left:0px;top:0px;width:2274px;height:20px;"></div>
+  <div class="huang"  style="position:absolute;left:0px;top:565px;width:2274px;height:20px;"></div>
+  <div class="huang"  style="position:absolute;left:0px;top:1150px;width:2274px;height:20px;"></div>
+  <div class="huang"  style="position:absolute;left:0px;top:1715px;width:2274px;height:20px;"></div>
+  <div class="huang"  style="position:absolute;left:352px;top:0px;width:20px;height:2265px;"></div>
+  <div class="huang"  style="position:absolute;left:854px;top:0px;width:20px;height:2265px;"></div>
+  <div class="huang"  style="position:absolute;left:1518px;top:0px;width:20px;height:2265px;"></div>
+  <div class="huang"  style="position:absolute;left:2020px;top:0px;width:20px;height:2265px;"></div>
+ <!--huang-->
+ 
+  <!--dian-->
+ <div class="dian" style="position:absolute;left:347px;top:560px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:347px;top:1145px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:347px;top:1710px;width:31px;height:29px;"></div>
+ 
+  <div class="dian" style="position:absolute;left:850px;top:560px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:850px;top:1145px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:850px;top:1710px;width:31px;height:29px;"></div>
+
+ <div class="dian" style="position:absolute;left:1514px;top:560px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:1514px;top:1145px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:1514px;top:1710px;width:31px;height:29px;"></div>
+
+  <div class="dian" style="position:absolute;left:2016px;top:560px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:2016px;top:1145px;width:31px;height:29px;"></div>
+ <div class="dian" style="position:absolute;left:2016px;top:1710px;width:31px;height:29px;"></div>
+ <!--dian-->
+ 
+ <!--街道名-->
+
+  <foreach name = "street" item="s">
+    <div class="jdname{$s.street_type|default=''}" style="position:absolute;{$s.location}">{$s.street_name}</div>
+  </foreach> 
+ <!--街道名-->
+
+  <!--板块name-->
+  <div class="name" style="position:absolute;left:580px;top:800px;height:20px;width:68px">体育健身类</div>
+  <div class="name" style="position:absolute;left:1160px;top:420px;height:20px;width:68px">科学技术类</div>
+  <div class="name" style="position:absolute;left:1240px;top:840px;height:20px;width:68px">文化艺术类</div>
+  <div class="name" style="position:absolute;left:1080px;top:1050px;height:20px;width:68px">文学传媒类</div>
+  <div class="name" style="position:absolute;left:1200px;top:1530px;height:20px;width:68px">志愿服务类</div>
+  <div class="name" style="position:absolute;left:760px;top:1555px;height:20px;width:40px">学生会</div>
+  <div class="name" style="position:absolute;left:550px;top:1400px;height:20px;width:68px">科学技术类</div>
+ <!--板块name-->
+<div id="tubiao">
+ <!-- sports-->
+ <foreach name="league" item="l">
+  <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
+<div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}"><p>快来</p><p>抢位置！</p> <a href=# >入住</a></div>  
+  
+
+</foreach>
+ 
+  </div>
+ <!--volunteer-->
+  
+</div>
+  
+  
+
+
+
+
+
+   
+  
+</div>  
+ 
+</div>
+
+</div>
+   
+<div class="app-sidebar" id="app-sidebar" style="position:absolute;top:35px;right:0px;z-index:2">
+            <div class="box" id="box" style="height:100%;width:249px;">
+
+
+    <div id="Cdis1" style="display:none;">
+     <div id="right_content_t">
+            <div id="quname_t">
+               <div id="xxx_t">体育健身类</div>
+               <div id="xxx_t2">体育健身类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_t">
+              <div id="interest_title_t">本区社团
+              </div>
+              <a href="#" id="more_t1" class="more">
+              </a>
+              <a href="#" id="more_t2" class="more">
+              </a>
+              <div id="di_t"></div>
+            </div>
+            <div id="right_t">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="Cdis2" style="display:none;">
+     <div id="right_content_k">
+            <div id="quname_k">
+               <div id="xxx_k">科学技术类</div>
+               <div id="xxx_k2">科学技术类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_k">
+              <div id="interest_title_k">本区社团
+              </div>
+              <a href="#" id="more_k1" class="more">
+              </a>
+              <a href="#" id="more_k2" class="more">
+              </a>
+              <div id="di_k"></div>
+            </div>
+            <div id="right_k">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="Cdis3" style="display:none;">
+     <div id="right_content_w">
+            <div id="quname_w">
+               <div id="xxx_w">文化艺术类</div>
+               <div id="xxx_w2">文化艺术类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_w">
+              <div id="interest_title_w">本区社团
+              </div>
+              <a href="#" id="more_w1" class="more">
+              </a>
+              <a href="#" id="more_w2" class="more">
+              </a>
+              <div id="di_w"></div>
+            </div>
+            <div id="right_w">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!--<div id="Cdis3" style="display:none;">
+     <div id="right_content_w">
+             <div id="quname_w">
+               <div id="xxx_w">文化艺术类</div>
+               <div id="xxx_w2">文化艺术类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_w">
+              <div id="interest_title_w">本区社团
+              </div>
+              <a href="#" id="more_w1" class="more">
+              </a>
+              <a href="#" id="more_w2" class="more">
+              </a>
+              <div id="di_w"></div>
+            </div>
+            <div id="right_w">
+              <ul>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈  </a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+    -->
+    <div id="Cdis4" style="display:none;">
+     <div id="right_content_x">
+            <div id="quname_x">
+               <div id="xxx_x">学生会</div>
+               <div id="xxx_x2">学生会目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_x">
+              <div id="interest_title_x">本区社团
+              </div>
+              <a href="#" id="more_x1" class="more">
+              </a>
+              <a href="#" id="more_x2" class="more">
+              </a>
+              <div id="di_x"></div>
+            </div>
+            <div id="right_x">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="Cdis5" style="display:none;">
+     <div id="right_content_c">
+            <div id="quname_c">
+               <div id="xxx_c">文学传媒类</div>
+               <div id="xxx_c2">文学传媒类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_c">
+              <div id="interest_title_c">本区社团
+              </div>
+              <a href="#" id="more_c1" class="more">
+              </a>
+              <a href="#" id="more_c2" class="more">
+              </a>
+              <div id="di_c"></div>
+            </div>
+            <div id="right_c">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>
+              
+              
+    <div id="Cdis6" style="display:none;">
+     <div id="right_content_z">
+            <div id="quname_z">
+               <div id="xxx_z">志愿服务类</div>
+               <div id="xxx_z2">志愿服务类目前有XX个社团入住.</div>
+            
+            </div>
+            <div id="right3_z">
+              <div id="interest_title_z">本区社团
+              </div>
+              <a href="#" id="more_z1" class="more">
+              </a>
+              <a href="#" id="more_z2" class="more">
+              </a>
+              <div id="di_z"></div>
+            </div>
+            <div id="right_z">
+              <ul>
+                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
+                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
+              </ul>
+            </div>
+        </div>
+    </div>        
+              
+        
+                
+            
+            
+            
+            </div>
+            <a class="toggle-appsidebar" id="toggle-appsidebar" title="隐藏/显示侧边栏（快捷键：i）"></a>
+            
+  </div>
+
+ <div id="header" style="z-index:10000;position:absolute;">
+      <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="{:U('League/Index/index')}" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="{:U('Activity/Activity/wall/')}" >海报墙</a>
+        </div>
+      </div>
+      <div id="search">
+            <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+    </div>
+    <if condition="$islogin eq 1">
+          <div id="message">
+              <a href="#" id="message_image"></a>
+              <div id="m_num">5</div>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#">{$userName}</a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <else/>
+      <div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>
+    </if>
+
+    </div>
+    
+</body>
