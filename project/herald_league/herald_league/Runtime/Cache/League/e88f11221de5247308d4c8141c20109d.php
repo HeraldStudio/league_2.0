@@ -99,7 +99,6 @@ a:hover {
 		  <div id="left_content">
             <div id="left1">
 		      <div id="title"><?php echo ($activity['activity_name']); ?></div>
-			  
               <a class="notattended"<?php if($attentionstate == 1): ?>style= "display:none"<?php endif; ?>href="javascript:void(0)" id="attention" class="notattended"  onclick="javascript:changeActivityAttention(<?php echo ($activity['id']); ?>,'add')">
 			    <div id="attention_img">
 			    </div>

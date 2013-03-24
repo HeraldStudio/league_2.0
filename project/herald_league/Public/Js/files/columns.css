@@ -1,0 +1,10 @@
+
+.clear {
+	height: 15px; clear: both;
+}
+.error {
+	margin: 0px 0px 2px; padding: 2px 6px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+.error em {
+	border-width: 10px; border-style: solid; border-color: rgb(255, 254, 54) transparent transparent; left: 60px; width: 0px; height: 0px; bottom: -21px; display: block; position: absolute;
+}

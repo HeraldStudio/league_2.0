@@ -42,16 +42,21 @@ a{
 .photo_text{
     float:left;
 	padding-top:5px;
-	}
+	width:260px;
+}
 .photo_name{
     float:left;
 	margin-left:30px;
 	color:#a3a4a4;
 	font-family:"微软雅黑", "宋体", serif;
+	width:80px;
+}
+.photo_name a{
+	color:#a3a4a4;
 }
 .photo_num{
     float:left;
-	margin-left:165px;
+	margin-left:125px;
 	color:#a3a4a4;
 	font-family:"微软雅黑", "宋体", serif;
 }

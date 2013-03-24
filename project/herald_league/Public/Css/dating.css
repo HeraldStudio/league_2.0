@@ -265,7 +265,7 @@ li a:visited{
 	list-style-type:none;
 	float:left;
 	width:200px;
-	height:140px;
+	height:40px;
 	border:none;
 }
 #ul2 li a{
@@ -274,4 +274,9 @@ li a:visited{
 	width:170px;
 	height:24px;
 	margin:18px 0 0 15px;
+}
+.act{
+	float:left;
+	width:200px;
+	height:140px;
 }

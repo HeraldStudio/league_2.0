@@ -7,10 +7,10 @@
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 a:link {
-	color: #fff;
+	color:#a3a4a4;
 }
 a:visited {
-	color: #fff;
+	color:#a3a4a4;
 }
 a:hover {
 	color: #34c5c3;
