@@ -131,7 +131,7 @@ a:hover {
 								<a href="javascript:;"  onclick="logout()"  >退出</a>
 							</div>
 							<div id="header_top_text" style="padding-right:20px">
-								<a href="#"  class="name"><?php echo ($name); ?></a>
+								<a href="<?php echo U('/User/Index/index/userid/');?>/<?php echo ($uid); ?>"  class="name"><?php echo ($name); ?></a>
 							</div>
 							<div id="tubiao">
 								<a href="#" id="xinxi"></a>

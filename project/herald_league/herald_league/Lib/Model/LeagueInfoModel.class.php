@@ -220,5 +220,18 @@ class LeagueInfoModel extends Model
     {
         return $this->select();
     }
+
+    /*返回新加入社团
+    */
+    public function getNewLeague()
+    {
+        return $this->field('id,league_name')->order('register_time desc')->where('league_name != null')->limit(30)->select();
+    }
+    /*根据类型返回社团
+    */
+    public function getLeagueByClass($class)
+    {
+        return $this->where(array('league_class'=>$class))->field('id,league_name,avater_address')->select();
+    }
 }
 ?>
