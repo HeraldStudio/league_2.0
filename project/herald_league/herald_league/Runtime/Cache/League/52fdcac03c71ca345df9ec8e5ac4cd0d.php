@@ -23,7 +23,7 @@ a:hover {
 	<div id="main_body">
 	  <div id="top">
 	    <div id="touxiang">
-	    	<img src="__Uploads__/LeagueAvatar/l_<?php echo ($league['avater_address']); ?>" />
+	    	<img src="__Uploads__/Avatar/l_<?php echo ($league['avater_address']); ?>" />
 		</div>
 		<div id="title"><?php echo ($league['league_name']); ?>
 		</div>
