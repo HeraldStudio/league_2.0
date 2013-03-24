@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ($activityInf["activity_name"]); ?>--活动详情</title>
+<title><?php echo ($activityInf["activity_name"]); ?>--活动详情--东南大学先声网</title>
+<link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
 <link href="__ROOT__/Public/Css/activity.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__ROOT__/Public/Css/totop.css" rel="stylesheet" type="text/css" />
@@ -13,14 +14,14 @@
 <script type="text/javascript">
  function logout()
 {
-		$.ajax({
-			url:'<?php echo U('/Public/Logout/');?>',
-			success:function(){
-			$("#islogin").hide();
-			$("#notlogin").show();
-			location.reload();//todo
-			}
-		})
+	$.ajax({
+		url:'<?php echo U('/Public/Logout/');?>',
+		success:function(){
+		$("#islogin").hide();
+		$("#notlogin").show();
+		location.reload();//todo
+		}
+	})
 }
 </script>
 <script type="text/javascript">
@@ -137,43 +138,39 @@ $(function(){
 <body>
 	<div id="main">
 		<div id="header">
-			<div id="logo">
-			</div>
-			<div id="navigation">
-				<div id="herald" class="navigation_link">
-					<a href="#" >先声</a>
-				</div>
-				<div id="map" class="navigation_link">
-					<a href="#" >社团</a>
-				</div>
-				<div id="activity" class="navigation_link">
-					 <a href="__APP__" >活动</a>
-				</div>
-				<div id="wall" class="navigation_link">
-					<a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
-				</div>
-			</div>
-			<div id="search">
-						<form onsubmit="checkInput('searchkey','关键字','请输入关键字')">
-							 <input type="text" value="请输入关键字" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
-						</form>
-						<a href="#" id="search_image">
-						</a>
-		</div>
-		<?php if($islogin == 1): ?><div id="message">
-							<a href="#" id="message_image"></a>
-							<div id="m_num">5</div>
-					</div>
-					<div id="love">
-							<a href="#" id="love_image"></a>
-					</div>
-			
-			<div id="user"><a href="#"><?php echo ($userName); ?></a></div>
-			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
-		<?php else: ?>
-			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+      <a  href ="__APP__" id="logo">
+      </a>
+      <div id="navigation">
+        <div id="herald" class="navigation_link">
+          <a href="http://herald.seu.edu.cn" >先声</a>
+        </div>
+        <div id="map" class="navigation_link">
+          <a href="<?php echo U('League/Index');?>" >社团</a>
+        </div>
+        <div id="wall" class="navigation_link">
+          <a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+        </div>
+      </div>
+      <div id="search">
+            <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+					 <input type = "submit" value = "搜索" id="search_image">
+				</form>
+    </div>
+    <?php if($islogin == 1): ?><div id="message">
+              <a href="#" id="message_image"></a>
+              <div id="m_num">5</div>
+          </div>
+          <div id="love">
+              <a href="#" id="love_image"></a>
+          </div>
+      
+      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+    <?php else: ?>
+      <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
 
-		</div>
+    </div>
 		<div id="main_body">
 			<div id="main_body_inner">
 				<div id="inner_left">

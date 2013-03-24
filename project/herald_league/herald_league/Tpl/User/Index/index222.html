@@ -1,23 +1,20 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>个人主页</title>
+
 <link href="__Public__/Css/personal.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
-<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
-<script type="text/javascript">
-	frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
-	frameContect = new GreyFrame("ContactFrame", 350, 120);
-</script>
-<script src="__Public__/Js/jquery.tools.min.js"></script>  
+
+ 
   <!-- standalone page styling (can be removed) -->
 <link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
 <link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
+<script src="__Public__/Js/jquery.tools.min.js"></script> 
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -29,80 +26,91 @@ a:hover {
 	color: #34c5c3;
 }
 </style>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+	frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+	frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
 </head>
 <body>
-
-
   <div id="main">
     <div id="header">
-	  <a  href ="__APP__" id="logo">
+      <a  href ="__APP__" id="logo">
       </a>
       <div id="navigation">
         <div id="herald" class="navigation_link">
           <a href="http://herald.seu.edu.cn" >先声</a>
         </div>
         <div id="map" class="navigation_link">
-          <a href="<?php echo U('League/Index');?>" >社团</a>
+          <a href="{:U('League/Index')}" >社团</a>
         </div>
         <div id="wall" class="navigation_link">
-          <a href="<?php echo U('Activity/Activity/wall/');?>" >海报墙</a>
+          <a href="{:U('Activity/Activity/wall/')}" >海报墙</a>
         </div>
       </div>
-	  <div id="search">
-	    <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+      <div id="search">
+            <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
 					 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
 					 <input type = "submit" value = "搜索" id="search_image">
-		</form>
-	  </div>
-	  <?php if($islogin == 1): ?><div id="message">
+			</form>
+    </div>
+    <if condition="$islogin eq 1">
+          <div id="message">
               <a href="#" id="message_image"></a>
-              <?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
+              <if condition = "$newAnswerAndComment gt 0">
+				<div id="m_num">{$newAnswerAndComment}</div>
+			  </if>
           </div>
           <div id="love">
               <a href="#" id="love_image"></a>
           </div>
       
-      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="user"><a href="#">{$userName}</a></div>
       <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
-    <?php else: ?>
-      <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
-	</div>
+    <else/>
+      <div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>
+    </if>
+
+    </div>
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="inner_left">
 		  <div id="left_content1">
 		    <div id="left_content1_inner">
-		    <?php if(empty($userinfo['nick_name'])): ?><div id="username">
-			  	<?php echo ($userinfo["true_name"]); ?>
-			  </div>
-			  <?php else: ?>
+		    <empty name = "userinfo['nick_name']">
 			  <div id="username">
-			  	<?php echo ($userinfo["nick_name"]); ?>
-			  </div><?php endif; ?>
+			  	{$userinfo.true_name}
+			  </div>
+			  <else/>
+			  <div id="username">
+			  	{$userinfo.nick_name}
+			  </div>
+			</empty>
 			  <a id="edit" href="#">
 			  	编辑
 			  </a>
 			   <a id="touxiang" href="#">
-			   	<img src="__Uploads__/Avatar/l_<?php echo ($userinfo["user_avatar_add"]); ?>">
+			   	<img src="__Uploads__/Avatar/l_{$userinfo.user_avatar_add}">
 			  </a>
 			  <div id="personal_information">
 			     <div id="name" class="information">
-			    	姓名：<?php echo ($userinfo["true_name"]); ?>
+			    	姓名：{$userinfo.true_name}
 				</div>
 				<div id="school" class="information">
-					学院：<?php echo ($userinfo["user_college"]); ?>
+					学院：{$userinfo.user_college}
 				</div>
 				<div id="time" class="information">
 					入学年份：
 				</div>
 				<div id="phone" class="information">
-					手机：<?php echo ($userinfo["user_phone"]); ?>
+					手机：{$userinfo.user_phone}
 				</div>
 				<div id="qq" class="information">
-					qq：<?php echo ($userinfo["user_qq"]); ?>
+					qq：{$userinfo.user_qq}
 				</div>
 				<div id="email" class="information">
-					Email：<?php echo ($userinfo["user_mail"]); ?>
+					Email：{$userinfo.user_mail}
 				</div>
 				<div id="qianming" class="information">
 					个人签名：
@@ -113,7 +121,8 @@ a:hover {
 		  <div id="left_content2">
 		    <div id="left_content2_inner">
 			  <div id="top">
-			    <div id="interest_title">猜你感兴趣...
+			    <div id="interest_title">
+			    	猜你感兴趣...
 			    </div>
 			    <ul class="tabs">
 	              <li><a href="#">活动</a></li><!--存放每个页面的名称-->
@@ -165,55 +174,67 @@ a:hover {
             <!-- tab "panes" -->
               <div class="panes2">
 	            <div>
-	            <?php if(is_array($leagueinfo)): $i = 0; $__LIST__ = $leagueinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div id="remark<?php echo ($i+2); ?>" class="remark">
-			        <div id="user_img<?php echo ($i+2); ?>" class="user_img">
-			        	<img src="__Uploads__/Avatar/m_<?php echo ($vo["avater_address"]); ?>" alt="" />
+	            <volist name = "leagueinfo" id = "vo">
+				  <div id="remark{$i+2}" class="remark">
+			        <div id="user_img{$i+2}" class="user_img">
+			        	<img src="__Uploads__/Avatar/m_{$vo.avater_address}" alt="" />
 				    </div>
-				    <div id="remark_content<?php echo ($i+2); ?>" class="remark_content">
-				      <div id="top<?php echo ($i+2); ?>" class="top">
-				        <div id="username<?php echo ($i+2); ?>" class="username">
-				        	<?php echo ($vo["league_name"]); ?>
+				    <div id="remark_content{$i+2}" class="remark_content">
+				      <div id="top{$i+2}" class="top">
+				        <div id="username{$i+2}" class="username">
+				        	{$vo.league_name}
 					    </div>
 				      </div>
-				      <div id="middle<?php echo ($i+2); ?>" class="middle">
-				        <?php echo ($vo["attentionnum"]); ?>个关注者
+				      <div id="middle{$i+2}" class="middle">
+				        {$vo.attentionnum}个关注者
 				      </div>
-				      <div id="bottom<?php echo ($i+2); ?>" class="bottom">
+				      <div id="bottom{$i+2}" class="bottom">
 					    <ul>
-					    <?php if(is_array($lastactivity)): foreach($lastactivity as $key=>$va): if(($key) == $vo["id"]): if(is_array($va)): $i = 0; $__LIST__ = $va;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ve): $mod = ($i % 2 );++$i;?><li>
-			              	 	<a href="#"><?php echo ($ve["activity_name"]); ?></a>
-			              	 </li><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; ?> 
+					    <foreach name = "lastactivity" item = "va">
+			              <eq name = "key" value = "$vo.id">
+			              	<volist name = "va" id = "ve">
+			              	 <li>
+			              	 	<a href="#">{$ve.activity_name}</a>
+			              	 </li>
+			                </volist>
+			              </eq>
+			            </foreach> 
 			            </ul>
 				      </div>
 				    </div>
-			      </div><?php endforeach; endif; else: echo "" ;endif; ?>
+			      </div>
+			      </volist>
 				</div><!--存放每个页面的内容-->
 	            <div>
-				  <?php if(is_array($activityinfo)): $i = 0; $__LIST__ = $activityinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vac): $mod = ($i % 2 );++$i; if(!empty($vac['id'])): ?><div id="activity<?php echo ($i+2); ?>" class="remark">
-				    <div id="left<?php echo ($i+2); ?>" class="left">
-			          <div id="club_img<?php echo ($i+2); ?>" class="user_img">
-			          	<img src="__Uploads__/Avatar/m_<?php echo ($vac["leagueavatar"]); ?>">
+				  <volist name = "activityinfo" id = "vac">
+				  <notempty name = "vac['id']">
+				  <div id="activity{$i+2}" class="remark">
+				    <div id="left{$i+2}" class="left">
+			          <div id="club_img{$i+2}" class="user_img">
+			          	<img src="__Uploads__/Avatar/m_{$vac.leagueavatar}">
 				      </div>
-					  <div id="clubname<?php echo ($i+2); ?>" class="clubname">
-					  	<?php echo ($vac["activity_org_name"]); ?>
+					  <div id="clubname{$i+2}" class="clubname">
+					  	{$vac.activity_org_name}
 					  </div>
 					</div>
-				    <div id="activity_content<?php echo ($i+2); ?>" class="remark_content">
-				      <div id="atop<?php echo ($i+2); ?>" class="top">
-				        <div id="activityname<?php echo ($i+2); ?>" class="username">
-				        	<?php echo ($vac["activity_name"]); ?>
+				    <div id="activity_content{$i+2}" class="remark_content">
+				      <div id="atop{$i+2}" class="top">
+				        <div id="activityname{$i+2}" class="username">
+				        	{$vac.activity_name}
 					    </div>
 				      </div>
-				      <div id="amiddle<?php echo ($i+2); ?>" class="middle">
-				        【<?php echo ($vac["activitystate"]); ?>】   <?php echo ($vac["attentionnum"]); ?>个关注者
+				      <div id="amiddle{$i+2}" class="middle">
+				        【{$vac.activitystate}】   {$vac.attentionnum}个关注者
 				      </div>
 				      <div id="abottom{i+2}" class="bottom">
-					    <?php echo ($vac["activity_introduce"]); ?>
+					    {$vac.activity_introduce}
 				      </div>
 				    </div>
-			      </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+			      </div>
+			      </notempty>
+			    </volist>
 				</div><!--存放每个页面的内容-->
-				<<div>
+				<div>
 				  <div id="liuyan3" class="remark">
 				    <div id="bleft3" class="left">
 			          <div id="bclub_img3" class="user_img"><img src="../images/small.jpg" alt="" />
@@ -394,5 +415,5 @@ $(function() {
    };
    toTop.goto("toTop");
    </script>
-<body>
+</body>
 </html>
