@@ -46,6 +46,7 @@
 	width:12px;
 	background:url(../images/more2.png);
 	background-repeat:no-repeat;
+	cursor:pointer;
 }
 #more2{
     margin-left:20px;
@@ -55,6 +56,7 @@
 	float:left;
 	background:url(../images/more1.png);
 	background-repeat:no-repeat;
+	cursor:pointer;
 }
 #more3{
     margin-left:20px;
@@ -63,6 +65,7 @@
 	width:18px;
 	background:url(../images/gengduo_left.png);
 	background-repeat:no-repeat;
+	cursor:pointer;
 }
 #more4{
     margin-left:20px;
@@ -71,6 +74,7 @@
 	float:left;
 	background:url(../images/gengduo_right.png);
 	background-repeat:no-repeat;
+	cursor:pointer;
 }
 .more:hover{
     opacity:0.7;
@@ -80,9 +84,11 @@
 	float:left;
 }
 #touxiang{
-    padding-top:30px;
+    padding-top:20px;
 	padding-left:10px;
 	float:left;
+	width:190px;
+	overflow:hidden;
 }
 #touxiang_img1{
     background-color:#f5e817;
@@ -99,7 +105,7 @@
     line-height:25px;	
 }
 .tx{
-    margin-right:10px;
+    margin-right:13px;
 	margin-bottom:20px;
 	float:left;
 }
@@ -144,6 +150,7 @@ iframe{
 	width:200px;
 	float:left;
 	padding-bottom:20px;
+	overflow:hidden;
 }
 ul {
 	padding:1.1em 1.1em 2px 1.1em;
@@ -227,4 +234,44 @@ li a:visited{
 }
 #arrow3:hover{
     opacity:0.7;
-	}
+}
+#ul1{
+	position:relative;
+	width:400px;
+	-moz-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-webkit-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-ms-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-o-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	padding:0 0 0 0;
+}
+#ul1 li{
+	list-style-type:none;
+	float:left;
+	width:190px;
+	height:200px;
+	border:none;
+}
+#ul2{
+	position:relative;
+	width:400px;
+	height:145px;
+	-moz-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-webkit-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-ms-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	-o-transition: width 300ms ease-in-out,left 300ms ease-in-out;
+	padding:0 0 0 0;
+}
+#ul2 li{
+	list-style-type:none;
+	float:left;
+	width:200px;
+	height:140px;
+	border:none;
+}
+#ul2 li a{
+	color:#999;
+	border-bottom: dashed #999 thin;
+	width:170px;
+	height:24px;
+	margin:18px 0 0 15px;
+}
