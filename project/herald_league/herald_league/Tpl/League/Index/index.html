@@ -10,7 +10,19 @@
                 frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
                 frameContect = new GreyFrame("ContactFrame", 350, 120);
 </script>
-
+<script type="text/javascript">
+ function logout()
+{
+    $.ajax({
+        url:'{:U('/Public/Logout/')}',
+        success:function(){
+        $("#islogin").hide();
+        $("#notlogin").show();
+        location.reload();//todo
+        }
+    })
+}
+</script>
 <script language="javascript">
     var flag = true;
     window.onload = function() {
