@@ -68,8 +68,8 @@ class HomeAction extends Action
 			 );
 
 
-		$this -> attentionstate = $Attention -> getAttentionState( $data );
-		$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
+			$this -> attentionstate = $Attention -> getAttentionState( $data );
+			$this -> attentionstate = ($Attention -> getAttentionState( $data )== null)?0:1;
 		}
 
 		//获取评论信息
@@ -375,9 +375,10 @@ class HomeAction extends Action
 	{
 		if (!empty($_POST['league_name']))
 		{
-			$LeagueInfo = D( "LeagueInfo" );
-			$registerresult = $LeagueInfo -> addNewLeague( $_POST );
-			$this -> judgeAddState ( $registerresult );
+			//print_r($_POST);
+			//$LeagueInfo = D( "LeagueInfo" );
+			//$registerresult = $LeagueInfo -> addNewLeague( $_POST );
+			//$this -> judgeAddState ( $registerresult );
 		}
 		$this -> display();
 	}

@@ -1,6 +1,267 @@
-<?php if (!defined('THINK_PATH')) exit();?><h1>社团注册:</h1>
-<form name = "register_form" method = "post" action = "__URL__/leagueRegister">
-	社团名称：<input type = "text" name = "league_name" placeholder = "社团名称"> </input><br/>
-	社团简介：<textarea name = "league_introduce" rows="5" cols="50" placeholder = "输入简介"></textarea><br/>
-	<input type = "submit" name = "submit" value = "提交">
-</form>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动详情</title>
+<link href="__Public__/Css/register.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
+<link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
+<script src="__Public__/Js/files/jquery.tools.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
+<script type="text/javascript">
+				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
+				frameContect = new GreyFrame("ContactFrame", 350, 120);
+</script>
+<script type="text/javascript">
+ function logout()
+{
+		$.ajax({
+			url:'<?php echo U('/Public/Logout/');?>',
+			success:function(){
+			$("#islogin").hide();
+			$("#notlogin").show();
+			location.reload();//todo
+			}
+		})
+}
+</script>
+<link href="__Public__/Js/files/form.css" rel="stylesheet" type="text/css"> 
+<link href="__Public__/Js/files/columns.css" rel="stylesheet" type="text/css"> 
+<style type="text/css">
+a:link {
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+a:hover {
+	color: #34c5c3;
+}
+</style>
+		<script charset="utf-8" src="__Public__/Js/kindeditor-min.js"></script>
+		<script charset="utf-8" src="__Public__/Js/zh_CN.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : false,
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+			});
+		</script>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+	  <div id="logo">
+	  </div>
+	  <div id="navigation">
+		<div id="herald" class="navigation_link">
+		  <a href="#" >先声</a>
+		</div>
+		<div id="map" class="navigation_link">
+		  <a href="#" >社团</a>
+		</div>
+	    <div id="activity" class="navigation_link">
+     	  <a href="#" >活动</a>
+		</div>
+		<div id="wall" class="navigation_link">
+		  <a href="#" >海报墙</a>
+		</div>
+	  </div>
+	  <div id="search">
+	    <form name = "search" method = "post" action = "__ROOT__/herald_league/index.php/Public/Search/search">
+		 <input name = "search_text" type="text" value="请输入关键字" id = "search_text" style="color:#999;"onfocus="this.style.color='#000000';if(this.value=='请输入关键字'){this.value=''}" onblur="this.style.color='#999';if(this.value==''){this.value='请输入关键字'}"/>
+		 <input type = "submit" value = "搜索" id="search_image">
+		</form>
+	  </div>
+	    <?php if($islogin == 1): ?><div id="message">
+				<a href="#" id="message_image"></a>
+				<?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
+			</div>
+			<div id="love">
+					<a href="#" id="love_image"></a>
+			</div>
+			<div id="user"><a href="#"><?php echo ($name); ?></a></div>
+			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
+		<?php else: ?>
+				<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
+	<div id="main_body">
+	  <div id="main_body_inner">
+	    <div id="title">
+		  <div id="title_text">社团注册</div>
+		</div>
+		<div id="touxiang">
+		  <div id="big">
+		    <div id="big_text">当前头像
+			</div>
+			<div id="big_img"> 
+			  <img src="#" id="dangqian_img"/>
+			</div>
+		  </div>
+		  <div id="upload">
+		    <div id="upload_text">设置新头像</div>
+			<input type="file" name="uploadFile" id="upload_image"/>
+		  </div>
+		  <div id="small">
+		    <div id="small_text">小头像
+			</div>
+			<div id="small_img"> 
+			  <img src="#" id="upsmall_img"/>
+			</div>
+		  </div>
+		</div>
+		<div id="register">
+		<form class="cols" id="myform" method = "post" action = "__URL__/leagueregister">
+		  <div id="place" class="register_content" name = "place">
+		    <div class="title">社团位置:</div>
+			<div id="place_information">科学技术区-先声路(自动显示)</div>
+			<a id="place_choose" href="#">重新选择地图上的位置</a>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">注册码:</div>
+			<div class="xing" id="xing1">*</div>
+			<input type="text"  name="registernum" type="text" minlength="5"/>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">社团名称:</div>
+			<div class="xing" id="xing2">*</div>
+			<input type="text" required="required" name = "league_name"/>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">用户名:</div>
+			<div class="xing" id="xing3">*</div>
+			<input type="text" name = "username"/>
+		  </div>
+		  <div  class="register_content">
+		    <div class="title">密码:</div>
+			<div class="xing" id="xing4">*</div>
+			<input type="password" name = "password"/>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">确认密码:</div>
+			<div class="xing" id="xing5">*</div>
+			<input type="password" name = "confirm_password"/>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">社团简介:</div>
+			<div class="textarea">
+			<textarea name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+			</div>
+		  </div>
+		  <div class="register_content">
+		    <div class="title">社团成员:</div>
+			<div class="textarea">
+			<textarea name="content" style="width:700px;height:200px;visibility:hidden;"></textarea>
+			</div>
+		  </div>
+		   <div class="register_content">
+		    <div class="title" >联系方式:</div>
+			<input type="text" id="phone_input" name = "connect"/>
+		  </div>
+		   <div class="register_content">
+		    <div class="title">邮箱:</div>
+			<input id="mail_input"type="text" name = "email"/>
+		  </div>
+		  <button id="tijiao" type="submit" name = "submit">确认提交入住</button>
+		</div>
+		</form>
+	  </div>
+	</div>
+	<div id="footer">
+	  <div id="footer_link">
+	    <a href="#" id="f_about" class="link">关于我们</a>
+		<a href="#" id="f_contact" class="link">联系我们</a>
+		<a href="#" id="f_join" class="link">加入我们</a>
+	  </div>
+	  <div id="footer_text">
+      <pre> &copy; Copyright 2001-2013 herald.seu.edu.cn All rights reserved</pre>
+	  </div>
+	</div>
+  </div>
+<a id="toTop" href="#" style="display:none;width:72px;height:74px;" title="返回顶部"></a>
+ <SCRIPT>
+      // Regular Expression to test whether the value is valid
+    $.tools.validator.fn("[type=time]", "Please supply a valid time", function(input, value) {
+    return /^\d\d:\d\d$/.test(value);
+    });
+        $.tools.validator.fn("[data-equals]", "Value not equal with the $1 field", function(input) {
+    var name = input.attr("data-equals"),
+    field = this.getInputs().filter("[name=" + name + "]");
+    return input.val() == field.val() ? true : [name];
+    });
+        $.tools.validator.fn("[minlength]", function(input, value) {
+    var min = input.attr("minlength");
+
+    return value.length >= min ? true : {
+    en: "最少填写 " +min+ " 个字",
+    fi: "Kent&auml;n minimipituus on " +min+ " merkki&auml;"
+    };
+    });
+        $.tools.validator.localizeFn("[type=time]", {
+    en: '请填写正确时间',
+    fi: 'Virheellinen aika'
+    });
+        $("#myform").validator({
+    position: 'top left',
+    offset: [-12, 0],
+    message: '<div><em/></div>' // em element is the arrow
+    });
+  </SCRIPT>
+   <script type="text/javascript">
+   window.onscroll=function()
+   {
+   		var top=document.documentElement.scrollTop||document.body.scrollTop;
+		var toTop=document.getElementById("toTop");
+   		if(top>400)
+		{
+			toTop.style.display="inline";
+		}
+		else
+		{
+			toTop.style.display="none";
+		}
+   };
+   var toTop=new function()
+   {
+   		var Timer=null;
+   		function $id(id){return typeof id=="string"?document.getElementById(id):id;};
+		this.goto=function(objName)
+		{
+			$id(objName).onclick=function()
+			{
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				startNove();
+				return false;
+			};
+			var startNove=function()
+			{
+				if(Timer)clearInterval(Timer);
+				Timer=setInterval(doMove,30);
+			};
+			var doMove=function()
+			{
+				var iSpeed=0;
+				var top=document.documentElement.scrollTop||document.body.scrollTop;
+				iSpeed=(0-top)/5;
+				iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+				if(Math.abs(iSpeed)<1&&Math.abs(0-top)<1)
+				{
+					clearInterval(Timer);
+					Timer=null;
+				}
+				window.scrollTo(0,(top+iSpeed));
+			};
+		};
+   };
+   toTop.goto("toTop");
+   </script>
+<body>
+</html>
