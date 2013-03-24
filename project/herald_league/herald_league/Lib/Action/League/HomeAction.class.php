@@ -375,7 +375,7 @@ class HomeAction extends Action
 	{
 		if (!empty($_POST['league_name']))
 		{
-			print_r($_POST);
+			//print_r($_POST);
 			//$LeagueInfo = D( "LeagueInfo" );
 			//$registerresult = $LeagueInfo -> addNewLeague( $_POST );
 			//$this -> judgeAddState ( $registerresult );
