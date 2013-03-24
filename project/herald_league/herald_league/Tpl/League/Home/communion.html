@@ -24,11 +24,49 @@ a:hover {
 	color: #34c5c3;
 	opacity:0.7;
 }
+
 </style>
+
+<script language="javascript" type="text/javascript">
+        function display(divDisplay)
+        {
+            if(document.getElementById(divDisplay).style.display != "block")
+            {
+                document.getElementById(divDisplay).style.display = "block";
+            }
+            else
+            {
+                document.getElementById(divDisplay).style.display = "none";
+            }
+        }
+</script>
 </head>
 <body>
   <div id="main">
 	<div id="main_body">
+	<div id="ly">
+	  <a href="#" class="bn-post" onclick="display('saying')">发言</a>
+	</div>
+	
+	<div id="saying" style="position:absolute;top:50px;left:150px;width:600px;display:none;z-index:1;">
+	  <div id="say_content" style="background-color:white;">
+	      <div id="say_head">
+		  说点什么吧
+		  </div>
+		  <div id="say_write">
+		     <textarea style="margin-top:30px;margin-left:80px;margin-bottom:10px;width:440px;height:200px;" maxlength="140"></textarea>
+		  </div>
+	      <div id="fabiao" >
+		     <input type="submit" value="发言" style="margin-left:480px;margin-bottom:50px;" >
+		  </div>
+	  </div>
+	  <div id="say_close" onclick="display('saying') ">
+	     close
+	  </div>
+            	
+	</div>
+	
+	
 		<!--显示社团空间流言信息-->
 	<volist name = "commed" id ="vc"> 
 	  <div class="liuyan">

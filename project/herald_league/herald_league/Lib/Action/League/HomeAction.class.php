@@ -529,20 +529,9 @@ class HomeAction extends Action
 				$userinfo = $User -> getUserInfo( $attention );
 
 				//下面分别是社团的活动信息和关注者的信息
-				if(!empty($_POST['page']))
-				{
-					$this -> page = $_POST['page'];
-			 		$this -> assign( 'userinfo', $userinfo );
-			 		$this -> assign('activity', $activity);
-			 		echo $this -> page;
-		 		}
-		 		else
-		 		{
-		 			$this -> page = 1;
-			 		$this -> assign( 'userinfo', $userinfo );
-			 		$this -> assign('activity', $activity);
-			 		//echo $this -> page;
-		 		}
+	 			$this -> page = 1;
+		 		$this -> assign( 'userinfo', $userinfo );
+		 		$this -> assign('activity', $activity);
 		 	}
 		 	else
 		 	{
