@@ -170,7 +170,7 @@ a:hover {
 				  <a id="more4" class="more">
 				  </a>
 				</div>
-				<div id="right4">
+				<div id="right4" style = "">
 				  <ul id="ul2" style="left:0px;">
 				  <?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><li>
 			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
