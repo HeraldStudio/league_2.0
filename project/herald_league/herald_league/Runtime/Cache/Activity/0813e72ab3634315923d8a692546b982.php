@@ -165,7 +165,7 @@ $(function(){
               <a href="#" id="love_image"></a>
           </div>
       
-      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="user"><a href="<?php echo U('/User/Index/index/userid/');?>/<?php echo ($uid); ?>"><?php echo ($userName); ?></a></div>
       <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
     <?php else: ?>
       <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>

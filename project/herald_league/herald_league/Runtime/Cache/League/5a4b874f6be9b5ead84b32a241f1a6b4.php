@@ -1,8 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><head>
-<title>Map</title>
+<title>社团地图--东南大学先声网</title>
 <link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
 <link href="__ROOT__/Public/Css/Map_Style.css" rel="stylesheet" >
-<link href="__ROOT__/Public/Css/club2.css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/header.css" rel="stylesheet">
 <link rel="shortcut icon" href="__ROOT__/Public/Images/favicon.ico"/>
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
@@ -216,7 +216,7 @@
               <a href="#" id="love_image"></a>
           </div>
       
-      <div id="user"><a href="#"><?php echo ($userName); ?></a></div>
+      <div id="user"><a href="<?php echo U('/User/Index/index/userid/');?>/<?php echo ($uid); ?>"><?php echo ($userName); ?></a></div>
       <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
     <?php else: ?>
       <div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
@@ -226,12 +226,12 @@
         <div class="minilayer overview-map" id="minilayer overview-map" style="top:35px;">
             <div class="minicanvas" id="minicanvas" style="height:800px;">
                 <div class="town-sketch">
-                    <a href="<?php echo U('League/Index/map');?>/left/-400/top/-200" id="fmap_area_1" class="sprite-area" style="top:30px;left:320px;">科学技术区</a>
-                    <a href="<?php echo U('League/Index/map');?>/left/-90/top/-495" id="fmap_area_2" class="sprite-area" style="top:150px;left:175px;">体育健身区</a>
-                    <a href="<?php echo U('League/Index/map');?>/left/-800/top/-470" id="fmap_area_3" class="sprite-area" style="top:140px;left:450px;">文化艺术区</a>
-                    <a href="<?php echo U('League/Index/map');?>/left/-500/top/-765" id="fmap_area_4" class="sprite-area" style="top:273px;left:322px;">文学传媒区</a>
-                    <a href="<?php echo U('League/Index/map');?>/left/-160/top/-1200" id="fmap_area_5" class="sprite-area" style="top:406px;left:172px;">学生会专区</a>
-                    <a href="<?php echo U('League/Index/map');?>/left/-820/top/-1150" id="fmap_area_6" class="sprite-area" style="top:415px;left:442px;">志愿服务区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/400/top/200" id="fmap_area_1" class="sprite-area" style="top:30px;left:320px;">科学技术区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/90/top/495" id="fmap_area_2" class="sprite-area" style="top:150px;left:175px;">体育健身区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/800/top/470" id="fmap_area_3" class="sprite-area" style="top:140px;left:450px;">文化艺术区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/500/top/765" id="fmap_area_4" class="sprite-area" style="top:273px;left:322px;">文学传媒区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/160/top/1200" id="fmap_area_5" class="sprite-area" style="top:406px;left:172px;">学生会专区</a>
+                    <a href="<?php echo U('League/Index/map');?>/left/820/top/1150" id="fmap_area_6" class="sprite-area" style="top:415px;left:442px;">志愿服务区</a>
                     <html>
                 </div>
             </div>
@@ -246,220 +246,14 @@
                 <div class="bd">
                     <ul id="ul" style="left:0px;">
                         <li>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
+                            <?php if(is_array($newLeague)): $i = 0; $__LIST__ = $newLeague;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="club">
+                                    <a href="#" class="club_name"><?php echo ($n["league_name"]); ?></a>
+                                    <a href="#" class="attention">
                                         <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">                  
-                                <a href="#" class="club_name">社团社团社团1</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团2</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
-                            <div class="club">
-                                <a href="#" class="club_name">社团社团社团3</a>
-                                <a href="#" class="attention">
-                                    <div class="attention_img"></div>
-                                    <div class="attention_text">关注</div>
-                                </a>
-                            </div>
+                                        <div class="attention_text">关注</div>
+                                    </a>
+                                </div>
+                            <?php if(($key%10 == 0) AND ($key != 0)): ?></li><li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                         </li>
                     </ul>
                 </div>

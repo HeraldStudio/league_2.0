@@ -65,7 +65,7 @@ a:hover {
               <a href="#" id="love_image"></a>
           </div>
       
-      <div id="user"><a href="#">{$userName}</a></div>
+      <div id="user"><a href="{:U('/User/Index/index/userid/')}/{$uid}">{$userName}</a></div>
       <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
     <else/>
       <div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>

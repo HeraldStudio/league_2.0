@@ -528,6 +528,8 @@ class HomeAction extends Action
 		 		$attention = $Attention -> getActivityAttention( $this -> activityid );
 				$userinfo = $User -> getUserInfo( $attention );
 
+				//下面分别是社团的活动信息和关注者的信息
+	 			$this -> page = 1;
 		 		$this -> assign( 'userinfo', $userinfo );
 		 		$this -> assign('activity', $activity);
 		 	}
