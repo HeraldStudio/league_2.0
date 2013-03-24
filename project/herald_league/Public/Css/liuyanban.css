@@ -28,8 +28,9 @@ a{
     width:230px;
     height: 200px;
 	float:left;
-	margin-top:50px;
-	margin-left:30px;
+	margin-top:40px;
+	margin-left:40px;
+	margin-bottom:20px;
 	background-color:#fdfede;
 	-webkit-box-shadow: 5px 5px 7px #999;
 	border-style:solid;
@@ -44,6 +45,8 @@ a{
     float:left;
 	margin-left:10px;
 	margin-top:10px;
+	width:170px;
+	height:35px;
 	color:#00c0ff;
 	font-family:"微软雅黑", "宋体", serif;
 }
@@ -66,6 +69,7 @@ a{
 .time{
     float:left;
 	margin-left:10px;
+	margin-top:5px;
 	color:#6d6d6d;
 	font-family:"微软雅黑", "宋体", serif;
 }
@@ -91,4 +95,49 @@ a{
 }
 p{
      text-indent:2em;
+}
+#say_head{
+	text-align:left;
+	font-family:"微软雅黑", "宋体", serif;
+	font-size:26px;
+	padding-top:30px;
+	padding-left:50px;
+	border-top:solid 1px #c75a30;
+	border-left:solid 1px #c75a30;
+	border-right:solid 1px #c75a30;
+}
+#say_write{
+	border-left:solid 1px #c75a30;
+	border-right:solid 1px #c75a30;
+}
+#fabiao{
+	border-left:solid 1px #c75a30;
+	border-right:solid 1px #c75a30;
+	border-bottom:solid 1px #c75a30;
+}
+#say_close{
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	z-index: 4;
+	display: block;
+	width: 27px;
+	height: 28px;
+	text-indent: -3000px;
+	overflow: hidden;
+	background:url(../images/close.png) no-repeat;
+	cursor:pointer;
+}
+#ly a{
+	position:absolute; 
+	right:15px; 
+	top:3px;
+	z-index:99;
+	width:50px;
+	height:54px;
+	line-height:52px;
+	text-align:center;
+	color:#fff;
+	background:url(../images/bn-post.png) no-repeat;
+	font-weight: bold;
 }
