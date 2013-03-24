@@ -194,7 +194,7 @@ a{
 	float:left;
 	height:18px;
 	width:18px;
-	background:url(../images/gengduo_left.png);
+	background:url(../Images/gengduo_left.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -203,7 +203,7 @@ a{
 	height:18px;
 	width:18px;
 	float:left;
-	background:url(../images/gengduo_right.png);
+	background:url(../Images/gengduo_right.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
