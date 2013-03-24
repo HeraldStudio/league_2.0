@@ -194,13 +194,18 @@ class IndexAction extends Action {
             'left:1070px;top:1600px;width:40px;height:35px;',
             );
             $b=array(
-
+                2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                6,
+                1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+                3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+                4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
+                5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
                 );
             $leagueInfo = D('LeagueInfo');
             $leagueInfo ->query('delete  from lg_league_info');
             //$leagueInfo->addAll($a);
             foreach ($a as $key => $value) {
-                $leagueInfo->add(array('location'=>$value));
+                $leagueInfo->add(array('location'=>$value,'league_class'=>$b[$key]));
                 //$leagueInfo->addAll($a);
             }
     }

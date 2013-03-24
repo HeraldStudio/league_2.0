@@ -636,7 +636,14 @@ function func22(event) <!------------------------应该是func2-----------------
  <!-- sports-->
  <foreach name="league" item="l">
   <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
-<div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}"><p>快来</p><p>抢位置！</p> <a href=# >入住</a></div>  
+<form  method="POST" action = "{:U('/League/Home/leagueRegister')}">
+  <div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}">
+    <p>快来</p>
+    <p>抢位置！</p>  
+  <input type="hidden" name="class" value= "{$l.league_class}"/>
+  <submit type="submit" name="submit" value="提交"/>
+</div>
+</form>
   
 
 </foreach>
