@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><head>
-<title>Map</title>
+<title>社团地图--东南大学先声网</title>
 <link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
 <link href="__ROOT__/Public/Css/Map_Style.css" rel="stylesheet" >
 <link href="__ROOT__/Public/Css/club2.css" rel="stylesheet">
