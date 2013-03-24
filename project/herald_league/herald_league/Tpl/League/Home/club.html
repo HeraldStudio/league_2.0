@@ -188,12 +188,6 @@ a:hover {
 			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
 			    	 		{$vi.activity_name}
 			    		</a>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
-			    	 		{$vi.activity_name}
-			    		</a>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
-			    	 		{$vi.activity_name}
-			    		</a>
 				  </li>
 				  </volist>
 				  </ul>
@@ -206,6 +200,7 @@ a:hover {
 				</div>
 				<div id="right2">
 				  <div id="touxiang">
+					 <volist name = "userinfo" id = "vu">
 					 <ul id="ul1" style="left:0px;">
 					   <li>
 					    <a href="#"id="touxiang1" class="tx">
@@ -218,6 +213,7 @@ a:hover {
 						</a>
 					  </li>
 					  </ul>
+					</volist>
 				  </div>
 				</div>
 				</div>
