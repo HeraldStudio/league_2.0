@@ -94,8 +94,11 @@ class HomeAction extends Action
     {
     	//获取评论信息
 		$Comment = D ( 'Comment' );
-		$comment = $Comment -> getCommentedInfo( $commentid, $Comment -> getCommentedType($commenttype) );
+		$this -> type = $Comment -> getCommentedType($commenttype);
+		$comment = $Comment -> getCommentedInfo( $commentid, $this -> type );
 		
+		$this -> commentNum = count($comment);
+
 		$Answer = D( 'Answer' );
 		$answer = $Answer -> getAnswerInfo( $comment );
 		
@@ -217,12 +220,12 @@ class HomeAction extends Action
 	public function imgComment()
 	{
 		/*获取URL参数*/
-		$pictureid = intval($this -> _param('pictureid'));
+		$this -> pictureid = intval($this -> _param('pictureid'));
 
 		$Picture = D('League_picture');
-		$this -> picture = $Picture -> where('id='.$pictureid) -> find();
+		$this -> picture = $Picture -> where('id='.$this -> pictureid) -> find();
 
-		$this -> getCommentAndAnswer( $pictureid, "picture");
+		$this -> getCommentAndAnswer( $this -> pictureid, "picture");
 		//print_r($comment);
 		// /$this -> assign( 'picture', $picture );
 
@@ -300,14 +303,24 @@ class HomeAction extends Action
 	}
 
 	public function addAnswer()
-	{//echo $_POST['content'];
+	{
 		if(!empty($_POST['content']))
 		{
-			$answeringid = 1;
-			$answeringtype = 1;
-			$Answer = D ( 'Answer' );
-			$answer = $Answer -> addAnswerinfo( $answeringid, $answeringtype, $_POST );
-			echo $answer;
+			$temp = explode('/', $_POST['data']);
+			if($temp[2] === "comment")
+			{
+				$Comment = D( 'Comment' );
+				$comment = $Comment -> addCommentInfo(1, 1, $temp[0], $temp[1], $_POST);
+				echo $comment;
+			}
+			else
+			{
+				$answeringid = 1;
+				$answeringtype = 1;
+				$Answer = D ( 'Answer' );
+				$answer = $Answer -> addAnswerinfo( $answeringid, $answeringtype, $_POST );
+				echo $answer;
+			}
 		}
 	}
 

@@ -35,7 +35,7 @@ Class SearchAction extends Action
 		if(!empty($_POST['search_text']))
 		{
 			$result = $search -> getSearchResult($searchtext);
-			if(!empty($result))
+			if((!empty($result['activity'])) || (!empty($result['league'])))
 			{
 				$activity = $result['activity'];
 				$league = $result['league'];
@@ -53,14 +53,24 @@ Class SearchAction extends Action
 					$activity[$key]['leagueavatar'] = $League -> getleagueAvaterAdd($activitys['league_id']);
 					$activity[$key]['leaguename'] = $League -> getleagueName($activitys['league_id']);
 				}
-				$this -> isresultempty = false;
+				$this -> isresultempty = 0;
 				$this -> assign('activity', $activity);
 				$this -> assign('league', $league);
 			}
 			else
 			{
-				$this -> isresultempty = true;	
+				$this -> isresultempty = 1;	
 			}
+		}
+		if($heraldSession->isLogin())
+		 {
+		 	$Comment = D('Comment');
+		 	$newCommentNum = $Comment -> getNewCommentNum($uid, $Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+	
+		 	$Answer = D('Answer'); 
+		 	$newAnswerNum = $Answer -> getNewAnswerNum($uid,$Comment -> getCommentedType($heraldSession->getUserType()==1?"user":"league"));
+			
+		 	$this -> newAnswerAndComment = $newCommentNum + $newAnswerNum;
 		}
 		$this -> display();
 	}

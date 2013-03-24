@@ -7,17 +7,17 @@
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
-<script src="__Public__/Js/jquery.tools.min.js"></script>  
-  <!-- standalone page styling (can be removed) -->
-<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
-<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
 <script type="text/javascript">
 				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
 				frameContect = new GreyFrame("ContactFrame", 350, 120);
 </script>
+<script src="__Public__/Js/jquery.tools.min.js"></script>  
+  <!-- standalone page styling (can be removed) -->
+<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
+<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -57,7 +57,9 @@ a:hover {
     <if condition="$islogin eq 1">
           <div id="message">
               <a href="#" id="message_image"></a>
-              <div id="m_num">5</div>
+              <if condition = "$newAnswerAndComment gt 0">
+				<div id="m_num">{$newAnswerAndComment}</div>
+			  </if>
           </div>
           <div id="love">
               <a href="#" id="love_image"></a>
@@ -96,10 +98,11 @@ a:hover {
 		   </div>
 		   <div id="bottom_right">
             <!-- tab "panes" -->
-              <div class="panes3">
+            <div class="panes3">
 	         <div>
 	         	<if condition = "$isresultempty">
-	         		搜索结果为空
+	         		{$isresultempty}
+	         		<img src = "__Public__/Images/nosearch.jpg"/>
 		   		<else />
 	         	<volist name = "league" id = "vl">
 			    <div id="aactivity{$i+2}" class="remark">
@@ -181,7 +184,7 @@ a:hover {
 			    </div>
 			    </volist>
 			    <else />
-			 搜索活动为空
+			 <img src = "__Public__/Images/nosearch.jpg"/>
 			</notempty>
 			 </div>
 			 <div>
@@ -212,7 +215,7 @@ a:hover {
 			    </div>
 			    </volist>
 			    <else />
-			 搜索社团为空
+			 <img src = "__Public__/Images/nosearch.jpg"/>
 			    </notempty>
 			 </div>
 		   </div>

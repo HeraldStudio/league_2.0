@@ -7,17 +7,17 @@
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/header.css" />
-<script src="__Public__/Js/jquery.tools.min.js"></script>  
-  <!-- standalone page styling (can be removed) -->
-<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
-<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
 <script type="text/javascript">
 				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
 				frameContect = new GreyFrame("ContactFrame", 350, 120);
 </script>
+<script src="__Public__/Js/jquery.tools.min.js"></script>  
+  <!-- standalone page styling (can be removed) -->
+<link rel="stylesheet" type="text/css" href="__Public__/Css/standalone.css"/>
+<link rel="stylesheet" href="__Public__/Css/tabs.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__Public__/Css/tabs-panes.css" type="text/css" media="screen" />
 <style type="text/css">
 a:link {
 	color: #fff;
@@ -56,7 +56,7 @@ a:hover {
     </div>
     <?php if($islogin == 1): ?><div id="message">
               <a href="#" id="message_image"></a>
-              <div id="m_num">5</div>
+              <?php if($newAnswerAndComment > 0): ?><div id="m_num"><?php echo ($newAnswerAndComment); ?></div><?php endif; ?>
           </div>
           <div id="love">
               <a href="#" id="love_image"></a>
@@ -94,9 +94,10 @@ a:hover {
 		   </div>
 		   <div id="bottom_right">
             <!-- tab "panes" -->
-              <div class="panes3">
+            <div class="panes3">
 	         <div>
-	         	<?php if($isresultempty): ?>搜索结果为空
+	         	<?php if($isresultempty): echo ($isresultempty); ?>
+	         		<img src = "__Public__/Images/nosearch.jpg"/>
 		   		<?php else: ?>
 	         	<?php if(is_array($league)): $i = 0; $__LIST__ = $league;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vl): $mod = ($i % 2 );++$i;?><div id="aactivity<?php echo ($i+2); ?>" class="remark">
 				    <div id="aleft<?php echo ($i+2); ?>" class="left">
@@ -170,7 +171,7 @@ a:hover {
 				    </div>
 			    </div><?php endforeach; endif; else: echo "" ;endif; ?>
 			    <?php else: ?>
-			 搜索活动为空<?php endif; ?>
+			 <img src = "__Public__/Images/nosearch.jpg"/><?php endif; ?>
 			 </div>
 			 <div>
 			 	<?php if(!empty($league)): if(is_array($league)): $i = 0; $__LIST__ = $league;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vle): $mod = ($i % 2 );++$i;?><div id="cactivity<?php echo ($i+2); ?>" class="remark">
@@ -197,7 +198,7 @@ a:hover {
 				    </div>
 			    </div><?php endforeach; endif; else: echo "" ;endif; ?>
 			    <?php else: ?>
-			 搜索社团为空<?php endif; ?>
+			 <img src = "__Public__/Images/nosearch.jpg"/><?php endif; ?>
 			 </div>
 		   </div>
 		 </div>

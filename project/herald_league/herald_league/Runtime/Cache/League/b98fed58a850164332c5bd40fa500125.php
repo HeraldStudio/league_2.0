@@ -96,7 +96,7 @@ a:hover {
 	<div id="main_body">
 	  <div id="main_body_inner">
 	    <div id="danganshi">
-		<?php if($isactivityempty): ?><h1 style = "margin: 100px;">该社团尚未添加活动，这里需要前台做一个替换页面</h1>
+		<?php if($isactivityempty): ?><img src = "__Public__/Images/noactivity.jpg"/>
 		<?php else: ?>
 		  <?php switch($gettitle): case "zls": ?><iframe name="i" src="__APP__/League/Home/infoRoom/leagueid/<?php echo ($leagueid); ?>" id = 'zls'></iframe>
 				<div id="inner_right">
