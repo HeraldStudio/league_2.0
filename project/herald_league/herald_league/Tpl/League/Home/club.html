@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="__Public__/Css/club.css" />
 <link rel="stylesheet" type="text/css" href="__Public__/Css/dating.css"/>
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
+<link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
@@ -41,6 +42,36 @@
         });
     };
 
+</script>
+<script>
+	window.onload = function() {
+	
+		var ul1 = document.getElementById("ul1");
+		var more1 = document.getElementById("more1");
+		var more2 = document.getElementById("more2");
+		var ul2 = document.getElementById("ul2");
+		var more3 = document.getElementById("more3");
+		var more4 = document.getElementById("more4");
+		
+		more1.onclick = function (){
+			if(parseInt(ul1.style.left)==0){}
+			else{ul1.style.left = ''+(parseInt(ul1.style.left)+200)+'px';}
+			
+		}
+		more2.onclick = function(){
+			if(parseInt(ul1.style.left)==-200){}
+			else{ul1.style.left = ''+(parseInt(ul1.style.left)-200)+'px';}
+		}
+		more3.onclick = function (){
+			if(parseInt(ul2.style.left)==0){}
+			else{ul2.style.left = ''+(parseInt(ul2.style.left)+200)+'px';}
+			
+		}
+		more4.onclick = function(){
+			if(parseInt(ul2.style.left)==-200){}
+			else{ul2.style.left = ''+(parseInt(ul2.style.left)-200)+'px';}
+		}
+	}
 </script>
 <style type="text/css">
 a:link {
@@ -111,14 +142,16 @@ a:hover {
 				<div id="right1">
 				  <div id="guanzhu_title">我们的关注者
 				  </div>
-				  <a href="#" id="more1" class="more">
+				  <a id="more1" class="more">
 				  </a>
-				  <a href="#" id="more2" class="more">
+				  <a id="more2" class="more">
 				  </a>
 				</div>
 				<div id="right2">
 				  <div id="touxiang">
 				  	<volist name = "userinfo" id = "vu">
+					 <ul id="ul1" style="left:0px;">
+					   <li>
 					    <a href="#"id="touxiang1" class="tx">
 						  <div id="touxiang_img1" class="touxiang_img">
 						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
@@ -127,6 +160,90 @@ a:hover {
 						  	{$vu.true_name}
 						  </div>
 						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+					  </li>
+					  <li>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+					  </li>
+					  </ul>
 					</volist>
 				  </div>
 				</div>
@@ -141,33 +258,44 @@ a:hover {
 				<div id="right3">
 				  <div id="interest_title">我们的活动
 				  </div>
-				  <a href="#" id="more3" class="more">
+				  <a id="more3" class="more">
 				  </a>
-				  <a href="#" id="more4" class="more">
+				  <a id="more4" class="more">
 				  </a>
 				</div>
 				<div id="right4">
-				  <ul>
-				  	<volist name = "activity" id = "vi">
-			    	<li>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
-			    			{$vi.activity_name}
+				  <ul id="ul2" style="left:0px;">
+				  <li>
+			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    			1
 			    		</a>
-			    	</li>
-				    </volist>
+						<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    			1
+			    		</a>
+						<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    			1
+			    		</a>
+				  </li>
+				  <li>
+			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    			2
+			    		</a>
+						<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    			2
+			    		</a>
+				  </li>
 				  </ul>
 				</div>
 				<div id="right1">
 				  <div id="guanzhu_title">此活动的关注者
 				  </div>
-				  <a href="#" id="more1" class="more">
-				  </a>
-				  <a href="#" id="more2" class="more">
-				  </a>
+				  <a id="more1" class="more"></a>
+				  <a id="more2" class="more"></a>
 				</div>
 				<div id="right2">
 				  <div id="touxiang">
-				  	<volist name = "userinfo" id = "vu">
+					 <ul id="ul1" style="left:0px;">
+					   <li>
 					    <a href="#"id="touxiang1" class="tx">
 						  <div id="touxiang_img1" class="touxiang_img">
 						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
@@ -176,7 +304,90 @@ a:hover {
 						  	{$vu.true_name}
 						  </div>
 						</a>
-				    </volist>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+					  </li>
+					  <li>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+						<a href="#"id="touxiang1" class="tx">
+						  <div id="touxiang_img1" class="touxiang_img">
+						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
+						  </div>
+						  <div id="touxiang_text1" class="touxiang_text">
+						  	{$vu.true_name}
+						  </div>
+						</a>
+					  </li>
+					  </ul>
 				  </div>
 				</div>
 				</div>
