@@ -28,50 +28,38 @@
 }
 </script>
 <script type="text/javascript">
-    function changeLeagueAttention(leagueid,action)
-    {
-        $.getJSON("<?php echo U('/League/Home/changeAttention');?>",{"leagueid":leagueid,"action":action},function(data,status){
-            if(data.status!=1) //失败了
-                alert(data.info);
-            else
-            {
-                $(".guanzhu1").toggle();
-                $(".guanzhu2").toggle();
+function changeLeagueAttention(leagueid,action)
+{
+    $.getJSON("<?php echo U('/League/Home/changeAttention');?>",{"leagueid":leagueid,"action":action},function(data,status){
+        if(data.status!=1) //失败了
+            alert(data.info);
+        else
+        {
+            $(".guanzhu1").toggle();
+            $(".guanzhu2").toggle();
 
-            }
-        });
-    };
+        }
+    });
+};
 
 </script>
-<script>
-	window.onload = function() {
-	
-		var ul1 = document.getElementById("ul1");
-		var more1 = document.getElementById("more1");
-		var more2 = document.getElementById("more2");
-		var ul2 = document.getElementById("ul2");
-		var more3 = document.getElementById("more3");
-		var more4 = document.getElementById("more4");
-		
-		more1.onclick = function (){
-			if(parseInt(ul1.style.left)==0){}
-			else{ul1.style.left = ''+(parseInt(ul1.style.left)+200)+'px';}
-			
-		}
-		more2.onclick = function(){
-			if(parseInt(ul1.style.left)==-200){}
-			else{ul1.style.left = ''+(parseInt(ul1.style.left)-200)+'px';}
-		}
-		more3.onclick = function (){
-			if(parseInt(ul2.style.left)==0){}
-			else{ul2.style.left = ''+(parseInt(ul2.style.left)+200)+'px';}
-			
-		}
-		more4.onclick = function(){
-			if(parseInt(ul2.style.left)==-200){}
-			else{ul2.style.left = ''+(parseInt(ul2.style.left)-200)+'px';}
-		}
-	}
+<script type="text/javascript" >
+$(document).ready(function(){
+	$("#more3").click(function(){
+				//alert($("#hidden_page").val());
+				$.ajax({
+					url:'<?php echo U('club');?>',
+					type: 'post',
+					dataType:'html',
+					data:'page='+$("#hidden_page").val(),
+					success:function(data){
+						alert(data);
+						//document.write(data);
+						location.reload();//todo
+				});
+			}
+		);
+});
 </script>
 <style type="text/css">
 a:link {
@@ -169,20 +157,15 @@ a:hover {
 				  </a>
 				  <a id="more4" class="more">
 				  </a>
+				  <input type= "hidden" value = "<?php echo ($page); ?>" id = "hidden_page">
 				</div>
 				<div id="right4" style = "">
 				  <ul id="ul2" style="left:0px;">
-				  <?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><li>
-			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
+				  <li>
+				  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
 			    	 		<?php echo ($vi["activity_name"]); ?>
-			    		</a>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
-			    	 		<?php echo ($vi["activity_name"]); ?>
-			    		</a>
-			    		<a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
-			    	 		<?php echo ($vi["activity_name"]); ?>
-			    		</a>
-				  </li><?php endforeach; endif; else: echo "" ;endif; ?>
+			    		</a><?php endforeach; endif; else: echo "" ;endif; ?>
+				  </li>
 				  </ul>
 				</div>
 				<div id="right1">
