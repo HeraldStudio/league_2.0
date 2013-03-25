@@ -88,6 +88,16 @@ a:hover {
     text-align:center;
     cursor:pointer;
   }
+.c1{
+    background-image:url(__ROOT__/Public/Images/c1.png);
+    background-repeat:no-repeat;
+    background-position:50% 100%;
+    font-family:"微软雅黑", "宋体", serif;
+    font-size:13;
+    text-align:center;
+    cursor:pointer;
+    width:auto;
+  }
 
 .dian{
     background-image:url(__ROOT__/Public/Images/dian.png);
@@ -492,6 +502,39 @@ function func22(event) <!------------------------应该是func2-----------------
 }
 
 </script>
+<script><!--show-->
+ var ys=null;
+ function show2(obj)
+ {
+  ys=obj.style.background;
+  obj.style.backgroundColor="#FFFF66";
+ }
+ function noshow2(obj)
+ {
+  obj.style.backgroundColor=ys;
+ }
+</script>
+<script language="javascript" >
+var downx=0;
+var downy=0;
+var upx=0;
+var upy=0;
+function func(event)
+{
+  downx=event.clientX;
+  downy=event.clientY;
+}
+function func22(event) <!------------------------应该是func2------------------------------------------------->
+{
+  upx=event.clientX;
+  upy=event.clientY;
+  if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
+  {
+    window.open("#");
+  }
+}
+
+</script>
 
 
    
@@ -652,8 +695,11 @@ function func22(event) <!------------------------应该是func2-----------------
     </div>
     </form>
    <else/>
+      <div  class="c1" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="show2(this)" style="position:absolute;{$l.location};width:auto" onmousedown="func(event)" onmouseup="func22(event)" >
+        
+        <a>{$l.league_name}</a>
+      </div>
       
-      <a style="position:absolute;{$l.location}" href="{:U('/League/Home/club/title/dt/leagueid/')}/{$l.id}">{$l.league_name}</a>
    </if>
 </foreach>
  
