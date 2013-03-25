@@ -56,18 +56,21 @@ class IndexAction extends Action {
         foreach ($attentions as $key => $value) {
             $league[$value['attened_id']]['isattended'] = 1;
         }
+
         foreach ($league as $key => $value) {
             $league[$key]['location_changed'] = $this->change($value['location']);
-            $class  = $value['league_class'];
-            $n = count($Leagues[$class]) ;
-            $leagues[$class][$n] = $value; 
+        }
+        for($i=1;$i<=6;$i++)
+        {
+            $leagues[$i]  = $leagueInfo->where(array('league_class'=>$i ,'league_name'=>array('neq','null')))->select();
+
         }
         $LeagueClass  = D('LeagueClass');
         $class = $LeagueClass ->select();
         foreach ($class as $key => $value) {
-            $class[$key]['count'] = $leagueInfo->where('league_class='.$value['id'])->count();
+            $class[$key]['count'] = $leagueInfo->where(array('league_class'=>$value['id'] ,'league_name'=>array('neq','null')))->count();
         }
-        //var_dump($leagues);
+        //var_dump($league[2]);
 
         $this->assign('league',$league);
         $this->assign('leagues',$leagues);
@@ -194,12 +197,13 @@ class IndexAction extends Action {
             'left:1070px;top:1600px;width:40px;height:35px;',
             );
             $b=array(
-                2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
                 6,
-                1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-                3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
-                4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
+                1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+                3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+                4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
                 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+
                 );
             $leagueInfo = D('LeagueInfo');
             $leagueInfo ->query('delete  from lg_league_info');

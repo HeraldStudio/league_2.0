@@ -108,7 +108,13 @@ a:hover {
 }
 
 
-
+.ruzhu{
+       font-size:12px;
+       font-family:"微软雅黑", "宋体", serif;
+       background-color:#fabf12;
+       border:none;
+       color:white;
+}
 
 
 
@@ -379,8 +385,8 @@ function noshow(obj)
     t1=getAbsPoint(s18);
     t2=getAbsPoint(s22);
     t3=getAbsPoint(s39);
-    t4=getAbsPoint(s20);
-    t5=getAbsPoint(s20);
+    t4=getAbsPoint(s19);
+    t5=getAbsPoint(s57);
     t6=getAbsPoint(s68);
     var dis=new Array();
    dis[1]=(t1[1]-w)*(t1[1]-w)+(t1[2]-h)*(t1[2]-h);
@@ -630,22 +636,25 @@ function func22(event) <!------------------------应该是func2-----------------
   <div class="name" style="position:absolute;left:1080px;top:1050px;height:20px;width:68px">文学传媒类</div>
   <div class="name" style="position:absolute;left:1200px;top:1530px;height:20px;width:68px">志愿服务类</div>
   <div class="name" style="position:absolute;left:760px;top:1555px;height:20px;width:40px">学生会</div>
-  <div class="name" style="position:absolute;left:550px;top:1400px;height:20px;width:68px">科学技术类</div>
+
  <!--板块name-->
 <div id="tubiao">
  <!-- sports-->
  <foreach name="league" item="l">
-  <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
-<form  method="POST" action = "{:U('/League/Home/leagueRegister')}">
-  <div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}">
-    <p>快来</p>
-    <p>抢位置！</p>  
-  <input type="hidden" name="class" value= "{$l.league_class}"/>
-  <submit type="submit" name="submit" value="提交"/>
-</div>
-</form>
-  
-
+   <if condition ="$l.league_name eq null">
+      <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
+    <form  method="POST" action = "{:U('/League/Home/leagueRegister')}">
+      <div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}">
+        <p>快来</p>
+        <p>抢位置！</p>  
+      <input type="hidden" name="class" value= "{$l.league_class}"/>
+      <input  class="ruzhu" type="submit" name="submit" value="入住"/>
+    </div>
+    </form>
+   <else/>
+      
+      <a style="position:absolute;{$l.location}" href="{:U('/League/Home/club/title/dt/leagueid/')}/{$l.id}">{$l.league_name}</a>
+   </if>
 </foreach>
  
   </div>
@@ -691,12 +700,9 @@ function func22(event) <!------------------------应该是func2-----------------
                 <ul>
                   <php>$lid = $l['id'] </php>
                   <foreach name="leagues[$lid]" item="a">
-                    <li><a href="{:U('/League/Home/club/title/dt/leagueid')}/{$a.id}">{$a.league_name}</a></li>
+                    <li><a href="{:U('/League/Home/club/title/dt/leagueid')}/{$a.id}">{$a.league_name}</a>
                     
-                    <div id="guanzhu1{$a.id}" class = "attention"<if condition="($a.isattended eq 1) " > style="display:none"</if>onclick="javascript:changeLeagueAttention({$league['id']},'add',{$a.id})">关注
-                    </div>
-                    <div id="guanzhu2{$a.id}" class = "attention" <if condition=" ($uid eq 0) OR ($a.isattended neq 1)" >style="display:none"</if>onclick="javascript:changeLeagueAttention({$league['id']},'del',{$a.id})">已关注
-                    </div>
+                    </li>
                   </foreach> 
                 </ul>
               </div>

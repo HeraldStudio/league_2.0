@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>活动详情</title>
+<title>社团注册</title>
 <link href="__Public__/Css/register.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/footer.css" rel="stylesheet" type="text/css" />
 <link href="__Public__/Css/totop.css" rel="stylesheet" type="text/css" />
@@ -123,7 +123,7 @@ a:hover {
 		  <div id="place" class="register_content" name = "place">
 		    <div class="title">社团位置:</div>
 			<div id="place_information"><?php echo ($class); ?></div>
-			<a id="place_choose" href="#">重新选择地图上的位置</a>
+			<a id="place_choose" href="javascript:history.back(-1)">重新选择地图上的位置</a>
 		  </div>
 		  <div  class="register_content">
 		    <div class="title">注册码:</div>
