@@ -57,7 +57,7 @@ a{
 #attention_img{
     height:15px;
 	width:15px;
-	background:url(../images/attention.png);
+	background:url(../Images/attention.png);
 	background-repeat:no-repeat;
 	float:left;
 	}
@@ -112,7 +112,7 @@ a{
 	width:520px;
     }
 #time_img{
-    background:url(../images/time.png);
+    background:url(../Images/time.png);
 	background-repeat:no-repeat;
 	height:18px;
 	width:15px;
@@ -127,7 +127,7 @@ a{
 	font-family:"微软雅黑", "宋体", serif;
 	}
 #place_img{
-    background:url(../images/place.png);
+    background:url(../Images/place.png);
 	background-repeat:no-repeat;
 	height:19px;
 	width:15px;
@@ -142,7 +142,7 @@ a{
 	font-family:"微软雅黑", "宋体", serif;
 	}
 #host_img{
-    background:url(../images/host.png);
+    background:url(../Images/host.png);
 	background-repeat:no-repeat;
 	height:17px;
 	width:15px;
@@ -157,7 +157,7 @@ a{
 	font-family:"微软雅黑", "宋体", serif;
 	}
 #contact_img{
-    background:url(../images/contact.png);
+    background:url(../Images/contact.png);
 	background-repeat:no-repeat;
 	height:16px;
 	width:15px;
