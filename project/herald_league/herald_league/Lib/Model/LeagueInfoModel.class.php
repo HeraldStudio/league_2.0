@@ -174,7 +174,7 @@ class LeagueInfoModel extends Model
     */
     public function getHeatLeague($limit=7)
     {
-        return $this->order('heat desc')->limit($limit)->field('league_name,id')->select();
+        return $this->where("league_name <> 'Null'" )->order('heat desc')->limit($limit)->field('league_name,id')->select();
     }
     /*
     *函数功能：社团登录

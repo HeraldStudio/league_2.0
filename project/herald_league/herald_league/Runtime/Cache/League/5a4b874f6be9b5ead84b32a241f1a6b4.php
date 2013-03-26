@@ -247,11 +247,7 @@
                     <ul id="ul" style="left:0px;">
                         <li>
                             <?php if(is_array($newLeague)): $i = 0; $__LIST__ = $newLeague;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="club">
-                                    <a href="#" class="club_name"><?php echo ($n["league_name"]); ?></a>
-                                    <a href="#" class="attention">
-                                        <div class="attention_img"></div>
-                                        <div class="attention_text">关注</div>
-                                    </a>
+                                    <a href="<?php echo U('/League/Home/club/title/dt/leagueid');?>/<?php echo ($n["id"]); ?>" class="club_name"><?php echo ($n["league_name"]); ?></a>
                                 </div>
                             <?php if(($key%10 == 0) AND ($key != 0)): ?></li><li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                         </li>
