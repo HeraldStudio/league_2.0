@@ -683,7 +683,7 @@ function func22(event) <!------------------------应该是func2-----------------
  <!--板块name-->
 <div id="tubiao">
  <!-- sports-->
- <foreach name="league" item="l">
+<foreach name="league" item="l">
    <if condition ="$l.league_name eq null">
       <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
     <form  method="POST" action = "{:U('/League/Home/leagueRegister')}">
@@ -704,18 +704,10 @@ function func22(event) <!------------------------应该是func2-----------------
 </foreach>
  
   </div>
- <!--volunteer-->
+ 
   
 </div>
-  
-  
-
-
-
-
-
-   
-  
+ 
 </div>  
  
 </div>

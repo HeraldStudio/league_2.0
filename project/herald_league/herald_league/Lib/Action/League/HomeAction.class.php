@@ -485,7 +485,7 @@ class HomeAction extends Action
          if($heraldSession->islogin())
          {
              $this->assign('islogin',1);
-             $this->assign('name',$heraldSession->getUserName());
+             $this->assign('userName',$heraldSession->getUserName());
              if($heraldSession->getUserType()==1)
                  $uid=$heraldSession->getUserID();
              else

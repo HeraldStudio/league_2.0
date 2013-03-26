@@ -250,11 +250,7 @@
                         <li>
                             <volist name ="newLeague" id="n" >
                                 <div class="club">
-                                    <a href="#" class="club_name">{$n.league_name}</a>
-                                    <a href="#" class="attention">
-                                        <div class="attention_img"></div>
-                                        <div class="attention_text">关注</div>
-                                    </a>
+                                    <a href="{:U('/League/Home/club/title/dt/leagueid')}/{$n.id}" class="club_name">{$n.league_name}</a>
                                 </div>
                             <if condition="($key%10 eq 0) AND ($key neq 0)"></li><li></if>
                             </volist>

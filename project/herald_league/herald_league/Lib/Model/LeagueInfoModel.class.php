@@ -225,7 +225,7 @@ class LeagueInfoModel extends Model
     */
     public function getNewLeague()
     {
-        return $this->field('id,league_name')->order('register_time desc')->where('league_name != null')->limit(30)->select();
+        return $this->field('id,league_name')->order('register_time desc')->where("league_name <> 'Null' ")->limit(30)->select();
     }
     /*根据类型返回社团
     */
