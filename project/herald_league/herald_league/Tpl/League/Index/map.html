@@ -481,27 +481,7 @@ function   getAbsPoint(e)
  }
 </script>
 
-<script language="javascript" >
-var downx=0;
-var downy=0;
-var upx=0;
-var upy=0;
-function func(event)
-{
-    downx=event.clientX;
-    downy=event.clientY;
-}
-function func22(event) <!------------------------应该是func2------------------------------------------------->
-{
-    upx=event.clientX;
-    upy=event.clientY;
-    if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
-    {
-        window.open("#");
-    }
-}
 
-</script>
 <script><!--show-->
  var ys=null;
  function show2(obj)
@@ -524,13 +504,13 @@ function func(event)
   downx=event.clientX;
   downy=event.clientY;
 }
-function func22(event) <!------------------------应该是func2------------------------------------------------->
+function func22(event,id) <!------------------------应该是func2------------------------------------------------->
 {
   upx=event.clientX;
   upy=event.clientY;
   if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
   {
-    window.open("#");
+    window.open("{:U('/League/Home/club/title/dt/leagueid')}/"+id);
   }
 }
 
@@ -695,7 +675,7 @@ function func22(event) <!------------------------应该是func2-----------------
     </div>
     </form>
    <else/>
-      <div  class="c1" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="show2(this)" style="position:absolute;{$l.location};width:auto" onmousedown="func(event)" onmouseup="func22(event)" >
+      <div  class="c1" id="s{$key}" onmouseover="show2(this);" onMouseOut="noshow2(this)" onclick="show2(this)" style="position:absolute;{$l.location};width:auto" onmousedown="func(event)" onmouseup="func22(event,{$l.id});noshow2(this)" >
         
         <a>{$l.league_name}</a>
       </div>
