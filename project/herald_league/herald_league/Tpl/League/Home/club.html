@@ -46,19 +46,37 @@ function changeLeagueAttention(leagueid,action)
 <script type="text/javascript" >
 $(document).ready(function(){
 	$("#more3").click(function(){
-				//alert($("#hidden_page").val());
+			//alert($("#hidden_page").val());
 				$.ajax({
-					url:'{:U('club')}',
-					type: 'post',
-					dataType:'html',
-					data:'page='+$("#hidden_page").val(),
-					success:function(data){
-						alert(data);
-						//document.write(data);
-						location.reload();//todo
-				});
-			}
-		);
+				url:'{:U('page')}',
+				type: 'post',
+				dataType:'html',
+				data:'page='+$("#hidden_page").val()+'&action=pre',
+				success:function(data){
+					alert(data);
+					//document.write(data);
+					//location.reload();//todo
+				}
+			})
+		}
+	);
+});
+$(document).ready(function(){
+	$("#more4").click(function(){
+			//alert($("#hidden_page").val());
+				$.ajax({
+				url:'{:U('page')}',
+				type: 'post',
+				dataType:'html',
+				data:'page='+$("#hidden_page").val()+'&action=next',
+				success:function(data){
+					alert(data);
+					//document.write(data);
+					//location.reload();//todo
+				}
+			})
+		}
+	);
 });
 </script>
 <style type="text/css">

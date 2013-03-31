@@ -575,6 +575,17 @@ class HomeAction extends Action
 
 		 $this -> display();
 	}
+	public function page()
+	{
+		if($_POST['action'] == "pre")
+		{
+			echo "pre";
+		}
+		else
+		{
+			echo "next";
+		}
+	}
     public function changeAttention()
     {
          /*
