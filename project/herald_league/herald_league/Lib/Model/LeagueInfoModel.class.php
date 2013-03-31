@@ -174,7 +174,7 @@ class LeagueInfoModel extends Model
     */
     public function getHeatLeague($limit=7)
     {
-        return $this->order('heat desc')->limit($limit)->field('league_name,id')->select();
+        return $this->where("league_name <> 'Null'" )->order('heat desc')->limit($limit)->field('league_name,id')->select();
     }
     /*
     *函数功能：社团登录
@@ -219,6 +219,19 @@ class LeagueInfoModel extends Model
     public function getAllLeague()
     {
         return $this->select();
+    }
+
+    /*返回新加入社团
+    */
+    public function getNewLeague()
+    {
+        return $this->field('id,league_name')->order('register_time desc')->where("league_name <> 'Null' ")->limit(30)->select();
+    }
+    /*根据类型返回社团
+    */
+    public function getLeagueByClass($class)
+    {
+        return $this->where(array('league_class'=>$class))->field('id,league_name,avater_address')->select();
     }
 }
 ?>

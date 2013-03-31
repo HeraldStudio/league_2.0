@@ -13,23 +13,70 @@
 class IndexAction extends Action {
     public function index()
 	{
-		$LeagueClass = D('League_class');
+		$heraldSession = D('UserSessionControl'); //控制会话
+        if($heraldSession->isLogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('userName',$heraldSession->getUserName());
+            $uid=$heraldSession->getUserID();
+        }
+        else
+        {
+            $uid = 0;
+        }
+        $this->assign('uid',$uid);
+        $LeagueClass = D('League_class');
 		$leagueclass = $LeagueClass -> select();
+        $leagueInfo = D('LeagueInfo');
+        $this -> assign('newLeague',$leagueInfo->getNewLeague());
 		$this -> assign('leagueclass', $leagueclass);
 		$this -> display();
     }
     public function map()
     {
-        $this->top = intval($this->_param('top'));
-        $this->left = intval($this->_param('left'));
-        $leagueInfo = D('leagueInfo');
+        $this->top = intval($this->_param('top')) *-1;
+        $this->left = intval($this->_param('left')) * -1;
+        $heraldSession = D('UserSessionControl'); //控制会话
+        if($heraldSession->isLogin())
+        {
+            $this->assign('islogin',1);
+            $this->assign('userName',$heraldSession->getUserName());
+            $uid=$heraldSession->getUserID();
+        }
+        else
+        {
+            $uid = 0;
+        }
+        $leagueInfo = D('LeagueInfo');
         $street = D('Street');
         $this->street = $street->select();
-        $league = $leagueInfo->select();
+        $league = $leagueInfo->getAllLeague();
+        $attention  = D('Attention');
+        $attentions = $attention->where(array('user_id'=>$uid,'ieleague'=>1))->select();
+        foreach ($attentions as $key => $value) {
+            $league[$value['attened_id']]['isattended'] = 1;
+        }
+
         foreach ($league as $key => $value) {
             $league[$key]['location_changed'] = $this->change($value['location']);
         }
+        for($i=1;$i<=6;$i++)
+        {
+            $leagues[$i]  = $leagueInfo->where(array('league_class'=>$i ,'league_name'=>array('neq','null')))->select();
+
+        }
+        $LeagueClass  = D('LeagueClass');
+        $class = $LeagueClass ->select();
+        foreach ($class as $key => $value) {
+            $class[$key]['count'] = $leagueInfo->where(array('league_class'=>$value['id'] ,'league_name'=>array('neq','null')))->count();
+        }
+        //var_dump($league[2]);
+
         $this->assign('league',$league);
+        $this->assign('leagues',$leagues);
+        $this->assign('leagueClass',$class);
+
+
         $this->display();
     }
      public function change($s)
@@ -149,11 +196,20 @@ class IndexAction extends Action {
             'left:1060px;top:1669px;width:40px;height:35px;',
             'left:1070px;top:1600px;width:40px;height:35px;',
             );
+            $b=array(
+                2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+                6,
+                1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+                3,3,3,3,3,3,3,3,3,3,3,3,3,3,
+                4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
+                5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+
+                );
             $leagueInfo = D('LeagueInfo');
             $leagueInfo ->query('delete  from lg_league_info');
             //$leagueInfo->addAll($a);
             foreach ($a as $key => $value) {
-                $leagueInfo->add(array('location'=>$value));
+                $leagueInfo->add(array('location'=>$value,'league_class'=>$b[$key]));
                 //$leagueInfo->addAll($a);
             }
     }

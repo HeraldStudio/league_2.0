@@ -6,7 +6,7 @@
 	height:40px;
 	width:44px;
 	float:left;
-	background:url(../images/arrow_bottom.png);
+	background:url(../Images/arrow_bottom.png);
 	background-repeat:no-repeat;
 }
 #arrow1:hover{
@@ -44,7 +44,7 @@
 	float:left;
 	height:11px;
 	width:12px;
-	background:url(../images/more2.png);
+	background:url(../Images/more2.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -54,7 +54,7 @@
 	height:11px;
 	width:12px;
 	float:left;
-	background:url(../images/more1.png);
+	background:url(../Images/more1.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -63,7 +63,7 @@
 	float:left;
 	height:18px;
 	width:18px;
-	background:url(../images/gengduo_left.png);
+	background:url(../Images/gengduo_left.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -72,7 +72,7 @@
 	height:18px;
 	width:18px;
 	float:left;
-	background:url(../images/gengduo_right.png);
+	background:url(../Images/gengduo_right.png);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -203,7 +203,7 @@ li a:visited{
 	height:40px;
 	width:42px;
 	float:left;
-	background:url(../images/arrow_left.png);
+	background:url(../Images/arrow_left.png);
 	background-repeat:no-repeat;
 }
 #arrow2:hover{
@@ -216,7 +216,7 @@ li a:visited{
 	height:35px;
 	width:39px;
 	float:left;
-	background:url(../images/arrow_right.png);
+	background:url(../Images/arrow_right.png);
 	background-repeat:no-repeat;
 }
 #arrow3:hover{
@@ -229,7 +229,7 @@ li a:visited{
 	height:36px;
 	width:33px;
 	float:left;
-	background:url(../images/arrow_top.png);
+	background:url(../Images/arrow_top.png);
 	background-repeat:no-repeat;
 }
 #arrow3:hover{

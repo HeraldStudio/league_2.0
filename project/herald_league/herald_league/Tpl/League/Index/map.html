@@ -24,6 +24,22 @@
   })
 }
 </script>
+<script type="text/javascript">
+    function changeLeagueAttention(leagueid,action,id)
+    {
+        $.getJSON("{:U('/League/Home/changeAttention')}",{"leagueid":leagueid,"action":action},function(data,status){
+            if(data.status!=1) //失败了
+                alert(data.info);
+            else
+            {
+                $(".guanzhu1"+id).toggle();
+                $(".guanzhu2"+id).toggle();
+
+            }
+        });
+    };
+
+</script>
 <style type="text/css"> 
 
 body   
@@ -72,6 +88,16 @@ a:hover {
     text-align:center;
     cursor:pointer;
   }
+.c1{
+    background-image:url(__ROOT__/Public/Images/c1.png);
+    background-repeat:no-repeat;
+    background-position:50% 100%;
+    font-family:"微软雅黑", "宋体", serif;
+    font-size:13;
+    text-align:center;
+    cursor:pointer;
+    width:auto;
+  }
 
 .dian{
     background-image:url(__ROOT__/Public/Images/dian.png);
@@ -92,7 +118,13 @@ a:hover {
 }
 
 
-
+.ruzhu{
+       font-size:12px;
+       font-family:"微软雅黑", "宋体", serif;
+       background-color:#fabf12;
+       border:none;
+       color:white;
+}
 
 
 
@@ -363,7 +395,7 @@ function noshow(obj)
     t1=getAbsPoint(s18);
     t2=getAbsPoint(s22);
     t3=getAbsPoint(s39);
-    t4=getAbsPoint(s20);
+    t4=getAbsPoint(s19);
     t5=getAbsPoint(s57);
     t6=getAbsPoint(s68);
     var dis=new Array();
@@ -449,6 +481,19 @@ function   getAbsPoint(e)
  }
 </script>
 
+
+<script><!--show-->
+ var ys=null;
+ function show2(obj)
+ {
+  ys=obj.style.background;
+  obj.style.backgroundColor="#FFFF66";
+ }
+ function noshow2(obj)
+ {
+  obj.style.backgroundColor=ys;
+ }
+</script>
 <script language="javascript" >
 var downx=0;
 var downy=0;
@@ -456,17 +501,17 @@ var upx=0;
 var upy=0;
 function func(event)
 {
-    downx=event.clientX;
-    downy=event.clientY;
+  downx=event.clientX;
+  downy=event.clientY;
 }
-function func22(event) <!------------------------应该是func2------------------------------------------------->
+function func22(event,id) <!------------------------应该是func2------------------------------------------------->
 {
-    upx=event.clientX;
-    upy=event.clientY;
-    if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
-    {
-        window.open("#");
-    }
+  upx=event.clientX;
+  upy=event.clientY;
+  if( (Math.pow(upx-downx,2)+Math.pow(upy-downy,2))<50 )
+  {
+    window.open("{:U('/League/Home/club/title/dt/leagueid')}/"+id);
+  }
 }
 
 </script>
@@ -614,30 +659,35 @@ function func22(event) <!------------------------应该是func2-----------------
   <div class="name" style="position:absolute;left:1080px;top:1050px;height:20px;width:68px">文学传媒类</div>
   <div class="name" style="position:absolute;left:1200px;top:1530px;height:20px;width:68px">志愿服务类</div>
   <div class="name" style="position:absolute;left:760px;top:1555px;height:20px;width:40px">学生会</div>
-  <div class="name" style="position:absolute;left:550px;top:1400px;height:20px;width:68px">科学技术类</div>
+
  <!--板块name-->
 <div id="tubiao">
  <!-- sports-->
- <foreach name="league" item="l">
-  <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
-<div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}"><p>快来</p><p>抢位置！</p> <a href=# >入住</a></div>  
-  
-
+<foreach name="league" item="l">
+   <if condition ="$l.league_name eq null">
+      <div class="c" id="s{$key}" onmouseover="show(this);" onMouseOut="noshow(this)" onclick="return click_a('ss{$key}')" style="position:absolute;{$l.location}" onmousedown="func(event)" onmouseup="func2(event)" ></div>
+    <form  method="POST" action = "{:U('/League/Home/leagueRegister')}">
+      <div class="dis" id="ss{$key}" style="display:none;position:absolute;{$l.location_changed}">
+        <p>快来</p>
+        <p>抢位置！</p>  
+      <input type="hidden" name="class" value= "{$l.league_class}"/>
+      <input  class="ruzhu" type="submit" name="submit" value="入住"/>
+    </div>
+    </form>
+   <else/>
+      <div  class="c1" id="s{$key}" onmouseover="show2(this);" onMouseOut="noshow2(this)" onclick="show2(this)" style="position:absolute;{$l.location};width:auto" onmousedown="func(event)" onmouseup="func22(event,{$l.id});noshow2(this)" >
+        
+        <a>{$l.league_name}</a>
+      </div>
+      
+   </if>
 </foreach>
  
   </div>
- <!--volunteer-->
+ 
   
 </div>
-  
-  
-
-
-
-
-
-   
-  
+ 
 </div>  
  
 </div>
@@ -647,220 +697,36 @@ function func22(event) <!------------------------应该是func2-----------------
 <div class="app-sidebar" id="app-sidebar" style="position:absolute;top:35px;right:0px;z-index:2">
             <div class="box" id="box" style="height:100%;width:249px;">
 
-
-    <div id="Cdis1" style="display:none;">
-     <div id="right_content_t">
-            <div id="quname_t">
-               <div id="xxx_t">体育健身类</div>
-               <div id="xxx_t2">体育健身类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_t">
-              <div id="interest_title_t">本区社团
-              </div>
-              <a href="#" id="more_t1" class="more">
-              </a>
-              <a href="#" id="more_t2" class="more">
-              </a>
-              <div id="di_t"></div>
-            </div>
-            <div id="right_t">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="Cdis2" style="display:none;">
-     <div id="right_content_k">
-            <div id="quname_k">
-               <div id="xxx_k">科学技术类</div>
-               <div id="xxx_k2">科学技术类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_k">
-              <div id="interest_title_k">本区社团
-              </div>
-              <a href="#" id="more_k1" class="more">
-              </a>
-              <a href="#" id="more_k2" class="more">
-              </a>
-              <div id="di_k"></div>
-            </div>
-            <div id="right_k">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div id="Cdis3" style="display:none;">
-     <div id="right_content_w">
-            <div id="quname_w">
-               <div id="xxx_w">文化艺术类</div>
-               <div id="xxx_w2">文化艺术类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_w">
-              <div id="interest_title_w">本区社团
-              </div>
-              <a href="#" id="more_w1" class="more">
-              </a>
-              <a href="#" id="more_w2" class="more">
-              </a>
-              <div id="di_w"></div>
-            </div>
-            <div id="right_w">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
-    
-    <!--<div id="Cdis3" style="display:none;">
-     <div id="right_content_w">
-             <div id="quname_w">
-               <div id="xxx_w">文化艺术类</div>
-               <div id="xxx_w2">文化艺术类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_w">
-              <div id="interest_title_w">本区社团
-              </div>
-              <a href="#" id="more_w1" class="more">
-              </a>
-              <a href="#" id="more_w2" class="more">
-              </a>
-              <div id="di_w"></div>
-            </div>
-            <div id="right_w">
-              <ul>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈  </a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-              </ul>
-            </div>
-        </div>
-    </div>
-    
-    -->
-    <div id="Cdis4" style="display:none;">
-     <div id="right_content_x">
-            <div id="quname_x">
-               <div id="xxx_x">学生会</div>
-               <div id="xxx_x2">学生会目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_x">
-              <div id="interest_title_x">本区社团
-              </div>
-              <a href="#" id="more_x1" class="more">
-              </a>
-              <a href="#" id="more_x2" class="more">
-              </a>
-              <div id="di_x"></div>
-            </div>
-            <div id="right_x">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div id="Cdis5" style="display:none;">
-     <div id="right_content_c">
-            <div id="quname_c">
-               <div id="xxx_c">文学传媒类</div>
-               <div id="xxx_c2">文学传媒类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_c">
-              <div id="interest_title_c">本区社团
-              </div>
-              <a href="#" id="more_c1" class="more">
-              </a>
-              <a href="#" id="more_c2" class="more">
-              </a>
-              <div id="di_c"></div>
-            </div>
-            <div id="right_c">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
+    <foreach name = "leagueClass" item="l">
+      <div id="Cdis{$l.location}" style="display:none;">
+       <div id="right_content_{$l.css}">
+              <div id="quname_{$l.css}">
+                 <div id="xxx_{$l.css}">{$l.class_name}</div>
+                 <div id="xxx_{$l.css}2">{$l.class_name}目前有{$l.count}个社团入住.</div>
               
-              
-    <div id="Cdis6" style="display:none;">
-     <div id="right_content_z">
-            <div id="quname_z">
-               <div id="xxx_z">志愿服务类</div>
-               <div id="xxx_z2">志愿服务类目前有XX个社团入住.</div>
-            
-            </div>
-            <div id="right3_z">
-              <div id="interest_title_z">本区社团
               </div>
-              <a href="#" id="more_z1" class="more">
-              </a>
-              <a href="#" id="more_z2" class="more">
-              </a>
-              <div id="di_z"></div>
-            </div>
-            <div id="right_z">
-              <ul>
-                <a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li><a href="#" class="attention"><div class="attention_img"></div><div class="attention_text">关注</div></a>
-                <li><a href="#">哈哈哈哈哈哈哈哈哈哈哈</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>        
-              
+              <div id="right3_{$l.css}">
+                <div id="interest_title_{$l.css}">本区社团
+                </div>
+                <a href="#" id="more_{$l.css}1" class="more">
+                </a>
+                <a href="#" id="more_{$l.css}2" class="more">
+                </a>
+                <div id="di_{$l.css}"></div>
+              </div>
+              <div id="right_{$l.css}">
+                <ul>
+                  <php>$lid = $l['id'] </php>
+                  <foreach name="leagues[$lid]" item="a">
+                    <li><a href="{:U('/League/Home/club/title/dt/leagueid')}/{$a.id}">{$a.league_name}</a>
+                    
+                    </li>
+                  </foreach> 
+                </ul>
+              </div>
+          </div>
+      </div>
+    </foreach>         
         
                 
             
@@ -900,7 +766,7 @@ function func22(event) <!------------------------应该是func2-----------------
               <a href="#" id="love_image"></a>
           </div>
       
-      <div id="user"><a href="#">{$userName}</a></div>
+      <div id="user"><a href="{:U('/User/Index/index/userid/')}/{$uid}">{$userName}</a></div>
       <div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
     <else/>
       <div id="user"><a href="{:U('/User/Login/')}" target="MyGreyFrame">登录</a></div>

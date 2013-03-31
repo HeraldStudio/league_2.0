@@ -373,14 +373,15 @@ class HomeAction extends Action
 
 	public function leagueRegister()
 	{
-		if (!empty($_POST['league_name']))
+		if (!empty($_POST['class']))
 		{
-			//print_r($_POST);
-			//$LeagueInfo = D( "LeagueInfo" );
-			//$registerresult = $LeagueInfo -> addNewLeague( $_POST );
-			//$this -> judgeAddState ( $registerresult );
+			$leagueClass = D('LeagueClass');
+			$c = intval($_POST['class']);
+			$class = $leagueClass->where('id='.$c)->find();
+			$this->assign('class',$class['class_name']);
+			$this->display();
+		
 		}
-		$this -> display();
 	}
 
 	/*
@@ -484,7 +485,7 @@ class HomeAction extends Action
          if($heraldSession->islogin())
          {
              $this->assign('islogin',1);
-             $this->assign('name',$heraldSession->getUserName());
+             $this->assign('userName',$heraldSession->getUserName());
              if($heraldSession->getUserType()==1)
                  $uid=$heraldSession->getUserID();
              else

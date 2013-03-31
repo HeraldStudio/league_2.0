@@ -64,7 +64,7 @@ a{
 #logo{
     height:18px;
 	width:101px;
-	background:url(../images/logo1.png);
+	background:url(../Images/logo1.png);
 	background-repeat:no-repeat;
 	margin-top:6px;
 	margin-left:30px;
@@ -95,7 +95,7 @@ a{
     height:20px;
 	float:left;
 	width:23px;
-	background:url(../images/message.png);
+	background:url(../Images/message.png);
 	background-repeat:no-repeat;
 	}
 #love{
@@ -107,7 +107,7 @@ a{
     float:left;
     height:20px;
 	width:23px;
-	background:url(../images/love.png);
+	background:url(../Images/love.png);
 	background-repeat:no-repeat;
 	}
 #user{
@@ -143,7 +143,7 @@ a{
 	border-style:solid;
 	border-width:1px;
 	border-color:#97c4c4 #97c4c4 #f0fafa #97c4c4;
-	background:url(../images/background.png);
+	background:url(../Images/background.png);
 	}
 #footer{
    border-top:dashed #999 thin;
@@ -281,7 +281,7 @@ a.link:hover{
 	margin-left:5px;
     height:18px;
 	width:12px;
-	background:url(../images/jiantou.png);
+	background:url(../Images/jiantou.png);
 	background-repeat:no-repeat;
 }
 #chumen_text{
