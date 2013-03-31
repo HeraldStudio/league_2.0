@@ -17,14 +17,14 @@
 <script type="text/javascript">
  function logout()
 {
-		$.ajax({
-			url:'{:U('/Public/Logout/')}',
-			success:function(){
-			$("#islogin").hide();
-			$("#notlogin").show();
-			location.reload();//todo
-			}
-		})
+	$.ajax({
+		url:'{:U('/Public/Logout/')}',
+		success:function(){
+		$("#islogin").hide();
+		$("#notlogin").show();
+		location.reload();//todo
+		}
+	})
 }
 </script>
 <script type="text/javascript">
@@ -46,16 +46,22 @@ function changeLeagueAttention(leagueid,action)
 <script type="text/javascript" >
 $(document).ready(function(){
 	$("#more3").click(function(){
-			//alert($("#hidden_page").val());
 				$.ajax({
 				url:'{:U('page')}',
 				type: 'post',
 				dataType:'html',
-				data:'page='+$("#hidden_page").val()+'&action=pre',
+				data:'page='+$("#hidden_page").val()+'&action=pre'+'&lgid='+$("#lgid").val(),
 				success:function(data){
-					alert(data);
-					//document.write(data);
-					//location.reload();//todo
+					var dataObj=eval("("+data+")");
+					var innerhtml = ""
+					for( var i = 0; i < 3; i++ )
+					{
+						if(dataObj[i] != null)
+						innerhtml += "<a href=\"__APP__/League/Home/index/leagueid/{$leagueid}/actid/"+dataObj[i].id+"\" target=\"i\">"+dataObj[i].activity_name+"</a>";
+					}
+					var currentPage = $("#hidden_page").val();
+					$('#hidden_page').val(parseInt(currentPage)-1);
+					$('#our_activity').html(innerhtml);
 				}
 			})
 		}
@@ -63,21 +69,52 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
 	$("#more4").click(function(){
-			//alert($("#hidden_page").val());
 				$.ajax({
 				url:'{:U('page')}',
 				type: 'post',
 				dataType:'html',
-				data:'page='+$("#hidden_page").val()+'&action=next',
+				data:'page='+$("#hidden_page").val()+'&action=next'+'&lgid='+$("#lgid").val(),
 				success:function(data){
-					alert(data);
-					//document.write(data);
-					//location.reload();//todo
+					var dataObj=eval("("+data+")");
+					var innerhtml = ""
+					for( var i = 0; i < 3; i++ )
+					{
+						if(dataObj[i] != null)
+						innerhtml += "<a href=\"__APP__/League/Home/index/leagueid/{$leagueid}/actid/"+dataObj[i].id+"\" target=\"i\">"+dataObj[i].activity_name+"</a>";
+					}
+					var currentPage = $("#hidden_page").val();
+					$('#hidden_page').val(parseInt(currentPage)+1);
+					$('#our_activity').html(innerhtml);
 				}
 			})
 		}
 	);
 });
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".myact").click(function(){
+		//alert("qqq");
+		$.ajax({
+			url:'{:U('ajaxChangePageAttenter')}',
+			type: 'post',
+			dataType:'html',
+			data:'actid='+$(this).children("#actid").val(),
+			success:function(data){
+				var dataObj=eval("("+data+")");
+				alert(size(dataObj));
+				// var innerhtml = "";
+				// for( var i = 0; i < 3; i++ )
+				// {
+				// 	if(dataObj[i] != null)
+				// 	innerhtml += "<a href=\"#\"id=\"touxiang1\" class=\"tx\"><div id=\"touxiang_img1\" class=\"touxiang_img\"><img src=\"__Uploads__/UserAvatar/m_"+dataObj[i].user_avatar_add+"\"/></div><div id=\"touxiang_text1\" class=\"touxiang_text\">"+dataObj[i].true_name+"</div></a>";
+				// }
+				// $("#att").html("");
+				// $("#att").html(innerhtml);
+			},
+		});
+	});
+})
 </script>
 <style type="text/css">
 a:link {
@@ -187,12 +224,14 @@ a:hover {
 				  <a id="more4" class="more">
 				  </a>
 				  <input type= "hidden" value = "{$page}" id = "hidden_page">
+				  <input type= "hidden" value = "{$leagueid}" id = "lgid">
 				</div>
 				<div id="right4" style = "">
 				  <ul id="ul2" style="left:0px;">
-				  <li>
+				  <li id = "our_activity">
 				  	<volist name = "activity" id = "vi">
-			    	 	<a href="__APP__/League/Home/club/title/dt/leagueid/{$leagueid}/actid/{$vi.id}">
+			    	 	<a href="__APP__/League/Home/index/leagueid/{$leagueid}/actid/{$vi.id}" class = "myact" target = "i">
+						<input type= "hidden" value = "{$vi.id}" id = "actid">
 			    	 		{$vi.activity_name}
 			    		</a>
 			    	</volist>
@@ -205,10 +244,12 @@ a:hover {
 				  <a id="more1" class="more"></a>
 				  <a id="more2" class="more"></a>
 				</div>
+				
 				<div id="right2">
 				  <div id="touxiang">
 					 <ul id="ul1" style="left:0px;">
-					   <li>
+					   <li id = "att">
+					   	<volist name = "userinfo" id = "vu">
 					    <a href="#"id="touxiang1" class="tx">
 						  <div id="touxiang_img1" class="touxiang_img">
 						  	<img src="__Uploads__/UserAvatar/m_{$vu.user_avatar_add}" alt="" />
@@ -217,6 +258,7 @@ a:hover {
 						  	{$vu.true_name}
 						  </div>
 						</a>
+						</volist>
 					  </li>
 					  </ul>
 				  </div>

@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
 <link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script>
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
 <script type="text/javascript">
 				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
@@ -17,14 +17,14 @@
 <script type="text/javascript">
  function logout()
 {
-		$.ajax({
-			url:'<?php echo U('/Public/Logout/');?>',
-			success:function(){
-			$("#islogin").hide();
-			$("#notlogin").show();
-			location.reload();//todo
-			}
-		})
+	$.ajax({
+		url:'<?php echo U('/Public/Logout/');?>',
+		success:function(){
+		$("#islogin").hide();
+		$("#notlogin").show();
+		location.reload();//todo
+		}
+	})
 }
 </script>
 <script type="text/javascript">
@@ -46,16 +46,22 @@ function changeLeagueAttention(leagueid,action)
 <script type="text/javascript" >
 $(document).ready(function(){
 	$("#more3").click(function(){
-			//alert($("#hidden_page").val());
 				$.ajax({
 				url:'<?php echo U('page');?>',
 				type: 'post',
 				dataType:'html',
-				data:'page='+$("#hidden_page").val()+'&action=pre',
+				data:'page='+$("#hidden_page").val()+'&action=pre'+'&lgid='+$("#lgid").val(),
 				success:function(data){
-					alert(data);
-					//document.write(data);
-					//location.reload();//todo
+					var dataObj=eval("("+data+")");
+					var innerhtml = ""
+					for( var i = 0; i < 3; i++ )
+					{
+						if(dataObj[i] != null)
+						innerhtml += "<a href=\"__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>/actid/"+dataObj[i].id+"\" target=\"i\">"+dataObj[i].activity_name+"</a>";
+					}
+					var currentPage = $("#hidden_page").val();
+					$('#hidden_page').val(parseInt(currentPage)-1);
+					$('#our_activity').html(innerhtml);
 				}
 			})
 		}
@@ -63,21 +69,52 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
 	$("#more4").click(function(){
-			//alert($("#hidden_page").val());
 				$.ajax({
 				url:'<?php echo U('page');?>',
 				type: 'post',
 				dataType:'html',
-				data:'page='+$("#hidden_page").val()+'&action=next',
+				data:'page='+$("#hidden_page").val()+'&action=next'+'&lgid='+$("#lgid").val(),
 				success:function(data){
-					alert(data);
-					//document.write(data);
-					//location.reload();//todo
+					var dataObj=eval("("+data+")");
+					var innerhtml = ""
+					for( var i = 0; i < 3; i++ )
+					{
+						if(dataObj[i] != null)
+						innerhtml += "<a href=\"__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>/actid/"+dataObj[i].id+"\" target=\"i\">"+dataObj[i].activity_name+"</a>";
+					}
+					var currentPage = $("#hidden_page").val();
+					$('#hidden_page').val(parseInt(currentPage)+1);
+					$('#our_activity').html(innerhtml);
 				}
 			})
 		}
 	);
 });
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".myact").click(function(){
+		//alert("qqq");
+		$.ajax({
+			url:'<?php echo U('ajaxChangePageAttenter');?>',
+			type: 'post',
+			dataType:'html',
+			data:'actid='+$(this).children("#actid").val(),
+			success:function(data){
+				var dataObj=eval("("+data+")");
+				alert(size(dataObj));
+				// var innerhtml = "";
+				// for( var i = 0; i < 3; i++ )
+				// {
+				// 	if(dataObj[i] != null)
+				// 	innerhtml += "<a href=\"#\"id=\"touxiang1\" class=\"tx\"><div id=\"touxiang_img1\" class=\"touxiang_img\"><img src=\"__Uploads__/UserAvatar/m_"+dataObj[i].user_avatar_add+"\"/></div><div id=\"touxiang_text1\" class=\"touxiang_text\">"+dataObj[i].true_name+"</div></a>";
+				// }
+				// $("#att").html("");
+				// $("#att").html(innerhtml);
+			},
+		});
+	});
+})
 </script>
 <style type="text/css">
 a:link {
@@ -124,7 +161,7 @@ a:hover {
 							<a href="#" id="love_image"></a>
 					</div>
 			
-			<div id="user"><a href="#"><?php echo ($name); ?></a></div>
+			<div id="user"><a href="<?php echo U('/User/Index/index/userid/');?>/<?php echo ($uid); ?>"><?php echo ($userName); ?></a></div>
 			<div id="exit"><a href="javascript:;"  onclick="logout()">退出</a></div>
 		<?php else: ?>
 			<div id="user"><a href="<?php echo U('/User/Login/');?>" target="MyGreyFrame">登录</a></div><?php endif; ?>
@@ -176,11 +213,13 @@ a:hover {
 				  <a id="more4" class="more">
 				  </a>
 				  <input type= "hidden" value = "<?php echo ($page); ?>" id = "hidden_page">
+				  <input type= "hidden" value = "<?php echo ($leagueid); ?>" id = "lgid">
 				</div>
 				<div id="right4" style = "">
 				  <ul id="ul2" style="left:0px;">
-				  <li>
-				  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><a href="__APP__/League/Home/club/title/dt/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>">
+				  <li id = "our_activity">
+				  	<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vi): $mod = ($i % 2 );++$i;?><a href="__APP__/League/Home/index/leagueid/<?php echo ($leagueid); ?>/actid/<?php echo ($vi["id"]); ?>" class = "myact" target = "i">
+						<input type= "hidden" value = "<?php echo ($vi["id"]); ?>" id = "actid">
 			    	 		<?php echo ($vi["activity_name"]); ?>
 			    		</a><?php endforeach; endif; else: echo "" ;endif; ?>
 				  </li>
@@ -192,18 +231,19 @@ a:hover {
 				  <a id="more1" class="more"></a>
 				  <a id="more2" class="more"></a>
 				</div>
+				
 				<div id="right2">
 				  <div id="touxiang">
 					 <ul id="ul1" style="left:0px;">
-					   <li>
-					    <a href="#"id="touxiang1" class="tx">
+					   <li id = "att">
+					   	<?php if(is_array($userinfo)): $i = 0; $__LIST__ = $userinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vu): $mod = ($i % 2 );++$i;?><a href="#"id="touxiang1" class="tx">
 						  <div id="touxiang_img1" class="touxiang_img">
 						  	<img src="__Uploads__/UserAvatar/m_<?php echo ($vu["user_avatar_add"]); ?>" alt="" />
 						  </div>
 						  <div id="touxiang_text1" class="touxiang_text">
 						  	<?php echo ($vu["true_name"]); ?>
 						  </div>
-						</a>
+						</a><?php endforeach; endif; else: echo "" ;endif; ?>
 					  </li>
 					  </ul>
 				  </div>

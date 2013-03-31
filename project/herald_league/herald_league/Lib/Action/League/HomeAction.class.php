@@ -38,7 +38,6 @@ class HomeAction extends Action
 		/*获取URL参数*/
 		$leagueid = intval($this -> _param('leagueid'));
 		$this -> activityid = intval($this -> _param('actid'));
-
 		/*获取社团信息*/
 		$League = D('LeagueInfo');
 		$Attention = D('Attention');
@@ -472,7 +471,6 @@ class HomeAction extends Action
 		/*获取URL参数*/
 		 $this -> gettitle = $this -> _param('title');
 		 $this -> leagueid = intval($this -> _param('leagueid'));
-		 $this -> activityid = intval($this -> _param('actid'));
 		 $this -> albumid = intval($this -> _param('albumid'));
 
 		 if($this -> leagueid <= 0)
@@ -515,23 +513,20 @@ class HomeAction extends Action
 		 	case 'dt':
 		 	/*获取活动信息*/
 		 	$Activity = D('Activity');
-		 	$activity = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
-		 	
+		 	$activity_t = $Activity -> getActivityInfoByLeague ( $this -> leagueid );
+		 	for( $i = 0; $i < 3; $i++ )
+		 	{
+		 		$activity[$i] = $activity_t[$i];
+		 	}
 		 	if(!empty($activity))
 		 	{
 		 		$this -> isactivityempty = false;
-		 		if(!$this -> activityid)
+		 		// if(!$this -> activityid)
+		 		//第一条活动信息
 		 		$this -> activityid = $activity[0]['id'];
-
-		 		/*获取活动的关注信息*/
-		 		$Attention = D('Attention');
-		 		$User = D('User');
-		 		$attention = $Attention -> getActivityAttention( $this -> activityid );
-				$userinfo = $User -> getUserInfo( $attention );
-
+		 		$this -> getActivityAttenter($this -> activityid);
 				//下面分别是社团的活动信息和关注者的信息
 	 			$this -> page = 1;
-		 		$this -> assign( 'userinfo', $userinfo );
 		 		$this -> assign('activity', $activity);
 		 	}
 		 	else
@@ -576,15 +571,65 @@ class HomeAction extends Action
 
 		 $this -> display();
 	}
-	public function page()
+	public function getActivityAttenter($activityid)
 	{
-		if($_POST['action'] == "pre")
+		$Attention = D('Attention');
+ 		$User = D('User');
+ 		$attention = $Attention -> getActivityAttention( $activityid );
+		$userinfo = $User -> getUserInfo( $attention );
+		$this -> assign( 'userinfo', $userinfo );
+		return $userinfo;
+	}
+	public function ajaxChangePageAttenter()
+	{
+		$userinfo = $this -> getActivityAttenter($_POST['actid']);
+		if(!empty($userinfo))
 		{
-			echo "pre";
+			$json_string = json_encode($userinfo);
+			echo "$json_string";
 		}
 		else
 		{
-			echo "next";
+			echo "kong";
+		}
+	}
+	public function page()
+	{
+		$Activity = D('Activity');
+		$activity_t = $Activity -> getActivityInfoByLeague ( $_POST['lgid'] );
+
+		if($_POST['action'] == "pre")
+		{
+			for( $i = ($_POST['page']-2)*3,$j = 0; $i < 3*($_POST['page']-1); $i++,$j++ )
+		 	{
+		 		$activity[$j] = $activity_t[$i];
+		 	}
+		 	if(!empty($activity[0]))
+		 	{
+		 		$json_string = json_encode($activity);
+		 		echo "$json_string";
+
+		 	}
+		 	else
+		 	{
+		 		echo "kong";
+		 	}
+		}
+		else
+		{
+		 	for( $i = ($_POST['page'])*3,$j = 0; $i < 3*($_POST['page']+1); $i++,$j++ )
+		 	{
+		 		$activity[$j] = $activity_t[$i];
+		 	}
+		 	if(!empty($activity[0]))
+		 	{
+		 		$json_string = json_encode($activity);
+		 		echo "$json_string";
+		 	}
+		 	else
+		 	{
+		 		echo "kong";
+		 	}
 		}
 	}
     public function changeAttention()

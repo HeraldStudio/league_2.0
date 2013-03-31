@@ -42,11 +42,10 @@ class UserModel extends Model
                 }
                 else
                 {
-                        foreach ( $userdata as $userdatas ) 
+                        foreach ( $userdata as $key => $userdatas ) 
                         {
-                                $temp=$this -> where ( 'id = '.$userdatas['user_id'] ) -> select();
-                                $userinfo[$userdatas['user_id']] =$temp[0];
-                        
+                                $temp=$this -> where ( 'id = '.$userdatas['user_id'] ) -> find();
+                                $userinfo[$key] =$temp;
                         }
                         return $userinfo;
                 }
