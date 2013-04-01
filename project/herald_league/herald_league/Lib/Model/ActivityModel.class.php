@@ -258,51 +258,17 @@ class ActivityModel extends Model
 			return $result;
 		}
 
-		public function getInterest($id)
+		public function getInterest()
 		{
-			$classActivity = D('ClassActivity');
-			$id = intval($id);
-			$class = $classActivity->getClass($id);
-			$activitys = array();
-			foreach ($class as $key => $value) 
-			{
-					$temp = $classActivity->getActivityByClass($value['class_id']);
-					
-					$activitys = $activitys+$temp;
-			}
-			$n=0;
-			shuffle($activitys);
 			define('InterestLimit', 6);
-			while($n<InterestLimit && count($activitys) >0 )
-			{
-					
-					$activityID = array_pop($activitys);
-					if($activityID['activity_id'] == $id)
-						continue;
-					$result[$n] = $this->where("id = $activityID[activity_id]")->field('id,activity_name')->find();
-					if($result[$n] == null && $result[$n] == false)
-					{
-						 continue;
-					}
-					foreach ($activitys as $key => $value) 
-					{
-					 if($value == $activityID)
-							unset($activitys[$key]);
-					
-					} 
-					$n++;
-			}
-			while($n < InterestLimit)
-			{
-				$randId = rand(0,$id *1.1);
-				$rand = $this->where("id = $randId")->field('id,activity_name')->find();
-				if($rand !=null && $rand != false)
-				{
-					$result[$n]=$rand;
-					$n++;
-				}
+			$result =$this->select();
+			shuffle($result);
+			$r = array();
+			for ($i=0; $i <InterestLimit ; $i++) { 
+			   $r[$i] = array_pop($result);
 			}
 			return $result;
+		
 		}
 	public function getLeagueId( $activityid )
 	{

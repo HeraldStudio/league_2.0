@@ -67,6 +67,11 @@ class IndexAction extends Action
         {
             $uid = 0;
         }
+
+        $activity = D('Activity');
+        $this->assign('intrestActivity',$activity->getInterest());
+        $leagueinfo = D('LeagueInfo');
+        $this->assign('intrestLeague',$leagueinfo->getInterest());
 		$this -> display();
     }
 
@@ -362,5 +367,7 @@ class IndexAction extends Action
 		}
 
 	}
+
+    
 }
 ?>

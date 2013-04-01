@@ -163,63 +163,21 @@ a:hover {
               <div class="panes">
 	            <div id="div1">
 				  <ul id="ul1" style="left:0px;">
-			        <li id="li">
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈1</a>
-					</li>
-					<li id="li">
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈2</a>
-					</li>
-					<li id="li">
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
-						<a href="#">哈哈哈哈哈哈哈哈哈哈哈3</a>
+				  	<li id="li">
+					<volist name="intrestActivity" id="vo" mod="7">
+						<a href="{:U('/Activity/Activity/detail/activityid')}/{$vo.id}">{$vo.activity_name}</a>
+						<eq name="mod" value="6"></li><li id="li"></eq>
+					</volist>
 					</li>
 			      </ul>
 				</div><!--存放每个页面的内容-->
 	            <div id="div2">
 				  <ul id="ul2" style="left:0px;">
 			        <li id="li">
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-						<a href="#">反复反复反复反复反复1</a>
-					</li>
-					<li id="li">
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-						<a href="#">反复反复反复反复反复2</a>
-					</li>
-					<li id="li">
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
-						<a href="#">反复反复反复反复反复3</a>
+						<volist name="intrestLeague" id="vo" mod="7">
+							<a href="{:U('/League/Home/club/title/dt/leagueid/')}/{$vo.id}">{$vo.league_name}</a>
+							<eq name="mod" value="6"></li><li id="li"></eq>
+						</volist>
 					</li>
 			      </ul>
 				</div><!--存放每个页面的内容-->
