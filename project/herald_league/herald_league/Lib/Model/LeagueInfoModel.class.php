@@ -239,7 +239,7 @@ class LeagueInfoModel extends Model
         $result =$this->field('id,league_name')->where("league_name <> 'Null' ")->select();
         shuffle($result);
         $r = array();
-        for ($i=0; $i <5 ; $i++) { 
+        for ($i=0; $i <5 && count($result)>0; $i++) { 
             $r[$i] = array_pop($result);
         }
         return $r;

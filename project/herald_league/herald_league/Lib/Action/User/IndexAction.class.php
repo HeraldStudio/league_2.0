@@ -69,7 +69,7 @@ class IndexAction extends Action
         }
 
         $activity = D('Activity');
-        $this->assign('intrestActivity',$activity->getInterest());
+        $this->assign('intrestActivity',$activity->getInterest(20));//感兴趣的活动，最多3*7个
         $leagueinfo = D('LeagueInfo');
         $this->assign('intrestLeague',$leagueinfo->getInterest());
 		$this -> display();

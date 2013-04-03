@@ -100,7 +100,8 @@ class ActivityAction extends Action
 			if(date("Y-m-d",strtotime($activityInf['end_time']))<date("Y-m-d"))
 					$this->assign('isend',1);
 			$this->assign('uid',$uid);
-			$this->assign('intrest',$activity->getInterest($activityID));
+			//猜你喜欢
+			$this->assign('intrest',$activity->getInterest(6));
 			//交流区
 			$this -> getCommentAndAnswer( $activityID, "activity");
 
