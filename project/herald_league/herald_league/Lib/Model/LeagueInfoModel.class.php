@@ -233,5 +233,16 @@ class LeagueInfoModel extends Model
     {
         return $this->where(array('league_class'=>$class))->field('id,league_name,avater_address')->select();
     }
+
+    public function getInterest()
+    {
+        $result =$this->field('id,league_name')->where("league_name <> 'Null' ")->select();
+        shuffle($result);
+        $r = array();
+        for ($i=0; $i <5 && count($result)>0; $i++) { 
+            $r[$i] = array_pop($result);
+        }
+        return $r;
+    }
 }
 ?>

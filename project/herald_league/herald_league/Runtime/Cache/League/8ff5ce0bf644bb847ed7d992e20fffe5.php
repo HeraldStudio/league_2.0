@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Css/header.css" />
 <link rel="shortcut icon" href="http://herald.seu.edu.cn/radio2/favicon.ico" type="image/x-icon">
 <script type="text/javascript" src="__ROOT__/Public/Js/jquery.js"></script>
-<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script> 
+<script type="text/javascript" src="__ROOT__/Public/js/jquery.min.js"></script>
 <script language="javascript" src="__ROOT__/Public/Js/login/GreyFrame.js" ></script>
 <script type="text/javascript">
 				frameMatch = new GreyFrame("MyGreyFrame", 500, 300);
